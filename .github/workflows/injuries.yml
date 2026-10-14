@@ -1,0 +1,48 @@
+name: injuries
+
+on:
+  schedule:
+    - cron: "15 */4 * * *" # every 4 hours
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: data-pipeline
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CI: "true"
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check secrets
+        run: bash scripts/require_secrets.sh API_FOOTBALL_KEY
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv python install 3.11
+      - run: uv sync --frozen
+      - uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/reep
+            .cache
+            data/warehouse
+          key: pipeline-${{ github.run_id }}
+          restore-keys: pipeline-
+      - name: Injuries + lineups
+        run: uv run dugout ingest --job injuries
+      - if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/reep
+            .cache
+            data/warehouse
+          key: pipeline-${{ github.run_id }}

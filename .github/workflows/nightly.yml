@@ -1,0 +1,62 @@
+name: nightly
+
+on:
+  schedule:
+    - cron: "30 2 * * *" # 02:30 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One job at a time touches the API budgets and the HTTP cache.
+concurrency:
+  group: data-pipeline
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      CI: "true"
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      FOOTBALL_DATA_ORG_KEY: ${{ secrets.FOOTBALL_DATA_ORG_KEY }}
+      GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check secrets
+        run: bash scripts/require_secrets.sh API_FOOTBALL_KEY FOOTBALL_DATA_ORG_KEY GUARDIAN_API_KEY
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv python install 3.11
+      - run: uv sync --frozen
+
+      # Reep catalogue (~210 MB, CC0) and the HTTP cache + daily budgets persist between runs.
+      # Caches are private to the repo; raw data is never uploaded as an artifact.
+      - name: Restore caches
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/reep
+            .cache
+            data/warehouse
+          key: pipeline-${{ github.run_id }}
+          restore-keys: pipeline-
+
+      - name: Ingest (nightly job)
+        run: uv run dugout ingest --job nightly
+
+      - name: Status
+        if: always()
+        run: uv run dugout status
+
+      - name: Save caches
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/reep
+            .cache
+            data/warehouse
+          key: pipeline-${{ github.run_id }}
