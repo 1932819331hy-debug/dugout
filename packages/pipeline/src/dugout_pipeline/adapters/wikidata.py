@@ -11,10 +11,15 @@ from dugout_pipeline.adapters.base import DAY, TIER_DATA, SourceAdapter
 from dugout_pipeline.db import upsert
 
 QUERY = """
-SELECT ?tm ?club ?venueLabel ?coord ?coach ?coachLabel ?start ?dob ?countryLabel WHERE {
+SELECT ?tm ?club ?venueLabel ?coord ?vstart ?coach ?coachLabel ?start ?dob ?countryLabel WHERE {
   VALUES ?tm { %s }
   ?club wdt:P7223 ?tm .
-  OPTIONAL { ?club wdt:P115 ?venue . ?venue wdt:P625 ?coord . }
+  OPTIONAL {
+    # home venue statements that have not ended (clubs keep their old grounds with an end date)
+    ?club p:P115 ?vs . ?vs ps:P115 ?venue . FILTER NOT EXISTS { ?vs pq:P582 ?vend }
+    OPTIONAL { ?vs pq:P580 ?vstart }
+    ?venue wdt:P625 ?coord .
+  }
   OPTIONAL {
     ?club p:P286 ?st . ?st ps:P286 ?coach .
     FILTER NOT EXISTS { ?st pq:P582 ?end }
@@ -71,13 +76,17 @@ class WikidataAdapter(SourceAdapter):
         return {"clubs": len(venues), "managers": upsert(con, "managers", managers)}
 
     def parse(self, doc: dict, tm: dict[str, str], fetched_at: datetime):
-        venues, managers = {}, {}
+        venues, managers, venue_start = {}, {}, {}
         for b in doc["results"]["bindings"]:
             slug = tm.get(b["tm"]["value"])
             if not slug:
                 continue
             if "coord" in b and (pt := parse_point(b["coord"]["value"])):
-                venues[slug] = (b.get("venueLabel", {}).get("value"), *pt)
+                vstart = b.get("vstart", {}).get("value", "")
+                # if several open-ended venue statements remain, the most recently started one wins
+                if slug not in venue_start or vstart > venue_start[slug]:
+                    venues[slug] = (b.get("venueLabel", {}).get("value"), *pt)
+                    venue_start[slug] = vstart
             if "coach" in b:
                 qid = b["coach"]["value"].rsplit("/", 1)[-1]
                 start = b.get("start", {}).get("value")
