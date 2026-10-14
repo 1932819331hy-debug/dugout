@@ -1,0 +1,311 @@
+{
+ "1": {
+  "ids": {
+   "api_football/team": "33",
+   "clubelo/team": "ManUnited",
+   "fotmob/team": "10260",
+   "opta/team_numeric": "1",
+   "skillcorner/team": "31",
+   "statsbomb/offline_team": "39",
+   "transfermarkt/verein": "985",
+   "understat/team": "89",
+   "wyscout/team": "1611"
+  },
+  "label": "Manchester United",
+  "reep_id": "rt85aa78bccbd812"
+ },
+ "11": {
+  "ids": {
+   "api_football/team": "45",
+   "clubelo/team": "Everton",
+   "fotmob/team": "8668",
+   "opta/team_numeric": "11",
+   "skillcorner/team": "41",
+   "sofascore/team": "48",
+   "statsbomb/offline_team": "29",
+   "transfermarkt/verein": "29",
+   "understat/team": "72",
+   "wyscout/team": "1623"
+  },
+  "label": "Everton",
+  "reep_id": "rt9a79cf4e54e278"
+ },
+ "14": {
+  "ids": {
+   "api_football/team": "40",
+   "clubelo/team": "Liverpool",
+   "fotmob/team": "8650",
+   "opta/team_numeric": "14",
+   "skillcorner/team": "2",
+   "sofascore/team": "44",
+   "statsbomb/offline_team": "24",
+   "transfermarkt/verein": "31",
+   "understat/team": "87",
+   "wyscout/team": "1612"
+  },
+  "label": "Liverpool",
+  "reep_id": "rt0fcab1a2109ab8"
+ },
+ "17": {
+  "ids": {
+   "api_football/team": "65",
+   "clubelo/team": "Forest",
+   "fotmob/team": "10203",
+   "opta/team_numeric": "17",
+   "skillcorner/team": "747",
+   "sofascore/team": "14",
+   "transfermarkt/verein": "703",
+   "understat/team": "249",
+   "wyscout/team": "1642"
+  },
+  "label": "Nottingham Forest",
+  "reep_id": "rt9420ae803b8a55"
+ },
+ "2": {
+  "ids": {
+   "api_football/team": "63",
+   "clubelo/team": "Leeds",
+   "fotmob/team": "8463",
+   "opta/team_numeric": "2",
+   "skillcorner/team": "787",
+   "sofascore/team": "34",
+   "statsbomb/offline_team": "101",
+   "transfermarkt/verein": "399",
+   "understat/team": "245",
+   "wyscout/team": "1630"
+  },
+  "label": "Leeds United",
+  "reep_id": "rt2c10fab805c3ea"
+ },
+ "3": {
+  "ids": {
+   "api_football/team": "42",
+   "clubelo/team": "Arsenal",
+   "fotmob/team": "9825",
+   "opta/team_numeric": "3",
+   "skillcorner/team": "3",
+   "sofascore/team": "42",
+   "statsbomb/offline_team": "1",
+   "transfermarkt/verein": "11",
+   "understat/team": "83",
+   "wyscout/team": "1609"
+  },
+  "label": "Arsenal",
+  "reep_id": "rt13f99514be4cfd"
+ },
+ "31": {
+  "ids": {
+   "api_football/team": "52",
+   "clubelo/team": "CrystalPalace",
+   "fotmob/team": "9826",
+   "opta/team_numeric": "31",
+   "skillcorner/team": "60",
+   "sofascore/team": "7",
+   "transfermarkt/verein": "873",
+   "understat/team": "78",
+   "wyscout/team": "1628"
+  },
+  "label": "Crystal Palace",
+  "reep_id": "rtbaccc9912a7639"
+ },
+ "36": {
+  "ids": {
+   "api_football/team": "51",
+   "clubelo/team": "Brighton",
+   "fotmob/team": "10204",
+   "opta/team_numeric": "36",
+   "skillcorner/team": "308",
+   "sofascore/team": "30",
+   "transfermarkt/verein": "1237",
+   "understat/team": "220",
+   "wyscout/team": "1651"
+  },
+  "label": "Brighton & Hove Albion",
+  "reep_id": "rt78f360d6fde57e"
+ },
+ "4": {
+  "ids": {
+   "api_football/team": "34",
+   "clubelo/team": "Newcastle",
+   "fotmob/team": "10261",
+   "opta/team_numeric": "4",
+   "skillcorner/team": "32",
+   "sofascore/team": "39",
+   "statsbomb/offline_team": "37",
+   "transfermarkt/verein": "762",
+   "understat/team": "86",
+   "wyscout/team": "1613"
+  },
+  "label": "Newcastle United",
+  "reep_id": "rt9216c37cb92105"
+ },
+ "40": {
+  "ids": {
+   "api_football/team": "57",
+   "clubelo/team": "Ipswich",
+   "fotmob/team": "9902",
+   "opta/team_numeric": "40",
+   "skillcorner/team": "752",
+   "sofascore/team": "32",
+   "transfermarkt/verein": "677",
+   "understat/team": "285",
+   "wyscout/team": "1634"
+  },
+  "label": "Ipswich Town",
+  "reep_id": "rt1874a32186f729"
+ },
+ "43": {
+  "ids": {
+   "api_football/team": "50",
+   "clubelo/team": "ManCity",
+   "fotmob/team": "8456",
+   "opta/team_numeric": "43",
+   "skillcorner/team": "40",
+   "sofascore/team": "17",
+   "statsbomb/offline_team": "36",
+   "transfermarkt/verein": "281",
+   "understat/team": "88",
+   "wyscout/team": "1625"
+  },
+  "label": "Manchester City",
+  "reep_id": "rt37c836a696a159"
+ },
+ "54": {
+  "ids": {
+   "api_football/team": "36",
+   "clubelo/team": "Fulham",
+   "fotmob/team": "9879",
+   "opta/team_numeric": "54",
+   "skillcorner/team": "48",
+   "sofascore/team": "43",
+   "statsbomb/offline_team": "55",
+   "transfermarkt/verein": "931",
+   "understat/team": "228",
+   "wyscout/team": "1616"
+  },
+  "label": "Fulham",
+  "reep_id": "rtcb5205b7f83a93"
+ },
+ "56": {
+  "ids": {
+   "api_football/team": "746",
+   "clubelo/team": "Sunderland",
+   "fotmob/team": "8472",
+   "opta/team_numeric": "56",
+   "skillcorner/team": "35",
+   "sofascore/team": "41",
+   "transfermarkt/verein": "289",
+   "understat/team": "77",
+   "wyscout/team": "1632"
+  },
+  "label": "Sunderland",
+  "reep_id": "rtb471f322d5ad96"
+ },
+ "6": {
+  "ids": {
+   "api_football/team": "47",
+   "clubelo/team": "Tottenham",
+   "fotmob/team": "8586",
+   "opta/team_numeric": "6",
+   "skillcorner/team": "44",
+   "sofascore/team": "33",
+   "statsbomb/offline_team": "38",
+   "transfermarkt/verein": "148",
+   "understat/team": "82",
+   "wyscout/team": "1624"
+  },
+  "label": "Tottenham Hotspur",
+  "reep_id": "rtcffb6a6bdb89fe"
+ },
+ "7": {
+  "ids": {
+   "api_football/team": "66",
+   "clubelo/team": "AstonVilla",
+   "fotmob/team": "10252",
+   "opta/team_numeric": "7",
+   "skillcorner/team": "39",
+   "sofascore/team": "40",
+   "statsbomb/offline_team": "59",
+   "transfermarkt/verein": "405",
+   "understat/team": "71",
+   "wyscout/team": "1614"
+  },
+  "label": "Aston Villa",
+  "reep_id": "rt5ab67076de8cc1"
+ },
+ "8": {
+  "ids": {
+   "api_football/team": "49",
+   "clubelo/team": "Chelsea",
+   "fotmob/team": "8455",
+   "opta/team_numeric": "8",
+   "skillcorner/team": "49",
+   "sofascore/team": "38",
+   "statsbomb/offline_team": "33",
+   "transfermarkt/verein": "631",
+   "understat/team": "80",
+   "wyscout/team": "1610"
+  },
+  "label": "Chelsea",
+  "reep_id": "rt3763d29e7947d8"
+ },
+ "88": {
+  "ids": {
+   "api_football/team": "64",
+   "clubelo/team": "Hull",
+   "fotmob/team": "8667",
+   "opta/team_numeric": "88",
+   "skillcorner/team": "47",
+   "sofascore/team": "96",
+   "transfermarkt/verein": "3008",
+   "understat/team": "91",
+   "wyscout/team": "1672"
+  },
+  "label": "Hull City",
+  "reep_id": "rtf38678780871c4"
+ },
+ "9": {
+  "ids": {
+   "api_football/team": "1346",
+   "clubelo/team": "Coventry",
+   "fotmob/team": "8669",
+   "opta/team_numeric": "9",
+   "skillcorner/team": "1545",
+   "sofascore/team": "11",
+   "transfermarkt/verein": "990",
+   "wyscout/team": "1640"
+  },
+  "label": "Coventry City",
+  "reep_id": "rtbc67cd7c5a1d66"
+ },
+ "91": {
+  "ids": {
+   "api_football/team": "35",
+   "clubelo/team": "Bournemouth",
+   "fotmob/team": "8678",
+   "opta/team_numeric": "91",
+   "skillcorner/team": "63",
+   "sofascore/team": "60",
+   "transfermarkt/verein": "989",
+   "understat/team": "73",
+   "wyscout/team": "1659"
+  },
+  "label": "AFC Bournemouth",
+  "reep_id": "rt3bdff329d36885"
+ },
+ "94": {
+  "ids": {
+   "api_football/team": "55",
+   "clubelo/team": "Brentford",
+   "fotmob/team": "9937",
+   "opta/team_numeric": "94",
+   "skillcorner/team": "754",
+   "sofascore/team": "50",
+   "transfermarkt/verein": "1148",
+   "understat/team": "244",
+   "wyscout/team": "1669"
+  },
+  "label": "Brentford",
+  "reep_id": "rtdb4308cb351fa7"
+ }
+}
