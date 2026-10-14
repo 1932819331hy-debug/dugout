@@ -193,3 +193,23 @@ def test_transfermarkt_file_adapter_reads_committed_csv(ctx, tmp_path):
     )
     out = TransfermarktFileAdapter(ctx).ingest(path=path)
     assert out == {"market_values": 1, "contracts": 1, "evidence_ledger": 1}
+
+
+def test_wikidata_prefers_most_recent_open_venue(ctx):
+    old = {
+        "tm": {"value": "1148"},
+        "venueLabel": {"value": "Griffin Park"},
+        "coord": {"value": "Point(-0.30 51.48)"},
+        "vstart": {"value": "1904-01-01T00:00:00Z"},
+    }
+    new = {
+        "tm": {"value": "1148"},
+        "venueLabel": {"value": "Gtech Community Stadium"},
+        "coord": {"value": "Point(-0.28 51.49)"},
+        "vstart": {"value": "2020-09-01T00:00:00Z"},
+    }
+    a = WikidataAdapter(ctx)
+    for order in ([old, new], [new, old]):
+        venues, _ = a.parse({"results": {"bindings": order}}, {"1148": "brentford"}, NOW)
+        assert venues["brentford"][0] == "Gtech Community Stadium"
+    a.close()
