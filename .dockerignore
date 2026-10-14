@@ -1,0 +1,8 @@
+.env
+.env.*
+.venv
+.cache
+data/warehouse
+data/raw
+node_modules
+.git

@@ -1,0 +1,59 @@
+# Leagues are config, not code. Add a league by adding a block here (and any new provider ids).
+premier_league:
+  name: Premier League
+  country: England
+  season: "2026-27"          # dugout season label
+  season_start_year: 2026    # used by APIs that key seasons by start year
+  showcase_club: liverpool
+  provider_ids:
+    api_football: 39          # league id
+    football_data_org: PL     # competition code
+    football_data_couk: E0    # CSV division code
+    fpl: true                 # FPL only covers the Premier League
+    clubelo_country: ENG
+  history_seasons: ["2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21",
+                    "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
+  news_feeds:
+    # outlet, url, tier (1 official .. 5 social). A club's own feed is tier 1 for that club (add `club: <slug>`).
+    # Checked 2026-10-15: premierleague.com and liverpoolfc.com publish no RSS feed (404).
+    - {outlet: BBC Sport, url: "https://feeds.bbci.co.uk/sport/football/premier-league/rss.xml", tier: 2}
+    - {outlet: The Guardian, url: "https://www.theguardian.com/football/premierleague/rss", tier: 2}
+    - {outlet: Sky Sports, url: "https://www.skysports.com/rss/11095", tier: 2}
+    - {outlet: ESPN, url: "https://www.espn.co.uk/espn/rss/football/news", tier: 2}
+
+# Names providers use that a generic normaliser cannot reconcile. Keys are normalised names.
+club_aliases:
+  man utd: manchester-united
+  man united: manchester-united
+  manchester utd: manchester-united
+  man city: manchester-city
+  spurs: tottenham-hotspur
+  tottenham: tottenham-hotspur
+  wolves: wolverhampton-wanderers
+  wolverhampton: wolverhampton-wanderers
+  nottm forest: nottingham-forest
+  nott m forest: nottingham-forest
+  forest: nottingham-forest
+  newcastle: newcastle-united
+  west ham: west-ham-united
+  brighton: brighton-hove-albion
+  brighton and hove albion: brighton-hove-albion
+  leeds: leeds-united
+  leicester: leicester-city
+  ipswich: ipswich-town
+  sheffield utd: sheffield-united
+  sheffield united: sheffield-united
+  luton: luton-town
+  norwich: norwich-city
+  afc bournemouth: bournemouth
+  villa: aston-villa
+  palace: crystal-palace
+  sunderland afc: sunderland
+  hull: hull-city
+  coventry: coventry-city
+  cardiff: cardiff-city
+  swansea: swansea-city
+  stoke: stoke-city
+  huddersfield: huddersfield-town
+  west brom: west-bromwich-albion
+  qpr: queens-park-rangers
