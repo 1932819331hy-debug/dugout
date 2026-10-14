@@ -1,0 +1,24 @@
+# `make up`: run the pipeline once against a local Ollama. Keys come from .env (never baked into the image).
+services:
+  ollama:
+    image: ollama/ollama:0.12.6
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+
+  pipeline:
+    build: .
+    env_file: .env
+    environment:
+      LLM_BASE_URL: http://ollama:11434/v1
+    volumes:
+      - ./data:/app/data
+      - ./.cache:/app/.cache
+      - reep:/root/.cache/reep
+    depends_on:
+      - ollama
+
+volumes:
+  ollama:
+  reep:

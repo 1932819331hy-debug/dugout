@@ -1,0 +1,44 @@
+[project]
+name = "dugout"
+version = "0.1.0"
+description = "Open-source AI sporting director for the Premier League"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11,<3.13"
+dependencies = ["dugout-pipeline[open]", "dugout-verify"]
+
+[tool.uv.workspace]
+members = ["packages/pipeline", "packages/verify"]
+
+[tool.uv.sources]
+dugout-pipeline = { workspace = true }
+dugout-verify = { workspace = true }
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3",
+  "pytest-socket>=0.7",
+  "respx>=0.21",
+  "ruff>=0.7",
+  "mypy>=1.13",
+]
+
+[tool.pytest.ini_options]
+addopts = "--disable-socket --allow-unix-socket -q"
+testpaths = ["packages"]
+markers = ["live: hits the real network (never run in CI)"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["E501", "RUF001", "RUF002", "RUF003"]
+
+[tool.uv]
+# socceraction 1.5.x pins lxml<5 for its Opta XML loader only (we don't use it); trafilatura needs lxml>=5.
+override-dependencies = ["lxml>=5.2.2"]
+# pandera 0.17 (pinned by socceraction) imports multimethod.overload, removed in multimethod 2.
+# pyarrow >= 21 needs numpy 2, but socceraction 1.5 pins numpy<2.
+constraint-dependencies = ["multimethod<2", "pyarrow<21"]
