@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-10-15T16:20:28+00:00",
+  "vaep_holdout": {
+    "scores": {
+      "auc": 0.7484713198348728,
+      "brier": 0.010867205783319943,
+      "brier_baseline": 0.012526745990347888,
+      "positive_rate": 0.012687345816314151
+    },
+    "concedes": {
+      "auc": 0.7778597986754842,
+      "brier": 0.00332198934803953,
+      "brier_baseline": 0.0033695008160044932,
+      "positive_rate": 0.003380919642496057
+    },
+    "train_games": 380,
+    "test_games": 380
+  },
+  "xt_grid_max": 0.04963103545486065,
+  "xt_iterations": 32,
+  "players_rated": 669,
+  "min_minutes": 900
+}

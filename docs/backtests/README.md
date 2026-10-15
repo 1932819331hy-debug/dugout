@@ -9,7 +9,7 @@ uv run dugout-models backtest all
 | Model | Report | Protocol | Headline result |
 |---|---|---|---|
 | Match predictor | [predictor.md](predictor.md) · [validation](predictor_validation.md) | Walk-forward, refit every ~4 gameweeks; design chosen on 2019-20..2023-24, tested once on 2024-25 and 2025-26 | Beats Elo on RPS, log loss and Brier in both test seasons; bookmaker closing odds remain better |
-| Player quality (VAEP, xT) | [player_ratings.md](player_ratings.md) | VAEP probability models evaluated on held-out games | See report |
+| Player quality (VAEP, xT) | [player_ratings.md](player_ratings.md) | VAEP probability models on 380 held-out games (StatsBomb PL 2015/16 + Wyscout PL 2017/18) | AUC 0.75 (scores), 0.78 (concedes); both beat base-rate Brier |
 | Roles & similarity | [roles.md](roles.md) | Own-previous-season retrieval; bootstrap role stability | ~3x random retrieval; stability ARI ~0.7 |
 | Manager fingerprint & tactical fit | [fingerprint.md](fingerprint.md) | Fit vs minutes share for players who changed club | **Fit does not predict minutes yet** (ρ ≈ 0.07, n.s.) |
 | Valuation | [valuation.md](valuation.md) | Train < July 2024, test after | Beats "fee = market value" on MAE and median error |
