@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import json
 import logging
 import os
 import sys
@@ -14,16 +13,70 @@ from dugout_pipeline.settings import REPO_ROOT, get_settings
 BACKTESTS = REPO_ROOT / "docs" / "backtests"
 
 
-def cmd_backtest(args) -> int:
-    con = connect(args.db or get_settings().warehouse_path)
-    if args.model == "predictor":
+def _run_one(model: str, args, con) -> bool:
+    """Runs one backtest, writes docs/backtests/<model>.{md,json}, returns whether its success criterion holds."""
+    if model == "predictor":
         from dugout_models.backtest import run
 
-        report = run(con, args.seasons, bayes=not args.no_bayes, out_dir=BACKTESTS, name=args.name)
-        print(json.dumps(report["results"], indent=1))
-        print("beats Elo:", report["beats_elo"])
-        return 0 if all(all(v.values()) for v in report["beats_elo"].values()) else 1
-    raise SystemExit(f"unknown model {args.model}")
+        r = run(con, args.seasons, bayes=not args.no_bayes, out_dir=BACKTESTS, name=args.name)
+        print("predictor beats Elo:", r["beats_elo"])
+        return all(all(v.values()) for v in r["beats_elo"].values())
+    if model == "ratings":
+        from dugout_models.ratings import rate_players, write_report
+
+        ratings, rep = rate_players()
+        write_report(ratings, rep, BACKTESTS)
+        print("VAEP holdout:", rep["vaep_holdout"])
+        return rep["vaep_holdout"]["scores"]["brier"] < rep["vaep_holdout"]["scores"]["brier_baseline"]
+    if model == "roles":
+        from dugout_models.roles import backtest
+
+        r = backtest(con, BACKTESTS)
+        last = list(r["self_retrieval"].values())[-1]
+        print("roles:", r["self_retrieval"], "stability", r["role_stability_ari"])
+        return last["top1"] > r["random_baseline"]["top1"]
+    if model == "fingerprint":
+        from dugout_models.fingerprint import backtest
+
+        r = backtest(con, BACKTESTS)
+        print("fingerprint:", r)
+        return True  # descriptive; the fit-vs-minutes correlation is reported, not gated
+    if model == "valuation":
+        from dugout_models.valuation import backtest
+
+        r = backtest(BACKTESTS)
+        print("valuation:", r["model_on_baseline_rows"], "baseline:", r["baseline_market_value"])
+        return r["model_on_baseline_rows"]["mae_log"] < r["baseline_market_value"]["mae_log"]
+    if model == "realism":
+        from dugout_models.realism import backtest
+
+        r = backtest(BACKTESTS)
+        print("realism:", {k: r[k]["auc"] for k in ("mobility", "destination")})
+        return r["destination"]["top1"] > r["destination"]["random_top1"]
+    if model == "injury":
+        from dugout_models.injury import backtest
+
+        r = backtest(con, BACKTESTS)
+        print("injury:", r["results"])
+        return r["results"]["logistic"]["auc"] > 0.5
+    if model == "lineup":
+        from dugout_models.lineup import PREDICTED_XI_TRUST, run_backtest
+
+        r = run_backtest(con, out_dir=BACKTESTS, trust_weights=(0.0, PREDICTED_XI_TRUST))
+        print("lineup:", r)
+        return r["optimiser_overlap"][str(PREDICTED_XI_TRUST)] > r["recent_minutes_baseline_overlap"]
+    raise SystemExit(f"unknown model {model}")
+
+
+MODELS = ["predictor", "ratings", "roles", "fingerprint", "valuation", "realism", "injury", "lineup"]
+
+
+def cmd_backtest(args) -> int:
+    con = connect(args.db or get_settings().warehouse_path, read_only=True)
+    models = MODELS if args.model == "all" else [args.model]
+    ok = {m: _run_one(m, args, con) for m in models}
+    print("criteria met:", ok)
+    return 0 if all(ok.values()) else 1
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -36,7 +89,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--db")
     sub = p.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("backtest")
-    s.add_argument("model", choices=["predictor"])
+    s.add_argument("model", choices=[*MODELS, "all"])
     s.add_argument("--seasons", nargs="+", default=["2024-25", "2025-26"])
     s.add_argument("--no-bayes", action="store_true", help="skip the (slow) NUTS Dixon–Coles baseline")
     s.add_argument("--name", default="predictor", help="report file name in docs/backtests/")

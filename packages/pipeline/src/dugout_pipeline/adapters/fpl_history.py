@@ -18,6 +18,7 @@ from dugout_pipeline.adapters.base import DAY, TIER_DATA, SourceAdapter
 from dugout_pipeline.adapters.fpl import match_id
 from dugout_pipeline.clubs import ClubResolver, slugify
 from dugout_pipeline.db import upsert
+from dugout_pipeline.ids import CLUB_PROVIDERS
 
 SEASONS_WITH_XG = ["2022-23", "2023-24", "2024-25", "2025-26"]
 # FPL source column -> our column; FPL started tracking these in 2025-26
@@ -48,6 +49,7 @@ class FPLHistoryAdapter(SourceAdapter):
             gw, gres = self.csv(season, "gws/merged_gw.csv")
             players, _ = self.csv(season, "players_raw.csv")
             team_slug = self.team_slugs(teams)
+            upsert(self.ctx.con, "entity_ids", self.team_ids(teams, team_slug))
             matches, obs = self.parse_matches(season, fixtures, gw, team_slug, fres.fetched_at)
             counts["matches"] += upsert(self.ctx.con, "matches", matches)
             counts["match_observations"] += upsert(self.ctx.con, "match_observations", obs)
@@ -62,6 +64,29 @@ class FPLHistoryAdapter(SourceAdapter):
             m = self.ctx.reep.lookup("opta", "team_numeric", int(t.code))
             out[int(t.id)] = slugify(m.label) if m else (by_alias.resolve(t.name) or slugify(t.name))
         return out
+
+    def team_ids(self, teams: pd.DataFrame, team_slug: dict[int, str]) -> list[dict]:
+        """Crosswalk rows for every club seen in history (incl. relegated sides), so other sources can join."""
+        rows = []
+        for t in teams.itertuples():
+            m = self.ctx.reep.lookup("opta", "team_numeric", int(t.code))
+            if not m:
+                continue
+            slug = team_slug[int(t.id)]
+            for key, ext in m.ids.items():
+                prov, ns = key.split("/", 1)
+                if prov in CLUB_PROVIDERS or key == "opta/team_numeric":
+                    rows.append(
+                        {
+                            "entity_type": "club",
+                            "dugout_id": slug,
+                            "provider": prov,
+                            "namespace": ns,
+                            "external_id": str(ext),
+                            "reep_id": m.reep_id,
+                        }
+                    )
+        return rows
 
     def parse_matches(self, season, fixtures, gw, team_slug, fetched_at: datetime):
         gw = gw.assign(was_home=gw["was_home"].astype(str).str.lower().eq("true"))

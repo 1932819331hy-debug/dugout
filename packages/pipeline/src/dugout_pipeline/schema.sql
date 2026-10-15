@@ -276,3 +276,14 @@ CREATE TABLE IF NOT EXISTS source_runs (
     message      VARCHAR,
     PRIMARY KEY (run_id, source)
 );
+
+-- Head-coach spells per club (Wikidata P286 with start/end qualifiers). Used to attribute team style to managers.
+CREATE TABLE IF NOT EXISTS manager_tenures (
+    manager_id   VARCHAR NOT NULL,            -- wikidata:<QID>
+    name         VARCHAR NOT NULL,
+    club_id      VARCHAR NOT NULL,
+    start_date   DATE,
+    end_date     DATE,                        -- NULL = current
+    source       VARCHAR NOT NULL,
+    PRIMARY KEY (manager_id, club_id, start_date)
+);

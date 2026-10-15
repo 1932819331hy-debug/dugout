@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import ClassVar
 
 import lightgbm as lgb
 import numpy as np
@@ -138,7 +139,7 @@ def _window_sums(keys: pd.DataFrame, ap: pd.DataFrame, days: int = 365) -> pd.Da
 
 
 class ValuationModel:
-    params = dict(
+    params: ClassVar[dict] = dict(
         n_estimators=600,
         learning_rate=0.03,
         num_leaves=31,

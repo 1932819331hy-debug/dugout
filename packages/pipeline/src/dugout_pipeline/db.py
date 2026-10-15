@@ -31,7 +31,9 @@ MIGRATIONS = [
 ]
 
 
-def connect(path: Path | str = ":memory:") -> duckdb.DuckDBPyConnection:
+def connect(path: Path | str = ":memory:", read_only: bool = False) -> duckdb.DuckDBPyConnection:
+    if read_only:  # models only read the warehouse; no schema bootstrap, no lock against the pipeline
+        return duckdb.connect(str(path), read_only=True)
     if str(path) != ":memory:":
         Path(path).parent.mkdir(parents=True, exist_ok=True)
     con = duckdb.connect(str(path))
