@@ -1,0 +1,19 @@
+[project]
+name = "dugout-spadl"
+version = "0.1.0"
+description = "Isolated converter: StatsBomb / Wyscout open event data -> SPADL Parquet (socceraction)"
+license = "MIT"
+# socceraction 1.5.x is unmaintained and pins numpy<2 / pandera 0.17, so it lives in its own environment.
+# The main workspace only reads the Parquet files this tool writes.
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "socceraction[statsbomb]==1.5.3",
+  "pandas>=2.1,<3",
+  "pyarrow>=14,<21",
+]
+
+[tool.uv]
+package = false
+# lxml<5 (socceraction) has no Windows wheels for 3.12; only socceraction's unused Opta loader needs it.
+override-dependencies = ["lxml>=5.2.2"]
+constraint-dependencies = ["multimethod<2"]

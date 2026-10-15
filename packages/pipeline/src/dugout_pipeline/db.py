@@ -14,6 +14,12 @@ from dugout_verify.ledger import LEDGER_DDL
 
 from dugout_pipeline.http import FetchResult
 
+# Additive, idempotent schema changes. CREATE TABLE IF NOT EXISTS does not add columns to existing tables.
+MIGRATIONS = [
+    "ALTER TABLE events ADD COLUMN IF NOT EXISTS xg DOUBLE",
+    "ALTER TABLE clubs ADD COLUMN IF NOT EXISTS address VARCHAR",
+]
+
 
 def connect(path: Path | str = ":memory:") -> duckdb.DuckDBPyConnection:
     if str(path) != ":memory:":
@@ -22,6 +28,8 @@ def connect(path: Path | str = ":memory:") -> duckdb.DuckDBPyConnection:
     con.execute("SET TimeZone = 'UTC'")
     con.execute(files("dugout_pipeline").joinpath("schema.sql").read_text())
     con.execute(LEDGER_DDL)
+    for stmt in MIGRATIONS:  # additive changes for warehouses created by older versions (e.g. CI cache)
+        con.execute(stmt)
     return con
 
 

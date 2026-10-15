@@ -25,7 +25,7 @@ Core invariant: **the LLM never writes a number.** Every number in published out
 
 | Topic | Decision |
 |---|---|
-| Python | 3.11 (socceraction requires <3.13), `uv` workspace, one package per `packages/*` |
+| Python | 3.12 + numpy 2, `uv` workspace; socceraction isolated in `tools/spadl` (pins numpy<2) |
 | Task runner | `Makefile` (Linux/macOS/CI) delegating to a Python CLI `dugout …`, so Windows works with `uv run dugout …` without `make` |
 | Storage | DuckDB file in `data/warehouse/` (git-ignored) + Parquet exports; only verified JSON is committed |
 | HTTP | `httpx` + on-disk cache (TTL per source) + token-bucket rate limiter + exponential backoff with jitter |

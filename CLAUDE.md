@@ -17,12 +17,13 @@ Open-source (MIT) AI sporting director. Read `PLAN.md` for phases; `docs/sources
 ## Layout
 - `packages/pipeline` — `dugout_pipeline`: adapters (`adapters/`), HTTP core (`http.py`), DuckDB schema (`db.py`, `schema.sql`), jobs, CLI.
 - `packages/verify` — `dugout_verify`: evidence ledger, Stat Auditor, Fact-Check.
-- `packages/models` — `dugout_models`; `packages/agents` — `dugout_agents`.
+- `packages/models` — `dugout_models` (predictor, ratings, roles, valuation, injury, lineup; backtests write `docs/backtests/`).
+- `packages/agents` — `dugout_agents`. `tools/spadl` — isolated socceraction converter.
 - `apps/web` — Next.js site, reads only static JSON in `data/`.
 - `config/` — leagues/clubs YAML. Leagues are config, not code.
 
 ## Python
-- Python 3.11, `uv` workspace. Run things with `uv run …`. Lint: `uv run ruff check .`; format: `uv run ruff format .`; tests: `uv run pytest`.
+- Python 3.12, numpy 2, `uv` workspace. Run things with `uv run …`. Lint: `uv run ruff check .`; format: `uv run ruff format .`; tests: `uv run pytest`.
 - Type hints everywhere; pydantic models for parsed rows. Small modules, no global state except settings.
 - Every adapter subclasses `SourceAdapter`, declares `name`, `tier`, `ttl`, `rate`, and implements `fetch_*` + `parse_*`.
   All HTTP goes through `CachedClient` (cache, rate limit, retries, provenance). Never call `httpx` directly in an adapter.
@@ -31,8 +32,9 @@ Open-source (MIT) AI sporting director. Read `PLAN.md` for phases; `docs/sources
 - Tests use recorded fixtures (`tests/fixtures/<source>/`). No live network in tests: `pytest-socket` blocks it.
   Record with `uv run dugout record <source>`: URLs are redacted, headers never saved, bodies trimmed by
   `testing.TRIMMERS` to tiny excerpts (we never commit full provider responses).
-- Dependency quirks (see root `pyproject.toml`): lxml is overridden to >=5 (socceraction pins <5 for an Opta parser
-  we don't use); multimethod is constrained <2 (pandera 0.17).
+- socceraction (unmaintained, pins numpy<2 / pandera 0.17) is NOT a workspace dependency. It lives in `tools/spadl`
+  (own locked env) and only converts StatsBomb/Wyscout to SPADL Parquet under `data/raw/spadl/`. VAEP/xT are our own
+  code in `dugout_models`. Do not add socceraction (or the `silly-kicks` fork: supply-chain risk) to the workspace.
 - Windows: set `PYTHONUTF8=1` when scripting file edits in Python, or non-ASCII text gets mangled.
 
 ## Commands

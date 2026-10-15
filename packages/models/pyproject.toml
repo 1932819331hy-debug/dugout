@@ -1,0 +1,33 @@
+[project]
+name = "dugout-models"
+version = "0.1.0"
+description = "dugout models: match predictor, ratings, roles, valuation, injury risk, lineup optimiser"
+license = "MIT"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "dugout-pipeline",
+  "dugout-verify",
+  "numpy>=2",
+  "pandas>=2.2",
+  "scipy>=1.13",
+  "scikit-learn>=1.5",
+  "xgboost>=2.1",
+  "lightgbm>=4.5",
+  "pymc>=5.20",
+  "umap-learn>=0.5.7",
+  "ortools>=9.11",
+]
+
+[project.scripts]
+dugout-models = "dugout_models.cli:main"
+
+[tool.uv.sources]
+dugout-pipeline = { workspace = true }
+dugout-verify = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dugout_models"]

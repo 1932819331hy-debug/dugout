@@ -124,6 +124,7 @@ CREATE TABLE IF NOT EXISTS events (
     start_y      DOUBLE,
     end_x        DOUBLE,
     end_y        DOUBLE,
+    xg           DOUBLE,                      -- provider shot xG where available (StatsBomb)
     PRIMARY KEY (dataset, game_id, event_id)
 );
 

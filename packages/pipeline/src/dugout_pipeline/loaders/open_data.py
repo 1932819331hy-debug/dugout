@@ -12,140 +12,78 @@ Credits (also in docs/sources.md and the README):
 from __future__ import annotations
 
 import logging
-import time
+import subprocess
 from collections.abc import Iterable
 from pathlib import Path
 
 import duckdb
-import pandas as pd
+import pyarrow.parquet as pq
 
 from dugout_pipeline.settings import REPO_ROOT, get_settings
 
 log = logging.getLogger(__name__)
 
 RAW = REPO_ROOT / "data" / "raw"
-EVENT_COLUMNS = [
-    "dataset",
-    "game_id",
-    "event_id",
-    "period",
-    "time_seconds",
-    "team_id",
-    "player_id",
-    "type_name",
-    "result_name",
-    "bodypart",
-    "start_x",
-    "start_y",
-    "end_x",
-    "end_y",
-]
+SPADL = RAW / "spadl"
+TOOL = REPO_ROOT / "tools" / "spadl"
 
 # Default open-data scope; extend freely. (competition_id, season_id) for StatsBomb.
 STATSBOMB_DEFAULT = [(2, 27)]  # Premier League 2015/16 — the full season StatsBomb released openly
 WYSCOUT_DEFAULT = ["England"]  # 2017/18 Premier League
-METRICA_GAMES = ["1", "2"]  # Sample_Game_3 is EPTS (handled by kloppy too, but tracking-only)
-SKILLCORNER_GAMES: list[str] = []  # filled from the SkillCorner open-data match list at runtime
+METRICA_GAMES = ["1", "2"]  # Sample_Game_3 is EPTS (tracking-only)
+SKILLCORNER_GAMES: list[str] = []
 
 
-def spadl_to_rows(actions: pd.DataFrame, dataset: str, game_id: str) -> pd.DataFrame:
-    import socceraction.spadl as spadl
-
-    a = spadl.add_names(actions)
-    out = pd.DataFrame(
-        {
-            "dataset": dataset,
-            "game_id": str(game_id),
-            "event_id": a["action_id"].astype(str),
-            "period": a["period_id"].astype(int),
-            "time_seconds": a["time_seconds"].astype(float),
-            "team_id": a["team_id"].astype(str),
-            "player_id": a["player_id"].astype("Int64").astype(str),
-            "type_name": a["type_name"],
-            "result_name": a["result_name"],
-            "bodypart": a["bodypart_name"],
-            "start_x": a["start_x"],
-            "start_y": a["start_y"],
-            "end_x": a["end_x"],
-            "end_y": a["end_y"],
-        }
-    )
-    return out[EVENT_COLUMNS]
+def run_spadl_tool(*args: str) -> None:
+    """socceraction runs in its own pinned environment (tools/spadl); we only read the Parquet it writes."""
+    cmd = [
+        "uv",
+        "run",
+        "--project",
+        str(TOOL),
+        "python",
+        str(TOOL / "convert.py"),
+        *args,
+        "--out",
+        str(SPADL),
+    ]
+    log.info("running %s", " ".join(cmd))
+    subprocess.run(cmd, check=True, cwd=REPO_ROOT)
 
 
-def store_events(con: duckdb.DuckDBPyConnection, df: pd.DataFrame) -> int:
-    if df.empty:
-        return 0
-    con.register("_ev", df)
-    try:
-        con.execute("INSERT OR REPLACE INTO events BY NAME SELECT * FROM _ev")
-    finally:
-        con.unregister("_ev")
-    return len(df)
-
-
-def _cached(path: Path, build) -> pd.DataFrame:
-    if path.exists():
-        return pd.read_parquet(path)
-    df = build()
-    path.parent.mkdir(parents=True, exist_ok=True)
-    df.to_parquet(path, index=False)
-    return df
+def store_events(con: duckdb.DuckDBPyConnection, dataset: str) -> int:
+    """Load every converted game of a dataset into `events` (idempotent)."""
+    files = (SPADL / dataset / "actions").glob("*.parquet")
+    n = 0
+    for f in files:
+        has_xg = "xg" in pq.read_schema(f).names
+        con.execute(
+            f"""INSERT OR REPLACE INTO events BY NAME
+                SELECT '{dataset}' AS dataset, CAST(game_id AS VARCHAR) AS game_id,
+                       CAST(action_id AS VARCHAR) AS event_id, period_id AS period, time_seconds,
+                       CAST(team_id AS VARCHAR) AS team_id, CAST(CAST(player_id AS BIGINT) AS VARCHAR) AS player_id,
+                       type_name, result_name, bodypart_name AS bodypart, start_x, start_y, end_x, end_y,
+                       {"xg" if has_xg else "NULL"} AS xg
+                FROM read_parquet(?)""",
+            [str(f)],
+        )
+        n += 1
+    return n
 
 
 def load_statsbomb(
-    con, scope: Iterable[tuple[int, int]] = STATSBOMB_DEFAULT, limit: int | None = None, delay: float = 0.5
-) -> dict[str, int]:
-    from socceraction.data.statsbomb import StatsBombLoader
-    from socceraction.spadl.statsbomb import convert_to_actions
-
-    loader, n_games, n_events = StatsBombLoader(getter="remote", creds={"user": "", "passwd": ""}), 0, 0
-    for comp, season in scope:
-        games = loader.games(comp, season)
-        for g in games.itertuples():
-            if limit is not None and n_games >= limit:
-                break
-            path = RAW / "events" / "statsbomb" / f"{g.game_id}.parquet"
-            fresh = not path.exists()
-
-            def build(g=g):
-                ev = loader.events(g.game_id)
-                return spadl_to_rows(
-                    convert_to_actions(ev, home_team_id=g.home_team_id), "statsbomb", g.game_id
-                )
-
-            n_events += store_events(con, _cached(path, build))
-            n_games += 1
-            if fresh:
-                time.sleep(delay)  # polite: raw.githubusercontent.com
-    return {"games": n_games, "events": n_events}
+    con, scope: Iterable[tuple[int, int]] = STATSBOMB_DEFAULT, limit: int | None = None
+) -> dict:
+    args = ["statsbomb", "--scope", ",".join(f"{c}:{s}" for c, s in scope)]
+    run_spadl_tool(*args, *(["--limit", str(limit)] if limit is not None else []))
+    return {"games_loaded": store_events(con, "statsbomb")}
 
 
-def load_wyscout(con, countries: Iterable[str] = WYSCOUT_DEFAULT, limit: int | None = None) -> dict[str, int]:
-    """Wyscout public dataset from figshare (downloaded once into .cache/open/wyscout by socceraction)."""
-    from socceraction.data.wyscout import PublicWyscoutLoader
-    from socceraction.spadl.wyscout import convert_to_actions
-
-    root = get_settings().cache_dir / "open" / "wyscout"
-    root.mkdir(parents=True, exist_ok=True)
-    loader = PublicWyscoutLoader(root=str(root), download=not any(root.iterdir()))
-    comps = loader.competitions()
-    n_games = n_events = 0
-    for c in comps[comps["country_name"].isin(list(countries))].itertuples():
-        for g in loader.games(c.competition_id, c.season_id).itertuples():
-            if limit is not None and n_games >= limit:
-                break
-            path = RAW / "events" / "wyscout_public" / f"{g.game_id}.parquet"
-
-            def build(g=g):
-                ev = loader.events(g.game_id)
-                return spadl_to_rows(
-                    convert_to_actions(ev, home_team_id=g.home_team_id), "wyscout_public", g.game_id
-                )
-
-            n_events += store_events(con, _cached(path, build))
-            n_games += 1
-    return {"games": n_games, "events": n_events}
+def load_wyscout(con, countries: Iterable[str] = WYSCOUT_DEFAULT, limit: int | None = None) -> dict:
+    cache = get_settings().cache_dir / "open" / "wyscout"
+    args = ["wyscout", "--countries", ",".join(countries), "--cache", str(cache)]
+    run_spadl_tool(*args, *(["--limit", str(limit)] if limit is not None else []))
+    return {"games_loaded": store_events(con, "wyscout_public")}
 
 
 def _tracking_to_parquet(dataset, out: Path) -> int:
