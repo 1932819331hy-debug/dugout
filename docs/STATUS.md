@@ -7,8 +7,19 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   Secrets set (API_FOOTBALL_KEY, FOOTBALL_DATA_ORG_KEY, GUARDIAN_API_KEY, OPENROUTER_API_KEY, HF_TOKEN).
 - **Phase 2 — core models: DONE.** Predictor beats Elo on 2024-25 and 2025-26 (all of RPS/log loss/Brier).
   Weak models improved; FootballBERT evaluated and *not adopted* (leakage). See `docs/backtests/README.md`.
-- **Next: Phase 3 — agents and verification** (LangGraph orchestrator + 6 agents, evidence ledger tools,
-  Stat Auditor, Fact-Check, `data/clubs/<slug>.json`, 50-question eval). User has not yet said "go" for Phase 3.
+- **Phase 3 — agents & verification: IN PROGRESS (2026-10-16).** Built and tested (see docs/agents.md):
+  Stat Auditor, Fact-Check (DeBERTa-v3-base NLI chosen in docs/backtests/factcheck_nli.md, BGE retrieval),
+  `dugout-models publish` -> `model_outputs`, LangGraph Sporting Director + 6 club specialists + 2 player
+  specialists (Player Development = new potential model, docs/backtests/potential.md; Player Fit), dossier JSON
+  `data/clubs/<slug>.json`, eval set (56 questions). Local LLM: Ollama qwen2.5:3b.
+  **Left to do:** (1) let `uv run dugout-models publish market` finish (adds lookup/potential/fit rows, ~20 min);
+  (2) rebuild `uv run dugout-agents dossier liverpool` and check sections (last run: transfer section garbled by
+  the LLM -> stricter binding added since; lineup section withheld); (3) run `uv run dugout-agents eval` with and
+  without `--no-llm`, write results to docs/backtests; (4) speed up market publish (~15 min) before Phase 5;
+  (5) report to user and stop for go-ahead.
+  User feedback to remember: Liverpool goalkeeper is not a need (fixed: peer-based needs); user says Rio Ngumoha
+  will not leave (insider info cannot be a source; sale likelihood relabelled as model estimate, academy/contract
+  blind spot documented). User mentioned a GK signing "Luca Brugmans" not present in our sources.
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.

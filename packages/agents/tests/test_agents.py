@@ -232,3 +232,41 @@ def test_dossier_json(con, ledger):
     assert stat_ids and all(doc["stats"][i]["source"].startswith("dugout_model") for i in stat_ids)
     for e in doc["stats"].values():
         assert e["fetched_at"] and e["status"] in ("verified", "single_source", "model_output")
+
+
+def test_potential_and_fit_for_a_named_player(con, ledger):
+    rows = [
+        ("lookup", "name", "", None, "Alexander Isak"),
+        ("lookup", "club_name", "", None, "Liverpool FC"),
+        ("lookup", "age", "", 27.1, None),
+        ("lookup", "market_value", "", 90e6, None),
+        ("lookup", "level_now", "", None, "among the most valuable players in the Premier League"),
+        ("potential", "proj_value_2y", "", 80e6, None),
+        ("potential", "proj_value_4y", "", 60e6, None),
+        ("potential", "ceiling_value_4y", "", 95e6, None),
+        ("potential", "floor_value_4y", "", 30e6, None),
+        (
+            "potential",
+            "level_4y",
+            "",
+            None,
+            "the level of a first-choice player at a top Premier League club",
+        ),
+        ("potential", "level_ceiling", "", None, "among the most valuable players in the Premier League"),
+        ("fit", "position_group", "liverpool", None, "centre-forward"),
+        ("fit", "expected_minutes_share", "liverpool", 0.61, None),
+        ("fit", "rank_at_position", "liverpool", 1, None),
+        ("fit", "fills_need", "liverpool", None, "no"),
+    ]
+    for model, metric, ctx_, num, text in rows:
+        con.execute(
+            "INSERT INTO model_outputs VALUES (?, 'v', 'player', 'rp1', ?, ?, ?, ?, ?)",
+            [model, metric, ctx_, num, text, NOW],
+        )
+    ctx = make_ctx(con, ledger)
+    state = run(ctx, "How good can Isak become, and how would he fit in at Liverpool?", "liverpool")
+    assert set(state["agents"]) == {"potential", "fit"}
+    by = {s.agent: s for s in state["sections"]}
+    assert by["potential"].status == "published", by["potential"].withheld
+    assert "€60.0m by 15 October 2030" in by["potential"].text
+    assert by["fit"].status == "published" and "61% of Liverpool's minutes" in by["fit"].text

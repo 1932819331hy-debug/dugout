@@ -54,10 +54,8 @@ class DebertaNLI:
 
     @cached_property
     def _model(self):
-        import torch
         from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-        torch.set_grad_enabled(False)
         tok = AutoTokenizer.from_pretrained(self.spec.repo, revision=self.spec.revision)
         model = AutoModelForSequenceClassification.from_pretrained(
             self.spec.repo, revision=self.spec.revision, use_safetensors=True
@@ -80,7 +78,8 @@ class DebertaNLI:
                 padding=True,
                 return_tensors="pt",
             )
-            logits = model(**enc).logits
+            with torch.inference_mode():  # per call: grad mode is thread-local (LangGraph uses threads)
+                logits = model(**enc).logits
             out.append(torch.softmax(logits, -1)[:, order].numpy())
         return np.vstack(out) if out else np.zeros((0, 3))
 
@@ -91,10 +90,8 @@ class BgeEmbedder:
 
     @cached_property
     def _model(self):
-        import torch
         from transformers import AutoModel, AutoTokenizer
 
-        torch.set_grad_enabled(False)
         tok = AutoTokenizer.from_pretrained(self.spec.repo, revision=self.spec.revision)
         model = AutoModel.from_pretrained(
             self.spec.repo, revision=self.spec.revision, use_safetensors=True
@@ -102,6 +99,8 @@ class BgeEmbedder:
         return tok, model
 
     def embed(self, texts: list[str], query: bool = False) -> np.ndarray:
+        import torch
+
         tok, model = self._model
         if query:
             texts = [BGE_QUERY_PREFIX + t for t in texts]
@@ -110,6 +109,7 @@ class BgeEmbedder:
             enc = tok(
                 texts[i : i + self.batch], truncation=True, max_length=512, padding=True, return_tensors="pt"
             )
-            cls = model(**enc).last_hidden_state[:, 0].numpy()  # BGE uses the [CLS] vector
+            with torch.inference_mode():
+                cls = model(**enc).last_hidden_state[:, 0].numpy()  # BGE uses the [CLS] vector
             out.append(cls / np.linalg.norm(cls, axis=1, keepdims=True))
         return np.vstack(out) if out else np.zeros((0, 384))

@@ -14,7 +14,7 @@ from typing import Any
 
 from dugout_agents.facts import MODEL_DOCS
 from dugout_agents.graph import Context, Section, State, run
-from dugout_agents.specialists import SPECIALISTS
+from dugout_agents.specialists import CLUB_LEVEL
 from dugout_verify.ledger import PLACEHOLDER, format_value
 
 SCHEMA = "dugout.club/1"
@@ -86,8 +86,8 @@ def stat_json(eid: str, ctx: Context, status: dict[str, str], cross: dict[str, l
 
 
 def build(ctx: Context, club: str) -> tuple[dict, State]:
-    state = run(ctx, "", club, agents=list(SPECIALISTS))
-    sections = sorted(state["sections"], key=lambda s: list(SPECIALISTS).index(s.agent))
+    state = run(ctx, "", club, agents=CLUB_LEVEL)
+    sections = sorted(state["sections"], key=lambda s: CLUB_LEVEL.index(s.agent))
     everything = [state["summary"], *sections]
     published = [s for s in everything if s.status == "published"]
     status: dict[str, str] = {}

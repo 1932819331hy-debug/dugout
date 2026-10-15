@@ -203,3 +203,28 @@
 - id: q50
   question: How many tackles has Ryan Gravenberch made in the Champions League?
   no_stat: [champions_league_tackles, tackles]
+# added with the player-development and player-fit features (user request, 2026-10-16)
+- id: q51
+  question: How good can Rio Ngumoha become?
+  agents: [potential]
+  expect: [{metric: proj_value_4y, entity: Rio Ngumoha}, {metric: ceiling_value_4y, entity: Rio Ngumoha}]
+- id: q52
+  question: What is Trey Nyoni's potential?
+  agents: [potential]
+  expect: [{metric: proj_value_4y, entity: Trey Nyoni}]
+- id: q53
+  question: How good could Nico O'Reilly be in the future?
+  agents: [potential]
+  expect: [{metric: proj_value_4y, entity: Nico O'Reilly}]
+- id: q54
+  question: How would Jurriën Timber fit in at Liverpool?
+  agents: [fit]
+  expect: [{metric: expected_minutes_share, entity: Timber}, {metric: rank_at_position, entity: Timber}]
+- id: q55
+  question: Would Bart Verbruggen suit Liverpool?
+  agents: [fit]
+  expect: [{metric: expected_minutes_share, entity: Verbruggen}]
+- id: q56
+  question: What is Michael Kayode's potential and how would he fit in at Liverpool?
+  agents: [potential, fit]
+  expect: [{metric: proj_value_4y, entity: Kayode}, {metric: expected_minutes_share, entity: Kayode}]

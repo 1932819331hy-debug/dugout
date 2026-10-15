@@ -182,3 +182,26 @@ def test_near_duplicate():
     assert not near_duplicate(
         a, "Arsenal beat Lille in the Champions League on Tuesday night at the Emirates"
     )
+
+
+def test_binding_requires_number_next_to_its_own_name(ledger, con):
+    con.execute("INSERT INTO goals VALUES ('gakpo', 3)")
+    s = _goals(ledger)
+    g = ledger.record_sql(
+        "SELECT n FROM goals WHERE player = ?",
+        ["gakpo"],
+        entity_type="player",
+        entity_id="gakpo",
+        metric="season_goals_scored",
+        source="fpl",
+        source_tier=1,
+        fetched_at=T,
+    )[0]
+    aliases = {"salah": ["Salah"], "gakpo": ["Gakpo"]}
+    fc = FactChecker([], KeywordNLI("x"), FakeEmbedder(), now=NOW, aliases=aliases)
+    ok = fc.check(f"Salah has {{{{stat:{s}}}}} goals and Gakpo has {{{{stat:{g}}}}} goals.", ledger)
+    assert ok.ok
+    swapped = fc.check(f"Salah has {{{{stat:{g}}}}} goals and Gakpo has {{{{stat:{s}}}}} goals.", ledger)
+    assert not swapped.ok and "next to another name" in swapped.claims[0].reason
+    far = fc.check(f"Salah, who has {{{{stat:{s}}}}}, is quick and scores goals.", ledger)
+    assert not far.ok and "near its number" in far.claims[0].reason

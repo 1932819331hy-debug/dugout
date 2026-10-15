@@ -17,10 +17,10 @@ from dugout_agents.llm import LLM, LLMError
 from dugout_verify.auditor import MALFORMED, stray_numbers
 from dugout_verify.claims import claims
 from dugout_verify.factcheck import FactChecker
-from dugout_verify.ledger import PLACEHOLDER, EvidenceLedger
+from dugout_verify.ledger import PLACEHOLDER, EvidenceLedger, render
 
 log = logging.getLogger(__name__)
-CODE = re.compile(r"\[\s*(F\d+)\s*\]")
+CODE = re.compile(r"\[\s*(F\d+d?)\s*\]")  # [F3], and [F3d] for a second slot
 
 SYSTEM = """You are the {role} in the sporting department of {club}. You write short briefing notes for the \
 sporting director.
@@ -51,7 +51,7 @@ class Draft:
 
 
 def card(f: Fact) -> str:
-    example = f.template.replace("{p}", f"[{f.key}]") if f.eid else f.template
+    example = f.template.replace("{p}", f"[{f.key}]").replace("{d}", f"[{f.key}d]") if f.eid else f.template
     kind = f"code [{f.key}]" if f.eid else "statement"
     gloss = f"; reading: {f.gloss}" if f.gloss else ""
     return f"- [{f.key}] {f.subject} — {f.label} ({kind}{gloss}). Example: {example}"
@@ -62,14 +62,15 @@ def substitute(text: str, facts: list[Fact]) -> tuple[str, list[str]]:
     errors: list[str] = []
 
     def sub(m: re.Match[str]) -> str:
-        f = by_key.get(m.group(1))
-        if f is None:
-            errors.append(f"unknown fact code [{m.group(1)}]")
+        code = m.group(1)
+        f = by_key.get(code.rstrip("d"))
+        if f is None or (code.endswith("d") and not f.when):
+            errors.append(f"unknown fact code [{code}]")
             return m.group(0)
         if not f.eid:
             errors.append(f"[{f.key}] is a statement, not a value")
             return m.group(0)
-        return f.placeholder
+        return f.when_placeholder if code.endswith("d") else f.placeholder
 
     out = CODE.sub(sub, text.strip())
     out = re.sub(r"\s+", " ", out).strip()
@@ -85,7 +86,7 @@ def validate(
     max_sentences: int,
 ) -> list[str]:
     errors = []
-    allowed_ids = {f.eid for f in facts if f.eid}
+    allowed_ids = {i for f in facts for i in f.ids()}
     for m in PLACEHOLDER.finditer(template):
         if m.group(1) not in allowed_ids:
             errors.append("placeholder not from the fact list")
@@ -94,14 +95,20 @@ def validate(
     stray = stray_numbers(template, allowed_names)
     if stray:
         errors.append(f"numbers written directly: {', '.join(sorted(set(stray)))}")
-    cl = claims(template)
-    if len(cl) > max_sentences + 2:
+    if len(claims(template)) > max_sentences + 2:
         errors.append("too many sentences")
-    for k, c in enumerate(cl):
-        if c.type == "stat":
-            r = checker.check_binding(c, cl[k - 1].text if k else "", ledger)
-            if r.status != "verified":
-                errors.append(f"sentence {k + 1}: {r.reason}")
+    if errors:  # cheap checks first; Fact-Check (NLI) only on drafts that pass them
+        return errors
+    # the same Fact-Check the publish gate runs: a draft whose sentences would be cut is rejected here
+    report = checker.check(template, ledger, render=lambda t: render(t, ledger)[0])
+    for c in report.claims:
+        if c.status in ("conflicting", "unverified"):
+            hint = (
+                ""
+                if c.type == "stat"
+                else " (state it with a fact code, or in the wording of a statement fact)"
+            )
+            errors.append(f"sentence {c.index + 1} {c.status}: {c.reason}{hint}")
     return errors
 
 

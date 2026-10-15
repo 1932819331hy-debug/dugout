@@ -37,13 +37,15 @@ def body_resolver(cache_dir=None):
 def passages(con: duckdb.DuckDBPyConnection, tb: Toolbox, now: datetime) -> list[Passage]:
     out: list[Passage] = []
     # official: FPL availability flags (the Premier League's own fantasy game data), tier 1
-    for pid, status, news, added in con.execute(
-        """SELECT player_id, status, news, news_added FROM injuries WHERE source = 'fpl'
-           AND snapshot_date = (SELECT max(snapshot_date) FROM injuries WHERE source = 'fpl') AND status <> 'available'"""
+    # (dated by the snapshot: a long-running injury is re-confirmed by every refresh, not stale)
+    for pid, status, news, fetched in con.execute(
+        """SELECT player_id, status, news, fetched_at FROM injuries WHERE source = 'fpl'
+           AND snapshot_date = (SELECT max(snapshot_date) FROM injuries WHERE source = 'fpl')
+           AND status <> 'available'"""
     ).fetchall():
         name = tb.name(pid)
         text = f"Fantasy Premier League status for {name}: {status}. {news or ''}".strip()
-        out.append(Passage(text, "Fantasy Premier League", 1, FPL_URL, added or now, official=True))
+        out.append(Passage(text, "Fantasy Premier League", 1, FPL_URL, fetched or now, official=True))
     # head coaches: Wikidata and football-data.org are separate sources (tier 3 / tier 2)
     for name, club, source in con.execute(
         "SELECT name, club_id, source FROM managers WHERE club_id IS NOT NULL"
