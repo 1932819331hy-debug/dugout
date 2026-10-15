@@ -62,12 +62,35 @@ cut and listed (without numbers) under `withheld`. What remains is audited again
 NLI model choice: `docs/backtests/factcheck_nli.md` (48 hand-labelled football pairs; base and large both make no
 false verifications; base is three times faster and is used).
 
+## Player lookup: potential and fit
+
+Two player specialists answer about any player in a first-tier league (about 6 500 players):
+
+- **Player Development** ("How good can X become?"): projected market value in two and four years with a
+  10-90% band from the potential model (`docs/backtests/potential.md`), shown with a level in words (compared with
+  current Premier League squad values). Market value mixes ability with age, contract and hype; the band is wide.
+- **Player Fit** ("How would X fit Liverpool?"): playing-time outlook at the club (opportunity model), rank by value
+  among the club's current options at his position, whether the position is a top need, and style similarity to the
+  head coach's preferred profile (Premier League players only; descriptive).
+
+## Official club news and setting up another club
+
+`club_news` reads official club sites through their sitemaps (robots.txt respected, one page every three seconds).
+A club's own announcements are official (tier 1) evidence. Stories the site reproduces from the press ("Full
+story: Liverpool Echo") are credited to the original outlet at its tier. Announced signings who have not joined
+yet (e.g. a goalkeeper loaned back for a season) count toward squad needs; women's team and academy news do not.
+
+`uv run dugout setup-club <club> [--build]` finds the club's official site on Wikidata (P856), checks robots.txt,
+finds the news section from the sitemap and writes `config/club_sites.yaml`; `--build` then ingests its news,
+publishes the models (club-specific fit outputs included) and builds `data/clubs/<slug>.json`. Premier League
+clubs only: other leagues need their own data pipeline (FPL covers the Premier League only).
+
 ## Evaluation
 
-`uv run dugout-agents eval` runs 50 hand-labelled questions (`packages/agents/src/dugout_agents/eval/questions.yaml`):
+`uv run dugout-agents eval` runs 56 hand-labelled questions (`packages/agents/src/dugout_agents/eval/questions.yaml`):
 routing accuracy, answer recall (labelled entity/metric cited), claim recall, citation rate, untraceable-number
 rate (target 0), refusal accuracy on unanswerable questions, and how often the LLM tried to write numbers.
-Results: `docs/backtests/agents_eval*.md`.
+Results: `docs/backtests/agents_eval_templates.md` (no LLM) and `docs/backtests/agents_eval_llm.md`.
 
 ## Known limits
 

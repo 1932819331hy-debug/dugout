@@ -141,7 +141,8 @@ def test_llm_codes_are_substituted_and_numbers_rejected(con, ledger):
 
     facts = tools.club_profile(ctx.toolbox, "liverpool")
     pos = next(f for f in facts if f.label == "league position")
-    good = f"Liverpool are [{pos.key}] in the Premier League table."
+    pts = next(f for f in facts if f.label == "league points")
+    good = f"Liverpool are [{pos.key}] in the Premier League table. Liverpool have [{pts.key}] points."
     llm = ScriptedLLM(["Liverpool are 3rd with 13 points.", good])
     d = writer.write(
         llm,
@@ -270,3 +271,22 @@ def test_potential_and_fit_for_a_named_player(con, ledger):
     assert by["potential"].status == "published", by["potential"].withheld
     assert "€60.0m by 15 October 2030" in by["potential"].text
     assert by["fit"].status == "published" and "61% of Liverpool's minutes" in by["fit"].text
+
+
+def test_evasive_llm_note_is_rejected(con, ledger):
+    ctx = make_ctx(con, ledger)
+    from dugout_agents import tools
+
+    facts = tools.club_profile(ctx.toolbox, "liverpool")
+    llm = ScriptedLLM(["We recommend checking the club website.", "We recommend reviewing the data."])
+    d = writer.write(
+        llm,
+        role="analyst",
+        club="Liverpool",
+        question="q",
+        facts=facts,
+        ledger=ledger,
+        checker=ctx.checker,
+        allowed_names=[],
+    )
+    assert d.writer == "template" and "too few of the facts" in d.attempts[0]["errors"][-1]

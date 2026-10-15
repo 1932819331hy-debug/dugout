@@ -109,6 +109,15 @@ def validate(
                 else " (state it with a fact code, or in the wording of a statement fact)"
             )
             errors.append(f"sentence {c.index + 1} {c.status}: {c.reason}{hint}")
+    # a note must actually answer: state facts, not only advise (a "check the club website" note passes every
+    # check while saying nothing)
+    stated = sum(1 for c in report.claims if c.status == "verified")
+    if facts and stated < min(2, len(facts)):
+        errors.append(
+            "the note states too few of the facts; state the facts first, then at most one recommendation"
+        )
+    if sum(1 for c in report.claims if c.type == "analysis") > 1:
+        errors.append("more than one recommendation sentence")
     return errors
 
 

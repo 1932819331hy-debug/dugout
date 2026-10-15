@@ -23,8 +23,8 @@ from dugout_agents.graph import Context, run
 from dugout_verify.auditor import stray_numbers
 
 
-def load_questions() -> list[dict]:
-    return yaml.safe_load(files("dugout_agents").joinpath("eval/questions.yaml").read_text(encoding="utf-8"))
+def load_questions(name: str = "questions") -> list[dict]:
+    return yaml.safe_load(files("dugout_agents").joinpath(f"eval/{name}.yaml").read_text(encoding="utf-8"))
 
 
 def _entity_matches(ctx: Context, entity_id: str, want: str) -> bool:
@@ -122,9 +122,13 @@ def summarise(rows: list[dict]) -> dict:
 
 
 def run_eval(
-    ctx: Context, out_dir: Path | None = None, limit: int | None = None, name: str = "agents_eval"
+    ctx: Context,
+    out_dir: Path | None = None,
+    limit: int | None = None,
+    name: str = "agents_eval",
+    question_set: str = "questions",
 ) -> dict:
-    qs = load_questions()[:limit]
+    qs = load_questions(question_set)[:limit]
     rows = []
     t0 = time.time()
     for q in qs:
