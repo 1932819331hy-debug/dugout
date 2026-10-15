@@ -100,6 +100,7 @@ def build_graph(ctx: Context):
                 ledger=ctx.ledger,
                 checker=ctx.checker,
                 allowed_names=ctx.allowed_names(),
+                template_limit=spec.max_facts,
             )
         sec = Section(spec.name, spec.title, question, facts, draft.template, draft.writer, draft.attempts)
         return {"sections": [sec]}

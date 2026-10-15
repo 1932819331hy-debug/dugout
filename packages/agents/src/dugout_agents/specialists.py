@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import dataclasses
 import re
 from collections.abc import Callable
 from dataclasses import dataclass
@@ -18,6 +19,7 @@ class Specialist:
     gather: Callable[[Toolbox, str, list[str]], list[Fact]]
     keywords: str  # routing regex
     dossier_question: str
+    max_facts: int = 8  # sentences when writing from templates (a lineup needs all eleven)
 
 
 def _club(tb: Toolbox, club: str, focus: list[str]) -> list[Fact]:
@@ -59,7 +61,8 @@ SPECIALISTS: dict[str, Specialist] = {
             "Match Predictor",
             "match analyst",
             lambda tb, c, f: tools.next_match(tb, c),
-            r"predict|forecast|win|beat|odds|chance|next (?:match|game|fixture)|fixture|probab|result|expect",
+            r"predict|forecast|win|beat|odds|chance|next (?:\w+ )?(?:match|game|fixture)|fixture|probab|result|"
+            r"expect|kick-?off|when (?:is|are|do|does)\b.*\b(?:match|game|fixture|play)",
             "What does the model expect from {club}'s next league match?",
         ),
         Specialist(
@@ -84,7 +87,7 @@ SPECIALISTS: dict[str, Specialist] = {
             "Transfer & Valuation",
             "transfer and valuation analyst",
             _transfer,
-            r"valu|worth|sell|sale|contract|fee|price|cost|offer|bid|market",
+            r"valu|worth|sell|sold|sale|leave|exit|contract|fee|price|cost|offer|bid|market",
             "Which {club} players could be sold, and what are the key players worth?",
         ),
         Specialist(
@@ -114,6 +117,9 @@ SPECIALISTS: dict[str, Specialist] = {
         ),
     )
 }
+for _name, _n in (("lineup", 14), ("news", 12), ("transfer", 12), ("scout", 14), ("club", 10)):
+    SPECIALISTS[_name] = dataclasses.replace(SPECIALISTS[_name], max_facts=_n)
+
 # specialists that only answer about a named player; the dossier runs the six club-level ones
 PLAYER_ONLY = ("potential", "fit")
 CLUB_LEVEL = [n for n in SPECIALISTS if n not in PLAYER_ONLY]
