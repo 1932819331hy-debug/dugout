@@ -29,7 +29,7 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
-      - run: uv python install 3.11
+      - run: uv python install 3.12
       - run: uv sync --frozen
 
       # Reep catalogue (~210 MB, CC0) and the HTTP cache + daily budgets persist between runs.
