@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T15:40:00+00:00",
+  "generated_at": "2026-10-15T16:42:06+00:00",
   "horizon_days": 14,
   "train_rows": 22725,
   "test_rows": 11559,
@@ -7,29 +7,42 @@
   "positive_rate_test": 0.027597543040055367,
   "results": {
     "logistic": {
-      "auc": 0.6101390019968986,
-      "brier": 0.02691659846520467
+      "auc": 0.6099652495007752,
+      "brier": 0.02696644357591632,
+      "top_decile_lift": 2.3195485459535092
     },
     "gradient_boosting": {
-      "auc": 0.628593162574326,
-      "brier": 0.027255534186261168
+      "auc": 0.6371577940405404,
+      "brier": 0.02754337628711756,
+      "top_decile_lift": 2.288203295332516
+    },
+    "gradient_boosting_calibrated": {
+      "auc": 0.6222181472350204,
+      "brier": 0.026879543113034993,
+      "top_decile_lift": 2.2432742043736202
     },
     "base_rate": {
       "auc": 0.5,
-      "brier": 0.026870092050981013
+      "brier": 0.026870092050981013,
+      "top_decile_lift": 1.0
     }
   },
   "logistic_coefficients": {
-    "age": 0.086,
-    "min_last3": 0.13,
-    "min_28d": -0.176,
-    "matches_14d": 0.11,
-    "prev_episodes": 0.149,
-    "days_since_episode": -0.158,
-    "is_gk": -0.121,
-    "is_def": 0.119,
-    "is_mid": -0.063,
-    "is_fwd": 0.007,
-    "season_week": -0.01
+    "age": 0.054,
+    "min_last3": 0.175,
+    "min_28d": -0.164,
+    "matches_14d": 0.13,
+    "prev_episodes": 0.176,
+    "days_since_episode": -0.09,
+    "is_gk": -0.117,
+    "is_def": 0.116,
+    "is_mid": -0.06,
+    "is_fwd": 0.006,
+    "season_week": -0.014,
+    "age2": 0.07,
+    "min_7d": -0.075,
+    "episodes_365": 0.055,
+    "days_lost_365": -0.076,
+    "last_muscle": 0.09
   }
 }
