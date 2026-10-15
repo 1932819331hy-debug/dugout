@@ -63,3 +63,35 @@ def test_title_comes_from_the_page_title():
         "<title>Club agree deal to sign goalkeeper Lucca Brughmans - Club FC</title>",
     )
     assert _parse(html)["title"] == "Club agree deal to sign goalkeeper Lucca Brughmans"
+
+
+def test_sitemap_entries_follow_nested_indexes_news_first():
+    from types import SimpleNamespace
+
+    from dugout_pipeline.adapters.news import sitemap_entries
+
+    def index(*locs):
+        items = "".join(f"<sitemap><loc>{u}</loc></sitemap>" for u in locs)
+        return f'<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{items}</sitemapindex>'.encode()
+
+    def urlset(*locs):
+        items = "".join(f"<url><loc>{u}</loc><lastmod>2026-10-15T10:00:00Z</lastmod></url>" for u in locs)
+        return f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{items}</urlset>'.encode()
+
+    docs = {
+        "root": index("videos", "articles"),
+        "articles": index("articles/1", "articles/2"),
+        "articles/1": urlset("https://club.test/news/new"),
+        "articles/2": urlset("https://club.test/news/older"),
+        "videos": urlset("https://club.test/video/x"),
+    }
+    seen = []
+
+    class Client:
+        def get(self, url):
+            seen.append(url)
+            return SimpleNamespace(content=docs[url])
+
+    entries = sitemap_entries(Client(), "root", max_fetches=3)
+    assert seen == ["root", "articles", "articles/1"]
+    assert [u for u, _ in entries] == ["https://club.test/news/new"]
