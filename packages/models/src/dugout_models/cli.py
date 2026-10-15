@@ -96,6 +96,15 @@ def cmd_backtest(args) -> int:
     return 0 if all(ok.values()) else 1
 
 
+def cmd_publish(args) -> int:
+    from dugout_models.publish import publish
+
+    con = connect(args.db or get_settings().warehouse_path)  # writable: fills model_outputs
+    counts = publish(con, args.models or None)
+    print("published:", counts)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     if os.name == "nt":
         # PyTensor's C backend needs a modern g++; NUTS runs through nutpie/numba instead, so skip C compilation.
@@ -111,6 +120,13 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--no-bayes", action="store_true", help="skip the (slow) NUTS Dixon–Coles baseline")
     s.add_argument("--name", default="predictor", help="report file name in docs/backtests/")
     s.set_defaults(fn=cmd_backtest)
+    s = sub.add_parser(
+        "publish", help="fit shipped models on all data; write current outputs to model_outputs"
+    )
+    s.add_argument(
+        "models", nargs="*", help="predictor lineup injury roles fingerprint market (default: all)"
+    )
+    s.set_defaults(fn=cmd_publish)
     args = p.parse_args(argv)
     return args.fn(args)
 

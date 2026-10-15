@@ -287,3 +287,18 @@ CREATE TABLE IF NOT EXISTS manager_tenures (
     source       VARCHAR NOT NULL,
     PRIMARY KEY (manager_id, club_id, start_date)
 );
+
+-- Current outputs of dugout's own models (`dugout-models publish`). Agents cite these through the evidence ledger
+-- with a `sql` query, so the Stat Auditor can re-read them. `context` disambiguates (match id, target club...).
+CREATE TABLE IF NOT EXISTS model_outputs (
+    model        VARCHAR NOT NULL,            -- predictor | lineup | injury | roles | fingerprint | valuation | realism | opportunity | scout
+    version      VARCHAR NOT NULL,            -- model version + training cut-off
+    entity_type  VARCHAR NOT NULL,            -- match | club | player | manager
+    entity_id    VARCHAR NOT NULL,
+    metric       VARCHAR NOT NULL,
+    context      VARCHAR NOT NULL DEFAULT '',
+    value_num    DOUBLE,
+    value_text   VARCHAR,
+    as_of        TIMESTAMPTZ NOT NULL,
+    PRIMARY KEY (model, entity_type, entity_id, metric, context)
+);
