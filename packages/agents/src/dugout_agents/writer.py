@@ -112,8 +112,58 @@ def validate(
     return errors
 
 
-def fallback(facts: list[Fact], limit: int) -> str:
-    return " ".join(f.sentence() for f in facts[:limit])
+_STOP = {
+    "what",
+    "which",
+    "when",
+    "where",
+    "does",
+    "have",
+    "with",
+    "this",
+    "that",
+    "their",
+    "they",
+    "will",
+    "would",
+    "should",
+    "could",
+    "about",
+    "from",
+    "most",
+    "much",
+    "many",
+    "league",
+    "season",
+    "model",
+}
+_SYNONYMS = {
+    "press": "defensive",
+    "pressing": "defensive",
+    "play": "style",
+    "sold": "sale",
+    "sell": "sale",
+    "worth": "value",
+    "expire": "contract",
+    "expiring": "contract",
+    "minutes": "minutes",
+    "xg": "expected",
+}
+
+
+def relevance(f: Fact, question: str) -> int:
+    """How well a fact answers the question: words shared with its subject/label (with a few synonyms)."""
+    words = {w for w in re.findall(r"[a-z]+", question.lower()) if len(w) > 3 and w not in _STOP}
+    words |= {_SYNONYMS[w] for w in words if w in _SYNONYMS}
+    text = f"{f.subject} {f.label}".lower()
+    return sum(1 for w in words if w in text)
+
+
+def fallback(facts: list[Fact], limit: int, question: str = "") -> str:
+    """Template sentences for the facts that best answer the question (tool order breaks ties)."""
+    ranked = sorted(range(len(facts)), key=lambda i: (-relevance(facts[i], question), i))
+    keep = sorted(ranked[:limit])  # keep tool order in the prose
+    return " ".join(facts[i].sentence() for i in keep)
 
 
 def write(
@@ -150,4 +200,4 @@ def write(
                 f"\n\nYour previous note was rejected: {'; '.join(errors)}. Rewrite it following the rules; "
                 "copy the example sentences if unsure."
             )
-    return Draft(fallback(facts, template_limit), "template", attempts)
+    return Draft(fallback(facts, template_limit, question), "template", attempts)
