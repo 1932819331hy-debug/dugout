@@ -128,6 +128,45 @@ def _write_summary(text: str) -> None:
             fh.write("```\n" + text + "\n```\n")
 
 
+def cmd_setup_club(args) -> int:
+    """Find and vet a club's official news source, save it, and optionally build everything for the club."""
+    import subprocess
+
+    from dugout_pipeline.onboard import SetupError, discover, save
+
+    ctx = _ctx(args)
+    ctx.load_clubs()
+    slug = ctx.clubs.resolve(args.club)
+    if slug is None:
+        known = ", ".join(r[0] for r in ctx.con.execute("SELECT club_id FROM clubs ORDER BY 1").fetchall())
+        print(f"unknown club {args.club!r}; clubs in this league: {known}", file=sys.stderr)
+        return 2
+    try:
+        entry = discover(ctx, slug)
+    except SetupError as exc:
+        print(f"{slug}: {exc}", file=sys.stderr)
+        return 1
+    path = save(ctx, entry)
+    print(f"{slug}: news from {entry['sitemap']} ({entry['path_prefix']}) saved to {path.name}")
+    ctx.con.close()
+    if not args.build:
+        print(
+            "next: dugout ingest --only club_news; dugout-models publish market; dugout-agents dossier "
+            + slug
+        )
+        return 0
+    steps = [
+        [sys.executable, "-m", "dugout_pipeline.cli", "ingest", "--only", "club_news"],
+        [sys.executable, "-m", "dugout_models.cli", "publish", "market"],
+        [sys.executable, "-m", "dugout_agents.cli", "dossier", slug],
+    ]
+    for cmd in steps:
+        print("running:", " ".join(cmd[2:]))
+        if subprocess.run(cmd, check=False).returncode != 0:
+            return 1
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(
         level=os.environ.get("LOG_LEVEL", "WARNING"), format="%(levelname)s %(name)s: %(message)s"
@@ -162,6 +201,13 @@ def main(argv: list[str] | None = None) -> int:
     s = sub.add_parser("record", help="record trimmed test fixtures for one source (live)")
     s.add_argument("source")
     s.set_defaults(fn=cmd_record)
+
+    s = sub.add_parser("setup-club", help="set dugout up for a club: find and vet its official news source")
+    s.add_argument("club", help="club name or slug, e.g. 'Arsenal' or 'nottingham-forest'")
+    s.add_argument(
+        "--build", action="store_true", help="then ingest its news, publish models, build its dossier"
+    )
+    s.set_defaults(fn=cmd_setup_club)
 
     args = p.parse_args(argv)
     return args.fn(args)

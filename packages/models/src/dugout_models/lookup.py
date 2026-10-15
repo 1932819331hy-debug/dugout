@@ -49,21 +49,21 @@ def level_words(value: float, pl_values: np.ndarray) -> str:
 
 
 def showcase_clubs() -> list[str]:
-    cfg = yaml.safe_load((get_settings().config_dir / "leagues.yaml").read_text(encoding="utf-8"))
-    return sorted(
-        {v["showcase_club"] for v in cfg.values() if isinstance(v, dict) and v.get("showcase_club")}
-    )
+    """Clubs that get club-specific fit outputs: each league's showcase club plus clubs set up with
+    `dugout setup-club` (config/club_sites.yaml)."""
+    from dugout_pipeline.onboard import load_club_sites
+
+    config_dir = get_settings().config_dir
+    cfg = yaml.safe_load((config_dir / "leagues.yaml").read_text(encoding="utf-8"))
+    clubs = {v["showcase_club"] for v in cfg.values() if isinstance(v, dict) and v.get("showcase_club")}
+    return sorted(clubs | {s["club"] for s in load_club_sites(config_dir)})
 
 
 def outlook_many(mk: Market, pool: pd.DataFrame, club: str, fees: pd.Series) -> pd.DataFrame:
     """Vectorised opportunity-model features and prediction for every pool player at `club`."""
     tm_club = str(mk.squads.loc[mk.squads.club_id == club, "tm_club_id"].iloc[0])
     sq = mk.squad(club)
-    last = mk.now.year - 1 if mk.now.month >= 7 else mk.now.year - 2
-    season = mk.ap[mk.ap.season == last]
-    mins = season.groupby("player_id").minutes_played.sum()
-    main = season.groupby("player_id").player_club_id.agg(lambda s: s.mode().iloc[0])
-    games = season.groupby("player_club_id").date.nunique()
+    mins, main, games = mk._last_season()
     ls_year = max(y for c, y in mk.league_value.index if c == PL)
     pl_level = np.log1p(mk.league_value.get((PL, ls_year), np.nan))
     group = pool.player_id.map(mk.players.sub_position).map(
@@ -126,7 +126,11 @@ def lookup(con: duckdb.DuckDBPyConnection, mk: Market, now: datetime, reep: dict
     log.info("lookup pool: %d players", len(pool))
     proj = {}
     for h, years in TRAIN_YEARS.items():
-        train = potential.frames(t, years, top, h).dropna(subset=["target", "age"])
+        train = mk.frame(
+            f"potential_h{h}",
+            lambda years=years, h=h: potential.frames(t, years, top, h),
+            years=[years.start, years.stop],
+        ).dropna(subset=["target", "age"])
         proj[h] = potential.PotentialModel().fit(train).predict(pool)
     pl_values = mk.squads.market_value_eur.dropna().astype(float).to_numpy()
     names = mk.players.name
