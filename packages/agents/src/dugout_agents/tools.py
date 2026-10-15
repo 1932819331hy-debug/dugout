@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from datetime import datetime
 
-from dugout_agents.facts import Fact, Toolbox, prob_gloss, rank_gloss, z_gloss
+from dugout_agents.facts import MODEL_DOCS, Fact, Toolbox, prob_gloss, rank_gloss, z_gloss
 
 FDO_URL = "https://api.football-data.org/v4/competitions/PL/standings"
 
@@ -503,11 +503,12 @@ def squad_market(tb: Toolbox, club: str, player_id: str | None = None, n: int = 
             _fact(
                 tb,
                 pname,
-                "likelihood of being sold for a fee in a window (mobility model)",
+                "model estimate of being sold for a fee in a window (no academy or contract-length signal)",
                 f"The mobility model puts {pname}'s sale likelihood in a transfer window at {{p}}.",
                 rec,
                 "pct",
-                entity_id=pid,
+                "a model estimate from comparable players, not a report that he is for sale",
+                pid,
             )
         )
     top = (
@@ -642,11 +643,171 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                 ),
                 (
                     "realism",
-                    "transfer realism score",
-                    f"{cname}'s transfer realism score for {name} is {{p}}.",
-                    "score",
+                    "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+                    f"The realism model gives a move for {cname} to {name} a {{p}} chance in a transfer window.",
+                    "pct1",
                 ),
             ):
                 rec = tb.model("scout", "player", pid, metric, ctx)
                 facts += _keep(_fact(tb, cname, label, tmpl, rec, fmt, entity_id=pid))
+    return facts
+
+
+# ---- Player Development (potential) ------------------------------------------------------------------------
+def _text(tb: Toolbox, model: str, pid: str, metric: str, context: str = "") -> str | None:
+    row = tb.con.execute(
+        "SELECT value_text FROM model_outputs WHERE model = ? AND entity_type = 'player' AND entity_id = ? "
+        "AND metric = ? AND context = ?",
+        [model, pid, metric, context],
+    ).fetchone()
+    return row[0] if row else None
+
+
+def _horizon(tb: Toolbox, pid: str, metric: str, years: int):
+    """Ledger row for the date a projection refers to (publish date + horizon), so prose can say "by <date>"."""
+    return tb.sql(
+        f"""SELECT CAST(CAST(as_of AS DATE) + INTERVAL {years} YEAR AS VARCHAR) FROM model_outputs
+            WHERE model = 'potential' AND entity_type = 'player' AND entity_id = ? AND metric = ?""",
+        [pid, metric],
+        entity_type="player",
+        entity_id=pid,
+        metric="projection_date",
+        source="dugout_model:potential",
+        tier=3,
+        fetched_at=tb.now,
+        url=MODEL_DOCS["potential"],
+    )
+
+
+def player_potential(tb: Toolbox, pid: str) -> list[Fact]:
+    name = tb.name(pid)
+    if tb.model("potential", "player", pid, "proj_value_4y") is None:
+        return []
+    club = _text(tb, "lookup", pid, "club_name") or ""
+    facts = _keep(
+        _fact(
+            tb,
+            name,
+            "age",
+            f"{name} is {{p}} years old.",
+            tb.model("lookup", "player", pid, "age"),
+            "int",
+            entity_id=pid,
+        ),
+        _fact(
+            tb,
+            name,
+            "market value today",
+            f"{name}{f' ({club})' if club else ''} is valued at {{p}} today, "
+            f"{_text(tb, 'lookup', pid, 'level_now') or ''}.",
+            tb.model("lookup", "player", pid, "market_value"),
+            "eur_m",
+            _text(tb, "lookup", pid, "level_now") or "",
+            pid,
+        ),
+    )
+    for metric, label, tmpl, level in (
+        (
+            "proj_value_2y",
+            "projected market value, short horizon (median)",
+            f"The potential model projects {name}'s value at {{p}} by {{d}}.",
+            None,
+        ),
+        (
+            "proj_value_4y",
+            "projected market value, long horizon (median)",
+            f"The potential model projects {name}'s value at {{p}} by {{d}}, {{level}}.",
+            "level_4y",
+        ),
+        (
+            "ceiling_value_4y",
+            "optimistic case, long horizon (90th percentile)",
+            f"In the potential model's optimistic case {name} would be worth {{p}} by {{d}}, {{level}}.",
+            "level_ceiling",
+        ),
+        (
+            "floor_value_4y",
+            "cautious case, long horizon (10th percentile)",
+            f"In the potential model's cautious case {name} would be worth {{p}} by {{d}}.",
+            None,
+        ),
+    ):
+        rec = tb.model("potential", "player", pid, metric)
+        if rec is None:
+            continue
+        words = _text(tb, "potential", pid, level) if level else ""
+        f = _fact(tb, name, label, tmpl.replace("{level}", words or ""), rec, "eur_m", words or "", pid)
+        f.when = (_horizon(tb, pid, metric, 2 if "2y" in metric else 4)[0], "date")
+        facts.append(f)
+    role = tb.model("roles", "player", pid, "role", "2025-26")
+    facts += _keep(
+        _fact(
+            tb,
+            name,
+            "role last season (roles model)",
+            f"Last season {name} played as a {{p}}.",
+            role,
+            entity_id=pid,
+        )
+    )
+    return facts
+
+
+# ---- Player Fit --------------------------------------------------------------------------------------------
+def player_fit(tb: Toolbox, pid: str, club: str) -> list[Fact]:
+    name, cname = tb.name(pid), tb.name(club)
+    group = tb.model("fit", "player", pid, "position_group", club)
+    if group is None:
+        return []
+    facts = _keep(
+        _fact(tb, name, "position group", f"{name} is a {{p}}.", group, entity_id=pid),
+        _fact(
+            tb,
+            name,
+            f"expected share of {cname}'s minutes (playing-time model)",
+            f"The playing-time model expects {name} to play {{p}} of {cname}'s minutes.",
+            tb.model("fit", "player", pid, "expected_minutes_share", club),
+            "pct",
+            entity_id=pid,
+        ),
+        _fact(
+            tb,
+            name,
+            f"value rank among {cname}'s current options at his position",
+            f"By market value {name} would rank {{p}} among {cname}'s current options in his position.",
+            tb.model("fit", "player", pid, "rank_at_position", club),
+            "ord",
+            entity_id=pid,
+        ),
+    )
+    need = _text(tb, "fit", pid, "fills_need", club)
+    if need:
+        facts += _keep(
+            _fact(
+                tb,
+                name,
+                "position is a top need in the squad model",
+                f"{name}'s position, {{p}}, is {'among' if need == 'yes' else 'not among'} "
+                f"{cname}'s biggest needs in the squad model.",
+                group,
+                entity_id=pid,
+            )
+        )
+    style = tb.model("fit", "player", pid, "style_fit", club)
+    mgr = tb.con.execute(
+        "SELECT name FROM managers WHERE club_id = ? AND source = 'wikidata'", [club]
+    ).fetchone()
+    if style and mgr:
+        facts += _keep(
+            _fact(
+                tb,
+                name,
+                "style similarity to the head coach's preferred profile (descriptive)",
+                f"{name}'s style fit with the profile {mgr[0]} uses in his position is {{p}}.",
+                style,
+                "score",
+                "descriptive only; it does not predict minutes",
+                pid,
+            )
+        )
     return facts

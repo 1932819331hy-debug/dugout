@@ -7,8 +7,10 @@ squad file `data/reference/transfermarkt_squads.csv` (values and contracts as of
   sale_likelihood       mobility model (realism.md): P(sold for a fee in a transfer window), features as of today
   needs                 positions where the club is thinnest/weakest (heuristic: depth and value at the position)
   shortlist             candidates per need, ranked by the mean percentile of quality (market value), playing-time
-                        outlook at the club (opportunity.md) and transfer realism (realism.md). The ranking rule is a
-                        transparent heuristic; each component is a backtested model.
+                        outlook at the club (opportunity.md) and realism = P(move to this club in a window)
+                        = P(sold) x P(this buyer | sold) (realism.md). The ranking rule is a transparent heuristic;
+                        each component is a backtested model.
+  sale_likelihood is not scored for players who joined their club in the last 12 months (no data at the new club).
 """
 
 from __future__ import annotations
@@ -133,6 +135,7 @@ class Market:
         tr["fee"] = pd.to_numeric(tr.transfer_fee, errors="coerce")
         recent_tr = tr[(tr.date < self.now) & (tr.date >= self.now - pd.Timedelta(days=1095))]
         self.capacity = recent_tr.groupby("to_club_id").fee.max()
+        self.buyers = self._buyer_table()
         ap = self.t["appearances"].copy()
         ap["date"] = pd.to_datetime(ap.date)
         ap["season"] = _season(ap.date)
@@ -182,27 +185,56 @@ class Market:
             p.loc[ok.index] = self.mob.predict_proba(ok[realism.MOBILITY])[:, 1]
         return p
 
-    def realism_score(self, pid: str, seller: str, buyer: str, fee: float) -> dict | None:
-        p_mob = self.sale_likelihood([pid]).iloc[0]
-        if np.isnan(p_mob) or seller not in set(self.clubs.club_id) or buyer not in set(self.clubs.club_id):
-            return None
+    def _buyer_table(self) -> pd.DataFrame:
+        """Every club that paid a fee in the last three years: the plausible buyers a destination competes with."""
         clubs = self.clubs.set_index("club_id")
-        comps = self.comps.set_index("competition_id")
-        f = realism._pair_features(fee, seller, buyer, self.capacity, clubs, comps, self.club_value)
-        p_dest = float(self.dest.predict_proba(pd.DataFrame([f])[realism.DESTINATION])[:, 1][0])
+        country = self.comps.set_index("competition_id").country_name
+        cv = np.log1p(self.club_value.reindex(clubs.index).fillna(0))
+        league_median = self.club_value.reindex(clubs.index).groupby(clubs.domestic_competition_id).median()
+        t = pd.DataFrame(
+            {
+                "comp": clubs.domestic_competition_id,
+                "cap": np.log1p(self.capacity.reindex(clubs.index).fillna(0)),
+                "cv": cv,
+                "lv": np.log1p(clubs.domestic_competition_id.map(league_median).fillna(0)),
+            }
+        )
+        t["country"] = t.comp.map(country)
+        return t
+
+    def realism_score(self, pid: str, seller: str, buyer: str, fee: float) -> dict | None:
+        """P(this move happens in a window) = P(sold) x P(this buyer | sold).
+
+        P(this buyer | sold) normalises the pairwise destination model over all plausible buyers (its raw output
+        is a 1-in-6 comparison, not a probability over the market). The contract prior shifts the sale odds."""
+        p_mob = self.sale_likelihood([pid]).iloc[0]
+        bt = self.buyers
+        if np.isnan(p_mob) or seller not in bt.index or buyer not in bt.index:
+            return None
+        cand = bt[(bt.cap > 0) & (bt.index != seller)]
+        if buyer not in cand.index:
+            cand = pd.concat([cand, bt.loc[[buyer]]])
+        s = bt.loc[seller]
+        X = pd.DataFrame(
+            {
+                "capacity_ratio": cand.cap - np.log1p(fee),
+                "league_gap": cand.lv - s.lv,
+                "club_value_gap": cand.cv - s.cv,
+                "same_league": (cand.comp == s.comp).astype(float),
+                "same_country": (cand.country == s.country).astype(float),
+            }
+        )[realism.DESTINATION]
+        p = self.dest.predict_proba(X)[:, 1]
+        odds = pd.Series(p / (1 - p), index=cand.index)
+        share = float(odds[buyer] / odds.sum())
         expiry = pd.to_datetime(self.players.contract_expiration_date.get(pid))
         months = (expiry - self.now).days / 30.44 if pd.notna(expiry) else None
-        c = realism.contract_points(months)
-
-        def logit(x):
-            x = min(max(x, 1e-4), 1 - 1e-4)
-            return np.log(x / (1 - x))
-
-        z = logit(p_mob) - logit(self.mob_base) + logit(p_dest) - logit(self.dest_base) + c
+        sold_odds = p_mob / (1 - p_mob) * np.exp(realism.contract_points(months))
+        p_sold = sold_odds / (1 + sold_odds)
         return {
-            "realism": float(100 / (1 + np.exp(-z))),
-            "p_sold": float(p_mob),
-            "p_this_club": float(p_dest),
+            "p_move": float(p_sold * share),
+            "p_sold": float(p_sold),
+            "p_this_club": share,
             "contract_months": None if months is None else float(months),
         }
 
@@ -244,17 +276,32 @@ class Market:
         sq["age"] = (self.now - pd.to_datetime(sq.birth_date)).dt.days / 365.25
         return sq
 
-    def needs(self, club_slug: str) -> pd.DataFrame:
-        """Score each position group: missing depth (vs a two-deep squad) and value of the best option
-        relative to the squad's best eleven. Higher = bigger need."""
+    def _best(self, club_slug: str) -> dict[str, float]:
+        """Per position group: market value of the club's best option under 33."""
         sq = self.squad(club_slug)
-        top11 = sq.market_value_eur.nlargest(11).median()
+        return {g: sq.loc[(sq.group == g) & (sq.age < 33), "market_value_eur"].max() for g in NEEDED}
+
+    def needs(self, club_slug: str, peers: int = 6) -> pd.DataFrame:
+        """Score each position group: missing depth (vs a two-deep squad), the best option's value against the
+        median best option at the same position among the `peers` clubs with the most similar squad strength
+        (like with like: goalkeepers vs goalkeepers, a title contender vs title contenders), and ageing.
+        Higher = bigger need. A transparent heuristic, not a fitted model."""
+        strength = {
+            c: self.squad(c).market_value_eur.nlargest(11).median() for c in self.squads.club_id.unique()
+        }
+        mine = strength[club_slug]
+        near = sorted((c for c in strength if c != club_slug), key=lambda c: abs(np.log(strength[c] / mine)))[
+            :peers
+        ]
+        ref = pd.DataFrame([self._best(c) for c in near]).median()
+        best = self._best(club_slug)
+        sq = self.squad(club_slug)
         rows = []
         for g, want in NEEDED.items():
             at = sq[(sq.group == g) & (sq.age < 33)]
             depth_gap = max(0, want - len(at)) / want
-            best = at.market_value_eur.max() if len(at) else 0.0
-            quality_gap = max(0.0, 1 - (best or 0) / top11) if top11 else 0.0
+            b = best[g] if best[g] == best[g] else 0.0
+            quality_gap = max(0.0, 1 - b / ref[g]) if ref[g] == ref[g] and ref[g] > 0 else 0.0
             ageing = float((sq[(sq.group == g)].age >= 31).mean()) if (sq.group == g).any() else 0.0
             rows.append(
                 {
@@ -326,7 +373,7 @@ class Market:
         if df.empty:
             return df
         df["score"] = (
-            df.value.rank(pct=True) + df.minutes_share.rank(pct=True) + df.realism.rank(pct=True)
+            df.value.rank(pct=True) + df.minutes_share.rank(pct=True) + df.p_move.rank(pct=True)
         ) / 3
         return df.sort_values("score", ascending=False).head(SHORTLIST).reset_index(drop=True)
 
@@ -364,7 +411,8 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
                 _row("valuation", "player", pid, "fair_fee_low", round(f.low, -5), now),
                 _row("valuation", "player", pid, "fair_fee_high", round(f.high, -5), now),
             ]
-        if s == s:
+        recent = pd.notna(r.joined) and pd.Timestamp(r.joined) > mk.now - pd.Timedelta(days=365)
+        if s == s and not recent:  # no data yet on a new signing at his new club: not scored
             rows.append(_row("realism", "player", pid, "sale_likelihood", round(float(s), 3), now))
     for slug in showcase:
         tm_club = mk.squads.loc[mk.squads.club_id == slug, "tm_club_id"].iloc[0]
@@ -387,9 +435,9 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
                     _row(
                         "scout", "player", pid, "expected_minutes_share", round(c.minutes_share, 3), now, ctx
                     ),
-                    _row("scout", "player", pid, "realism", round(c.realism, 1), now, ctx),
+                    _row("scout", "player", pid, "realism", round(c.p_move, 4), now, ctx),
                     _row("scout", "player", pid, "p_sold", round(c.p_sold, 3), now, ctx),
-                    _row("scout", "player", pid, "p_this_club", round(c.p_this_club, 3), now, ctx),
+                    _row("scout", "player", pid, "p_this_club", round(c.p_this_club, 4), now, ctx),
                     _row("scout", "player", pid, "shortlist_score", round(c.score, 3), now, ctx),
                 ]
                 if pd.notna(c.contract_months):
@@ -397,4 +445,6 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
                         _row("scout", "player", pid, "contract_months", round(c.contract_months), now, ctx)
                     )
         log.info("market: %s done", slug)
-    return rows
+    from dugout_models.lookup import lookup
+
+    return rows + lookup(con, mk, now, reep)

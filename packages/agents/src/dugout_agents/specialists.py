@@ -75,7 +75,8 @@ SPECIALISTS: dict[str, Specialist] = {
             "News & Injury",
             "news and medical liaison",
             _news,
-            r"injur|fit\b|fitness|news|suspen|availab|doubt|return|miss|medical|knock|ban",
+            r"injur|(?:is|are|be|he|they) (?:\w+ )?fit\b(?! in| into| with| at| our| the system| your)|fit to play|fitness|news|"
+            r"suspen|availab|doubt|return|miss|medical|knock|ban",
             "Who is unavailable for {club}, and what is the latest news?",
         ),
         Specialist(
@@ -94,8 +95,28 @@ SPECIALISTS: dict[str, Specialist] = {
             r"sign|buy|target|replace|recruit|scout|shortlist|need|strengthen|candidate|who should",
             "Where should {club} strengthen, and who fits?",
         ),
+        Specialist(
+            "potential",
+            "Player Development",
+            "player development analyst",
+            lambda tb, c, f: [x for pid in f for x in tools.player_potential(tb, pid)],
+            r"potential|future|become|ceiling|how good|develop|prospect|projection|wonderkid|peak|grow",
+            "",
+        ),
+        Specialist(
+            "fit",
+            "Player Fit",
+            "recruitment analyst",
+            lambda tb, c, f: [x for pid in f for x in tools.player_fit(tb, pid, c)],
+            r"\bfit (?:in|into|with|at)\b|\bfit (?:the|our)\b|would \w+(?: \w+)? fit(?! for)|\bsuit|right for|"
+            r"work (?:at|in|for)|playing time|minutes would",
+            "",
+        ),
     )
 }
+# specialists that only answer about a named player; the dossier runs the six club-level ones
+PLAYER_ONLY = ("potential", "fit")
+CLUB_LEVEL = [n for n in SPECIALISTS if n not in PLAYER_ONLY]
 
 
 def route(question: str) -> list[str]:
@@ -112,8 +133,8 @@ def find_players(tb: Toolbox, question: str, club: str | None = None) -> list[st
     """Player ids named in the question (longest alias first; current-club players preferred)."""
     found: dict[str, int] = {}
     for pid, aliases in tb.aliases.items():
-        if not pid.startswith("rp") and ":" in pid:
-            continue
+        if pid.startswith(("wikidata:", "football_data_org:", "club_name:")) or pid.count(":") == 3:
+            continue  # managers, display-only names and matches
         if pid in tb.names and pid in _club_ids(tb):
             continue
         for a in aliases:

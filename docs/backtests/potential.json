@@ -1,0 +1,131 @@
+{
+  "generated_at": "2026-10-15T18:44:18+00:00",
+  "horizons": {
+    "2": {
+      "train_snapshots": [
+        2012,
+        2021
+      ],
+      "test_snapshots": [
+        2023,
+        2024
+      ],
+      "train_n": 133373,
+      "test_without_future_value": 0.29733911675925223,
+      "model": {
+        "mae_log": 0.5973856235334923,
+        "median_ape": 0.4220561337293914,
+        "spearman": 0.8090997868301966,
+        "n": 27699,
+        "coverage_10_90": 0.755947868154085
+      },
+      "persistence": {
+        "mae_log": 0.7801385894160899,
+        "median_ape": 0.5277777777777778,
+        "spearman": 0.7290767570635904,
+        "n": 27699
+      },
+      "age_curve": {
+        "mae_log": 0.6534444548003611,
+        "median_ape": 0.4545454545454541,
+        "spearman": 0.7999740697135312,
+        "n": 27699
+      },
+      "model_age_21_or_under": {
+        "mae_log": 0.8937904630674008,
+        "median_ape": 0.6101151682182365,
+        "spearman": 0.7106751510498716,
+        "n": 4789,
+        "coverage_10_90": 0.7256212152850282
+      },
+      "age_curve_age_21_or_under": {
+        "mae_log": 0.9790604750713003,
+        "median_ape": 0.6666664000003557,
+        "spearman": 0.6904461982255016,
+        "n": 4789
+      },
+      "importance": {
+        "log_league": 2075,
+        "log_mv": 2044,
+        "age": 1367,
+        "minutes_share": 1243,
+        "age2": 1144,
+        "height": 1093,
+        "mv_change_1y": 1092,
+        "mv_change_2y": 983,
+        "prev_share": 867,
+        "peak_ratio": 857,
+        "ga_p90": 788,
+        "apps_365": 784,
+        "pos_Goalkeeper": 243,
+        "pos_Attack": 156,
+        "pos_Defender": 111,
+        "top_tier": 104,
+        "pos_Midfield": 49
+      }
+    },
+    "4": {
+      "train_snapshots": [
+        2010,
+        2019
+      ],
+      "test_snapshots": [
+        2021,
+        2022
+      ],
+      "train_n": 99066,
+      "test_without_future_value": 0.48155387795452503,
+      "model": {
+        "mae_log": 0.7584714148475536,
+        "median_ape": 0.5360209672483265,
+        "spearman": 0.7189249164178035,
+        "n": 23072,
+        "coverage_10_90": 0.7627427184466019
+      },
+      "persistence": {
+        "mae_log": 1.1477108279253525,
+        "median_ape": 0.7499999999999983,
+        "spearman": 0.5334317599278068,
+        "n": 23072
+      },
+      "age_curve": {
+        "mae_log": 0.8781660536831405,
+        "median_ape": 0.5989583407118049,
+        "spearman": 0.7073526878033841,
+        "n": 23072
+      },
+      "model_age_21_or_under": {
+        "mae_log": 1.0316390557808823,
+        "median_ape": 0.6892023453667656,
+        "spearman": 0.5807542398538182,
+        "n": 4637,
+        "coverage_10_90": 0.7578175544533103
+      },
+      "age_curve_age_21_or_under": {
+        "mae_log": 1.1514181157653254,
+        "median_ape": 0.7291647916854168,
+        "spearman": 0.5746284821063768,
+        "n": 4637
+      },
+      "importance": {
+        "log_league": 2129,
+        "log_mv": 1997,
+        "height": 1472,
+        "age": 1405,
+        "age2": 1271,
+        "mv_change_2y": 1101,
+        "minutes_share": 940,
+        "mv_change_1y": 903,
+        "peak_ratio": 860,
+        "prev_share": 792,
+        "apps_365": 704,
+        "ga_p90": 643,
+        "pos_Goalkeeper": 294,
+        "pos_Attack": 193,
+        "pos_Defender": 109,
+        "top_tier": 100,
+        "pos_Midfield": 87
+      }
+    }
+  }
+}

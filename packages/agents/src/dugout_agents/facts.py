@@ -30,6 +30,9 @@ MODEL_DOCS = {
     "valuation": f"{REPO}/docs/backtests/valuation.md",
     "realism": f"{REPO}/docs/backtests/realism.md",
     "scout": f"{REPO}/packages/models/src/dugout_models/market.py",
+    "potential": f"{REPO}/docs/backtests/potential.md",
+    "fit": f"{REPO}/docs/backtests/opportunity.md",
+    "lookup": f"{REPO}/packages/models/src/dugout_models/lookup.py",
 }
 
 
@@ -43,21 +46,31 @@ class Fact:
     fmt: str | None = None
     gloss: str = ""  # qualitative reading by code; never contains digits
     entity_id: str | None = None
+    when: tuple[str, str | None] | None = None  # optional second slot "{d}" (ledger id, format), e.g. a date
 
     @property
     def placeholder(self) -> str:
-        if not self.eid:
-            return ""
-        return f"{{{{stat:{self.eid}|{self.fmt}}}}}" if self.fmt else f"{{{{stat:{self.eid}}}}}"
+        return _ph(self.eid, self.fmt) if self.eid else ""
+
+    @property
+    def when_placeholder(self) -> str:
+        return _ph(*self.when) if self.when else ""
+
+    def ids(self) -> list[str]:
+        return [i for i in (self.eid, self.when[0] if self.when else None) if i]
 
     def sentence(self) -> str:
-        return self.template.replace("{p}", self.placeholder)
+        return self.template.replace("{p}", self.placeholder).replace("{d}", self.when_placeholder)
 
     def card(self) -> str:
         """How the fact is shown to the LLM."""
         value = f"value: {self.placeholder}" if self.eid else "statement"
         gloss = f" — reading: {self.gloss}" if self.gloss else ""
         return f'[{self.key}] {self.subject} | {self.label} | {value}{gloss}\n      e.g. "{self.sentence()}"'
+
+
+def _ph(eid: str, fmt: str | None) -> str:
+    return f"{{{{stat:{eid}|{fmt}}}}}" if fmt else f"{{{{stat:{eid}}}}}"
 
 
 def ascii_fold(s: str) -> str:
@@ -74,6 +87,7 @@ class Toolbox:
         self.names: dict[str, str] = {}
         self.aliases: dict[str, list[str]] = {}
         self._load_names()
+        self._load_lookup_names()
         self._n = 0
 
     # -- naming --------------------------------------------------------------------------------------------
@@ -98,6 +112,18 @@ class Toolbox:
         ).fetchall():
             self.names[mid] = name
             self.aliases[mid] = _person_aliases(name, None)
+
+    def _load_lookup_names(self) -> None:
+        """Players outside the Premier League squads (lookup pool) can be named in questions too."""
+        try:
+            rows = self.con.execute(
+                "SELECT entity_id, value_text FROM model_outputs WHERE model = 'lookup' AND metric = 'name'"
+            ).fetchall()
+        except duckdb.Error:
+            return
+        for pid, name in rows:
+            if name and pid not in self.names:
+                self.register(pid, name)
 
     def name(self, entity_id: str) -> str:
         if entity_id in self.names:

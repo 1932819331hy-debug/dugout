@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS evidence_ledger (
 
 PLACEHOLDER = re.compile(r"\{\{stat:(ev_[0-9a-f]{16})(?:\|([a-z0-9_.%]+))?\}\}")
 # Display formats a placeholder may request: {{stat:id|pct}}, {{stat:id|eur_m}}, {{stat:id|.1f}}, {{stat:id|ord}}.
-FORMATS = ("pct", "eur_m", "int", "ord", "signed", "date", "score")
+FORMATS = ("pct", "pct1", "eur_m", "int", "ord", "signed", "date", "score")
 # sql: warehouse query; http_json: path into an archived API response; file_csv: cell of a committed CSV file.
 QUERY_KINDS = ("sql", "http_json", "file_csv")
 
@@ -199,6 +199,8 @@ def format_value(ev: Evidence, fmt: str | None) -> str:
         return f"{v:.0f}/100"
     if fmt == "pct":
         return f"{v * 100:.0f}%"
+    if fmt == "pct1":
+        return f"{v * 100:.1f}%"
     if fmt == "eur_m":
         return f"€{v / 1e6:.1f}m" if abs(v) < 1e8 else f"€{v / 1e6:.0f}m"
     if fmt == "int":

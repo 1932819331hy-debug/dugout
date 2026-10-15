@@ -52,6 +52,9 @@ GROUPS = {
 }
 AGGREGATORS = {"yahoo sports", "msn", "newsnow", "google news", "onefootball", "flipboard"}
 
+# Clause boundaries for the "metric word near its number" rule.
+_CLAUSE = re.compile(r",|;|:| and | but | while | whereas | with ", re.I)
+
 # Words that must appear near a cited metric (lower-case regex). Metrics not listed are not checked.
 METRIC_WORDS = {
     "season_goals_scored": r"goal|scor|net",
@@ -75,7 +78,7 @@ METRIC_WORDS = {
     "injury_risk_tier": r"risk",
     "sale_likelihood": r"sale|sold|sell|leav|transfer window",
     "contract_expires": r"contract",
-    "realism": r"realis|feasib|likel",
+    "realism": r"realis|feasib|likel|chance",
     "expected_minutes_share": r"minute|playing time",
     "exp_home_goals": r"goal|xg",
     "exp_away_goals": r"goal|xg",
@@ -274,20 +277,43 @@ class FactChecker:
     def check_binding(
         self, claim: Claim, previous: str, ledger: EvidenceLedger, subject: str = ""
     ) -> ClaimResult:
-        bare = PLACEHOLDER.sub(" ", claim.text).lower()
+        """Each number must belong to the entity named closest to it (when the sentence names several), and a
+        word describing its metric must appear in its clause or the clause before."""
+        text = claim.text
+        bare = PLACEHOLDER.sub(" ", text).lower()
         context = " ".join([bare, PLACEHOLDER.sub(" ", previous).lower(), subject.lower()])
         problems = []
-        for eid in claim.stat_ids:
-            ev = ledger.get(eid)
+        holes = list(PLACEHOLDER.finditer(text))
+        evs = {m.group(1): ledger.get(m.group(1)) for m in holes}
+        # where each cited entity is named in this sentence: (start, end, entity)
+        occ = [
+            (m.start(), m.end(), ent)
+            for ent in {ev.entity_id for ev in evs.values() if ev}
+            for a in self.aliases.get(ent, [])
+            for m in re.finditer(rf"\b{re.escape(a)}\b", text, re.I)
+        ]
+        several = len({o[2] for o in occ}) > 1
+        masked = PLACEHOLDER.sub(lambda m: "#" * len(m.group(0)), text)  # placeholders contain ':'
+        cuts = [0, *(m.end() for m in _CLAUSE.finditer(masked)), len(text) + 1]
+        for m in holes:
+            ev = evs[m.group(1)]
             if ev is None:
-                problems.append(f"{eid} unknown")
+                problems.append(f"{m.group(1)} unknown")
                 continue
             names = self.aliases.get(ev.entity_id)
             if names and not any(re.search(rf"\b{re.escape(n.lower())}\b", context) for n in names):
                 problems.append(f"{ev.metric} belongs to {names[0]}, who is not named here")
+            elif names and several:
+                dist = [(max(o[0] - m.end(), m.start() - o[1], 0), o[2]) for o in occ]
+                near = min(d for d, _ in dist)
+                if ev.entity_id not in {e for d, e in dist if d == near}:
+                    problems.append(f"{ev.metric} of {names[0]} is placed next to another name")
             words = METRIC_WORDS.get(ev.metric)
-            if words and not re.search(words, bare):
-                problems.append(f"sentence does not describe {ev.metric}")
+            if words:
+                k = max(i for i, c in enumerate(cuts) if c <= m.start())
+                window = PLACEHOLDER.sub(" ", text[cuts[max(k - 1, 0)] : cuts[k + 1]]).lower()
+                if not re.search(words, window):
+                    problems.append(f"no word for {ev.metric} near its number")
         if problems:
             return ClaimResult(claim.index, claim.text, "stat", "conflicting", "; ".join(problems))
         return ClaimResult(claim.index, claim.text, "stat", "verified", "bound to ledger rows")

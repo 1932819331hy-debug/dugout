@@ -72,6 +72,15 @@ def _run_one(model: str, args, con) -> bool:
         print("opportunity:", r["results"])
         res = r["results"]
         return res["opportunity_model"]["r2"] > res["baseline_prev_share_value"]["r2"]
+    if model == "potential":
+        from dugout_models.potential import backtest
+
+        r = backtest(BACKTESTS)
+        print(
+            "potential:",
+            {h: (v["model"]["mae_log"], v["age_curve"]["mae_log"]) for h, v in r["horizons"].items()},
+        )
+        return all(v["model"]["mae_log"] < v["age_curve"]["mae_log"] for v in r["horizons"].values())
     raise SystemExit(f"unknown model {model}")
 
 
@@ -85,6 +94,7 @@ MODELS = [
     "realism",
     "injury",
     "lineup",
+    "potential",
 ]
 
 
