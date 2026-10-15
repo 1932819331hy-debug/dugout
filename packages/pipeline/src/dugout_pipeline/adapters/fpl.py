@@ -262,6 +262,23 @@ class FPLAdapter(SourceAdapter):
                         "xg": _f(st.get("expected_goals")) if single else None,
                         "xa": _f(st.get("expected_assists")) if single else None,
                         "starts": st.get("starts") if single else None,
+                        # gameweek-level extras, likewise only when the gameweek had a single fixture
+                        **(
+                            {
+                                "saves": st.get("saves"),
+                                "influence": _f(st.get("influence")),
+                                "creativity": _f(st.get("creativity")),
+                                "threat": _f(st.get("threat")),
+                                "bps": st.get("bps"),
+                                "xgc": _f(st.get("expected_goals_conceded")),
+                                "tackles": st.get("tackles"),
+                                "recoveries": st.get("recoveries"),
+                                "cbi": st.get("clearances_blocks_interceptions"),
+                                "defensive_contribution": st.get("defensive_contribution"),
+                            }
+                            if single
+                            else {}
+                        ),
                         "fetched_at": fetched_at,
                     }
                 )

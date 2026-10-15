@@ -18,6 +18,16 @@ from dugout_pipeline.http import FetchResult
 MIGRATIONS = [
     "ALTER TABLE events ADD COLUMN IF NOT EXISTS xg DOUBLE",
     "ALTER TABLE clubs ADD COLUMN IF NOT EXISTS address VARCHAR",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS saves INTEGER",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS influence DOUBLE",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS creativity DOUBLE",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS threat DOUBLE",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS bps INTEGER",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS xgc DOUBLE",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS tackles INTEGER",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS recoveries INTEGER",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS cbi INTEGER",
+    "ALTER TABLE player_match_stats ADD COLUMN IF NOT EXISTS defensive_contribution INTEGER",
 ]
 
 

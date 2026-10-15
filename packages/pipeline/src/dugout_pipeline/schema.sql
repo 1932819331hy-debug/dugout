@@ -91,6 +91,17 @@ CREATE TABLE IF NOT EXISTS player_match_stats (
     starts       INTEGER,
     yellow       INTEGER,
     red          INTEGER,
+    -- FPL / Opta-derived extras (NULL where a season did not track them; defensive stats from 2025-26)
+    saves        INTEGER,
+    influence    DOUBLE,
+    creativity   DOUBLE,
+    threat       DOUBLE,
+    bps          INTEGER,
+    xgc          DOUBLE,
+    tackles      INTEGER,
+    recoveries   INTEGER,
+    cbi          INTEGER,
+    defensive_contribution INTEGER,
     fetched_at   TIMESTAMPTZ NOT NULL,
     PRIMARY KEY (player_id, match_id, source)
 );

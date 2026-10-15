@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-10-15T15:30:44+00:00",
+  "train": {
+    "n": 11770,
+    "from": "2005-01-01",
+    "to": "2024-06-29"
+  },
+  "test": {
+    "from": "2024-07-01",
+    "to": "2027-01-01"
+  },
+  "model": {
+    "mae_log": 0.6241397307283032,
+    "median_ape": 0.4386626697018541,
+    "within_25pct": 0.2870508186264087,
+    "n": 4703
+  },
+  "baseline_market_value": {
+    "mae_log": 0.6778859866617534,
+    "median_ape": 0.49999999999999906,
+    "within_25pct": 0.2991707420795237,
+    "n": 4703
+  },
+  "model_on_baseline_rows": {
+    "mae_log": 0.6241397307283032,
+    "median_ape": 0.4386626697018541,
+    "within_25pct": 0.2870508186264087,
+    "n": 4703
+  },
+  "importance": {
+    "age": 4277,
+    "log_mv": 3221,
+    "log_to_league": 2442,
+    "year": 2081,
+    "log_from_league": 2072,
+    "minutes_365": 1168,
+    "apps_365": 829,
+    "ga_p90_365": 800,
+    "pos_Attack": 316,
+    "same_league": 258,
+    "pos_Defender": 220,
+    "pos_Midfield": 197,
+    "pos_Goalkeeper": 119
+  }
+}
