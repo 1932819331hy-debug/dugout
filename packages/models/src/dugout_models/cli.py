@@ -65,10 +65,27 @@ def _run_one(model: str, args, con) -> bool:
         r = run_backtest(con, out_dir=BACKTESTS, trust_weights=(0.0, PREDICTED_XI_TRUST))
         print("lineup:", r)
         return r["optimiser_overlap"][str(PREDICTED_XI_TRUST)] > r["recent_minutes_baseline_overlap"]
+    if model == "opportunity":
+        from dugout_models.opportunity import backtest
+
+        r = backtest(BACKTESTS)
+        print("opportunity:", r["results"])
+        res = r["results"]
+        return res["opportunity_model"]["r2"] > res["baseline_prev_share_value"]["r2"]
     raise SystemExit(f"unknown model {model}")
 
 
-MODELS = ["predictor", "ratings", "roles", "fingerprint", "valuation", "realism", "injury", "lineup"]
+MODELS = [
+    "predictor",
+    "ratings",
+    "roles",
+    "fingerprint",
+    "opportunity",
+    "valuation",
+    "realism",
+    "injury",
+    "lineup",
+]
 
 
 def cmd_backtest(args) -> int:

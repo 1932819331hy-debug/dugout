@@ -20,6 +20,7 @@ import numpy as np
 import pandas as pd
 from dugout_pipeline.ids import attach_catalogue
 from dugout_pipeline.settings import REPO_ROOT
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import brier_score_loss, roc_auc_score
 from sklearn.pipeline import make_pipeline
@@ -28,6 +29,7 @@ from sklearn.preprocessing import StandardScaler
 INJURY_DIR = REPO_ROOT / "data" / "raw" / "api_football"
 TM_DIR = REPO_ROOT / "data" / "raw" / "transfermarkt"
 HORIZON_DAYS = 14
+MUSCLE = ("thigh", "hamstring", "muscle", "calf", "groin", "adductor")
 NOT_INJURY = (
     "suspend",
     "red card",
@@ -56,6 +58,11 @@ FEATURES = [
     "is_mid",
     "is_fwd",
     "season_week",
+    "age2",
+    "min_7d",
+    "episodes_365",
+    "days_lost_365",
+    "last_muscle",
 ]
 
 
@@ -70,10 +77,20 @@ def injury_episodes() -> pd.DataFrame:
     df = df.sort_values(["reep_id", "date"])
     # a new episode when the gap to the previous missed fixture exceeds 10 days
     gap = df.groupby("reep_id").date.diff().dt.days
-    starts = df[gap.isna() | (gap > 10)]
-    return (
-        starts[["reep_id", "date", "reason"]].rename(columns={"reep_id": "player_id"}).reset_index(drop=True)
+    df["episode"] = (gap.isna() | (gap > 10)).cumsum()
+    ep = (
+        df.groupby("episode")
+        .agg(
+            player_id=("reep_id", "first"),
+            date=("date", "min"),
+            end=("date", "max"),
+            reason=("reason", "first"),
+        )
+        .reset_index(drop=True)
     )
+    ep["muscle"] = ep.reason.str.lower().str.contains("|".join(MUSCLE)).astype(float)
+    ep["days_out"] = (ep.end - ep.date).dt.days + 7  # last missed fixture + about a week
+    return ep
 
 
 def panel(con: duckdb.DuckDBPyConnection) -> pd.DataFrame:
@@ -126,21 +143,31 @@ def attach_player_facts(con: duckdb.DuckDBPyConnection, df: pd.DataFrame) -> pd.
 def build(con: duckdb.DuckDBPyConnection) -> pd.DataFrame:
     p = panel(con)
     ep = injury_episodes()
-    by_player = {k: v.date.to_numpy() for k, v in ep.groupby("player_id")}
+    by_player = {k: v for k, v in ep.groupby("player_id")}
     label = np.zeros(len(p), dtype=bool)
     prev = np.zeros(len(p))
     since = np.full(len(p), 999.0)
+    eps_365, lost_365, last_muscle = np.zeros(len(p)), np.zeros(len(p)), np.zeros(len(p))
     for i, (pid, d) in enumerate(zip(p.player_id, p.date.to_numpy(), strict=True)):
-        starts = by_player.get(pid)
-        if starts is None:
+        e = by_player.get(pid)
+        if e is None:
             continue
+        starts = e.date.to_numpy()
         nxt = np.searchsorted(starts, d, side="right")
+        recent = (starts <= d) & (starts > d - np.timedelta64(365, "D"))
+        eps_365[i], lost_365[i] = recent.sum(), e.days_out.to_numpy()[recent].sum()
+        if nxt:
+            last_muscle[i] = e.muscle.to_numpy()[nxt - 1]
         label[i] = nxt < len(starts) and (starts[nxt] - d) <= np.timedelta64(HORIZON_DAYS, "D")
         prev[i] = nxt  # episodes that started on or before this match
         if nxt:
             since[i] = (d - starts[nxt - 1]) / np.timedelta64(1, "D")
     p["label"], p["prev_episodes"], p["days_since_episode"] = label, prev, np.minimum(since, 999)
-    return attach_player_facts(con, p).dropna(subset=["age"])
+    p["episodes_365"], p["days_lost_365"], p["last_muscle"] = eps_365, lost_365, last_muscle
+    p["min_7d"] = _time_window_sum(p, "minutes", 7)
+    out = attach_player_facts(con, p).dropna(subset=["age"])
+    out["age2"] = (out.age - 27) ** 2
+    return out
 
 
 def backtest(con: duckdb.DuckDBPyConnection, out_dir: Path | None = None) -> dict:
@@ -150,18 +177,29 @@ def backtest(con: duckdb.DuckDBPyConnection, out_dir: Path | None = None) -> dic
     logit = make_pipeline(StandardScaler(), LogisticRegression(C=1.0, max_iter=2000)).fit(
         train[FEATURES], train.label
     )
-    gbm = lgb.LGBMClassifier(
-        n_estimators=300, learning_rate=0.03, num_leaves=15, min_child_samples=100, verbose=-1
-    ).fit(train[FEATURES], train.label)
+    gbm_params = dict(n_estimators=300, learning_rate=0.03, num_leaves=15, min_child_samples=100, verbose=-1)
+    gbm = lgb.LGBMClassifier(**gbm_params).fit(train[FEATURES], train.label)
+    # isotonic calibration fitted out-of-fold, one fold per training season
+    folds = [
+        (np.where(train.season != s)[0], np.where(train.season == s)[0])
+        for s in sorted(train.season.unique())
+    ]
+    calibrated = CalibratedClassifierCV(lgb.LGBMClassifier(**gbm_params), method="isotonic", cv=folds)
+    calibrated.fit(train[FEATURES], train.label)
     res = {}
     for name, p in (
         ("logistic", logit.predict_proba(test[FEATURES])[:, 1]),
         ("gradient_boosting", gbm.predict_proba(test[FEATURES])[:, 1]),
+        ("gradient_boosting_calibrated", calibrated.predict_proba(test[FEATURES])[:, 1]),
         ("base_rate", base),
     ):
+        top = p >= np.quantile(p, 0.9)
         res[name] = {
             "auc": float(roc_auc_score(test.label, p)) if name != "base_rate" else 0.5,
             "brier": float(brier_score_loss(test.label, p)),
+            "top_decile_lift": float(test.label[top].mean() / test.label.mean())
+            if name != "base_rate"
+            else 1.0,
         }
     coefs = dict(zip(FEATURES, logit[-1].coef_[0].round(3).tolist(), strict=True))
     report = {
@@ -186,10 +224,13 @@ def backtest(con: duckdb.DuckDBPyConnection, out_dir: Path | None = None) -> dic
             f"Injury episodes: {report['episodes']}. Test rows: {report['test_rows']} "
             f"(positive rate {report['positive_rate_test']:.2%}).",
             "",
-            "| Model | AUC | Brier |",
-            "|---|---|---|",
+            "| Model | AUC | Brier | Top-decile lift |",
+            "|---|---|---|---|",
         ]
-        lines += [f"| {k} | {v['auc']:.3f} | {v['brier']:.5f} |" for k, v in res.items()]
+        lines += [
+            f"| {k} | {v['auc']:.3f} | {v['brier']:.5f} | {v['top_decile_lift']:.2f}x |"
+            for k, v in res.items()
+        ]
         lines += [
             "",
             "Logistic coefficients (standardised features): "

@@ -1,17 +1,27 @@
 {
-  "generated_at": "2026-10-15T16:05:27+00:00",
+  "generated_at": "2026-10-15T16:40:24+00:00",
   "mobility": {
     "train": 138224,
     "test": 27481,
-    "auc": 0.5826404391201536,
-    "base_rate": 0.2619264218914887,
+    "auc_logistic": 0.7532123641695202,
+    "auc_gbm": 0.7534777985022688,
+    "auc": 0.7534777985022688,
+    "brier_logistic": 0.06865454759546931,
+    "brier_gbm": 0.06694446244645115,
+    "brier_base_rate": 0.07331123661021734,
+    "base_rate": 0.07732615261453368,
     "coefficients": {
-      "age": -0.735,
-      "log_mv": 0.393,
-      "mv_change": -0.076,
-      "minutes_share": 0.007,
-      "rel_value": 0.282,
-      "log_league": 0.015
+      "age": -0.783,
+      "age2": -0.25,
+      "log_mv": 0.616,
+      "mv_change": 0.113,
+      "minutes_share": -0.004,
+      "share_change": 0.055,
+      "rel_value": 0.329,
+      "log_league": 0.033,
+      "tenure": 0.136,
+      "peak_ratio": 0.219,
+      "relegated": 0.086
     }
   },
   "destination": {

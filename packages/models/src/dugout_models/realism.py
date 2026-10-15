@@ -1,7 +1,7 @@
 """Transfer realism (0-100) for a (player, buying club) pair, shown with every factor.
 
 Fitted on historical moves (transfermarkt-datasets, CC0):
-  mobility     P(player completes a permanent move in a summer window)   logistic regression
+  mobility     P(player is sold for a fee in a summer window)             gradient boosting (logistic for coefficients)
   destination  P(the move goes to this club | he moves)                  pairwise logistic: real buyer vs sampled
                clubs that bought someone that window
 Not fittable historically, so prior weights (documented, editable in PRIORS):
@@ -18,16 +18,29 @@ import json
 from datetime import UTC, datetime
 from pathlib import Path
 
+import lightgbm as lgb
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import brier_score_loss, roc_auc_score
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
 from dugout_models.valuation import TM_DIR, load
 
-MOBILITY = ["age", "log_mv", "mv_change", "minutes_share", "rel_value", "log_league"]
+MOBILITY = [
+    "age",
+    "age2",
+    "log_mv",
+    "mv_change",
+    "minutes_share",
+    "share_change",
+    "rel_value",
+    "log_league",
+    "tenure",
+    "peak_ratio",
+    "relegated",
+]
 DESTINATION = ["capacity_ratio", "league_gap", "club_value_gap", "same_league", "same_country"]
 PRIORS = {
     "contract": {"<=12 months": 0.8, "13-24 months": 0.3, ">24 months": -0.4},
@@ -40,14 +53,20 @@ def _sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
 
+TOP_TIER: set[str] = set()  # filled from competitions.parquet in backtest()
+
+
 def snapshots(t: dict[str, pd.DataFrame], years: range) -> pd.DataFrame:
-    """Player state on 1 June of each year, and whether he made a permanent move by 1 September."""
+    """Player state on 1 June of each year, and whether he was *sold for a fee* by 1 September.
+
+    Zero-fee rows in the dataset mix loans, loan returns, free and youth moves with no flag to tell them apart,
+    so the label is a paid transfer — which is also what a transfer shortlist is about."""
     vals = t["player_valuations"].copy()
     vals["date"] = pd.to_datetime(vals.date)
     tr = t["transfers"].copy()
     tr["date"] = pd.to_datetime(tr.transfer_date)
     fee = pd.to_numeric(tr.transfer_fee, errors="coerce")
-    permanent = tr[(fee > 0) | ((fee == 0) & tr.from_club_id.ne(tr.to_club_id))]
+    sold = tr[fee > 0]
     ap = t["appearances"][["player_id", "date", "minutes_played", "player_club_id", "competition_id"]].copy()
     ap["date"] = pd.to_datetime(ap.date)
     clubs = t["clubs"][["club_id", "domestic_competition_id"]]
@@ -78,7 +97,29 @@ def snapshots(t: dict[str, pd.DataFrame], years: range) -> pd.DataFrame:
             v.market_value_in_eur_prev.fillna(v.market_value_in_eur)
         )
         v["age"] = (d0 - pd.to_datetime(v.player_id.map(dob))).dt.days / 365.25
-        moved = set(permanent[(permanent.date >= d0) & (permanent.date < d1)].player_id)
+        v["age2"] = (v.age - 26) ** 2
+        # years since he joined his current club (contracts run 3-5 years; no historical contract data exists)
+        joined = tr[(tr.date < d0)].sort_values("date").groupby(["player_id", "to_club_id"]).date.last()
+        v["tenure"] = [
+            (d0 - joined.get((p, c), pd.NaT)).days / 365.25 if (p, c) in joined.index else np.nan
+            for p, c in zip(v.player_id, v.club_id, strict=True)
+        ]
+        v["tenure"] = v.tenure.fillna(v.tenure.median())
+        # value relative to his own peak so far
+        peak = vals[vals.date < d0].groupby("player_id").market_value_in_eur.max()
+        v["peak_ratio"] = np.log1p(v.market_value_in_eur) - np.log1p(v.player_id.map(peak))
+        # change in playing time vs the season before
+        before = ap[(ap.date >= d0 - pd.Timedelta(days=730)) & (ap.date < d0 - pd.Timedelta(days=365))]
+        prev_share = before.groupby("player_id").minutes_played.sum() / (90 * 38)
+        v["share_change"] = v.minutes_share - v.player_id.map(prev_share).fillna(v.minutes_share)
+        # club relegated: its league games last season were top tier, but its games this August-October are not
+        lg = season[season.competition_id.isin(TOP_TIER)].groupby("player_club_id").size()
+        nxt = ap[(ap.date >= d0 + pd.Timedelta(days=60)) & (ap.date < d0 + pd.Timedelta(days=150))]
+        nxt_top = nxt[nxt.competition_id.isin(TOP_TIER)].groupby("player_club_id").size()
+        v["relegated"] = (
+            v.club_id.isin(lg.index) & ~v.club_id.isin(nxt_top.index) & v.club_id.isin(nxt.player_club_id)
+        ).astype(float)
+        moved = set(sold[(sold.date >= d0) & (sold.date < d1)].player_id)
         v["moved"] = v.player_id.isin(moved)
         v["year"] = y
         out.append(v)
@@ -157,10 +198,24 @@ def contract_points(months_left: float | None) -> float:
 
 def backtest(out_dir: Path | None = None) -> dict:
     t = load()
+    comps = pd.read_parquet(TM_DIR / "competitions.parquet")
+    TOP_TIER.update(comps.loc[comps.sub_type == "first_tier", "competition_id"])
     snap = snapshots(t, range(2015, 2026)).dropna(subset=MOBILITY)
     train, test = snap[snap.year <= 2023], snap[snap.year >= 2024]
     mob = make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000)).fit(train[MOBILITY], train.moved)
     p_mob = mob.predict_proba(test[MOBILITY])[:, 1]
+    gbm = lgb.LGBMClassifier(
+        n_estimators=400,
+        learning_rate=0.03,
+        num_leaves=31,
+        min_child_samples=200,
+        subsample=0.8,
+        subsample_freq=1,
+        colsample_bytree=0.8,
+        verbose=-1,
+    )
+    gbm.fit(train[MOBILITY], train.moved)
+    p_gbm = gbm.predict_proba(test[MOBILITY])[:, 1]
     pairs = destination_pairs(t, range(2015, 2026)).dropna(subset=DESTINATION)
     ptr, pte = pairs[pairs.year <= 2023], pairs[pairs.year >= 2024]
     dest = make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000)).fit(ptr[DESTINATION], ptr.label)
@@ -174,7 +229,12 @@ def backtest(out_dir: Path | None = None) -> dict:
         "mobility": {
             "train": len(train),
             "test": len(test),
-            "auc": float(roc_auc_score(test.moved, p_mob)),
+            "auc_logistic": float(roc_auc_score(test.moved, p_mob)),
+            "auc_gbm": float(roc_auc_score(test.moved, p_gbm)),
+            "auc": float(max(roc_auc_score(test.moved, p_mob), roc_auc_score(test.moved, p_gbm))),
+            "brier_logistic": float(brier_score_loss(test.moved, p_mob)),
+            "brier_gbm": float(brier_score_loss(test.moved, p_gbm)),
+            "brier_base_rate": float(brier_score_loss(test.moved, np.full(len(test), train.moved.mean()))),
             "base_rate": float(test.moved.mean()),
             "coefficients": dict(zip(MOBILITY, mob[-1].coef_[0].round(3).tolist(), strict=True)),
         },
@@ -199,8 +259,10 @@ def backtest(out_dir: Path | None = None) -> dict:
             "",
             "| Factor | Model | Test AUC | Notes |",
             "|---|---|---|---|",
-            f"| Mobility (moves this summer?) | logistic | {m['auc']:.3f} | base rate {m['base_rate']:.1%}, "
+            f"| Mobility (sold for a fee this summer?) | logistic | {m['auc_logistic']:.3f} | Brier "
+            f"{m['brier_logistic']:.4f} vs base rate {m['brier_base_rate']:.4f}; {m['base_rate']:.1%} sold, "
             f"{m['test']} player-summers |",
+            f"| Mobility | gradient boosting | {m['auc_gbm']:.3f} | Brier {m['brier_gbm']:.4f} |",
             f"| Destination (this club, given a move) | pairwise logistic | {d['auc']:.3f} | real buyer ranked first "
             f"{d['top1']:.1%} vs random {d['random_top1']:.1%}, {d['test_moves']} moves |",
             "| Contract | prior weights | — | no historical contract data |",

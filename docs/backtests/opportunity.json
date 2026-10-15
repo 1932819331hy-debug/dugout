@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-10-15T17:00:29+00:00",
+  "train": 7441,
+  "test": 5772,
+  "results": {
+    "opportunity_model": {
+      "r2": 0.2600630590568753,
+      "mae": 0.20084181501370818,
+      "spearman": 0.5515121469805077
+    },
+    "baseline_prev_share_value": {
+      "r2": 0.02548799521438383,
+      "mae": 0.253658461401613,
+      "spearman": 0.19781046208545922
+    }
+  },
+  "actual_share_by_predicted_quartile": [
+    0.068,
+    0.188,
+    0.322,
+    0.466
+  ]
+}
