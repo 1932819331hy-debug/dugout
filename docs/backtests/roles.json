@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-10-15T15:37:54+00:00",
+  "min_minutes": 900,
+  "self_retrieval": {
+    "2022-23 -> 2023-24": {
+      "players": 116,
+      "top1": 0.09482758620689655,
+      "top5": 0.3879310344827586
+    },
+    "2023-24 -> 2024-25": {
+      "players": 148,
+      "top1": 0.13513513513513514,
+      "top5": 0.38513513513513514
+    },
+    "2024-25 -> 2025-26": {
+      "players": 171,
+      "top1": 0.09941520467836257,
+      "top5": 0.36257309941520466
+    }
+  },
+  "random_baseline": {
+    "top1": 0.03418696592561075,
+    "top5": 0.17093482962805373
+  },
+  "role_stability_ari": 0.7097296622027227,
+  "roles": {
+    "DEF: creative full-back": 52,
+    "DEF: stopper centre-back": 49,
+    "FWD: creative forward": 5,
+    "FWD: penalty-box striker": 9,
+    "FWD: pressing forward": 6,
+    "FWD: target forward": 6,
+    "GK: goalkeeper": 19,
+    "MID: attacking midfielder": 69,
+    "MID: holding midfielder": 60
+  }
+}

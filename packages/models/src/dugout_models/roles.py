@@ -36,6 +36,7 @@ ROLE_NAMES = {
         "influence": "ball-playing centre-back",
         "xg": "set-piece threat defender",
         "goals": "set-piece threat defender",
+        "assists": "creative full-back",
     },
     "MID": {
         "creativity": "creator",
@@ -59,6 +60,7 @@ ROLE_NAMES = {
         "influence": "complete forward",
         "recoveries": "pressing forward",
         "tackles": "pressing forward",
+        "cbi": "target forward",
     },
 }
 
@@ -112,10 +114,14 @@ def fit_roles(profiles: pd.DataFrame, max_k: int = 4, seed: int = 7) -> pd.DataF
                 key=lambda g: g.bic(Z),
             )
             grp["cluster"] = best.predict(Z)
-            names = {}
+            names, taken = {}, set()
             for c in range(best.n_components):
                 centre = pd.Series(Z[grp.cluster.to_numpy() == c].mean(axis=0), index=cols)
-                names[c] = ROLE_NAMES.get(pos, {}).get(centre.idxmax(), f"{pos.lower()} profile {c + 1}")
+                # strongest feature that maps to a role name not used by another cluster
+                options = [ROLE_NAMES.get(pos, {}).get(f) for f in centre.sort_values(ascending=False).index]
+                name = next((o for o in options if o and o not in taken), f"{pos.lower()} profile {c + 1}")
+                names[c] = name
+                taken.add(name)
             grp["role"] = grp.cluster.map(names)
         emb = umap.UMAP(n_neighbors=min(15, len(grp) - 1), random_state=seed).fit_transform(Z)
         grp["umap_x"], grp["umap_y"] = emb[:, 0], emb[:, 1]
@@ -177,3 +183,62 @@ def role_stability(profiles: pd.DataFrame, n_boot: int = 20, seed: int = 7) -> f
         common = full.index.intersection(boot.index)
         scores.append(adjusted_rand_score(full[common], boot[common]))
     return float(np.mean(scores))
+
+
+def backtest(con: duckdb.DuckDBPyConnection, out_dir=None, season: str = "2025-26") -> dict:
+    """Self-retrieval across consecutive seasons (vs a random baseline) and bootstrap role stability."""
+    import json
+    from datetime import UTC, datetime
+
+    p = season_profiles(con)
+    pairs = [("2022-23", "2023-24"), ("2023-24", "2024-25"), ("2024-25", "2025-26")]
+    retrieval = {f"{a} -> {b}": self_retrieval(p, a, b) for a, b in pairs}
+    sizes = p[p.season == pairs[-1][0]].groupby("position").size()
+    random_top1 = float((1 / sizes).mean())
+    cur = p[p.season == season]
+    roles = fit_roles(cur)
+    report = {
+        "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
+        "min_minutes": MIN_MINUTES,
+        "self_retrieval": retrieval,
+        "random_baseline": {"top1": random_top1, "top5": min(1.0, 5 * random_top1)},
+        "role_stability_ari": role_stability(cur),
+        "roles": {f"{k[0]}: {k[1]}": int(v) for k, v in roles.groupby(["position", "role"]).size().items()},
+    }
+    if out_dir:
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / "roles.json").write_text(json.dumps(report, indent=2))
+        lines = [
+            "# Roles and similarity",
+            "",
+            f"Generated {report['generated_at']}. Per-90 FPL/Opta profiles, players with "
+            f">= {MIN_MINUTES} minutes in a season. Features: {', '.join(BASE)}; plus {', '.join(DEFENSIVE)} from "
+            "2025-26 (when FPL started tracking them).",
+            "",
+            "## Similarity: does a player's profile find his own previous season?",
+            "",
+            "| Seasons | Players | Top-1 | Top-5 |",
+            "|---|---|---|---|",
+        ]
+        for k, v in retrieval.items():
+            lines.append(f"| {k} | {v['players']} | {v['top1']:.1%} | {v['top5']:.1%} |")
+        rb = report["random_baseline"]
+        lines += [
+            f"| random guess | | {rb['top1']:.1%} | {rb['top5']:.1%} |",
+            "",
+            f"## Roles ({season})",
+            "",
+            f"Bootstrap stability (mean adjusted Rand index, 20 resamples): {report['role_stability_ari']:.2f}",
+            "",
+            "| Position: role | Players |",
+            "|---|---|",
+        ]
+        lines += [f"| {k} | {v} |" for k, v in report["roles"].items()]
+        lines += [
+            "",
+            "Limitation: FPL/Opta box-score profiles cannot see positioning or passing networks; event or "
+            "tracking data would separate roles more finely. Player embeddings (FootballBERT) are pending a "
+            "decision on loading third-party weights.",
+        ]
+        (out_dir / "roles.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return report

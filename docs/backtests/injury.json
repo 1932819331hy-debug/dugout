@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-10-15T15:40:00+00:00",
+  "horizon_days": 14,
+  "train_rows": 22725,
+  "test_rows": 11559,
+  "episodes": 2303,
+  "positive_rate_test": 0.027597543040055367,
+  "results": {
+    "logistic": {
+      "auc": 0.6101390019968986,
+      "brier": 0.02691659846520467
+    },
+    "gradient_boosting": {
+      "auc": 0.628593162574326,
+      "brier": 0.027255534186261168
+    },
+    "base_rate": {
+      "auc": 0.5,
+      "brier": 0.026870092050981013
+    }
+  },
+  "logistic_coefficients": {
+    "age": 0.086,
+    "min_last3": 0.13,
+    "min_28d": -0.176,
+    "matches_14d": 0.11,
+    "prev_episodes": 0.149,
+    "days_since_episode": -0.158,
+    "is_gk": -0.121,
+    "is_def": 0.119,
+    "is_mid": -0.063,
+    "is_fwd": 0.007,
+    "season_week": -0.01
+  }
+}

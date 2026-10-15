@@ -33,7 +33,10 @@ class Settings(BaseSettings):
     pff_data_dir: Path | None = None
 
     ci: bool = False
-    user_agent: str = "dugout/0.1 (open-source football research bot; non-commercial)"
+    # Wikimedia (and polite crawling generally) requires contact details in the User-Agent.
+    user_agent: str = (
+        "dugout/0.1 (+https://github.com/delta96040/dugout; open-source, non-commercial football research)"
+    )
 
     cache_dir: Path = REPO_ROOT / ".cache"
     warehouse_path: Path = REPO_ROOT / "data" / "warehouse" / "dugout.duckdb"

@@ -10,11 +10,17 @@ from __future__ import annotations
 from datetime import date, datetime, timedelta
 from typing import Any
 
+import pandas as pd
+
 from dugout_pipeline.adapters.base import DAY, HOUR, TIER_DATA, SourceAdapter
 from dugout_pipeline.adapters.fpl import match_id
 from dugout_pipeline.clubs import ClubResolver
 from dugout_pipeline.db import upsert
 from dugout_pipeline.http import BudgetExceeded
+from dugout_pipeline.ids import attach_catalogue
+from dugout_pipeline.settings import REPO_ROOT
+
+INJURY_DIR = REPO_ROOT / "data" / "raw" / "api_football"
 
 STATUS = {
     "FT": "finished",
@@ -251,3 +257,40 @@ class ApiFootballAdapter(SourceAdapter):
             calls += 0 if sres.from_cache else 1
             rows += self.parse_xg(mid, f, stats, sres.fetched_at)
         return {"match_observations": upsert(self.ctx.con, "match_observations", rows), "api_calls": calls}
+
+    def injury_history(self, season: int) -> pd.DataFrame:
+        """Free plan: full-season injury/absence lists for 2022-2024 (one call each, cached for a year).
+        Saved as Parquet for the injury-risk model; player ids are mapped to Reep where the register knows them."""
+        league_id = self.ctx.league_cfg["provider_ids"]["api_football"]
+        body, _ = self.call("injuries", {"league": league_id, "season": season}, ttl=365 * DAY)
+        rows = [
+            {
+                "api_player_id": i["player"]["id"],
+                "player_name": i["player"]["name"],
+                "type": i["player"]["type"],
+                "reason": i["player"]["reason"],
+                "api_team_id": i["team"]["id"],
+                "team": i["team"]["name"],
+                "fixture_id": i["fixture"]["id"],
+                "date": i["fixture"]["date"][:10],
+                "season": season,
+            }
+            for i in body["response"]
+        ]
+        df = pd.DataFrame(rows)
+        if attach_catalogue(self.ctx.con):
+            ids = df.api_player_id.astype(str).unique().tolist()
+            m = self.ctx.con.execute(
+                "SELECT external_id, reep_id FROM reep.bridges WHERE provider='api_football' AND namespace='player' "
+                "AND external_id IN (SELECT unnest(?))",
+                [ids],
+            ).df()
+            df = df.merge(
+                m.rename(columns={"external_id": "api_player_id_s"}),
+                left_on=df.api_player_id.astype(str),
+                right_on="api_player_id_s",
+                how="left",
+            ).drop(columns=["key_0", "api_player_id_s"], errors="ignore")
+        INJURY_DIR.mkdir(parents=True, exist_ok=True)
+        df.to_parquet(INJURY_DIR / f"injuries_{season}.parquet", index=False)
+        return df

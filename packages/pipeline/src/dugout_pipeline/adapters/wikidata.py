@@ -32,6 +32,18 @@ SELECT ?tm ?club ?venueLabel ?coord ?vstart ?coach ?coachLabel ?start ?dob ?coun
 """
 
 
+TENURES = """
+SELECT ?tm ?coach ?coachLabel ?start ?end WHERE {
+  VALUES ?tm { %s }
+  ?club wdt:P7223 ?tm .
+  ?club p:P286 ?st . ?st ps:P286 ?coach .
+  OPTIONAL { ?st pq:P580 ?start }
+  OPTIONAL { ?st pq:P582 ?end }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+"""
+
+
 def parse_point(wkt: str) -> tuple[float, float] | None:
     # "Point(-2.96083 53.4308)" -> (lat, lon)
     if not wkt or not wkt.startswith("Point("):
@@ -73,7 +85,42 @@ class WikidataAdapter(SourceAdapter):
                 "UPDATE clubs SET venue = coalesce(?, venue), lat = ?, lon = ? WHERE club_id = ?",
                 [name, lat, lon, slug],
             )
-        return {"clubs": len(venues), "managers": upsert(con, "managers", managers)}
+        tenures = self.parse_tenures(self.sparql(TENURES % values), tm)
+        return {
+            "clubs": len(venues),
+            "managers": upsert(con, "managers", managers),
+            "manager_tenures": upsert(con, "manager_tenures", tenures),
+        }
+
+    def sparql(self, query: str) -> dict:
+        res = self.client.request(
+            "POST",
+            self.base_url,
+            data=f"query={_q(query)}".encode(),
+            headers={
+                "Accept": "application/sparql-results+json",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        )
+        return res.json()
+
+    def parse_tenures(self, doc: dict, tm: dict[str, str]) -> list[dict]:
+        rows = []
+        for b in doc["results"]["bindings"]:
+            slug = tm.get(b["tm"]["value"])
+            if not slug or "start" not in b:  # a spell without a start date cannot be placed in time
+                continue
+            rows.append(
+                {
+                    "manager_id": "wikidata:" + b["coach"]["value"].rsplit("/", 1)[-1],
+                    "name": b["coachLabel"]["value"],
+                    "club_id": slug,
+                    "start_date": date.fromisoformat(b["start"]["value"][:10]),
+                    "end_date": date.fromisoformat(b["end"]["value"][:10]) if "end" in b else None,
+                    "source": self.name,
+                }
+            )
+        return rows
 
     def parse(self, doc: dict, tm: dict[str, str], fetched_at: datetime):
         venues, managers, venue_start = {}, {}, {}
