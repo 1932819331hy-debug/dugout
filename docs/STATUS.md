@@ -19,7 +19,11 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   (5) report to user and stop for go-ahead.
   User feedback to remember: Liverpool goalkeeper is not a need (fixed: peer-based needs); user says Rio Ngumoha
   will not leave (insider info cannot be a source; sale likelihood relabelled as model estimate, academy/contract
-  blind spot documented). User mentioned a GK signing "Luca Brugmans" not present in our sources.
+  blind spot documented). Confirmed via official club news (user link,
+  https://www.liverpoolfc.com/news/liverpool-agree-deal-sign-goalkeeper-lucca-brughmans): GK Lucca Brughmans (18)
+  signed from Genk, loaned back for 2026-27. TODO: add an official club-announcement source (check liverpoolfc.com
+  robots.txt; tier 1; cached, rate-limited) and count agreed future signings in squad needs.
+  The market+lookup publish finished on 2026-10-16 (lookup/potential/fit rows now in model_outputs).
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
