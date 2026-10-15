@@ -22,6 +22,7 @@ from dugout_pipeline.ids import attach_catalogue
 from dugout_pipeline.settings import REPO_ROOT
 
 SQUADS_CSV = REPO_ROOT / "data" / "reference" / "transfermarkt_squads.csv"
+TM_DIR = REPO_ROOT / "data" / "raw" / "transfermarkt"  # CC0 dataset tables for model training (git-ignored)
 FIELDS = [
     "tm_player_id",
     "player_id",
@@ -254,4 +255,19 @@ class TransfermarktDatasetsLoader(SourceAdapter):
             "transfers": upsert(con, "transfers", trs),
             "players_mapped": sum(1 for t in tm_ids if t in mapping),
             "players_total": len(tm_ids),
+            "parquet_tables": self.save_model_tables(),
         }
+
+    MODEL_TABLES = ("players", "transfers", "player_valuations", "appearances", "clubs", "competitions")
+
+    def save_model_tables(self) -> int:
+        """Full CC0 tables the valuation / realism / injury models train on, as Parquet under data/raw/."""
+        import pandas as pd
+
+        TM_DIR.mkdir(parents=True, exist_ok=True)
+        for name in self.MODEL_TABLES:
+            res = self.client.get(f"{self.base_url}{name}.csv.gz")
+            pd.read_csv(io.BytesIO(gzip.decompress(res.content)), low_memory=False).to_parquet(
+                TM_DIR / f"{name}.parquet", index=False
+            )
+        return len(self.MODEL_TABLES)

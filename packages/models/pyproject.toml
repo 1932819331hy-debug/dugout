@@ -14,6 +14,9 @@ dependencies = [
   "xgboost>=2.1",
   "lightgbm>=4.5",
   "pymc>=5.20",
+  # NUTS without a C compiler (Windows): Rust sampler on a numba-compiled model
+  "nutpie>=0.16",
+  "numba>=0.61",
   "umap-learn>=0.5.7",
   "ortools>=9.11",
 ]

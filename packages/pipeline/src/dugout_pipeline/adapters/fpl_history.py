@@ -20,6 +20,13 @@ from dugout_pipeline.clubs import ClubResolver, slugify
 from dugout_pipeline.db import upsert
 
 SEASONS_WITH_XG = ["2022-23", "2023-24", "2024-25", "2025-26"]
+# FPL source column -> our column; FPL started tracking these in 2025-26
+DEFENSIVE = {
+    "tackles": "tackles",
+    "recoveries": "recoveries",
+    "clearances_blocks_interceptions": "cbi",
+    "defensive_contribution": "defensive_contribution",
+}
 
 
 class FPLHistoryAdapter(SourceAdapter):
@@ -59,6 +66,7 @@ class FPLHistoryAdapter(SourceAdapter):
     def parse_matches(self, season, fixtures, gw, team_slug, fetched_at: datetime):
         gw = gw.assign(was_home=gw["was_home"].astype(str).str.lower().eq("true"))
         xgc = gw.groupby(["fixture", "was_home"])["expected_goals_conceded"].max()
+        no_xg = untracked(gw, ["expected_goals", "expected_goals_conceded"])
         matches, obs = [], []
         for f in fixtures[fixtures["finished"].astype(str).str.lower().eq("true")].itertuples():
             home, away = team_slug[int(f.team_h)], team_slug[int(f.team_a)]
@@ -89,8 +97,8 @@ class FPLHistoryAdapter(SourceAdapter):
                     "home_goals": hg,
                     "away_goals": ag,
                     # home xG = what the away side conceded, and vice versa
-                    "home_xg": _num(xgc.get((f.id, False))),
-                    "away_xg": _num(xgc.get((f.id, True))),
+                    "home_xg": None if f.id in no_xg else _num(xgc.get((f.id, False))),
+                    "away_xg": None if f.id in no_xg else _num(xgc.get((f.id, True))),
                     "fetched_at": fetched_at,
                 }
             )
@@ -110,6 +118,9 @@ class FPLHistoryAdapter(SourceAdapter):
                 reep_cache[code] = m.reep_id if m else f"opta:{code}"
             return reep_cache[code]
 
+        no_xg = untracked(gw, ["expected_goals", "expected_goals_conceded"])
+        no_starts = untracked(gw, ["starts"]) if "starts" in gw else set(gw["fixture"])
+        no_def = untracked(gw, list(DEFENSIVE)) if set(DEFENSIVE) <= set(gw.columns) else set(gw["fixture"])
         rows = []
         played = gw[gw["minutes"] > 0]
         for r in played.itertuples():
@@ -127,15 +138,37 @@ class FPLHistoryAdapter(SourceAdapter):
                     "minutes": int(r.minutes),
                     "goals": int(r.goals_scored),
                     "assists": int(r.assists),
-                    "xg": _num(r.expected_goals),
-                    "xa": _num(r.expected_assists),
-                    "starts": int(getattr(r, "starts", 0) or 0),
+                    "xg": None if r.fixture in no_xg else _num(r.expected_goals),
+                    "xa": None if r.fixture in no_xg else _num(r.expected_assists),
+                    "starts": None if r.fixture in no_starts else int(r.starts),
+                    "saves": _int(getattr(r, "saves", None)),
+                    "influence": _num(getattr(r, "influence", None)),
+                    "creativity": _num(getattr(r, "creativity", None)),
+                    "threat": _num(getattr(r, "threat", None)),
+                    "bps": _int(getattr(r, "bps", None)),
+                    "xgc": None if r.fixture in no_xg else _num(getattr(r, "expected_goals_conceded", None)),
+                    **{
+                        dst: None if r.fixture in no_def else _int(getattr(r, src, None))
+                        for src, dst in DEFENSIVE.items()
+                    },
                     "yellow": int(r.yellow_cards),
                     "red": int(r.red_cards),
                     "fetched_at": fetched_at,
                 }
             )
         return rows
+
+
+def untracked(gw: pd.DataFrame, cols: list[str]) -> set:
+    """Fixtures where a stat was not yet collected: every player row is 0. FPL added xG and `starts` partway
+    through 2022-23 (xG from gameweek 16); earlier fixtures carry zeros that must read as missing, not as 0."""
+    tracked = (gw[cols].fillna(0) != 0).any(axis=1).groupby(gw["fixture"]).any()
+    return set(tracked[~tracked].index)
+
+
+def _int(x) -> int | None:
+    v = _num(x)
+    return None if v is None else int(v)
 
 
 def _num(x) -> float | None:

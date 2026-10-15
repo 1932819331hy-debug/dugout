@@ -102,9 +102,36 @@ def wyscout(out: Path, countries: list[str], limit: int | None, cache: Path) -> 
     return {"dataset": "wyscout_public", "games": n}
 
 
+def player_games(out: Path, dataset: str, cache: Path, delay: float) -> dict:
+    """Per-game player appearances with minutes played (for per-90 ratings), for every converted game."""
+    if dataset == "statsbomb":
+        from socceraction.data.statsbomb import StatsBombLoader
+
+        loader, root = StatsBombLoader(getter="remote", creds={"user": "", "passwd": ""}), out / "statsbomb"
+    else:
+        from socceraction.data.wyscout import PublicWyscoutLoader
+
+        loader, root = PublicWyscoutLoader(root=str(cache), download=False), out / "wyscout_public"
+    path = root / "player_games.parquet"
+    done = set(pd.read_parquet(path)["game_id"]) if path.exists() else set()
+    rows = []
+    for f in sorted((root / "actions").glob("*.parquet")):
+        gid = int(f.stem)
+        if gid in done:
+            continue
+        rows.append(loader.players(gid).assign(game_id=gid))
+        if dataset == "statsbomb":
+            time.sleep(delay)
+    if rows:
+        cols = ["game_id", "team_id", "player_id", "player_name", "is_starter", "minutes_played"]
+        new = pd.concat(rows)[cols]
+        _merge_meta(path, new, ["game_id", "player_id"])
+    return {"dataset": dataset, "new_games": len(rows)}
+
+
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("dataset", choices=["statsbomb", "wyscout"])
+    p.add_argument("dataset", choices=["statsbomb", "wyscout", "statsbomb-players", "wyscout-players"])
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--limit", type=int)
     p.add_argument("--scope", default="2:27", help="StatsBomb competition:season pairs, comma-separated")
@@ -112,7 +139,9 @@ def main() -> None:
     p.add_argument("--cache", type=Path, default=Path(".cache/open/wyscout"))
     p.add_argument("--delay", type=float, default=0.5)
     a = p.parse_args()
-    if a.dataset == "statsbomb":
+    if a.dataset.endswith("-players"):
+        print(player_games(a.out, a.dataset.removesuffix("-players"), a.cache, a.delay))
+    elif a.dataset == "statsbomb":
         scope = [tuple(int(x) for x in pair.split(":")) for pair in a.scope.split(",")]
         print(statsbomb(a.out, scope, a.limit, a.delay))
     else:
