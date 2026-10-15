@@ -1,0 +1,1542 @@
+{
+  "generated_at": "2026-10-15T23:18:45+00:00",
+  "llm": "qwen2.5:3b",
+  "runtime_seconds": 4091,
+  "summary": {
+    "questions": 56,
+    "routing_accuracy": 1.0,
+    "answer_recall": 0.962,
+    "claim_recall": 0.6,
+    "refusal_accuracy": 1.0,
+    "citation_rate": 1.0,
+    "numbers_published": 408,
+    "untraceable_number_rate": 0.0,
+    "llm_sections": 43,
+    "template_sections": 86,
+    "llm_attempts_with_stray_numbers": 10,
+    "llm_attempts": 145,
+    "sentences_withheld": 0
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "question": "How many league goals has Alexander Isak scored this season?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend that the sporting director should focus on Alexander Isak's goal-scoring potential, given his 4 league goals scored this season, as he could be a key player in Liverpool's attack under Andoni Iraola's style of play."
+      }
+    },
+    {
+      "id": "q02",
+      "question": "How many assists does Florian Wirtz have this season?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend that Florian Wirtz has 2 league assists this season."
+      }
+    },
+    {
+      "id": "q03",
+      "question": "How many minutes has Virgil van Dijk played this season?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend that we focus on 540 to understand how many minutes Virgil van Dijk has played this season."
+      }
+    },
+    {
+      "id": "q04",
+      "question": "What is Cody Gakpo's xG this season?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend focusing on Cody Gakpo's expected goals (xG) this season, which is 0.64, to understand his contribution to goal-scoring potential for the team."
+      }
+    },
+    {
+      "id": "q05",
+      "question": "Where are Liverpool in the league table?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 10,
+      "numbers_untraceable": 0,
+      "claims_published": 10,
+      "claims_cited": 10,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Liverpool have scored 7 league goals. Liverpool have conceded 7 league goals. Liverpool's most recent league results read LWDWD. Liverpool's Elo rating is 1601. Andoni Iraola has been Liverpool's head coach since 4 June 2026. Andoni Iraola's style profile covers 116 Premier League matches. Teams under Iraola have taken 51% of the threat in their matches, close to the league average. Teams under Iraola average 112 defensive actions per match, more active without the ball than almost any Premier League manager's side."
+      }
+    },
+    {
+      "id": "q06",
+      "question": "How many points do Liverpool have?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool have 9 league points. We recommend Liverpool should focus on improving their goal-scoring efficiency to boost their position in the league table."
+      }
+    },
+    {
+      "id": "q07",
+      "question": "How many league goals have Liverpool conceded?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool have conceded 7 league goals. We recommend Liverpool should focus on reducing their goal conceded rate to improve their defensive performance."
+      }
+    },
+    {
+      "id": "q08",
+      "question": "What is Liverpool's recent form?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 10,
+      "numbers_untraceable": 0,
+      "claims_published": 10,
+      "claims_cited": 10,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Liverpool have scored 7 league goals. Liverpool have conceded 7 league goals. Liverpool's most recent league results read LWDWD. Liverpool's Elo rating is 1601. Andoni Iraola has been Liverpool's head coach since 4 June 2026. Andoni Iraola's style profile covers 116 Premier League matches. Teams under Iraola have taken 51% of the threat in their matches, close to the league average. Teams under Iraola average 112 defensive actions per match, more active without the ball than almost any Premier League manager's side."
+      }
+    },
+    {
+      "id": "q09",
+      "question": "How do Liverpool play under Andoni Iraola?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 10,
+      "numbers_untraceable": 0,
+      "claims_published": 10,
+      "claims_cited": 10,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Liverpool have scored 7 league goals. Andoni Iraola has been Liverpool's head coach since 4 June 2026. Andoni Iraola's style profile covers 116 Premier League matches. Teams under Iraola have taken 51% of the threat in their matches, close to the league average. Teams under Iraola average 112 defensive actions per match, more active without the ball than almost any Premier League manager's side. Teams under Iraola create 1.62 expected goals per match, more dangerous than average. Teams under Iraola concede 1.44 expected goals per match, close to the league average. Teams under Iraola account for 51% of the chance creation in their matches, close to the league average."
+      }
+    },
+    {
+      "id": "q10",
+      "question": "When was Andoni Iraola appointed as Liverpool manager?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 10,
+      "numbers_untraceable": 0,
+      "claims_published": 10,
+      "claims_cited": 10,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Liverpool have scored 7 league goals. Andoni Iraola has been Liverpool's head coach since 4 June 2026. Andoni Iraola's style profile covers 116 Premier League matches. Teams under Iraola have taken 51% of the threat in their matches, close to the league average. Teams under Iraola average 112 defensive actions per match, more active without the ball than almost any Premier League manager's side. Teams under Iraola create 1.62 expected goals per match, more dangerous than average. Teams under Iraola concede 1.44 expected goals per match, close to the league average. Teams under Iraola account for 51% of the chance creation in their matches, close to the league average."
+      }
+    },
+    {
+      "id": "q11",
+      "question": "How intense is Liverpool's press under their manager?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 2,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend that Liverpool's press is intense, as evidenced by Andoni Iraola's defensive actions per match being 112 and teams under him creating 1.62 expected goals per match, more dangerous than average."
+      }
+    },
+    {
+      "id": "q12",
+      "question": "What is Liverpool's Elo rating?",
+      "route": [
+        "club",
+        "news"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        false
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "llm:qwen2.5:3b",
+        "llm:qwen2.5:3b"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 4,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend that the sporting director should review the recent league results to gauge Liverpool's current form, as LWDWD provides the most recent information on their performance.",
+        "News & Injury": "We recommend checking the official Liverpool FC website or a reliable sports statistic source for the current Elo rating, as the provided facts do not contain this information.",
+        "Sporting Director": "We recommend Liverpool's Elo rating is not provided in the given facts."
+      }
+    },
+    {
+      "id": "q13",
+      "question": "What are Liverpool's chances of winning their next match?",
+      "route": [
+        "match"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 8,
+      "numbers_untraceable": 0,
+      "claims_published": 8,
+      "claims_cited": 8,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Match Predictor": "Liverpool's next league match is Brentford v Liverpool on 17 October 2026. The model gives Brentford a 35% chance of winning against Liverpool. The model gives Brentford v Liverpool a 26% chance of ending in a draw. The model gives Liverpool a 38% chance of winning against Brentford. The model expects Brentford to score 1.5 goals against Liverpool. The model expects Liverpool to score 1.6 goals against Brentford. Liverpool's Elo rating is 1601. Brentford's Elo rating is 1536."
+      }
+    },
+    {
+      "id": "q14",
+      "question": "Predict the result of Liverpool's next fixture.",
+      "route": [
+        "match"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true,
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 8,
+      "numbers_untraceable": 0,
+      "claims_published": 8,
+      "claims_cited": 8,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Match Predictor": "Liverpool's next league match is Brentford v Liverpool on 17 October 2026. The model gives Brentford a 35% chance of winning against Liverpool. The model gives Brentford v Liverpool a 26% chance of ending in a draw. The model gives Liverpool a 38% chance of winning against Brentford. The model expects Brentford to score 1.5 goals against Liverpool. The model expects Liverpool to score 1.6 goals against Brentford. Liverpool's Elo rating is 1601. Brentford's Elo rating is 1536."
+      }
+    },
+    {
+      "id": "q15",
+      "question": "How many goals does the model expect Liverpool to score in their next game?",
+      "route": [
+        "club",
+        "match"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 12,
+      "numbers_untraceable": 0,
+      "claims_published": 8,
+      "claims_cited": 8,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 2,
+      "llm_attempts": 5,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend Liverpool will score more than 1.62 goals in their next game, given Andoni Iraola's style profile and expected goal creation.",
+        "Match Predictor": "We recommend that the model expects Liverpool to score 1.6 goals in their next game against Brentford. The model gives Brentford a 35% chance of winning and a 26% chance of drawing, indicating a slight edge for Liverpool. With 1601 being Liverpool's Elo rating and 1536 Brentford's, the model predicts 1.5 goals for Brentford, leaving 1.6 for Liverpool.",
+        "Sporting Director": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Liverpool's next league match is Brentford v Liverpool on 17 October 2026. The model gives Brentford a 35% chance of winning against Liverpool."
+      }
+    },
+    {
+      "id": "q16",
+      "question": "When is Liverpool's next league match?",
+      "route": [
+        "club",
+        "match"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 12,
+      "numbers_untraceable": 0,
+      "claims_published": 12,
+      "claims_cited": 12,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template",
+        "llm:qwen2.5:3b"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 4,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool's most recent league results read LWDWD. We recommend Liverpool's next league match is scheduled for LWDWD.",
+        "Match Predictor": "Liverpool's next league match is Brentford v Liverpool on 17 October 2026. The model gives Brentford a 35% chance of winning against Liverpool. The model gives Brentford v Liverpool a 26% chance of ending in a draw. The model gives Liverpool a 38% chance of winning against Brentford. The model expects Brentford to score 1.5 goals against Liverpool. The model expects Liverpool to score 1.6 goals against Brentford. Liverpool's Elo rating is 1601. Brentford's Elo rating is 1536.",
+        "Sporting Director": "Liverpool's next league match is Brentford v Liverpool on 17 October 2026. They are mid-table with 9 points. The model suggests Brentford have a slight edge in winning this match."
+      }
+    },
+    {
+      "id": "q17",
+      "question": "What is Liverpool's predicted lineup for the next match?",
+      "route": [
+        "match",
+        "lineup"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true,
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 24,
+      "numbers_untraceable": 0,
+      "claims_published": 23,
+      "claims_cited": 23,
+      "writers": [
+        "template",
+        "template",
+        "llm:qwen2.5:3b"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 5,
+      "withheld": 0,
+      "answer": {
+        "Match Predictor": "Liverpool's next league match is Brentford v Liverpool on 17 October 2026. The model gives Brentford a 35% chance of winning against Liverpool. The model gives Brentford v Liverpool a 26% chance of ending in a draw. The model gives Liverpool a 38% chance of winning against Brentford. The model expects Brentford to score 1.5 goals against Liverpool. The model expects Liverpool to score 1.6 goals against Brentford. Liverpool's Elo rating is 1601. Brentford's Elo rating is 1536.",
+        "Lineup Selector": "The lineup model sets Liverpool up in a 3-4-2-1 for the next match. The lineup model starts Alisson Becker at GK. The lineup model starts Ronald Araujo at CB. The lineup model starts Virgil van Dijk at CB. Virgil van Dijk is in the elevated risk tier of the injury-risk model. The lineup model starts Jeremy Jacquet at CB. The lineup model starts Jeremie Frimpong at RWB. The lineup model starts Milos Kerkez at LWB. The lineup model starts Alexis Mac Allister at CM. The lineup model starts Trey Nyoni at CM. The lineup model starts Dominik Szoboszlai at AM. The lineup model starts Florian Wirtz at AM. The lineup model starts Victor Munoz at CF.",
+        "Sporting Director": "We recommend Liverpool will use a 3-4-2-1 formation for the next match, with Alisson Becker likely starting as the goalkeeper at GK. The model suggests a slight edge for Brentford with a 35% chance of winning."
+      }
+    },
+    {
+      "id": "q18",
+      "question": "Which formation will Liverpool start with?",
+      "route": [
+        "club",
+        "lineup"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 25,
+      "numbers_untraceable": 0,
+      "claims_published": 25,
+      "claims_cited": 25,
+      "writers": [
+        "template",
+        "template",
+        "llm:qwen2.5:3b"
+      ],
+      "llm_draft_stray": 1,
+      "llm_attempts": 5,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Liverpool have scored 7 league goals. Liverpool have conceded 7 league goals. Liverpool's most recent league results read LWDWD. Liverpool's Elo rating is 1601. Andoni Iraola has been Liverpool's head coach since 4 June 2026. Andoni Iraola's style profile covers 116 Premier League matches. Teams under Iraola have taken 51% of the threat in their matches, close to the league average. Teams under Iraola average 112 defensive actions per match, more active without the ball than almost any Premier League manager's side.",
+        "Lineup Selector": "The lineup model sets Liverpool up in a 3-4-2-1 for the next match. The lineup model starts Alisson Becker at GK. The lineup model starts Ronald Araujo at CB. The lineup model starts Virgil van Dijk at CB. Virgil van Dijk is in the elevated risk tier of the injury-risk model. The lineup model starts Jeremy Jacquet at CB. The lineup model starts Jeremie Frimpong at RWB. The lineup model starts Milos Kerkez at LWB. The lineup model starts Alexis Mac Allister at CM. The lineup model starts Trey Nyoni at CM. The lineup model starts Dominik Szoboszlai at AM. The lineup model starts Florian Wirtz at AM. The lineup model starts Victor Munoz at CF.",
+        "Sporting Director": "We recommend Liverpool should start in a 3-4-2-1 formation for the next match, as the lineup model predicts this formation will maximize their chances of securing points. Alisson Becker is set to be in GK, reinforcing the goalkeeper position."
+      }
+    },
+    {
+      "id": "q19",
+      "question": "Does Alisson start in goal on the weekend?",
+      "route": [
+        "club",
+        "lineup"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 27,
+      "numbers_untraceable": 0,
+      "claims_published": 27,
+      "claims_cited": 27,
+      "writers": [
+        "template",
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 6,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Liverpool have scored 7 league goals. Liverpool have conceded 7 league goals. Liverpool's most recent league results read LWDWD. Liverpool's Elo rating is 1601. Andoni Iraola has been Liverpool's head coach since 4 June 2026. Andoni Iraola's style profile covers 116 Premier League matches. Teams under Iraola create 1.62 expected goals per match, more dangerous than average. Teams under Iraola concede 1.44 expected goals per match, close to the league average.",
+        "Lineup Selector": "The lineup model sets Liverpool up in a 3-4-2-1 for the next match. The lineup model starts Alisson Becker at GK. The lineup model starts Ronald Araujo at CB. The lineup model starts Virgil van Dijk at CB. Virgil van Dijk is in the elevated risk tier of the injury-risk model. The lineup model starts Jeremy Jacquet at CB. The lineup model starts Jeremie Frimpong at RWB. The lineup model starts Milos Kerkez at LWB. The lineup model starts Alexis Mac Allister at CM. The lineup model starts Trey Nyoni at CM. The lineup model starts Dominik Szoboszlai at AM. The lineup model starts Florian Wirtz at AM. The lineup model starts Victor Munoz at CF.",
+        "Sporting Director": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. The lineup model sets Liverpool up in a 3-4-2-1 for the next match. The lineup model starts Alisson Becker at GK."
+      }
+    },
+    {
+      "id": "q20",
+      "question": "Should Liverpool rotate anyone with a high injury risk?",
+      "route": [
+        "lineup",
+        "news"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 5,
+      "numbers_untraceable": 0,
+      "claims_published": 16,
+      "claims_cited": 16,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 6,
+      "withheld": 0,
+      "answer": {
+        "Lineup Selector": "We recommend Liverpool rotate Virgil van Dijk, who is in the elevated risk tier of the injury-risk model, to manage his minutes and reduce the strain on his body.",
+        "News & Injury": "Giovanni Leoni is injured with a knee injury. Cody Gakpo is injured with an ankle injury. Alexander Isak is injured with a thigh injury. Conor Bradley is injured with a knee injury. Hugo Ekitiké is injured with an achilles injury. Vitezslav Jaros is injured with a knee injury. Ryan Gravenberch is suspended. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing. According to Liverpool FC, Bradley Barcola nominated for Champions League Player of the Week. According to Liverpool FC, On demand: Watch Andoni Iraola's pre-Brentford press conference. According to Liverpool FC, Brentford v Liverpool: Referee and match officials confirmed. According to Liverpool FC, Beata Olsson and Cornelia Kapocs visit LFC Foundation mental health session with local pupils.",
+        "Sporting Director": "The lineup model sets Liverpool up in a 3-4-2-1 for the next match. The lineup model starts Alisson Becker at GK. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing."
+      }
+    },
+    {
+      "id": "q21",
+      "question": "Who is injured at Liverpool?",
+      "route": [
+        "news"
+      ],
+      "routed_ok": true,
+      "expect_hits": [],
+      "claim_hits": [
+        false
+      ],
+      "numbers_published": 0,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "News & Injury": "We recommend checking the latest injury updates from Liverpool FC for the most accurate information on who is currently injured."
+      }
+    },
+    {
+      "id": "q22",
+      "question": "Is Alexander Isak fit?",
+      "route": [
+        "club",
+        "news"
+      ],
+      "routed_ok": true,
+      "expect_hits": [],
+      "claim_hits": [
+        true
+      ],
+      "numbers_published": 9,
+      "numbers_untraceable": 0,
+      "claims_published": 17,
+      "claims_cited": 17,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 2,
+      "llm_attempts": 5,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Alexander Isak has not provided any recent league results, indicating he may be fit for selection. His league goals this season total 4, and his expected goals (xG) total 3.54, suggesting he is contributing effectively. Given Andoni Iraola's style profile covers 116 Premier League matches, his defensive actions per match average 112, and his expected goals for per match average 1.62, Isak is likely in good form. We recommend Liverpool consider Isak for selection, as he appears fit and capable.",
+        "News & Injury": "Giovanni Leoni is injured with a knee injury. Cody Gakpo is injured with an ankle injury. Alexander Isak is injured with a thigh injury. Conor Bradley is injured with a knee injury. Hugo Ekitiké is injured with an achilles injury. Vitezslav Jaros is injured with a knee injury. Ryan Gravenberch is suspended. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing. According to Liverpool FC, Bradley Barcola nominated for Champions League Player of the Week. According to Liverpool FC, On demand: Watch Andoni Iraola's pre-Brentford press conference. According to Liverpool FC, Brentford v Liverpool: Referee and match officials confirmed. According to Liverpool FC, Beata Olsson and Cornelia Kapocs visit LFC Foundation mental health session with local pupils.",
+        "Sporting Director": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing."
+      }
+    },
+    {
+      "id": "q23",
+      "question": "Is Dominik Szoboszlai available for the next match?",
+      "route": [
+        "match",
+        "news"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 6,
+      "numbers_untraceable": 0,
+      "claims_published": 16,
+      "claims_cited": 16,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template",
+        "llm:qwen2.5:3b"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 4,
+      "withheld": 0,
+      "answer": {
+        "Match Predictor": "We recommend assessing Dominik Szoboszlai's availability for the next match by checking his recent form and any recent updates from the club. Given the expected goals and ratings, the match appears balanced with 1.6 expected goals for Liverpool and 1.5 expected goals for Brentford. The model suggests a 38% chance of Liverpool winning and a 26% chance of a draw, indicating a competitive match. Without specific injury information, we cannot confirm his availability.",
+        "News & Injury": "Giovanni Leoni is injured with a knee injury. Cody Gakpo is injured with an ankle injury. Alexander Isak is injured with a thigh injury. Conor Bradley is injured with a knee injury. Hugo Ekitiké is injured with an achilles injury. Vitezslav Jaros is injured with a knee injury. Ryan Gravenberch is suspended. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing. According to Liverpool FC, Bradley Barcola nominated for Champions League Player of the Week. According to Liverpool FC, On demand: Watch Andoni Iraola's pre-Brentford press conference. According to Liverpool FC, Brentford v Liverpool: Referee and match officials confirmed. According to Liverpool FC, Beata Olsson and Cornelia Kapocs visit LFC Foundation mental health session with local pupils.",
+        "Sporting Director": "We recommend Liverpool should monitor Dominik Szoboszlai's recovery closely as his chance of playing next round is 75%, despite Brentford having a slight edge in the upcoming match."
+      }
+    },
+    {
+      "id": "q24",
+      "question": "Is Ryan Gravenberch suspended?",
+      "route": [
+        "news"
+      ],
+      "routed_ok": true,
+      "expect_hits": [],
+      "claim_hits": [
+        true
+      ],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 12,
+      "claims_cited": 12,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 2,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "News & Injury": "Giovanni Leoni is injured with a knee injury. Cody Gakpo is injured with an ankle injury. Alexander Isak is injured with a thigh injury. Conor Bradley is injured with a knee injury. Hugo Ekitiké is injured with an achilles injury. Vitezslav Jaros is injured with a knee injury. Ryan Gravenberch is suspended. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing. According to Liverpool FC, Bradley Barcola nominated for Champions League Player of the Week. According to Liverpool FC, On demand: Watch Andoni Iraola's pre-Brentford press conference. According to Liverpool FC, Brentford v Liverpool: Referee and match officials confirmed. According to Liverpool FC, Beata Olsson and Cornelia Kapocs visit LFC Foundation mental health session with local pupils."
+      }
+    },
+    {
+      "id": "q25",
+      "question": "What is the latest news about Liverpool?",
+      "route": [
+        "news"
+      ],
+      "routed_ok": true,
+      "expect_hits": [],
+      "claim_hits": [
+        false
+      ],
+      "numbers_published": 0,
+      "numbers_untraceable": 0,
+      "claims_published": 0,
+      "claims_cited": 0,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "News & Injury": "We recommend checking the latest news from independent sources to verify the availability of players Giovanni Leoni, Cody Gakpo, Alexander Isak, Conor Bradley, Hugo Ekitiké, and Vitezslav Jaros for the upcoming matches."
+      }
+    },
+    {
+      "id": "q26",
+      "question": "Who is doubtful for Liverpool this weekend?",
+      "route": [
+        "news"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 12,
+      "claims_cited": 12,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "News & Injury": "Giovanni Leoni is injured with a knee injury. Cody Gakpo is injured with an ankle injury. Alexander Isak is injured with a thigh injury. Conor Bradley is injured with a knee injury. Hugo Ekitiké is injured with an achilles injury. Vitezslav Jaros is injured with a knee injury. Ryan Gravenberch is suspended. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing. According to Liverpool FC, Bradley Barcola nominated for Champions League Player of the Week. According to Liverpool FC, On demand: Watch Andoni Iraola's pre-Brentford press conference. According to Liverpool FC, Brentford v Liverpool: Referee and match officials confirmed. According to Liverpool FC, Beata Olsson and Cornelia Kapocs visit LFC Foundation mental health session with local pupils."
+      }
+    },
+    {
+      "id": "q27",
+      "question": "What is Florian Wirtz worth?",
+      "route": [
+        "transfer"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 2,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Transfer & Valuation": "We recommend the sporting director considers Florian Wirtz's market value as per Transfermarkt at €85.0m and the fair fee at €76.2m, which should guide the valuation and potential transfer strategy."
+      }
+    },
+    {
+      "id": "q28",
+      "question": "What fee should Liverpool demand for Alexis Mac Allister?",
+      "route": [
+        "transfer"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 3,
+      "numbers_untraceable": 0,
+      "claims_published": 2,
+      "claims_cited": 2,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Transfer & Valuation": "We recommend Liverpool should demand a fair fee in line with Alexis Mac Allister's market value, as per the valuation model, which is €63.2m. Alexis Mac Allister's current market value is €70.0m, and the model estimate suggests he could be sold in a transfer window, as indicated by 26%."
+      }
+    },
+    {
+      "id": "q29",
+      "question": "Which Liverpool players are most likely to be sold?",
+      "route": [
+        "transfer"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 12,
+      "numbers_untraceable": 0,
+      "claims_published": 12,
+      "claims_cited": 12,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Transfer & Valuation": "The mobility model puts Rio Ngumoha's sale likelihood in a transfer window at 48%. The mobility model puts Dominik Szoboszlai's sale likelihood in a transfer window at 41%. The mobility model puts Ryan Gravenberch's sale likelihood in a transfer window at 38%. Transfermarkt values Ryan Gravenberch at €75.0m. The valuation model puts Ryan Gravenberch's fair fee at €64.5m, in line with his market value. Transfermarkt values Rio Ngumoha at €50.0m. The valuation model puts Rio Ngumoha's fair fee at €63.2m, above his market value. Transfermarkt values Trey Nyoni at €18.0m. The valuation model puts Trey Nyoni's fair fee at €28.5m, above his market value. Harvey Davies's contract runs until 30 June 2027. Virgil van Dijk's contract runs until 30 June 2027. Ronald Araujo's contract runs until 30 June 2027."
+      }
+    },
+    {
+      "id": "q30",
+      "question": "Whose contracts expire soon at Liverpool?",
+      "route": [
+        "transfer"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 12,
+      "numbers_untraceable": 0,
+      "claims_published": 12,
+      "claims_cited": 12,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Transfer & Valuation": "The mobility model puts Rio Ngumoha's sale likelihood in a transfer window at 48%. The mobility model puts Dominik Szoboszlai's sale likelihood in a transfer window at 41%. The mobility model puts Ryan Gravenberch's sale likelihood in a transfer window at 38%. Transfermarkt values Ryan Gravenberch at €75.0m. The valuation model puts Ryan Gravenberch's fair fee at €64.5m, in line with his market value. Transfermarkt values Rio Ngumoha at €50.0m. The valuation model puts Rio Ngumoha's fair fee at €63.2m, above his market value. Transfermarkt values Trey Nyoni at €18.0m. The valuation model puts Trey Nyoni's fair fee at €28.5m, above his market value. Harvey Davies's contract runs until 30 June 2027. Virgil van Dijk's contract runs until 30 June 2027. Ronald Araujo's contract runs until 30 June 2027."
+      }
+    },
+    {
+      "id": "q31",
+      "question": "What is the market value of Virgil van Dijk?",
+      "route": [
+        "transfer"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Transfer & Valuation": "We recommend the market value of Virgil van Dijk is €15.0m according to Transfermarkt."
+      }
+    },
+    {
+      "id": "q32",
+      "question": "How likely is Cody Gakpo to be sold?",
+      "route": [
+        "transfer"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 3,
+      "numbers_untraceable": 0,
+      "claims_published": 3,
+      "claims_cited": 3,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Transfer & Valuation": "The mobility model puts Cody Gakpo's sale likelihood in a transfer window at 32%. Transfermarkt values Cody Gakpo at €75.0m. The valuation model puts Cody Gakpo's fair fee at €72.2m, in line with his market value."
+      }
+    },
+    {
+      "id": "q33",
+      "question": "Where do Liverpool most need to strengthen?",
+      "route": [
+        "scout"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 12,
+      "numbers_untraceable": 0,
+      "claims_published": 14,
+      "claims_cited": 14,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Scout": "According to Liverpool FC, Liverpool agree deal to sign Djylian N'Guessan. According to Liverpool FC, Liverpool agree deal to sign goalkeeper Lucca Brughmans. The squad model ranks full-back as Liverpool's biggest need. Jurriën Timber (Arsenal FC) is 25 years old. Jurriën Timber has a market value of €70.0m. The valuation model puts Jurriën Timber's fair fee at €60.5m. The playing-time model expects Jurriën Timber to play 54% of Liverpool's minutes. The realism model gives a move for Jurriën Timber to Liverpool a 0.7% chance in a transfer window. Ferdi Kadıoğlu (Brighton & Hove Albion) is 27 years old. Ferdi Kadıoğlu has a market value of €40.0m. The valuation model puts Ferdi Kadıoğlu's fair fee at €40.1m. The playing-time model expects Ferdi Kadıoğlu to play 71% of Liverpool's minutes. The realism model gives a move for Ferdi Kadıoğlu to Liverpool a 0.7% chance in a transfer window. The squad model ranks defensive midfield as Liverpool's second need."
+      }
+    },
+    {
+      "id": "q34",
+      "question": "Who should Liverpool sign next summer?",
+      "route": [
+        "scout"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 12,
+      "numbers_untraceable": 0,
+      "claims_published": 14,
+      "claims_cited": 14,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 1,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Scout": "According to Liverpool FC, Liverpool agree deal to sign Djylian N'Guessan. According to Liverpool FC, Liverpool agree deal to sign goalkeeper Lucca Brughmans. The squad model ranks full-back as Liverpool's biggest need. Jurriën Timber (Arsenal FC) is 25 years old. Jurriën Timber has a market value of €70.0m. The valuation model puts Jurriën Timber's fair fee at €60.5m. The playing-time model expects Jurriën Timber to play 54% of Liverpool's minutes. The realism model gives a move for Jurriën Timber to Liverpool a 0.7% chance in a transfer window. Ferdi Kadıoğlu (Brighton & Hove Albion) is 27 years old. Ferdi Kadıoğlu has a market value of €40.0m. The valuation model puts Ferdi Kadıoğlu's fair fee at €40.1m. The playing-time model expects Ferdi Kadıoğlu to play 71% of Liverpool's minutes. The realism model gives a move for Ferdi Kadıoğlu to Liverpool a 0.7% chance in a transfer window. The squad model ranks defensive midfield as Liverpool's second need."
+      }
+    },
+    {
+      "id": "q35",
+      "question": "Give me a shortlist of realistic transfer targets for Liverpool.",
+      "route": [
+        "scout"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true,
+        false
+      ],
+      "claim_hits": [],
+      "numbers_published": 6,
+      "numbers_untraceable": 0,
+      "claims_published": 3,
+      "claims_cited": 3,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Scout": "We recommend Liverpool consider signing Jurriën Timber, given his 54% expected minutes and a 0.7% chance in the current transfer window. Additionally, Ferdi Kadıoğlu with 71% expected minutes and a 0.7% chance in the window could be a viable option. Lastly, 0.8% chance and 52% expected minutes suggest Adam Wharton as a potential acquisition."
+      }
+    },
+    {
+      "id": "q36",
+      "question": "Which candidates would get the most playing time at Liverpool?",
+      "route": [
+        "scout",
+        "fit"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 4,
+      "numbers_untraceable": 0,
+      "claims_published": 4,
+      "claims_cited": 4,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template",
+        "llm:qwen2.5:3b"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Scout": "We recommend Liverpool prioritize signing Jurriën Timber, as the playing-time model expects him to play 54% of Liverpool's minutes, which is higher than the expected minutes for other candidates like Ferdi Kadıoğlu and Reece James. Timber's expected minutes align with his 54% share, indicating he would get a significant amount of playing time.",
+        "Sporting Director": "We recommend Liverpool should prioritize players who fit the full-back need, as this indicates a significant squad requirement. Jurriën Timber, 25 years old, may not immediately secure playing time due to his age and current club."
+      }
+    },
+    {
+      "id": "q37",
+      "question": "How many goals has Erling Haaland scored this season?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Erling Haaland has scored 6 league goals this season for Manchester City. We recommend monitoring Haaland's performance as he is crucial to the team's attacking output."
+      }
+    },
+    {
+      "id": "q38",
+      "question": "Where are Arsenal in the table?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 5,
+      "numbers_untraceable": 0,
+      "claims_published": 5,
+      "claims_cited": 5,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Arsenal are 2nd in the Premier League table. They have 15 points. Teams under Mikel Arteta have taken 66% of the threat in their matches, more territorial than almost any Premier League manager's side. They create 1.84 expected goals per match, more dangerous than average. Teams under Arteta account for 64% of the chance creation in their matches, more creative than almost any Premier League manager's side. We recommend Arsenal should continue to build on their strong defensive performance and maintain their high level of creativity."
+      }
+    },
+    {
+      "id": "q39",
+      "question": "What are Manchester City's chances in their next game?",
+      "route": [
+        "match"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 8,
+      "numbers_untraceable": 0,
+      "claims_published": 8,
+      "claims_cited": 8,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Match Predictor": "Manchester City's next league match is Manchester City v Ipswich Town on 17 October 2026. The model gives Manchester City a 80% chance of winning against Ipswich Town. The model gives Manchester City v Ipswich Town a 14% chance of ending in a draw. The model gives Ipswich Town a 6% chance of winning against Manchester City. The model expects Manchester City to score 2.8 goals against Ipswich Town. The model expects Ipswich Town to score 0.8 goals against Manchester City. Manchester City's Elo rating is 1756. Ipswich Town's Elo rating is 1351."
+      }
+    },
+    {
+      "id": "q40",
+      "question": "Who is injured at Arsenal?",
+      "route": [
+        "news"
+      ],
+      "routed_ok": true,
+      "expect_hits": [],
+      "claim_hits": [
+        true
+      ],
+      "numbers_published": 2,
+      "numbers_untraceable": 0,
+      "claims_published": 9,
+      "claims_cited": 9,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "News & Injury": "Christos Tzolis is injured with a hamstring injury. William Saliba is injured with a back injury. Piero Hincapié is doubtful with an ankle injury and a 75% chance of playing. Martín Zubimendi Ibáñez is doubtful with an unspecified injury and a 75% chance of playing. Reiss Nelson is unavailable. According to ESPN, Merino: Arsenal 'ready' to win it all. According to Arsenal, How to watch Nottingham Forest v Arsenal live on TV | Arsenal FC Official Website | Arsenal.com. According to Arsenal, Renée: \"I love this team\" | Arsenal FC Official Website | Arsenal.com. According to Arsenal, Training Gallery: Building up for Birmingham | Arsenal FC Official Website | Arsenal.com."
+      }
+    },
+    {
+      "id": "q41",
+      "question": "What is Bukayo Saka worth?",
+      "route": [
+        "transfer"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 3,
+      "numbers_untraceable": 0,
+      "claims_published": 3,
+      "claims_cited": 3,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Transfer & Valuation": "The mobility model puts Bukayo Saka's sale likelihood in a transfer window at 46%. Transfermarkt values Bukayo Saka at €110m. The valuation model puts Bukayo Saka's fair fee at €81.8m, below his market value."
+      }
+    },
+    {
+      "id": "q42",
+      "question": "How many points do Chelsea have?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 1,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Chelsea have 10 league points. We recommend Chelsea should focus on improving their goal-scoring to increase their points tally."
+      }
+    },
+    {
+      "id": "q43",
+      "question": "Is Liverpool's next match a likely win, and who starts?",
+      "route": [
+        "match",
+        "lineup"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true,
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 25,
+      "numbers_untraceable": 0,
+      "claims_published": 24,
+      "claims_cited": 24,
+      "writers": [
+        "template",
+        "template",
+        "llm:qwen2.5:3b"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 5,
+      "withheld": 0,
+      "answer": {
+        "Match Predictor": "Liverpool's next league match is Brentford v Liverpool on 17 October 2026. The model gives Brentford a 35% chance of winning against Liverpool. The model gives Brentford v Liverpool a 26% chance of ending in a draw. The model gives Liverpool a 38% chance of winning against Brentford. The model expects Brentford to score 1.5 goals against Liverpool. The model expects Liverpool to score 1.6 goals against Brentford. Liverpool's Elo rating is 1601. Brentford's Elo rating is 1536.",
+        "Lineup Selector": "The lineup model sets Liverpool up in a 3-4-2-1 for the next match. The lineup model starts Alisson Becker at GK. The lineup model starts Ronald Araujo at CB. The lineup model starts Virgil van Dijk at CB. Virgil van Dijk is in the elevated risk tier of the injury-risk model. The lineup model starts Jeremy Jacquet at CB. The lineup model starts Jeremie Frimpong at RWB. The lineup model starts Milos Kerkez at LWB. The lineup model starts Alexis Mac Allister at CM. The lineup model starts Trey Nyoni at CM. The lineup model starts Dominik Szoboszlai at AM. The lineup model starts Florian Wirtz at AM. The lineup model starts Victor Munoz at CF.",
+        "Sporting Director": "Liverpool's next league match is Brentford v Liverpool on 17 October 2026. The model gives Brentford a 35% chance of winning, indicating a slight edge. The lineup model sets Liverpool up in a 3-4-2-1 for the next match, with Alisson Becker starting at GK. We recommend Liverpool should maintain their defensive structure to counter Brentford's potential attacking threat."
+      }
+    },
+    {
+      "id": "q44",
+      "question": "Who is injured and who should we sign to cover?",
+      "route": [
+        "news",
+        "scout"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 16,
+      "numbers_untraceable": 0,
+      "claims_published": 29,
+      "claims_cited": 29,
+      "writers": [
+        "template",
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 6,
+      "withheld": 0,
+      "answer": {
+        "News & Injury": "Giovanni Leoni is injured with a knee injury. Cody Gakpo is injured with an ankle injury. Alexander Isak is injured with a thigh injury. Conor Bradley is injured with a knee injury. Hugo Ekitiké is injured with an achilles injury. Vitezslav Jaros is injured with a knee injury. Ryan Gravenberch is suspended. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing. According to Liverpool FC, Bradley Barcola nominated for Champions League Player of the Week. According to Liverpool FC, On demand: Watch Andoni Iraola's pre-Brentford press conference. According to Liverpool FC, Brentford v Liverpool: Referee and match officials confirmed. According to Liverpool FC, Beata Olsson and Cornelia Kapocs visit LFC Foundation mental health session with local pupils.",
+        "Scout": "According to Liverpool FC, Liverpool agree deal to sign Djylian N'Guessan. According to Liverpool FC, Liverpool agree deal to sign goalkeeper Lucca Brughmans. The squad model ranks full-back as Liverpool's biggest need. Jurriën Timber (Arsenal FC) is 25 years old. Jurriën Timber has a market value of €70.0m. The valuation model puts Jurriën Timber's fair fee at €60.5m. The playing-time model expects Jurriën Timber to play 54% of Liverpool's minutes. The realism model gives a move for Jurriën Timber to Liverpool a 0.7% chance in a transfer window. Ferdi Kadıoğlu (Brighton & Hove Albion) is 27 years old. Ferdi Kadıoğlu has a market value of €40.0m. The valuation model puts Ferdi Kadıoğlu's fair fee at €40.1m. The playing-time model expects Ferdi Kadıoğlu to play 71% of Liverpool's minutes. The realism model gives a move for Ferdi Kadıoğlu to Liverpool a 0.7% chance in a transfer window. Reece James (Chelsea FC) is 27 years old.",
+        "Sporting Director": "Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing. The squad model ranks full-back as Liverpool's biggest need. Jurriën Timber (Arsenal FC) is 25 years old."
+      }
+    },
+    {
+      "id": "q45",
+      "question": "How are Liverpool doing this season?",
+      "route": [
+        "club"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 10,
+      "numbers_untraceable": 0,
+      "claims_published": 10,
+      "claims_cited": 10,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Liverpool have scored 7 league goals. Liverpool have conceded 7 league goals. Liverpool's most recent league results read LWDWD. Liverpool's Elo rating is 1601. Andoni Iraola has been Liverpool's head coach since 4 June 2026. Andoni Iraola's style profile covers 116 Premier League matches. Teams under Iraola have taken 51% of the threat in their matches, close to the league average. Teams under Iraola average 112 defensive actions per match, more active without the ball than almost any Premier League manager's side."
+      }
+    },
+    {
+      "id": "q46",
+      "question": "What is Virgil van Dijk's weekly wage?",
+      "route": [
+        "club",
+        "news"
+      ],
+      "expect_hits": [],
+      "claim_hits": [],
+      "refusal_ok": true,
+      "numbers_published": 3,
+      "numbers_untraceable": 0,
+      "claims_published": 3,
+      "claims_cited": 3,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 4,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend that Virgil van Dijk's weekly wage is not directly provided by the given facts and would require additional research.",
+        "News & Injury": "We recommend Liverpool FC does not disclose the weekly wage of Virgil van Dijk as it is not a publicly available fact.",
+        "Sporting Director": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing."
+      }
+    },
+    {
+      "id": "q47",
+      "question": "How many fans attended Liverpool's last home match?",
+      "route": [
+        "club",
+        "news"
+      ],
+      "expect_hits": [],
+      "claim_hits": [],
+      "refusal_ok": true,
+      "numbers_published": 0,
+      "numbers_untraceable": 0,
+      "claims_published": 1,
+      "claims_cited": 1,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "llm:qwen2.5:3b",
+        "llm:qwen2.5:3b"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 4,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend that we verify the attendance figures for Liverpool's last home match using an independent source, as no recommendation can be made based on the provided facts.",
+        "News & Injury": "We recommend checking the official Liverpool FC website or app for the exact number of fans who attended their last home match, as this information is not provided in the given facts.",
+        "Sporting Director": "We recommend Liverpool's last home match attendance is unknown as no specific attendance figure is provided. Focus on preparing for upcoming matches and maintaining team fitness."
+      }
+    },
+    {
+      "id": "q48",
+      "question": "How fast can Jeremie Frimpong run?",
+      "route": [
+        "club",
+        "news"
+      ],
+      "expect_hits": [],
+      "claim_hits": [],
+      "refusal_ok": true,
+      "numbers_published": 6,
+      "numbers_untraceable": 0,
+      "claims_published": 7,
+      "claims_cited": 7,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 4,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend that Jeremie Frimpong's speed and agility are key factors in his ability to contribute effectively in the midfield, given his 193 minutes played this season. His 0.01 expected goals suggest he is involved in creating scoring opportunities, indicating he likely maintains a high pace during matches. With Andoni Iraola's coaching style emphasizing defensive actions per match, 112, Frimpong should be capable of running at a fast pace to support his team's defense and attack.",
+        "News & Injury": "We recommend examining Jeremie Frimpong's availability (FPL) to understand his current status and potential impact in FPL leagues. No specific availability codes are provided for Jeremie Frimpong in the given facts.",
+        "Sporting Director": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing."
+      }
+    },
+    {
+      "id": "q49",
+      "question": "What is Liverpool's transfer budget for January?",
+      "route": [
+        "club",
+        "news"
+      ],
+      "expect_hits": [],
+      "claim_hits": [],
+      "refusal_ok": true,
+      "numbers_published": 14,
+      "numbers_untraceable": 0,
+      "claims_published": 25,
+      "claims_cited": 25,
+      "writers": [
+        "template",
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 1,
+      "llm_attempts": 6,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Liverpool have scored 7 league goals. Liverpool have conceded 7 league goals. Liverpool's most recent league results read LWDWD. Liverpool's Elo rating is 1601. Andoni Iraola has been Liverpool's head coach since 4 June 2026. Andoni Iraola's style profile covers 116 Premier League matches. Teams under Iraola have taken 51% of the threat in their matches, close to the league average. Teams under Iraola average 112 defensive actions per match, more active without the ball than almost any Premier League manager's side.",
+        "News & Injury": "Giovanni Leoni is injured with a knee injury. Cody Gakpo is injured with an ankle injury. Alexander Isak is injured with a thigh injury. Conor Bradley is injured with a knee injury. Hugo Ekitiké is injured with an achilles injury. Vitezslav Jaros is injured with a knee injury. Ryan Gravenberch is suspended. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing. According to Liverpool FC, Bradley Barcola nominated for Champions League Player of the Week. According to Liverpool FC, On demand: Watch Andoni Iraola's pre-Brentford press conference. According to Liverpool FC, Brentford v Liverpool: Referee and match officials confirmed. According to Liverpool FC, Beata Olsson and Cornelia Kapocs visit LFC Foundation mental health session with local pupils.",
+        "Sporting Director": "Liverpool are 9th in the Premier League table. Liverpool have 9 points. Dominik Szoboszlai is doubtful with a hamstring injury and a 75% chance of playing."
+      }
+    },
+    {
+      "id": "q50",
+      "question": "How many tackles has Ryan Gravenberch made in the Champions League?",
+      "route": [
+        "club"
+      ],
+      "expect_hits": [],
+      "claim_hits": [],
+      "refusal_ok": true,
+      "numbers_published": 0,
+      "numbers_untraceable": 0,
+      "claims_published": 0,
+      "claims_cited": 0,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Club & Tactics": "We recommend that we look into Ryan Gravenberch's recent match data to determine the number of tackles he has made in the Champions League. This information would provide insight into his defensive contributions in the competition."
+      }
+    },
+    {
+      "id": "q51",
+      "question": "How good can Rio Ngumoha become?",
+      "route": [
+        "potential"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true,
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 10,
+      "numbers_untraceable": 0,
+      "claims_published": 6,
+      "claims_cited": 6,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Player Development": "Rio Ngumoha is 18 years old. Rio Ngumoha (Liverpool FC) is valued at €50.0m today, the level of a first-choice player at a top Premier League club. The potential model projects Rio Ngumoha's value at €57.7m by 15 October 2028. The potential model projects Rio Ngumoha's value at €69.6m by 15 October 2030, the level of a first-choice player at a top Premier League club. In the potential model's optimistic case Rio Ngumoha would be worth €148m by 15 October 2030, among the most valuable players in the Premier League. In the potential model's cautious case Rio Ngumoha would be worth €16.9m by 15 October 2030."
+      }
+    },
+    {
+      "id": "q52",
+      "question": "What is Trey Nyoni's potential?",
+      "route": [
+        "potential"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 10,
+      "numbers_untraceable": 0,
+      "claims_published": 5,
+      "claims_cited": 5,
+      "writers": [
+        "llm:qwen2.5:3b",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 1,
+      "withheld": 0,
+      "answer": {
+        "Player Development": "Trey Nyoni is 19 years old and valued at €18.0m today, the level of a Premier League squad player. The potential model projects Trey Nyoni's value at €21.8m by 15 October 2028, the median of a short horizon. By the long horizon, the potential model projects Trey Nyoni's value at €27.6m by 15 October 2030, the level of a regular Premier League starter. In the potential model's optimistic case, Trey Nyoni would be worth €68.6m by 15 October 2030, the level of a first-choice player at a top Premier League club. In the cautious case, he would be worth €5.8m by 15 October 2030."
+      }
+    },
+    {
+      "id": "q53",
+      "question": "How good could Nico O'Reilly be in the future?",
+      "route": [
+        "potential"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 11,
+      "numbers_untraceable": 0,
+      "claims_published": 7,
+      "claims_cited": 7,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 1,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Player Development": "Nico O'Reilly is 22 years old. Nico O'Reilly (Manchester City) is valued at €70.0m today, the level of a first-choice player at a top Premier League club. The potential model projects Nico O'Reilly's value at €88.7m by 15 October 2028. The potential model projects Nico O'Reilly's value at €91.9m by 15 October 2030, among the most valuable players in the Premier League. In the potential model's optimistic case Nico O'Reilly would be worth €161m by 15 October 2030, among the most valuable players in the Premier League. In the potential model's cautious case Nico O'Reilly would be worth €43.9m by 15 October 2030. Last season Nico O'Reilly played as a creative full-back."
+      }
+    },
+    {
+      "id": "q54",
+      "question": "How would Jurriën Timber fit in at Liverpool?",
+      "route": [
+        "fit"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true,
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 5,
+      "numbers_untraceable": 0,
+      "claims_published": 5,
+      "claims_cited": 5,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Player Fit": "Jurriën Timber is a full-back. The playing-time model expects Jurriën Timber to play 54% of Liverpool's minutes. By market value Jurriën Timber would rank 1st among Liverpool's current options in his position. Jurriën Timber's position, full-back, is among Liverpool's biggest needs in the squad model. Jurriën Timber's style fit with the profile Andoni Iraola uses in his position is 45/100."
+      }
+    },
+    {
+      "id": "q55",
+      "question": "Would Bart Verbruggen suit Liverpool?",
+      "route": [
+        "fit"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 5,
+      "numbers_untraceable": 0,
+      "claims_published": 5,
+      "claims_cited": 5,
+      "writers": [
+        "template",
+        "template"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 2,
+      "withheld": 0,
+      "answer": {
+        "Player Fit": "Bart Verbruggen is a goalkeeper. The playing-time model expects Bart Verbruggen to play 60% of Liverpool's minutes. By market value Bart Verbruggen would rank 1st among Liverpool's current options in his position. Bart Verbruggen's position, goalkeeper, is not among Liverpool's biggest needs in the squad model. Bart Verbruggen's style fit with the profile Andoni Iraola uses in his position is 100/100."
+      }
+    },
+    {
+      "id": "q56",
+      "question": "What is Michael Kayode's potential and how would he fit in at Liverpool?",
+      "route": [
+        "potential",
+        "fit"
+      ],
+      "routed_ok": true,
+      "expect_hits": [
+        true,
+        true
+      ],
+      "claim_hits": [],
+      "numbers_published": 19,
+      "numbers_untraceable": 0,
+      "claims_published": 14,
+      "claims_cited": 14,
+      "writers": [
+        "template",
+        "llm:qwen2.5:3b",
+        "llm:qwen2.5:3b"
+      ],
+      "llm_draft_stray": 0,
+      "llm_attempts": 5,
+      "withheld": 0,
+      "answer": {
+        "Player Development": "Michael Kayode is 22 years old. Michael Kayode (Brentford FC) is valued at €40.0m today, the level of a regular Premier League starter. The potential model projects Michael Kayode's value at €47.6m by 15 October 2028. The potential model projects Michael Kayode's value at €37.5m by 15 October 2030, the level of a regular Premier League starter. In the potential model's optimistic case Michael Kayode would be worth €66.3m by 15 October 2030, the level of a first-choice player at a top Premier League club. In the potential model's cautious case Michael Kayode would be worth €17.7m by 15 October 2030. Last season Michael Kayode played as a creative full-back.",
+        "Player Fit": "Michael Kayode is a full-back, indicating he plays a specific position group. The playing-time model expects him to play 60% of Liverpool's minutes, suggesting he could be a valuable asset. By market value, Michael Kayode would rank 1st among Liverpool's current options in his position, highlighting his potential value. Michael Kayode's position, full-back, is among Liverpool's biggest needs in the squad model, indicating his potential fit. His style of play, as measured by 85/100, aligns well with the head coach's preferred profile, suggesting he could integrate smoothly into the team. We recommend assessing his potential fit and value further to make an informed decision.",
+        "Sporting Director": "Michael Kayode is a full-back with a current market value of €40.0m, the level of a regular Premier League starter. The playing-time model predicts he would play 60% of Liverpool's minutes. His potential fits well into Liverpool's squad, where he could contribute effectively. We recommend integrating him into the team to maximize his value."
+      }
+    }
+  ]
+}
