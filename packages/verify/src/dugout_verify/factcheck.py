@@ -14,6 +14,7 @@ and the sentence must use a word that fits the metric ("goals" for goals...). A 
 from __future__ import annotations
 
 import re
+import unicodedata
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
@@ -62,7 +63,7 @@ METRIC_WORDS = {
     "season_assists": r"assist|set up|created",
     "season_minutes": r"minute|played|playing time",
     "season_expected_goals": r"\bxg\b|expected goals|chances? worth",
-    "market_value": r"valu|worth|price",
+    "market_value": r"valu|worth|price|transfermarkt",
     "fair_fee": r"valu|worth|fee|price|cost",
     "league_position": r"place|position|table|sit|ranked|top|bottom|\bin\b",
     "league_points": r"point",
@@ -75,10 +76,10 @@ METRIC_WORDS = {
     "p_draw": r"chance|probab|likel|draw|odds",
     "p_away_win": r"chance|probab|likel|win|odds",
     "injury_risk_14d": r"risk|injur|chance|probab",
-    "injury_risk_tier": r"risk",
+    "injury_risk_tier": r"injury[- ]risk|risk",
     "sale_likelihood": r"sale|sold|sell|leav|transfer window",
     "contract_expires": r"contract",
-    "realism": r"realis|feasib|likel|chance",
+    "realism": r"realis|feasib|likel|chance|a move for|transfer window",
     "expected_minutes_share": r"minute|playing time",
     "exp_home_goals": r"goal|xg",
     "exp_away_goals": r"goal|xg",
@@ -154,6 +155,10 @@ def near_duplicate(a: str, b: str, threshold: float = 0.6) -> bool:
     return bool(sa and sb) and len(sa & sb) / min(len(sa), len(sb)) >= threshold
 
 
+def _fold(text: str) -> str:
+    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
+
+
 def _names(claim: str) -> list[str]:
     """Capitalised tokens (not sentence-initial stop words) used as a cheap entity filter."""
     stop = {
@@ -190,6 +195,11 @@ class FactChecker:
         self.aliases = aliases or {}
         self._emb: np.ndarray | None = None
 
+    def _folded(self, i: int) -> str:
+        if not hasattr(self, "_fold_cache"):
+            self._fold_cache = [_fold(p.text) for p in self.passages]
+        return self._fold_cache[i]
+
     @property
     def emb(self) -> np.ndarray:
         if self._emb is None:
@@ -197,15 +207,30 @@ class FactChecker:
         return self._emb
 
     # -- news claims -------------------------------------------------------------------------------------
+    @property
+    def entity_words(self) -> set[str]:
+        """Folded words of every known entity name: what makes a capitalised token a name, not just a word."""
+        if not hasattr(self, "_entity_words"):
+            self._entity_words = {
+                _fold(w) for names in self.aliases.values() for n in names for w in n.split() if len(w) >= 3
+            }
+        return self._entity_words
+
     def retrieve(self, claim: str, ctype: str) -> list[int]:
-        names = [n.lower() for n in _names(claim)]
+        """Passages that name *every* entity the claim names (so another player's news cannot support or
+        contradict it), fresh enough for the claim type, ranked by dense similarity."""
+        caps = [_fold(n) for n in _names(claim)]
+        must = [n for n in caps if n in self.entity_words] if self.aliases else []
+        names = must or caps
         max_age = MAX_AGE.get(ctype)
-        cand = [
-            i
-            for i, p in enumerate(self.passages)
-            if (not names or any(n in p.text.lower() for n in names))
-            and (max_age is None or p.published_at is None or self.now - p.published_at <= max_age)
-        ]
+        cand = []
+        for i, p in enumerate(self.passages):
+            if max_age is not None and p.published_at is not None and self.now - p.published_at > max_age:
+                continue
+            text = self._folded(i)
+            if names and not (all(n in text for n in must) if must else any(n in text for n in names)):
+                continue
+            cand.append(i)
         if not cand:
             return []
         q = self.embedder.embed([claim], query=True)[0]

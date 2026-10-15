@@ -427,7 +427,7 @@ def availability(tb: Toolbox, club: str, player_id: str | None = None) -> list[F
                         tb,
                         pname,
                         "chance of playing next round (FPL)",
-                        f"{pname} is a doubt ({_clean(what)}), with a {{p}}% chance of playing next round.",
+                        f"{pname} is doubtful with {_article(_clean(what).lower())} and a {{p}}% chance of playing.",
                         (ev.id, ev.value),
                         entity_id=pid,
                     )
@@ -442,7 +442,7 @@ def availability(tb: Toolbox, club: str, player_id: str | None = None) -> list[F
                 "availability (FPL)",
                 f"{pname} is {STATUS_WORDS.get(status, status)}"
                 + (
-                    f" with {_clean(what).lower()}"
+                    f" with {_article(_clean(what).lower())}"
                     if status in ("injured", "doubtful") and what != status
                     else ""
                 )
@@ -830,3 +830,7 @@ def player_fit(tb: Toolbox, pid: str, club: str) -> list[Fact]:
             )
         )
     return facts
+
+
+def _article(phrase: str) -> str:
+    return f"{'an' if phrase[:1] in 'aeiou' else 'a'} {phrase}"

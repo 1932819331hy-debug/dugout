@@ -24,7 +24,7 @@ INJURY = re.compile(
     re.I,
 )
 TRANSFER = re.compile(
-    r"\b(sign\w*|transfer\w*|bid|fee|loan\w*|deal|contract\w*|joined|joins|move to|moved to|linked|"
+    r"\b(sign\w*|transfers?|transferred|bid|fee|loan\w*|deal|contract\w*|joined|joins|move to|moved to|linked|"
     r"release clause|agreed|talks|offer|swoop|target\w*)\b",
     re.I,
 )

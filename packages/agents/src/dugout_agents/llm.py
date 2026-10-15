@@ -85,9 +85,12 @@ def from_settings() -> LLM | None:
 
     s = get_settings()
     llm = OpenAICompatLLM(s.llm_base_url, s.llm_model, s.secret("llm_api_key"))
-    try:
-        httpx.get(f"{llm.base_url}/models", timeout=5, headers=llm._http.headers).raise_for_status()
-    except httpx.HTTPError:
-        log.warning("LLM endpoint not reachable; using deterministic templates only")
-        return None
+    for attempt in range(2):  # a local server may still be loading its model: be patient once
+        try:
+            httpx.get(f"{llm.base_url}/models", timeout=30, headers=llm._http.headers).raise_for_status()
+            break
+        except httpx.HTTPError:
+            if attempt:
+                log.warning("LLM endpoint not reachable; using deterministic templates only")
+                return None
     return llm
