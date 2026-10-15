@@ -8,6 +8,7 @@ from dugout_pipeline.adapters.clubelo import ClubEloAdapter
 from dugout_pipeline.adapters.football_data_couk import FootballDataCoUkAdapter
 from dugout_pipeline.adapters.football_data_org import FootballDataOrgAdapter
 from dugout_pipeline.adapters.fpl import FPLAdapter
+from dugout_pipeline.adapters.fpl_history import FPLHistoryAdapter
 from dugout_pipeline.adapters.news import GuardianAdapter, RSSAdapter
 from dugout_pipeline.adapters.transfermarkt import (
     TransfermarktDatasetsLoader,
@@ -46,6 +47,7 @@ ADAPTERS: dict[str, type[SourceAdapter]] = {
         OpenMeteoAdapter,
         TransfermarktRefresher,
         TransfermarktDatasetsLoader,
+        FPLHistoryAdapter,
     ]
 }
 
@@ -65,7 +67,7 @@ JOBS: dict[str, list[str]] = {
         "open_meteo",
     ],
     "injuries": ["fpl", "api_football"],
-    "history": ["reep", "fpl", "football_data_couk", "transfermarkt_datasets"],
+    "history": ["reep", "fpl", "football_data_couk", "transfermarkt_datasets", "fpl_history"],
 }
 
 
