@@ -16,6 +16,8 @@ squad file `data/reference/transfermarkt_squads.csv` (values and contracts as of
 from __future__ import annotations
 
 import logging
+import re
+import unicodedata
 from datetime import datetime
 
 import duckdb
@@ -62,6 +64,67 @@ def _season(d: pd.Series) -> pd.Series:
     return pd.Series(np.where(d.dt.month >= 7, d.dt.year, d.dt.year - 1), index=d.index)
 
 
+# Official club announcements of agreed signings, e.g. "Liverpool agree deal to sign goalkeeper Lucca Brughmans".
+_SIGNING = re.compile(
+    r"\b(agree|agreed|complete|completes|seal|seals)\b.*\b(deal|sign|signing|transfer)\b", re.I
+)
+_OTHER_TEAMS = re.compile(r"\bwomen\b|lfc-women|\bu-?(?:18|19|21|23)s?\b|academy|under-(?:18|21)", re.I)
+POSITION_WORDS = {
+    "goalkeeper": r"goalkeeper|keeper|stopper",
+    "centre-back": r"centre-back|center-back|central defender|centre-half",
+    "full-back": r"full-back|right-back|left-back|wing-back",
+    "defensive midfield": r"defensive midfielder|holding midfielder",
+    "central midfield": r"midfielder|playmaker",
+    "winger": r"winger|wide forward",
+    "centre-forward": r"striker|centre-forward|center-forward|forward",
+}
+
+
+def _fold(text: str) -> str:
+    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
+
+
+def agreed_signings(
+    con: duckdb.DuckDBPyConnection, now: datetime, squad_names: set[str] | None = None, days: int = 120
+) -> dict[str, list[tuple]]:
+    """club -> [(position group, title, url)]: incoming signings the club itself has announced (tier 1 club_news)
+    who are not in the current squad yet (e.g. loaned back, joining next summer).
+
+    Only titles that name the club as the buyer count ("Liverpool agree deal to sign ..."); departures ("X completes
+    transfer to Y"), women's team and academy news, and players already in the squad list are skipped."""
+    names = dict(con.execute("SELECT club_id, name FROM clubs").fetchall())
+    surnames = {_fold(n.split()[-1]) for n in (squad_names or set()) if isinstance(n, str) and n.split()}
+    rows = con.execute(
+        """SELECT club_ids, title, url, body_text FROM news_items WHERE source = 'club_news' AND source_tier = 1
+           AND published_at >= ?""",
+        [now - pd.Timedelta(days=days)],
+    ).fetchall()
+    out: dict[str, list[tuple]] = {}
+    for clubs, title, url, body in rows:
+        if not title or not clubs or not _SIGNING.search(title):
+            continue
+        club = clubs[0]  # the site's own club comes first
+        short = (names.get(club) or club).split()[0]
+        buyer = re.search(
+            rf"\b{re.escape(short)}\b.*\b(agree|sign|complete)|\bjoins? {re.escape(short)}\b"
+            rf"|completes {re.escape(short)}\b",
+            title,
+            re.I,
+        )
+        outgoing = re.search(r"\b(transfer|move|loan) to\b|\bleaves?\b|\bdeparts?\b", title, re.I)
+        if not buyer or outgoing:
+            continue
+        head = f"{title} {(body or '')[:300]}"
+        if _OTHER_TEAMS.search(f"{url} {head}"):
+            continue  # women's team, academy and youth signings do not change the first-team squad
+        if any(re.search(rf"\b{re.escape(sn)}\b", _fold(title)) for sn in surnames):
+            continue  # already in the squad list: counted as a current player
+        group = next((g for g, w in POSITION_WORDS.items() if re.search(w, head, re.I)), None)
+        if group:
+            out.setdefault(club, []).append((group, title, url))
+    return out
+
+
 class Market:
     def __init__(self, now: datetime):
         self.now = pd.Timestamp(now.date())
@@ -70,6 +133,7 @@ class Market:
         self.comps = comps
         realism.TOP_TIER.update(comps.loc[comps.sub_type == "first_tier", "competition_id"])
         self.squads = pd.read_csv(SQUADS, dtype={"tm_player_id": str, "tm_club_id": str})
+        self.incoming: dict[str, list[tuple]] = {}  # filled from official announcements by market()
         self.players = self.t["players"].copy()
         self.players["player_id"] = self.players.player_id.astype(str)
         self.players = self.players.set_index("player_id")
@@ -105,20 +169,32 @@ class Market:
         self.t["clubs"]["club_id"] = self.t["clubs"].club_id.astype(str)
 
     # -- fitted models ---------------------------------------------------------------------------------------
+    def frame(self, name: str, build, **params) -> pd.DataFrame:
+        """Training frames depend only on the dataset files: cached on disk between runs."""
+        from dugout_models.cache import cached_frame
+
+        return cached_frame(name, params, [valuation.TM_DIR, SQUADS], build)
+
     def fit(self) -> None:
-        df = valuation.build(self.t)
+        df = self.frame("valuation", lambda: valuation.build(self.t))
         self.val = valuation.ValuationModel().fit(df[df.date <= self.now])
-        snap = realism.snapshots(self.t, range(2015, 2026)).dropna(subset=realism.MOBILITY)
+        snap = self.frame(
+            "mobility", lambda: realism.snapshots(self.t, range(2015, 2026)), years=[2015, 2025]
+        )
+        snap = snap.dropna(subset=realism.MOBILITY)
         self.mob = make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000)).fit(
             snap[realism.MOBILITY], snap.moved
         )
         self.mob_base = float(snap.moved.mean())
-        pairs = realism.destination_pairs(self.t, range(2015, 2026)).dropna(subset=realism.DESTINATION)
+        pairs = self.frame(
+            "destination", lambda: realism.destination_pairs(self.t, range(2015, 2026)), years=[2015, 2025]
+        )
+        pairs = pairs.dropna(subset=realism.DESTINATION)
         self.dest = make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000)).fit(
             pairs[realism.DESTINATION], pairs.label
         )
         self.dest_base = float(pairs.label.mean())
-        self.opp = OpportunityModel().fit(opportunity_frame())
+        self.opp = OpportunityModel().fit(self.frame("opportunity", opportunity_frame))
         self.now_snap = realism.snapshots(self.t, [self.now.year], as_of=self.now).set_index("player_id")
         self.league_value = valuation.league_strength(self.t).set_index(["comp", "year"]).league_value
         vals = self.t["player_valuations"]
@@ -238,21 +314,32 @@ class Market:
             "contract_months": None if months is None else float(months),
         }
 
+    def _last_season(self):
+        """(minutes by player, main club by player, games by club) in the last completed season; computed once."""
+        if not hasattr(self, "_season_cache"):
+            last = self.now.year - 1 if self.now.month >= 7 else self.now.year - 2
+            season = self.ap[self.ap.season == last]
+            self._season_cache = (
+                season.groupby("player_id").minutes_played.sum(),
+                season.groupby("player_id").player_club_id.agg(lambda s: s.mode().iloc[0]),
+                season.groupby("player_club_id").date.nunique(),
+            )
+        return self._season_cache
+
     def outlook(self, pid: str, buyer: str, fee: float, incumbents: pd.DataFrame) -> float | None:
         """Expected minutes share at `buyer` (opportunity model) given the current squad at his position."""
-        last = self.now.year - 1 if self.now.month >= 7 else self.now.year - 2  # last completed season
-        own = self.ap[(self.ap.player_id == pid) & (self.ap.season == last)]
-        if own.empty:
+        mins, main, games_by_club = self._last_season()
+        if pid not in mins.index:
             return None
-        club = own.player_club_id.mode().iloc[0]
-        games = self.ap[(self.ap.player_club_id == club) & (self.ap.season == last)].date.nunique()
+        club = main[pid]
+        games = games_by_club.get(club, 0)
         mv = self.latest_value.get(pid, np.nan)
         dob = pd.to_datetime(self.players.date_of_birth.get(pid))
         inc_vals = incumbents.market_value_eur.astype(float)
         record = self.capacity.get(buyer, np.nan)
         ls_year = max(y for c, y in self.league_value.index if c == PL)
         row = {
-            "prev_share": own.minutes_played.sum() / (90 * max(games, 1)),
+            "prev_share": mins[pid] / (90 * max(games, 1)),
             "log_mv": np.log1p(mv),
             "age": (self.now - dob).days / 365.25 if pd.notna(dob) else np.nan,
             "league_gap": np.log1p(self.league_value.get((PL, ls_year), np.nan))
@@ -285,7 +372,8 @@ class Market:
         """Score each position group: missing depth (vs a two-deep squad), the best option's value against the
         median best option at the same position among the `peers` clubs with the most similar squad strength
         (like with like: goalkeepers vs goalkeepers, a title contender vs title contenders), and ageing.
-        Higher = bigger need. A transparent heuristic, not a fitted model."""
+        Signings the club has announced but who have not joined yet (loaned back, joining next summer) come from
+        its official news (`agreed_signings`). Higher = bigger need. A transparent heuristic, not a fitted model."""
         strength = {
             c: self.squad(c).market_value_eur.nlargest(11).median() for c in self.squads.club_id.unique()
         }
@@ -303,10 +391,13 @@ class Market:
             b = best[g] if best[g] == best[g] else 0.0
             quality_gap = max(0.0, 1 - b / ref[g]) if ref[g] == ref[g] and ref[g] > 0 else 0.0
             ageing = float((sq[(sq.group == g)].age >= 31).mean()) if (sq.group == g).any() else 0.0
+            incoming = sum(1 for grp, _, _ in self.incoming.get(club_slug, []) if grp == g)
             rows.append(
                 {
                     "group": g,
-                    "score": depth_gap + quality_gap + 0.5 * ageing,
+                    # a signing the club has already announced for this position halves its need
+                    "score": (depth_gap + quality_gap + 0.5 * ageing) * 0.5**incoming,
+                    "incoming": incoming,
                     "depth": len(at),
                     "depth_gap": depth_gap,
                     "quality_gap": quality_gap,
@@ -391,6 +482,7 @@ def _tm_to_reep(con: duckdb.DuckDBPyConnection) -> dict[str, str]:
 
 def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | None = None) -> list[dict]:
     mk = Market(now)
+    mk.incoming = agreed_signings(con, now, set(mk.squads.name))
     mk.fit()
     reep = _tm_to_reep(con)
     showcase = clubs or sorted(mk.squads.club_id.unique())
@@ -421,6 +513,10 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
             rank = i + 1
             rows.append(_row("scout", "club", slug, "need", n.group, now, f"need:{rank}"))
             rows.append(_row("scout", "club", slug, "need_depth", int(n.depth), now, f"need:{rank}"))
+        for k, (group, title, url) in enumerate(mk.incoming.get(slug, []), 1):
+            rows.append(_row("scout", "club", slug, "agreed_signing", title, now, f"incoming:{k}"))
+            rows.append(_row("scout", "club", slug, "agreed_signing_position", group, now, f"incoming:{k}"))
+            rows.append(_row("scout", "club", slug, "agreed_signing_url", url, now, f"incoming:{k}"))
             short = mk.shortlist(slug, n.group, str(tm_club))
             for k, c in short.iterrows():
                 pid = reep.get(c.tm_player_id, f"transfermarkt:{c.tm_player_id}")

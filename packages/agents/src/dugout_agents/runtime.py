@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from typing import Any
 
 import duckdb
@@ -61,16 +61,18 @@ def passages(con: duckdb.DuckDBPyConnection, tb: Toolbox, now: datetime) -> list
             )
         )
     # news: headline + summary, and extracted article text in overlapping chunks
-    for outlet, tier, url, title, summary, body, published in con.execute(
-        """SELECT outlet, source_tier, url, title, summary, body_text, published_at FROM news_items
+    # (a club's own announcement on its official site is an official source; reproduced press stories are not)
+    for source, outlet, tier, url, title, summary, body, published in con.execute(
+        """SELECT source, outlet, source_tier, url, title, summary, body_text, published_at FROM news_items
            WHERE published_at >= ?""",
-        [now - __import__("datetime").timedelta(days=NEWS_DAYS)],
+        [now - timedelta(days=NEWS_DAYS)],
     ).fetchall():
+        official = source == "club_news" and tier == 1
         head = ". ".join(x for x in (title, summary) if x)
         if head:
-            out.append(Passage(head, outlet or "unknown", tier, url, published))
+            out.append(Passage(head, outlet or "unknown", tier, url, published, official=official))
         for part in chunk(body or ""):
-            out.append(Passage(part, outlet or "unknown", tier, url, published))
+            out.append(Passage(part, outlet or "unknown", tier, url, published, official=official))
     return out
 
 

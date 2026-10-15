@@ -599,6 +599,25 @@ def squad_market(tb: Toolbox, club: str, player_id: str | None = None, n: int = 
 def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
     name = tb.name(club)
     facts: list[Fact] = []
+    # signings the club has already announced (official site) shape the needs; say so first
+    for (title,) in tb.con.execute(
+        """SELECT value_text FROM model_outputs WHERE model = 'scout' AND entity_type = 'club' AND entity_id = ?
+           AND metric = 'agreed_signing' ORDER BY context""",
+        [club],
+    ).fetchall():
+        outlet = tb.con.execute(
+            "SELECT outlet FROM news_items WHERE source = 'club_news' AND source_tier = 1 AND title = ? LIMIT 1",
+            [title],
+        ).fetchone()
+        if outlet and title and not any(ch.isdigit() for ch in title):
+            facts += _keep(
+                _fact(
+                    tb,
+                    outlet[0],
+                    "signing already announced by the club",
+                    f"According to {outlet[0]}, {title.rstrip('.')}.",
+                )
+            )
     for rank in (1, 2):
         need = tb.model("scout", "club", club, "need", f"need:{rank}")
         if need is None:

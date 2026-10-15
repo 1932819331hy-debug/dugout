@@ -82,8 +82,8 @@ METRIC_WORDS = {
     "expected_minutes_share": r"minute|playing time",
     "exp_home_goals": r"goal|xg",
     "exp_away_goals": r"goal|xg",
-    "elo": r"elo|rating",
-    "age": r"age|year|old",
+    "elo": r"\belo\b|rating",
+    "age": r"\bage|year|old",
 }
 
 

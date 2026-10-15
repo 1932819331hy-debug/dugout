@@ -37,7 +37,7 @@ NUMBER_WORDS = (  # noqa: SIM905 - one readable string
 # "one" is left out on purpose ("one of the best", "no one"); ordinals too ("second half", "first team").
 STRAY = re.compile(r"\d|\b(" + "|".join(NUMBER_WORDS) + r")\b|[½¼¾⅓⅔]", re.IGNORECASE)
 # Placeholder-looking leftovers once valid placeholders are removed (typos, invented ids, other tags).
-MALFORMED = re.compile(r"\{\{[^}]*\}\}|\{\{|\}\}|stat:ev_\w*")
+MALFORMED = re.compile(r"\{\{[^}]*\}\}|\{\{|\}\}|\bstat:ev_\w*")
 
 REL_TOL, ABS_TOL = 0.005, 1e-6
 

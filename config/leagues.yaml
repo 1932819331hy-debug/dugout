@@ -20,6 +20,9 @@ premier_league:
     - {outlet: The Guardian, url: "https://www.theguardian.com/football/premierleague/rss", tier: 2}
     - {outlet: Sky Sports, url: "https://www.skysports.com/rss/11095", tier: 2}
     - {outlet: ESPN, url: "https://www.espn.co.uk/espn/rss/football/news", tier: 2}
+  club_sites:
+    # Official club sites via their sitemaps (no RSS). robots.txt checked 2026-10-16: liverpoolfc.com allows all.
+    - {club: liverpool, outlet: Liverpool FC, sitemap: "https://www.liverpoolfc.com/sitemaps/sitemap/0.xml", path_prefix: /news/}
 
 # Names providers use that a generic normaliser cannot reconcile. Keys are normalised names.
 club_aliases:
