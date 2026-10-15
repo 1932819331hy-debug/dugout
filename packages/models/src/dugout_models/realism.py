@@ -56,7 +56,9 @@ def _sigmoid(x):
 TOP_TIER: set[str] = set()  # filled from competitions.parquet in backtest()
 
 
-def snapshots(t: dict[str, pd.DataFrame], years: range) -> pd.DataFrame:
+def snapshots(
+    t: dict[str, pd.DataFrame], years: range | list[int], as_of: pd.Timestamp | None = None
+) -> pd.DataFrame:
     """Player state on 1 June of each year, and whether he was *sold for a fee* by 1 September.
 
     Zero-fee rows in the dataset mix loans, loan returns, free and youth moves with no flag to tell them apart,
@@ -73,7 +75,8 @@ def snapshots(t: dict[str, pd.DataFrame], years: range) -> pd.DataFrame:
     dob = t["players"].set_index("player_id").date_of_birth
     out = []
     for y in years:
-        d0, d1 = pd.Timestamp(f"{y}-06-01"), pd.Timestamp(f"{y}-09-01")
+        d0 = as_of if as_of is not None else pd.Timestamp(f"{y}-06-01")  # as_of: score "now" (live use)
+        d1 = pd.Timestamp(f"{y}-09-01")
         v = vals[vals.date < d0].sort_values("date").groupby("player_id").tail(1)
         v = v[v.date > d0 - pd.Timedelta(days=200)]  # still an active, valued player
         prev = vals[vals.date < d0 - pd.Timedelta(days=365)].sort_values("date").groupby("player_id").tail(1)
