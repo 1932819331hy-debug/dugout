@@ -1,0 +1,48 @@
+{"premise": "Alexander Isak has been ruled out for several weeks after scans revealed a thigh injury, the club confirmed on Friday.", "hypothesis": "Isak has a thigh injury.", "label": "entailment"}
+{"premise": "Alexander Isak has been ruled out for several weeks after scans revealed a thigh injury, the club confirmed on Friday.", "hypothesis": "Isak is available for the weekend.", "label": "contradiction"}
+{"premise": "Alexander Isak has been ruled out for several weeks after scans revealed a thigh injury, the club confirmed on Friday.", "hypothesis": "Isak has a hamstring injury.", "label": "contradiction"}
+{"premise": "Alexander Isak has been ruled out for several weeks after scans revealed a thigh injury, the club confirmed on Friday.", "hypothesis": "Isak will captain Sweden next month.", "label": "neutral"}
+{"premise": "Dominik Szoboszlai trained on Thursday and the manager said the midfielder is in contention despite a minor hamstring issue.", "hypothesis": "Szoboszlai is doubtful with a hamstring problem.", "label": "entailment"}
+{"premise": "Dominik Szoboszlai trained on Thursday and the manager said the midfielder is in contention despite a minor hamstring issue.", "hypothesis": "Szoboszlai has been ruled out for the season.", "label": "contradiction"}
+{"premise": "Ryan Gravenberch serves the final game of his suspension on Saturday and will be available again from next week.", "hypothesis": "Gravenberch is suspended for Saturday's match.", "label": "entailment"}
+{"premise": "Ryan Gravenberch serves the final game of his suspension on Saturday and will be available again from next week.", "hypothesis": "Gravenberch is injured.", "label": "neutral"}
+{"premise": "Hugo Ekitike will miss the rest of the year after rupturing his Achilles tendon in training.", "hypothesis": "Ekitike has an Achilles injury.", "label": "entailment"}
+{"premise": "Hugo Ekitike will miss the rest of the year after rupturing his Achilles tendon in training.", "hypothesis": "Ekitike is expected back next week.", "label": "contradiction"}
+{"premise": "Conor Bradley has returned to full training after his knee problem and could feature against Chelsea.", "hypothesis": "Conor Bradley is out with a knee injury.", "label": "contradiction"}
+{"premise": "Conor Bradley has returned to full training after his knee problem and could feature against Chelsea.", "hypothesis": "Bradley previously had a knee problem.", "label": "entailment"}
+{"premise": "Liverpool have agreed a fee with Napoli for the midfielder, with personal terms expected to be finalised this week.", "hypothesis": "Liverpool have agreed a fee with Napoli.", "label": "entailment"}
+{"premise": "Liverpool have agreed a fee with Napoli for the midfielder, with personal terms expected to be finalised this week.", "hypothesis": "The transfer has been completed.", "label": "neutral"}
+{"premise": "Liverpool have agreed a fee with Napoli for the midfielder, with personal terms expected to be finalised this week.", "hypothesis": "Napoli rejected Liverpool's bid.", "label": "contradiction"}
+{"premise": "Arsenal are monitoring the striker, but no formal approach has been made, according to sources close to the player.", "hypothesis": "Arsenal have made a bid for the striker.", "label": "contradiction"}
+{"premise": "Arsenal are monitoring the striker, but no formal approach has been made, according to sources close to the player.", "hypothesis": "Arsenal are interested in the striker.", "label": "entailment"}
+{"premise": "The defender has signed a new four-year contract, ending speculation about a move to Real Madrid.", "hypothesis": "The defender has joined Real Madrid.", "label": "contradiction"}
+{"premise": "The defender has signed a new four-year contract, ending speculation about a move to Real Madrid.", "hypothesis": "The defender extended his contract.", "label": "entailment"}
+{"premise": "Bradley Barcola scored a hat-trick, his first goals for Liverpool, as they won 6-3 away at LASK in the Champions League.", "hypothesis": "Liverpool beat LASK.", "label": "entailment"}
+{"premise": "Bradley Barcola scored a hat-trick, his first goals for Liverpool, as they won 6-3 away at LASK in the Champions League.", "hypothesis": "Barcola scored his first goals for Liverpool.", "label": "entailment"}
+{"premise": "Bradley Barcola scored a hat-trick, his first goals for Liverpool, as they won 6-3 away at LASK in the Champions League.", "hypothesis": "LASK beat Liverpool.", "label": "contradiction"}
+{"premise": "Bradley Barcola scored a hat-trick, his first goals for Liverpool, as they won 6-3 away at LASK in the Champions League.", "hypothesis": "Barcola joined Liverpool from Paris Saint-Germain.", "label": "neutral"}
+{"premise": "Manchester City were beaten 4-2 by PSG despite a second-half fightback inspired by Erling Haaland.", "hypothesis": "Manchester City lost to PSG.", "label": "entailment"}
+{"premise": "Manchester City were beaten 4-2 by PSG despite a second-half fightback inspired by Erling Haaland.", "hypothesis": "Manchester City won against PSG.", "label": "contradiction"}
+{"premise": "Manchester City were beaten 4-2 by PSG despite a second-half fightback inspired by Erling Haaland.", "hypothesis": "Haaland was injured during the match.", "label": "neutral"}
+{"premise": "Andoni Iraola, appointed in June, has switched Liverpool to an aggressive high press built on quick vertical attacks.", "hypothesis": "Iraola is Liverpool's manager.", "label": "entailment"}
+{"premise": "Andoni Iraola, appointed in June, has switched Liverpool to an aggressive high press built on quick vertical attacks.", "hypothesis": "Liverpool play a patient, low-block style under Iraola.", "label": "contradiction"}
+{"premise": "Andoni Iraola, appointed in June, has switched Liverpool to an aggressive high press built on quick vertical attacks.", "hypothesis": "Liverpool press high under Iraola.", "label": "entailment"}
+{"premise": "The goalkeeper is a doubt for Sunday with a knee injury and will be assessed on Saturday.", "hypothesis": "The goalkeeper has definitely been ruled out of Sunday's game.", "label": "neutral"}
+{"premise": "The goalkeeper is a doubt for Sunday with a knee injury and will be assessed on Saturday.", "hypothesis": "The goalkeeper has a knee injury.", "label": "entailment"}
+{"premise": "Chelsea confirmed the winger has joined Celta Vigo on a permanent deal.", "hypothesis": "The winger has left Chelsea.", "label": "entailment"}
+{"premise": "Chelsea confirmed the winger has joined Celta Vigo on a permanent deal.", "hypothesis": "The winger has joined Celta Vigo on loan.", "label": "contradiction"}
+{"premise": "Tottenham have opened talks with the Brentford manager after sacking their head coach on Monday.", "hypothesis": "Tottenham sacked their head coach.", "label": "entailment"}
+{"premise": "Tottenham have opened talks with the Brentford manager after sacking their head coach on Monday.", "hypothesis": "The Brentford manager has been appointed by Tottenham.", "label": "neutral"}
+{"premise": "Fantasy Premier League status for Vitezslav Jaros: injured. Knee injury - unknown return date.", "hypothesis": "Jaros has a knee injury.", "label": "entailment"}
+{"premise": "Fantasy Premier League status for Vitezslav Jaros: injured. Knee injury - unknown return date.", "hypothesis": "Jaros is fit to play.", "label": "contradiction"}
+{"premise": "Fantasy Premier League status for Dominik Szoboszlai: doubtful. Hamstring injury - 75% chance of playing.", "hypothesis": "Szoboszlai is a doubt with a hamstring injury.", "label": "entailment"}
+{"premise": "Fantasy Premier League status for Calvin Ramsay: unavailable. Has joined St Mirren on loan for the rest of the season.", "hypothesis": "Ramsay is on loan at St Mirren.", "label": "entailment"}
+{"premise": "Fantasy Premier League status for Calvin Ramsay: unavailable. Has joined St Mirren on loan for the rest of the season.", "hypothesis": "Ramsay has signed permanently for St Mirren.", "label": "contradiction"}
+{"premise": "The striker missed training on Wednesday because of illness but is expected to be fit for the weekend.", "hypothesis": "The striker has a long-term injury.", "label": "contradiction"}
+{"premise": "The striker missed training on Wednesday because of illness but is expected to be fit for the weekend.", "hypothesis": "The striker was ill.", "label": "entailment"}
+{"premise": "Aston Villa thrashed Fenerbahce 6-0 in the Europa League on Thursday night.", "hypothesis": "Aston Villa won comfortably.", "label": "entailment"}
+{"premise": "Aston Villa thrashed Fenerbahce 6-0 in the Europa League on Thursday night.", "hypothesis": "Aston Villa drew with Fenerbahce.", "label": "contradiction"}
+{"premise": "Aston Villa thrashed Fenerbahce 6-0 in the Europa League on Thursday night.", "hypothesis": "Aston Villa are top of the Premier League.", "label": "neutral"}
+{"premise": "Newcastle are understood to have had a bid rejected for the Brighton midfielder.", "hypothesis": "Newcastle have signed the Brighton midfielder.", "label": "contradiction"}
+{"premise": "Newcastle are understood to have had a bid rejected for the Brighton midfielder.", "hypothesis": "Newcastle made a bid for the Brighton midfielder.", "label": "entailment"}
+{"premise": "The midfielder's contract runs until 2028 and the club has no intention of selling him this winter.", "hypothesis": "The midfielder's contract expires next summer.", "label": "contradiction"}
