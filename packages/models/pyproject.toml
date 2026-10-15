@@ -19,6 +19,8 @@ dependencies = [
   "numba>=0.61",
   "umap-learn>=0.5.7",
   "ortools>=9.11",
+  # read third-party weights in the safe tensor format only (no pickle, no remote code)
+  "safetensors>=0.4",
 ]
 
 [project.scripts]
