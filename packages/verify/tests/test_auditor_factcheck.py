@@ -205,3 +205,20 @@ def test_binding_requires_number_next_to_its_own_name(ledger, con):
     assert not swapped.ok and "next to another name" in swapped.claims[0].reason
     far = fc.check(f"Salah, who has {{{{stat:{s}}}}}, is quick and scores goals.", ledger)
     assert not far.ok and "near its number" in far.claims[0].reason
+
+
+def test_stat_sentences_about_models_are_not_news_claims():
+    from dugout_verify.claims import secondary_type
+    from dugout_verify.factcheck import METRIC_WORDS
+
+    assert classify("Transfermarkt is a website.") == "fact"
+    s = "Transfermarkt values Bukayo Saka at {{stat:ev_0123456789abcdef|eur_m}}."
+    assert secondary_type(s, [METRIC_WORDS["market_value"]]) is None
+    s = "Ezri Konsa is in the {{stat:ev_0123456789abcdef}} risk tier of the injury-risk model."
+    assert secondary_type(s, [METRIC_WORDS["injury_risk_tier"]]) is None
+    s = "The realism model gives a move for Adam Wharton to Arsenal a {{stat:ev_0123456789abcdef|pct1}} chance in a transfer window."
+    assert secondary_type(s, [METRIC_WORDS["realism"]]) is None
+    assert (
+        secondary_type("Isak, out with a thigh injury, has {{stat:ev_0123456789abcdef}} goals.", [])
+        == "injury"
+    )

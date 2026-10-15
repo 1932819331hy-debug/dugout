@@ -55,7 +55,8 @@ def cmd_eval(args) -> int:
     from dugout_agents.evaluate import run_eval
 
     ctx = _ctx(args)
-    report = run_eval(ctx, out_dir=REPO_ROOT / "docs" / "backtests", limit=args.limit)
+    name = args.name or ("agents_eval_templates" if args.no_llm else "agents_eval_llm")
+    report = run_eval(ctx, out_dir=REPO_ROOT / "docs" / "backtests", limit=args.limit, name=name)
     print({k: v for k, v in report["summary"].items()})
     return 0 if report["summary"]["untraceable_number_rate"] == 0 else 1
 
@@ -75,6 +76,7 @@ def main(argv: list[str] | None = None) -> int:
     s.set_defaults(fn=cmd_dossier)
     s = sub.add_parser("eval")
     s.add_argument("--limit", type=int)
+    s.add_argument("--name", help="report name in docs/backtests (default by writer mode)")
     s.set_defaults(fn=cmd_eval)
     args = p.parse_args(argv)
     return args.fn(args)
