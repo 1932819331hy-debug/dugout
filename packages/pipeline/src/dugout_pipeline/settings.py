@@ -29,6 +29,11 @@ class Settings(BaseSettings):
     openrouter_api_key: SecretStr | None = None
     hf_token: SecretStr | None = None
 
+    # Agents' LLM: any OpenAI-compatible endpoint serving an open-weight model (Ollama locally by default).
+    llm_base_url: str = "http://localhost:11434/v1"
+    llm_model: str = "qwen2.5:3b"
+    llm_api_key: SecretStr | None = None  # only for hosted endpoints (e.g. OpenRouter); Ollama needs none
+
     searxng_url: str | None = None
     pff_data_dir: Path | None = None
 
