@@ -379,9 +379,22 @@ def parse_sitemap(content: bytes) -> tuple[list[str], list[tuple[str, datetime |
     return [c for c in children if c], entries
 
 
-def sitemap_entries(client, url: str, max_children: int = 10) -> list[tuple[str, datetime | None]]:
-    """All (url, lastmod) entries of a sitemap, following one level of sitemap index (news sitemaps first)."""
-    children, entries = parse_sitemap(client.get(url).content)
-    for child in sorted(children, key=lambda c: "news" not in c)[:max_children]:
-        entries += parse_sitemap(client.get(child).content)[1]
+def sitemap_entries(client, url: str, max_fetches: int = 8) -> list[tuple[str, datetime | None]]:
+    """All (url, lastmod) entries reachable from a sitemap, following nested sitemap indexes.
+
+    News/article sitemaps are always visited before others, wherever they sit; otherwise in discovery order
+    (sites list their newest page first). At most `max_fetches` documents are fetched per call."""
+    queue: list[tuple[bool, int, str]] = [(False, 0, url)]
+    entries: list[tuple[str, datetime | None]] = []
+    order = 0
+    for _ in range(max_fetches):
+        if not queue:
+            break
+        queue.sort()
+        _, _, next_url = queue.pop(0)
+        children, found = parse_sitemap(client.get(next_url).content)
+        entries += found
+        for c in children:
+            order += 1
+            queue.append((not re.search(r"news|article", c, re.I), order, c))
     return entries

@@ -1,0 +1,7 @@
+# Written by `dugout setup-club`: official club news sources (robots.txt checked on the date shown).
+- club: arsenal
+  outlet: Arsenal
+  website: https://www.arsenal.com/
+  sitemap: https://www.arsenal.com/sitemap.xml
+  path_prefix: /news/
+  checked: '2026-10-15'

@@ -513,10 +513,6 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
             rank = i + 1
             rows.append(_row("scout", "club", slug, "need", n.group, now, f"need:{rank}"))
             rows.append(_row("scout", "club", slug, "need_depth", int(n.depth), now, f"need:{rank}"))
-        for k, (group, title, url) in enumerate(mk.incoming.get(slug, []), 1):
-            rows.append(_row("scout", "club", slug, "agreed_signing", title, now, f"incoming:{k}"))
-            rows.append(_row("scout", "club", slug, "agreed_signing_position", group, now, f"incoming:{k}"))
-            rows.append(_row("scout", "club", slug, "agreed_signing_url", url, now, f"incoming:{k}"))
             short = mk.shortlist(slug, n.group, str(tm_club))
             for k, c in short.iterrows():
                 pid = reep.get(c.tm_player_id, f"transfermarkt:{c.tm_player_id}")
@@ -540,6 +536,10 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
                     rows.append(
                         _row("scout", "player", pid, "contract_months", round(c.contract_months), now, ctx)
                     )
+        for j, (group, title, url) in enumerate(mk.incoming.get(slug, []), 1):
+            rows.append(_row("scout", "club", slug, "agreed_signing", title, now, f"incoming:{j}"))
+            rows.append(_row("scout", "club", slug, "agreed_signing_position", group, now, f"incoming:{j}"))
+            rows.append(_row("scout", "club", slug, "agreed_signing_url", url, now, f"incoming:{j}"))
         log.info("market: %s done", slug)
     from dugout_models.lookup import lookup
 
