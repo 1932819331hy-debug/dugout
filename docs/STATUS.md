@@ -62,8 +62,8 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     (checkout v7, cache v6, setup-uv v10, setup-node v7); nightly and injuries share one cache path list.
     `apps/web/vercel.json` (skip builds unless apps/web, data/clubs, scoreboard or backtests changed). README
     (badges, diagram, quick starts, limitations), CONTRIBUTING, issue/PR templates.
-  - Waiting on the user: Vercel project (import repo, Root Directory `apps/web`); then add the live URL to README,
-    PageSpeed Insights on it, a GIF of the story. Ask before creating public issues / labels.
+  - Live: https://dugout2.vercel.app (Vercel project by the user, Root Directory `apps/web`, deploys main).
+  - setup-uv has no floating major tags since v8: pin exact versions (v10.2.0).
   - First nightly after merge: run it by hand with `history: true` (new cache paths -> cold warehouse).
 
 ## Key facts discovered (do not re-research)
