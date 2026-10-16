@@ -17,6 +17,9 @@ uv run dugout-models backtest all
 | Valuation | [valuation.md](valuation.md) | Train < July 2024, test after | Beats "fee = market value" on MAE and median error |
 | Transfer realism | [realism.md](realism.md) | Train summer windows 2015-23, test 2024-25 | Mobility (sold for a fee) AUC 0.75, Brier beats base rate; destination AUC 0.73 |
 | Injury risk | [injury.md](injury.md) | Train 2022-24, test 2024-25 | AUC 0.64; top-decile lift 2.3x; shown as risk tiers (calibration limited by season-to-season reporting shifts) |
+| Player potential | [potential.md](potential.md) | Time split: train snapshots to 2021 (2 y) / 2019 (4 y), test 2023-24 / 2021-22 | Beats age-curve and persistence baselines at both horizons; median error 42% (2 y), 54% (4 y); wide bands shown |
+| Fact-Check NLI | [factcheck_nli.md](factcheck_nli.md) | 48 hand-labelled football premise/claim pairs | DeBERTa-v3 base and large: no false verifications; base 3x faster (used) |
+| Agents (end to end) | [templates](agents_eval_templates.md) · [LLM](agents_eval_llm.md) | 56 hand-labelled questions | See reports: 0 untraceable numbers is the hard target |
 | Lineup optimiser | [lineup.md](lineup.md) | Trust weight chosen on 2023-24, test 2024-25 | Predicted XI 78% overlap vs 77% heuristic |
 
 Negative and weak results are published on purpose: the site shows each model's evidence next to its output.

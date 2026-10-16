@@ -1,0 +1,230 @@
+# Hand-labelled evaluation questions for the agent system (Phase 3).
+# Labels are *what must be answered*, not values (values change nightly; the Stat Auditor checks them):
+#   agents:  specialists the Sporting Director must route to (subset of the route)
+#   expect:  ledger metrics that must be cited for the named entity ("any" = any entity of that type)
+#   claims:  non-numeric claims that must be published as verified (type + entity named in the sentence)
+#   no_stat: unanswerable from our data; the answer must not cite any of these metrics (and must not invent one)
+# Context club is Liverpool unless `club` is given.
+
+- id: q01
+  question: How many league goals has Alexander Isak scored this season?
+  agents: [club]
+  expect: [{metric: season_goals_scored, entity: Alexander Isak}]
+- id: q02
+  question: How many assists does Florian Wirtz have this season?
+  agents: [club]
+  expect: [{metric: season_assists, entity: Florian Wirtz}]
+- id: q03
+  question: How many minutes has Virgil van Dijk played this season?
+  agents: [club]
+  expect: [{metric: season_minutes, entity: Virgil van Dijk}]
+- id: q04
+  question: What is Cody Gakpo's xG this season?
+  agents: [club]
+  expect: [{metric: season_expected_goals, entity: Cody Gakpo}]
+- id: q05
+  question: Where are Liverpool in the league table?
+  agents: [club]
+  expect: [{metric: league_position, entity: Liverpool}]
+- id: q06
+  question: How many points do Liverpool have?
+  agents: [club]
+  expect: [{metric: league_points, entity: Liverpool}]
+- id: q07
+  question: How many league goals have Liverpool conceded?
+  agents: [club]
+  expect: [{metric: league_goalsAgainst, entity: Liverpool}]
+- id: q08
+  question: What is Liverpool's recent form?
+  agents: [club]
+  expect: [{metric: league_form, entity: Liverpool}]
+- id: q09
+  question: How do Liverpool play under Andoni Iraola?
+  agents: [club]
+  expect: [{metric: threat_share, entity: Andoni Iraola}]
+- id: q10
+  question: When was Andoni Iraola appointed as Liverpool manager?
+  agents: [club]
+  expect: [{metric: appointed, entity: Andoni Iraola}]
+- id: q11
+  question: How intense is Liverpool's press under their manager?
+  agents: [club]
+  expect: [{metric: def_actions, entity: Andoni Iraola}]
+- id: q12
+  question: What is Liverpool's Elo rating?
+  agents: [club]
+  expect: [{metric: elo, entity: Liverpool}]
+- id: q13
+  question: What are Liverpool's chances of winning their next match?
+  agents: [match]
+  expect: [{metric: [p_home_win, p_away_win], entity: Liverpool}]
+- id: q14
+  question: Predict the result of Liverpool's next fixture.
+  agents: [match]
+  expect: [{metric: [p_home_win, p_away_win], entity: Liverpool}, {metric: p_draw, entity: Liverpool}]
+- id: q15
+  question: How many goals does the model expect Liverpool to score in their next game?
+  agents: [match]
+  expect: [{metric: [exp_home_goals, exp_away_goals], entity: Liverpool}]
+- id: q16
+  question: When is Liverpool's next league match?
+  agents: [match]
+  expect: [{metric: kickoff_utc, entity: Liverpool}]
+- id: q17
+  question: What is Liverpool's predicted lineup for the next match?
+  agents: [lineup]
+  expect: [{metric: predicted_formation, entity: Liverpool}, {metric: predicted_xi_slot, entity: any}]
+- id: q18
+  question: Which formation will Liverpool start with?
+  agents: [lineup]
+  expect: [{metric: predicted_formation, entity: Liverpool}]
+- id: q19
+  question: Does Alisson start in goal on the weekend?
+  agents: [lineup]
+  expect: [{metric: predicted_xi_slot, entity: Alisson Becker}]
+- id: q20
+  question: Should Liverpool rotate anyone with a high injury risk?
+  agents: [lineup]
+  expect: [{metric: predicted_xi_slot, entity: any}]
+- id: q21
+  question: Who is injured at Liverpool?
+  agents: [news]
+  claims: [{type: injury, entity: Alexander Isak}]
+- id: q22
+  question: Is Alexander Isak fit?
+  agents: [news]
+  claims: [{type: injury, entity: Alexander Isak}]
+- id: q23
+  question: Is Dominik Szoboszlai available for the next match?
+  agents: [news]
+  expect: [{metric: season_chance_of_playing_next_round, entity: Dominik Szoboszlai}]
+- id: q24
+  question: Is Ryan Gravenberch suspended?
+  agents: [news]
+  claims: [{type: injury, entity: Ryan Gravenberch}]
+- id: q25
+  question: What is the latest news about Liverpool?
+  agents: [news]
+  claims: [{type: any, entity: any}]
+- id: q26
+  question: Who is doubtful for Liverpool this weekend?
+  agents: [news]
+  expect: [{metric: season_chance_of_playing_next_round, entity: any}]
+- id: q27
+  question: What is Florian Wirtz worth?
+  agents: [transfer]
+  expect: [{metric: market_value, entity: Florian Wirtz}]
+- id: q28
+  question: What fee should Liverpool demand for Alexis Mac Allister?
+  agents: [transfer]
+  expect: [{metric: fair_fee, entity: Alexis Mac Allister}]
+- id: q29
+  question: Which Liverpool players are most likely to be sold?
+  agents: [transfer]
+  expect: [{metric: sale_likelihood, entity: any}]
+- id: q30
+  question: Whose contracts expire soon at Liverpool?
+  agents: [transfer]
+  expect: [{metric: contract_expires, entity: any}]
+- id: q31
+  question: What is the market value of Virgil van Dijk?
+  agents: [transfer]
+  expect: [{metric: market_value, entity: Virgil van Dijk}]
+- id: q32
+  question: How likely is Cody Gakpo to be sold?
+  agents: [transfer]
+  expect: [{metric: sale_likelihood, entity: Cody Gakpo}]
+- id: q33
+  question: Where do Liverpool most need to strengthen?
+  agents: [scout]
+  expect: [{metric: need, entity: Liverpool}]
+- id: q34
+  question: Who should Liverpool sign next summer?
+  agents: [scout]
+  expect: [{metric: realism, entity: any}]
+- id: q35
+  question: Give me a shortlist of realistic transfer targets for Liverpool.
+  agents: [scout]
+  expect: [{metric: realism, entity: any}, {metric: fair_fee, entity: any}]
+- id: q36
+  question: Which candidates would get the most playing time at Liverpool?
+  agents: [scout]
+  expect: [{metric: expected_minutes_share, entity: any}]
+- id: q37
+  question: How many goals has Erling Haaland scored this season?
+  agents: [club]
+  expect: [{metric: season_goals_scored, entity: Erling Haaland}]
+- id: q38
+  question: Where are Arsenal in the table?
+  agents: [club]
+  expect: [{metric: league_position, entity: Arsenal}]
+- id: q39
+  question: What are Manchester City's chances in their next game?
+  agents: [match]
+  expect: [{metric: [p_home_win, p_away_win], entity: Manchester City}]
+- id: q40
+  question: Who is injured at Arsenal?
+  club: arsenal
+  agents: [news]
+  claims: [{type: injury, entity: any}]
+- id: q41
+  question: What is Bukayo Saka worth?
+  agents: [transfer]
+  expect: [{metric: market_value, entity: Bukayo Saka}]
+- id: q42
+  question: How many points do Chelsea have?
+  agents: [club]
+  expect: [{metric: league_points, entity: Chelsea}]
+- id: q43
+  question: Is Liverpool's next match a likely win, and who starts?
+  agents: [match, lineup]
+  expect: [{metric: [p_home_win, p_away_win], entity: Liverpool}, {metric: predicted_formation, entity: Liverpool}]
+- id: q44
+  question: Who is injured and who should we sign to cover?
+  agents: [news, scout]
+  expect: [{metric: need, entity: Liverpool}]
+- id: q45
+  question: How are Liverpool doing this season?
+  agents: [club]
+  expect: [{metric: league_position, entity: Liverpool}]
+# unanswerable from our data: the system must not invent a number
+- id: q46
+  question: What is Virgil van Dijk's weekly wage?
+  no_stat: [wage, weekly_wage, salary]
+- id: q47
+  question: How many fans attended Liverpool's last home match?
+  no_stat: [attendance]
+- id: q48
+  question: How fast can Jeremie Frimpong run?
+  no_stat: [top_speed, speed]
+- id: q49
+  question: What is Liverpool's transfer budget for January?
+  no_stat: [budget, transfer_budget]
+- id: q50
+  question: How many tackles has Ryan Gravenberch made in the Champions League?
+  no_stat: [champions_league_tackles, tackles]
+# added with the player-development and player-fit features (user request, 2026-10-16)
+- id: q51
+  question: How good can Rio Ngumoha become?
+  agents: [potential]
+  expect: [{metric: proj_value_4y, entity: Rio Ngumoha}, {metric: ceiling_value_4y, entity: Rio Ngumoha}]
+- id: q52
+  question: What is Trey Nyoni's potential?
+  agents: [potential]
+  expect: [{metric: proj_value_4y, entity: Trey Nyoni}]
+- id: q53
+  question: How good could Nico O'Reilly be in the future?
+  agents: [potential]
+  expect: [{metric: proj_value_4y, entity: Nico O'Reilly}]
+- id: q54
+  question: How would Jurriën Timber fit in at Liverpool?
+  agents: [fit]
+  expect: [{metric: expected_minutes_share, entity: Timber}, {metric: rank_at_position, entity: Timber}]
+- id: q55
+  question: Would Bart Verbruggen suit Liverpool?
+  agents: [fit]
+  expect: [{metric: expected_minutes_share, entity: Verbruggen}]
+- id: q56
+  question: What is Michael Kayode's potential and how would he fit in at Liverpool?
+  agents: [potential, fit]
+  expect: [{metric: proj_value_4y, entity: Kayode}, {metric: expected_minutes_share, entity: Kayode}]

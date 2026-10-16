@@ -1,0 +1,3028 @@
+{
+  "schema": "dugout.club/1",
+  "club": {
+    "slug": "hull-city",
+    "name": "Hull City",
+    "season": "2026-27"
+  },
+  "generated_at": "2026-10-16T10:10:18+00:00",
+  "data_as_of": "2026-10-16T09:56:02+00:00",
+  "llm": null,
+  "summary": {
+    "agent": "director",
+    "title": "Sporting Director",
+    "question": "Summarise the dossier on Hull City for the board.",
+    "status": "published",
+    "writer": "template",
+    "claims": [
+      {
+        "segments": [
+          {
+            "text": "Hull City are "
+          },
+          {
+            "stat": "ev_a37198e638ffe64f",
+            "display": "8th"
+          },
+          {
+            "text": " in the Premier League table."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      },
+      {
+        "segments": [
+          {
+            "text": "Hull City have "
+          },
+          {
+            "stat": "ev_256c71c8ef6cd638",
+            "display": "9"
+          },
+          {
+            "text": " points."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      },
+      {
+        "segments": [
+          {
+            "text": "Hull City's next league match is Fulham v Hull City on "
+          },
+          {
+            "stat": "ev_1df0c3b0a60cbb67",
+            "display": "17 October 2026"
+          },
+          {
+            "text": "."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      },
+      {
+        "segments": [
+          {
+            "text": "The lineup model sets Hull City up in a "
+          },
+          {
+            "stat": "ev_7c2f9f618c0e1020",
+            "display": "4-2-3-1"
+          },
+          {
+            "text": " for the next match."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      }
+    ],
+    "withheld": []
+  },
+  "sections": [
+    {
+      "agent": "club",
+      "title": "Club & Tactics",
+      "question": "How are Hull City doing this season, and how do they play under their head coach?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "Hull City are "
+            },
+            {
+              "stat": "ev_a37198e638ffe64f",
+              "display": "8th"
+            },
+            {
+              "text": " in the Premier League table."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Hull City have "
+            },
+            {
+              "stat": "ev_256c71c8ef6cd638",
+              "display": "9"
+            },
+            {
+              "text": " points."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Hull City have scored "
+            },
+            {
+              "stat": "ev_9c9b917c9083ab0c",
+              "display": "8"
+            },
+            {
+              "text": " league goals."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Hull City have conceded "
+            },
+            {
+              "stat": "ev_307b7b091e61c8bb",
+              "display": "6"
+            },
+            {
+              "text": " league goals."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Hull City's most recent league results read "
+            },
+            {
+              "stat": "ev_b74989334307f4a7",
+              "display": "DLDDW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Hull City's Elo rating is "
+            },
+            {
+              "stat": "ev_81bef38632313d76",
+              "display": "1371"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sergej Jakirović has been Hull City's head coach since "
+            },
+            {
+              "stat": "ev_49e451c65474cdd6",
+              "display": "1 June 2025"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sergej Jakirović's style profile covers "
+            },
+            {
+              "stat": "ev_93df58642615f6d3",
+              "display": "7"
+            },
+            {
+              "text": " Premier League matches."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Teams under Jakirović have taken "
+            },
+            {
+              "stat": "ev_ff9ba8df78cfdee5",
+              "display": "36%"
+            },
+            {
+              "text": " of the threat in their matches, less territorial than average."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Teams under Jakirović average "
+            },
+            {
+              "stat": "ev_4049109bb68fbc66",
+              "display": "89"
+            },
+            {
+              "text": " defensive actions per match, less active without the ball than almost any Premier League manager's side."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "match",
+      "title": "Match Predictor",
+      "question": "What does the model expect from Hull City's next league match?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "Hull City's next league match is Fulham v Hull City on "
+            },
+            {
+              "stat": "ev_1df0c3b0a60cbb67",
+              "display": "17 October 2026"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model gives Fulham a "
+            },
+            {
+              "stat": "ev_3c279abd1037f77d",
+              "display": "49%"
+            },
+            {
+              "text": " chance of winning against Hull City."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model gives Fulham v Hull City a "
+            },
+            {
+              "stat": "ev_e73f63e75c394550",
+              "display": "27%"
+            },
+            {
+              "text": " chance of ending in a draw."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model gives Hull City a "
+            },
+            {
+              "stat": "ev_281f289ecdb4662c",
+              "display": "24%"
+            },
+            {
+              "text": " chance of winning against Fulham."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model expects Fulham to score "
+            },
+            {
+              "stat": "ev_fa2a408a12cff1cc",
+              "display": "1.5"
+            },
+            {
+              "text": " goals against Hull City."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model expects Hull City to score "
+            },
+            {
+              "stat": "ev_81cfaf883f51d5db",
+              "display": "1.0"
+            },
+            {
+              "text": " goals against Fulham."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Hull City's Elo rating is "
+            },
+            {
+              "stat": "ev_81bef38632313d76",
+              "display": "1371"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Fulham's Elo rating is "
+            },
+            {
+              "stat": "ev_b9fc181ec34c16dd",
+              "display": "1449"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "lineup",
+      "title": "Lineup Selector",
+      "question": "What is Hull City's predicted lineup for the next match?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "The lineup model sets Hull City up in a "
+            },
+            {
+              "stat": "ev_7c2f9f618c0e1020",
+              "display": "4-2-3-1"
+            },
+            {
+              "text": " for the next match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Konstantinos Tzolakis at "
+            },
+            {
+              "stat": "ev_b21ba2a9c0f5a7d4",
+              "display": "GK"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Semi Ajayi at "
+            },
+            {
+              "stat": "ev_131b13fe6632d676",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts John Egan at "
+            },
+            {
+              "stat": "ev_cea09aed9160d080",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Nobel Mendy at "
+            },
+            {
+              "stat": "ev_eba1062576689c9d",
+              "display": "RB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Ryan Giles at "
+            },
+            {
+              "stat": "ev_80888e3711da0f38",
+              "display": "LB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Lewie Coyle at "
+            },
+            {
+              "stat": "ev_e61b663a42662cf6",
+              "display": "DM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Regan Slater at "
+            },
+            {
+              "stat": "ev_08df9aead38661a6",
+              "display": "DM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Matt Crooks at "
+            },
+            {
+              "stat": "ev_69f552c27d36b673",
+              "display": "AM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Mohamed Belloumi at "
+            },
+            {
+              "stat": "ev_ee737ad3f2988106",
+              "display": "RW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Sorba Thomas at "
+            },
+            {
+              "stat": "ev_50729b8b25eebd22",
+              "display": "LW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Oli McBurnie at "
+            },
+            {
+              "stat": "ev_22d982fead3f60cd",
+              "display": "CF"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "news",
+      "title": "News & Injury",
+      "question": "Who is unavailable for Hull City, and what is the latest news?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "Charlie Hughes is injured with a groin injury."
+            }
+          ],
+          "type": "injury",
+          "status": "verified",
+          "reason": "official source",
+          "sources": [
+            {
+              "outlet": "Fantasy Premier League",
+              "tier": 1,
+              "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+              "official": true
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "Eliot Matazo is injured with a knee injury."
+            }
+          ],
+          "type": "injury",
+          "status": "verified",
+          "reason": "official source",
+          "sources": [
+            {
+              "outlet": "Fantasy Premier League",
+              "tier": 1,
+              "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+              "official": true
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "Darko Gyabi is injured with a thigh injury."
+            }
+          ],
+          "type": "injury",
+          "status": "verified",
+          "reason": "official source",
+          "sources": [
+            {
+              "outlet": "Fantasy Premier League",
+              "tier": 1,
+              "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+              "official": true
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "Jack Butland is injured with an arm injury."
+            }
+          ],
+          "type": "injury",
+          "status": "verified",
+          "reason": "official source",
+          "sources": [
+            {
+              "outlet": "Fantasy Premier League",
+              "tier": 1,
+              "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+              "official": true
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "Ilyas Ansah is injured with a back injury."
+            }
+          ],
+          "type": "injury",
+          "status": "verified",
+          "reason": "official source",
+          "sources": [
+            {
+              "outlet": "Fantasy Premier League",
+              "tier": 1,
+              "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+              "official": true
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "Matt Targett is injured with an ankle injury."
+            }
+          ],
+          "type": "injury",
+          "status": "verified",
+          "reason": "official source",
+          "sources": [
+            {
+              "outlet": "Fantasy Premier League",
+              "tier": 1,
+              "url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+              "official": true
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "According to Arsenal, Arsenal Worldwide: New York | Arsenal FC Official Website | Arsenal.com."
+            }
+          ],
+          "type": "attributed",
+          "status": "verified",
+          "reason": "published by Arsenal",
+          "sources": [
+            {
+              "outlet": "Arsenal",
+              "tier": 1,
+              "url": "https://www.arsenal.com/news/arsenal-worldwide-new-york-aBZEb9t7P4Kg",
+              "official": true
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "According to BBC Sport, Hull continue good start with entertaining Everton draw."
+            }
+          ],
+          "type": "attributed",
+          "status": "verified",
+          "reason": "published by BBC Sport",
+          "sources": [
+            {
+              "outlet": "BBC Sport",
+              "tier": 2,
+              "url": "https://www.bbc.co.uk/sport/football/videos/c61mvdy2mdx9o?at_medium=RSS&at_campaign=rss",
+              "official": false
+            }
+          ]
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "transfer",
+      "title": "Transfer & Valuation",
+      "question": "Which Hull City players could be sold, and what are the key players worth?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "The mobility model puts Mohamed Belloumi's sale likelihood in a transfer window at "
+            },
+            {
+              "stat": "ev_ae7700e1ed64aa7c",
+              "display": "28%"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The mobility model puts Ryan Giles's sale likelihood in a transfer window at "
+            },
+            {
+              "stat": "ev_b7eca446b3ab6e24",
+              "display": "22%"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The mobility model puts Regan Slater's sale likelihood in a transfer window at "
+            },
+            {
+              "stat": "ev_0d091e13c900443e",
+              "display": "14%"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Konstantinos Tzolakis at "
+            },
+            {
+              "stat": "ev_3c4af01b1304052d",
+              "display": "€22.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Konstantinos Tzolakis's fair fee at "
+            },
+            {
+              "stat": "ev_2bde790585bca1d0",
+              "display": "€18.5m"
+            },
+            {
+              "text": ", below his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Christos Mouzakitis at "
+            },
+            {
+              "stat": "ev_1c098bc5653c88cb",
+              "display": "€20.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Christos Mouzakitis's fair fee at "
+            },
+            {
+              "stat": "ev_daae945135f483c4",
+              "display": "€26.0m"
+            },
+            {
+              "text": ", above his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Nobel Mendy at "
+            },
+            {
+              "stat": "ev_a3845bc27d7d7bac",
+              "display": "€20.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Nobel Mendy's fair fee at "
+            },
+            {
+              "stat": "ev_2b99991c61d2062c",
+              "display": "€18.8m"
+            },
+            {
+              "text": ", in line with his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Abdülkadir Ömür's contract runs until "
+            },
+            {
+              "stat": "ev_b0f4c11117b06335",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Robinio Vaz's contract runs until "
+            },
+            {
+              "stat": "ev_de46cf07fcebac26",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Ryan Giles's contract runs until "
+            },
+            {
+              "stat": "ev_d9cbc632cbbd46de",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "scout",
+      "title": "Scout",
+      "question": "Where should Hull City strengthen, and who fits?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "The squad model ranks "
+            },
+            {
+              "stat": "ev_566d44102e755351",
+              "display": "full-back"
+            },
+            {
+              "text": " as Hull City's biggest need."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Enrico Delprato (Parma Calcio 1913) is "
+            },
+            {
+              "stat": "ev_85a443f57fb4ea14",
+              "display": "27"
+            },
+            {
+              "text": " years old."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Enrico Delprato has a market value of "
+            },
+            {
+              "stat": "ev_804e1e822d90cb02",
+              "display": "€6.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Enrico Delprato's fair fee at "
+            },
+            {
+              "stat": "ev_a007e741b0c81b4d",
+              "display": "€5.6m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The playing-time model expects Enrico Delprato to play "
+            },
+            {
+              "stat": "ev_4351e58164b324bf",
+              "display": "54%"
+            },
+            {
+              "text": " of Hull City's minutes."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The realism model gives a move for Enrico Delprato to Hull City a "
+            },
+            {
+              "stat": "ev_a31d8f5ea1fb6d5b",
+              "display": "0.0%"
+            },
+            {
+              "text": " chance in a transfer window."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Diogo Travassos (Sporting CP) is "
+            },
+            {
+              "stat": "ev_3cb8e067ccda7f13",
+              "display": "22"
+            },
+            {
+              "text": " years old."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Diogo Travassos has a market value of "
+            },
+            {
+              "stat": "ev_f28efe2989f4293d",
+              "display": "€6.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Diogo Travassos's fair fee at "
+            },
+            {
+              "stat": "ev_a851f3bed2f47a6d",
+              "display": "€7.4m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The playing-time model expects Diogo Travassos to play "
+            },
+            {
+              "stat": "ev_35058adc3a1e6372",
+              "display": "44%"
+            },
+            {
+              "text": " of Hull City's minutes."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The realism model gives a move for Diogo Travassos to Hull City a "
+            },
+            {
+              "stat": "ev_00894b4caf2e0035",
+              "display": "0.0%"
+            },
+            {
+              "text": " chance in a transfer window."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Nazinho (Cercle Brugge) is "
+            },
+            {
+              "stat": "ev_521b64afcff2384f",
+              "display": "23"
+            },
+            {
+              "text": " years old."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Nazinho has a market value of "
+            },
+            {
+              "stat": "ev_5c00ec6327da0100",
+              "display": "€6.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The squad model ranks "
+            },
+            {
+              "stat": "ev_d19167405a3222a3",
+              "display": "defensive midfield"
+            },
+            {
+              "text": " as Hull City's second need."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    }
+  ],
+  "stats": {
+    "ev_00894b4caf2e0035": {
+      "value": 0.0003,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rp83f0f1a9beaa76",
+      "entity_name": "Diogo Travassos",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_016a28d54bcee51f": {
+      "value": 0.488,
+      "display": "0.49",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp429d72cd819728",
+      "entity_name": "Nazinho",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_08df9aead38661a6": {
+      "value": "DM",
+      "display": "DM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpe533726755dca7",
+      "entity_name": "Regan Slater",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0d091e13c900443e": {
+      "value": 0.145,
+      "display": "0.14",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rpe533726755dca7",
+      "entity_name": "Regan Slater",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0d8b434746234eb8": {
+      "value": 5000000.0,
+      "display": "5000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp6dc45962fafb96",
+      "entity_name": "Tom van de Looi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_131b13fe6632d676": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp6661376025e74c",
+      "entity_name": "Semi Ajayi",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1c098bc5653c88cb": {
+      "value": 20000000.0,
+      "display": "20000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpd99d7c01551ebc",
+      "entity_name": "Christos Mouzakitis",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/3008/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_1df0c3b0a60cbb67": {
+      "value": "2026-10-17T14:00:00+00:00",
+      "display": "2026-10-17T14:00:00+00:00",
+      "unit": null,
+      "metric": "kickoff_utc",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:fulham:hull-city",
+      "entity_name": "Fulham v Hull City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_22afa684d281f513": {
+      "value": 0.0005,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rp3287fced418151",
+      "entity_name": "Novatus Miroshi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_22d982fead3f60cd": {
+      "value": "CF",
+      "display": "CF",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp1df0b6eb050fb2",
+      "entity_name": "Oli McBurnie",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_23e50b539aa67dca": {
+      "value": 4200000.0,
+      "display": "4200000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp6dc45962fafb96",
+      "entity_name": "Tom van de Looi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_256c71c8ef6cd638": {
+      "value": 9.0,
+      "display": "9",
+      "unit": null,
+      "metric": "league_points",
+      "entity_type": "club",
+      "entity_id": "hull-city",
+      "entity_name": "Hull City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_281f289ecdb4662c": {
+      "value": 0.2412,
+      "display": "0.24",
+      "unit": null,
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:fulham:hull-city",
+      "entity_name": "Fulham v Hull City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2b99991c61d2062c": {
+      "value": 18800000.0,
+      "display": "18800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp995503b9ffcedd",
+      "entity_name": "Nobel Mendy",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2bde790585bca1d0": {
+      "value": 18500000.0,
+      "display": "18500000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpce50248774371b",
+      "entity_name": "Konstantinos Tzolakis",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_303feab471df5118": {
+      "value": 6400000.0,
+      "display": "6400000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp3287fced418151",
+      "entity_name": "Novatus Miroshi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_307b7b091e61c8bb": {
+      "value": 6.0,
+      "display": "6",
+      "unit": null,
+      "metric": "league_goalsAgainst",
+      "entity_type": "club",
+      "entity_id": "hull-city",
+      "entity_name": "Hull City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_35058adc3a1e6372": {
+      "value": 0.442,
+      "display": "0.44",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp83f0f1a9beaa76",
+      "entity_name": "Diogo Travassos",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3c279abd1037f77d": {
+      "value": 0.4922,
+      "display": "0.49",
+      "unit": null,
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:fulham:hull-city",
+      "entity_name": "Fulham v Hull City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3c4af01b1304052d": {
+      "value": 22000000.0,
+      "display": "22000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpce50248774371b",
+      "entity_name": "Konstantinos Tzolakis",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/3008/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_3cb8e067ccda7f13": {
+      "value": 22.5,
+      "display": "22.50",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp83f0f1a9beaa76",
+      "entity_name": "Diogo Travassos",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4049109bb68fbc66": {
+      "value": 89.0,
+      "display": "89",
+      "unit": null,
+      "metric": "def_actions",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q1444714",
+      "entity_name": "Sergej Jakirović",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_411f2a330f96e0c7": {
+      "value": 5000000.0,
+      "display": "5000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp3287fced418151",
+      "entity_name": "Novatus Miroshi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_41ff6bd29ebfb8a2": {
+      "value": 26.7,
+      "display": "26.70",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpaca278e8c9d294",
+      "entity_name": "Doğucan Haspolat",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4351e58164b324bf": {
+      "value": 0.536,
+      "display": "0.54",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rpb00b97e78ef73d",
+      "entity_name": "Enrico Delprato",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_49e451c65474cdd6": {
+      "value": "2025-06-01",
+      "display": "2025-06-01",
+      "unit": null,
+      "metric": "appointed",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q1444714",
+      "entity_name": "Sergej Jakirović",
+      "source": "wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q1444714",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T16:00:03.045278+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_4b42c2e404ffc66f": {
+      "value": 0.478,
+      "display": "0.48",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp6dc45962fafb96",
+      "entity_name": "Tom van de Looi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4bcd93e2366041dd": {
+      "value": 1.6143,
+      "display": "1.61",
+      "unit": null,
+      "metric": "xg_against",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q1444714",
+      "entity_name": "Sergej Jakirović",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_50729b8b25eebd22": {
+      "value": "LW",
+      "display": "LW",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp6190627b4b86d6",
+      "entity_name": "Sorba Thomas",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_521b64afcff2384f": {
+      "value": 23.2,
+      "display": "23.20",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp429d72cd819728",
+      "entity_name": "Nazinho",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_53e66939cff9e5db": {
+      "value": 0.0002,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rp429d72cd819728",
+      "entity_name": "Nazinho",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_566d44102e755351": {
+      "value": "full-back",
+      "display": "full-back",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "hull-city",
+      "entity_name": "Hull City",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_580db8c72afd49e4": {
+      "value": 5200000.0,
+      "display": "5200000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpaca278e8c9d294",
+      "entity_name": "Doğucan Haspolat",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5c00ec6327da0100": {
+      "value": 6000000.0,
+      "display": "6000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp429d72cd819728",
+      "entity_name": "Nazinho",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5c4f1b2a71b62bd4": {
+      "value": 27.3,
+      "display": "27.30",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp6dc45962fafb96",
+      "entity_name": "Tom van de Looi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_69f552c27d36b673": {
+      "value": "AM",
+      "display": "AM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp4d5bd6c35539cb",
+      "entity_name": "Matt Crooks",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6a62cef7e5117880": {
+      "value": 0.0004,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rpaca278e8c9d294",
+      "entity_name": "Doğucan Haspolat",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_71c9a18374972cb2": {
+      "value": 24.1,
+      "display": "24.10",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp3287fced418151",
+      "entity_name": "Novatus Miroshi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7c2f9f618c0e1020": {
+      "value": "4-2-3-1",
+      "display": "4-2-3-1",
+      "unit": null,
+      "metric": "predicted_formation",
+      "entity_type": "club",
+      "entity_id": "hull-city",
+      "entity_name": "Hull City",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7c9606bec085b779": {
+      "value": 0.439,
+      "display": "0.44",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp3287fced418151",
+      "entity_name": "Novatus Miroshi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_804e1e822d90cb02": {
+      "value": 6000000.0,
+      "display": "6000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpb00b97e78ef73d",
+      "entity_name": "Enrico Delprato",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_80888e3711da0f38": {
+      "value": "LB",
+      "display": "LB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp6e2b0d515677df",
+      "entity_name": "Ryan Giles",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_81bef38632313d76": {
+      "value": 1370.9,
+      "display": "1370.90",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "hull-city",
+      "entity_name": "Hull City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_81cfaf883f51d5db": {
+      "value": 1.0447,
+      "display": "1.04",
+      "unit": null,
+      "metric": "exp_away_goals",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:fulham:hull-city",
+      "entity_name": "Fulham v Hull City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_82371b93a41c8f25": {
+      "value": 0.3217,
+      "display": "0.32",
+      "unit": null,
+      "metric": "creativity_share",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q1444714",
+      "entity_name": "Sergej Jakirović",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_85a443f57fb4ea14": {
+      "value": 26.9,
+      "display": "26.90",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpb00b97e78ef73d",
+      "entity_name": "Enrico Delprato",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_93df58642615f6d3": {
+      "value": 7.0,
+      "display": "7",
+      "unit": null,
+      "metric": "pl_matches",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q1444714",
+      "entity_name": "Sergej Jakirović",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9c9b917c9083ab0c": {
+      "value": 8.0,
+      "display": "8",
+      "unit": null,
+      "metric": "league_goalsFor",
+      "entity_type": "club",
+      "entity_id": "hull-city",
+      "entity_name": "Hull City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_a007e741b0c81b4d": {
+      "value": 5600000.0,
+      "display": "5600000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpb00b97e78ef73d",
+      "entity_name": "Enrico Delprato",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a31d8f5ea1fb6d5b": {
+      "value": 0.0003,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rpb00b97e78ef73d",
+      "entity_name": "Enrico Delprato",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a37198e638ffe64f": {
+      "value": 8.0,
+      "display": "8",
+      "unit": null,
+      "metric": "league_position",
+      "entity_type": "club",
+      "entity_id": "hull-city",
+      "entity_name": "Hull City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_a3845bc27d7d7bac": {
+      "value": 20000000.0,
+      "display": "20000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp995503b9ffcedd",
+      "entity_name": "Nobel Mendy",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/3008/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_a851f3bed2f47a6d": {
+      "value": 7400000.0,
+      "display": "7400000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp83f0f1a9beaa76",
+      "entity_name": "Diogo Travassos",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ae7700e1ed64aa7c": {
+      "value": 0.285,
+      "display": "0.28",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp8d7bf22b75d32b",
+      "entity_name": "Mohamed Belloumi",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b0f4c11117b06335": {
+      "value": "2027-06-30",
+      "display": "2027-06-30",
+      "unit": null,
+      "metric": "contract_expires",
+      "entity_type": "player",
+      "entity_id": "rp193d843316c2e7",
+      "entity_name": "Abdülkadir Ömür",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_b21ba2a9c0f5a7d4": {
+      "value": "GK",
+      "display": "GK",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpce50248774371b",
+      "entity_name": "Konstantinos Tzolakis",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b74989334307f4a7": {
+      "value": "DLDDW",
+      "display": "DLDDW",
+      "unit": null,
+      "metric": "league_form",
+      "entity_type": "club",
+      "entity_id": "hull-city",
+      "entity_name": "Hull City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings",
+      "source_tier": 2,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_b7eca446b3ab6e24": {
+      "value": 0.219,
+      "display": "0.22",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp6e2b0d515677df",
+      "entity_name": "Ryan Giles",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b9fc181ec34c16dd": {
+      "value": 1449.3,
+      "display": "1449.30",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "fulham",
+      "entity_name": "Fulham",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cea09aed9160d080": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp24df608095a31c",
+      "entity_name": "John Egan",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d19167405a3222a3": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "hull-city",
+      "entity_name": "Hull City",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d9cbc632cbbd46de": {
+      "value": "2027-06-30",
+      "display": "2027-06-30",
+      "unit": null,
+      "metric": "contract_expires",
+      "entity_type": "player",
+      "entity_id": "rp6e2b0d515677df",
+      "entity_name": "Ryan Giles",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_daae945135f483c4": {
+      "value": 26000000.0,
+      "display": "26000000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpd99d7c01551ebc",
+      "entity_name": "Christos Mouzakitis",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_de46cf07fcebac26": {
+      "value": "2027-06-30",
+      "display": "2027-06-30",
+      "unit": null,
+      "metric": "contract_expires",
+      "entity_type": "player",
+      "entity_id": "rp08ec19b567f323",
+      "entity_name": "Robinio Vaz",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_e61b663a42662cf6": {
+      "value": "DM",
+      "display": "DM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp8b3c49c71494f5",
+      "entity_name": "Lewie Coyle",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e73f63e75c394550": {
+      "value": 0.2667,
+      "display": "0.27",
+      "unit": null,
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:fulham:hull-city",
+      "entity_name": "Fulham v Hull City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ea1b46fb23bccabd": {
+      "value": 5000000.0,
+      "display": "5000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpaca278e8c9d294",
+      "entity_name": "Doğucan Haspolat",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ea84bf7a22be3e2e": {
+      "value": 0.479,
+      "display": "0.48",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rpaca278e8c9d294",
+      "entity_name": "Doğucan Haspolat",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_eba1062576689c9d": {
+      "value": "RB",
+      "display": "RB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp995503b9ffcedd",
+      "entity_name": "Nobel Mendy",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ee737ad3f2988106": {
+      "value": "RW",
+      "display": "RW",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp8d7bf22b75d32b",
+      "entity_name": "Mohamed Belloumi",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f07c74b221a29f84": {
+      "value": 0.0004,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rp6dc45962fafb96",
+      "entity_name": "Tom van de Looi",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f28efe2989f4293d": {
+      "value": 6000000.0,
+      "display": "6000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp83f0f1a9beaa76",
+      "entity_name": "Diogo Travassos",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f2a6f1d46b553878": {
+      "value": 0.9529,
+      "display": "0.95",
+      "unit": null,
+      "metric": "xg_for",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q1444714",
+      "entity_name": "Sergej Jakirović",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fa2a408a12cff1cc": {
+      "value": 1.5274,
+      "display": "1.53",
+      "unit": null,
+      "metric": "exp_home_goals",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:fulham:hull-city",
+      "entity_name": "Fulham v Hull City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fa86c6b5271d52ab": {
+      "value": 7800000.0,
+      "display": "7800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp429d72cd819728",
+      "entity_name": "Nazinho",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ff9ba8df78cfdee5": {
+      "value": 0.3575,
+      "display": "0.36",
+      "unit": null,
+      "metric": "threat_share",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q1444714",
+      "entity_name": "Sergej Jakirović",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    }
+  },
+  "key_stats": {
+    "club": [
+      {
+        "stat": "ev_a37198e638ffe64f",
+        "display": "8th",
+        "label": "league position",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_256c71c8ef6cd638",
+        "display": "9",
+        "label": "league points",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_9c9b917c9083ab0c",
+        "display": "8",
+        "label": "league goals scored",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_307b7b091e61c8bb",
+        "display": "6",
+        "label": "league goals conceded",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_b74989334307f4a7",
+        "display": "DLDDW",
+        "label": "recent league results, oldest first",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_81bef38632313d76",
+        "display": "1371",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_49e451c65474cdd6",
+        "display": "1 June 2025",
+        "label": "appointed head coach of Hull City",
+        "subject": "Sergej Jakirović"
+      },
+      {
+        "stat": "ev_93df58642615f6d3",
+        "display": "7",
+        "label": "Premier League matches in the style sample",
+        "subject": "Sergej Jakirović"
+      },
+      {
+        "stat": "ev_ff9ba8df78cfdee5",
+        "display": "36%",
+        "label": "share of the match threat (territory)",
+        "subject": "Sergej Jakirović"
+      },
+      {
+        "stat": "ev_4049109bb68fbc66",
+        "display": "89",
+        "label": "defensive actions per match",
+        "subject": "Sergej Jakirović"
+      },
+      {
+        "stat": "ev_f2a6f1d46b553878",
+        "display": "0.95",
+        "label": "expected goals for per match",
+        "subject": "Sergej Jakirović"
+      },
+      {
+        "stat": "ev_4bcd93e2366041dd",
+        "display": "1.61",
+        "label": "expected goals against per match",
+        "subject": "Sergej Jakirović"
+      },
+      {
+        "stat": "ev_82371b93a41c8f25",
+        "display": "32%",
+        "label": "share of chance creation",
+        "subject": "Sergej Jakirović"
+      }
+    ],
+    "match": [
+      {
+        "stat": "ev_1df0c3b0a60cbb67",
+        "display": "17 October 2026",
+        "label": "kick-off date",
+        "subject": "Fulham v Hull City"
+      },
+      {
+        "stat": "ev_3c279abd1037f77d",
+        "display": "49%",
+        "label": "probability Fulham win",
+        "subject": "Fulham"
+      },
+      {
+        "stat": "ev_e73f63e75c394550",
+        "display": "27%",
+        "label": "probability of a draw",
+        "subject": "Fulham v Hull City"
+      },
+      {
+        "stat": "ev_281f289ecdb4662c",
+        "display": "24%",
+        "label": "probability Hull City win",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_fa2a408a12cff1cc",
+        "display": "1.5",
+        "label": "expected goals in this match",
+        "subject": "Fulham"
+      },
+      {
+        "stat": "ev_81cfaf883f51d5db",
+        "display": "1.0",
+        "label": "expected goals in this match",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_81bef38632313d76",
+        "display": "1371",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_b9fc181ec34c16dd",
+        "display": "1449",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Fulham"
+      }
+    ],
+    "lineup": [
+      {
+        "stat": "ev_7c2f9f618c0e1020",
+        "display": "4-2-3-1",
+        "label": "predicted formation for the next match",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_b21ba2a9c0f5a7d4",
+        "display": "GK",
+        "label": "predicted starting slot (goalkeeper)",
+        "subject": "Konstantinos Tzolakis"
+      },
+      {
+        "stat": "ev_131b13fe6632d676",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Semi Ajayi"
+      },
+      {
+        "stat": "ev_cea09aed9160d080",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "John Egan"
+      },
+      {
+        "stat": "ev_eba1062576689c9d",
+        "display": "RB",
+        "label": "predicted starting slot (right-back)",
+        "subject": "Nobel Mendy"
+      },
+      {
+        "stat": "ev_80888e3711da0f38",
+        "display": "LB",
+        "label": "predicted starting slot (left-back)",
+        "subject": "Ryan Giles"
+      },
+      {
+        "stat": "ev_e61b663a42662cf6",
+        "display": "DM",
+        "label": "predicted starting slot (defensive midfield)",
+        "subject": "Lewie Coyle"
+      },
+      {
+        "stat": "ev_08df9aead38661a6",
+        "display": "DM",
+        "label": "predicted starting slot (defensive midfield)",
+        "subject": "Regan Slater"
+      },
+      {
+        "stat": "ev_69f552c27d36b673",
+        "display": "AM",
+        "label": "predicted starting slot (attacking midfield)",
+        "subject": "Matt Crooks"
+      },
+      {
+        "stat": "ev_ee737ad3f2988106",
+        "display": "RW",
+        "label": "predicted starting slot (right wing)",
+        "subject": "Mohamed Belloumi"
+      },
+      {
+        "stat": "ev_50729b8b25eebd22",
+        "display": "LW",
+        "label": "predicted starting slot (left wing)",
+        "subject": "Sorba Thomas"
+      },
+      {
+        "stat": "ev_22d982fead3f60cd",
+        "display": "CF",
+        "label": "predicted starting slot (centre-forward)",
+        "subject": "Oli McBurnie"
+      }
+    ],
+    "news": [],
+    "transfer": [
+      {
+        "stat": "ev_ae7700e1ed64aa7c",
+        "display": "28%",
+        "label": "model estimate of being sold for a fee in a window (no academy or contract-length signal)",
+        "subject": "Mohamed Belloumi"
+      },
+      {
+        "stat": "ev_b7eca446b3ab6e24",
+        "display": "22%",
+        "label": "model estimate of being sold for a fee in a window (no academy or contract-length signal)",
+        "subject": "Ryan Giles"
+      },
+      {
+        "stat": "ev_0d091e13c900443e",
+        "display": "14%",
+        "label": "model estimate of being sold for a fee in a window (no academy or contract-length signal)",
+        "subject": "Regan Slater"
+      },
+      {
+        "stat": "ev_3c4af01b1304052d",
+        "display": "€22.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Konstantinos Tzolakis"
+      },
+      {
+        "stat": "ev_2bde790585bca1d0",
+        "display": "€18.5m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Konstantinos Tzolakis"
+      },
+      {
+        "stat": "ev_1c098bc5653c88cb",
+        "display": "€20.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Christos Mouzakitis"
+      },
+      {
+        "stat": "ev_daae945135f483c4",
+        "display": "€26.0m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Christos Mouzakitis"
+      },
+      {
+        "stat": "ev_a3845bc27d7d7bac",
+        "display": "€20.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Nobel Mendy"
+      },
+      {
+        "stat": "ev_2b99991c61d2062c",
+        "display": "€18.8m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Nobel Mendy"
+      },
+      {
+        "stat": "ev_b0f4c11117b06335",
+        "display": "30 June 2027",
+        "label": "contract expiry",
+        "subject": "Abdülkadir Ömür"
+      },
+      {
+        "stat": "ev_de46cf07fcebac26",
+        "display": "30 June 2027",
+        "label": "contract expiry",
+        "subject": "Robinio Vaz"
+      },
+      {
+        "stat": "ev_d9cbc632cbbd46de",
+        "display": "30 June 2027",
+        "label": "contract expiry",
+        "subject": "Ryan Giles"
+      }
+    ],
+    "scout": [
+      {
+        "stat": "ev_566d44102e755351",
+        "display": "full-back",
+        "label": "squad need, priority one",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_85a443f57fb4ea14",
+        "display": "27",
+        "label": "age",
+        "subject": "Enrico Delprato"
+      },
+      {
+        "stat": "ev_804e1e822d90cb02",
+        "display": "€6.0m",
+        "label": "market value",
+        "subject": "Enrico Delprato"
+      },
+      {
+        "stat": "ev_a007e741b0c81b4d",
+        "display": "€5.6m",
+        "label": "fair fee (valuation model)",
+        "subject": "Enrico Delprato"
+      },
+      {
+        "stat": "ev_4351e58164b324bf",
+        "display": "54%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Enrico Delprato"
+      },
+      {
+        "stat": "ev_a31d8f5ea1fb6d5b",
+        "display": "0.0%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Enrico Delprato"
+      },
+      {
+        "stat": "ev_3cb8e067ccda7f13",
+        "display": "22",
+        "label": "age",
+        "subject": "Diogo Travassos"
+      },
+      {
+        "stat": "ev_f28efe2989f4293d",
+        "display": "€6.0m",
+        "label": "market value",
+        "subject": "Diogo Travassos"
+      },
+      {
+        "stat": "ev_a851f3bed2f47a6d",
+        "display": "€7.4m",
+        "label": "fair fee (valuation model)",
+        "subject": "Diogo Travassos"
+      },
+      {
+        "stat": "ev_35058adc3a1e6372",
+        "display": "44%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Diogo Travassos"
+      },
+      {
+        "stat": "ev_00894b4caf2e0035",
+        "display": "0.0%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Diogo Travassos"
+      },
+      {
+        "stat": "ev_521b64afcff2384f",
+        "display": "23",
+        "label": "age",
+        "subject": "Nazinho"
+      },
+      {
+        "stat": "ev_5c00ec6327da0100",
+        "display": "€6.0m",
+        "label": "market value",
+        "subject": "Nazinho"
+      },
+      {
+        "stat": "ev_fa86c6b5271d52ab",
+        "display": "€7.8m",
+        "label": "fair fee (valuation model)",
+        "subject": "Nazinho"
+      },
+      {
+        "stat": "ev_016a28d54bcee51f",
+        "display": "49%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Nazinho"
+      },
+      {
+        "stat": "ev_53e66939cff9e5db",
+        "display": "0.0%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Nazinho"
+      },
+      {
+        "stat": "ev_d19167405a3222a3",
+        "display": "defensive midfield",
+        "label": "squad need, priority two",
+        "subject": "Hull City"
+      },
+      {
+        "stat": "ev_41ff6bd29ebfb8a2",
+        "display": "27",
+        "label": "age",
+        "subject": "Doğucan Haspolat"
+      },
+      {
+        "stat": "ev_ea1b46fb23bccabd",
+        "display": "€5.0m",
+        "label": "market value",
+        "subject": "Doğucan Haspolat"
+      },
+      {
+        "stat": "ev_580db8c72afd49e4",
+        "display": "€5.2m",
+        "label": "fair fee (valuation model)",
+        "subject": "Doğucan Haspolat"
+      },
+      {
+        "stat": "ev_ea84bf7a22be3e2e",
+        "display": "48%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Doğucan Haspolat"
+      },
+      {
+        "stat": "ev_6a62cef7e5117880",
+        "display": "0.0%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Doğucan Haspolat"
+      },
+      {
+        "stat": "ev_5c4f1b2a71b62bd4",
+        "display": "27",
+        "label": "age",
+        "subject": "Tom van de Looi"
+      },
+      {
+        "stat": "ev_0d8b434746234eb8",
+        "display": "€5.0m",
+        "label": "market value",
+        "subject": "Tom van de Looi"
+      },
+      {
+        "stat": "ev_23e50b539aa67dca",
+        "display": "€4.2m",
+        "label": "fair fee (valuation model)",
+        "subject": "Tom van de Looi"
+      },
+      {
+        "stat": "ev_4b42c2e404ffc66f",
+        "display": "48%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Tom van de Looi"
+      },
+      {
+        "stat": "ev_f07c74b221a29f84",
+        "display": "0.0%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Tom van de Looi"
+      },
+      {
+        "stat": "ev_71c9a18374972cb2",
+        "display": "24",
+        "label": "age",
+        "subject": "Novatus Miroshi"
+      },
+      {
+        "stat": "ev_411f2a330f96e0c7",
+        "display": "€5.0m",
+        "label": "market value",
+        "subject": "Novatus Miroshi"
+      },
+      {
+        "stat": "ev_303feab471df5118",
+        "display": "€6.4m",
+        "label": "fair fee (valuation model)",
+        "subject": "Novatus Miroshi"
+      },
+      {
+        "stat": "ev_7c9606bec085b779",
+        "display": "44%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Novatus Miroshi"
+      },
+      {
+        "stat": "ev_22afa684d281f513",
+        "display": "0.1%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Novatus Miroshi"
+      }
+    ]
+  },
+  "verification": {
+    "stat_auditor": {
+      "ok": true,
+      "numbers_total": 60,
+      "numbers_untraceable": 0
+    },
+    "fact_check_claims": {
+      "verified": 68
+    },
+    "sections_published": 7,
+    "sections_withheld": 0
+  },
+  "methods": {
+    "predictor": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+    "lineup": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+    "injury": "https://github.com/delta96040/dugout/blob/main/docs/backtests/injury.md",
+    "roles": "https://github.com/delta96040/dugout/blob/main/docs/backtests/roles.md",
+    "fingerprint": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+    "valuation": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+    "realism": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+    "scout": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+    "potential": "https://github.com/delta96040/dugout/blob/main/docs/backtests/potential.md",
+    "fit": "https://github.com/delta96040/dugout/blob/main/docs/backtests/opportunity.md",
+    "lookup": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/lookup.py"
+  },
+  "names": [
+    "Parma Calcio 1913"
+  ]
+}

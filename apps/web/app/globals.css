@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* "The Dossier": a scout's confidential file on a chalk tactics board. Card-red is the only accent. */
+:root {
+  --bone: #ece6d8;
+  --ink: #141414;
+  --turf: #23402f;
+  --chalk: #f6f3ea;
+  --pencil: #8a8478;
+  --card-red: #d7261e;
+}
+
+@theme inline {
+  --color-bone: var(--bone);
+  --color-ink: var(--ink);
+  --color-turf: var(--turf);
+  --color-chalk: var(--chalk);
+  --color-pencil: var(--pencil);
+  --color-red: var(--card-red);
+  --font-display: var(--font-instrument-serif), Georgia, serif;
+  --font-body: var(--font-newsreader), Georgia, serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+html {
+  background: var(--bone);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  /* paper fibre: two layered noise gradients, no image asset */
+  background-image:
+    radial-gradient(rgba(20, 20, 20, 0.035) 1px, transparent 1px),
+    radial-gradient(rgba(20, 20, 20, 0.025) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+}
+
+::selection {
+  background: var(--card-red);
+  color: var(--chalk);
+}
+
+:focus-visible {
+  outline: 2px solid var(--card-red);
+  outline-offset: 3px;
+}
+
+/* the 12-column editorial grid; headlines hang from column 2 */
+.grid12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(0.75rem, 2vw, 1.5rem);
+  padding-inline: clamp(1rem, 4vw, 3.5rem);
+}
+
+.hang {
+  grid-column: 2 / span 10;
+}
+@media (max-width: 720px) {
+  .hang {
+    grid-column: 1 / -1;
+  }
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pencil);
+}
+
+/* oversized numbers that bleed off the right edge */
+.bleed {
+  font-family: var(--font-mono);
+  font-size: clamp(5rem, 18vw, 16rem);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  margin-right: calc(-1 * clamp(1rem, 6vw, 5rem));
+  text-align: right;
+}
+
+/* a rubber stamp, slightly rotated, in card-red */
+.stamp {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--card-red);
+  border: 3px solid var(--card-red);
+  padding: 0.2em 0.6em;
+  transform: rotate(-6deg);
+  mix-blend-mode: multiply;
+}
+
+/* a typed rule under headings, like a ruled index card */
+.ruled {
+  border-bottom: 1px solid var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Lenis smooth scroll (its recommended base styles) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* provenance cards on numbers (<Num>, <MetaNum>): CSS-only, so pages hydrate no per-number state.
+   Hover, keyboard focus or a tap (components/Tips.tsx sets data-open) shows the card; Escape closes it. */
+.tip-card {
+  display: none;
+}
+.tip:hover > .tip-card,
+.tip:focus-within > .tip-card,
+.tip[data-open] > .tip-card {
+  display: block;
+}
+.tip[data-closed] > .tip-card {
+  display: none;
+}
+/* bridge the gap between number and card so the pointer can reach the card's link */
+.tip-card::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem 0 100% 0;
+}
+
+/* scoreboard table numbers: the <Num> button look as one short class (repeated ~500 times on the page) */
+.sb-num {
+  cursor: help;
+  font-family: var(--font-mono);
+  text-decoration: underline dotted 1px var(--pencil);
+  text-underline-offset: 4px;
+}

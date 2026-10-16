@@ -1,0 +1,2910 @@
+{
+  "schema": "dugout.club/1",
+  "club": {
+    "slug": "sunderland",
+    "name": "Sunderland",
+    "season": "2026-27"
+  },
+  "generated_at": "2026-10-16T10:18:18+00:00",
+  "data_as_of": "2026-10-16T09:56:02+00:00",
+  "llm": null,
+  "summary": {
+    "agent": "director",
+    "title": "Sporting Director",
+    "question": "Summarise the dossier on Sunderland for the board.",
+    "status": "published",
+    "writer": "template",
+    "claims": [
+      {
+        "segments": [
+          {
+            "text": "Sunderland are "
+          },
+          {
+            "stat": "ev_6d332be8049cd984",
+            "display": "17th"
+          },
+          {
+            "text": " in the Premier League table."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      },
+      {
+        "segments": [
+          {
+            "text": "Sunderland have "
+          },
+          {
+            "stat": "ev_b893aabfbbecfcf0",
+            "display": "4"
+          },
+          {
+            "text": " points."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      },
+      {
+        "segments": [
+          {
+            "text": "Sunderland's next league match is AFC Bournemouth v Sunderland on "
+          },
+          {
+            "stat": "ev_fefd2a0a20d6a24b",
+            "display": "18 October 2026"
+          },
+          {
+            "text": "."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      },
+      {
+        "segments": [
+          {
+            "text": "The lineup model sets Sunderland up in a "
+          },
+          {
+            "stat": "ev_ec7ce4548c198e8a",
+            "display": "4-3-3"
+          },
+          {
+            "text": " for the next match."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      }
+    ],
+    "withheld": []
+  },
+  "sections": [
+    {
+      "agent": "club",
+      "title": "Club & Tactics",
+      "question": "How are Sunderland doing this season, and how do they play under their head coach?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "Sunderland are "
+            },
+            {
+              "stat": "ev_6d332be8049cd984",
+              "display": "17th"
+            },
+            {
+              "text": " in the Premier League table."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sunderland have "
+            },
+            {
+              "stat": "ev_b893aabfbbecfcf0",
+              "display": "4"
+            },
+            {
+              "text": " points."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sunderland have scored "
+            },
+            {
+              "stat": "ev_e9ad902b58186889",
+              "display": "6"
+            },
+            {
+              "text": " league goals."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sunderland have conceded "
+            },
+            {
+              "stat": "ev_0470e45d96331ed5",
+              "display": "12"
+            },
+            {
+              "text": " league goals."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sunderland's most recent league results read "
+            },
+            {
+              "stat": "ev_ab8515610f9b567f",
+              "display": "LLLDW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sunderland's Elo rating is "
+            },
+            {
+              "stat": "ev_54c8b4ad296c27d1",
+              "display": "1392"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Régis Le Bris has been Sunderland's head coach since "
+            },
+            {
+              "stat": "ev_29b6d62a78311b87",
+              "display": "1 July 2024"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Régis Le Bris's style profile covers "
+            },
+            {
+              "stat": "ev_f852c6b853f0b8ab",
+              "display": "44"
+            },
+            {
+              "text": " Premier League matches."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Teams under Bris have taken "
+            },
+            {
+              "stat": "ev_499ad4e972ceb97a",
+              "display": "44%"
+            },
+            {
+              "text": " of the threat in their matches, close to the league average."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Teams under Bris average "
+            },
+            {
+              "stat": "ev_50d7aabeeb93cf07",
+              "display": "101"
+            },
+            {
+              "text": " defensive actions per match, close to the league average."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "match",
+      "title": "Match Predictor",
+      "question": "What does the model expect from Sunderland's next league match?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "Sunderland's next league match is AFC Bournemouth v Sunderland on "
+            },
+            {
+              "stat": "ev_fefd2a0a20d6a24b",
+              "display": "18 October 2026"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model gives AFC Bournemouth a "
+            },
+            {
+              "stat": "ev_8157ae8fe3fd737f",
+              "display": "54%"
+            },
+            {
+              "text": " chance of winning against Sunderland."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model gives AFC Bournemouth v Sunderland a "
+            },
+            {
+              "stat": "ev_0148fc29b22421bd",
+              "display": "25%"
+            },
+            {
+              "text": " chance of ending in a draw."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model gives Sunderland a "
+            },
+            {
+              "stat": "ev_7773f196e793481f",
+              "display": "21%"
+            },
+            {
+              "text": " chance of winning against AFC Bournemouth."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model expects AFC Bournemouth to score "
+            },
+            {
+              "stat": "ev_df7ca3d8b4dfa027",
+              "display": "1.7"
+            },
+            {
+              "text": " goals against Sunderland."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model expects Sunderland to score "
+            },
+            {
+              "stat": "ev_61a79bb0239e3830",
+              "display": "1.1"
+            },
+            {
+              "text": " goals against AFC Bournemouth."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sunderland's Elo rating is "
+            },
+            {
+              "stat": "ev_54c8b4ad296c27d1",
+              "display": "1392"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "AFC Bournemouth's Elo rating is "
+            },
+            {
+              "stat": "ev_cdf711b0ed6886b0",
+              "display": "1523"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "lineup",
+      "title": "Lineup Selector",
+      "question": "What is Sunderland's predicted lineup for the next match?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "The lineup model sets Sunderland up in a "
+            },
+            {
+              "stat": "ev_ec7ce4548c198e8a",
+              "display": "4-3-3"
+            },
+            {
+              "text": " for the next match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Robin Roefs at "
+            },
+            {
+              "stat": "ev_514063f965229536",
+              "display": "GK"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Thomas Meunier at "
+            },
+            {
+              "stat": "ev_316f0b3814bfe314",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Kevin Danso at "
+            },
+            {
+              "stat": "ev_3121c448d79970ca",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Nordi Mukiele at "
+            },
+            {
+              "stat": "ev_4bfce493cbde6111",
+              "display": "RB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Reinildo Mandava at "
+            },
+            {
+              "stat": "ev_ce8198cbf2060edd",
+              "display": "LB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Granit Xhaka at "
+            },
+            {
+              "stat": "ev_4f8853fa9b3ca915",
+              "display": "DM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Noah Sadiki at "
+            },
+            {
+              "stat": "ev_14f47bf913457cd6",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Enzo Le Fée at "
+            },
+            {
+              "stat": "ev_5d7b093d04bc7ec3",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Djiamgone Jocelin Ta Bi at "
+            },
+            {
+              "stat": "ev_bdc92cbff2460f68",
+              "display": "RW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Nilson Angulo at "
+            },
+            {
+              "stat": "ev_2605440893735b60",
+              "display": "LW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Wilson Isidor at "
+            },
+            {
+              "stat": "ev_b80b7680b9ed8fc5",
+              "display": "CF"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "news",
+      "title": "News & Injury",
+      "question": "Who is unavailable for Sunderland, and what is the latest news?",
+      "status": "withheld",
+      "writer": "template",
+      "claims": [],
+      "withheld": [
+        {
+          "text": "number not from the ledger: 'Ten'",
+          "status": "audit_error",
+          "reason": "stray_number"
+        }
+      ]
+    },
+    {
+      "agent": "transfer",
+      "title": "Transfer & Valuation",
+      "question": "Which Sunderland players could be sold, and what are the key players worth?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "The mobility model puts Noah Sadiki's sale likelihood in a transfer window at "
+            },
+            {
+              "stat": "ev_7e230edb21856d2f",
+              "display": "44%"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The mobility model puts Chris Rigg's sale likelihood in a transfer window at "
+            },
+            {
+              "stat": "ev_bb807b819f873e1e",
+              "display": "41%"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The mobility model puts Robin Roefs's sale likelihood in a transfer window at "
+            },
+            {
+              "stat": "ev_42c05f8f70177c75",
+              "display": "39%"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Noah Sadiki at "
+            },
+            {
+              "stat": "ev_e620b549e09223f1",
+              "display": "€40.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Noah Sadiki's fair fee at "
+            },
+            {
+              "stat": "ev_efe4a6123ad9c3a5",
+              "display": "€39.4m"
+            },
+            {
+              "text": ", in line with his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Robin Roefs at "
+            },
+            {
+              "stat": "ev_74cae1c107e39711",
+              "display": "€30.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Robin Roefs's fair fee at "
+            },
+            {
+              "stat": "ev_1fc48cf7cbb9d05e",
+              "display": "€27.5m"
+            },
+            {
+              "text": ", in line with his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Brian Brobbey at "
+            },
+            {
+              "stat": "ev_2f59dc20553681b0",
+              "display": "€50.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Brian Brobbey's fair fee at "
+            },
+            {
+              "stat": "ev_801332e7f4231c29",
+              "display": "€47.9m"
+            },
+            {
+              "text": ", in line with his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Kevin Danso's contract runs until "
+            },
+            {
+              "stat": "ev_cf2a8712d007f742",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Luke O'Nien's contract runs until "
+            },
+            {
+              "stat": "ev_4dd7fb9391eb4be7",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Reinildo Mandava's contract runs until "
+            },
+            {
+              "stat": "ev_f196f1d24251cab1",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "scout",
+      "title": "Scout",
+      "question": "Where should Sunderland strengthen, and who fits?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "The squad model ranks "
+            },
+            {
+              "stat": "ev_acdfec741dc2014e",
+              "display": "defensive midfield"
+            },
+            {
+              "text": " as Sunderland's biggest need."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Ethan Ampadu (Leeds United) is "
+            },
+            {
+              "stat": "ev_771f09738bdb1c29",
+              "display": "26"
+            },
+            {
+              "text": " years old."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Ethan Ampadu has a market value of "
+            },
+            {
+              "stat": "ev_9d3bda580cacee84",
+              "display": "€35.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Ethan Ampadu's fair fee at "
+            },
+            {
+              "stat": "ev_a5eaf2a149e0d7ca",
+              "display": "€32.2m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The playing-time model expects Ethan Ampadu to play "
+            },
+            {
+              "stat": "ev_ed3d2eb4a894ab31",
+              "display": "59%"
+            },
+            {
+              "text": " of Sunderland's minutes."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The realism model gives a move for Ethan Ampadu to Sunderland a "
+            },
+            {
+              "stat": "ev_af118527683da65f",
+              "display": "0.4%"
+            },
+            {
+              "text": " chance in a transfer window."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Anton Stach (Leeds United) is "
+            },
+            {
+              "stat": "ev_2854015968958449",
+              "display": "28"
+            },
+            {
+              "text": " years old."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Anton Stach has a market value of "
+            },
+            {
+              "stat": "ev_b22a890d58890a5f",
+              "display": "€32.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Anton Stach's fair fee at "
+            },
+            {
+              "stat": "ev_1e39a298a8a5096e",
+              "display": "€28.9m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The playing-time model expects Anton Stach to play "
+            },
+            {
+              "stat": "ev_c0ba1c5e7ce44494",
+              "display": "54%"
+            },
+            {
+              "text": " of Sunderland's minutes."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The realism model gives a move for Anton Stach to Sunderland a "
+            },
+            {
+              "stat": "ev_667a2667118fafbb",
+              "display": "0.2%"
+            },
+            {
+              "text": " chance in a transfer window."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sander Berge (Fulham FC) is "
+            },
+            {
+              "stat": "ev_d4dc4323fd47f9d9",
+              "display": "29"
+            },
+            {
+              "text": " years old."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sander Berge has a market value of "
+            },
+            {
+              "stat": "ev_ac9b8f9ab91e7f03",
+              "display": "€25.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The squad model ranks "
+            },
+            {
+              "stat": "ev_3fd73fa3cfec920c",
+              "display": "centre-back"
+            },
+            {
+              "text": " as Sunderland's second need."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    }
+  ],
+  "stats": {
+    "ev_0148fc29b22421bd": {
+      "value": 0.2544,
+      "display": "0.25",
+      "unit": null,
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:bournemouth:sunderland",
+      "entity_name": "AFC Bournemouth v Sunderland",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0470e45d96331ed5": {
+      "value": 12.0,
+      "display": "12",
+      "unit": null,
+      "metric": "league_goalsAgainst",
+      "entity_type": "club",
+      "entity_id": "sunderland",
+      "entity_name": "Sunderland",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_14f47bf913457cd6": {
+      "value": "CM",
+      "display": "CM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpe2c59f4243cfa2",
+      "entity_name": "Noah Sadiki",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_191469a00fd6c470": {
+      "value": 25.5,
+      "display": "25.50",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp2e83ddb73f9247",
+      "entity_name": "Nathan Collins",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1b096308b04de126": {
+      "value": 28000000.0,
+      "display": "28000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpa6d787efb1565c",
+      "entity_name": "Chris Richards",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1e39a298a8a5096e": {
+      "value": 28900000.0,
+      "display": "28900000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp15da29a0b98070",
+      "entity_name": "Anton Stach",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1fc48cf7cbb9d05e": {
+      "value": 27500000.0,
+      "display": "27500000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_23a9c78a3047fe8f": {
+      "value": 24800000.0,
+      "display": "24800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp2e83ddb73f9247",
+      "entity_name": "Nathan Collins",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2605440893735b60": {
+      "value": "LW",
+      "display": "LW",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp9484d14ddb4534",
+      "entity_name": "Nilson Angulo",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_27235a4cbd2f3c71": {
+      "value": 0.4317,
+      "display": "0.43",
+      "unit": null,
+      "metric": "creativity_share",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q3455749",
+      "entity_name": "Régis Le Bris",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2854015968958449": {
+      "value": 27.9,
+      "display": "27.90",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp15da29a0b98070",
+      "entity_name": "Anton Stach",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_29b6d62a78311b87": {
+      "value": "2024-07-01",
+      "display": "2024-07-01",
+      "unit": null,
+      "metric": "appointed",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q3455749",
+      "entity_name": "Régis Le Bris",
+      "source": "wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q3455749",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T16:00:03.045278+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_2f59dc20553681b0": {
+      "value": 50000000.0,
+      "display": "50000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp839691657827d5",
+      "entity_name": "Brian Brobbey",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/289/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_3121c448d79970ca": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp2a39022317999c",
+      "entity_name": "Kevin Danso",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_316f0b3814bfe314": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp29058d1009e215",
+      "entity_name": "Thomas Meunier",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_31bb986f7490fe04": {
+      "value": 1.4677,
+      "display": "1.47",
+      "unit": null,
+      "metric": "xg_against",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q3455749",
+      "entity_name": "Régis Le Bris",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3e24b2ceac012d54": {
+      "value": 0.0077,
+      "display": "0.01",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rpa6d787efb1565c",
+      "entity_name": "Chris Richards",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3fd73fa3cfec920c": {
+      "value": "centre-back",
+      "display": "centre-back",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "sunderland",
+      "entity_name": "Sunderland",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_42c05f8f70177c75": {
+      "value": 0.386,
+      "display": "0.39",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_466537c912762b4b": {
+      "value": 28000000.0,
+      "display": "28000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpc19514ab13c20c",
+      "entity_name": "Calvin Bassey",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_499ad4e972ceb97a": {
+      "value": 0.4392,
+      "display": "0.44",
+      "unit": null,
+      "metric": "threat_share",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q3455749",
+      "entity_name": "Régis Le Bris",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4bfce493cbde6111": {
+      "value": "RB",
+      "display": "RB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp4d88d733fd8a24",
+      "entity_name": "Nordi Mukiele",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4dd7fb9391eb4be7": {
+      "value": "2027-06-30",
+      "display": "2027-06-30",
+      "unit": null,
+      "metric": "contract_expires",
+      "entity_type": "player",
+      "entity_id": "rp868d8749210795",
+      "entity_name": "Luke O'Nien",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_4f8853fa9b3ca915": {
+      "value": "DM",
+      "display": "DM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp7ce856598ad9ad",
+      "entity_name": "Granit Xhaka",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_50d7aabeeb93cf07": {
+      "value": 101.4773,
+      "display": "101.48",
+      "unit": null,
+      "metric": "def_actions",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q3455749",
+      "entity_name": "Régis Le Bris",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_514063f965229536": {
+      "value": "GK",
+      "display": "GK",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_51d83662269d28e4": {
+      "value": 30000000.0,
+      "display": "30000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp2e83ddb73f9247",
+      "entity_name": "Nathan Collins",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_54c8b4ad296c27d1": {
+      "value": 1392.2,
+      "display": "1392.20",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "sunderland",
+      "entity_name": "Sunderland",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5d7b093d04bc7ec3": {
+      "value": "CM",
+      "display": "CM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp346d144cc1c6d0",
+      "entity_name": "Enzo Le Fée",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_60ae5eb6ff2d0f04": {
+      "value": 25700000.0,
+      "display": "25700000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpa6d787efb1565c",
+      "entity_name": "Chris Richards",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_61a79bb0239e3830": {
+      "value": 1.083,
+      "display": "1.08",
+      "unit": null,
+      "metric": "exp_away_goals",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:bournemouth:sunderland",
+      "entity_name": "AFC Bournemouth v Sunderland",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_667a2667118fafbb": {
+      "value": 0.0022,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rp15da29a0b98070",
+      "entity_name": "Anton Stach",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6d332be8049cd984": {
+      "value": 17.0,
+      "display": "17",
+      "unit": null,
+      "metric": "league_position",
+      "entity_type": "club",
+      "entity_id": "sunderland",
+      "entity_name": "Sunderland",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_74cae1c107e39711": {
+      "value": 30000000.0,
+      "display": "30000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/289/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_771f09738bdb1c29": {
+      "value": 26.1,
+      "display": "26.10",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpcc2611efdf820f",
+      "entity_name": "Ethan Ampadu",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7773f196e793481f": {
+      "value": 0.2087,
+      "display": "0.21",
+      "unit": null,
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:bournemouth:sunderland",
+      "entity_name": "AFC Bournemouth v Sunderland",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7e230edb21856d2f": {
+      "value": 0.444,
+      "display": "0.44",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rpe2c59f4243cfa2",
+      "entity_name": "Noah Sadiki",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_801332e7f4231c29": {
+      "value": 47900000.0,
+      "display": "47900000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp839691657827d5",
+      "entity_name": "Brian Brobbey",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_8157ae8fe3fd737f": {
+      "value": 0.537,
+      "display": "0.54",
+      "unit": null,
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:bournemouth:sunderland",
+      "entity_name": "AFC Bournemouth v Sunderland",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_85dffbb9dd062c5a": {
+      "value": 20700000.0,
+      "display": "20700000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp64f2ae81c53626",
+      "entity_name": "Sander Berge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_8d1d9e3acae21613": {
+      "value": 1.1143,
+      "display": "1.11",
+      "unit": null,
+      "metric": "xg_for",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q3455749",
+      "entity_name": "Régis Le Bris",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9cc06b580069e917": {
+      "value": 0.638,
+      "display": "0.64",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rpa6d787efb1565c",
+      "entity_name": "Chris Richards",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9d3bda580cacee84": {
+      "value": 35000000.0,
+      "display": "35000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpcc2611efdf820f",
+      "entity_name": "Ethan Ampadu",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a1eb19b6658a865c": {
+      "value": 26300000.0,
+      "display": "26300000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpc19514ab13c20c",
+      "entity_name": "Calvin Bassey",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a5eaf2a149e0d7ca": {
+      "value": 32200000.0,
+      "display": "32200000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpcc2611efdf820f",
+      "entity_name": "Ethan Ampadu",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ab8515610f9b567f": {
+      "value": "LLLDW",
+      "display": "LLLDW",
+      "unit": null,
+      "metric": "league_form",
+      "entity_type": "club",
+      "entity_id": "sunderland",
+      "entity_name": "Sunderland",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings",
+      "source_tier": 2,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_ac9b8f9ab91e7f03": {
+      "value": 25000000.0,
+      "display": "25000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp64f2ae81c53626",
+      "entity_name": "Sander Berge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_acdfec741dc2014e": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "sunderland",
+      "entity_name": "Sunderland",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ae30e86ce2f5b86f": {
+      "value": 26.8,
+      "display": "26.80",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpc19514ab13c20c",
+      "entity_name": "Calvin Bassey",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_af118527683da65f": {
+      "value": 0.0045,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rpcc2611efdf820f",
+      "entity_name": "Ethan Ampadu",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b22a890d58890a5f": {
+      "value": 32000000.0,
+      "display": "32000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp15da29a0b98070",
+      "entity_name": "Anton Stach",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b80b7680b9ed8fc5": {
+      "value": "CF",
+      "display": "CF",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp28c0f35118b968",
+      "entity_name": "Wilson Isidor",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b893aabfbbecfcf0": {
+      "value": 4.0,
+      "display": "4",
+      "unit": null,
+      "metric": "league_points",
+      "entity_type": "club",
+      "entity_id": "sunderland",
+      "entity_name": "Sunderland",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_bb807b819f873e1e": {
+      "value": 0.412,
+      "display": "0.41",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp29c040cb0fa657",
+      "entity_name": "Chris Rigg",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bdc92cbff2460f68": {
+      "value": "RW",
+      "display": "RW",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp76ea6c52147535",
+      "entity_name": "Djiamgone Jocelin Ta Bi",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c0ba1c5e7ce44494": {
+      "value": 0.544,
+      "display": "0.54",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp15da29a0b98070",
+      "entity_name": "Anton Stach",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cdf711b0ed6886b0": {
+      "value": 1522.7,
+      "display": "1522.70",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "bournemouth",
+      "entity_name": "AFC Bournemouth",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ce8198cbf2060edd": {
+      "value": "LB",
+      "display": "LB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp2095ade1cb7272",
+      "entity_name": "Reinildo Mandava",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cf2a8712d007f742": {
+      "value": "2027-06-30",
+      "display": "2027-06-30",
+      "unit": null,
+      "metric": "contract_expires",
+      "entity_type": "player",
+      "entity_id": "rp2a39022317999c",
+      "entity_name": "Kevin Danso",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_d1d074f94d2fbbed": {
+      "value": 0.625,
+      "display": "0.62",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rpc19514ab13c20c",
+      "entity_name": "Calvin Bassey",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d4dc4323fd47f9d9": {
+      "value": 28.7,
+      "display": "28.70",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp64f2ae81c53626",
+      "entity_name": "Sander Berge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d7323e0c78119c84": {
+      "value": 0.0063,
+      "display": "0.01",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rpc19514ab13c20c",
+      "entity_name": "Calvin Bassey",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_df7ca3d8b4dfa027": {
+      "value": 1.69,
+      "display": "1.69",
+      "unit": null,
+      "metric": "exp_home_goals",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:bournemouth:sunderland",
+      "entity_name": "AFC Bournemouth v Sunderland",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e0f2235113cbac58": {
+      "value": 0.0017,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rp64f2ae81c53626",
+      "entity_name": "Sander Berge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e3856c36b2081727": {
+      "value": 26.5,
+      "display": "26.50",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpa6d787efb1565c",
+      "entity_name": "Chris Richards",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e620b549e09223f1": {
+      "value": 40000000.0,
+      "display": "40000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpe2c59f4243cfa2",
+      "entity_name": "Noah Sadiki",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/289/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_e9ad902b58186889": {
+      "value": 6.0,
+      "display": "6",
+      "unit": null,
+      "metric": "league_goalsFor",
+      "entity_type": "club",
+      "entity_id": "sunderland",
+      "entity_name": "Sunderland",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_eb2726c0a60762c3": {
+      "value": 0.617,
+      "display": "0.62",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp64f2ae81c53626",
+      "entity_name": "Sander Berge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ec57114706284f12": {
+      "value": 75.0,
+      "display": "75",
+      "unit": "%",
+      "metric": "season_chance_of_playing_next_round",
+      "entity_type": "player",
+      "entity_id": "rp29058d1009e215",
+      "entity_name": "Thomas Meunier",
+      "source": "fpl",
+      "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+      "source_tier": 1,
+      "fetched_at": "2026-10-15T15:33:26.314654+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_ec7ce4548c198e8a": {
+      "value": "4-3-3",
+      "display": "4-3-3",
+      "unit": null,
+      "metric": "predicted_formation",
+      "entity_type": "club",
+      "entity_id": "sunderland",
+      "entity_name": "Sunderland",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ed3d2eb4a894ab31": {
+      "value": 0.589,
+      "display": "0.59",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rpcc2611efdf820f",
+      "entity_name": "Ethan Ampadu",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_eda49232eadfce81": {
+      "value": 0.617,
+      "display": "0.62",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp2e83ddb73f9247",
+      "entity_name": "Nathan Collins",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_efe4a6123ad9c3a5": {
+      "value": 39400000.0,
+      "display": "39400000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpe2c59f4243cfa2",
+      "entity_name": "Noah Sadiki",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f196f1d24251cab1": {
+      "value": "2027-06-30",
+      "display": "2027-06-30",
+      "unit": null,
+      "metric": "contract_expires",
+      "entity_type": "player",
+      "entity_id": "rp2095ade1cb7272",
+      "entity_name": "Reinildo Mandava",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_f3ca117b99d432c9": {
+      "value": 0.003,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rp2e83ddb73f9247",
+      "entity_name": "Nathan Collins",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f852c6b853f0b8ab": {
+      "value": 44.0,
+      "display": "44",
+      "unit": null,
+      "metric": "pl_matches",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q3455749",
+      "entity_name": "Régis Le Bris",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fefd2a0a20d6a24b": {
+      "value": "2026-10-18T13:00:00+00:00",
+      "display": "2026-10-18T13:00:00+00:00",
+      "unit": null,
+      "metric": "kickoff_utc",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:bournemouth:sunderland",
+      "entity_name": "AFC Bournemouth v Sunderland",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    }
+  },
+  "key_stats": {
+    "club": [
+      {
+        "stat": "ev_6d332be8049cd984",
+        "display": "17th",
+        "label": "league position",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_b893aabfbbecfcf0",
+        "display": "4",
+        "label": "league points",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_e9ad902b58186889",
+        "display": "6",
+        "label": "league goals scored",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_0470e45d96331ed5",
+        "display": "12",
+        "label": "league goals conceded",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_ab8515610f9b567f",
+        "display": "LLLDW",
+        "label": "recent league results, oldest first",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_54c8b4ad296c27d1",
+        "display": "1392",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_29b6d62a78311b87",
+        "display": "1 July 2024",
+        "label": "appointed head coach of Sunderland",
+        "subject": "Régis Le Bris"
+      },
+      {
+        "stat": "ev_f852c6b853f0b8ab",
+        "display": "44",
+        "label": "Premier League matches in the style sample",
+        "subject": "Régis Le Bris"
+      },
+      {
+        "stat": "ev_499ad4e972ceb97a",
+        "display": "44%",
+        "label": "share of the match threat (territory)",
+        "subject": "Régis Le Bris"
+      },
+      {
+        "stat": "ev_50d7aabeeb93cf07",
+        "display": "101",
+        "label": "defensive actions per match",
+        "subject": "Régis Le Bris"
+      },
+      {
+        "stat": "ev_8d1d9e3acae21613",
+        "display": "1.11",
+        "label": "expected goals for per match",
+        "subject": "Régis Le Bris"
+      },
+      {
+        "stat": "ev_31bb986f7490fe04",
+        "display": "1.47",
+        "label": "expected goals against per match",
+        "subject": "Régis Le Bris"
+      },
+      {
+        "stat": "ev_27235a4cbd2f3c71",
+        "display": "43%",
+        "label": "share of chance creation",
+        "subject": "Régis Le Bris"
+      }
+    ],
+    "match": [
+      {
+        "stat": "ev_fefd2a0a20d6a24b",
+        "display": "18 October 2026",
+        "label": "kick-off date",
+        "subject": "AFC Bournemouth v Sunderland"
+      },
+      {
+        "stat": "ev_8157ae8fe3fd737f",
+        "display": "54%",
+        "label": "probability AFC Bournemouth win",
+        "subject": "AFC Bournemouth"
+      },
+      {
+        "stat": "ev_0148fc29b22421bd",
+        "display": "25%",
+        "label": "probability of a draw",
+        "subject": "AFC Bournemouth v Sunderland"
+      },
+      {
+        "stat": "ev_7773f196e793481f",
+        "display": "21%",
+        "label": "probability Sunderland win",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_df7ca3d8b4dfa027",
+        "display": "1.7",
+        "label": "expected goals in this match",
+        "subject": "AFC Bournemouth"
+      },
+      {
+        "stat": "ev_61a79bb0239e3830",
+        "display": "1.1",
+        "label": "expected goals in this match",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_54c8b4ad296c27d1",
+        "display": "1392",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_cdf711b0ed6886b0",
+        "display": "1523",
+        "label": "Elo rating (dugout's own)",
+        "subject": "AFC Bournemouth"
+      }
+    ],
+    "lineup": [
+      {
+        "stat": "ev_ec7ce4548c198e8a",
+        "display": "4-3-3",
+        "label": "predicted formation for the next match",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_514063f965229536",
+        "display": "GK",
+        "label": "predicted starting slot (goalkeeper)",
+        "subject": "Robin Roefs"
+      },
+      {
+        "stat": "ev_316f0b3814bfe314",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Thomas Meunier"
+      },
+      {
+        "stat": "ev_3121c448d79970ca",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Kevin Danso"
+      },
+      {
+        "stat": "ev_4bfce493cbde6111",
+        "display": "RB",
+        "label": "predicted starting slot (right-back)",
+        "subject": "Nordi Mukiele"
+      },
+      {
+        "stat": "ev_ce8198cbf2060edd",
+        "display": "LB",
+        "label": "predicted starting slot (left-back)",
+        "subject": "Reinildo Mandava"
+      },
+      {
+        "stat": "ev_4f8853fa9b3ca915",
+        "display": "DM",
+        "label": "predicted starting slot (defensive midfield)",
+        "subject": "Granit Xhaka"
+      },
+      {
+        "stat": "ev_14f47bf913457cd6",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Noah Sadiki"
+      },
+      {
+        "stat": "ev_5d7b093d04bc7ec3",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Enzo Le Fée"
+      },
+      {
+        "stat": "ev_bdc92cbff2460f68",
+        "display": "RW",
+        "label": "predicted starting slot (right wing)",
+        "subject": "Djiamgone Jocelin Ta Bi"
+      },
+      {
+        "stat": "ev_2605440893735b60",
+        "display": "LW",
+        "label": "predicted starting slot (left wing)",
+        "subject": "Nilson Angulo"
+      },
+      {
+        "stat": "ev_b80b7680b9ed8fc5",
+        "display": "CF",
+        "label": "predicted starting slot (centre-forward)",
+        "subject": "Wilson Isidor"
+      }
+    ],
+    "news": [
+      {
+        "stat": "ev_ec57114706284f12",
+        "display": "75",
+        "label": "chance of playing next round (FPL)",
+        "subject": "Thomas Meunier"
+      }
+    ],
+    "transfer": [
+      {
+        "stat": "ev_7e230edb21856d2f",
+        "display": "44%",
+        "label": "model estimate of being sold for a fee in a window (no academy or contract-length signal)",
+        "subject": "Noah Sadiki"
+      },
+      {
+        "stat": "ev_bb807b819f873e1e",
+        "display": "41%",
+        "label": "model estimate of being sold for a fee in a window (no academy or contract-length signal)",
+        "subject": "Chris Rigg"
+      },
+      {
+        "stat": "ev_42c05f8f70177c75",
+        "display": "39%",
+        "label": "model estimate of being sold for a fee in a window (no academy or contract-length signal)",
+        "subject": "Robin Roefs"
+      },
+      {
+        "stat": "ev_e620b549e09223f1",
+        "display": "€40.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Noah Sadiki"
+      },
+      {
+        "stat": "ev_efe4a6123ad9c3a5",
+        "display": "€39.4m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Noah Sadiki"
+      },
+      {
+        "stat": "ev_74cae1c107e39711",
+        "display": "€30.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Robin Roefs"
+      },
+      {
+        "stat": "ev_1fc48cf7cbb9d05e",
+        "display": "€27.5m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Robin Roefs"
+      },
+      {
+        "stat": "ev_2f59dc20553681b0",
+        "display": "€50.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Brian Brobbey"
+      },
+      {
+        "stat": "ev_801332e7f4231c29",
+        "display": "€47.9m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Brian Brobbey"
+      },
+      {
+        "stat": "ev_cf2a8712d007f742",
+        "display": "30 June 2027",
+        "label": "contract expiry",
+        "subject": "Kevin Danso"
+      },
+      {
+        "stat": "ev_4dd7fb9391eb4be7",
+        "display": "30 June 2027",
+        "label": "contract expiry",
+        "subject": "Luke O'Nien"
+      },
+      {
+        "stat": "ev_f196f1d24251cab1",
+        "display": "30 June 2027",
+        "label": "contract expiry",
+        "subject": "Reinildo Mandava"
+      }
+    ],
+    "scout": [
+      {
+        "stat": "ev_acdfec741dc2014e",
+        "display": "defensive midfield",
+        "label": "squad need, priority one",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_771f09738bdb1c29",
+        "display": "26",
+        "label": "age",
+        "subject": "Ethan Ampadu"
+      },
+      {
+        "stat": "ev_9d3bda580cacee84",
+        "display": "€35.0m",
+        "label": "market value",
+        "subject": "Ethan Ampadu"
+      },
+      {
+        "stat": "ev_a5eaf2a149e0d7ca",
+        "display": "€32.2m",
+        "label": "fair fee (valuation model)",
+        "subject": "Ethan Ampadu"
+      },
+      {
+        "stat": "ev_ed3d2eb4a894ab31",
+        "display": "59%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Ethan Ampadu"
+      },
+      {
+        "stat": "ev_af118527683da65f",
+        "display": "0.4%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Ethan Ampadu"
+      },
+      {
+        "stat": "ev_2854015968958449",
+        "display": "28",
+        "label": "age",
+        "subject": "Anton Stach"
+      },
+      {
+        "stat": "ev_b22a890d58890a5f",
+        "display": "€32.0m",
+        "label": "market value",
+        "subject": "Anton Stach"
+      },
+      {
+        "stat": "ev_1e39a298a8a5096e",
+        "display": "€28.9m",
+        "label": "fair fee (valuation model)",
+        "subject": "Anton Stach"
+      },
+      {
+        "stat": "ev_c0ba1c5e7ce44494",
+        "display": "54%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Anton Stach"
+      },
+      {
+        "stat": "ev_667a2667118fafbb",
+        "display": "0.2%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Anton Stach"
+      },
+      {
+        "stat": "ev_d4dc4323fd47f9d9",
+        "display": "29",
+        "label": "age",
+        "subject": "Sander Berge"
+      },
+      {
+        "stat": "ev_ac9b8f9ab91e7f03",
+        "display": "€25.0m",
+        "label": "market value",
+        "subject": "Sander Berge"
+      },
+      {
+        "stat": "ev_85dffbb9dd062c5a",
+        "display": "€20.7m",
+        "label": "fair fee (valuation model)",
+        "subject": "Sander Berge"
+      },
+      {
+        "stat": "ev_eb2726c0a60762c3",
+        "display": "62%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Sander Berge"
+      },
+      {
+        "stat": "ev_e0f2235113cbac58",
+        "display": "0.2%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Sander Berge"
+      },
+      {
+        "stat": "ev_3fd73fa3cfec920c",
+        "display": "centre-back",
+        "label": "squad need, priority two",
+        "subject": "Sunderland"
+      },
+      {
+        "stat": "ev_e3856c36b2081727",
+        "display": "26",
+        "label": "age",
+        "subject": "Chris Richards"
+      },
+      {
+        "stat": "ev_1b096308b04de126",
+        "display": "€28.0m",
+        "label": "market value",
+        "subject": "Chris Richards"
+      },
+      {
+        "stat": "ev_60ae5eb6ff2d0f04",
+        "display": "€25.7m",
+        "label": "fair fee (valuation model)",
+        "subject": "Chris Richards"
+      },
+      {
+        "stat": "ev_9cc06b580069e917",
+        "display": "64%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Chris Richards"
+      },
+      {
+        "stat": "ev_3e24b2ceac012d54",
+        "display": "0.8%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Chris Richards"
+      },
+      {
+        "stat": "ev_ae30e86ce2f5b86f",
+        "display": "27",
+        "label": "age",
+        "subject": "Calvin Bassey"
+      },
+      {
+        "stat": "ev_466537c912762b4b",
+        "display": "€28.0m",
+        "label": "market value",
+        "subject": "Calvin Bassey"
+      },
+      {
+        "stat": "ev_a1eb19b6658a865c",
+        "display": "€26.3m",
+        "label": "fair fee (valuation model)",
+        "subject": "Calvin Bassey"
+      },
+      {
+        "stat": "ev_d1d074f94d2fbbed",
+        "display": "62%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Calvin Bassey"
+      },
+      {
+        "stat": "ev_d7323e0c78119c84",
+        "display": "0.6%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Calvin Bassey"
+      },
+      {
+        "stat": "ev_191469a00fd6c470",
+        "display": "26",
+        "label": "age",
+        "subject": "Nathan Collins"
+      },
+      {
+        "stat": "ev_51d83662269d28e4",
+        "display": "€30.0m",
+        "label": "market value",
+        "subject": "Nathan Collins"
+      },
+      {
+        "stat": "ev_23a9c78a3047fe8f",
+        "display": "€24.8m",
+        "label": "fair fee (valuation model)",
+        "subject": "Nathan Collins"
+      },
+      {
+        "stat": "ev_eda49232eadfce81",
+        "display": "62%",
+        "label": "expected share of minutes at the club (playing-time model)",
+        "subject": "Nathan Collins"
+      },
+      {
+        "stat": "ev_f3ca117b99d432c9",
+        "display": "0.3%",
+        "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
+        "subject": "Nathan Collins"
+      }
+    ]
+  },
+  "verification": {
+    "stat_auditor": {
+      "ok": true,
+      "numbers_total": 60,
+      "numbers_untraceable": 0
+    },
+    "fact_check_claims": {
+      "verified": 69
+    },
+    "sections_published": 6,
+    "sections_withheld": 1
+  },
+  "methods": {
+    "predictor": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+    "lineup": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+    "injury": "https://github.com/delta96040/dugout/blob/main/docs/backtests/injury.md",
+    "roles": "https://github.com/delta96040/dugout/blob/main/docs/backtests/roles.md",
+    "fingerprint": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+    "valuation": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+    "realism": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+    "scout": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+    "potential": "https://github.com/delta96040/dugout/blob/main/docs/backtests/potential.md",
+    "fit": "https://github.com/delta96040/dugout/blob/main/docs/backtests/opportunity.md",
+    "lookup": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/lookup.py"
+  },
+  "names": []
+}

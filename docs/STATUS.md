@@ -7,8 +7,54 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   Secrets set (API_FOOTBALL_KEY, FOOTBALL_DATA_ORG_KEY, GUARDIAN_API_KEY, OPENROUTER_API_KEY, HF_TOKEN).
 - **Phase 2 — core models: DONE.** Predictor beats Elo on 2024-25 and 2025-26 (all of RPS/log loss/Brier).
   Weak models improved; FootballBERT evaluated and *not adopted* (leakage). See `docs/backtests/README.md`.
-- **Next: Phase 3 — agents and verification** (LangGraph orchestrator + 6 agents, evidence ledger tools,
-  Stat Auditor, Fact-Check, `data/clubs/<slug>.json`, 50-question eval). User has not yet said "go" for Phase 3.
+- **Phase 3 — agents & verification: DONE (2026-10-16), PR delta96040/dugout#1** (branch
+  `phase-3-agents-verification`). Awaiting user review / go-ahead for Phase 4. See docs/agents.md.
+  - Verify: Stat Auditor, Fact-Check (DeBERTa-v3-base NLI, docs/backtests/factcheck_nli.md; BGE-small retrieval;
+    passages must name every entity in the claim).
+  - Models: `dugout-models publish` -> `model_outputs` (predictor, lineup, injury, roles, fingerprint, market,
+    potential, fit, lookup). Training frames cached in `.cache/frames/` (warm publish ~2 min).
+  - Agents: Sporting Director + 6 club specialists + Player Development + Player Fit; LLM writes with fact codes,
+    drafts must pass the gate and state >= 2 facts, else templates. Ollama qwen2.5:3b by default.
+  - Club news: `club_news` adapter (official club sitemaps; reproduced press credited to original outlet);
+    `dugout setup-club <club> [--build]` (Wikidata P856 -> robots -> sitemap). Liverpool + Arsenal set up.
+  - Eval (docs/backtests/agents_eval_*): 0 untraceable numbers everywhere. Held-out 20 questions: routing 94%,
+    answer recall 93%, refusals 100%. Tuned 56-question set: 100% / 96% (LLM). The LLM's drafts pass all checks
+    for ~20% of sections; templates write the rest.
+  - Follow-ups: route future-tense "will ... score" to Match Predictor (held-out miss h05, left unfixed on purpose);
+    nightly workflow wiring is Phase 5; LLM quality is the main lever (try a larger open-weight model hosted).
+  - User feedback: GK need was a bug (fixed: peer-based needs + announced signings, e.g. Lucca Brughmans from the
+    club site); Rio Ngumoha insider claim cannot be a source — sale likelihood labelled as a model estimate.
+
+- **LLM (2026-10-16):** writer benchmark (docs/backtests/writer_llm.md) -> Poolside Laguna-S 2.1 via OpenRouter
+  free tier (open weights, OpenMDW licence; uses OPENROUTER_API_KEY), local Ollama qwen2.5:3b as fallback, then
+  templates. Laguna's drafts pass the gate 58% vs 17% for qwen. Gemma 4 (Apache) was rate-limited upstream; Inkling
+  models are blocked for non-listed apps. Free tier has a small daily quota: LLM for showcase clubs only.
+- **Phase 4 — website: BUILT, awaiting review (2026-10-16)**, same branch/PR #1. See docs/website.md.
+  - Done: Next.js static site in apps/web (/, /clubs, /club/[slug], /methods, /scoreboard); R3F scroll story with
+    pitch shader, instanced players, camera keyframes, post FX, chalk cursor, SVG fallback; every number is a <Num>
+    with provenance; `key_stats` block in dossiers (audited structured facts) feeds the story; prediction_log table
+    + `dugout-models scoreboard` -> data/scoreboard.json; banned-pattern script (clean);
+    tools/check_site_numbers.py (0 untraceable digits). GSAP dropped (not open source) -> Lenis + own scrub.
+  - Lighthouse mobile (2026-10-16, `npx serve` so responses are compressed like a real host; python http.server
+    is not and costs ~10-20 points): accessibility, best practices and SEO 100 on every page. Performance in clean
+    runs: home ~92, methods ~96, clubs ~95, dossier ~90-92, scoreboard ~90-91 (all >= 90). Local runs are noisy (+/- 10):
+    headless Chrome on this laptop often holds the first frame for ~1 s (paints land on whole seconds, like
+    occluded-window throttling; `--disable-backgrounding-occluded-windows --disable-renderer-backgrounding` helps
+    only sometimes), and then Lighthouse models the LCP as waiting on every script. Measure for real with
+    PageSpeed Insights on the deployed site. The story is now server-rendered with a thin client shell (home
+    script bootup ~1.5 s -> ~0.8 s at 4x throttle, TBT ~500 -> ~200 ms).
+    Scoreboard: one shared provenance card for the table (components/ScoreCard.tsx) instead of ~500 per-number
+    cards: ~5,000 -> ~2,200 elements, HTML 912 KB -> 401 KB, TBT ~420 -> ~165 ms; rows use content-visibility.
+  - Done 2026-10-16: liverpool + arsenal rebuilt (lineup templated; 0 untraceable, 7/7 published); the other 18
+    rebuilt template-only; `names` field (digit-bearing proper names) + `data-name` in the site check; withheld
+    counts/reasons marked `data-meta`; `<Num>`/`<MetaNum>` are CSS cards (no per-number hydration); favicon;
+    Next static-export prefetch 404s fixed (scripts/flatten-prefetch.mjs); `__pitch` hook removed.
+  - **Rebuilding dossiers**: `uv run dugout-agents dossier liverpool arsenal` uses the LLM (Laguna free tier, falls
+    back to local qwen2.5:3b on CPU, ~12 min a club). For every other club use
+    `uv run dugout-agents --no-llm dossier <clubs...>` (~1.3 min a club).
+  - **Next steps:** user review of PR #1 / go-ahead -> Phase 5 (Vercel deploy, workflows, README). Confirm
+    Lighthouse with PageSpeed Insights on the first Vercel preview.
+  - Dev preview: .claude/launch.json "web" (npm --prefix apps/web run dev, port 3000).
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.

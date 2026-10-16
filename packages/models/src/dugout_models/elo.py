@@ -36,6 +36,16 @@ class Elo:
 
 def pre_match_elo(matches: pd.DataFrame, k: float = 20.0, home_adv: float = 60.0) -> pd.DataFrame:
     """Adds elo_home / elo_away (ratings *before* each match). `matches` must be sorted by date."""
+    out, _ = _run(matches, k, home_adv)
+    return out
+
+
+def elo_state(matches: pd.DataFrame, k: float = 20.0, home_adv: float = 60.0) -> Elo:
+    """Ratings after every match in `matches` (for forecasting fixtures not yet played)."""
+    return _run(matches, k, home_adv)[1]
+
+
+def _run(matches: pd.DataFrame, k: float, home_adv: float) -> tuple[pd.DataFrame, Elo]:
     elo = Elo(k=k, home_adv=home_adv)
     out_h, out_a = np.empty(len(matches)), np.empty(len(matches))
     prev_teams: set[str] = set()
@@ -53,7 +63,7 @@ def pre_match_elo(matches: pd.DataFrame, k: float = 20.0, home_adv: float = 60.0
         out_h[i] = elo.ratings.get(r.home, elo.initial)
         out_a[i] = elo.ratings.get(r.away, elo.initial)
         elo.update(r.home, r.away, int(r.home_goals), int(r.away_goals))
-    return matches.assign(elo_home=out_h, elo_away=out_a, elo_diff=out_h + home_adv - out_a)
+    return matches.assign(elo_home=out_h, elo_away=out_a, elo_diff=out_h + home_adv - out_a), elo
 
 
 class EloOutcomeModel:
