@@ -27,6 +27,8 @@ uv run python tools/check_site_numbers.py   # fails if any visible digit is not 
 A number is a focusable `<Num>` button (hover, focus or tap) revealing metric, entity, source (linked), fetch time,
 verification status and cross-checks. The card is CSS (`.tip` in `globals.css`) with one page-wide listener
 (`components/Tips.tsx`: tap toggles, Escape or tapping elsewhere closes), so pages hydrate no per-number state.
+The scoreboard table (~500 numbers) shares one card (`components/ScoreCard.tsx`) filled for the number under the
+pointer, focus or tap; a sources line above the table gives the provenance without JavaScript.
 The story uses each dossier's `key_stats`: the structured facts behind every section, each re-run by the Stat
 Auditor like the prose numbers. Labels with digits that are not statistics (season names, timestamps, model names,
 withheld counts and reasons) are marked `data-meta`; proper names with digits ("Parma Calcio 1913", listed in each
