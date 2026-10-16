@@ -19,7 +19,7 @@ export function chapterContent(d: StoryData, active: number) {
       kicker: "Chapter one · read the club",
       body: (
         <>
-          <h2 className="font-display text-[clamp(2.8rem,8vw,7rem)] leading-[0.9]">
+          <h2 className="font-display text-[clamp(2.4rem,5.6vw,5.2rem)] leading-[0.9]">
             <span className="block">{d.club},</span>
             <span className="block italic">read in full.</span>
           </h2>
@@ -55,8 +55,8 @@ export function chapterContent(d: StoryData, active: number) {
       kicker: "Chapter two · find the gap",
       body: (
         <>
-          <h2 className="font-display text-[clamp(2.8rem,8vw,7rem)] leading-[0.9]">
-            The gap is at <span className="italic text-red">{d.need ? <N s={d.need} /> : "—"}</span>.
+          <h2 className="font-display text-[clamp(2.4rem,5.6vw,5.2rem)] leading-[0.9]">
+            The gap is at <span className="italic text-red">{d.need ? <N s={d.need} className="font-display not-italic" /> : "—"}</span>.
           </h2>
           <p className="mt-6 max-w-md">
             Every position is compared with the six squads closest in strength: depth, the best option&apos;s value, ageing.
@@ -85,7 +85,7 @@ export function chapterContent(d: StoryData, active: number) {
       kicker: "Chapter three · scout the fix",
       body: d.candidate ? (
         <>
-          <h2 className="font-display text-[clamp(2.8rem,8vw,7rem)] leading-[0.9]">{d.candidate.name}</h2>
+          <h2 className="font-display text-[clamp(2.4rem,5.6vw,5.2rem)] leading-[0.9]">{d.candidate.name}</h2>
           <p className="mono-label mt-2">{d.candidate.club}</p>
           <dl className="mt-6 grid max-w-md grid-cols-2 gap-x-6 gap-y-2 font-mono text-sm">
             <dt className="text-pencil">Age</dt>
@@ -111,7 +111,7 @@ export function chapterContent(d: StoryData, active: number) {
       kicker: "Chapter four · check every number",
       body: (
         <>
-          <h2 className="font-display text-[clamp(2.8rem,8vw,7rem)] leading-[0.9]">
+          <h2 className="font-display text-[clamp(2.4rem,5.6vw,5.2rem)] leading-[0.9]">
             Every number <span className="italic">has a receipt.</span>
           </h2>
           <ul className="mt-6 max-w-lg space-y-1 font-mono text-sm">
@@ -137,7 +137,7 @@ export function chapterContent(d: StoryData, active: number) {
       kicker: "Chapter five · predict Saturday",
       body: d.prediction ? (
         <>
-          <h2 className="font-display text-[clamp(2.4rem,7vw,6rem)] leading-[0.9]">
+          <h2 className="font-display text-[clamp(2.2rem,5vw,4.6rem)] leading-[0.9]">
             {d.prediction.home} <span className="italic">v</span> {d.prediction.away}
           </h2>
           <p className="mono-label mt-2">
@@ -153,7 +153,7 @@ export function chapterContent(d: StoryData, active: number) {
       kicker: "Chapter six · fork it",
       body: (
         <>
-          <h2 className="font-display text-[clamp(2.8rem,8vw,7rem)] leading-[0.9]">
+          <h2 className="font-display text-[clamp(2.4rem,5.6vw,5.2rem)] leading-[0.9]">
             Open source. Free. <span className="italic text-red">Yours.</span>
           </h2>
           <p className="mt-6 max-w-md">
@@ -213,7 +213,7 @@ function Stars() {
   }, []);
   if (!stars) return null;
   return (
-    <span title={`Source: GitHub API (api.github.com), fetched live at ${stars.at}`} className="font-mono">
+    <span data-meta title={`Source: GitHub API (api.github.com), fetched live at ${stars.at}`} className="font-mono">
       ★ {stars.n} <span className="text-pencil">live from GitHub</span>
     </span>
   );

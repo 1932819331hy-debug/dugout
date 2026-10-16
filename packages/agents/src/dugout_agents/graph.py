@@ -92,7 +92,7 @@ def build_graph(ctx: Context):
         question = state["question"] or spec.dossier_question.format(club=tb.name(club))
         with ctx.lock:
             draft = writer.write(
-                ctx.llm,
+                ctx.llm if spec.prose else None,
                 role=spec.role,
                 club=tb.name(club),
                 question=question,

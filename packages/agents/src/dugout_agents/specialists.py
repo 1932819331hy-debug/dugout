@@ -20,6 +20,7 @@ class Specialist:
     keywords: str  # routing regex
     dossier_question: str
     max_facts: int = 8  # sentences when writing from templates (a lineup needs all eleven)
+    prose: bool = True  # False: always the templates (a lineup is a list; an LLM summary drops players)
 
 
 def _club(tb: Toolbox, club: str, focus: list[str]) -> list[Fact]:
@@ -119,6 +120,7 @@ SPECIALISTS: dict[str, Specialist] = {
 }
 for _name, _n in (("lineup", 14), ("news", 12), ("transfer", 12), ("scout", 14), ("club", 10)):
     SPECIALISTS[_name] = dataclasses.replace(SPECIALISTS[_name], max_facts=_n)
+SPECIALISTS["lineup"] = dataclasses.replace(SPECIALISTS["lineup"], prose=False)
 
 # specialists that only answer about a named player; the dossier runs the six club-level ones
 PLAYER_ONLY = ("potential", "fit")
