@@ -1,67 +1,20 @@
-import Num from "@/components/Num";
-import { readData, REPO_URL, type Stat } from "@/lib/data";
+import ScoreCard, { CARD_ID } from "@/components/ScoreCard";
+import { readData, REPO_URL } from "@/lib/data";
+import { type Board, pct, score } from "@/lib/scoreboard";
 
 export const metadata = { title: "Scoreboard — dugout" };
 
-interface Row {
-  match_id: string;
-  date: string;
-  home: string;
-  away: string;
-  probs: [number, number, number];
-  pick: "H" | "D" | "A";
-  home_goals: number;
-  away_goals: number;
-  outcome: "H" | "D" | "A";
-  hit: boolean;
-  kind: "live" | "backtest";
-  predicted_at: string;
-  result: { sources: string[]; fetched_at: string | null; status: string };
-}
+const SHOWN = 120;
 
-interface Board {
-  generated_at: string;
-  model: string;
-  summary: { matches: number; live: number; hit_rate: number | null; rps: number | null };
-  rows: Row[];
-}
-
-function predStat(r: Row, i: number, generated: string): Stat {
-  return {
-    value: r.probs[i],
-    display: `${Math.round(r.probs[i] * 100)}%`,
-    unit: null,
-    metric: ["home win", "draw", "away win"][i] + " probability",
-    entity_type: "match",
-    entity_id: r.match_id,
-    entity_name: `${r.home} v ${r.away}`,
-    source: r.kind === "live" ? "dugout_model:predictor (published before kick-off)" : "dugout_model:predictor (walk-forward backtest)",
-    source_url: `${REPO_URL}/blob/main/docs/backtests/predictor.md`,
-    source_tier: 3,
-    fetched_at: r.kind === "live" ? r.predicted_at : generated,
-    query_kind: r.kind,
-    status: "model_output",
-    cross_checks: [],
-  };
-}
-
-function resultStat(r: Row): Stat {
-  return {
-    value: `${r.home_goals}-${r.away_goals}`,
-    display: `${r.home_goals}–${r.away_goals}`,
-    unit: "goals",
-    metric: "result",
-    entity_type: "match",
-    entity_id: r.match_id,
-    entity_name: `${r.home} v ${r.away}`,
-    source: r.result.sources.join(" + "),
-    source_url: null,
-    source_tier: 1,
-    fetched_at: r.result.fetched_at ?? r.date,
-    query_kind: "sql",
-    status: r.result.status,
-    cross_checks: [],
-  };
+/** A table number: the same dotted, focusable button as <Num>; its provenance card is the table's shared ScoreCard. */
+function Cell({ k, display }: { k: string; display: string }) {
+  return (
+    <span data-num>
+      <button type="button" data-sb={k} aria-describedby={CARD_ID} className="sb-num">
+        {display}
+      </button>
+    </span>
+  );
 }
 
 export default function ScoreboardPage() {
@@ -74,6 +27,7 @@ export default function ScoreboardPage() {
     );
   }
   const live = b.rows.filter((r) => r.kind === "live");
+  const rows = b.rows.slice(0, SHOWN);
   return (
     <article className="grid12 pt-10">
       <p className="hang mono-label">Scoreboard · every prediction against the real result</p>
@@ -84,41 +38,48 @@ export default function ScoreboardPage() {
         {b.model}. <strong>Live</strong> rows were published before kick-off. <strong>Backtest</strong> rows were predicted walk-forward: the model was refit
         on matches strictly before each block of fixtures, so none saw its own result. Live rows so far: <span data-meta>{live.length === 0 ? "none yet; logging started this season" : live.length}</span>.
       </p>
-      <div className="hang mt-10 overflow-x-auto">
-        <table className="w-full min-w-[640px] border-collapse font-mono text-sm">
-          <caption className="sr-only">Predictions and results, most recent first</caption>
-          <thead>
-            <tr className="ruled text-left">
-              <th scope="col" className="mono-label py-2 font-normal">Date</th>
-              <th scope="col" className="mono-label py-2 font-normal">Match</th>
-              <th scope="col" className="mono-label py-2 text-right font-normal">Home</th>
-              <th scope="col" className="mono-label py-2 text-right font-normal">Draw</th>
-              <th scope="col" className="mono-label py-2 text-right font-normal">Away</th>
-              <th scope="col" className="mono-label py-2 text-right font-normal">Result</th>
-              <th scope="col" className="mono-label py-2 text-right font-normal">Call</th>
-            </tr>
-          </thead>
-          <tbody>
-            {b.rows.slice(0, 120).map((r) => (
-              <tr key={r.match_id} className="border-b border-ink/15">
-                <td data-meta className="py-2 pr-3 text-pencil">{r.date}</td>
-                <td className="py-2 pr-3 font-body text-base">
-                  {r.home} <span className="italic">v</span> {r.away}
-                  <span className="mono-label ml-2">{r.kind}</span>
-                </td>
-                {[0, 1, 2].map((i) => (
-                  <td key={i} className={`py-2 text-right ${r.pick === "HDA"[i] ? "font-bold" : ""}`}>
-                    <Num stat={predStat(r, i, b.generated_at)} display={`${Math.round(r.probs[i] * 100)}%`} />
-                  </td>
-                ))}
-                <td className="py-2 text-right">
-                  <Num stat={resultStat(r)} display={`${r.home_goals}–${r.away_goals}`} />
-                </td>
-                <td className={`py-2 text-right ${r.hit ? "" : "text-red"}`}>{r.hit ? "right" : "wrong"}</td>
+      <p className="hang mono-label mt-6 max-w-2xl">
+        Probabilities: dugout predictor (<a className="underline" href={`${REPO_URL}/blob/main/docs/backtests/predictor.md`}>backtest report</a>).
+        Results: football-data.org and Fantasy Premier League, cross-checked. Hover, focus or tap any number for its source and time.
+      </p>
+      <div className="hang relative mt-6" data-sb-root>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[640px] border-collapse font-mono text-sm">
+            <caption className="sr-only">Predictions and results, most recent first</caption>
+            <thead>
+              <tr className="ruled text-left">
+                <th scope="col" className="mono-label py-2 font-normal">Date</th>
+                <th scope="col" className="mono-label py-2 font-normal">Match</th>
+                <th scope="col" className="mono-label py-2 text-right font-normal">Home</th>
+                <th scope="col" className="mono-label py-2 text-right font-normal">Draw</th>
+                <th scope="col" className="mono-label py-2 text-right font-normal">Away</th>
+                <th scope="col" className="mono-label py-2 text-right font-normal">Result</th>
+                <th scope="col" className="mono-label py-2 text-right font-normal">Call</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {rows.map((r, n) => (
+                <tr key={r.match_id} className="border-b border-ink/15 [contain-intrinsic-size:auto_2.6rem] [content-visibility:auto]">
+                  <td data-meta className="py-2 pr-3 text-pencil">{r.date}</td>
+                  <td className="py-2 pr-3 font-body text-base">
+                    {r.home} <span className="italic">v</span> {r.away}
+                    <span className="mono-label ml-2">{r.kind}</span>
+                  </td>
+                  {[0, 1, 2].map((i) => (
+                    <td key={i} className={`py-2 text-right ${r.pick === "HDA"[i] ? "font-bold" : ""}`}>
+                      <Cell k={`${n}:${i}`} display={pct(r.probs[i])} />
+                    </td>
+                  ))}
+                  <td className="py-2 text-right">
+                    <Cell k={`${n}:3`} display={score(r)} />
+                  </td>
+                  <td className={`py-2 text-right ${r.hit ? "" : "text-red"}`}>{r.hit ? "right" : "wrong"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <ScoreCard rows={rows} generated={b.generated_at} />
       </div>
     </article>
   );

@@ -144,3 +144,11 @@ html.lenis body {
   position: absolute;
   inset: -0.5rem 0 100% 0;
 }
+
+/* scoreboard table numbers: the <Num> button look as one short class (repeated ~500 times on the page) */
+.sb-num {
+  cursor: help;
+  font-family: var(--font-mono);
+  text-decoration: underline dotted 1px var(--pencil);
+  text-underline-offset: 4px;
+}

@@ -37,12 +37,14 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     tools/check_site_numbers.py (0 untraceable digits). GSAP dropped (not open source) -> Lenis + own scrub.
   - Lighthouse mobile (2026-10-16, `npx serve` so responses are compressed like a real host; python http.server
     is not and costs ~10-20 points): accessibility, best practices and SEO 100 on every page. Performance in clean
-    runs: home ~92, methods ~94, clubs ~94, dossier ~86-89, scoreboard ~77-86. Local runs are noisy (+/- 10):
+    runs: home ~92, methods ~96, clubs ~95, dossier ~90-92, scoreboard ~90-91 (all >= 90). Local runs are noisy (+/- 10):
     headless Chrome on this laptop often holds the first frame for ~1 s (paints land on whole seconds, like
     occluded-window throttling; `--disable-backgrounding-occluded-windows --disable-renderer-backgrounding` helps
     only sometimes), and then Lighthouse models the LCP as waiting on every script. Measure for real with
     PageSpeed Insights on the deployed site. The story is now server-rendered with a thin client shell (home
     script bootup ~1.5 s -> ~0.8 s at 4x throttle, TBT ~500 -> ~200 ms).
+    Scoreboard: one shared provenance card for the table (components/ScoreCard.tsx) instead of ~500 per-number
+    cards: ~5,000 -> ~2,200 elements, HTML 912 KB -> 401 KB, TBT ~420 -> ~165 ms; rows use content-visibility.
   - Done 2026-10-16: liverpool + arsenal rebuilt (lineup templated; 0 untraceable, 7/7 published); the other 18
     rebuilt template-only; `names` field (digit-bearing proper names) + `data-name` in the site check; withheld
     counts/reasons marked `data-meta`; `<Num>`/`<MetaNum>` are CSS cards (no per-number hydration); favicon;
@@ -50,8 +52,8 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - **Rebuilding dossiers**: `uv run dugout-agents dossier liverpool arsenal` uses the LLM (Laguna free tier, falls
     back to local qwen2.5:3b on CPU, ~12 min a club). For every other club use
     `uv run dugout-agents --no-llm dossier <clubs...>` (~1.3 min a club).
-  - **Next steps:** user review of PR #1 / go-ahead -> Phase 5 (Vercel deploy, workflows, README). Measure Lighthouse
-    with PageSpeed Insights on the first Vercel preview; scoreboard (5k DOM nodes) is the weakest page.
+  - **Next steps:** user review of PR #1 / go-ahead -> Phase 5 (Vercel deploy, workflows, README). Confirm
+    Lighthouse with PageSpeed Insights on the first Vercel preview.
   - Dev preview: .claude/launch.json "web" (npm --prefix apps/web run dev, port 3000).
 
 ## Key facts discovered (do not re-research)
