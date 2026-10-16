@@ -125,7 +125,7 @@ export function chapterContent(d: StoryData, active: number) {
             ))}
           </ul>
           <p className="mt-5 flex flex-wrap items-center gap-5">
-            <span className="stamp text-2xl">Verified ×2</span>
+            <span data-meta className="stamp text-2xl">Verified ×2</span>
             <span className="mono-label">
               Stat Auditor: every query re-run · Fact-Check: two independent sources or one official · hover any number
             </span>
@@ -161,7 +161,7 @@ export function chapterContent(d: StoryData, active: number) {
           </p>
           <p className="mt-4 flex flex-wrap items-center gap-5 font-mono text-sm">
             <a className="border-b-2 border-red pb-0.5" href={REPO} target="_blank" rel="noopener noreferrer">
-              github.com/delta96040/dugout
+              <span data-meta>github.com/delta96040/dugout</span>
             </a>
             <Stars />
             <Link className="underline" href={`/club/${d.slug}/`}>

@@ -17,7 +17,7 @@ export default function Num({ stat, display, className = "" }: { stat: Stat; dis
   const id = useId();
   const verified = stat.status === "verified";
   return (
-    <span className="relative inline-block" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+    <span data-num className="relative inline-block" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button
         type="button"
         aria-describedby={id}

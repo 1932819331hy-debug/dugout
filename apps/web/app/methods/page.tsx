@@ -75,7 +75,7 @@ export default function MethodsPage() {
             </p>
           </li>
           <li>
-            <p className="mono-label">Fact-Check · DeBERTa-v3 NLI + BGE retrieval</p>
+            <p className="mono-label">Fact-Check · <span data-meta>DeBERTa-v3</span> NLI + BGE retrieval</p>
             <p className="mt-2">
               Every other claim needs one official source or two independent ones (one vote per ownership group). Contradicted
               claims withhold the section; unsupported sentences are cut. False verifications on hand-labelled football claims:{" "}
@@ -103,7 +103,7 @@ export default function MethodsPage() {
             Elo + expected-goals Dixon–Coles stack, refit every four gameweeks. Ranked probability score (lower is better):
             {seasons.map((s) => (
               <span key={s} className="block font-mono text-sm">
-                {s}: dugout <B file="predictor" j={pred} value={pred?.results[s]?.stack_pre_lineup?.rps} label={`RPS ${s} dugout`} /> · Elo{" "}
+                <span data-meta>{s}</span>: dugout <B file="predictor" j={pred} value={pred?.results[s]?.stack_pre_lineup?.rps} label={`RPS ${s} dugout`} /> · Elo{" "}
                 <B file="predictor" j={pred} value={pred?.results[s]?.elo?.rps} label={`RPS ${s} Elo`} /> · closing odds{" "}
                 <B file="predictor" j={pred} value={pred?.results[s]?.bookmaker_closing?.rps} label={`RPS ${s} bookmaker`} />
               </span>
@@ -147,7 +147,7 @@ export default function MethodsPage() {
             Action values on open event data. Scoring-model AUC <B file="player_ratings" j={rat} value={rat?.vaep_holdout?.scores?.auc} label="VAEP AUC" />.
           </Row>
           <Row name="Roles & similarity" verdict="stable roles">
-            Gaussian mixtures on per-90 profiles. Role stability (adjusted Rand){" "}
+            Gaussian mixtures on <span data-meta>per-90</span> profiles. Role stability (adjusted Rand){" "}
             <B file="roles" j={roles} value={roles?.role_stability_ari} label="role stability ARI" />.
           </Row>
         </ul>
