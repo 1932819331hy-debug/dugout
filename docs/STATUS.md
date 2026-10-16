@@ -25,6 +25,30 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - User feedback: GK need was a bug (fixed: peer-based needs + announced signings, e.g. Lucca Brughmans from the
     club site); Rio Ngumoha insider claim cannot be a source — sale likelihood labelled as a model estimate.
 
+- **LLM (2026-10-16):** writer benchmark (docs/backtests/writer_llm.md) -> Poolside Laguna-S 2.1 via OpenRouter
+  free tier (open weights, OpenMDW licence; uses OPENROUTER_API_KEY), local Ollama qwen2.5:3b as fallback, then
+  templates. Laguna's drafts pass the gate 58% vs 17% for qwen. Gemma 4 (Apache) was rate-limited upstream; Inkling
+  models are blocked for non-listed apps. Free tier has a small daily quota: LLM for showcase clubs only.
+- **Phase 4 — website: IN PROGRESS (2026-10-16)**, same branch/PR #1. See docs/website.md.
+  - Done: Next.js static site in apps/web (/, /clubs, /club/[slug], /methods, /scoreboard); R3F scroll story with
+    pitch shader, instanced players, camera keyframes, post FX, chalk cursor, SVG fallback; every number is a <Num>
+    with provenance; `key_stats` block in dossiers (audited structured facts) feeds the story; prediction_log table
+    + `dugout-models scoreboard` -> data/scoreboard.json; banned-pattern script (clean);
+    tools/check_site_numbers.py (0 untraceable digits). GSAP dropped (not open source) -> Lenis + own scrub.
+  - Lighthouse mobile (before deferring WebGL; CPU was busy): a11y 100, SEO 100, best practices 96, performance
+    61 (home) / 73 (dossier) / 79 (methods). WebGL now loads on first interaction -> re-measure.
+  - **Next steps:**
+    1. A background run was building template dossiers for the 18 other clubs (`dugout-agents --no-llm dossier
+       <slugs>`); check data/clubs/ has 20 files, else re-run for the missing slugs.
+    2. Rebuild liverpool + arsenal (`uv run dugout-agents dossier liverpool arsenal`): lineup is now always
+       templated (Laguna dropped players).
+    3. `npm --prefix apps/web run build`, `uv run python tools/check_site_numbers.py`, `npm --prefix apps/web run banned`,
+       then Lighthouse mobile (serve apps/web/out; `npx lighthouse@13.5.0 <url> --form-factor=mobile`); target >= 90.
+       If the dossier page is still < 90, look at LCP (the big bleed number / fonts).
+    4. Remove the dev-only `__pitch` debug hook in components/story/Scene.tsx if unwanted (stripped in production).
+    5. Commit data/clubs/*.json + data/scoreboard.json, push, update PR #1, show the user, wait for go-ahead.
+  - Dev preview: .claude/launch.json "web" (npm --prefix apps/web run dev, port 3000).
+
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
 - Guardian dev key: 500/day, 60/min. football-data.org: 10/min.
