@@ -82,7 +82,7 @@ export default function ScoreboardPage() {
       </h1>
       <p className="hang mt-6 max-w-2xl">
         {b.model}. <strong>Live</strong> rows were published before kick-off. <strong>Backtest</strong> rows were predicted walk-forward: the model was refit
-        on matches strictly before each block of fixtures, so none saw its own result. Live rows so far: {live.length === 0 ? "none yet; logging started this season" : live.length}.
+        on matches strictly before each block of fixtures, so none saw its own result. Live rows so far: <span data-meta>{live.length === 0 ? "none yet; logging started this season" : live.length}</span>.
       </p>
       <div className="hang mt-10 overflow-x-auto">
         <table className="w-full min-w-[640px] border-collapse font-mono text-sm">
@@ -101,7 +101,7 @@ export default function ScoreboardPage() {
           <tbody>
             {b.rows.slice(0, 120).map((r) => (
               <tr key={r.match_id} className="border-b border-ink/15">
-                <td className="py-2 pr-3 text-pencil">{r.date}</td>
+                <td data-meta className="py-2 pr-3 text-pencil">{r.date}</td>
                 <td className="py-2 pr-3 font-body text-base">
                   {r.home} <span className="italic">v</span> {r.away}
                   <span className="mono-label ml-2">{r.kind}</span>

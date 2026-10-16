@@ -26,7 +26,7 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
   return (
     <article>
       <section className="grid12 relative overflow-hidden pt-10 pb-6">
-        <p className="hang mono-label">Confidential · scouting dossier · season {d.club.season}</p>
+        <p className="hang mono-label">Confidential · scouting dossier · season <span data-meta>{d.club.season}</span></p>
         <h1 className="hang mt-3 font-display text-[clamp(3.5rem,11vw,9rem)] leading-[0.9]">{d.club.name}</h1>
         {pos && (
           <div className="col-span-12 -mt-4 sm:-mt-10">
@@ -36,10 +36,10 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
           </div>
         )}
         <div className="hang mt-6 flex flex-wrap items-center gap-6">
-          <span className="stamp text-lg">Verified ×2</span>
+          <span data-meta className="stamp text-lg">Verified ×2</span>
           <p className="mono-label max-w-xl">
             Stat Auditor and Fact-Check passed · <MetaNum n={v.stat_auditor.numbers_total} note="numbers published, each re-run against its source by the Stat Auditor" /> numbers ·{" "}
-            <MetaNum n={v.stat_auditor.numbers_untraceable} note="numbers not filled from the evidence ledger (target zero)" /> untraceable · data as of {when(d.data_as_of)}
+            <MetaNum n={v.stat_auditor.numbers_untraceable} note="numbers not filled from the evidence ledger (target zero)" /> untraceable · data as of <span data-meta>{when(d.data_as_of)}</span>
           </p>
         </div>
       </section>
@@ -56,7 +56,7 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
       {sections.map((s, i) => (
         <section key={s.agent} className="grid12 mt-16" aria-labelledby={`h-${s.agent}`}>
           <div className={`col-span-12 sm:col-span-3 ${i % 2 ? "sm:col-start-9 sm:row-start-1" : "sm:col-start-2"}`}>
-            <p className="mono-label">0{i + 1} · {s.agent}</p>
+            <p className="mono-label"><span data-meta>0{i + 1}</span> · {s.agent}</p>
             <h2 id={`h-${s.agent}`} className="mt-1 font-display text-4xl leading-none">{s.title}</h2>
             <p className="mt-3 text-sm italic text-pencil">“{s.question}”</p>
           </div>

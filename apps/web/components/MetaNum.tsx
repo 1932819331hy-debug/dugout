@@ -8,7 +8,7 @@ export default function MetaNum({ n, note }: { n: number; note: string }) {
   const [open, setOpen] = useState(false);
   const id = useId();
   return (
-    <span className="relative inline-block" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+    <span data-meta className="relative inline-block" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button
         type="button"
         aria-describedby={id}

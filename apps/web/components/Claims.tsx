@@ -48,7 +48,7 @@ export function SectionProse({ section, d }: { section: Section; d: Dossier }) {
         </p>
       ))}
       <p className="mono-label pt-1">
-        Written by {section.writer.startsWith("llm:") ? `an open-weight LLM (${section.writer.slice(4)})` : "deterministic templates"};
+        Written by {section.writer.startsWith("llm:") ? <>an open-weight LLM (<span data-meta>{section.writer.slice(4)}</span>)</> : "deterministic templates"};
         every number filled from the evidence ledger.
       </p>
     </div>

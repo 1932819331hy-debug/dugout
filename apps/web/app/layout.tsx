@@ -34,8 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <footer className="grid12 mt-24 pb-10">
           <p className="hang mono-label">
-            Open source (MIT). Data: Fantasy Premier League, football-data.org, API-Football, Wikidata, transfermarkt-datasets (CC0),
-            the Guardian, StatsBomb, SkillCorner, Wyscout (Pappalardo et al. 2019), official club sites. Every number links to its
+            Open source (<span data-meta>MIT</span>). Data: Fantasy Premier League, football-data.org, API-Football, Wikidata, transfermarkt-datasets (<span data-meta>CC0</span>),
+            the Guardian, StatsBomb, SkillCorner, Wyscout (Pappalardo et al. <span data-meta>2019</span>), official club sites. Every number links to its
             source, timestamp and verification status.
           </p>
         </footer>
