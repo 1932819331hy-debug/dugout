@@ -64,6 +64,16 @@ def cmd_eval(args) -> int:
     return 0 if report["summary"]["untraceable_number_rate"] == 0 else 1
 
 
+def cmd_bench_writer(args) -> int:
+    from dugout_agents.bench_writer import run
+
+    ctx = _ctx(argparse.Namespace(no_llm=True, db=args.db))
+    r = run(ctx, args.models.split(","), args.clubs.split(","), out_dir=REPO_ROOT / "docs" / "backtests")
+    for m, x in r["results"].items():
+        print(m, {k: v for k, v in x.items() if k != "rows"})
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=os.environ.get("LOG_LEVEL", "WARNING"))
     p = argparse.ArgumentParser(prog="dugout-agents")
@@ -82,6 +92,10 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--name", help="report name in docs/backtests (default by writer mode)")
     s.add_argument("--set", default="questions", choices=["questions", "holdout"], help="question set")
     s.set_defaults(fn=cmd_eval)
+    s = sub.add_parser("bench-writer", help="compare LLMs on how often their notes pass the publish gate")
+    s.add_argument("--models", required=True, help="comma list of local:<model> / openrouter:<model>")
+    s.add_argument("--clubs", default="liverpool,arsenal")
+    s.set_defaults(fn=cmd_bench_writer)
     args = p.parse_args(argv)
     return args.fn(args)
 

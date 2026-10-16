@@ -204,7 +204,9 @@ def write(
             errors += validate(text, facts, ledger, checker, allowed_names, sentences)
             attempts.append({"errors": errors})
             if not errors:
-                return Draft(text, f"llm:{llm.name}", attempts)
+                return Draft(
+                    text, f"llm:{getattr(llm, 'used', llm.name)}", attempts
+                )  # the model that actually wrote it
             user += (
                 f"\n\nYour previous note was rejected: {'; '.join(errors)}. Rewrite it following the rules; "
                 "copy the example sentences if unsure."
