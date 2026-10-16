@@ -5,8 +5,8 @@
     "name": "Liverpool",
     "season": "2026-27"
   },
-  "generated_at": "2026-10-16T06:21:29+00:00",
-  "data_as_of": "2026-10-16T06:11:15+00:00",
+  "generated_at": "2026-10-16T09:09:06+00:00",
+  "data_as_of": "2026-10-16T08:56:35+00:00",
   "llm": "poolside/laguna-s-2.1:free",
   "summary": {
     "agent": "director",
@@ -172,7 +172,7 @@
               "display": "4 June 2026"
             },
             {
-              "text": ", with his style profile covering "
+              "text": ", and his style profile covers "
             },
             {
               "stat": "ev_aa025fcc98fbdaa0",
@@ -190,28 +190,21 @@
         {
           "segments": [
             {
-              "text": "Teams under Iraola average "
+              "text": "Teams under Iraola have taken "
+            },
+            {
+              "stat": "ev_5ac1bc669c7aaf92",
+              "display": "51%"
+            },
+            {
+              "text": " of the threat in their matches, close to the league average, while averaging "
             },
             {
               "stat": "ev_070c26120807547a",
               "display": "112"
             },
             {
-              "text": " defensive actions per match, more active without the ball than almost any Premier League manager's side, while creating "
-            },
-            {
-              "stat": "ev_5606ed69b29a4687",
-              "display": "1.62"
-            },
-            {
-              "text": " expected goals per match, more dangerous than average, and conceding "
-            },
-            {
-              "stat": "ev_9ddf130886408e2d",
-              "display": "1.44"
-            },
-            {
-              "text": " expected goals per match, close to the league average."
+              "text": " defensive actions per match, more active without the ball than almost any Premier League manager's side."
             }
           ],
           "type": "stat",
@@ -222,7 +215,39 @@
         {
           "segments": [
             {
-              "text": "We recommend continuing to support Iraola's high-pressing approach given the strong defensive activity and above-average attacking output."
+              "text": "They create "
+            },
+            {
+              "stat": "ev_5606ed69b29a4687",
+              "display": "1.62"
+            },
+            {
+              "text": " expected goals per match, more dangerous than average, and concede "
+            },
+            {
+              "stat": "ev_9ddf130886408e2d",
+              "display": "1.44"
+            },
+            {
+              "text": " expected goals per match, close to the league average, while accounting for "
+            },
+            {
+              "stat": "ev_809c314fc66cde9f",
+              "display": "51%"
+            },
+            {
+              "text": " of the chance creation in their matches, close to the league average."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "We recommend maintaining the current tactical approach, as the team's underlying metrics suggest a balanced and effective style of play."
             }
           ],
           "type": "analysis",
@@ -320,7 +345,7 @@
       "title": "Lineup Selector",
       "question": "What is Liverpool's predicted lineup for the next match?",
       "status": "published",
-      "writer": "llm:poolside/laguna-s-2.1:free",
+      "writer": "template",
       "claims": [
         {
           "segments": [
@@ -361,6 +386,78 @@
         {
           "segments": [
             {
+              "text": "The lineup model starts Ronald Araujo at "
+            },
+            {
+              "stat": "ev_e82074c6f7ca3323",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Virgil van Dijk at "
+            },
+            {
+              "stat": "ev_ddb898a0f31cd7be",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Virgil van Dijk is in the "
+            },
+            {
+              "stat": "ev_8496ff6e34c1e63b",
+              "display": "elevated"
+            },
+            {
+              "text": " risk tier of the injury-risk model."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Jeremy Jacquet at "
+            },
+            {
+              "stat": "ev_64241a0e0fd002e4",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
               "text": "The lineup model starts Jeremie Frimpong at "
             },
             {
@@ -379,14 +476,104 @@
         {
           "segments": [
             {
-              "text": "We recommend managing Virgil van Dijk's minutes given his "
+              "text": "The lineup model starts Milos Kerkez at "
             },
             {
-              "stat": "ev_8496ff6e34c1e63b",
-              "display": "elevated"
+              "stat": "ev_7230afc31a3b104c",
+              "display": "LWB"
             },
             {
-              "text": " risk tier."
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Alexis Mac Allister at "
+            },
+            {
+              "stat": "ev_66306ff373691691",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Trey Nyoni at "
+            },
+            {
+              "stat": "ev_823d9990414af7b4",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Dominik Szoboszlai at "
+            },
+            {
+              "stat": "ev_c3bc5f10de955e27",
+              "display": "AM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Florian Wirtz at "
+            },
+            {
+              "stat": "ev_65f546f116bf181e",
+              "display": "AM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Victor Munoz at "
+            },
+            {
+              "stat": "ev_8273795db206260b",
+              "display": "CF"
+            },
+            {
+              "text": "."
             }
           ],
           "type": "stat",
@@ -658,7 +845,7 @@
       "title": "Transfer & Valuation",
       "question": "Which Liverpool players could be sold, and what are the key players worth?",
       "status": "published",
-      "writer": "llm:poolside/laguna-s-2.1:free",
+      "writer": "template",
       "claims": [
         {
           "segments": [
@@ -670,21 +857,7 @@
               "display": "48%"
             },
             {
-              "text": ", with Transfermarkt valuing him at "
-            },
-            {
-              "stat": "ev_bd4601e6eaa7d2d6",
-              "display": "€50.0m"
-            },
-            {
-              "text": " and the valuation model putting his fair fee at "
-            },
-            {
-              "stat": "ev_35624fd1c0ca4b9e",
-              "display": "€63.2m"
-            },
-            {
-              "text": ", above his market value."
+              "text": "."
             }
           ],
           "type": "stat",
@@ -720,14 +893,36 @@
               "display": "38%"
             },
             {
-              "text": ", with Transfermarkt valuing him at "
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Ryan Gravenberch at "
             },
             {
               "stat": "ev_4b115a7ef9a8916e",
               "display": "€75.0m"
             },
             {
-              "text": " and the valuation model putting his fair fee at "
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Ryan Gravenberch's fair fee at "
             },
             {
               "stat": "ev_301f87465932f871",
@@ -745,10 +940,118 @@
         {
           "segments": [
             {
-              "text": "We recommend prioritizing the retention of key players like Gravenberch given his strong market value, while monitoring contract situations for players such as Van Dijk, whose deal runs until "
+              "text": "Transfermarkt values Alexis Mac Allister at "
+            },
+            {
+              "stat": "ev_1d8227434e073967",
+              "display": "€70.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Alexis Mac Allister's fair fee at "
+            },
+            {
+              "stat": "ev_2c3fdc5e3c696a81",
+              "display": "€63.2m"
+            },
+            {
+              "text": ", in line with his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Jeremy Jacquet at "
+            },
+            {
+              "stat": "ev_7b0e717b5b5590a3",
+              "display": "€65.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Jeremy Jacquet's fair fee at "
+            },
+            {
+              "stat": "ev_e638f3ce0942b324",
+              "display": "€57.9m"
+            },
+            {
+              "text": ", in line with his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Harvey Davies's contract runs until "
+            },
+            {
+              "stat": "ev_639350868dd605d9",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Virgil van Dijk's contract runs until "
             },
             {
               "stat": "ev_866d8e28369ed190",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Ronald Araujo's contract runs until "
+            },
+            {
+              "stat": "ev_7aa13456915f7475",
               "display": "30 June 2027"
             },
             {
@@ -1235,6 +1538,22 @@
       "status": "model_output",
       "cross_checks": []
     },
+    "ev_1d8227434e073967": {
+      "value": 70000000.0,
+      "display": "70000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpecc5cfdbee4a41",
+      "entity_name": "Alexis Mac Allister",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/31/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
     "ev_1ec4d366fd921bfc": {
       "value": "3-4-2-1",
       "display": "3-4-2-1",
@@ -1261,6 +1580,22 @@
       "entity_name": "Moisés Caicedo Corozo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2c3fdc5e3c696a81": {
+      "value": 63200000.0,
+      "display": "63200000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpecc5cfdbee4a41",
+      "entity_name": "Alexis Mac Allister",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
       "fetched_at": "2026-10-15T20:06:02.462223+00:00",
       "query_kind": "sql",
@@ -1307,22 +1642,6 @@
       "entity_type": "player",
       "entity_id": "rpa439c3e46c0e10",
       "entity_name": "Ryan Gravenberch",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_35624fd1c0ca4b9e": {
-      "value": 63200000.0,
-      "display": "63200000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpe4eb4b39d9dc81",
-      "entity_name": "Rio Ngumoha",
       "source": "dugout_model:valuation",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
@@ -2035,22 +2354,6 @@
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_bd4601e6eaa7d2d6": {
-      "value": 50000000.0,
-      "display": "50000000",
-      "unit": "EUR",
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rpe4eb4b39d9dc81",
-      "entity_name": "Rio Ngumoha",
-      "source": "transfermarkt",
-      "source_url": "https://www.transfermarkt.com/-/kader/verein/31/saison_id/2026/plus/1",
-      "source_tier": 3,
-      "fetched_at": "2026-10-14T00:00:00+00:00",
-      "query_kind": "file_csv",
-      "status": "single_source",
-      "cross_checks": []
-    },
     "ev_c10507375772e46f": {
       "value": 0.3843,
       "display": "0.38",
@@ -2527,6 +2830,18 @@
         "subject": "Ryan Gravenberch"
       },
       {
+        "stat": "ev_1d8227434e073967",
+        "display": "€70.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Alexis Mac Allister"
+      },
+      {
+        "stat": "ev_2c3fdc5e3c696a81",
+        "display": "€63.2m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Alexis Mac Allister"
+      },
+      {
         "stat": "ev_7b0e717b5b5590a3",
         "display": "€65.0m",
         "label": "market value (Transfermarkt)",
@@ -2537,18 +2852,6 @@
         "display": "€57.9m",
         "label": "fair fee if sold to another Premier League club (valuation model)",
         "subject": "Jeremy Jacquet"
-      },
-      {
-        "stat": "ev_bd4601e6eaa7d2d6",
-        "display": "€50.0m",
-        "label": "market value (Transfermarkt)",
-        "subject": "Rio Ngumoha"
-      },
-      {
-        "stat": "ev_35624fd1c0ca4b9e",
-        "display": "€63.2m",
-        "label": "fair fee if sold to another Premier League club (valuation model)",
-        "subject": "Rio Ngumoha"
       },
       {
         "stat": "ev_639350868dd605d9",
@@ -2767,11 +3070,11 @@
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 44,
+      "numbers_total": 59,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 46,
+      "verified": 64,
       "analysis": 1
     },
     "sections_published": 7,

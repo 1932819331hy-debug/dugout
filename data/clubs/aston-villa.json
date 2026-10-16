@@ -5,8 +5,8 @@
     "name": "Aston Villa",
     "season": "2026-27"
   },
-  "generated_at": "2026-10-16T06:33:06+00:00",
-  "data_as_of": "2026-10-16T06:28:38+00:00",
+  "generated_at": "2026-10-16T09:59:52+00:00",
+  "data_as_of": "2026-10-16T09:56:02+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -776,42 +776,6 @@
         {
           "segments": [
             {
-              "text": "Transfermarkt values Johan Manzambi at "
-            },
-            {
-              "stat": "ev_e0f8ae0526e5d4d7",
-              "display": "€65.0m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "The valuation model puts Johan Manzambi's fair fee at "
-            },
-            {
-              "stat": "ev_c3da17ac8d6358fc",
-              "display": "€62.7m"
-            },
-            {
-              "text": ", in line with his market value."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
               "text": "Transfermarkt values Boubacar Kamara at "
             },
             {
@@ -848,11 +812,11 @@
         {
           "segments": [
             {
-              "text": "Transfermarkt values Ibrahim Mbaye at "
+              "text": "Transfermarkt values Amadou Onana at "
             },
             {
-              "stat": "ev_39e7a537de52bbe0",
-              "display": "€50.0m"
+              "stat": "ev_7b624ce1f2287e87",
+              "display": "€40.0m"
             },
             {
               "text": "."
@@ -866,14 +830,50 @@
         {
           "segments": [
             {
-              "text": "The valuation model puts Ibrahim Mbaye's fair fee at "
+              "text": "The valuation model puts Amadou Onana's fair fee at "
             },
             {
-              "stat": "ev_e8d0ef1a4c0827eb",
-              "display": "€74.2m"
+              "stat": "ev_0d1f0c00a74b08a0",
+              "display": "€40.6m"
             },
             {
-              "text": ", above his market value."
+              "text": ", in line with his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Johan Manzambi at "
+            },
+            {
+              "stat": "ev_e0f8ae0526e5d4d7",
+              "display": "€65.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Johan Manzambi's fair fee at "
+            },
+            {
+              "stat": "ev_c3da17ac8d6358fc",
+              "display": "€62.7m"
+            },
+            {
+              "text": ", in line with his market value."
             }
           ],
           "type": "stat",
@@ -1282,6 +1282,22 @@
       "status": "model_output",
       "cross_checks": []
     },
+    "ev_0d1f0c00a74b08a0": {
+      "value": 40600000.0,
+      "display": "40600000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp4ec2cd81bd1a8a",
+      "entity_name": "Amadou Onana",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
     "ev_0eb21ddc65249a78": {
       "value": 0.011,
       "display": "0.01",
@@ -1520,22 +1536,6 @@
       "fetched_at": "2026-10-15T20:06:02.462223+00:00",
       "query_kind": "sql",
       "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_39e7a537de52bbe0": {
-      "value": 50000000.0,
-      "display": "50000000",
-      "unit": "EUR",
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp61b922ea749571",
-      "entity_name": "Ibrahim Mbaye",
-      "source": "transfermarkt",
-      "source_url": "https://www.transfermarkt.com/-/kader/verein/405/saison_id/2026/plus/1",
-      "source_tier": 3,
-      "fetched_at": "2026-10-14T00:00:00+00:00",
-      "query_kind": "file_csv",
-      "status": "single_source",
       "cross_checks": []
     },
     "ev_3e57be06133a1f62": {
@@ -1872,6 +1872,22 @@
       "fetched_at": "2026-10-15T17:36:53.845056+00:00",
       "query_kind": "sql",
       "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7b624ce1f2287e87": {
+      "value": 40000000.0,
+      "display": "40000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp4ec2cd81bd1a8a",
+      "entity_name": "Amadou Onana",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/405/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
       "cross_checks": []
     },
     "ev_7fe26f3319794a87": {
@@ -2402,22 +2418,6 @@
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_e8d0ef1a4c0827eb": {
-      "value": 74200000.0,
-      "display": "74200000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp61b922ea749571",
-      "entity_name": "Ibrahim Mbaye",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
     "ev_eadf3c9948548744": {
       "value": 27.8,
       "display": "27.80",
@@ -2778,18 +2778,6 @@
         "subject": "Amadou Onana"
       },
       {
-        "stat": "ev_e0f8ae0526e5d4d7",
-        "display": "€65.0m",
-        "label": "market value (Transfermarkt)",
-        "subject": "Johan Manzambi"
-      },
-      {
-        "stat": "ev_c3da17ac8d6358fc",
-        "display": "€62.7m",
-        "label": "fair fee if sold to another Premier League club (valuation model)",
-        "subject": "Johan Manzambi"
-      },
-      {
         "stat": "ev_0f97fc1fdaf91774",
         "display": "€50.0m",
         "label": "market value (Transfermarkt)",
@@ -2802,16 +2790,28 @@
         "subject": "Boubacar Kamara"
       },
       {
-        "stat": "ev_39e7a537de52bbe0",
-        "display": "€50.0m",
+        "stat": "ev_7b624ce1f2287e87",
+        "display": "€40.0m",
         "label": "market value (Transfermarkt)",
-        "subject": "Ibrahim Mbaye"
+        "subject": "Amadou Onana"
       },
       {
-        "stat": "ev_e8d0ef1a4c0827eb",
-        "display": "€74.2m",
+        "stat": "ev_0d1f0c00a74b08a0",
+        "display": "€40.6m",
         "label": "fair fee if sold to another Premier League club (valuation model)",
-        "subject": "Ibrahim Mbaye"
+        "subject": "Amadou Onana"
+      },
+      {
+        "stat": "ev_e0f8ae0526e5d4d7",
+        "display": "€65.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Johan Manzambi"
+      },
+      {
+        "stat": "ev_c3da17ac8d6358fc",
+        "display": "€62.7m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Johan Manzambi"
       },
       {
         "stat": "ev_c24a68715a14ffbd",
@@ -3051,5 +3051,6 @@
     "potential": "https://github.com/delta96040/dugout/blob/main/docs/backtests/potential.md",
     "fit": "https://github.com/delta96040/dugout/blob/main/docs/backtests/opportunity.md",
     "lookup": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/lookup.py"
-  }
+  },
+  "names": []
 }

@@ -5,8 +5,8 @@
     "name": "Newcastle United",
     "season": "2026-27"
   },
-  "generated_at": "2026-10-16T06:51:27+00:00",
-  "data_as_of": "2026-10-16T06:28:38+00:00",
+  "generated_at": "2026-10-16T10:15:33+00:00",
+  "data_as_of": "2026-10-16T09:56:02+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -2927,5 +2927,6 @@
     "potential": "https://github.com/delta96040/dugout/blob/main/docs/backtests/potential.md",
     "fit": "https://github.com/delta96040/dugout/blob/main/docs/backtests/opportunity.md",
     "lookup": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/lookup.py"
-  }
+  },
+  "names": []
 }
