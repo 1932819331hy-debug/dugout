@@ -1,0 +1,22 @@
+name: Bug
+description: Something is broken (pipeline, models, agents or website)
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      description: Commands you ran or the page and steps. Never paste API keys or .env contents.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python / Node version, browser if relevant

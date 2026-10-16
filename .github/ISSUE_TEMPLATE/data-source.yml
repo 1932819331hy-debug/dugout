@@ -1,0 +1,21 @@
+name: New data source
+description: Suggest a free data source
+labels: [data-source]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Source
+    validations:
+      required: true
+  - type: textarea
+    id: terms
+    attributes:
+      label: Licence, terms and robots.txt
+      description: dugout only uses sources that are free, allow this use, and whose robots.txt permits it.
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: What it would add

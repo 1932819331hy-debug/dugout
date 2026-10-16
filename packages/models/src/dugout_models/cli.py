@@ -107,11 +107,15 @@ def cmd_backtest(args) -> int:
 
 
 def cmd_publish(args) -> int:
-    from dugout_models.publish import publish
+    from dugout_models.publish import load_prediction_log, publish, save_prediction_log
 
     con = connect(args.db or get_settings().warehouse_path)  # writable: fills model_outputs
+    log_path = REPO_ROOT / "data" / "prediction_log.csv"
+    load_prediction_log(
+        con, log_path
+    )  # the committed log is the record; the warehouse may be a fresh CI cache
     counts = publish(con, args.models or None)
-    print("published:", counts)
+    print("published:", counts, "prediction log rows:", save_prediction_log(con, log_path))
     return 0
 
 
