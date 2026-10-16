@@ -7,23 +7,23 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   Secrets set (API_FOOTBALL_KEY, FOOTBALL_DATA_ORG_KEY, GUARDIAN_API_KEY, OPENROUTER_API_KEY, HF_TOKEN).
 - **Phase 2 — core models: DONE.** Predictor beats Elo on 2024-25 and 2025-26 (all of RPS/log loss/Brier).
   Weak models improved; FootballBERT evaluated and *not adopted* (leakage). See `docs/backtests/README.md`.
-- **Phase 3 — agents & verification: IN PROGRESS (2026-10-16).** Built and tested (see docs/agents.md):
-  Stat Auditor, Fact-Check (DeBERTa-v3-base NLI chosen in docs/backtests/factcheck_nli.md, BGE retrieval),
-  `dugout-models publish` -> `model_outputs`, LangGraph Sporting Director + 6 club specialists + 2 player
-  specialists (Player Development = new potential model, docs/backtests/potential.md; Player Fit), dossier JSON
-  `data/clubs/<slug>.json`, eval set (56 questions). Local LLM: Ollama qwen2.5:3b.
-  **Left to do:** (1) let `uv run dugout-models publish market` finish (adds lookup/potential/fit rows, ~20 min);
-  (2) rebuild `uv run dugout-agents dossier liverpool` and check sections (last run: transfer section garbled by
-  the LLM -> stricter binding added since; lineup section withheld); (3) run `uv run dugout-agents eval` with and
-  without `--no-llm`, write results to docs/backtests; (4) speed up market publish (~15 min) before Phase 5;
-  (5) report to user and stop for go-ahead.
-  User feedback to remember: Liverpool goalkeeper is not a need (fixed: peer-based needs); user says Rio Ngumoha
-  will not leave (insider info cannot be a source; sale likelihood relabelled as model estimate, academy/contract
-  blind spot documented). Confirmed via official club news (user link,
-  https://www.liverpoolfc.com/news/liverpool-agree-deal-sign-goalkeeper-lucca-brughmans): GK Lucca Brughmans (18)
-  signed from Genk, loaned back for 2026-27. TODO: add an official club-announcement source (check liverpoolfc.com
-  robots.txt; tier 1; cached, rate-limited) and count agreed future signings in squad needs.
-  The market+lookup publish finished on 2026-10-16 (lookup/potential/fit rows now in model_outputs).
+- **Phase 3 — agents & verification: DONE (2026-10-16), PR delta96040/dugout#1** (branch
+  `phase-3-agents-verification`). Awaiting user review / go-ahead for Phase 4. See docs/agents.md.
+  - Verify: Stat Auditor, Fact-Check (DeBERTa-v3-base NLI, docs/backtests/factcheck_nli.md; BGE-small retrieval;
+    passages must name every entity in the claim).
+  - Models: `dugout-models publish` -> `model_outputs` (predictor, lineup, injury, roles, fingerprint, market,
+    potential, fit, lookup). Training frames cached in `.cache/frames/` (warm publish ~2 min).
+  - Agents: Sporting Director + 6 club specialists + Player Development + Player Fit; LLM writes with fact codes,
+    drafts must pass the gate and state >= 2 facts, else templates. Ollama qwen2.5:3b by default.
+  - Club news: `club_news` adapter (official club sitemaps; reproduced press credited to original outlet);
+    `dugout setup-club <club> [--build]` (Wikidata P856 -> robots -> sitemap). Liverpool + Arsenal set up.
+  - Eval (docs/backtests/agents_eval_*): 0 untraceable numbers everywhere. Held-out 20 questions: routing 94%,
+    answer recall 93%, refusals 100%. Tuned 56-question set: 100% / 96% (LLM). The LLM's drafts pass all checks
+    for ~20% of sections; templates write the rest.
+  - Follow-ups: route future-tense "will ... score" to Match Predictor (held-out miss h05, left unfixed on purpose);
+    nightly workflow wiring is Phase 5; LLM quality is the main lever (try a larger open-weight model hosted).
+  - User feedback: GK need was a bug (fixed: peer-based needs + announced signings, e.g. Lucca Brughmans from the
+    club site); Rio Ngumoha insider claim cannot be a source — sale likelihood labelled as a model estimate.
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
