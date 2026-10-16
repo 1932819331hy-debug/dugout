@@ -63,7 +63,7 @@ SPECIALISTS: dict[str, Specialist] = {
             "match analyst",
             lambda tb, c, f: tools.next_match(tb, c),
             r"predict|forecast|win|beat|odds|chance|next (?:\w+ )?(?:match|game|fixture)|fixture|probab|result|"
-            r"expect|kick-?off|when (?:is|are|do|does)\b.*\b(?:match|game|fixture|play)",
+            r"\b(?:will|can|could|would|should|might)\b.{0,60}\bscore\b|expect|kick-?off|when (?:is|are|do|does)\b.*\b(?:match|game|fixture|play)",
             "What does the model expect from {club}'s next league match?",
         ),
         Specialist(
@@ -132,6 +132,11 @@ def route(question: str) -> list[str]:
     q = question.lower()
     hits = [name for name, s in SPECIALISTS.items() if re.search(s.keywords, q)]
     # "worth" questions are about value, not form; "who should we sign" is scouting, not news
+    # Future scoring questions ask for a match forecast; "goals" also matches club stats.
+    if "match" in hits and "club" in hits and re.search(
+        r"\b(?:will|can|could|would|should|might)\b.{0,60}\bscore\b", q
+    ):
+        hits.remove("club")
     if "scout" in hits and "transfer" in hits and re.search(r"sign|buy|target|replace|recruit|strengthen", q):
         hits.remove("transfer")
     return hits or ["club", "news"]
