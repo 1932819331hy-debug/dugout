@@ -1,13 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Num from "@/components/Num";
+import { ActiveChapter } from "./active";
 import type { StatRef } from "./types";
 
 const GLYPHS = "0123456789";
 
-/** Scrambled digits that resolve to the verified value once `active`; the resolved value is a hoverable Num. */
-export default function Scramble({ s, active, className = "" }: { s: StatRef; active: boolean; className?: string }) {
+/** Scrambled digits that resolve to the verified value once their chapter is on screen; the resolved value is a
+ *  hoverable Num. */
+export default function Scramble({ s, chapter, className = "" }: { s: StatRef; chapter: number; className?: string }) {
+  const on = useContext(ActiveChapter);
+  const active = on === -1 || on === chapter;
   const [done, setDone] = useState(false);
   const [text, setText] = useState(() => s.display.replace(/\d/g, "0"));
   const raf = useRef(0);

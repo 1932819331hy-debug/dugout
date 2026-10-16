@@ -2,10 +2,9 @@
 
 import Lenis from "lenis";
 import dynamic from "next/dynamic";
-import { useEffect, useRef, useState } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
+import { ActiveChapter } from "./active";
 import ChalkCursor from "./ChalkCursor";
-import { chapterContent } from "./Chapters";
-import StaticPitch from "./StaticPitch";
 import { CHAPTERS, chapterAt, story } from "./store";
 import type { StoryData } from "./types";
 
@@ -24,8 +23,17 @@ function canAnimate(): boolean {
   }
 }
 
-/** The scroll story: one persistent WebGL canvas pinned behind six chapters of real, verified data. */
-export default function Story({ data }: { data: StoryData }) {
+/** The scroll story: one persistent WebGL canvas pinned behind six chapters of real, verified data.
+ *  The chapters and the SVG pitch are rendered on the server and passed in, so only this shell hydrates. */
+export default function Story({
+  scene,
+  pitch,
+  chapters,
+}: {
+  scene: StoryData["scene"];
+  pitch: ReactNode;
+  chapters: { kicker: string; body: ReactNode }[];
+}) {
   const [mode, setMode] = useState<"pending" | "webgl" | "static">("pending");
   const [chapter, setChapter] = useState(0);
   const [local, setLocal] = useState(0);
@@ -79,12 +87,9 @@ export default function Story({ data }: { data: StoryData }) {
 
   if (mode === "static" || mode === "pending") {
     // reduced motion / no WebGL (and the server render): the same text over a static SVG pitch
-    const chapters = chapterContent(data, -1);
     return (
       <div className="grid12 pt-6">
-        <div className="hang">
-          <StaticPitch data={data} />
-        </div>
+        <div className="hang">{pitch}</div>
         {chapters.map((c, i) => (
           <section key={i} className="hang mt-20" aria-label={c.kicker}>
             <p className="mono-label">{c.kicker}</p>
@@ -95,41 +100,42 @@ export default function Story({ data }: { data: StoryData }) {
     );
   }
 
-  const chapters = chapterContent(data, chapter);
   return (
-    <div ref={root} className="relative" style={{ height: `${CHAPTERS * 150}vh` }}>
-      <div className="sticky top-0 h-screen w-full overflow-hidden" style={{ cursor: "none" }}>
-        <div className="absolute inset-0">
-          <Scene {...data.scene} />
+    <ActiveChapter.Provider value={chapter}>
+      <div ref={root} className="relative" style={{ height: `${CHAPTERS * 150}vh` }}>
+        <div className="sticky top-0 h-screen w-full overflow-hidden" style={{ cursor: "none" }}>
+          <div className="absolute inset-0">
+            <Scene {...scene} />
+          </div>
+          <ChalkCursor />
+          {chapters.map((c, i) => {
+            const visible = i === chapter;
+            // reveal on entry, drift upward as the chapter is scrolled (parallax), follow the cursor slightly
+            const reveal = visible ? (i === 0 ? 1 : Math.min(local / 0.15, 1)) : 0; // the first chapter is there on arrival
+            const lift = visible ? (local - 0.5) * -40 : 0;
+            return (
+              <section
+                key={i}
+                aria-label={c.kicker}
+                className="grid12 pointer-events-none absolute inset-x-0 top-[14vh]"
+                style={{
+                  opacity: reveal,
+                  transform: `translate3d(${story.mouse[0] * -8}px, ${lift + (1 - reveal) * 30 + story.mouse[1] * 6}px, 0)`,
+                  visibility: visible ? "visible" : "hidden",
+                }}
+              >
+                <div className={`pointer-events-auto max-w-3xl bg-bone/85 p-5 sm:p-7 ${i % 2 ? "col-span-12 sm:col-span-6 sm:col-start-7" : "hang sm:col-span-6"}`}>
+                  <p className="mono-label">{c.kicker}</p>
+                  <div className="mt-3">{c.body}</div>
+                </div>
+              </section>
+            );
+          })}
+          <p className="mono-label absolute bottom-4 left-1/2 -translate-x-1/2" aria-hidden="true">
+            {chapter < CHAPTERS - 1 ? "scroll" : ""}
+          </p>
         </div>
-        <ChalkCursor />
-        {chapters.map((c, i) => {
-          const visible = i === chapter;
-          // reveal on entry, drift upward as the chapter is scrolled (parallax), follow the cursor slightly
-          const reveal = visible ? (i === 0 ? 1 : Math.min(local / 0.15, 1)) : 0; // the first chapter is there on arrival
-          const lift = visible ? (local - 0.5) * -40 : 0;
-          return (
-            <section
-              key={i}
-              aria-label={c.kicker}
-              className="grid12 pointer-events-none absolute inset-x-0 top-[14vh]"
-              style={{
-                opacity: reveal,
-                transform: `translate3d(${story.mouse[0] * -8}px, ${lift + (1 - reveal) * 30 + story.mouse[1] * 6}px, 0)`,
-                visibility: visible ? "visible" : "hidden",
-              }}
-            >
-              <div className={`pointer-events-auto max-w-3xl bg-bone/85 p-5 sm:p-7 ${i % 2 ? "col-span-12 sm:col-span-6 sm:col-start-7" : "hang sm:col-span-6"}`}>
-                <p className="mono-label">{c.kicker}</p>
-                <div className="mt-3">{c.body}</div>
-              </div>
-            </section>
-          );
-        })}
-        <p className="mono-label absolute bottom-4 left-1/2 -translate-x-1/2" aria-hidden="true">
-          {chapter < CHAPTERS - 1 ? "scroll" : ""}
-        </p>
       </div>
-    </div>
+    </ActiveChapter.Provider>
   );
 }

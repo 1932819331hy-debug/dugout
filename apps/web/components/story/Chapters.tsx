@@ -1,19 +1,17 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import Num from "@/components/Num";
 import { REPO } from "./constants";
 import Scramble from "./Scramble";
+import Stars from "./Stars";
 import type { StatRef, StoryData } from "./types";
 
 function N({ s, className }: { s?: StatRef; className?: string }) {
   return s ? <Num stat={s.stat} display={s.display} className={className} /> : <span className="text-pencil">n/a</span>;
 }
 
-/** The six chapters' copy. `active` = chapter index on screen (animated mode) or -1 (static: everything shown). */
-export function chapterContent(d: StoryData, active: number) {
-  const on = (i: number) => active === -1 || active === i;
+/** The six chapters' copy, rendered on the server. Scrambled numbers resolve when their chapter is on screen
+ *  (Scramble reads the active chapter from context), so this needs no client state. */
+export function chapterContent(d: StoryData) {
   return [
     {
       kicker: "Chapter one · read the club",
@@ -89,13 +87,13 @@ export function chapterContent(d: StoryData, active: number) {
           <p className="mono-label mt-2">{d.candidate.club}</p>
           <dl className="mt-6 grid max-w-md grid-cols-2 gap-x-6 gap-y-2 font-mono text-sm">
             <dt className="text-pencil">Age</dt>
-            <dd>{d.candidate.age && <Scramble s={d.candidate.age} active={on(2)} />}</dd>
+            <dd>{d.candidate.age && <Scramble s={d.candidate.age} chapter={2} />}</dd>
             <dt className="text-pencil">Market value</dt>
-            <dd>{d.candidate.value && <Scramble s={d.candidate.value} active={on(2)} />}</dd>
+            <dd>{d.candidate.value && <Scramble s={d.candidate.value} chapter={2} />}</dd>
             <dt className="text-pencil">Fair fee (model)</dt>
-            <dd>{d.candidate.fairFee && <Scramble s={d.candidate.fairFee} active={on(2)} />}</dd>
+            <dd>{d.candidate.fairFee && <Scramble s={d.candidate.fairFee} chapter={2} />}</dd>
             <dt className="text-pencil">Chance of the move</dt>
-            <dd>{d.candidate.realism && <Scramble s={d.candidate.realism} active={on(2)} />}</dd>
+            <dd>{d.candidate.realism && <Scramble s={d.candidate.realism} chapter={2} />}</dd>
           </dl>
           {d.candidate.minutes && (
             <p className="stamp mt-6 text-xl">
@@ -120,7 +118,7 @@ export function chapterContent(d: StoryData, active: number) {
                 <span className="text-pencil">
                   {s.stat.metric.replaceAll("_", " ")} · {s.stat.entity_name}
                 </span>
-                <Scramble s={s} active={on(3)} />
+                <Scramble s={s} chapter={3} />
               </li>
             ))}
           </ul>
@@ -200,21 +198,5 @@ function ChalkLines({ d }: { d: StoryData }) {
       })}
       <p className="mono-label">Model: Elo + xG Dixon–Coles stack, beats Elo on both test seasons; bookmakers are still better.</p>
     </div>
-  );
-}
-
-function Stars() {
-  const [stars, setStars] = useState<{ n: number; at: string } | null>(null);
-  useEffect(() => {
-    fetch("https://api.github.com/repos/delta96040/dugout")
-      .then((r) => (r.ok ? r.json() : null))
-      .then((j) => j && setStars({ n: j.stargazers_count, at: new Date().toISOString() }))
-      .catch(() => undefined);
-  }, []);
-  if (!stars) return null;
-  return (
-    <span data-meta title={`Source: GitHub API (api.github.com), fetched live at ${stars.at}`} className="font-mono">
-      ★ {stars.n} <span className="text-pencil">live from GitHub</span>
-    </span>
   );
 }
