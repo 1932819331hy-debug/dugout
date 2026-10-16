@@ -10,7 +10,7 @@ a card with its source, fetch time and verification status.
 [![nightly](https://github.com/delta96040/dugout/actions/workflows/nightly.yml/badge.svg)](https://github.com/delta96040/dugout/actions/workflows/nightly.yml)
 [![licence: MIT](https://img.shields.io/badge/licence-MIT-141414)](LICENSE)
 
-**Live site:** _link added after the first deploy_ · **How it works:** [docs/agents.md](docs/agents.md) ·
+**Live site:** [dugout2.vercel.app](https://dugout2.vercel.app) · **How it works:** [docs/agents.md](docs/agents.md) ·
 **Model evidence:** [docs/backtests](docs/backtests/README.md)
 
 ## What it does
