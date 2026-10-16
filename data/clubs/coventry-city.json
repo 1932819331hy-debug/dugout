@@ -1,0 +1,1953 @@
+{
+  "schema": "dugout.club/1",
+  "club": {
+    "slug": "coventry-city",
+    "name": "Coventry City",
+    "season": "2026-27"
+  },
+  "generated_at": "2026-10-16T06:40:21+00:00",
+  "data_as_of": "2026-10-16T06:28:38+00:00",
+  "llm": null,
+  "summary": {
+    "agent": "director",
+    "title": "Sporting Director",
+    "question": "Summarise the dossier on Coventry City for the board.",
+    "status": "published",
+    "writer": "template",
+    "claims": [
+      {
+        "segments": [
+          {
+            "text": "Coventry City are "
+          },
+          {
+            "stat": "ev_e6cc85686be7525b",
+            "display": "14th"
+          },
+          {
+            "text": " in the Premier League table."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      },
+      {
+        "segments": [
+          {
+            "text": "Coventry City have "
+          },
+          {
+            "stat": "ev_a644199b32ff37dd",
+            "display": "6"
+          },
+          {
+            "text": " points."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      },
+      {
+        "segments": [
+          {
+            "text": "Coventry City's next league match is Tottenham Hotspur v Coventry City on "
+          },
+          {
+            "stat": "ev_5fe7d0f82cf3ff54",
+            "display": "19 October 2026"
+          },
+          {
+            "text": "."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      },
+      {
+        "segments": [
+          {
+            "text": "The lineup model sets Coventry City up in a "
+          },
+          {
+            "stat": "ev_2477c23936f68378",
+            "display": "4-4-2"
+          },
+          {
+            "text": " for the next match."
+          }
+        ],
+        "type": "stat",
+        "status": "verified",
+        "reason": "bound to ledger rows",
+        "sources": []
+      }
+    ],
+    "withheld": []
+  },
+  "sections": [
+    {
+      "agent": "club",
+      "title": "Club & Tactics",
+      "question": "How are Coventry City doing this season, and how do they play under their head coach?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "Coventry City are "
+            },
+            {
+              "stat": "ev_e6cc85686be7525b",
+              "display": "14th"
+            },
+            {
+              "text": " in the Premier League table."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Coventry City have "
+            },
+            {
+              "stat": "ev_a644199b32ff37dd",
+              "display": "6"
+            },
+            {
+              "text": " points."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Coventry City have scored "
+            },
+            {
+              "stat": "ev_4c77b53eb2792971",
+              "display": "5"
+            },
+            {
+              "text": " league goals."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Coventry City have conceded "
+            },
+            {
+              "stat": "ev_27ff7b8b44fb8f16",
+              "display": "11"
+            },
+            {
+              "text": " league goals."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Coventry City's most recent league results read "
+            },
+            {
+              "stat": "ev_a3c6e49cf0f522c4",
+              "display": "WWLLL"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Coventry City's Elo rating is "
+            },
+            {
+              "stat": "ev_54644b30ee6da78e",
+              "display": "1345"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Frank Lampard has been Coventry City's head coach since "
+            },
+            {
+              "stat": "ev_b34a7b16c704b2b0",
+              "display": "28 November 2024"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Frank Lampard's style profile covers "
+            },
+            {
+              "stat": "ev_c9d99e9194a4a0f7",
+              "display": "35"
+            },
+            {
+              "text": " Premier League matches."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Teams under Lampard have taken "
+            },
+            {
+              "stat": "ev_2316aa58f29ed0eb",
+              "display": "42%"
+            },
+            {
+              "text": " of the threat in their matches, close to the league average."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Teams under Lampard average "
+            },
+            {
+              "stat": "ev_2afbca7b1fe49c82",
+              "display": "101"
+            },
+            {
+              "text": " defensive actions per match, close to the league average."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "match",
+      "title": "Match Predictor",
+      "question": "What does the model expect from Coventry City's next league match?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "Coventry City's next league match is Tottenham Hotspur v Coventry City on "
+            },
+            {
+              "stat": "ev_5fe7d0f82cf3ff54",
+              "display": "19 October 2026"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model gives Tottenham Hotspur a "
+            },
+            {
+              "stat": "ev_cacaebcca210d2a2",
+              "display": "50%"
+            },
+            {
+              "text": " chance of winning against Coventry City."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model gives Tottenham Hotspur v Coventry City a "
+            },
+            {
+              "stat": "ev_0f61d9611911fc28",
+              "display": "26%"
+            },
+            {
+              "text": " chance of ending in a draw."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model gives Coventry City a "
+            },
+            {
+              "stat": "ev_9a13f54645faf00d",
+              "display": "24%"
+            },
+            {
+              "text": " chance of winning against Tottenham Hotspur."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model expects Tottenham Hotspur to score "
+            },
+            {
+              "stat": "ev_ba2a2ad7caa3f6a4",
+              "display": "1.6"
+            },
+            {
+              "text": " goals against Coventry City."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The model expects Coventry City to score "
+            },
+            {
+              "stat": "ev_344d228a64fc1bd7",
+              "display": "1.1"
+            },
+            {
+              "text": " goals against Tottenham Hotspur."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Coventry City's Elo rating is "
+            },
+            {
+              "stat": "ev_54644b30ee6da78e",
+              "display": "1345"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Tottenham Hotspur's Elo rating is "
+            },
+            {
+              "stat": "ev_2ac0dce15dc11068",
+              "display": "1396"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "lineup",
+      "title": "Lineup Selector",
+      "question": "What is Coventry City's predicted lineup for the next match?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "The lineup model sets Coventry City up in a "
+            },
+            {
+              "stat": "ev_2477c23936f68378",
+              "display": "4-4-2"
+            },
+            {
+              "text": " for the next match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Carl Rushworth at "
+            },
+            {
+              "stat": "ev_b50bb6c8b2afa4a7",
+              "display": "GK"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Bobby Thomas at "
+            },
+            {
+              "stat": "ev_eb3b224e8485798b",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Ethan Pinnock at "
+            },
+            {
+              "stat": "ev_831f73e592f78efe",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Ethan Pinnock is in the "
+            },
+            {
+              "stat": "ev_adebbf9fae334a69",
+              "display": "elevated"
+            },
+            {
+              "text": " risk tier of the injury-risk model."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Milan van Ewijk at "
+            },
+            {
+              "stat": "ev_94b291d4cb21b53c",
+              "display": "RB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Jay Dasilva at "
+            },
+            {
+              "stat": "ev_e00805962c8dc384",
+              "display": "LB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Jack Rudoni at "
+            },
+            {
+              "stat": "ev_885a85e9f3ae67b6",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Matt Grimes at "
+            },
+            {
+              "stat": "ev_bb557c16d6f16394",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Caleb Yirenkyi at "
+            },
+            {
+              "stat": "ev_fae0fd7a20c0340c",
+              "display": "RM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Ephron Mason-Clark at "
+            },
+            {
+              "stat": "ev_81bfc6a156d7e3de",
+              "display": "LM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Taiwo Awoniyi at "
+            },
+            {
+              "stat": "ev_41e4edcecbc7f063",
+              "display": "CF"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The lineup model starts Brandon Thomas-Asante at "
+            },
+            {
+              "stat": "ev_85a172671dcf6eea",
+              "display": "CF"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "news",
+      "title": "News & Injury",
+      "question": "Who is unavailable for Coventry City, and what is the latest news?",
+      "status": "withheld",
+      "writer": "template",
+      "claims": [],
+      "withheld": [
+        {
+          "text": "number not from the ledger: 'four'",
+          "status": "audit_error",
+          "reason": "stray_number"
+        }
+      ]
+    },
+    {
+      "agent": "transfer",
+      "title": "Transfer & Valuation",
+      "question": "Which Coventry City players could be sold, and what are the key players worth?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Sidiki Cherif at "
+            },
+            {
+              "stat": "ev_bf1638f6569aad05",
+              "display": "€22.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Sidiki Cherif's fair fee at "
+            },
+            {
+              "stat": "ev_3cd1ef414b026dfc",
+              "display": "€25.8m"
+            },
+            {
+              "text": ", above his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Caleb Yirenkyi at "
+            },
+            {
+              "stat": "ev_938726da3415af36",
+              "display": "€22.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Caleb Yirenkyi's fair fee at "
+            },
+            {
+              "stat": "ev_a0dffaf81ca301a2",
+              "display": "€24.1m"
+            },
+            {
+              "text": ", in line with his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt values Carl Rushworth at "
+            },
+            {
+              "stat": "ev_f5c5d86c14f421ee",
+              "display": "€22.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Carl Rushworth's fair fee at "
+            },
+            {
+              "stat": "ev_f2cc24ceef5c1d37",
+              "display": "€18.5m"
+            },
+            {
+              "text": ", below his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Milan van Ewijk's contract runs until "
+            },
+            {
+              "stat": "ev_892d782b4fca1b8c",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Haji Wright's contract runs until "
+            },
+            {
+              "stat": "ev_94e4c9fcd54eea92",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Jay Dasilva's contract runs until "
+            },
+            {
+              "stat": "ev_3eb867d4484a2699",
+              "display": "30 June 2027"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    },
+    {
+      "agent": "scout",
+      "title": "Scout",
+      "question": "Where should Coventry City strengthen, and who fits?",
+      "status": "published",
+      "writer": "template",
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "The squad model ranks "
+            },
+            {
+              "stat": "ev_32ea679415ace126",
+              "display": "defensive midfield"
+            },
+            {
+              "text": " as Coventry City's biggest need."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The squad model ranks "
+            },
+            {
+              "stat": "ev_0628ef87d202bfae",
+              "display": "goalkeeper"
+            },
+            {
+              "text": " as Coventry City's second need."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
+      "withheld": []
+    }
+  ],
+  "stats": {
+    "ev_0628ef87d202bfae": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "coventry-city",
+      "entity_name": "Coventry City",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0f61d9611911fc28": {
+      "value": 0.2595,
+      "display": "0.26",
+      "unit": null,
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:tottenham-hotspur:coventry-city",
+      "entity_name": "Tottenham Hotspur v Coventry City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2316aa58f29ed0eb": {
+      "value": 0.4185,
+      "display": "0.42",
+      "unit": null,
+      "metric": "threat_share",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q41533",
+      "entity_name": "Frank Lampard",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2477c23936f68378": {
+      "value": "4-4-2",
+      "display": "4-4-2",
+      "unit": null,
+      "metric": "predicted_formation",
+      "entity_type": "club",
+      "entity_id": "coventry-city",
+      "entity_name": "Coventry City",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_27ff7b8b44fb8f16": {
+      "value": 11.0,
+      "display": "11",
+      "unit": null,
+      "metric": "league_goalsAgainst",
+      "entity_type": "club",
+      "entity_id": "coventry-city",
+      "entity_name": "Coventry City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_2ac0dce15dc11068": {
+      "value": 1396.5,
+      "display": "1396.50",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "tottenham-hotspur",
+      "entity_name": "Tottenham Hotspur",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2afbca7b1fe49c82": {
+      "value": 101.1667,
+      "display": "101.17",
+      "unit": null,
+      "metric": "def_actions",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q41533",
+      "entity_name": "Frank Lampard",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_32ea679415ace126": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "coventry-city",
+      "entity_name": "Coventry City",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_344d228a64fc1bd7": {
+      "value": 1.0818,
+      "display": "1.08",
+      "unit": null,
+      "metric": "exp_away_goals",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:tottenham-hotspur:coventry-city",
+      "entity_name": "Tottenham Hotspur v Coventry City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3cd1ef414b026dfc": {
+      "value": 25800000.0,
+      "display": "25800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp86dcbb430da0f5",
+      "entity_name": "Sidiki Cherif",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3eb867d4484a2699": {
+      "value": "2027-06-30",
+      "display": "2027-06-30",
+      "unit": null,
+      "metric": "contract_expires",
+      "entity_type": "player",
+      "entity_id": "rpa538f66b435a45",
+      "entity_name": "Jay Dasilva",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_41e4edcecbc7f063": {
+      "value": "CF",
+      "display": "CF",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp09c7717375b5e9",
+      "entity_name": "Taiwo Awoniyi",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4c77b53eb2792971": {
+      "value": 5.0,
+      "display": "5",
+      "unit": null,
+      "metric": "league_goalsFor",
+      "entity_type": "club",
+      "entity_id": "coventry-city",
+      "entity_name": "Coventry City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_54644b30ee6da78e": {
+      "value": 1344.8,
+      "display": "1344.80",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "coventry-city",
+      "entity_name": "Coventry City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5fe7d0f82cf3ff54": {
+      "value": "2026-10-19T19:00:00+00:00",
+      "display": "2026-10-19T19:00:00+00:00",
+      "unit": null,
+      "metric": "kickoff_utc",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:tottenham-hotspur:coventry-city",
+      "entity_name": "Tottenham Hotspur v Coventry City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_81bfc6a156d7e3de": {
+      "value": "LM",
+      "display": "LM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp2b5e9afa85a416",
+      "entity_name": "Ephron Mason-Clark",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_831f73e592f78efe": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp2e5a0a3ff50839",
+      "entity_name": "Ethan Pinnock",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_85a172671dcf6eea": {
+      "value": "CF",
+      "display": "CF",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpfb2e43b7c5bb61",
+      "entity_name": "Brandon Thomas-Asante",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_885a85e9f3ae67b6": {
+      "value": "CM",
+      "display": "CM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp3ec31afeb6ade5",
+      "entity_name": "Jack Rudoni",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_892d782b4fca1b8c": {
+      "value": "2027-06-30",
+      "display": "2027-06-30",
+      "unit": null,
+      "metric": "contract_expires",
+      "entity_type": "player",
+      "entity_id": "rpbf22ed8330efd3",
+      "entity_name": "Milan van Ewijk",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_938726da3415af36": {
+      "value": 22000000.0,
+      "display": "22000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp8e04dfc40ea059",
+      "entity_name": "Caleb Yirenkyi",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/990/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_94b291d4cb21b53c": {
+      "value": "RB",
+      "display": "RB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpbf22ed8330efd3",
+      "entity_name": "Milan van Ewijk",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_94e4c9fcd54eea92": {
+      "value": "2027-06-30",
+      "display": "2027-06-30",
+      "unit": null,
+      "metric": "contract_expires",
+      "entity_type": "player",
+      "entity_id": "rpef830a856e5820",
+      "entity_name": "Haji Wright",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_9a0536de45bf3819": {
+      "value": 1.1425,
+      "display": "1.14",
+      "unit": null,
+      "metric": "xg_for",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q41533",
+      "entity_name": "Frank Lampard",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9a13f54645faf00d": {
+      "value": 0.2418,
+      "display": "0.24",
+      "unit": null,
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:tottenham-hotspur:coventry-city",
+      "entity_name": "Tottenham Hotspur v Coventry City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9b90a7bd0cbb178a": {
+      "value": 0.4107,
+      "display": "0.41",
+      "unit": null,
+      "metric": "creativity_share",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q41533",
+      "entity_name": "Frank Lampard",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a0dffaf81ca301a2": {
+      "value": 24100000.0,
+      "display": "24100000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp8e04dfc40ea059",
+      "entity_name": "Caleb Yirenkyi",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a3c6e49cf0f522c4": {
+      "value": "WWLLL",
+      "display": "WWLLL",
+      "unit": null,
+      "metric": "league_form",
+      "entity_type": "club",
+      "entity_id": "coventry-city",
+      "entity_name": "Coventry City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings",
+      "source_tier": 2,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_a4dcfae3000505e3": {
+      "value": 1.8309,
+      "display": "1.83",
+      "unit": null,
+      "metric": "xg_against",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q41533",
+      "entity_name": "Frank Lampard",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a644199b32ff37dd": {
+      "value": 6.0,
+      "display": "6",
+      "unit": null,
+      "metric": "league_points",
+      "entity_type": "club",
+      "entity_id": "coventry-city",
+      "entity_name": "Coventry City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_adebbf9fae334a69": {
+      "value": "elevated",
+      "display": "elevated",
+      "unit": null,
+      "metric": "injury_risk_tier",
+      "entity_type": "player",
+      "entity_id": "rp2e5a0a3ff50839",
+      "entity_name": "Ethan Pinnock",
+      "source": "dugout_model:injury",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/injury.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:40:04.618540+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b34a7b16c704b2b0": {
+      "value": "2024-11-28",
+      "display": "2024-11-28",
+      "unit": null,
+      "metric": "appointed",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q41533",
+      "entity_name": "Frank Lampard",
+      "source": "wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q41533",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T16:00:03.045278+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_b50bb6c8b2afa4a7": {
+      "value": "GK",
+      "display": "GK",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpc7ea507c0fbf00",
+      "entity_name": "Carl Rushworth",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ba2a2ad7caa3f6a4": {
+      "value": 1.6435,
+      "display": "1.64",
+      "unit": null,
+      "metric": "exp_home_goals",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:tottenham-hotspur:coventry-city",
+      "entity_name": "Tottenham Hotspur v Coventry City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bb557c16d6f16394": {
+      "value": "CM",
+      "display": "CM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpbef301701841d2",
+      "entity_name": "Matt Grimes",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bf1638f6569aad05": {
+      "value": 22000000.0,
+      "display": "22000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp86dcbb430da0f5",
+      "entity_name": "Sidiki Cherif",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/990/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_c9d99e9194a4a0f7": {
+      "value": 35.0,
+      "display": "35",
+      "unit": null,
+      "metric": "pl_matches",
+      "entity_type": "manager",
+      "entity_id": "wikidata:Q41533",
+      "entity_name": "Frank Lampard",
+      "source": "dugout_model:fingerprint",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cacaebcca210d2a2": {
+      "value": 0.4988,
+      "display": "0.50",
+      "unit": null,
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "premier_league:2026-27:tottenham-hotspur:coventry-city",
+      "entity_name": "Tottenham Hotspur v Coventry City",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-16T06:06:15.014784+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d44fec7199c8d6c7": {
+      "value": 50.0,
+      "display": "50",
+      "unit": "%",
+      "metric": "season_chance_of_playing_next_round",
+      "entity_type": "player",
+      "entity_id": "rpa28627d0b245dc",
+      "entity_name": "Kaine Kesler-Hayden",
+      "source": "fpl",
+      "source_url": "https://fantasy.premierleague.com/api/bootstrap-static/",
+      "source_tier": 1,
+      "fetched_at": "2026-10-15T15:33:26.314654+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_e00805962c8dc384": {
+      "value": "LB",
+      "display": "LB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpa538f66b435a45",
+      "entity_name": "Jay Dasilva",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e6cc85686be7525b": {
+      "value": 14.0,
+      "display": "14",
+      "unit": null,
+      "metric": "league_position",
+      "entity_type": "club",
+      "entity_id": "coventry-city",
+      "entity_name": "Coventry City",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PL/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T21:59:32.373936+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_eb3b224e8485798b": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpea352cbf8e800e",
+      "entity_name": "Bobby Thomas",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f2cc24ceef5c1d37": {
+      "value": 18500000.0,
+      "display": "18500000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpc7ea507c0fbf00",
+      "entity_name": "Carl Rushworth",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f5c5d86c14f421ee": {
+      "value": 22000000.0,
+      "display": "22000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpc7ea507c0fbf00",
+      "entity_name": "Carl Rushworth",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/990/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_fae0fd7a20c0340c": {
+      "value": "RM",
+      "display": "RM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp8e04dfc40ea059",
+      "entity_name": "Caleb Yirenkyi",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T17:36:53.845056+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    }
+  },
+  "key_stats": {
+    "club": [
+      {
+        "stat": "ev_e6cc85686be7525b",
+        "display": "14th",
+        "label": "league position",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_a644199b32ff37dd",
+        "display": "6",
+        "label": "league points",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_4c77b53eb2792971",
+        "display": "5",
+        "label": "league goals scored",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_27ff7b8b44fb8f16",
+        "display": "11",
+        "label": "league goals conceded",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_a3c6e49cf0f522c4",
+        "display": "WWLLL",
+        "label": "recent league results, oldest first",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_54644b30ee6da78e",
+        "display": "1345",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_b34a7b16c704b2b0",
+        "display": "28 November 2024",
+        "label": "appointed head coach of Coventry City",
+        "subject": "Frank Lampard"
+      },
+      {
+        "stat": "ev_c9d99e9194a4a0f7",
+        "display": "35",
+        "label": "Premier League matches in the style sample",
+        "subject": "Frank Lampard"
+      },
+      {
+        "stat": "ev_2316aa58f29ed0eb",
+        "display": "42%",
+        "label": "share of the match threat (territory)",
+        "subject": "Frank Lampard"
+      },
+      {
+        "stat": "ev_2afbca7b1fe49c82",
+        "display": "101",
+        "label": "defensive actions per match",
+        "subject": "Frank Lampard"
+      },
+      {
+        "stat": "ev_9a0536de45bf3819",
+        "display": "1.14",
+        "label": "expected goals for per match",
+        "subject": "Frank Lampard"
+      },
+      {
+        "stat": "ev_a4dcfae3000505e3",
+        "display": "1.83",
+        "label": "expected goals against per match",
+        "subject": "Frank Lampard"
+      },
+      {
+        "stat": "ev_9b90a7bd0cbb178a",
+        "display": "41%",
+        "label": "share of chance creation",
+        "subject": "Frank Lampard"
+      }
+    ],
+    "match": [
+      {
+        "stat": "ev_5fe7d0f82cf3ff54",
+        "display": "19 October 2026",
+        "label": "kick-off date",
+        "subject": "Tottenham Hotspur v Coventry City"
+      },
+      {
+        "stat": "ev_cacaebcca210d2a2",
+        "display": "50%",
+        "label": "probability Tottenham Hotspur win",
+        "subject": "Tottenham Hotspur"
+      },
+      {
+        "stat": "ev_0f61d9611911fc28",
+        "display": "26%",
+        "label": "probability of a draw",
+        "subject": "Tottenham Hotspur v Coventry City"
+      },
+      {
+        "stat": "ev_9a13f54645faf00d",
+        "display": "24%",
+        "label": "probability Coventry City win",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_ba2a2ad7caa3f6a4",
+        "display": "1.6",
+        "label": "expected goals in this match",
+        "subject": "Tottenham Hotspur"
+      },
+      {
+        "stat": "ev_344d228a64fc1bd7",
+        "display": "1.1",
+        "label": "expected goals in this match",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_54644b30ee6da78e",
+        "display": "1345",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_2ac0dce15dc11068",
+        "display": "1396",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Tottenham Hotspur"
+      }
+    ],
+    "lineup": [
+      {
+        "stat": "ev_2477c23936f68378",
+        "display": "4-4-2",
+        "label": "predicted formation for the next match",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_b50bb6c8b2afa4a7",
+        "display": "GK",
+        "label": "predicted starting slot (goalkeeper)",
+        "subject": "Carl Rushworth"
+      },
+      {
+        "stat": "ev_eb3b224e8485798b",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Bobby Thomas"
+      },
+      {
+        "stat": "ev_831f73e592f78efe",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Ethan Pinnock"
+      },
+      {
+        "stat": "ev_adebbf9fae334a69",
+        "display": "elevated",
+        "label": "injury-risk tier (load and history model)",
+        "subject": "Ethan Pinnock"
+      },
+      {
+        "stat": "ev_94b291d4cb21b53c",
+        "display": "RB",
+        "label": "predicted starting slot (right-back)",
+        "subject": "Milan van Ewijk"
+      },
+      {
+        "stat": "ev_e00805962c8dc384",
+        "display": "LB",
+        "label": "predicted starting slot (left-back)",
+        "subject": "Jay Dasilva"
+      },
+      {
+        "stat": "ev_885a85e9f3ae67b6",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Jack Rudoni"
+      },
+      {
+        "stat": "ev_bb557c16d6f16394",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Matt Grimes"
+      },
+      {
+        "stat": "ev_fae0fd7a20c0340c",
+        "display": "RM",
+        "label": "predicted starting slot (right midfield)",
+        "subject": "Caleb Yirenkyi"
+      },
+      {
+        "stat": "ev_81bfc6a156d7e3de",
+        "display": "LM",
+        "label": "predicted starting slot (left midfield)",
+        "subject": "Ephron Mason-Clark"
+      },
+      {
+        "stat": "ev_41e4edcecbc7f063",
+        "display": "CF",
+        "label": "predicted starting slot (centre-forward)",
+        "subject": "Taiwo Awoniyi"
+      },
+      {
+        "stat": "ev_85a172671dcf6eea",
+        "display": "CF",
+        "label": "predicted starting slot (centre-forward)",
+        "subject": "Brandon Thomas-Asante"
+      }
+    ],
+    "news": [
+      {
+        "stat": "ev_d44fec7199c8d6c7",
+        "display": "50",
+        "label": "chance of playing next round (FPL)",
+        "subject": "Kaine Kesler-Hayden"
+      }
+    ],
+    "transfer": [
+      {
+        "stat": "ev_bf1638f6569aad05",
+        "display": "€22.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Sidiki Cherif"
+      },
+      {
+        "stat": "ev_3cd1ef414b026dfc",
+        "display": "€25.8m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Sidiki Cherif"
+      },
+      {
+        "stat": "ev_938726da3415af36",
+        "display": "€22.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Caleb Yirenkyi"
+      },
+      {
+        "stat": "ev_a0dffaf81ca301a2",
+        "display": "€24.1m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Caleb Yirenkyi"
+      },
+      {
+        "stat": "ev_f5c5d86c14f421ee",
+        "display": "€22.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Carl Rushworth"
+      },
+      {
+        "stat": "ev_f2cc24ceef5c1d37",
+        "display": "€18.5m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Carl Rushworth"
+      },
+      {
+        "stat": "ev_892d782b4fca1b8c",
+        "display": "30 June 2027",
+        "label": "contract expiry",
+        "subject": "Milan van Ewijk"
+      },
+      {
+        "stat": "ev_94e4c9fcd54eea92",
+        "display": "30 June 2027",
+        "label": "contract expiry",
+        "subject": "Haji Wright"
+      },
+      {
+        "stat": "ev_3eb867d4484a2699",
+        "display": "30 June 2027",
+        "label": "contract expiry",
+        "subject": "Jay Dasilva"
+      }
+    ],
+    "scout": [
+      {
+        "stat": "ev_32ea679415ace126",
+        "display": "defensive midfield",
+        "label": "squad need, priority one",
+        "subject": "Coventry City"
+      },
+      {
+        "stat": "ev_0628ef87d202bfae",
+        "display": "goalkeeper",
+        "label": "squad need, priority two",
+        "subject": "Coventry City"
+      }
+    ]
+  },
+  "verification": {
+    "stat_auditor": {
+      "ok": true,
+      "numbers_total": 46,
+      "numbers_untraceable": 0
+    },
+    "fact_check_claims": {
+      "verified": 55
+    },
+    "sections_published": 6,
+    "sections_withheld": 1
+  },
+  "methods": {
+    "predictor": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+    "lineup": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
+    "injury": "https://github.com/delta96040/dugout/blob/main/docs/backtests/injury.md",
+    "roles": "https://github.com/delta96040/dugout/blob/main/docs/backtests/roles.md",
+    "fingerprint": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
+    "valuation": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+    "realism": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+    "scout": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+    "potential": "https://github.com/delta96040/dugout/blob/main/docs/backtests/potential.md",
+    "fit": "https://github.com/delta96040/dugout/blob/main/docs/backtests/opportunity.md",
+    "lookup": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/lookup.py"
+  }
+}
