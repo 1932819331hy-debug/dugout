@@ -12,8 +12,8 @@ jobs:
   python:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
         with:
           enable-cache: true
       - run: uv python install 3.12
@@ -24,3 +24,23 @@ jobs:
           uv run ruff format --check .
       - name: Tests (recorded fixtures, network disabled)
         run: uv run pytest
+
+  # The site is built from the committed JSON in data/; no secrets, no network beyond npm.
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - run: npm --prefix apps/web ci
+      - name: Typecheck
+        run: npm --prefix apps/web run lint
+      - name: Build (static export)
+        run: npm --prefix apps/web run build
+      - name: Banned design patterns
+        run: npm --prefix apps/web run banned
+      - name: Every visible digit is a ledger number or marked metadata
+        run: python3 tools/check_site_numbers.py

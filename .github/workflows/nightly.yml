@@ -4,9 +4,16 @@ on:
   schedule:
     - cron: "30 2 * * *" # 02:30 UTC
   workflow_dispatch:
+    inputs:
+      history:
+        description: "Also refresh the history sources (done every Sunday anyway)"
+        type: boolean
+        default: false
 
+# Writes the verified site data (data/clubs, data/scoreboard.json) and the live prediction log back to main;
+# Vercel deploys main on every push, so a data commit is the deploy.
 permissions:
-  contents: read
+  contents: write
 
 # One job at a time touches the API budgets and the HTTP cache.
 concurrency:
@@ -16,29 +23,32 @@ concurrency:
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 150
     env:
       CI: "true"
       API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
       FOOTBALL_DATA_ORG_KEY: ${{ secrets.FOOTBALL_DATA_ORG_KEY }}
       GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }} # optional: without it every dossier is templated
+      HF_TOKEN: ${{ secrets.HF_TOKEN }} # optional: Fact-Check model downloads
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Check secrets
         run: bash scripts/require_secrets.sh API_FOOTBALL_KEY FOOTBALL_DATA_ORG_KEY GUARDIAN_API_KEY
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v10
         with:
           enable-cache: true
       - run: uv python install 3.12
       - run: uv sync --frozen
 
-      # Reep catalogue (~210 MB, CC0) and the HTTP cache + daily budgets persist between runs.
-      # Caches are private to the repo; raw data is never uploaded as an artifact.
+      # Reep catalogue (~210 MB, CC0), the HTTP cache + daily budgets, the warehouse and the Fact-Check models
+      # persist between runs. Caches are private to the repo; raw data is never uploaded as an artifact.
       - name: Restore caches
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: |
             ~/.cache/reep
+            ~/.cache/huggingface
             .cache
             data/warehouse
           key: pipeline-${{ github.run_id }}
@@ -47,16 +57,68 @@ jobs:
       - name: Ingest (nightly job)
         run: uv run dugout ingest --job nightly
 
+      - name: Ingest (history job, Sundays or on request)
+        if: github.event_name == 'schedule' || inputs.history
+        run: |
+          if [ "$(date -u +%u)" = 7 ] || [ "${{ inputs.history }}" = "true" ]; then
+            uv run dugout ingest --job history
+          else
+            echo "history refresh runs on Sundays"
+          fi
+
       - name: Status
         if: always()
         run: uv run dugout status
 
+      - name: Publish models (loads and re-saves data/prediction_log.csv)
+        run: uv run dugout-models publish
+
+      - name: Commit the live prediction log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prediction_log.csv
+          if git diff --cached --quiet; then echo "no new predictions"; exit 0; fi
+          git commit -m "Prediction log $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      # Every section passes the Stat Auditor and Fact-Check or is withheld; a club with nothing verified keeps
+      # yesterday's dossier (its data_as_of shows the age).
+      - name: Club dossiers
+        run: uv run dugout-agents dossier --all || echo "::warning::some clubs had nothing pass verification; kept their previous dossier"
+
+      - name: Scoreboard
+        run: uv run dugout-models scoreboard
+
+      # The same gates as CI, on the new data, before anything reaches main (and so the site).
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - name: Build the site and check it
+        run: |
+          npm --prefix apps/web ci
+          npm --prefix apps/web run build
+          npm --prefix apps/web run banned
+          python3 tools/check_site_numbers.py
+
+      - name: Commit site data
+        run: |
+          git add data/clubs data/scoreboard.json
+          if git diff --cached --quiet; then echo "site data unchanged"; exit 0; fi
+          git commit -m "Nightly data $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
       - name: Save caches
         if: always()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: |
             ~/.cache/reep
+            ~/.cache/huggingface
             .cache
             data/warehouse
           key: pipeline-${{ github.run_id }}

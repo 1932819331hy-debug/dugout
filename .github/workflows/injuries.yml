@@ -20,18 +20,19 @@ jobs:
       CI: "true"
       API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Check secrets
         run: bash scripts/require_secrets.sh API_FOOTBALL_KEY
-      - uses: astral-sh/setup-uv@v6
+      - uses: astral-sh/setup-uv@v10
         with:
           enable-cache: true
       - run: uv python install 3.12
       - run: uv sync --frozen
-      - uses: actions/cache/restore@v4
+      - uses: actions/cache/restore@v6
         with:
           path: |
             ~/.cache/reep
+            ~/.cache/huggingface
             .cache
             data/warehouse
           key: pipeline-${{ github.run_id }}
@@ -39,10 +40,11 @@ jobs:
       - name: Injuries + lineups
         run: uv run dugout ingest --job injuries
       - if: always()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: |
             ~/.cache/reep
+            ~/.cache/huggingface
             .cache
             data/warehouse
           key: pipeline-${{ github.run_id }}
