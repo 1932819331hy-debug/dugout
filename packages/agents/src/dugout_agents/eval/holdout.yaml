@@ -77,3 +77,18 @@
 - id: h20
   question: What is Liverpool's wage bill?
   no_stat: [wage_bill, wages]
+- id: h21
+  question: Will Brentford score against Liverpool this weekend?
+  club: brentford
+  agents: [match]
+  expect: [{metric: [exp_home_goals, exp_away_goals], entity: Brentford}]
+- id: h22
+  question: How many goals could Liverpool score in their next game?
+  club: liverpool
+  agents: [match]
+  expect: [{metric: [exp_home_goals, exp_away_goals], entity: Liverpool}]
+- id: h23
+  question: Would Liverpool score against Brentford at Anfield?
+  club: liverpool
+  agents: [match]
+  expect: [{metric: [exp_home_goals, exp_away_goals], entity: Liverpool}]
