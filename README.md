@@ -13,6 +13,8 @@ a card with its source, fetch time and verification status.
 **Live site:** [dugout2.vercel.app](https://dugout2.vercel.app) · **How it works:** [docs/agents.md](docs/agents.md) ·
 **Model evidence:** [docs/backtests](docs/backtests/README.md)
 
+[![The scroll story on the home page: Liverpool read in full, the gap, the scouted fix, the prediction](docs/assets/story.gif)](https://dugout2.vercel.app)
+
 ## What it does
 
 For each club it writes a scouting dossier: how the side plays and where it sits, the next match prediction, the
