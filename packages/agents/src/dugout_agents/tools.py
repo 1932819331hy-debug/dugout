@@ -668,7 +668,16 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                 ),
             ):
                 rec = tb.model("scout", "player", pid, metric, ctx)
-                facts += _keep(_fact(tb, cname, label, tmpl, rec, fmt, entity_id=pid))
+                gloss = ""
+                if metric == "realism" and rec is not None:
+                    # any one specific move is unlikely; say so, so the prose cannot call it "a strong chance"
+                    p = float(rec[1])
+                    gloss = (
+                        "a long shot, as almost every specific move is; compare candidates with each other"
+                        if p < 0.02
+                        else "relatively plausible for a specific move"
+                    )
+                facts += _keep(_fact(tb, cname, label, tmpl, rec, fmt, gloss, pid))
     return facts
 
 
