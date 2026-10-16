@@ -15,6 +15,7 @@ from typing import Any
 from dugout_agents.facts import MODEL_DOCS
 from dugout_agents.graph import Context, Section, State, run
 from dugout_agents.specialists import CLUB_LEVEL
+from dugout_verify.auditor import audit
 from dugout_verify.ledger import PLACEHOLDER, format_value
 
 SCHEMA = "dugout.club/1"
@@ -85,6 +86,43 @@ def stat_json(eid: str, ctx: Context, status: dict[str, str], cross: dict[str, l
     }
 
 
+def key_stats(ctx: Context, sections: list[Section]) -> tuple[dict, dict, dict]:
+    """The structured facts behind each section (for charts and the 3D story), whether or not the prose cited them.
+
+    They pass the same Stat Auditor as prose numbers (re-run, cross-source); a fact that fails is left out.
+    Returns ({agent: [{stat, display, label, subject}]}, status by id, cross-checks by id)."""
+    out: dict[str, list[dict]] = {}
+    status: dict[str, str] = {}
+    cross: dict[str, list] = {}
+    for sec in sections:
+        rows = []
+        for f in sec.facts:
+            for eid, fmt in [(f.eid, f.fmt), *([f.when] if f.when else [])]:
+                if not eid:
+                    continue
+                rep = audit(
+                    f"{{{{stat:{eid}}}}}",
+                    ctx.ledger,
+                    resolve_body=ctx.resolve_body,
+                    allowed_names=ctx.allowed_names(),
+                    files_root=ctx.files_root,
+                )
+                if not rep.ok:
+                    continue
+                status.update(rep.stat_status)
+                cross.update(rep.cross_checks)
+                rows.append(
+                    {
+                        "stat": eid,
+                        "display": format_value(ctx.ledger.get(eid), fmt),
+                        "label": f.label,
+                        "subject": f.subject,
+                    }
+                )
+        out[sec.agent] = rows
+    return out, status, cross
+
+
 def build(ctx: Context, club: str) -> tuple[dict, State]:
     state = run(ctx, "", club, agents=CLUB_LEVEL)
     sections = sorted(state["sections"], key=lambda s: CLUB_LEVEL.index(s.agent))
@@ -103,6 +141,9 @@ def build(ctx: Context, club: str) -> tuple[dict, State]:
         for k, v in ((s.factcheck or {}).get("counts") or {}).items():
             fc_counts[k] = fc_counts.get(k, 0) + v
     cited = sorted({e for s in published for e in s.cited})
+    key, key_status, key_cross = key_stats(ctx, sections)
+    status.update(key_status)
+    cross.update(key_cross)
     doc: dict[str, Any] = {
         "schema": SCHEMA,
         "club": {"slug": club, "name": ctx.toolbox.name(club), "season": ctx.toolbox.season},
@@ -111,7 +152,11 @@ def build(ctx: Context, club: str) -> tuple[dict, State]:
         "llm": ctx.llm.name if ctx.llm else None,
         "summary": section_json(state["summary"], ctx),
         "sections": [section_json(s, ctx) for s in sections],
-        "stats": {e: stat_json(e, ctx, status, cross) for e in cited},
+        "stats": {
+            e: stat_json(e, ctx, status, cross)
+            for e in sorted(set(cited) | {k["stat"] for v in key.values() for k in v})
+        },
+        "key_stats": key,
         "verification": {
             "stat_auditor": {"ok": all(s.audit["ok"] for s in published if s.audit), **totals},
             "fact_check_claims": fc_counts,

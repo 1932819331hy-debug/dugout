@@ -11,6 +11,7 @@ and its output is rejected unless it passes the same checks as the Stat Auditor.
 from __future__ import annotations
 
 import logging
+import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import Protocol
@@ -31,6 +32,8 @@ class LLMError(RuntimeError):
 
 
 class OpenAICompatLLM:
+    RETRY_STATUS = (429, 500, 502, 503, 504)
+
     def __init__(
         self,
         base_url: str,
@@ -38,13 +41,18 @@ class OpenAICompatLLM:
         api_key: str | None = None,
         timeout: float = 180.0,
         temperature: float = 0.2,
-        max_tokens: int = 400,
+        max_tokens: int = 600,
+        retries: int = 3,
+        sleep: Callable[[float], None] = time.sleep,
     ):
         self.base_url, self.model = base_url.rstrip("/"), model
         self.name = model
-        self.temperature, self.max_tokens = temperature, max_tokens
+        self.temperature, self.max_tokens, self.retries, self._sleep = temperature, max_tokens, retries, sleep
         headers = {"Authorization": f"Bearer {api_key}"} if api_key else {}
+        if "openrouter.ai" in self.base_url:  # OpenRouter asks apps to identify themselves
+            headers |= {"HTTP-Referer": "https://github.com/delta96040/dugout", "X-Title": "dugout"}
         self._http = httpx.Client(timeout=timeout, headers=headers)
+        self.calls = 0
 
     def complete(self, system: str, user: str) -> str:
         body = {
@@ -54,12 +62,24 @@ class OpenAICompatLLM:
             "max_tokens": self.max_tokens,
             "seed": 7,
         }
-        try:
-            r = self._http.post(f"{self.base_url}/chat/completions", json=body)
-            r.raise_for_status()
-            return r.json()["choices"][0]["message"]["content"] or ""
-        except (httpx.HTTPError, KeyError, IndexError, ValueError) as exc:
-            raise LLMError(f"{self.model}: {type(exc).__name__}") from exc  # no URL/headers in the message
+        for attempt in range(self.retries + 1):
+            try:
+                self.calls += 1
+                r = self._http.post(f"{self.base_url}/chat/completions", json=body)
+                if r.status_code in self.RETRY_STATUS and attempt < self.retries:
+                    wait = r.headers.get("retry-after", "")
+                    self._sleep(min(float(wait), 60) if wait.isdigit() else 5 * 2**attempt)
+                    continue
+                r.raise_for_status()
+                return r.json()["choices"][0]["message"]["content"] or ""
+            except (httpx.HTTPError, KeyError, IndexError, ValueError) as exc:
+                if attempt < self.retries and isinstance(exc, httpx.TransportError):
+                    self._sleep(5 * 2**attempt)
+                    continue
+                raise LLMError(
+                    f"{self.model}: {type(exc).__name__}"
+                ) from exc  # no URL/headers in the message
+        raise LLMError(f"{self.model}: still rate-limited after {self.retries} retries")
 
 
 @dataclass
@@ -79,18 +99,59 @@ class ScriptedLLM:
         return self.replies.pop(0)
 
 
+@dataclass
+class FallbackLLM:
+    """Tries each LLM in turn: a hosted model first, a local one when the hosted one errors or is rate-limited."""
+
+    chain: list[LLM]
+
+    @property
+    def name(self) -> str:
+        return self.chain[0].name
+
+    def complete(self, system: str, user: str) -> str:
+        last: LLMError | None = None
+        for llm in self.chain:
+            try:
+                text = llm.complete(system, user)
+                self.used = llm.name
+                return text
+            except LLMError as exc:
+                last = exc
+        raise last or LLMError("no LLM configured")
+
+
+def _reachable(llm: OpenAICompatLLM) -> bool:
+    for _ in range(2):  # a local server may still be loading its model: be patient once
+        try:
+            httpx.get(f"{llm.base_url}/models", timeout=30, headers=llm._http.headers).raise_for_status()
+            return True
+        except httpx.HTTPError:
+            continue
+    return False
+
+
 def from_settings() -> LLM | None:
-    """The configured LLM, or None when the endpoint is unreachable (agents then use templates only)."""
+    """The configured LLM (with the optional fallback), or None when none is reachable (templates only).
+
+    Chosen on docs/backtests/writer_llm.md: Poolside Laguna-S 2.1 (open weights, OpenMDW licence) via OpenRouter's
+    free tier passes the publish gate far more often than the local 3B model, which stays as the fallback."""
     from dugout_pipeline.settings import get_settings
 
     s = get_settings()
-    llm = OpenAICompatLLM(s.llm_base_url, s.llm_model, s.secret("llm_api_key"))
-    for attempt in range(2):  # a local server may still be loading its model: be patient once
-        try:
-            httpx.get(f"{llm.base_url}/models", timeout=30, headers=llm._http.headers).raise_for_status()
-            break
-        except httpx.HTTPError:
-            if attempt:
-                log.warning("LLM endpoint not reachable; using deterministic templates only")
-                return None
-    return llm
+    chain: list[LLM] = []
+    for base, model in ((s.llm_base_url, s.llm_model), (s.llm_fallback_base_url, s.llm_fallback_model)):
+        if not base or not model:
+            continue
+        key = s.secret("llm_api_key") if base == s.llm_base_url else None
+        if not key and "openrouter.ai" in base:  # the OpenRouter key is already in .env under its own name
+            key = s.secret("openrouter_api_key")
+        if "openrouter.ai" in base and not key:
+            continue
+        llm = OpenAICompatLLM(base, model, key)
+        if _reachable(llm):
+            chain.append(llm)
+    if not chain:
+        log.warning("no LLM endpoint reachable; using deterministic templates only")
+        return None
+    return chain[0] if len(chain) == 1 else FallbackLLM(chain)

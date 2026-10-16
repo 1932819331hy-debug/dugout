@@ -115,6 +115,15 @@ def cmd_publish(args) -> int:
     return 0
 
 
+def cmd_scoreboard(args) -> int:
+    from dugout_models.scoreboard import build
+
+    con = connect(args.db or get_settings().warehouse_path)
+    doc = build(con, args.seasons, REPO_ROOT / "data" / "scoreboard.json")
+    print("scoreboard:", doc["summary"])
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     if os.name == "nt":
         # PyTensor's C backend needs a modern g++; NUTS runs through nutpie/numba instead, so skip C compilation.
@@ -137,6 +146,11 @@ def main(argv: list[str] | None = None) -> int:
         "models", nargs="*", help="predictor lineup injury roles fingerprint market (default: all)"
     )
     s.set_defaults(fn=cmd_publish)
+    s = sub.add_parser(
+        "scoreboard", help="write data/scoreboard.json: predictions vs results (live + walk-forward)"
+    )
+    s.add_argument("--seasons", nargs="+", default=["2025-26", "2026-27"])
+    s.set_defaults(fn=cmd_scoreboard)
     args = p.parse_args(argv)
     return args.fn(args)
 

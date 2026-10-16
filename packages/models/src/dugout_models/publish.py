@@ -129,6 +129,22 @@ def predictions(con: duckdb.DuckDBPyConnection, now: datetime, days: int = 21) -
     for club, rating in elo.ratings.items():
         if club in set(up.home) | set(up.away):
             rows.append(_row("predictor", "club", club, "elo", round(rating, 1), now))
+    # append-only log of what was predicted before kick-off: the scoreboard's live record
+    con.executemany(
+        "INSERT OR IGNORE INTO prediction_log VALUES (?, ?, ?, ?, ?, ?, ?)",
+        [
+            [
+                r.match_id,
+                now,
+                r.kickoff_utc,
+                f"predictor@{VERSION}",
+                round(float(p[0]), 4),
+                round(float(p[1]), 4),
+                round(float(p[2]), 4),
+            ]
+            for r, p in zip(f.itertuples(), probs, strict=True)
+        ],
+    )
     return rows
 
 

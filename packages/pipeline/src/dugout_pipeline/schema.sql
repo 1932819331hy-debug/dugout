@@ -302,3 +302,15 @@ CREATE TABLE IF NOT EXISTS model_outputs (
     as_of        TIMESTAMPTZ NOT NULL,
     PRIMARY KEY (model, entity_type, entity_id, metric, context)
 );
+
+-- Every forecast as published (append-only), so the scoreboard compares *live* predictions with results.
+CREATE TABLE IF NOT EXISTS prediction_log (
+    match_id     VARCHAR NOT NULL,
+    as_of        TIMESTAMPTZ NOT NULL,       -- when the prediction was published (before kick-off)
+    kickoff_utc  TIMESTAMPTZ,
+    model        VARCHAR NOT NULL,
+    p_home       DOUBLE NOT NULL,
+    p_draw       DOUBLE NOT NULL,
+    p_away       DOUBLE NOT NULL,
+    PRIMARY KEY (match_id, as_of, model)
+);
