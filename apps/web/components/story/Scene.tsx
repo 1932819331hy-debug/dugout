@@ -8,7 +8,7 @@ import { useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import type { XY } from "@/lib/formations";
 import { pitchFragment, pitchVertex } from "./pitchShader";
-import { chapterAt, clamp01, smooth, story } from "./store";
+import { CHAPTERS, chapterAt, clamp01, smooth, story } from "./store";
 
 const TURF = new THREE.Color("#23402F");
 const CHALK = new THREE.Color("#F6F3EA");
@@ -28,7 +28,7 @@ function cameraCurves(gap: XY) {
   const [gx, gz] = [gap[0], -gap[1]];
   const pos = new THREE.CatmullRomCurve3([
     new THREE.Vector3(0, 98, 0.1),
-    new THREE.Vector3(gx + 18, 38, gz + 34),
+    new THREE.Vector3(gx + 30, 40, gz + 36),
     new THREE.Vector3(gx - 22, 16, gz + 30),
     new THREE.Vector3(0, 62, 58),
     new THREE.Vector3(-6, 2.4, 44),
@@ -36,7 +36,7 @@ function cameraCurves(gap: XY) {
   ]);
   const look = new THREE.CatmullRomCurve3([
     new THREE.Vector3(0, 0, 0),
-    new THREE.Vector3(gx, 0, gz),
+    new THREE.Vector3(gx + 16, 0, gz - 4), // look past the gap so it sits left of the chapter text
     new THREE.Vector3(gx + 4, 0, gz),
     new THREE.Vector3(0, 0, 0),
     new THREE.Vector3(0, 1.2, 0),
@@ -60,7 +60,9 @@ function Pitch({ gap }: { gap: XY }) {
     [gap],
   );
   useFrame((_, dt) => {
-    const u = uniforms;
+    // update the material's own uniforms: R3F may copy the object passed as a prop
+    const u = (mat.current?.uniforms ?? uniforms) as typeof uniforms;
+    if (process.env.NODE_ENV !== "production") (window as unknown as { __pitch: unknown }).__pitch = u; // debugging aid
     u.uTime.value += dt;
     const { index, local } = chapterAt(story.progress);
     // the gap bleeds in during chapter two and stays while the fix is scouted
@@ -144,11 +146,12 @@ function Rig({ gap }: { gap: XY }) {
   const look = useMemo(() => new THREE.Vector3(), []);
   useFrame(() => {
     p.current += (story.progress - p.current) * 0.08; // scrub with a little inertia
-    const t = clamp01(p.current);
-    camera.position.copy(curves.pos.getPointAt(t));
+    // chapter i's midpoint sits exactly on keyframe i; the camera travels between keyframes across boundaries
+    const t = clamp01((p.current * CHAPTERS - 0.5) / (CHAPTERS - 1));
+    camera.position.copy(curves.pos.getPoint(t));
     camera.position.x += story.mouse[0] * 1.2; // cursor parallax
     camera.position.y += story.mouse[1] * 0.8;
-    curves.look.getPointAt(t, look);
+    curves.look.getPoint(t, look);
     camera.lookAt(look);
   });
   return null;

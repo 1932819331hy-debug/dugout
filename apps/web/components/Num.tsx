@@ -26,7 +26,7 @@ export default function Num({ stat, display, className = "" }: { stat: Stat; dis
         onBlur={() => setOpen(false)}
         onClick={() => setOpen((o) => !o)}
         onKeyDown={(e) => e.key === "Escape" && setOpen(false)}
-        className={`cursor-help font-mono underline decoration-dotted decoration-1 underline-offset-4 ${
+        className={`cursor-help ${className.includes("font-") ? "" : "font-mono"} underline decoration-dotted decoration-1 underline-offset-4 ${
           verified ? "decoration-ink" : "decoration-pencil"
         } ${className}`}
       >

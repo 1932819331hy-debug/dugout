@@ -19,9 +19,11 @@ const GAP_SLOTS: Record<string, string[]> = {
 function storyData(d: Dossier): StoryData {
   const disp = displays(d);
   const ref = (id: string): StatRef => ({ id, stat: d.stats[id], display: disp[id] ?? d.stats[id].display });
+  // key_stats keep each section's facts in priority order (need one before need two, the top candidate first)
+  const ordered = [...Object.values(d.key_stats ?? {}).flat().map((k) => k.stat), ...Object.keys(d.stats)];
   const find = (metric: string, pred: (e: string) => boolean = () => true) => {
-    const hit = Object.entries(d.stats).find(([, s]) => s.metric === metric && pred(s.entity_id));
-    return hit ? ref(hit[0]) : undefined;
+    const id = ordered.find((i) => d.stats[i] && d.stats[i].metric === metric && pred(d.stats[i].entity_id));
+    return id ? ref(id) : undefined;
   };
   const formation = find("predicted_formation");
   const slots = FORMATION_SLOTS[String(formation?.stat.value ?? "4-3-3")] ?? FORMATION_SLOTS["4-3-3"];
@@ -41,8 +43,11 @@ function storyData(d: Dossier): StoryData {
   const match = find("p_home_win") ?? find("p_away_win");
   const [homeName, awayName] = (match?.stat.entity_name ?? " v ").split(" v ");
   const matchId = match?.stat.entity_id;
-  const verifiedSamples = Object.keys(d.stats)
-    .filter((id) => d.stats[id].status === "verified")
+  // six numbers with different metrics, cross-checked ones first, then re-checked single-source and model outputs
+  const rank: Record<string, number> = { verified: 0, single_source: 1, model_output: 2 };
+  const verifiedSamples = ordered
+    .filter((id, i) => d.stats[id] && ordered.indexOf(id) === i && d.stats[id].status in rank)
+    .sort((a, b) => rank[d.stats[a].status] - rank[d.stats[b].status])
     .filter((id, i, all) => all.findIndex((j) => d.stats[j].metric === d.stats[id].metric) === i)
     .slice(0, 6)
     .map(ref);

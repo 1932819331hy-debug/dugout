@@ -13,6 +13,9 @@ const Scene = dynamic(() => import("./Scene"), { ssr: false });
 
 function canAnimate(): boolean {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return false;
+  // keep weak or data-saving devices on the static story (same text, SVG pitch)
+  const nav = navigator as Navigator & { deviceMemory?: number; connection?: { saveData?: boolean } };
+  if (nav.connection?.saveData || (nav.deviceMemory !== undefined && nav.deviceMemory <= 4)) return false;
   try {
     const c = document.createElement("canvas");
     return !!(c.getContext("webgl2") || c.getContext("webgl"));
@@ -28,7 +31,21 @@ export default function Story({ data }: { data: StoryData }) {
   const [local, setLocal] = useState(0);
   const root = useRef<HTMLDivElement>(null);
 
-  useEffect(() => setMode(canAnimate() ? "webgl" : "static"), []);
+  // The static story (full text + SVG pitch) paints first; the WebGL scene loads on the first interaction, so the
+  // three.js cost is paid only by visitors who engage with the story.
+  useEffect(() => {
+    if (!canAnimate()) {
+      setMode("static");
+      return;
+    }
+    const events = ["wheel", "touchstart", "pointermove", "keydown", "scroll"] as const;
+    const go = () => {
+      events.forEach((e) => window.removeEventListener(e, go));
+      setMode("webgl");
+    };
+    events.forEach((e) => window.addEventListener(e, go, { once: true, passive: true }));
+    return () => events.forEach((e) => window.removeEventListener(e, go));
+  }, []);
 
   useEffect(() => {
     if (mode !== "webgl") return;
