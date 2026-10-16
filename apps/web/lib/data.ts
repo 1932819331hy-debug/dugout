@@ -74,6 +74,8 @@ export interface Dossier {
   methods: Record<string, string>;
   /** structured facts behind each section, each re-run by the Stat Auditor (for charts and the story) */
   key_stats?: Record<string, { stat: string; display: string; label: string; subject: string }[]>;
+  /** names with digits in them ("Parma Calcio 1913"): proper names, not statistics (the Stat Auditor allows them) */
+  names?: string[];
 }
 
 const CLUBS_DIR = path.join(REPO_ROOT, "data", "clubs");

@@ -64,11 +64,11 @@ export default async function ClubPage({ params }: { params: Promise<{ slug: str
             <SectionProse section={s} d={d} />
             {s.withheld.length > 0 && (
               <details className="mt-3">
-                <summary className="mono-label cursor-pointer">Withheld by verification ({s.withheld.length})</summary>
+                <summary className="mono-label cursor-pointer">Withheld by verification (<span data-meta>{s.withheld.length}</span>)</summary>
                 <ul className="mt-2 space-y-1 text-sm text-pencil">
                   {s.withheld.map((w, j) => (
                     <li key={j}>
-                      <span className="line-through">{w.text}</span> — {w.status}: {w.reason}
+                      <span className="line-through">{w.text}</span> — <span data-meta>{w.status}: {w.reason}</span>
                     </li>
                   ))}
                 </ul>

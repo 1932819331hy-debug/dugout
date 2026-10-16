@@ -124,3 +124,23 @@ html.lenis body {
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
+/* provenance cards on numbers (<Num>, <MetaNum>): CSS-only, so pages hydrate no per-number state.
+   Hover, keyboard focus or a tap (components/Tips.tsx sets data-open) shows the card; Escape closes it. */
+.tip-card {
+  display: none;
+}
+.tip:hover > .tip-card,
+.tip:focus-within > .tip-card,
+.tip[data-open] > .tip-card {
+  display: block;
+}
+.tip[data-closed] > .tip-card {
+  display: none;
+}
+/* bridge the gap between number and card so the pointer can reach the card's link */
+.tip-card::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem 0 100% 0;
+}

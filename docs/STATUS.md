@@ -29,23 +29,27 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   free tier (open weights, OpenMDW licence; uses OPENROUTER_API_KEY), local Ollama qwen2.5:3b as fallback, then
   templates. Laguna's drafts pass the gate 58% vs 17% for qwen. Gemma 4 (Apache) was rate-limited upstream; Inkling
   models are blocked for non-listed apps. Free tier has a small daily quota: LLM for showcase clubs only.
-- **Phase 4 — website: IN PROGRESS (2026-10-16)**, same branch/PR #1. See docs/website.md.
+- **Phase 4 — website: BUILT, awaiting review (2026-10-16)**, same branch/PR #1. See docs/website.md.
   - Done: Next.js static site in apps/web (/, /clubs, /club/[slug], /methods, /scoreboard); R3F scroll story with
     pitch shader, instanced players, camera keyframes, post FX, chalk cursor, SVG fallback; every number is a <Num>
     with provenance; `key_stats` block in dossiers (audited structured facts) feeds the story; prediction_log table
     + `dugout-models scoreboard` -> data/scoreboard.json; banned-pattern script (clean);
     tools/check_site_numbers.py (0 untraceable digits). GSAP dropped (not open source) -> Lenis + own scrub.
-  - Lighthouse mobile (before deferring WebGL; CPU was busy): a11y 100, SEO 100, best practices 96, performance
-    61 (home) / 73 (dossier) / 79 (methods). WebGL now loads on first interaction -> re-measure.
-  - **Next steps:**
-    1. Done: all 20 club dossiers built (18 template-only); data/scoreboard.json written (440 matches).
-    2. Rebuild liverpool + arsenal (`uv run dugout-agents dossier liverpool arsenal`): lineup is now always
-       templated (Laguna dropped players).
-    3. `npm --prefix apps/web run build`, `uv run python tools/check_site_numbers.py`, `npm --prefix apps/web run banned`,
-       then Lighthouse mobile (serve apps/web/out; `npx lighthouse@13.5.0 <url> --form-factor=mobile`); target >= 90.
-       If the dossier page is still < 90, look at LCP (the big bleed number / fonts).
-    4. Remove the dev-only `__pitch` debug hook in components/story/Scene.tsx if unwanted (stripped in production).
-    5. Commit data/clubs/*.json + data/scoreboard.json, push, update PR #1, show the user, wait for go-ahead.
+  - Lighthouse mobile (2026-10-16, `npx serve` so responses are compressed like a real host; python http.server
+    is not and costs ~10-20 points): accessibility, best practices and SEO 100 on every page. Performance:
+    methods ~92, clubs ~90, dossier ~82-87, scoreboard ~78-84, home ~71 (+/- 4 between runs on this laptop).
+    Remaining cost is React hydration (one ~1 s chunk at 4x CPU throttle on every page; home also hydrates the
+    whole story, which is a client component). Next lever: render the story text on the server and keep only the
+    scroll/WebGL shell as a client island. Observed first paint sometimes waits ~1 s in headless Chrome here
+    (noise: same build gave 0.15 s and 1.1 s back to back).
+  - Done 2026-10-16: liverpool + arsenal rebuilt (lineup templated; 0 untraceable, 7/7 published); the other 18
+    rebuilt template-only; `names` field (digit-bearing proper names) + `data-name` in the site check; withheld
+    counts/reasons marked `data-meta`; `<Num>`/`<MetaNum>` are CSS cards (no per-number hydration); favicon;
+    Next static-export prefetch 404s fixed (scripts/flatten-prefetch.mjs); `__pitch` hook removed.
+  - **Rebuilding dossiers**: `uv run dugout-agents dossier liverpool arsenal` uses the LLM (Laguna free tier, falls
+    back to local qwen2.5:3b on CPU, ~12 min a club). For every other club use
+    `uv run dugout-agents --no-llm dossier <clubs...>` (~1.3 min a club).
+  - **Next steps:** user review of PR #1 / go-ahead; optionally the story server-render refactor for home perf.
   - Dev preview: .claude/launch.json "web" (npm --prefix apps/web run dev, port 3000).
 
 ## Key facts discovered (do not re-research)

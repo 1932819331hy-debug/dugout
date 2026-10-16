@@ -8,6 +8,7 @@ the Stat Auditor and Fact-Check are included; withheld material is listed (witho
 from __future__ import annotations
 
 import json
+import re
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -165,7 +166,22 @@ def build(ctx: Context, club: str) -> tuple[dict, State]:
         },
         "methods": MODEL_DOCS,
     }
+    doc["names"] = digit_names(doc, ctx.allowed_names())
     return doc, state
+
+
+def digit_names(doc: dict, names: list[str]) -> list[str]:
+    """Names with digits in them ("Parma Calcio 1913") that the published prose uses.
+
+    The Stat Auditor allows digits inside registered names; the site marks these so its digit check can too.
+    """
+    text = " ".join(
+        seg.get("text", "")
+        for s in [doc["summary"], *doc["sections"]]
+        for c in s["claims"]
+        for seg in c["segments"]
+    )
+    return sorted({n for n in names if re.search(r"\d", n) and n in text}, key=len, reverse=True)
 
 
 def write(doc: dict, out_dir: Path) -> Path:

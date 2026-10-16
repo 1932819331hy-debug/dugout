@@ -62,7 +62,6 @@ function Pitch({ gap }: { gap: XY }) {
   useFrame((_, dt) => {
     // update the material's own uniforms: R3F may copy the object passed as a prop
     const u = (mat.current?.uniforms ?? uniforms) as typeof uniforms;
-    if (process.env.NODE_ENV !== "production") (window as unknown as { __pitch: unknown }).__pitch = u; // debugging aid
     u.uTime.value += dt;
     const { index, local } = chapterAt(story.progress);
     // the gap bleeds in during chapter two and stays while the fix is scouted

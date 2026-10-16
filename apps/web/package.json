@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/flatten-prefetch.mjs",
     "start": "npx serve out",
     "lint": "tsc --noEmit",
     "banned": "node scripts/banned-patterns.mjs"

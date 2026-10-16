@@ -25,10 +25,13 @@ uv run python tools/check_site_numbers.py   # fails if any visible digit is not 
 ## Every number has a receipt
 
 A number is a focusable `<Num>` button (hover, focus or tap) revealing metric, entity, source (linked), fetch time,
-verification status and cross-checks. The story uses each dossier's `key_stats`: the structured facts behind every
-section, each re-run by the Stat Auditor like the prose numbers. Labels with digits that are not statistics
-(season names, timestamps, model names) are marked `data-meta`; `tools/check_site_numbers.py` walks the built
-pages and fails on anything else.
+verification status and cross-checks. The card is CSS (`.tip` in `globals.css`) with one page-wide listener
+(`components/Tips.tsx`: tap toggles, Escape or tapping elsewhere closes), so pages hydrate no per-number state.
+The story uses each dossier's `key_stats`: the structured facts behind every section, each re-run by the Stat
+Auditor like the prose numbers. Labels with digits that are not statistics (season names, timestamps, model names,
+withheld counts and reasons) are marked `data-meta`; proper names with digits ("Parma Calcio 1913", listed in each
+dossier's `names`, which the Stat Auditor also allows) are marked `data-name`. `tools/check_site_numbers.py` walks
+the built pages and fails on anything else.
 
 ## The story
 
@@ -40,6 +43,8 @@ pages and fails on anything else.
   ScrollTrigger from the original brief is not used: GSAP's licence is not open source.
 - **Performance**: the static story (same text, SVG pitch) paints first; the WebGL scene loads on the first
   interaction. Reduced-motion, no-WebGL, data-saving and low-memory devices keep the static story.
+- **Prefetch fix**: Next's static export writes segment-prefetch files as `__next.x/__PAGE__.txt` but the router
+  requests `__next.x.__PAGE__.txt`; `scripts/flatten-prefetch.mjs` (run by `npm run build`) writes the dotted copies.
 - **Cursor**: a chalk crosshair with a fading trail over the pitch.
 
 ## Design rules
