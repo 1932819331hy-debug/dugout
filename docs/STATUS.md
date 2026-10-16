@@ -29,7 +29,7 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   free tier (open weights, OpenMDW licence; uses OPENROUTER_API_KEY), local Ollama qwen2.5:3b as fallback, then
   templates. Laguna's drafts pass the gate 58% vs 17% for qwen. Gemma 4 (Apache) was rate-limited upstream; Inkling
   models are blocked for non-listed apps. Free tier has a small daily quota: LLM for showcase clubs only.
-- **Phase 4 — website: BUILT, awaiting review (2026-10-16)**, same branch/PR #1. See docs/website.md.
+- **Phase 4 — website: DONE (accepted 2026-10-16), merged with PR #1 into main.** See docs/website.md.
   - Done: Next.js static site in apps/web (/, /clubs, /club/[slug], /methods, /scoreboard); R3F scroll story with
     pitch shader, instanced players, camera keyframes, post FX, chalk cursor, SVG fallback; every number is a <Num>
     with provenance; `key_stats` block in dossiers (audited structured facts) feeds the story; prediction_log table
@@ -52,9 +52,19 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - **Rebuilding dossiers**: `uv run dugout-agents dossier liverpool arsenal` uses the LLM (Laguna free tier, falls
     back to local qwen2.5:3b on CPU, ~12 min a club). For every other club use
     `uv run dugout-agents --no-llm dossier <clubs...>` (~1.3 min a club).
-  - **Next steps:** user review of PR #1 / go-ahead -> Phase 5 (Vercel deploy, workflows, README). Confirm
-    Lighthouse with PageSpeed Insights on the first Vercel preview.
   - Dev preview: .claude/launch.json "web" (npm --prefix apps/web run dev, port 3000).
+
+- **Phase 5 — ship: IN PROGRESS (2026-10-16)**, branch `phase-5-ship`.
+  - Done: CI `web` job (typecheck, build, banned patterns, digit check); nightly now ingest -> history (Sundays or
+    `history: true`) -> `dugout-models publish` -> commit `data/prediction_log.csv` -> `dugout-agents dossier --all`
+    (LLM for showcase clubs only, `onboard.showcase_clubs`) -> scoreboard -> site build + checks -> commit data to
+    main. Live prediction log is committed (CI warehouse is only an evictable cache). Actions on Node 24 majors
+    (checkout v7, cache v6, setup-uv v10, setup-node v7); nightly and injuries share one cache path list.
+    `apps/web/vercel.json` (skip builds unless apps/web, data/clubs, scoreboard or backtests changed). README
+    (badges, diagram, quick starts, limitations), CONTRIBUTING, issue/PR templates.
+  - Live: https://dugout2.vercel.app (Vercel project by the user, Root Directory `apps/web`, deploys main).
+  - setup-uv has no floating major tags since v8: pin exact versions (v10.2.0).
+  - First nightly after merge: run it by hand with `history: true` (new cache paths -> cold warehouse).
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.

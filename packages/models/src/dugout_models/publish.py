@@ -10,6 +10,7 @@ from __future__ import annotations
 import logging
 from collections.abc import Iterable
 from datetime import UTC, datetime
+from pathlib import Path
 from typing import Any
 
 import duckdb
@@ -391,3 +392,37 @@ def publish(
             counts[mn] = write(con, mn, [r for r in rows if r["model"] == mn])
         log.info("published %s: %s", name, counts)
     return counts
+
+
+# The live prediction log is append-only and committed to git (data/prediction_log.csv): in CI the warehouse is
+# only an Actions cache that can be evicted, and the commit history shows each forecast existed before kick-off.
+LOG_COLUMNS = {
+    "match_id": "VARCHAR",
+    "as_of": "TIMESTAMPTZ",
+    "kickoff_utc": "TIMESTAMPTZ",
+    "model": "VARCHAR",
+    "p_home": "DOUBLE",
+    "p_draw": "DOUBLE",
+    "p_away": "DOUBLE",
+}
+
+
+def load_prediction_log(con: duckdb.DuckDBPyConnection, path: Path) -> int:
+    """Add the committed log's rows to the warehouse (rows already there are kept as they are)."""
+    if not path.exists():
+        return 0
+    before = con.execute("SELECT count(*) FROM prediction_log").fetchone()[0]
+    con.execute(
+        "INSERT OR IGNORE INTO prediction_log SELECT * FROM read_csv(?, header = true, columns = ?)",
+        [str(path), LOG_COLUMNS],
+    )
+    return con.execute("SELECT count(*) FROM prediction_log").fetchone()[0] - before
+
+
+def save_prediction_log(con: duckdb.DuckDBPyConnection, path: Path) -> int:
+    """Write the whole log back, oldest first, so new forecasts show up as appended lines in git."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    con.execute(
+        f"COPY (SELECT * FROM prediction_log ORDER BY as_of, match_id, model) TO '{path.as_posix()}' (HEADER)"
+    )
+    return con.execute("SELECT count(*) FROM prediction_log").fetchone()[0]
