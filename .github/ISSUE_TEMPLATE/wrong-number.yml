@@ -1,0 +1,24 @@
+name: Wrong or suspicious number
+description: A number on the site or in a dossier looks wrong
+labels: [data]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Page or file
+      description: e.g. /club/liverpool/ or data/clubs/liverpool.json
+    validations:
+      required: true
+  - type: textarea
+    id: number
+    attributes:
+      label: The number and its card
+      description: What the number says, and what its card shows (source, fetched, status).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and your source
+    validations:
+      required: true

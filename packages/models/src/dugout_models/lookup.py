@@ -21,7 +21,6 @@ from datetime import datetime
 import duckdb
 import numpy as np
 import pandas as pd
-import yaml
 from dugout_pipeline.settings import get_settings
 
 from dugout_models import potential
@@ -49,14 +48,9 @@ def level_words(value: float, pl_values: np.ndarray) -> str:
 
 
 def showcase_clubs() -> list[str]:
-    """Clubs that get club-specific fit outputs: each league's showcase club plus clubs set up with
-    `dugout setup-club` (config/club_sites.yaml)."""
-    from dugout_pipeline.onboard import load_club_sites
+    from dugout_pipeline.onboard import showcase_clubs as clubs
 
-    config_dir = get_settings().config_dir
-    cfg = yaml.safe_load((config_dir / "leagues.yaml").read_text(encoding="utf-8"))
-    clubs = {v["showcase_club"] for v in cfg.values() if isinstance(v, dict) and v.get("showcase_club")}
-    return sorted(clubs | {s["club"] for s in load_club_sites(config_dir)})
+    return clubs(get_settings().config_dir)
 
 
 def outlook_many(mk: Market, pool: pd.DataFrame, club: str, fees: pd.Series) -> pd.DataFrame:

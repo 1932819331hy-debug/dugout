@@ -36,10 +36,22 @@ def cmd_ask(args) -> int:
 
 def cmd_dossier(args) -> int:
     from dugout_agents import dossier
+    from dugout_pipeline.onboard import showcase_clubs
+    from dugout_pipeline.settings import get_settings
 
     ctx = _ctx(args)
+    clubs = args.clubs
+    llm_clubs = set(clubs)
+    if args.all:
+        # every club in the league; the LLM (free tier, small daily quota) writes for the showcase clubs only
+        clubs = [
+            c for (c,) in ctx.toolbox.con.execute("SELECT club_id FROM clubs ORDER BY club_id").fetchall()
+        ]
+        llm_clubs = set(showcase_clubs(get_settings().config_dir))
+    llm = ctx.llm
     ok = True
-    for club in args.clubs:
+    for club in clubs:
+        ctx.llm = llm if club in llm_clubs else None
         doc, _ = dossier.build(ctx, club)
         v = doc["verification"]
         if v["sections_published"] == 0 or not v["stat_auditor"]["ok"]:
@@ -86,6 +98,11 @@ def main(argv: list[str] | None = None) -> int:
     s.set_defaults(fn=cmd_ask)
     s = sub.add_parser("dossier")
     s.add_argument("clubs", nargs="*", default=["liverpool"])
+    s.add_argument(
+        "--all",
+        action="store_true",
+        help="every league club: showcase clubs with the LLM, the rest templates",
+    )
     s.set_defaults(fn=cmd_dossier)
     s = sub.add_parser("eval")
     s.add_argument("--limit", type=int)

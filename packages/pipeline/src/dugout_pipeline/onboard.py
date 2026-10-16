@@ -47,6 +47,14 @@ def load_club_sites(config_dir: Path) -> list[dict[str, Any]]:
     return yaml.safe_load(path.read_text(encoding="utf-8")) or []
 
 
+def showcase_clubs(config_dir: Path) -> list[str]:
+    """Clubs that get club-specific outputs (fit, LLM-written dossiers): each league's showcase club plus clubs
+    set up with `dugout setup-club` (config/club_sites.yaml)."""
+    cfg = yaml.safe_load((config_dir / "leagues.yaml").read_text(encoding="utf-8"))
+    clubs = {v["showcase_club"] for v in cfg.values() if isinstance(v, dict) and v.get("showcase_club")}
+    return sorted(clubs | {s["club"] for s in load_club_sites(config_dir)})
+
+
 class _Fetcher(SourceAdapter):
     """A polite client for the setup checks (cache, rate limit, robots for pages)."""
 

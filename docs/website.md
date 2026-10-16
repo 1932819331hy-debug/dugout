@@ -2,7 +2,8 @@
 
 A static Next.js site (App Router, `output: "export"`) generated from the verified JSON in `data/`:
 `data/clubs/<slug>.json` (dossiers) and `data/scoreboard.json`, plus the backtest reports in `docs/backtests/`.
-No server, no secrets; the only runtime request is the public GitHub star count.
+No server, no secrets; the only runtime request is the public GitHub star count. Live at
+https://dugout2.vercel.app (Vercel, Root Directory `apps/web`; `vercel.json` skips builds unless the site or its data changed).
 
 ```bash
 npm --prefix apps/web install
