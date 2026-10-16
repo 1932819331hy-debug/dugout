@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "dugout evidence ledger, Stat Auditor and Fact-Check"
 license = "MIT"
 requires-python = ">=3.12,<3.14"
-dependencies = ["duckdb>=1.1", "pydantic>=2.9"]
+dependencies = ["duckdb>=1.1", "pydantic>=2.9", "numpy>=2"]
+
+[project.optional-dependencies]
+# Fact-Check models (DeBERTa-v3 NLI, BGE retrieval). CPU-only torch: see [tool.uv.sources] in the root.
+nli = ["torch>=2.5", "transformers>=4.46"]
 
 [build-system]
 requires = ["hatchling"]

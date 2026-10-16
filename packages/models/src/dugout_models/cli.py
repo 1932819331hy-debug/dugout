@@ -72,6 +72,15 @@ def _run_one(model: str, args, con) -> bool:
         print("opportunity:", r["results"])
         res = r["results"]
         return res["opportunity_model"]["r2"] > res["baseline_prev_share_value"]["r2"]
+    if model == "potential":
+        from dugout_models.potential import backtest
+
+        r = backtest(BACKTESTS)
+        print(
+            "potential:",
+            {h: (v["model"]["mae_log"], v["age_curve"]["mae_log"]) for h, v in r["horizons"].items()},
+        )
+        return all(v["model"]["mae_log"] < v["age_curve"]["mae_log"] for v in r["horizons"].values())
     raise SystemExit(f"unknown model {model}")
 
 
@@ -85,6 +94,7 @@ MODELS = [
     "realism",
     "injury",
     "lineup",
+    "potential",
 ]
 
 
@@ -94,6 +104,24 @@ def cmd_backtest(args) -> int:
     ok = {m: _run_one(m, args, con) for m in models}
     print("criteria met:", ok)
     return 0 if all(ok.values()) else 1
+
+
+def cmd_publish(args) -> int:
+    from dugout_models.publish import publish
+
+    con = connect(args.db or get_settings().warehouse_path)  # writable: fills model_outputs
+    counts = publish(con, args.models or None)
+    print("published:", counts)
+    return 0
+
+
+def cmd_scoreboard(args) -> int:
+    from dugout_models.scoreboard import build
+
+    con = connect(args.db or get_settings().warehouse_path)
+    doc = build(con, args.seasons, REPO_ROOT / "data" / "scoreboard.json")
+    print("scoreboard:", doc["summary"])
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -111,6 +139,18 @@ def main(argv: list[str] | None = None) -> int:
     s.add_argument("--no-bayes", action="store_true", help="skip the (slow) NUTS Dixon–Coles baseline")
     s.add_argument("--name", default="predictor", help="report file name in docs/backtests/")
     s.set_defaults(fn=cmd_backtest)
+    s = sub.add_parser(
+        "publish", help="fit shipped models on all data; write current outputs to model_outputs"
+    )
+    s.add_argument(
+        "models", nargs="*", help="predictor lineup injury roles fingerprint market (default: all)"
+    )
+    s.set_defaults(fn=cmd_publish)
+    s = sub.add_parser(
+        "scoreboard", help="write data/scoreboard.json: predictions vs results (live + walk-forward)"
+    )
+    s.add_argument("--seasons", nargs="+", default=["2025-26", "2026-27"])
+    s.set_defaults(fn=cmd_scoreboard)
     args = p.parse_args(argv)
     return args.fn(args)
 

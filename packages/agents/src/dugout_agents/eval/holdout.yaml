@@ -1,0 +1,79 @@
+# Held-out questions (written 2026-10-16 after the main set was used to fix the system; never tuned against).
+- id: h01
+  question: How many goals has Bukayo Saka got in the league this season?
+  agents: [club]
+  expect: [{metric: season_goals_scored, entity: Bukayo Saka}]
+- id: h02
+  question: Where do Chelsea sit in the table right now?
+  agents: [club]
+  expect: [{metric: league_position, entity: Chelsea}]
+- id: h03
+  question: How does Arsenal's manager set his team up?
+  agents: [club]
+  expect: [{metric: threat_share, entity: Mikel Arteta}]
+- id: h04
+  question: What are Arsenal's odds in their next game?
+  agents: [match]
+  expect: [{metric: [p_home_win, p_away_win], entity: Arsenal}]
+- id: h05
+  question: How many goals will Liverpool score against Brentford?
+  agents: [match]
+  expect: [{metric: [exp_home_goals, exp_away_goals], entity: Liverpool}]
+- id: h06
+  question: Who will start in defence for Liverpool this weekend?
+  agents: [lineup]
+  expect: [{metric: predicted_xi_slot, entity: any}]
+- id: h07
+  question: Is Hugo Ekitike injured?
+  agents: [news]
+  claims: [{type: injury, entity: Hugo Ekitiké}]
+- id: h08
+  question: Is Szoboszlai going to be fit?
+  agents: [news]
+  expect: [{metric: season_chance_of_playing_next_round, entity: Dominik Szoboszlai}]
+- id: h09
+  question: How much is Alexander Isak worth?
+  agents: [transfer]
+  expect: [{metric: market_value, entity: Alexander Isak}]
+- id: h10
+  question: What would be a fair price for Florian Wirtz?
+  agents: [transfer]
+  expect: [{metric: fair_fee, entity: Florian Wirtz}]
+- id: h11
+  question: Which positions should Arsenal recruit in?
+  club: arsenal
+  agents: [scout]
+  expect: [{metric: need, entity: Arsenal}]
+- id: h12
+  question: Name some realistic targets for Liverpool in midfield.
+  agents: [scout]
+  expect: [{metric: realism, entity: any}]
+- id: h13
+  question: How good will Ethan Nwaneri become?
+  agents: [potential]
+  expect: [{metric: proj_value_4y, entity: Nwaneri}]
+- id: h14
+  question: What is the ceiling for Jeremy Jacquet?
+  agents: [potential]
+  expect: [{metric: ceiling_value_4y, entity: Jacquet}]
+- id: h15
+  question: Would Adam Wharton fit in at Liverpool?
+  agents: [fit]
+  expect: [{metric: expected_minutes_share, entity: Wharton}]
+- id: h16
+  question: How would Moises Caicedo fit into Liverpool's midfield?
+  agents: [fit]
+  expect: [{metric: rank_at_position, entity: Caicedo}]
+- id: h17
+  question: Has Liverpool signed any goalkeeper recently?
+  agents: [scout]
+  claims: [{type: attributed, entity: Brughmans}]
+- id: h18
+  question: What did Liverpool pay for their new goalkeeper in pounds sterling?
+  no_stat: [transfer_fee, fee]
+- id: h19
+  question: How many yellow cards has Virgil van Dijk had this season?
+  no_stat: [yellow_cards, season_yellow_cards]
+- id: h20
+  question: What is Liverpool's wage bill?
+  no_stat: [wage_bill, wages]

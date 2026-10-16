@@ -5,15 +5,23 @@ description = "Open-source AI sporting director for the Premier League"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.12,<3.14"
-dependencies = ["dugout-pipeline", "dugout-verify", "dugout-models"]
+dependencies = ["dugout-pipeline", "dugout-verify[nli]", "dugout-models", "dugout-agents"]
 
 [tool.uv.workspace]
-members = ["packages/pipeline", "packages/verify", "packages/models"]
+members = ["packages/pipeline", "packages/verify", "packages/models", "packages/agents"]
 
 [tool.uv.sources]
 dugout-pipeline = { workspace = true }
 dugout-verify = { workspace = true }
 dugout-models = { workspace = true }
+dugout-agents = { workspace = true }
+# CPU wheels everywhere (the default Linux wheel pulls gigabytes of CUDA libraries we never use).
+torch = [{ index = "pytorch-cpu" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
 
 [dependency-groups]
 dev = [
