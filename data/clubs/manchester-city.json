@@ -5,8 +5,8 @@
     "name": "Manchester City",
     "season": "2026-27"
   },
-  "generated_at": "2026-10-16T06:48:56+00:00",
-  "data_as_of": "2026-10-16T06:28:38+00:00",
+  "generated_at": "2026-10-16T10:13:23+00:00",
+  "data_as_of": "2026-10-16T09:56:02+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -807,6 +807,42 @@
         {
           "segments": [
             {
+              "text": "Transfermarkt values Joško Gvardiol at "
+            },
+            {
+              "stat": "ev_46fd9318b749687b",
+              "display": "€75.0m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The valuation model puts Joško Gvardiol's fair fee at "
+            },
+            {
+              "stat": "ev_e3b8866e616a2505",
+              "display": "€55.6m"
+            },
+            {
+              "text": ", below his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
               "text": "Transfermarkt values Nico O'Reilly at "
             },
             {
@@ -830,42 +866,6 @@
             {
               "stat": "ev_b48c8df2a05c7232",
               "display": "€60.9m"
-            },
-            {
-              "text": ", in line with his market value."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Transfermarkt values Gianluigi Donnarumma at "
-            },
-            {
-              "stat": "ev_7a7e76c55b0bf9f4",
-              "display": "€45.0m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "The valuation model puts Gianluigi Donnarumma's fair fee at "
-            },
-            {
-              "stat": "ev_bc66e19045e2b537",
-              "display": "€39.5m"
             },
             {
               "text": ", in line with his market value."
@@ -1451,6 +1451,22 @@
       "status": "model_output",
       "cross_checks": []
     },
+    "ev_46fd9318b749687b": {
+      "value": 75000000.0,
+      "display": "75000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpcb4c7add62b601",
+      "entity_name": "Joško Gvardiol",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/281/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
+      "cross_checks": []
+    },
     "ev_4775c83394892f6a": {
       "value": 0.005,
       "display": "0.01",
@@ -1737,22 +1753,6 @@
       "fetched_at": "2026-10-15T20:06:02.462223+00:00",
       "query_kind": "sql",
       "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7a7e76c55b0bf9f4": {
-      "value": 45000000.0,
-      "display": "45000000",
-      "unit": "EUR",
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp53404b1f2684d4",
-      "entity_name": "Gianluigi Donnarumma",
-      "source": "transfermarkt",
-      "source_url": "https://www.transfermarkt.com/-/kader/verein/281/saison_id/2026/plus/1",
-      "source_tier": 3,
-      "fetched_at": "2026-10-14T00:00:00+00:00",
-      "query_kind": "file_csv",
-      "status": "single_source",
       "cross_checks": []
     },
     "ev_7d3576d9e33ec516": {
@@ -2107,22 +2107,6 @@
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_bc66e19045e2b537": {
-      "value": 39500000.0,
-      "display": "39500000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp53404b1f2684d4",
-      "entity_name": "Gianluigi Donnarumma",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
     "ev_bf070279b4c40dd7": {
       "value": 68800000.0,
       "display": "68800000",
@@ -2245,6 +2229,22 @@
       "entity_name": "Sandro Tonali",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e3b8866e616a2505": {
+      "value": 55600000.0,
+      "display": "55600000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpcb4c7add62b601",
+      "entity_name": "Joško Gvardiol",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
       "fetched_at": "2026-10-15T20:06:02.462223+00:00",
       "query_kind": "sql",
@@ -2574,6 +2574,18 @@
         "subject": "Rayan Cherki"
       },
       {
+        "stat": "ev_46fd9318b749687b",
+        "display": "€75.0m",
+        "label": "market value (Transfermarkt)",
+        "subject": "Joško Gvardiol"
+      },
+      {
+        "stat": "ev_e3b8866e616a2505",
+        "display": "€55.6m",
+        "label": "fair fee if sold to another Premier League club (valuation model)",
+        "subject": "Joško Gvardiol"
+      },
+      {
         "stat": "ev_67335f0dd89cd7a2",
         "display": "€70.0m",
         "label": "market value (Transfermarkt)",
@@ -2584,18 +2596,6 @@
         "display": "€60.9m",
         "label": "fair fee if sold to another Premier League club (valuation model)",
         "subject": "Nico O'Reilly"
-      },
-      {
-        "stat": "ev_7a7e76c55b0bf9f4",
-        "display": "€45.0m",
-        "label": "market value (Transfermarkt)",
-        "subject": "Gianluigi Donnarumma"
-      },
-      {
-        "stat": "ev_bc66e19045e2b537",
-        "display": "€39.5m",
-        "label": "fair fee if sold to another Premier League club (valuation model)",
-        "subject": "Gianluigi Donnarumma"
       },
       {
         "stat": "ev_75dcfeef09d4fb34",
@@ -2829,5 +2829,6 @@
     "potential": "https://github.com/delta96040/dugout/blob/main/docs/backtests/potential.md",
     "fit": "https://github.com/delta96040/dugout/blob/main/docs/backtests/opportunity.md",
     "lookup": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/lookup.py"
-  }
+  },
+  "names": []
 }

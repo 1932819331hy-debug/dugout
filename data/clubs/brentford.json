@@ -5,8 +5,8 @@
     "name": "Brentford",
     "season": "2026-27"
   },
-  "generated_at": "2026-10-16T06:36:02+00:00",
-  "data_as_of": "2026-10-16T06:28:38+00:00",
+  "generated_at": "2026-10-16T10:02:21+00:00",
+  "data_as_of": "2026-10-16T09:56:02+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -1005,11 +1005,11 @@
         {
           "segments": [
             {
-              "text": "Transfermarkt values Igor Thiago Nascimento Rodrigues at "
+              "text": "Transfermarkt values Nathan Collins at "
             },
             {
-              "stat": "ev_7610b735e71cd44f",
-              "display": "€65.0m"
+              "stat": "ev_d685a2567110f356",
+              "display": "€30.0m"
             },
             {
               "text": "."
@@ -1023,14 +1023,14 @@
         {
           "segments": [
             {
-              "text": "The valuation model puts Igor Thiago Nascimento Rodrigues's fair fee at "
+              "text": "The valuation model puts Nathan Collins's fair fee at "
             },
             {
-              "stat": "ev_960bc8d773cfea47",
-              "display": "€65.4m"
+              "stat": "ev_2ca02022585724e7",
+              "display": "€24.8m"
             },
             {
-              "text": ", in line with his market value."
+              "text": ", below his market value."
             }
           ],
           "type": "stat",
@@ -1535,6 +1535,22 @@
       "status": "model_output",
       "cross_checks": []
     },
+    "ev_2ca02022585724e7": {
+      "value": 24800000.0,
+      "display": "24800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp2e83ddb73f9247",
+      "entity_name": "Nathan Collins",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
     "ev_2e3253b037f563ef": {
       "value": 0.0057,
       "display": "0.01",
@@ -1935,22 +1951,6 @@
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_7610b735e71cd44f": {
-      "value": 65000000.0,
-      "display": "65000000",
-      "unit": "EUR",
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp6e2981f87e8594",
-      "entity_name": "Igor Thiago Nascimento Rodrigues",
-      "source": "transfermarkt",
-      "source_url": "https://www.transfermarkt.com/-/kader/verein/1148/saison_id/2026/plus/1",
-      "source_tier": 3,
-      "fetched_at": "2026-10-14T00:00:00+00:00",
-      "query_kind": "file_csv",
-      "status": "single_source",
-      "cross_checks": []
-    },
     "ev_7d42b6324668e81a": {
       "value": 43700000.0,
       "display": "43700000",
@@ -2073,22 +2073,6 @@
       "entity_name": "Ezri Konsa Ngoyo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_960bc8d773cfea47": {
-      "value": 65400000.0,
-      "display": "65400000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp6e2981f87e8594",
-      "entity_name": "Igor Thiago Nascimento Rodrigues",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
       "fetched_at": "2026-10-15T20:06:02.462223+00:00",
       "query_kind": "sql",
@@ -2461,6 +2445,22 @@
       "fetched_at": "2026-10-15T17:36:53.845056+00:00",
       "query_kind": "sql",
       "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d685a2567110f356": {
+      "value": 30000000.0,
+      "display": "30000000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp2e83ddb73f9247",
+      "entity_name": "Nathan Collins",
+      "source": "transfermarkt",
+      "source_url": "https://www.transfermarkt.com/-/kader/verein/1148/saison_id/2026/plus/1",
+      "source_tier": 3,
+      "fetched_at": "2026-10-14T00:00:00+00:00",
+      "query_kind": "file_csv",
+      "status": "single_source",
       "cross_checks": []
     },
     "ev_d9e2e7e5ecef4fdb": {
@@ -2893,16 +2893,16 @@
         "subject": "Caoimhín Kelleher"
       },
       {
-        "stat": "ev_7610b735e71cd44f",
-        "display": "€65.0m",
+        "stat": "ev_d685a2567110f356",
+        "display": "€30.0m",
         "label": "market value (Transfermarkt)",
-        "subject": "Igor Thiago Nascimento Rodrigues"
+        "subject": "Nathan Collins"
       },
       {
-        "stat": "ev_960bc8d773cfea47",
-        "display": "€65.4m",
+        "stat": "ev_2ca02022585724e7",
+        "display": "€24.8m",
         "label": "fair fee if sold to another Premier League club (valuation model)",
-        "subject": "Igor Thiago Nascimento Rodrigues"
+        "subject": "Nathan Collins"
       },
       {
         "stat": "ev_9a0795df31cf9f25",
@@ -3142,5 +3142,6 @@
     "potential": "https://github.com/delta96040/dugout/blob/main/docs/backtests/potential.md",
     "fit": "https://github.com/delta96040/dugout/blob/main/docs/backtests/opportunity.md",
     "lookup": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/lookup.py"
-  }
+  },
+  "names": []
 }

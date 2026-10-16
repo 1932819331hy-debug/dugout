@@ -5,8 +5,8 @@
     "name": "Everton",
     "season": "2026-27"
   },
-  "generated_at": "2026-10-16T06:43:32+00:00",
-  "data_as_of": "2026-10-16T06:28:38+00:00",
+  "generated_at": "2026-10-16T10:08:47+00:00",
+  "data_as_of": "2026-10-16T09:56:02+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -893,42 +893,6 @@
             },
             {
               "text": ", below his market value."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Transfermarkt values Kiernan Dewsbury-Hall at "
-            },
-            {
-              "stat": "ev_e4b36264ec44119e",
-              "display": "€40.0m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "The valuation model puts Kiernan Dewsbury-Hall's fair fee at "
-            },
-            {
-              "stat": "ev_7340fe2841b591bd",
-              "display": "€38.4m"
-            },
-            {
-              "text": ", in line with his market value."
             }
           ],
           "type": "stat",
@@ -1865,22 +1829,6 @@
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_7340fe2841b591bd": {
-      "value": 38400000.0,
-      "display": "38400000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpce7acc142cc216",
-      "entity_name": "Kiernan Dewsbury-Hall",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-15T20:06:02.462223+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
     "ev_779bf03d81064b62": {
       "value": "GK",
       "display": "GK",
@@ -2393,22 +2341,6 @@
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_e4b36264ec44119e": {
-      "value": 40000000.0,
-      "display": "40000000",
-      "unit": "EUR",
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rpce7acc142cc216",
-      "entity_name": "Kiernan Dewsbury-Hall",
-      "source": "transfermarkt",
-      "source_url": "https://www.transfermarkt.com/-/kader/verein/29/saison_id/2026/plus/1",
-      "source_tier": 3,
-      "fetched_at": "2026-10-14T00:00:00+00:00",
-      "query_kind": "file_csv",
-      "status": "single_source",
-      "cross_checks": []
-    },
     "ev_e501a4239c8ab1df": {
       "value": "goalkeeper",
       "display": "goalkeeper",
@@ -2769,18 +2701,6 @@
         "subject": "Jarrad Branthwaite"
       },
       {
-        "stat": "ev_e4b36264ec44119e",
-        "display": "€40.0m",
-        "label": "market value (Transfermarkt)",
-        "subject": "Kiernan Dewsbury-Hall"
-      },
-      {
-        "stat": "ev_7340fe2841b591bd",
-        "display": "€38.4m",
-        "label": "fair fee if sold to another Premier League club (valuation model)",
-        "subject": "Kiernan Dewsbury-Hall"
-      },
-      {
         "stat": "ev_c3ab1fa4cf3e066f",
         "display": "30 June 2027",
         "label": "contract expiry",
@@ -2997,11 +2917,11 @@
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 62,
+      "numbers_total": 60,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 65,
+      "verified": 63,
       "unverified": 1
     },
     "sections_published": 7,
@@ -3019,5 +2939,6 @@
     "potential": "https://github.com/delta96040/dugout/blob/main/docs/backtests/potential.md",
     "fit": "https://github.com/delta96040/dugout/blob/main/docs/backtests/opportunity.md",
     "lookup": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/lookup.py"
-  }
+  },
+  "names": []
 }
