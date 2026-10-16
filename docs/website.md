@@ -41,7 +41,9 @@ the built pages and fails on anything else.
   through six keyframes (one per chapter), film grain, faint chromatic aberration and a vignette.
 - **Scroll**: Lenis smooth scrolling and a small scrub (scroll progress drives the camera and uniforms). GSAP
   ScrollTrigger from the original brief is not used: GSAP's licence is not open source.
-- **Performance**: the static story (same text, SVG pitch) paints first; the WebGL scene loads on the first
+- **Performance**: the chapters and the SVG pitch are server components passed into `Story` (a thin client
+  shell: scroll, WebGL, cursor); scrambled numbers read the chapter on screen from a context (`story/active.ts`).
+  The static story (same text, SVG pitch) paints first; the WebGL scene loads on the first
   interaction. Reduced-motion, no-WebGL, data-saving and low-memory devices keep the static story.
 - **Prefetch fix**: Next's static export writes segment-prefetch files as `__next.x/__PAGE__.txt` but the router
   requests `__next.x.__PAGE__.txt`; `scripts/flatten-prefetch.mjs` (run by `npm run build`) writes the dotted copies.

@@ -1,3 +1,5 @@
+import { chapterContent } from "@/components/story/Chapters";
+import StaticPitch from "@/components/story/StaticPitch";
 import Story from "@/components/story/Story";
 import type { StatRef, StoryData } from "@/components/story/types";
 import { claimText, displays, dossier, section, type Dossier } from "@/lib/data";
@@ -101,5 +103,6 @@ function storyData(d: Dossier): StoryData {
 }
 
 export default function Home() {
-  return <Story data={storyData(dossier(SHOWCASE))} />;
+  const data = storyData(dossier(SHOWCASE));
+  return <Story scene={data.scene} pitch={<StaticPitch data={data} />} chapters={chapterContent(data)} />;
 }
