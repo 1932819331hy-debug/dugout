@@ -38,8 +38,7 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - Lighthouse mobile (before deferring WebGL; CPU was busy): a11y 100, SEO 100, best practices 96, performance
     61 (home) / 73 (dossier) / 79 (methods). WebGL now loads on first interaction -> re-measure.
   - **Next steps:**
-    1. A background run was building template dossiers for the 18 other clubs (`dugout-agents --no-llm dossier
-       <slugs>`); check data/clubs/ has 20 files, else re-run for the missing slugs.
+    1. Done: all 20 club dossiers built (18 template-only); data/scoreboard.json written (440 matches).
     2. Rebuild liverpool + arsenal (`uv run dugout-agents dossier liverpool arsenal`): lineup is now always
        templated (Laguna dropped players).
     3. `npm --prefix apps/web run build`, `uv run python tools/check_site_numbers.py`, `npm --prefix apps/web run banned`,
