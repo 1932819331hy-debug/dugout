@@ -1,7 +1,8 @@
 """Fail if the built website shows a digit that is not a ledger-backed number.
 
 Walks every page in apps/web/out. Text inside an element marked `data-num` (a <Num>: a ledger stat with its
-provenance card) or `data-meta` (provenance and audit metadata: timestamps, dates, report counts) is allowed;
+provenance card) or `data-meta` (provenance and audit metadata: timestamps, dates, report counts) or `data-name` (a proper name with
+digits in it, e.g. "Parma Calcio 1913", which the Stat Auditor also allows) is allowed;
 any other visible digit is reported. Scripts and styles are skipped. Standard library only.
 
     uv run python tools/check_site_numbers.py
@@ -32,7 +33,16 @@ class Scan(HTMLParser):
         if tag in VOID:
             return
         names = {k for k, _ in attrs}
-        self.stack.append((tag, tag in SKIP or "data-num" in names or "data-meta" in names or "aria-hidden" in names))
+        self.stack.append(
+            (
+                tag,
+                tag in SKIP
+                or "data-num" in names
+                or "data-meta" in names
+                or "data-name" in names
+                or "aria-hidden" in names,
+            )
+        )
 
     def handle_endtag(self, tag):
         for i in range(len(self.stack) - 1, -1, -1):

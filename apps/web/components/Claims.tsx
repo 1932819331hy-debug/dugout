@@ -8,11 +8,18 @@ export function ClaimText({ claim, d }: { claim: Claim; d: Dossier }) {
         "stat" in seg ? (
           <Num key={i} stat={d.stats[seg.stat]} display={seg.display} />
         ) : (
-          <span key={i}>{seg.text}</span>
+          <span key={i}>{withNames(seg.text, d.names ?? [])}</span>
         ),
       )}
     </>
   );
+}
+
+/** Mark proper names that contain digits ("Parma Calcio 1913") so they are not mistaken for statistics. */
+function withNames(text: string, names: string[]) {
+  if (!names.length) return text;
+  const re = new RegExp(`(${names.map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`);
+  return text.split(re).map((part, i) => (i % 2 ? <span key={i} data-name>{part}</span> : part));
 }
 
 /** A published section: verified claims as prose; analysis marked; sources listed for news claims. */

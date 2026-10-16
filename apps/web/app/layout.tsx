@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, JetBrains_Mono, Newsreader } from "next/font/google";
 import Link from "next/link";
+import Tips from "@/components/Tips";
 import "./globals.css";
 
 const display = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-instrument-serif" });
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
         <main id="main">{children}</main>
+        <Tips />
         <footer className="grid12 mt-24 pb-10">
           <p className="hang mono-label">
             Open source (<span data-meta>MIT</span>). Data: Fantasy Premier League, football-data.org, API-Football, Wikidata, transfermarkt-datasets (<span data-meta>CC0</span>),
