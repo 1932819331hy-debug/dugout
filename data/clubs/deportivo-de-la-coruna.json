@@ -10,8 +10,8 @@
     "name": "La Liga",
     "country": "Spain"
   },
-  "generated_at": "2026-10-17T17:14:36+00:00",
-  "data_as_of": "2026-10-17T17:09:23+00:00",
+  "generated_at": "2026-10-17T19:02:13+00:00",
+  "data_as_of": "2026-10-17T18:53:59+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -62,7 +62,7 @@
             "text": "Deportivo de La Coruña's next league match is Atlético de Madrid v Deportivo de La Coruña on "
           },
           {
-            "stat": "ev_ce577db377c6932f",
+            "stat": "ev_d2666366c0b8bd20",
             "display": "24 October 2026"
           },
           {
@@ -80,7 +80,7 @@
             "text": "Deportivo de La Coruña's biggest squad need is "
           },
           {
-            "stat": "ev_007ca8451e5e8af4",
+            "stat": "ev_3bf18ed1b295c9a8",
             "display": "centre-forward"
           },
           {
@@ -196,6 +196,24 @@
         {
           "segments": [
             {
+              "text": "Deportivo de La Coruña's Elo rating is "
+            },
+            {
+              "stat": "ev_71338b86840b6b5a",
+              "display": "1417"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
               "text": "Antonio Hidalgo has been Deportivo de La Coruña's head coach since "
             },
             {
@@ -227,8 +245,134 @@
               "text": "Deportivo de La Coruña's next league match is Atlético de Madrid v Deportivo de La Coruña on "
             },
             {
-              "stat": "ev_ce577db377c6932f",
+              "stat": "ev_d2666366c0b8bd20",
               "display": "24 October 2026"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Atlético de Madrid a "
+            },
+            {
+              "stat": "ev_e324b5cdcbdf8b4d",
+              "display": "71%"
+            },
+            {
+              "text": " chance of winning against Deportivo de La Coruña."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Atlético de Madrid v Deportivo de La Coruña a "
+            },
+            {
+              "stat": "ev_d411bcfaad6d56bf",
+              "display": "18%"
+            },
+            {
+              "text": " chance of ending in a draw."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Deportivo de La Coruña a "
+            },
+            {
+              "stat": "ev_052357dfd5e9822c",
+              "display": "11%"
+            },
+            {
+              "text": " chance of winning against Atlético de Madrid."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "We expect Atlético de Madrid to score "
+            },
+            {
+              "stat": "ev_55d72c428e2f0203",
+              "display": "2.1"
+            },
+            {
+              "text": " goals against Deportivo de La Coruña."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "We expect Deportivo de La Coruña to score "
+            },
+            {
+              "stat": "ev_0f17c70cb38da05c",
+              "display": "0.9"
+            },
+            {
+              "text": " goals against Atlético de Madrid."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Deportivo de La Coruña's Elo rating is "
+            },
+            {
+              "stat": "ev_71338b86840b6b5a",
+              "display": "1417"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Atlético de Madrid's Elo rating is "
+            },
+            {
+              "stat": "ev_6d3746538f31fc78",
+              "display": "1651"
             },
             {
               "text": "."
@@ -270,11 +414,11 @@
         {
           "segments": [
             {
-              "text": "We estimate Leo Román's chance of being sold in a transfer window at "
+              "text": "We estimate Jonathan Asp-Jensen's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_7c5ae2655692fec4",
-              "display": "26%"
+              "stat": "ev_db33080abbabfc8d",
+              "display": "36%"
             },
             {
               "text": "."
@@ -288,11 +432,11 @@
         {
           "segments": [
             {
-              "text": "We estimate Marc Casado's chance of being sold in a transfer window at "
+              "text": "We estimate Leo Román's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_0ff7ab404990e081",
-              "display": "20%"
+              "stat": "ev_ce9ad7d489d712e1",
+              "display": "32%"
             },
             {
               "text": "."
@@ -309,8 +453,8 @@
               "text": "We estimate Adama Traoré's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_4f4e4963436cd492",
-              "display": "15%"
+              "stat": "ev_5e9a0016eaceb309",
+              "display": "20%"
             },
             {
               "text": "."
@@ -345,8 +489,8 @@
               "text": "Our fair-fee estimate for Marc Casado is "
             },
             {
-              "stat": "ev_ee62a8febc528b4e",
-              "display": "€12.6m"
+              "stat": "ev_67820d3386c51e4d",
+              "display": "€12.0m"
             },
             {
               "text": ", below his market value."
@@ -381,8 +525,8 @@
               "text": "Our fair-fee estimate for José Giménez is "
             },
             {
-              "stat": "ev_199f6a1ac7dcd9ae",
-              "display": "€3.0m"
+              "stat": "ev_ac95bf8f6d4e24df",
+              "display": "€2.8m"
             },
             {
               "text": ", below his market value."
@@ -417,8 +561,8 @@
               "text": "Our fair-fee estimate for Leo Román is "
             },
             {
-              "stat": "ev_1a3bc396952fce6d",
-              "display": "€3.7m"
+              "stat": "ev_9de181f007856753",
+              "display": "€3.5m"
             },
             {
               "text": ", below his market value."
@@ -445,7 +589,7 @@
               "text": "Deportivo de La Coruña's biggest squad need is "
             },
             {
-              "stat": "ev_007ca8451e5e8af4",
+              "stat": "ev_3bf18ed1b295c9a8",
               "display": "centre-forward"
             },
             {
@@ -463,7 +607,7 @@
               "text": "Deportivo de La Coruña have "
             },
             {
-              "stat": "ev_14d0edc0b782bbd1",
+              "stat": "ev_a70a2e2fdf8fa442",
               "display": "1"
             },
             {
@@ -481,7 +625,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_7dd2b7a3c0ed60c2",
+              "stat": "ev_bad3cd7c0c6b45da",
               "display": "2"
             },
             {
@@ -499,7 +643,7 @@
               "text": "Deportivo de La Coruña's best option for centre-forward is "
             },
             {
-              "stat": "ev_0e58e7e2410d7f9a",
+              "stat": "ev_7440fcb55f374731",
               "display": "Zakaria Eddahchouri"
             },
             {
@@ -517,7 +661,7 @@
               "text": "The last of Deportivo de La Coruña's regular starters at centre-forward is "
             },
             {
-              "stat": "ev_fc4fc30d71f790f0",
+              "stat": "ev_1758edb7fad81b38",
               "display": "Zakaria Eddahchouri"
             },
             {
@@ -535,7 +679,7 @@
               "text": "The last of Deportivo de La Coruña's regular starters at centre-forward has a market value of "
             },
             {
-              "stat": "ev_eb33991c5539d3ac",
+              "stat": "ev_279d2d77b9a8e782",
               "display": "€0.1m"
             },
             {
@@ -553,7 +697,7 @@
               "text": "Deportivo de La Coruña's best option for centre-forward has a market value of "
             },
             {
-              "stat": "ev_f7df0754a8a7b6f0",
+              "stat": "ev_0f7c23cd40e14df3",
               "display": "€0.1m"
             },
             {
@@ -571,14 +715,14 @@
               "text": "At the squads closest to Deportivo de La Coruña in strength, the best option for centre-forward is typically worth "
             },
             {
-              "stat": "ev_108379d6dd36373e",
+              "stat": "ev_8c03e77fabc1df1c",
               "display": "€5.8m"
             },
             {
               "text": ". "
             },
             {
-              "stat": "ev_5b6d7b73329c0c9a",
+              "stat": "ev_c06712e94fdcffec",
               "display": "50%"
             },
             {
@@ -596,7 +740,7 @@
               "text": "Hidden gem: Jakob Napoleon Romsaas (Royal Charleroi Sporting Club), who is "
             },
             {
-              "stat": "ev_3a9cae3a624c16f6",
+              "stat": "ev_111746c37d6504a6",
               "display": "22"
             },
             {
@@ -614,7 +758,7 @@
               "text": "Jakob Napoleon Romsaas plays for "
             },
             {
-              "stat": "ev_0908b65d0ae96e22",
+              "stat": "ev_218311e9f98c0db0",
               "display": "Royal Charleroi Sporting Club"
             },
             {
@@ -632,7 +776,7 @@
               "text": "Jakob Napoleon Romsaas has played "
             },
             {
-              "stat": "ev_7c3eaff439b64a03",
+              "stat": "ev_0b5746e2d5c437e7",
               "display": "43%"
             },
             {
@@ -647,10 +791,154 @@
         {
           "segments": [
             {
+              "text": "Jakob Napoleon Romsaas averages "
+            },
+            {
+              "stat": "ev_06d8d7d490aa135f",
+              "display": "0.10"
+            },
+            {
+              "text": " league goals per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Jakob Napoleon Romsaas averages "
+            },
+            {
+              "stat": "ev_298f656fc38d24af",
+              "display": "0.20"
+            },
+            {
+              "text": " league assists per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Jakob Napoleon Romsaas has more league goals and assists per full match than "
+            },
+            {
+              "stat": "ev_9c6d1e2e20a172ea",
+              "display": "36%"
+            },
+            {
+              "text": " of players at his position in his league."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Jakob Napoleon Romsaas's comparison is within "
+            },
+            {
+              "stat": "ev_b4b4f711cddb1487",
+              "display": "Jupiler Pro League"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Jakob Napoleon Romsaas's stronger foot is his "
+            },
+            {
+              "stat": "ev_d275f71b64d08d0e",
+              "display": "right"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Jakob Napoleon Romsaas stands "
+            },
+            {
+              "stat": "ev_5e1d2b2caf723c72",
+              "display": "187"
+            },
+            {
+              "text": " centimetres tall."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Jakob Napoleon Romsaas has won "
+            },
+            {
+              "stat": "ev_685547703ce78532",
+              "display": "4"
+            },
+            {
+              "text": " international caps."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Jakob Napoleon Romsaas starts at "
+            },
+            {
+              "stat": "ev_9b556a1418747ab0",
+              "display": "attacking midfield, centre-forward"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
               "text": "Jakob Napoleon Romsaas has a market value of "
             },
             {
-              "stat": "ev_06fcfadd1c0cf9b2",
+              "stat": "ev_b7a3a0abe4e72fba",
               "display": "€1.2m"
             },
             {
@@ -668,7 +956,7 @@
               "text": "Our fair-fee estimate for Jakob Napoleon Romsaas is "
             },
             {
-              "stat": "ev_ceb36aaee4dcfe1f",
+              "stat": "ev_f5cf8e970f56e22b",
               "display": "€1.2m"
             },
             {
@@ -686,152 +974,8 @@
               "text": "We project Jakob Napoleon Romsaas's market value to reach "
             },
             {
-              "stat": "ev_28e47cd7fb1cfe6b",
+              "stat": "ev_c8e6f41b1d7df27a",
               "display": "€2.0m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Hidden gem: Farouck Adekami (Royal Antwerp FC), who is "
-            },
-            {
-              "stat": "ev_a919b2d3de3d6ed9",
-              "display": "20"
-            },
-            {
-              "text": " years old."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Farouck Adekami plays for "
-            },
-            {
-              "stat": "ev_8071a8ef7ce8a74e",
-              "display": "Royal Antwerp FC"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Farouck Adekami has played "
-            },
-            {
-              "stat": "ev_5c54d50b628088f6",
-              "display": "33%"
-            },
-            {
-              "text": " of Royal Antwerp FC's minutes over the last year."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Farouck Adekami has a market value of "
-            },
-            {
-              "stat": "ev_c049217741bef34c",
-              "display": "€1.8m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Our fair-fee estimate for Farouck Adekami is "
-            },
-            {
-              "stat": "ev_2719d2b9384b1608",
-              "display": "€1.7m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "We project Farouck Adekami's market value to reach "
-            },
-            {
-              "stat": "ev_5dd1eb270b2b3187",
-              "display": "€1.8m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Hidden gem: Peter Itodo (TOV FK Metalist 1925 Kharkiv), who is "
-            },
-            {
-              "stat": "ev_0b5ccb52002f8aa7",
-              "display": "23"
-            },
-            {
-              "text": " years old."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Peter Itodo plays for "
-            },
-            {
-              "stat": "ev_c7ec009f0318de56",
-              "display": "TOV FK Metalist 1925 Kharkiv"
             },
             {
               "text": "."
@@ -848,7 +992,7 @@
               "text": "Deportivo de La Coruña's second squad need is "
             },
             {
-              "stat": "ev_0e626905065a8db8",
+              "stat": "ev_0a7faf29d3ab058c",
               "display": "central midfield"
             },
             {
@@ -866,7 +1010,7 @@
               "text": "Deportivo de La Coruña have "
             },
             {
-              "stat": "ev_d6f4160b19f398e8",
+              "stat": "ev_5d808f41ba98acce",
               "display": "2"
             },
             {
@@ -884,7 +1028,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_cd9714f37e2c6721",
+              "stat": "ev_27b12d913206d444",
               "display": "4"
             },
             {
@@ -902,7 +1046,7 @@
               "text": "Deportivo de La Coruña's best option for central midfield is "
             },
             {
-              "stat": "ev_8f38d58bc8dc56cf",
+              "stat": "ev_0189606c09378a2f",
               "display": "Jonathan Asp-Jensen"
             },
             {
@@ -920,7 +1064,7 @@
               "text": "The last of Deportivo de La Coruña's regular starters at central midfield is "
             },
             {
-              "stat": "ev_bdffd25182b5b2da",
+              "stat": "ev_e75eb6d3768c580a",
               "display": "Teun Gijselhart"
             },
             {
@@ -938,7 +1082,7 @@
               "text": "The last of Deportivo de La Coruña's regular starters at central midfield has a market value of "
             },
             {
-              "stat": "ev_5a9248117c46fb16",
+              "stat": "ev_b64f5f82e50f0705",
               "display": "€0.4m"
             },
             {
@@ -956,7 +1100,7 @@
               "text": "Deportivo de La Coruña's best option for central midfield has a market value of "
             },
             {
-              "stat": "ev_cb15938814b05d34",
+              "stat": "ev_2e0d61ec4f95c9ea",
               "display": "€4.0m"
             },
             {
@@ -974,7 +1118,7 @@
               "text": "At the squads closest to Deportivo de La Coruña in strength, the best option for central midfield is typically worth "
             },
             {
-              "stat": "ev_47d48331f31688ad",
+              "stat": "ev_e6af63d8a3c1b965",
               "display": "€6.0m"
             },
             {
@@ -991,18 +1135,18 @@
     }
   ],
   "stats": {
-    "ev_007ca8451e5e8af4": {
-      "value": "centre-forward",
-      "display": "centre-forward",
+    "ev_0189606c09378a2f": {
+      "value": "Jonathan Asp-Jensen",
+      "display": "Jonathan Asp-Jensen",
       "unit": null,
-      "metric": "need",
+      "metric": "need_best_player",
       "entity_type": "club",
       "entity_id": "deportivo-de-la-coruna",
       "entity_name": "Deportivo de La Coruña",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1023,18 +1167,34 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_06fcfadd1c0cf9b2": {
-      "value": 1200000.0,
-      "display": "1200000",
+    "ev_052357dfd5e9822c": {
+      "value": 0.1061,
+      "display": "0.11",
       "unit": null,
-      "metric": "market_value",
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:atletico-de-madrid:deportivo-de-la-coruna",
+      "entity_name": "Atlético de Madrid v Deportivo de La Coruña",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_06d8d7d490aa135f": {
+      "value": 0.1,
+      "display": "0.10",
+      "unit": null,
+      "metric": "goals_p90",
       "entity_type": "player",
       "entity_id": "rpe822cbb94e9d68",
       "entity_name": "Jakob Napoleon Romsaas",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1055,55 +1215,7 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_0908b65d0ae96e22": {
-      "value": "Royal Charleroi Sporting Club",
-      "display": "Royal Charleroi Sporting Club",
-      "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rpe822cbb94e9d68",
-      "entity_name": "Jakob Napoleon Romsaas",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_0b5ccb52002f8aa7": {
-      "value": 23.3,
-      "display": "23.30",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rpb702a66ee9f3d1",
-      "entity_name": "Peter Itodo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_0e58e7e2410d7f9a": {
-      "value": "Zakaria Eddahchouri",
-      "display": "Zakaria Eddahchouri",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_0e626905065a8db8": {
+    "ev_0a7faf29d3ab058c": {
       "value": "central midfield",
       "display": "central midfield",
       "unit": null,
@@ -1114,119 +1226,199 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_0ff7ab404990e081": {
-      "value": 0.201,
-      "display": "0.20",
+    "ev_0b359d05f556c014": {
+      "value": 23.3,
+      "display": "23.30",
       "unit": null,
-      "metric": "sale_likelihood",
+      "metric": "age",
       "entity_type": "player",
-      "entity_id": "rpbb5b167e141aa7",
-      "entity_name": "Marc Casado",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_108379d6dd36373e": {
-      "value": 5750000.0,
-      "display": "5750000",
-      "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_14d0edc0b782bbd1": {
-      "value": 1.0,
-      "display": "1",
+    "ev_0b5746e2d5c437e7": {
+      "value": 0.426,
+      "display": "0.43",
       "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_199f6a1ac7dcd9ae": {
-      "value": 3000000.0,
-      "display": "3000000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp15a28e451f2a98",
-      "entity_name": "José Giménez",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_1a3bc396952fce6d": {
-      "value": 3700000.0,
-      "display": "3700000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp035b51c9bd10b5",
-      "entity_name": "Leo Román",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2719d2b9384b1608": {
-      "value": 1700000.0,
-      "display": "1700000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp9bf4ee868dcfab",
-      "entity_name": "Farouck Adekami",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_28e47cd7fb1cfe6b": {
-      "value": 2000000.0,
-      "display": "2000000",
-      "unit": null,
-      "metric": "proj_value_4y",
+      "metric": "minutes_share_now",
       "entity_type": "player",
       "entity_id": "rpe822cbb94e9d68",
       "entity_name": "Jakob Napoleon Romsaas",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0f17c70cb38da05c": {
+      "value": 0.8659,
+      "display": "0.87",
+      "unit": null,
+      "metric": "exp_away_goals",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:atletico-de-madrid:deportivo-de-la-coruna",
+      "entity_name": "Atlético de Madrid v Deportivo de La Coruña",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0f7c23cd40e14df3": {
+      "value": 75000.0,
+      "display": "75000",
+      "unit": null,
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_111746c37d6504a6": {
+      "value": 22.4,
+      "display": "22.40",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1758edb7fad81b38": {
+      "value": "Zakaria Eddahchouri",
+      "display": "Zakaria Eddahchouri",
+      "unit": null,
+      "metric": "need_bar_player",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2043dafc5d39b697": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp9bf4ee868dcfab",
+      "entity_name": "Farouck Adekami",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_218311e9f98c0db0": {
+      "value": "Royal Charleroi Sporting Club",
+      "display": "Royal Charleroi Sporting Club",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_279d2d77b9a8e782": {
+      "value": 75000.0,
+      "display": "75000",
+      "unit": null,
+      "metric": "need_bar_value",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_27b12d913206d444": {
+      "value": 4.0,
+      "display": "4",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_298f656fc38d24af": {
+      "value": 0.2,
+      "display": "0.20",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2e0d61ec4f95c9ea": {
+      "value": 4000000.0,
+      "display": "4000000",
+      "unit": null,
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1247,41 +1439,153 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_3a9cae3a624c16f6": {
-      "value": 22.4,
-      "display": "22.40",
+    "ev_34bf399c94b14c02": {
+      "value": "centre-forward",
+      "display": "centre-forward",
       "unit": null,
-      "metric": "age",
+      "metric": "positions_played",
       "entity_type": "player",
-      "entity_id": "rpe822cbb94e9d68",
-      "entity_name": "Jakob Napoleon Romsaas",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_47d48331f31688ad": {
-      "value": 6000000.0,
-      "display": "6000000",
+    "ev_3bf18ed1b295c9a8": {
+      "value": "centre-forward",
+      "display": "centre-forward",
       "unit": null,
-      "metric": "need_peer_best_value",
+      "metric": "need",
       "entity_type": "club",
       "entity_id": "deportivo-de-la-coruna",
       "entity_name": "Deportivo de La Coruña",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_4f4e4963436cd492": {
-      "value": 0.151,
-      "display": "0.15",
+    "ev_40126c3c5c6a3c8d": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_509aad345ce2949b": {
+      "value": 0.62,
+      "display": "0.62",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_55278b58b31e7720": {
+      "value": 1800000.0,
+      "display": "1800000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp9bf4ee868dcfab",
+      "entity_name": "Farouck Adekami",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_55d72c428e2f0203": {
+      "value": 2.1149,
+      "display": "2.11",
+      "unit": null,
+      "metric": "exp_home_goals",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:atletico-de-madrid:deportivo-de-la-coruna",
+      "entity_name": "Atlético de Madrid v Deportivo de La Coruña",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_577a7175389aeb66": {
+      "value": 0.669,
+      "display": "0.67",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5d808f41ba98acce": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5e1d2b2caf723c72": {
+      "value": 187.0,
+      "display": "187",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5e9a0016eaceb309": {
+      "value": 0.197,
+      "display": "0.20",
       "unit": null,
       "metric": "sale_likelihood",
       "entity_type": "player",
@@ -1290,71 +1594,55 @@
       "source": "dugout_model:realism",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_5a9248117c46fb16": {
-      "value": 400000.0,
-      "display": "400000",
+    "ev_67820d3386c51e4d": {
+      "value": 12000000.0,
+      "display": "12000000",
       "unit": null,
-      "metric": "need_bar_value",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5b6d7b73329c0c9a": {
-      "value": 0.5,
-      "display": "0.50",
-      "unit": null,
-      "metric": "need_ageing_share",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5c54d50b628088f6": {
-      "value": 0.326,
-      "display": "0.33",
-      "unit": null,
-      "metric": "minutes_share_now",
+      "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rp9bf4ee868dcfab",
-      "entity_name": "Farouck Adekami",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rpbb5b167e141aa7",
+      "entity_name": "Marc Casado",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_5dd1eb270b2b3187": {
-      "value": 1800000.0,
-      "display": "1800000",
+    "ev_685547703ce78532": {
+      "value": 4.0,
+      "display": "4",
       "unit": null,
-      "metric": "proj_value_4y",
+      "metric": "caps",
       "entity_type": "player",
-      "entity_id": "rp9bf4ee868dcfab",
-      "entity_name": "Farouck Adekami",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6d3746538f31fc78": {
+      "value": 1651.1,
+      "display": "1651.10",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "atletico-de-madrid",
+      "entity_name": "Atlético de Madrid",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1375,50 +1663,66 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_7c3eaff439b64a03": {
-      "value": 0.426,
-      "display": "0.43",
+    "ev_71338b86840b6b5a": {
+      "value": 1416.7,
+      "display": "1416.70",
       "unit": null,
-      "metric": "minutes_share_now",
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_720f10f1b53088cf": {
+      "value": "centre-forward, left midfield",
+      "display": "centre-forward, left midfield",
+      "unit": null,
+      "metric": "positions_played",
       "entity_type": "player",
-      "entity_id": "rpe822cbb94e9d68",
-      "entity_name": "Jakob Napoleon Romsaas",
+      "entity_id": "rp9bf4ee868dcfab",
+      "entity_name": "Farouck Adekami",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_7c5ae2655692fec4": {
-      "value": 0.258,
-      "display": "0.26",
+    "ev_7440fcb55f374731": {
+      "value": "Zakaria Eddahchouri",
+      "display": "Zakaria Eddahchouri",
       "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rp035b51c9bd10b5",
-      "entity_name": "Leo Román",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7dd2b7a3c0ed60c2": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_wanted",
+      "metric": "need_best_player",
       "entity_type": "club",
       "entity_id": "deportivo-de-la-coruna",
       "entity_name": "Deportivo de La Coruña",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7598fbc4b4cac35c": {
+      "value": 0.84,
+      "display": "0.84",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1439,22 +1743,6 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_8071a8ef7ce8a74e": {
-      "value": "Royal Antwerp FC",
-      "display": "Royal Antwerp FC",
-      "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rp9bf4ee868dcfab",
-      "entity_name": "Farouck Adekami",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
     "ev_85b830028a8852eb": {
       "value": 13.0,
       "display": "13",
@@ -1469,6 +1757,22 @@
       "fetched_at": "2026-10-17T16:59:14.721147+00:00",
       "query_kind": "http_json",
       "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_8652e0ca0f59f571": {
+      "value": 1800000.0,
+      "display": "1800000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
       "cross_checks": []
     },
     "ev_87ceb6f6d4ffdaa8": {
@@ -1487,103 +1791,7 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_8f38d58bc8dc56cf": {
-      "value": "Jonathan Asp-Jensen",
-      "display": "Jonathan Asp-Jensen",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9af33ad7d963357c": {
-      "value": 0.669,
-      "display": "0.67",
-      "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rpb702a66ee9f3d1",
-      "entity_name": "Peter Itodo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a919b2d3de3d6ed9": {
-      "value": 20.2,
-      "display": "20.20",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp9bf4ee868dcfab",
-      "entity_name": "Farouck Adekami",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b69dfc08d77afd17": {
-      "value": 1800000.0,
-      "display": "1800000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rpb702a66ee9f3d1",
-      "entity_name": "Peter Itodo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_bdffd25182b5b2da": {
-      "value": "Teun Gijselhart",
-      "display": "Teun Gijselhart",
-      "unit": null,
-      "metric": "need_bar_player",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_c049217741bef34c": {
-      "value": 1800000.0,
-      "display": "1800000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp9bf4ee868dcfab",
-      "entity_name": "Farouck Adekami",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_c7ec009f0318de56": {
+    "ev_8bffebd77ea265d7": {
       "value": "TOV FK Metalist 1925 Kharkiv",
       "display": "TOV FK Metalist 1925 Kharkiv",
       "unit": null,
@@ -1594,23 +1802,279 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_cb15938814b05d34": {
-      "value": 4000000.0,
-      "display": "4000000",
+    "ev_8c03e77fabc1df1c": {
+      "value": 5750000.0,
+      "display": "5750000",
       "unit": null,
-      "metric": "need_best_value",
+      "metric": "need_peer_best_value",
       "entity_type": "club",
       "entity_id": "deportivo-de-la-coruna",
       "entity_name": "Deportivo de La Coruña",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9b556a1418747ab0": {
+      "value": "attacking midfield, centre-forward",
+      "display": "attacking midfield, centre-forward",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9c6d1e2e20a172ea": {
+      "value": 0.36,
+      "display": "0.36",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9de181f007856753": {
+      "value": 3500000.0,
+      "display": "3500000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp035b51c9bd10b5",
+      "entity_name": "Leo Román",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a4ad215f77778479": {
+      "value": 1600000.0,
+      "display": "1600000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a5b980b0a7117575": {
+      "value": 0.326,
+      "display": "0.33",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp9bf4ee868dcfab",
+      "entity_name": "Farouck Adekami",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a70a2e2fdf8fa442": {
+      "value": 1.0,
+      "display": "1",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ac95bf8f6d4e24df": {
+      "value": 2800000.0,
+      "display": "2800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp15a28e451f2a98",
+      "entity_name": "José Giménez",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_af556a83fc3a743b": {
+      "value": "Royal Antwerp FC",
+      "display": "Royal Antwerp FC",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp9bf4ee868dcfab",
+      "entity_name": "Farouck Adekami",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b4b4f711cddb1487": {
+      "value": "Jupiler Pro League",
+      "display": "Jupiler Pro League",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b64f5f82e50f0705": {
+      "value": 400000.0,
+      "display": "400000",
+      "unit": null,
+      "metric": "need_bar_value",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b7a3a0abe4e72fba": {
+      "value": 1200000.0,
+      "display": "1200000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b7d6208e1d23466e": {
+      "value": 188.0,
+      "display": "188",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bad3cd7c0c6b45da": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c06712e94fdcffec": {
+      "value": 0.5,
+      "display": "0.50",
+      "unit": null,
+      "metric": "need_ageing_share",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c2691e4f75719241": {
+      "value": 1800000.0,
+      "display": "1800000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rp9bf4ee868dcfab",
+      "entity_name": "Farouck Adekami",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c8e6f41b1d7df27a": {
+      "value": 2000000.0,
+      "display": "2000000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1631,23 +2095,23 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_cd9714f37e2c6721": {
-      "value": 4.0,
-      "display": "4",
+    "ev_ce9ad7d489d712e1": {
+      "value": 0.316,
+      "display": "0.32",
       "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp035b51c9bd10b5",
+      "entity_name": "Leo Román",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_ce577db377c6932f": {
+    "ev_d2666366c0b8bd20": {
       "value": "2026-10-24T19:00:00+00:00",
       "display": "2026-10-24T19:00:00+00:00",
       "unit": null,
@@ -1655,90 +2119,154 @@
       "entity_type": "match",
       "entity_id": "la_liga:2026-27:atletico-de-madrid:deportivo-de-la-coruna",
       "entity_name": "Atlético de Madrid v Deportivo de La Coruña",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/PD/matches",
-      "source_tier": 2,
-      "fetched_at": "2026-10-17T16:59:07.477944+00:00",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
-      "status": "single_source",
+      "status": "model_output",
       "cross_checks": []
     },
-    "ev_ceb36aaee4dcfe1f": {
-      "value": 1200000.0,
-      "display": "1200000",
+    "ev_d275f71b64d08d0e": {
+      "value": "right",
+      "display": "right",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "foot",
       "entity_type": "player",
       "entity_id": "rpe822cbb94e9d68",
       "entity_name": "Jakob Napoleon Romsaas",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_d6f4160b19f398e8": {
-      "value": 2.0,
-      "display": "2",
+    "ev_d411bcfaad6d56bf": {
+      "value": 0.1791,
+      "display": "0.18",
       "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:atletico-de-madrid:deportivo-de-la-coruna",
+      "entity_name": "Atlético de Madrid v Deportivo de La Coruña",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_d7bb63fee9eba0cd": {
+    "ev_db33080abbabfc8d": {
+      "value": 0.355,
+      "display": "0.35",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp56787036d3bafd",
+      "entity_name": "Jonathan Asp-Jensen",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_de615e8128565469": {
       "value": 1600000.0,
       "display": "1600000",
       "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rpb702a66ee9f3d1",
-      "entity_name": "Peter Itodo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_d9ae4c2b59dfee6c": {
-      "value": 1800000.0,
-      "display": "1800000",
-      "unit": null,
       "metric": "fair_fee",
       "entity_type": "player",
+      "entity_id": "rp9bf4ee868dcfab",
+      "entity_name": "Farouck Adekami",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_dfe367ff8b51f9f6": {
+      "value": 20.2,
+      "display": "20.20",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp9bf4ee868dcfab",
+      "entity_name": "Farouck Adekami",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_dfe5a4f430177e7b": {
+      "value": "Premier Liga",
+      "display": "Premier Liga",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
       "entity_id": "rpb702a66ee9f3d1",
       "entity_name": "Peter Itodo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_eb33991c5539d3ac": {
-      "value": 75000.0,
-      "display": "75000",
+    "ev_e324b5cdcbdf8b4d": {
+      "value": 0.7148,
+      "display": "0.71",
       "unit": null,
-      "metric": "need_bar_value",
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:atletico-de-madrid:deportivo-de-la-coruna",
+      "entity_name": "Atlético de Madrid v Deportivo de La Coruña",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e6af63d8a3c1b965": {
+      "value": 6000000.0,
+      "display": "6000000",
+      "unit": null,
+      "metric": "need_peer_best_value",
       "entity_type": "club",
       "entity_id": "deportivo-de-la-coruna",
       "entity_name": "Deportivo de La Coruña",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e75eb6d3768c580a": {
+      "value": "Teun Gijselhart",
+      "display": "Teun Gijselhart",
+      "unit": null,
+      "metric": "need_bar_player",
+      "entity_type": "club",
+      "entity_id": "deportivo-de-la-coruna",
+      "entity_name": "Deportivo de La Coruña",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1759,50 +2287,50 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_ee62a8febc528b4e": {
-      "value": 12600000.0,
-      "display": "12600000",
+    "ev_f5cf8e970f56e22b": {
+      "value": 1200000.0,
+      "display": "1200000",
       "unit": null,
       "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rpbb5b167e141aa7",
-      "entity_name": "Marc Casado",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "entity_id": "rpe822cbb94e9d68",
+      "entity_name": "Jakob Napoleon Romsaas",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_f7df0754a8a7b6f0": {
-      "value": 75000.0,
-      "display": "75000",
+    "ev_f882f8391639caa5": {
+      "value": "both",
+      "display": "both",
       "unit": null,
-      "metric": "need_best_value",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_fc4fc30d71f790f0": {
-      "value": "Zakaria Eddahchouri",
-      "display": "Zakaria Eddahchouri",
+    "ev_f8dcc7b7eef4cc61": {
+      "value": 1700000.0,
+      "display": "1700000",
       "unit": null,
-      "metric": "need_bar_player",
-      "entity_type": "club",
-      "entity_id": "deportivo-de-la-coruna",
-      "entity_name": "Deportivo de La Coruña",
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpb702a66ee9f3d1",
+      "entity_name": "Peter Itodo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1841,6 +2369,12 @@
         "subject": "Deportivo de La Coruña"
       },
       {
+        "stat": "ev_71338b86840b6b5a",
+        "display": "1417",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Deportivo de La Coruña"
+      },
+      {
         "stat": "ev_cd4c2cbe6f05b940",
         "display": "10 June 2025",
         "label": "appointed head coach of Deportivo de La Coruña",
@@ -1849,30 +2383,72 @@
     ],
     "match": [
       {
-        "stat": "ev_ce577db377c6932f",
+        "stat": "ev_d2666366c0b8bd20",
         "display": "24 October 2026",
         "label": "kick-off date",
         "subject": "Atlético de Madrid v Deportivo de La Coruña"
+      },
+      {
+        "stat": "ev_e324b5cdcbdf8b4d",
+        "display": "71%",
+        "label": "probability Atlético de Madrid win",
+        "subject": "Atlético de Madrid"
+      },
+      {
+        "stat": "ev_d411bcfaad6d56bf",
+        "display": "18%",
+        "label": "probability of a draw",
+        "subject": "Atlético de Madrid v Deportivo de La Coruña"
+      },
+      {
+        "stat": "ev_052357dfd5e9822c",
+        "display": "11%",
+        "label": "probability Deportivo de La Coruña win",
+        "subject": "Deportivo de La Coruña"
+      },
+      {
+        "stat": "ev_55d72c428e2f0203",
+        "display": "2.1",
+        "label": "expected goals in this match",
+        "subject": "Atlético de Madrid"
+      },
+      {
+        "stat": "ev_0f17c70cb38da05c",
+        "display": "0.9",
+        "label": "expected goals in this match",
+        "subject": "Deportivo de La Coruña"
+      },
+      {
+        "stat": "ev_71338b86840b6b5a",
+        "display": "1417",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Deportivo de La Coruña"
+      },
+      {
+        "stat": "ev_6d3746538f31fc78",
+        "display": "1651",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Atlético de Madrid"
       }
     ],
     "lineup": [],
     "news": [],
     "transfer": [
       {
-        "stat": "ev_7c5ae2655692fec4",
-        "display": "26%",
+        "stat": "ev_db33080abbabfc8d",
+        "display": "36%",
+        "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
+        "subject": "Jonathan Asp-Jensen"
+      },
+      {
+        "stat": "ev_ce9ad7d489d712e1",
+        "display": "32%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Leo Román"
       },
       {
-        "stat": "ev_0ff7ab404990e081",
+        "stat": "ev_5e9a0016eaceb309",
         "display": "20%",
-        "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
-        "subject": "Marc Casado"
-      },
-      {
-        "stat": "ev_4f4e4963436cd492",
-        "display": "15%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Adama Traoré"
       },
@@ -1883,8 +2459,8 @@
         "subject": "Marc Casado"
       },
       {
-        "stat": "ev_ee62a8febc528b4e",
-        "display": "€12.6m",
+        "stat": "ev_67820d3386c51e4d",
+        "display": "€12.0m",
         "label": "estimated fair fee if sold to another La Liga club",
         "subject": "Marc Casado"
       },
@@ -1895,8 +2471,8 @@
         "subject": "José Giménez"
       },
       {
-        "stat": "ev_199f6a1ac7dcd9ae",
-        "display": "€3.0m",
+        "stat": "ev_ac95bf8f6d4e24df",
+        "display": "€2.8m",
         "label": "estimated fair fee if sold to another La Liga club",
         "subject": "José Giménez"
       },
@@ -1907,219 +2483,321 @@
         "subject": "Leo Román"
       },
       {
-        "stat": "ev_1a3bc396952fce6d",
-        "display": "€3.7m",
+        "stat": "ev_9de181f007856753",
+        "display": "€3.5m",
         "label": "estimated fair fee if sold to another La Liga club",
         "subject": "Leo Román"
       }
     ],
     "scout": [
       {
-        "stat": "ev_007ca8451e5e8af4",
+        "stat": "ev_3bf18ed1b295c9a8",
         "display": "centre-forward",
         "label": "squad need, priority one",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_14d0edc0b782bbd1",
+        "stat": "ev_a70a2e2fdf8fa442",
         "display": "1",
         "label": "players for the position, veterans aside (need one)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_7dd2b7a3c0ed60c2",
+        "stat": "ev_bad3cd7c0c6b45da",
         "display": "2",
         "label": "players a squad carries there (need one)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_0e58e7e2410d7f9a",
+        "stat": "ev_7440fcb55f374731",
         "display": "Zakaria Eddahchouri",
         "label": "best option there (need one)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_fc4fc30d71f790f0",
+        "stat": "ev_1758edb7fad81b38",
         "display": "Zakaria Eddahchouri",
         "label": "last regular starter there (need one)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_eb33991c5539d3ac",
+        "stat": "ev_279d2d77b9a8e782",
         "display": "€0.1m",
         "label": "last regular starter's market value (need one)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_f7df0754a8a7b6f0",
+        "stat": "ev_0f7c23cd40e14df3",
         "display": "€0.1m",
         "label": "best option's market value (need one)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_108379d6dd36373e",
+        "stat": "ev_8c03e77fabc1df1c",
         "display": "€5.8m",
         "label": "similar squads' best option's market value (need one)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_5b6d7b73329c0c9a",
+        "stat": "ev_c06712e94fdcffec",
         "display": "50%",
         "label": "share of the options who are veterans (need one)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_3a9cae3a624c16f6",
+        "stat": "ev_111746c37d6504a6",
         "display": "22",
         "label": "age (gem target)",
         "subject": "Jakob Napoleon Romsaas"
       },
       {
-        "stat": "ev_0908b65d0ae96e22",
+        "stat": "ev_218311e9f98c0db0",
         "display": "Royal Charleroi Sporting Club",
         "label": "current club",
         "subject": "Jakob Napoleon Romsaas"
       },
       {
-        "stat": "ev_7c3eaff439b64a03",
+        "stat": "ev_0b5746e2d5c437e7",
         "display": "43%",
         "label": "share of his club's minutes over the last year",
         "subject": "Jakob Napoleon Romsaas"
       },
       {
-        "stat": "ev_06fcfadd1c0cf9b2",
+        "stat": "ev_06d8d7d490aa135f",
+        "display": "0.10",
+        "label": "league goals per full match",
+        "subject": "Jakob Napoleon Romsaas"
+      },
+      {
+        "stat": "ev_298f656fc38d24af",
+        "display": "0.20",
+        "label": "league assists per full match",
+        "subject": "Jakob Napoleon Romsaas"
+      },
+      {
+        "stat": "ev_9c6d1e2e20a172ea",
+        "display": "36%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Jakob Napoleon Romsaas"
+      },
+      {
+        "stat": "ev_b4b4f711cddb1487",
+        "display": "Jupiler Pro League",
+        "label": "league of that comparison",
+        "subject": "Jakob Napoleon Romsaas"
+      },
+      {
+        "stat": "ev_d275f71b64d08d0e",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Jakob Napoleon Romsaas"
+      },
+      {
+        "stat": "ev_5e1d2b2caf723c72",
+        "display": "187",
+        "label": "height in centimetres",
+        "subject": "Jakob Napoleon Romsaas"
+      },
+      {
+        "stat": "ev_685547703ce78532",
+        "display": "4",
+        "label": "international caps",
+        "subject": "Jakob Napoleon Romsaas"
+      },
+      {
+        "stat": "ev_9b556a1418747ab0",
+        "display": "attacking midfield, centre-forward",
+        "label": "positions he starts at",
+        "subject": "Jakob Napoleon Romsaas"
+      },
+      {
+        "stat": "ev_b7a3a0abe4e72fba",
         "display": "€1.2m",
         "label": "market value",
         "subject": "Jakob Napoleon Romsaas"
       },
       {
-        "stat": "ev_ceb36aaee4dcfe1f",
+        "stat": "ev_f5cf8e970f56e22b",
         "display": "€1.2m",
         "label": "estimated fair fee",
         "subject": "Jakob Napoleon Romsaas"
       },
       {
-        "stat": "ev_28e47cd7fb1cfe6b",
+        "stat": "ev_c8e6f41b1d7df27a",
         "display": "€2.0m",
         "label": "projected market value in a few seasons",
         "subject": "Jakob Napoleon Romsaas"
       },
       {
-        "stat": "ev_a919b2d3de3d6ed9",
+        "stat": "ev_dfe367ff8b51f9f6",
         "display": "20",
         "label": "age (gem target)",
         "subject": "Farouck Adekami"
       },
       {
-        "stat": "ev_8071a8ef7ce8a74e",
+        "stat": "ev_af556a83fc3a743b",
         "display": "Royal Antwerp FC",
         "label": "current club",
         "subject": "Farouck Adekami"
       },
       {
-        "stat": "ev_5c54d50b628088f6",
+        "stat": "ev_a5b980b0a7117575",
         "display": "33%",
         "label": "share of his club's minutes over the last year",
         "subject": "Farouck Adekami"
       },
       {
-        "stat": "ev_c049217741bef34c",
+        "stat": "ev_2043dafc5d39b697",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Farouck Adekami"
+      },
+      {
+        "stat": "ev_720f10f1b53088cf",
+        "display": "centre-forward, left midfield",
+        "label": "positions he starts at",
+        "subject": "Farouck Adekami"
+      },
+      {
+        "stat": "ev_55278b58b31e7720",
         "display": "€1.8m",
         "label": "market value",
         "subject": "Farouck Adekami"
       },
       {
-        "stat": "ev_2719d2b9384b1608",
-        "display": "€1.7m",
+        "stat": "ev_de615e8128565469",
+        "display": "€1.6m",
         "label": "estimated fair fee",
         "subject": "Farouck Adekami"
       },
       {
-        "stat": "ev_5dd1eb270b2b3187",
+        "stat": "ev_c2691e4f75719241",
         "display": "€1.8m",
         "label": "projected market value in a few seasons",
         "subject": "Farouck Adekami"
       },
       {
-        "stat": "ev_0b5ccb52002f8aa7",
+        "stat": "ev_0b359d05f556c014",
         "display": "23",
         "label": "age (gem target)",
         "subject": "Peter Itodo"
       },
       {
-        "stat": "ev_c7ec009f0318de56",
+        "stat": "ev_8bffebd77ea265d7",
         "display": "TOV FK Metalist 1925 Kharkiv",
         "label": "current club",
         "subject": "Peter Itodo"
       },
       {
-        "stat": "ev_9af33ad7d963357c",
+        "stat": "ev_577a7175389aeb66",
         "display": "67%",
         "label": "share of his club's minutes over the last year",
         "subject": "Peter Itodo"
       },
       {
-        "stat": "ev_b69dfc08d77afd17",
+        "stat": "ev_509aad345ce2949b",
+        "display": "0.62",
+        "label": "league goals per full match",
+        "subject": "Peter Itodo"
+      },
+      {
+        "stat": "ev_40126c3c5c6a3c8d",
+        "display": "0.00",
+        "label": "league assists per full match",
+        "subject": "Peter Itodo"
+      },
+      {
+        "stat": "ev_7598fbc4b4cac35c",
+        "display": "84%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Peter Itodo"
+      },
+      {
+        "stat": "ev_dfe5a4f430177e7b",
+        "display": "Premier Liga",
+        "label": "league of that comparison",
+        "subject": "Peter Itodo"
+      },
+      {
+        "stat": "ev_f882f8391639caa5",
+        "display": "both",
+        "label": "stronger foot",
+        "subject": "Peter Itodo"
+      },
+      {
+        "stat": "ev_b7d6208e1d23466e",
+        "display": "188",
+        "label": "height in centimetres",
+        "subject": "Peter Itodo"
+      },
+      {
+        "stat": "ev_34bf399c94b14c02",
+        "display": "centre-forward",
+        "label": "positions he starts at",
+        "subject": "Peter Itodo"
+      },
+      {
+        "stat": "ev_8652e0ca0f59f571",
         "display": "€1.8m",
         "label": "market value",
         "subject": "Peter Itodo"
       },
       {
-        "stat": "ev_d9ae4c2b59dfee6c",
-        "display": "€1.8m",
+        "stat": "ev_f8dcc7b7eef4cc61",
+        "display": "€1.7m",
         "label": "estimated fair fee",
         "subject": "Peter Itodo"
       },
       {
-        "stat": "ev_d7bb63fee9eba0cd",
+        "stat": "ev_a4ad215f77778479",
         "display": "€1.6m",
         "label": "projected market value in a few seasons",
         "subject": "Peter Itodo"
       },
       {
-        "stat": "ev_0e626905065a8db8",
+        "stat": "ev_0a7faf29d3ab058c",
         "display": "central midfield",
         "label": "squad need, priority two",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_d6f4160b19f398e8",
+        "stat": "ev_5d808f41ba98acce",
         "display": "2",
         "label": "players for the position, veterans aside (need two)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_cd9714f37e2c6721",
+        "stat": "ev_27b12d913206d444",
         "display": "4",
         "label": "players a squad carries there (need two)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_8f38d58bc8dc56cf",
+        "stat": "ev_0189606c09378a2f",
         "display": "Jonathan Asp-Jensen",
         "label": "best option there (need two)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_bdffd25182b5b2da",
+        "stat": "ev_e75eb6d3768c580a",
         "display": "Teun Gijselhart",
         "label": "last regular starter there (need two)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_5a9248117c46fb16",
+        "stat": "ev_b64f5f82e50f0705",
         "display": "€0.4m",
         "label": "last regular starter's market value (need two)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_cb15938814b05d34",
+        "stat": "ev_2e0d61ec4f95c9ea",
         "display": "€4.0m",
         "label": "best option's market value (need two)",
         "subject": "Deportivo de La Coruña"
       },
       {
-        "stat": "ev_47d48331f31688ad",
+        "stat": "ev_e6af63d8a3c1b965",
         "display": "€6.0m",
         "label": "similar squads' best option's market value (need two)",
         "subject": "Deportivo de La Coruña"
@@ -2129,11 +2807,11 @@
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 51,
+      "numbers_total": 59,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 50
+      "verified": 58
     },
     "sections_published": 5,
     "sections_withheld": 0
@@ -2152,7 +2830,5 @@
     "fit": "https://github.com/delta96040/dugout/blob/main/docs/backtests/opportunity.md",
     "lookup": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/lookup.py"
   },
-  "names": [
-    "TOV FK Metalist 1925 Kharkiv"
-  ]
+  "names": []
 }

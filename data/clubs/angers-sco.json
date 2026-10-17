@@ -10,8 +10,8 @@
     "name": "Ligue 1",
     "country": "France"
   },
-  "generated_at": "2026-10-17T17:15:52+00:00",
-  "data_as_of": "2026-10-17T17:09:23+00:00",
+  "generated_at": "2026-10-17T19:07:00+00:00",
+  "data_as_of": "2026-10-17T18:53:59+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -62,7 +62,7 @@
             "text": "Angers SCO's next league match is Angers SCO v Olympique Marseille on "
           },
           {
-            "stat": "ev_cbd7b594c08291b5",
+            "stat": "ev_45eefcb47447b7f8",
             "display": "18 October 2026"
           },
           {
@@ -77,14 +77,14 @@
       {
         "segments": [
           {
-            "text": "Angers SCO's biggest squad need is "
+            "text": "Our forecast gives Angers SCO a "
           },
           {
-            "stat": "ev_37bbf7fdd862cf81",
-            "display": "defensive midfield"
+            "stat": "ev_14184bd3448324ae",
+            "display": "25%"
           },
           {
-            "text": "."
+            "text": " chance of winning against Olympique Marseille."
           }
         ],
         "type": "stat",
@@ -196,6 +196,24 @@
         {
           "segments": [
             {
+              "text": "Angers SCO's Elo rating is "
+            },
+            {
+              "stat": "ev_601fab526a2e7a9d",
+              "display": "1400"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
               "text": "Stéphane Gilli has been Angers SCO's head coach since "
             },
             {
@@ -227,8 +245,98 @@
               "text": "Angers SCO's next league match is Angers SCO v Olympique Marseille on "
             },
             {
-              "stat": "ev_cbd7b594c08291b5",
+              "stat": "ev_45eefcb47447b7f8",
               "display": "18 October 2026"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Angers SCO a "
+            },
+            {
+              "stat": "ev_14184bd3448324ae",
+              "display": "25%"
+            },
+            {
+              "text": " chance of winning against Olympique Marseille."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Angers SCO v Olympique Marseille a "
+            },
+            {
+              "stat": "ev_c82add07994399b4",
+              "display": "27%"
+            },
+            {
+              "text": " chance of ending in a draw."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Olympique Marseille a "
+            },
+            {
+              "stat": "ev_1539a1cc4288ec47",
+              "display": "48%"
+            },
+            {
+              "text": " chance of winning against Angers SCO."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Angers SCO's Elo rating is "
+            },
+            {
+              "stat": "ev_601fab526a2e7a9d",
+              "display": "1400"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Olympique Marseille's Elo rating is "
+            },
+            {
+              "stat": "ev_e5011cb61eae0154",
+              "display": "1573"
             },
             {
               "text": "."
@@ -270,11 +378,11 @@
         {
           "segments": [
             {
-              "text": "We estimate Prosper Peter's chance of being sold in a transfer window at "
+              "text": "We estimate Ousman Camara's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_d0897ace77a7bb23",
-              "display": "38%"
+              "stat": "ev_c94f3ffaed83cde9",
+              "display": "40%"
             },
             {
               "text": "."
@@ -288,11 +396,11 @@
         {
           "segments": [
             {
-              "text": "We estimate Ousman Camara's chance of being sold in a transfer window at "
+              "text": "We estimate Prosper Peter's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_05d8427423d98ed5",
-              "display": "33%"
+              "stat": "ev_ec85b595eab6e773",
+              "display": "37%"
             },
             {
               "text": "."
@@ -309,8 +417,8 @@
               "text": "We estimate Yassin Belkhdim's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_a5d3d74314ecd4fd",
-              "display": "26%"
+              "stat": "ev_d5bc6ff57496cf5a",
+              "display": "20%"
             },
             {
               "text": "."
@@ -345,8 +453,8 @@
               "text": "Our fair-fee estimate for Prosper Peter is "
             },
             {
-              "stat": "ev_be2e73d3a8eec52a",
-              "display": "€18.0m"
+              "stat": "ev_bd1f400f440ccf49",
+              "display": "€19.0m"
             },
             {
               "text": ", above his market value."
@@ -381,8 +489,8 @@
               "text": "Our fair-fee estimate for Yassin Belkhdim is "
             },
             {
-              "stat": "ev_4db4dbe722e8e9c3",
-              "display": "€4.5m"
+              "stat": "ev_79d52921a7d78df3",
+              "display": "€4.8m"
             },
             {
               "text": ", below his market value."
@@ -417,8 +525,8 @@
               "text": "Our fair-fee estimate for Lilian Rao-Lisoa is "
             },
             {
-              "stat": "ev_17960534cebb5d3d",
-              "display": "€2.7m"
+              "stat": "ev_6cc72d53e3a8c96b",
+              "display": "€2.8m"
             },
             {
               "text": ", below his market value."
@@ -445,7 +553,7 @@
               "text": "Angers SCO's biggest squad need is "
             },
             {
-              "stat": "ev_37bbf7fdd862cf81",
+              "stat": "ev_c02d7db1060d8f74",
               "display": "defensive midfield"
             },
             {
@@ -463,7 +571,7 @@
               "text": "Angers SCO have "
             },
             {
-              "stat": "ev_35fe72345f764996",
+              "stat": "ev_097412a0674036da",
               "display": "1"
             },
             {
@@ -481,7 +589,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_23f47d0c4ce78a8d",
+              "stat": "ev_b2494fed7e9a7b94",
               "display": "2"
             },
             {
@@ -499,7 +607,7 @@
               "text": "Angers SCO's best option for defensive midfield is "
             },
             {
-              "stat": "ev_790ef6226b6475f4",
+              "stat": "ev_29c38ead8abb389d",
               "display": "Bané Diatta"
             },
             {
@@ -517,7 +625,7 @@
               "text": "At the squads closest to Angers SCO in strength, the best option for defensive midfield is typically worth "
             },
             {
-              "stat": "ev_fe08d1093de69521",
+              "stat": "ev_0760ec4136f242e2",
               "display": "€4.0m"
             },
             {
@@ -535,7 +643,7 @@
               "text": "Angers SCO's second squad need is "
             },
             {
-              "stat": "ev_ced375fdd9d0b3b5",
+              "stat": "ev_7531a95dfc7a513c",
               "display": "goalkeeper"
             },
             {
@@ -553,7 +661,7 @@
               "text": "Angers SCO have "
             },
             {
-              "stat": "ev_5def2e9557283160",
+              "stat": "ev_844ae44c78abd648",
               "display": "2"
             },
             {
@@ -571,7 +679,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_32d8aa4a185bd7f0",
+              "stat": "ev_efba29d350f58354",
               "display": "2"
             },
             {
@@ -589,7 +697,7 @@
               "text": "Angers SCO's best option for goalkeeper is "
             },
             {
-              "stat": "ev_1ef42a056163a019",
+              "stat": "ev_aa16d2dbd52a61a3",
               "display": "Melvin Zinga"
             },
             {
@@ -607,7 +715,7 @@
               "text": "The last of Angers SCO's regular starters at goalkeeper is "
             },
             {
-              "stat": "ev_9d2bb9a8105b17e5",
+              "stat": "ev_5f3fa31a7dedae9e",
               "display": "Melvin Zinga"
             },
             {
@@ -625,7 +733,7 @@
               "text": "The last of Angers SCO's regular starters at goalkeeper has a market value of "
             },
             {
-              "stat": "ev_194a7053fd6e1977",
+              "stat": "ev_450834fa4bd75134",
               "display": "€0.3m"
             },
             {
@@ -643,7 +751,7 @@
               "text": "Angers SCO's best option for goalkeeper has a market value of "
             },
             {
-              "stat": "ev_e67dc58d2da37f31",
+              "stat": "ev_6dd759de278d79db",
               "display": "€0.3m"
             },
             {
@@ -661,14 +769,14 @@
               "text": "At the squads closest to Angers SCO in strength, the best option for goalkeeper is typically worth "
             },
             {
-              "stat": "ev_3cf2dba05784b277",
+              "stat": "ev_1ba5164e6b0913a1",
               "display": "€2.5m"
             },
             {
               "text": ". "
             },
             {
-              "stat": "ev_a64b82ea69febf73",
+              "stat": "ev_b0fc27c0a34f340f",
               "display": "33%"
             },
             {
@@ -685,57 +793,89 @@
     }
   ],
   "stats": {
-    "ev_05d8427423d98ed5": {
-      "value": 0.326,
-      "display": "0.33",
+    "ev_0760ec4136f242e2": {
+      "value": 4000000.0,
+      "display": "4000000",
       "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rp439c3d117e28d3",
-      "entity_name": "Ousman Camara",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_17960534cebb5d3d": {
-      "value": 2700000.0,
-      "display": "2700000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp93583e41d3380d",
-      "entity_name": "Lilian Rao-Lisoa",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_194a7053fd6e1977": {
-      "value": 300000.0,
-      "display": "300000",
-      "unit": null,
-      "metric": "need_bar_value",
+      "metric": "need_peer_best_value",
       "entity_type": "club",
       "entity_id": "angers-sco",
       "entity_name": "Angers SCO",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_1ef42a056163a019": {
-      "value": "Melvin Zinga",
-      "display": "Melvin Zinga",
+    "ev_097412a0674036da": {
+      "value": 1.0,
+      "display": "1",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "angers-sco",
+      "entity_name": "Angers SCO",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_14184bd3448324ae": {
+      "value": 0.2542,
+      "display": "0.25",
+      "unit": null,
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "ligue_1:2026-27:angers-sco:olympique-marseille",
+      "entity_name": "Angers SCO v Olympique Marseille",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_ligue_1.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1539a1cc4288ec47": {
+      "value": 0.4763,
+      "display": "0.48",
+      "unit": null,
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "ligue_1:2026-27:angers-sco:olympique-marseille",
+      "entity_name": "Angers SCO v Olympique Marseille",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_ligue_1.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1ba5164e6b0913a1": {
+      "value": 2500000.0,
+      "display": "2500000",
+      "unit": null,
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "angers-sco",
+      "entity_name": "Angers SCO",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_29c38ead8abb389d": {
+      "value": "Bané Diatta",
+      "display": "Bané Diatta",
       "unit": null,
       "metric": "need_best_player",
       "entity_type": "club",
@@ -744,23 +884,7 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_23f47d0c4ce78a8d": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "angers-sco",
-      "entity_name": "Angers SCO",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -781,54 +905,6 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_32d8aa4a185bd7f0": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "angers-sco",
-      "entity_name": "Angers SCO",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_35fe72345f764996": {
-      "value": 1.0,
-      "display": "1",
-      "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "angers-sco",
-      "entity_name": "Angers SCO",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_37bbf7fdd862cf81": {
-      "value": "defensive midfield",
-      "display": "defensive midfield",
-      "unit": null,
-      "metric": "need",
-      "entity_type": "club",
-      "entity_id": "angers-sco",
-      "entity_name": "Angers SCO",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
     "ev_382665d0882d3bca": {
       "value": 7.0,
       "display": "7",
@@ -845,18 +921,18 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_3cf2dba05784b277": {
-      "value": 2500000.0,
-      "display": "2500000",
+    "ev_450834fa4bd75134": {
+      "value": 300000.0,
+      "display": "300000",
       "unit": null,
-      "metric": "need_peer_best_value",
+      "metric": "need_bar_value",
       "entity_type": "club",
       "entity_id": "angers-sco",
       "entity_name": "Angers SCO",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -877,18 +953,18 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_4db4dbe722e8e9c3": {
-      "value": 4500000.0,
-      "display": "4500000",
+    "ev_45eefcb47447b7f8": {
+      "value": "2026-10-18T13:00:00+00:00",
+      "display": "2026-10-18T13:00:00+00:00",
       "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpb7859bebe57015",
-      "entity_name": "Yassin Belkhdim",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "metric": "kickoff_utc",
+      "entity_type": "match",
+      "entity_id": "ligue_1:2026-27:angers-sco:olympique-marseille",
+      "entity_name": "Angers SCO v Olympique Marseille",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_ligue_1.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -909,18 +985,34 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_5def2e9557283160": {
-      "value": 2.0,
-      "display": "2",
+    "ev_5f3fa31a7dedae9e": {
+      "value": "Melvin Zinga",
+      "display": "Melvin Zinga",
       "unit": null,
-      "metric": "need_depth",
+      "metric": "need_bar_player",
       "entity_type": "club",
       "entity_id": "angers-sco",
       "entity_name": "Angers SCO",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_601fab526a2e7a9d": {
+      "value": 1400.2,
+      "display": "1400.20",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "angers-sco",
+      "entity_name": "Angers SCO",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_ligue_1.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -941,6 +1033,38 @@
       "status": "single_source",
       "cross_checks": []
     },
+    "ev_6cc72d53e3a8c96b": {
+      "value": 2800000.0,
+      "display": "2800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp93583e41d3380d",
+      "entity_name": "Lilian Rao-Lisoa",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6dd759de278d79db": {
+      "value": 300000.0,
+      "display": "300000",
+      "unit": null,
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "angers-sco",
+      "entity_name": "Angers SCO",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
     "ev_702d703a14b16d63": {
       "value": 10.0,
       "display": "10",
@@ -957,18 +1081,34 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_790ef6226b6475f4": {
-      "value": "Bané Diatta",
-      "display": "Bané Diatta",
+    "ev_7531a95dfc7a513c": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
       "unit": null,
-      "metric": "need_best_player",
+      "metric": "need",
       "entity_type": "club",
       "entity_id": "angers-sco",
       "entity_name": "Angers SCO",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_79d52921a7d78df3": {
+      "value": 4800000.0,
+      "display": "4800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpb7859bebe57015",
+      "entity_name": "Yassin Belkhdim",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -989,6 +1129,22 @@
       "status": "single_source",
       "cross_checks": []
     },
+    "ev_844ae44c78abd648": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "angers-sco",
+      "entity_name": "Angers SCO",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
     "ev_85f00289be6b75e6": {
       "value": 13.0,
       "display": "13",
@@ -1005,39 +1161,23 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_9d2bb9a8105b17e5": {
+    "ev_aa16d2dbd52a61a3": {
       "value": "Melvin Zinga",
       "display": "Melvin Zinga",
       "unit": null,
-      "metric": "need_bar_player",
+      "metric": "need_best_player",
       "entity_type": "club",
       "entity_id": "angers-sco",
       "entity_name": "Angers SCO",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_a5d3d74314ecd4fd": {
-      "value": 0.257,
-      "display": "0.26",
-      "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rpb7859bebe57015",
-      "entity_name": "Yassin Belkhdim",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a64b82ea69febf73": {
+    "ev_b0fc27c0a34f340f": {
       "value": 0.333,
       "display": "0.33",
       "unit": null,
@@ -1048,14 +1188,30 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_be2e73d3a8eec52a": {
-      "value": 18000000.0,
-      "display": "18000000",
+    "ev_b2494fed7e9a7b94": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "angers-sco",
+      "entity_name": "Angers SCO",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bd1f400f440ccf49": {
+      "value": 19000000.0,
+      "display": "19000000",
       "unit": null,
       "metric": "fair_fee",
       "entity_type": "player",
@@ -1064,30 +1220,14 @@
       "source": "dugout_model:valuation",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_cbd7b594c08291b5": {
-      "value": "2026-10-18T13:00:00+00:00",
-      "display": "2026-10-18T13:00:00+00:00",
-      "unit": null,
-      "metric": "kickoff_utc",
-      "entity_type": "match",
-      "entity_id": "ligue_1:2026-27:angers-sco:olympique-marseille",
-      "entity_name": "Angers SCO v Olympique Marseille",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/FL1/matches",
-      "source_tier": 2,
-      "fetched_at": "2026-10-17T17:00:13.329370+00:00",
-      "query_kind": "sql",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_ced375fdd9d0b3b5": {
-      "value": "goalkeeper",
-      "display": "goalkeeper",
+    "ev_c02d7db1060d8f74": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
       "unit": null,
       "metric": "need",
       "entity_type": "club",
@@ -1096,14 +1236,78 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_d0897ace77a7bb23": {
-      "value": 0.378,
-      "display": "0.38",
+    "ev_c82add07994399b4": {
+      "value": 0.2694,
+      "display": "0.27",
+      "unit": null,
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "ligue_1:2026-27:angers-sco:olympique-marseille",
+      "entity_name": "Angers SCO v Olympique Marseille",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_ligue_1.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c94f3ffaed83cde9": {
+      "value": 0.396,
+      "display": "0.40",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp439c3d117e28d3",
+      "entity_name": "Ousman Camara",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d5bc6ff57496cf5a": {
+      "value": 0.198,
+      "display": "0.20",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rpb7859bebe57015",
+      "entity_name": "Yassin Belkhdim",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e5011cb61eae0154": {
+      "value": 1573.0,
+      "display": "1573",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "olympique-marseille",
+      "entity_name": "Olympique Marseille",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ec85b595eab6e773": {
+      "value": 0.372,
+      "display": "0.37",
       "unit": null,
       "metric": "sale_likelihood",
       "entity_type": "player",
@@ -1112,23 +1316,23 @@
       "source": "dugout_model:realism",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_e67dc58d2da37f31": {
-      "value": 300000.0,
-      "display": "300000",
+    "ev_efba29d350f58354": {
+      "value": 2.0,
+      "display": "2",
       "unit": null,
-      "metric": "need_best_value",
+      "metric": "need_wanted",
       "entity_type": "club",
       "entity_id": "angers-sco",
       "entity_name": "Angers SCO",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1147,22 +1351,6 @@
       "fetched_at": "2026-06-01T00:00:00+00:00",
       "query_kind": "sql",
       "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_fe08d1093de69521": {
-      "value": 4000000.0,
-      "display": "4000000",
-      "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "angers-sco",
-      "entity_name": "Angers SCO",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
       "cross_checks": []
     }
   },
@@ -1199,6 +1387,12 @@
         "subject": "Angers SCO"
       },
       {
+        "stat": "ev_601fab526a2e7a9d",
+        "display": "1400",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Angers SCO"
+      },
+      {
         "stat": "ev_2d3128dd99d8d615",
         "display": "9 June 2026",
         "label": "appointed head coach of Angers SCO",
@@ -1207,30 +1401,60 @@
     ],
     "match": [
       {
-        "stat": "ev_cbd7b594c08291b5",
+        "stat": "ev_45eefcb47447b7f8",
         "display": "18 October 2026",
         "label": "kick-off date",
         "subject": "Angers SCO v Olympique Marseille"
+      },
+      {
+        "stat": "ev_14184bd3448324ae",
+        "display": "25%",
+        "label": "probability Angers SCO win",
+        "subject": "Angers SCO"
+      },
+      {
+        "stat": "ev_c82add07994399b4",
+        "display": "27%",
+        "label": "probability of a draw",
+        "subject": "Angers SCO v Olympique Marseille"
+      },
+      {
+        "stat": "ev_1539a1cc4288ec47",
+        "display": "48%",
+        "label": "probability Olympique Marseille win",
+        "subject": "Olympique Marseille"
+      },
+      {
+        "stat": "ev_601fab526a2e7a9d",
+        "display": "1400",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Angers SCO"
+      },
+      {
+        "stat": "ev_e5011cb61eae0154",
+        "display": "1573",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Olympique Marseille"
       }
     ],
     "lineup": [],
     "news": [],
     "transfer": [
       {
-        "stat": "ev_d0897ace77a7bb23",
-        "display": "38%",
-        "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
-        "subject": "Prosper Peter"
-      },
-      {
-        "stat": "ev_05d8427423d98ed5",
-        "display": "33%",
+        "stat": "ev_c94f3ffaed83cde9",
+        "display": "40%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Ousman Camara"
       },
       {
-        "stat": "ev_a5d3d74314ecd4fd",
-        "display": "26%",
+        "stat": "ev_ec85b595eab6e773",
+        "display": "37%",
+        "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
+        "subject": "Prosper Peter"
+      },
+      {
+        "stat": "ev_d5bc6ff57496cf5a",
+        "display": "20%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Yassin Belkhdim"
       },
@@ -1241,8 +1465,8 @@
         "subject": "Prosper Peter"
       },
       {
-        "stat": "ev_be2e73d3a8eec52a",
-        "display": "€18.0m",
+        "stat": "ev_bd1f400f440ccf49",
+        "display": "€19.0m",
         "label": "estimated fair fee if sold to another Ligue 1 club",
         "subject": "Prosper Peter"
       },
@@ -1253,8 +1477,8 @@
         "subject": "Yassin Belkhdim"
       },
       {
-        "stat": "ev_4db4dbe722e8e9c3",
-        "display": "€4.5m",
+        "stat": "ev_79d52921a7d78df3",
+        "display": "€4.8m",
         "label": "estimated fair fee if sold to another Ligue 1 club",
         "subject": "Yassin Belkhdim"
       },
@@ -1265,93 +1489,93 @@
         "subject": "Lilian Rao-Lisoa"
       },
       {
-        "stat": "ev_17960534cebb5d3d",
-        "display": "€2.7m",
+        "stat": "ev_6cc72d53e3a8c96b",
+        "display": "€2.8m",
         "label": "estimated fair fee if sold to another Ligue 1 club",
         "subject": "Lilian Rao-Lisoa"
       }
     ],
     "scout": [
       {
-        "stat": "ev_37bbf7fdd862cf81",
+        "stat": "ev_c02d7db1060d8f74",
         "display": "defensive midfield",
         "label": "squad need, priority one",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_35fe72345f764996",
+        "stat": "ev_097412a0674036da",
         "display": "1",
         "label": "players for the position, veterans aside (need one)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_23f47d0c4ce78a8d",
+        "stat": "ev_b2494fed7e9a7b94",
         "display": "2",
         "label": "players a squad carries there (need one)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_790ef6226b6475f4",
+        "stat": "ev_29c38ead8abb389d",
         "display": "Bané Diatta",
         "label": "best option there (need one)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_fe08d1093de69521",
+        "stat": "ev_0760ec4136f242e2",
         "display": "€4.0m",
         "label": "similar squads' best option's market value (need one)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_ced375fdd9d0b3b5",
+        "stat": "ev_7531a95dfc7a513c",
         "display": "goalkeeper",
         "label": "squad need, priority two",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_5def2e9557283160",
+        "stat": "ev_844ae44c78abd648",
         "display": "2",
         "label": "players for the position, veterans aside (need two)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_32d8aa4a185bd7f0",
+        "stat": "ev_efba29d350f58354",
         "display": "2",
         "label": "players a squad carries there (need two)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_1ef42a056163a019",
+        "stat": "ev_aa16d2dbd52a61a3",
         "display": "Melvin Zinga",
         "label": "best option there (need two)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_9d2bb9a8105b17e5",
+        "stat": "ev_5f3fa31a7dedae9e",
         "display": "Melvin Zinga",
         "label": "last regular starter there (need two)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_194a7053fd6e1977",
+        "stat": "ev_450834fa4bd75134",
         "display": "€0.3m",
         "label": "last regular starter's market value (need two)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_e67dc58d2da37f31",
+        "stat": "ev_6dd759de278d79db",
         "display": "€0.3m",
         "label": "best option's market value (need two)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_3cf2dba05784b277",
+        "stat": "ev_1ba5164e6b0913a1",
         "display": "€2.5m",
         "label": "similar squads' best option's market value (need two)",
         "subject": "Angers SCO"
       },
       {
-        "stat": "ev_a64b82ea69febf73",
+        "stat": "ev_b0fc27c0a34f340f",
         "display": "33%",
         "label": "share of the options who are veterans (need two)",
         "subject": "Angers SCO"
@@ -1361,11 +1585,11 @@
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 34,
+      "numbers_total": 40,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 33
+      "verified": 39
     },
     "sections_published": 5,
     "sections_withheld": 0

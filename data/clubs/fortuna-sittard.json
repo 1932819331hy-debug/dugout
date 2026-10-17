@@ -10,8 +10,8 @@
     "name": "Eredivisie",
     "country": "Netherlands"
   },
-  "generated_at": "2026-10-17T17:14:13+00:00",
-  "data_as_of": "2026-10-17T17:09:23+00:00",
+  "generated_at": "2026-10-17T19:00:49+00:00",
+  "data_as_of": "2026-10-17T18:53:59+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -62,7 +62,7 @@
             "text": "Fortuna Sittard's next league match is NEC v Fortuna Sittard on "
           },
           {
-            "stat": "ev_66ff4dcb02ce7bf1",
+            "stat": "ev_2fc58698f780a6fb",
             "display": "18 October 2026"
           },
           {
@@ -80,7 +80,7 @@
             "text": "Fortuna Sittard's biggest squad need is "
           },
           {
-            "stat": "ev_4181184206a992fa",
+            "stat": "ev_424b33bb4a7b49a3",
             "display": "winger"
           },
           {
@@ -196,6 +196,24 @@
         {
           "segments": [
             {
+              "text": "Fortuna Sittard's Elo rating is "
+            },
+            {
+              "stat": "ev_4def3255cb88a09d",
+              "display": "1433"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
               "text": "Danny Buijs has been Fortuna Sittard's head coach since "
             },
             {
@@ -227,8 +245,98 @@
               "text": "Fortuna Sittard's next league match is NEC v Fortuna Sittard on "
             },
             {
-              "stat": "ev_66ff4dcb02ce7bf1",
+              "stat": "ev_2fc58698f780a6fb",
               "display": "18 October 2026"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives NEC a "
+            },
+            {
+              "stat": "ev_d57ed084c3fc139e",
+              "display": "58%"
+            },
+            {
+              "text": " chance of winning against Fortuna Sittard."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives NEC v Fortuna Sittard a "
+            },
+            {
+              "stat": "ev_228d54ac1ed57c12",
+              "display": "24%"
+            },
+            {
+              "text": " chance of ending in a draw."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Fortuna Sittard a "
+            },
+            {
+              "stat": "ev_69fddcf2b4869369",
+              "display": "18%"
+            },
+            {
+              "text": " chance of winning against NEC."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Fortuna Sittard's Elo rating is "
+            },
+            {
+              "stat": "ev_4def3255cb88a09d",
+              "display": "1433"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "NEC's Elo rating is "
+            },
+            {
+              "stat": "ev_c82e352867893724",
+              "display": "1543"
             },
             {
               "text": "."
@@ -270,29 +378,11 @@
         {
           "segments": [
             {
-              "text": "We estimate Jasper Dahlhaus's chance of being sold in a transfer window at "
-            },
-            {
-              "stat": "ev_48afe6264d7ba0e0",
-              "display": "18%"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
               "text": "We estimate Philip Brittijn's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_0bbcb9a0ee0e3400",
-              "display": "17%"
+              "stat": "ev_20dd23a1bbae7c92",
+              "display": "26%"
             },
             {
               "text": "."
@@ -306,11 +396,29 @@
         {
           "segments": [
             {
-              "text": "We estimate Edouard Michut's chance of being sold in a transfer window at "
+              "text": "We estimate Jasper Dahlhaus's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_18ec897be56093da",
-              "display": "10%"
+              "stat": "ev_556b27ab9ac29220",
+              "display": "23%"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "We estimate Mohammed Ihattaren's chance of being sold in a transfer window at "
+            },
+            {
+              "stat": "ev_5b722778f7deb73b",
+              "display": "22%"
             },
             {
               "text": "."
@@ -345,7 +453,7 @@
               "text": "Our fair-fee estimate for Mohammed Ihattaren is "
             },
             {
-              "stat": "ev_05b9085697da0a6e",
+              "stat": "ev_7b06b3698192a8c4",
               "display": "€1.6m"
             },
             {
@@ -381,7 +489,7 @@
               "text": "Our fair-fee estimate for Philip Brittijn is "
             },
             {
-              "stat": "ev_cff26fbbf07083fb",
+              "stat": "ev_64b8d7eea188ea91",
               "display": "€1.0m"
             },
             {
@@ -417,7 +525,7 @@
               "text": "Our fair-fee estimate for Jasper Dahlhaus is "
             },
             {
-              "stat": "ev_e74685aa0e59e6fe",
+              "stat": "ev_4430e0831bdd2c2e",
               "display": "€0.8m"
             },
             {
@@ -445,7 +553,7 @@
               "text": "Fortuna Sittard's biggest squad need is "
             },
             {
-              "stat": "ev_4181184206a992fa",
+              "stat": "ev_424b33bb4a7b49a3",
               "display": "winger"
             },
             {
@@ -463,7 +571,7 @@
               "text": "Fortuna Sittard have "
             },
             {
-              "stat": "ev_c94c4d66c10c637b",
+              "stat": "ev_702e04672db97b2e",
               "display": "1"
             },
             {
@@ -481,7 +589,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_1a9fafe43adc6205",
+              "stat": "ev_202f74a25389af48",
               "display": "4"
             },
             {
@@ -499,7 +607,7 @@
               "text": "Fortuna Sittard's best option for winger is "
             },
             {
-              "stat": "ev_cf5cfe76fe18e6e4",
+              "stat": "ev_4eed7265364794b0",
               "display": "Kristoffer Peterson"
             },
             {
@@ -517,7 +625,7 @@
               "text": "Fortuna Sittard's best option for winger has a market value of "
             },
             {
-              "stat": "ev_58850ad95d93d7cb",
+              "stat": "ev_c572acd613da335a",
               "display": "€0.5m"
             },
             {
@@ -535,14 +643,14 @@
               "text": "At the squads closest to Fortuna Sittard in strength, the best option for winger is typically worth "
             },
             {
-              "stat": "ev_6e08514e657dc941",
+              "stat": "ev_2e83217a517cf17f",
               "display": "€2.0m"
             },
             {
               "text": ". "
             },
             {
-              "stat": "ev_b58d8a45218f08fa",
+              "stat": "ev_742033bab7671cfa",
               "display": "100%"
             },
             {
@@ -557,10 +665,10 @@
         {
           "segments": [
             {
-              "text": "Dream target: Imari Samuels (Dundee FC), who is "
+              "text": "Realistic target: Imari Samuels (Dundee FC), who is "
             },
             {
-              "stat": "ev_4ad69e7dd6406534",
+              "stat": "ev_ca61f8e672010de6",
               "display": "24"
             },
             {
@@ -578,8 +686,152 @@
               "text": "Imari Samuels plays for "
             },
             {
-              "stat": "ev_f6f67f2885fa0de9",
+              "stat": "ev_122432e1714a7e9b",
               "display": "Dundee FC"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Imari Samuels averages "
+            },
+            {
+              "stat": "ev_2ef8c5abd1060710",
+              "display": "0.00"
+            },
+            {
+              "text": " league goals per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Imari Samuels averages "
+            },
+            {
+              "stat": "ev_4694eb1cc4c589b2",
+              "display": "0.07"
+            },
+            {
+              "text": " league assists per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Imari Samuels has more league goals and assists per full match than "
+            },
+            {
+              "stat": "ev_7d311d1a4ed96476",
+              "display": "12%"
+            },
+            {
+              "text": " of players at his position in his league."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Imari Samuels's comparison is within "
+            },
+            {
+              "stat": "ev_143511e83d6c09e3",
+              "display": "Scottish Premiership"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Imari Samuels's stronger foot is his "
+            },
+            {
+              "stat": "ev_de90df69bbd30b0e",
+              "display": "left"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Imari Samuels stands "
+            },
+            {
+              "stat": "ev_c2b946b396a81621",
+              "display": "187"
+            },
+            {
+              "text": " centimetres tall."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Imari Samuels has won "
+            },
+            {
+              "stat": "ev_11f62c9b06f4d1e4",
+              "display": "2"
+            },
+            {
+              "text": " international caps."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Imari Samuels starts at "
+            },
+            {
+              "stat": "ev_4b3b1adf9faba29a",
+              "display": "left midfield, left-back"
             },
             {
               "text": "."
@@ -596,7 +848,7 @@
               "text": "In the matches on record for the past year, Imari Samuels played "
             },
             {
-              "stat": "ev_abf0c35d17718084",
+              "stat": "ev_eee2e138d9fea209",
               "display": "1316"
             },
             {
@@ -611,10 +863,28 @@
         {
           "segments": [
             {
+              "text": "We estimate a "
+            },
+            {
+              "stat": "ev_da80e1e1159c9ada",
+              "display": "11%"
+            },
+            {
+              "text": " chance that Dundee FC sell Imari Samuels in a transfer window."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
               "text": "Imari Samuels has a market value of "
             },
             {
-              "stat": "ev_00c7122512adf519",
+              "stat": "ev_277806045addd064",
               "display": "€0.3m"
             },
             {
@@ -632,7 +902,7 @@
               "text": "Our fair-fee estimate for Imari Samuels is "
             },
             {
-              "stat": "ev_91d8f305c149bc85",
+              "stat": "ev_502e989afd74a7ce",
               "display": "€0.3m"
             },
             {
@@ -647,140 +917,14 @@
         {
           "segments": [
             {
-              "text": "We project Imari Samuels to play "
-            },
-            {
-              "stat": "ev_40aeb94eff2091f0",
-              "display": "41%"
-            },
-            {
-              "text": " of Fortuna Sittard's minutes."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Realistic target: Tom Sparrow (Motherwell FC), who is "
-            },
-            {
-              "stat": "ev_0db43b6b067c6955",
-              "display": "24"
-            },
-            {
-              "text": " years old."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Tom Sparrow plays for "
-            },
-            {
-              "stat": "ev_60884fc0c63a6080",
-              "display": "Motherwell FC"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "In the matches on record for the past year, Tom Sparrow played "
-            },
-            {
-              "stat": "ev_ff490385ba57e4c2",
-              "display": "1271"
-            },
-            {
-              "text": " minutes."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
               "text": "We estimate a "
             },
             {
-              "stat": "ev_9aa59ae8c6df8624",
-              "display": "5%"
-            },
-            {
-              "text": " chance that Motherwell FC sell Tom Sparrow in a transfer window."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Tom Sparrow has a market value of "
-            },
-            {
-              "stat": "ev_f92f8fe65a075bc0",
-              "display": "€0.1m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Our fair-fee estimate for Tom Sparrow is "
-            },
-            {
-              "stat": "ev_84a9c4c3e2bf780d",
-              "display": "€0.2m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "We estimate a "
-            },
-            {
-              "stat": "ev_8bfe0b0c4e8cce67",
+              "stat": "ev_2606671998e03487",
               "display": "0.0%"
             },
             {
-              "text": " chance that Tom Sparrow joins Fortuna Sittard in a transfer window."
+              "text": " chance that Imari Samuels joins Fortuna Sittard in a transfer window."
             }
           ],
           "type": "stat",
@@ -794,7 +938,7 @@
               "text": "Hidden gem: Lamine Yamal (FC Barcelona), who is "
             },
             {
-              "stat": "ev_d44b18cb77979a0a",
+              "stat": "ev_9d322b1967809a10",
               "display": "19"
             },
             {
@@ -812,7 +956,7 @@
               "text": "Lamine Yamal plays for "
             },
             {
-              "stat": "ev_a4cf34339075c55e",
+              "stat": "ev_c3e447defd32b761",
               "display": "FC Barcelona"
             },
             {
@@ -830,7 +974,7 @@
               "text": "Lamine Yamal has played "
             },
             {
-              "stat": "ev_7da9f36157809c7f",
+              "stat": "ev_3c9ab86470b6ff32",
               "display": "82%"
             },
             {
@@ -845,11 +989,65 @@
         {
           "segments": [
             {
-              "text": "Lamine Yamal has a market value of "
+              "text": "Lamine Yamal averages "
             },
             {
-              "stat": "ev_a91375e420713fdc",
-              "display": "€200m"
+              "stat": "ev_ef2943dfba7f0128",
+              "display": "0.64"
+            },
+            {
+              "text": " league goals per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Lamine Yamal averages "
+            },
+            {
+              "stat": "ev_2cc58d1e6fda2bad",
+              "display": "0.37"
+            },
+            {
+              "text": " league assists per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Lamine Yamal has more league goals and assists per full match than "
+            },
+            {
+              "stat": "ev_0003f555781c9d92",
+              "display": "98%"
+            },
+            {
+              "text": " of players at his position in his league."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Lamine Yamal's comparison is within "
+            },
+            {
+              "stat": "ev_6028cb7816064d00",
+              "display": "La Liga"
             },
             {
               "text": "."
@@ -863,83 +1061,11 @@
         {
           "segments": [
             {
-              "text": "Our fair-fee estimate for Lamine Yamal is "
+              "text": "Lamine Yamal's stronger foot is his "
             },
             {
-              "stat": "ev_c1a27048b4f4f897",
-              "display": "€208m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Fortuna Sittard's second squad need is "
-            },
-            {
-              "stat": "ev_902f58172aaa56ad",
-              "display": "defensive midfield"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Fortuna Sittard have "
-            },
-            {
-              "stat": "ev_f03662a7a7ffab1c",
-              "display": "0"
-            },
-            {
-              "text": " players for defensive midfield, leaving veterans aside."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "A squad carries "
-            },
-            {
-              "stat": "ev_efd59c7901d2e83d",
-              "display": "2"
-            },
-            {
-              "text": " players for defensive midfield."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "At the squads closest to Fortuna Sittard in strength, the best option for defensive midfield is typically worth "
-            },
-            {
-              "stat": "ev_a6f47e7e01a31a1f",
-              "display": "€2.0m"
+              "stat": "ev_2a2285c00680fdbf",
+              "display": "left"
             },
             {
               "text": "."
@@ -956,129 +1082,188 @@
           "text": "Imari Samuels has [number] months left on his contract.",
           "status": "unverified",
           "reason": "transfer clause: no relevant source found"
-        },
-        {
-          "text": "Tom Sparrow has [number] months left on his contract.",
-          "status": "unverified",
-          "reason": "transfer clause: 0 independent source(s); need 2"
         }
       ]
     }
   ],
   "stats": {
-    "ev_00c7122512adf519": {
-      "value": 300000.0,
-      "display": "300000",
+    "ev_0003f555781c9d92": {
+      "value": 0.98,
+      "display": "0.98",
       "unit": null,
-      "metric": "market_value",
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0299a949fddc2545": {
+      "value": 13.0,
+      "display": "13",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_03264b5274db53a9": {
+      "value": 0.629,
+      "display": "0.63",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_05e583f34dd27b7a": {
+      "value": 14.0,
+      "display": "14",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_11f62c9b06f4d1e4": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "caps",
       "entity_type": "player",
       "entity_id": "rpdc41fe55f9aa5c",
       "entity_name": "Imari Samuels",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_05b9085697da0a6e": {
-      "value": 1600000.0,
-      "display": "1600000",
+    "ev_122432e1714a7e9b": {
+      "value": "Dundee FC",
+      "display": "Dundee FC",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "candidate_club",
       "entity_type": "player",
-      "entity_id": "rpd56d3ad47ae1da",
-      "entity_name": "Mohammed Ihattaren",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_05d6996f46411eb6": {
-      "value": 60000000.0,
-      "display": "60000000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_0bbcb9a0ee0e3400": {
-      "value": 0.168,
-      "display": "0.17",
-      "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rpe8b2ffb9ef25bc",
-      "entity_name": "Philip Brittijn",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_0db43b6b067c6955": {
-      "value": 23.9,
-      "display": "23.90",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp829303452e44ff",
-      "entity_name": "Tom Sparrow",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_0fd36d1f79c3f3e3": {
-      "value": 121200000.0,
-      "display": "121200000",
+    "ev_1419ac4c377d6b5c": {
+      "value": 124000000.0,
+      "display": "124000000",
       "unit": null,
       "metric": "proj_value_4y",
       "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_18ec897be56093da": {
-      "value": 0.097,
-      "display": "0.10",
+    "ev_142991be6431fc53": {
+      "value": 183.0,
+      "display": "183",
       "unit": null,
-      "metric": "sale_likelihood",
+      "metric": "height_cm",
       "entity_type": "player",
-      "entity_id": "rp8eb65b68750f46",
-      "entity_name": "Edouard Michut",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_1a9fafe43adc6205": {
+    "ev_143511e83d6c09e3": {
+      "value": "Scottish Premiership",
+      "display": "Scottish Premiership",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_17ced5e6a6b5b084": {
+      "value": "central midfield, defensive midfield",
+      "display": "central midfield, defensive midfield",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1ae8454393ef2a46": {
+      "value": 0.78,
+      "display": "0.78",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_202f74a25389af48": {
       "value": 4.0,
       "display": "4",
       "unit": null,
@@ -1089,23 +1274,215 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_2e6cdf919158f6d3": {
-      "value": 120000000.0,
-      "display": "120000000",
+    "ev_20dd23a1bbae7c92": {
+      "value": 0.265,
+      "display": "0.27",
       "unit": null,
-      "metric": "proj_value_4y",
+      "metric": "sale_likelihood",
       "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_228d54ac1ed57c12": {
+      "value": 0.2426,
+      "display": "0.24",
+      "unit": null,
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:nec:fortuna-sittard",
+      "entity_name": "NEC v Fortuna Sittard",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2606671998e03487": {
+      "value": 0.0001,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_277806045addd064": {
+      "value": 300000.0,
+      "display": "300000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_297d5f985e132a39": {
+      "value": "Bayern Munich",
+      "display": "Bayern Munich",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_29e1b40f2dc31b81": {
+      "value": "Bundesliga",
+      "display": "Bundesliga",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2a2285c00680fdbf": {
+      "value": "left",
+      "display": "left",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2cc58d1e6fda2bad": {
+      "value": 0.37,
+      "display": "0.37",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2e200351a01907f9": {
+      "value": 0.557,
+      "display": "0.56",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2e2239d06d706a09": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2e83217a517cf17f": {
+      "value": 2000000.0,
+      "display": "2000000",
+      "unit": null,
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "fortuna-sittard",
+      "entity_name": "Fortuna Sittard",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2ef8c5abd1060710": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2fc58698f780a6fb": {
+      "value": "2026-10-18T18:00:00+00:00",
+      "display": "2026-10-18T18:00:00+00:00",
+      "unit": null,
+      "metric": "kickoff_utc",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:nec:fortuna-sittard",
+      "entity_name": "NEC v Fortuna Sittard",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1126,23 +1503,103 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_40aeb94eff2091f0": {
-      "value": 0.411,
-      "display": "0.41",
+    "ev_36d798e32cae14e4": {
+      "value": 0.76,
+      "display": "0.76",
       "unit": null,
-      "metric": "expected_minutes_share",
+      "metric": "ga_pctile",
       "entity_type": "player",
-      "entity_id": "rpdc41fe55f9aa5c",
-      "entity_name": "Imari Samuels",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_4181184206a992fa": {
+    "ev_3c9ab86470b6ff32": {
+      "value": 0.816,
+      "display": "0.82",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3d116fc51b89b6bf": {
+      "value": "Ligue 1",
+      "display": "Ligue 1",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3ebfe9cd2908aacd": {
+      "value": 21.5,
+      "display": "21.50",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3ed17c6ff3640431": {
+      "value": 87900000.0,
+      "display": "87900000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_420368cbc0ad704c": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_424b33bb4a7b49a3": {
       "value": "winger",
       "display": "winger",
       "unit": null,
@@ -1153,7 +1610,23 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_425e96cbef5abaf0": {
+      "value": 75000000.0,
+      "display": "75000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1174,9 +1647,217 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_48afe6264d7ba0e0": {
-      "value": 0.181,
-      "display": "0.18",
+    "ev_4366aff0eb996bab": {
+      "value": 0.683,
+      "display": "0.68",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4430e0831bdd2c2e": {
+      "value": 800000.0,
+      "display": "800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpa9c18ed1c976ac",
+      "entity_name": "Jasper Dahlhaus",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4694eb1cc4c589b2": {
+      "value": 0.07,
+      "display": "0.07",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_47cc9600bffe02c9": {
+      "value": 2000000.0,
+      "display": "2000000",
+      "unit": null,
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "fortuna-sittard",
+      "entity_name": "Fortuna Sittard",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4b19ce48e8b8fbe7": {
+      "value": 53200000.0,
+      "display": "53200000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4b3b1adf9faba29a": {
+      "value": "left midfield, left-back",
+      "display": "left midfield, left-back",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4d9b43e63564acfb": {
+      "value": 168.0,
+      "display": "168",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4def3255cb88a09d": {
+      "value": 1433.4,
+      "display": "1433.40",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "fortuna-sittard",
+      "entity_name": "Fortuna Sittard",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4e790ca13723a209": {
+      "value": "right winger",
+      "display": "right winger",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4ea98fdf94fde94e": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "fortuna-sittard",
+      "entity_name": "Fortuna Sittard",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4eed7265364794b0": {
+      "value": "Kristoffer Peterson",
+      "display": "Kristoffer Peterson",
+      "unit": null,
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "fortuna-sittard",
+      "entity_name": "Fortuna Sittard",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_502e989afd74a7ce": {
+      "value": 300000.0,
+      "display": "300000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_51d548c928870854": {
+      "value": 15.0,
+      "display": "15",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_556b27ab9ac29220": {
+      "value": 0.23,
+      "display": "0.23",
       "unit": null,
       "metric": "sale_likelihood",
       "entity_type": "player",
@@ -1185,71 +1866,39 @@
       "source": "dugout_model:realism",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_4ad69e7dd6406534": {
-      "value": 23.7,
-      "display": "23.70",
+    "ev_5b722778f7deb73b": {
+      "value": 0.217,
+      "display": "0.22",
       "unit": null,
-      "metric": "age",
+      "metric": "sale_likelihood",
       "entity_type": "player",
-      "entity_id": "rpdc41fe55f9aa5c",
-      "entity_name": "Imari Samuels",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rpd56d3ad47ae1da",
+      "entity_name": "Mohammed Ihattaren",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_4c940a2b944fe1ec": {
-      "value": 69800000.0,
-      "display": "69800000",
+    "ev_5bd5c396e50e5742": {
+      "value": "Premier League",
+      "display": "Premier League",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "ga_league",
       "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_57e2e37db9e15d49": {
-      "value": 120000000.0,
-      "display": "120000000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_58850ad95d93d7cb": {
-      "value": 450000.0,
-      "display": "450000",
-      "unit": null,
-      "metric": "need_best_value",
-      "entity_type": "club",
-      "entity_id": "fortuna-sittard",
-      "entity_name": "Fortuna Sittard",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1270,34 +1919,34 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_5d63d9c072a20205": {
-      "value": "Bayern Munich",
-      "display": "Bayern Munich",
+    "ev_5ce45accd92af9dd": {
+      "value": 0.08,
+      "display": "0.08",
       "unit": null,
-      "metric": "candidate_club",
+      "metric": "assists_p90",
       "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_60884fc0c63a6080": {
-      "value": "Motherwell FC",
-      "display": "Motherwell FC",
+    "ev_6028cb7816064d00": {
+      "value": "La Liga",
+      "display": "La Liga",
       "unit": null,
-      "metric": "candidate_club",
+      "metric": "ga_league",
       "entity_type": "player",
-      "entity_id": "rp829303452e44ff",
-      "entity_name": "Tom Sparrow",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1318,20 +1967,68 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_66ff4dcb02ce7bf1": {
-      "value": "2026-10-18T18:00:00+00:00",
-      "display": "2026-10-18T18:00:00+00:00",
+    "ev_640b6204e9300db2": {
+      "value": 188.0,
+      "display": "188",
       "unit": null,
-      "metric": "kickoff_utc",
-      "entity_type": "match",
-      "entity_id": "eredivisie:2026-27:nec:fortuna-sittard",
-      "entity_name": "NEC v Fortuna Sittard",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/DED/matches",
-      "source_tier": 2,
-      "fetched_at": "2026-10-17T17:00:33.087439+00:00",
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
-      "status": "single_source",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_64b8d7eea188ea91": {
+      "value": 1000000.0,
+      "display": "1000000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_66d8ddfc70d4b4ee": {
+      "value": 22.5,
+      "display": "22.50",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_676dc35bbc7e16a7": {
+      "value": "Manchester United",
+      "display": "Manchester United",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
       "cross_checks": []
     },
     "ev_67ab2265db2ed06d": {
@@ -1350,66 +2047,242 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_6929db46e71dbbfd": {
-      "value": 0.428,
-      "display": "0.43",
+    "ev_69fddcf2b4869369": {
+      "value": 0.1817,
+      "display": "0.18",
       "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:nec:fortuna-sittard",
+      "entity_name": "NEC v Fortuna Sittard",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_6e08514e657dc941": {
-      "value": 2000000.0,
-      "display": "2000000",
+    "ev_6e2cfc6ec6efdced": {
+      "value": 314800000.0,
+      "display": "314800000",
       "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "fortuna-sittard",
-      "entity_name": "Fortuna Sittard",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7da9f36157809c7f": {
-      "value": 0.816,
-      "display": "0.82",
-      "unit": null,
-      "metric": "minutes_share_now",
+      "metric": "proj_value_4y",
       "entity_type": "player",
       "entity_id": "rpcc53a150fa2413",
       "entity_name": "Lamine Yamal",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_84a9c4c3e2bf780d": {
-      "value": 200000.0,
-      "display": "200000",
+    "ev_6e84ce4c6948bff2": {
+      "value": 78000000.0,
+      "display": "78000000",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "proj_value_4y",
       "entity_type": "player",
-      "entity_id": "rp829303452e44ff",
-      "entity_name": "Tom Sparrow",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6e8d259f3f4fcbcb": {
+      "value": 60000000.0,
+      "display": "60000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6f9feea1a3fd5f0a": {
+      "value": 0.92,
+      "display": "0.92",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_702e04672db97b2e": {
+      "value": 1.0,
+      "display": "1",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "fortuna-sittard",
+      "entity_name": "Fortuna Sittard",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_742033bab7671cfa": {
+      "value": 1.0,
+      "display": "1",
+      "unit": null,
+      "metric": "need_ageing_share",
+      "entity_type": "club",
+      "entity_id": "fortuna-sittard",
+      "entity_name": "Fortuna Sittard",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_785ec8b0a53a74a6": {
+      "value": "Paris Saint-Germain",
+      "display": "Paris Saint-Germain",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_78996ef241a7094d": {
+      "value": "Bayern Munich",
+      "display": "Bayern Munich",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7b06b3698192a8c4": {
+      "value": 1600000.0,
+      "display": "1600000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpd56d3ad47ae1da",
+      "entity_name": "Mohammed Ihattaren",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7d311d1a4ed96476": {
+      "value": 0.12,
+      "display": "0.12",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7eb658692cd18f98": {
+      "value": 18.7,
+      "display": "18.70",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_82e5163c91bbb8a1": {
+      "value": 120000000.0,
+      "display": "120000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_84b66dc9e55e645b": {
+      "value": 0.589,
+      "display": "0.59",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_874cd3d8477edb90": {
+      "value": 1.0,
+      "display": "1",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1430,135 +2303,71 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_8bfe0b0c4e8cce67": {
-      "value": 0.0001,
-      "display": "0.00",
+    "ev_8dc02a4fbb793b54": {
+      "value": "left",
+      "display": "left",
       "unit": null,
-      "metric": "realism",
+      "metric": "foot",
       "entity_type": "player",
-      "entity_id": "rp829303452e44ff",
-      "entity_name": "Tom Sparrow",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_902f58172aaa56ad": {
-      "value": "defensive midfield",
-      "display": "defensive midfield",
-      "unit": null,
-      "metric": "need",
-      "entity_type": "club",
-      "entity_id": "fortuna-sittard",
-      "entity_name": "Fortuna Sittard",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_91d8f305c149bc85": {
-      "value": 300000.0,
-      "display": "300000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpdc41fe55f9aa5c",
-      "entity_name": "Imari Samuels",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_997b5d12375ede02": {
-      "value": 314800000.0,
-      "display": "314800000",
-      "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9aa59ae8c6df8624": {
-      "value": 0.049,
-      "display": "0.05",
-      "unit": null,
-      "metric": "p_sold",
-      "entity_type": "player",
-      "entity_id": "rp829303452e44ff",
-      "entity_name": "Tom Sparrow",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9e47ee098a85071e": {
-      "value": 22.1,
-      "display": "22.10",
+    "ev_8f7437f9a1a4796b": {
+      "value": 21.4,
+      "display": "21.40",
       "unit": null,
       "metric": "age",
       "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_a4cf34339075c55e": {
-      "value": "FC Barcelona",
-      "display": "FC Barcelona",
+    "ev_9088f50081d4e402": {
+      "value": "Bundesliga",
+      "display": "Bundesliga",
       "unit": null,
-      "metric": "candidate_club",
+      "metric": "ga_league",
       "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_a6f47e7e01a31a1f": {
-      "value": 2000000.0,
-      "display": "2000000",
+    "ev_927324b34dc1566d": {
+      "value": 0.39,
+      "display": "0.39",
       "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "fortuna-sittard",
-      "entity_name": "Fortuna Sittard",
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_a91375e420713fdc": {
+    "ev_95fa1d14882ba76c": {
       "value": 200000000.0,
       "display": "200000000",
       "unit": null,
@@ -1569,7 +2378,119 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9b0e69c82343b6ba": {
+      "value": "central midfield, defensive midfield",
+      "display": "central midfield, defensive midfield",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9d322b1967809a10": {
+      "value": 19.3,
+      "display": "19.30",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9f07fedd8068dae7": {
+      "value": 31.0,
+      "display": "31",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9f4842947787e64d": {
+      "value": "Paris Saint-Germain",
+      "display": "Paris Saint-Germain",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a067d1bfa9d71013": {
+      "value": 0.39,
+      "display": "0.39",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a8d9400267c6cf56": {
+      "value": "right winger",
+      "display": "right winger",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a935c308071e259e": {
+      "value": "both",
+      "display": "both",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1590,73 +2511,121 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_abf0c35d17718084": {
-      "value": 1316.0,
-      "display": "1316",
+    "ev_aa607f9f4cac6907": {
+      "value": 0.16,
+      "display": "0.16",
       "unit": null,
-      "metric": "minutes_last_year",
+      "metric": "goals_p90",
       "entity_type": "player",
-      "entity_id": "rpdc41fe55f9aa5c",
-      "entity_name": "Imari Samuels",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_b58d8a45218f08fa": {
-      "value": 1.0,
-      "display": "1",
+    "ev_ae37ee976047bf43": {
+      "value": 181.0,
+      "display": "181",
       "unit": null,
-      "metric": "need_ageing_share",
-      "entity_type": "club",
-      "entity_id": "fortuna-sittard",
-      "entity_name": "Fortuna Sittard",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_bd65abff0af28ead": {
-      "value": 21.4,
-      "display": "21.40",
-      "unit": null,
-      "metric": "age",
+      "metric": "height_cm",
       "entity_type": "player",
       "entity_id": "rp786709126ec0ff",
       "entity_name": "Desire Doue",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_be50828786af1098": {
-      "value": 124000000.0,
-      "display": "124000000",
+    "ev_b29397760c0ace30": {
+      "value": 184.0,
+      "display": "184",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b6d4ea442b6e998d": {
+      "value": 120000000.0,
+      "display": "120000000",
       "unit": null,
       "metric": "proj_value_4y",
       "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c1a27048b4f4f897": {
-      "value": 208500000.0,
-      "display": "208500000",
+    "ev_b6f4a565f73b92d2": {
+      "value": 0.06,
+      "display": "0.06",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b71a7e3c026face6": {
+      "value": 27.0,
+      "display": "27",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bd614997ced5adf4": {
+      "value": "Ligue 1",
+      "display": "Ligue 1",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bda08fd78a1b077a": {
+      "value": 204200000.0,
+      "display": "204200000",
       "unit": null,
       "metric": "fair_fee",
       "entity_type": "player",
@@ -1665,44 +2634,220 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c4e2e6f0a2cab8af": {
-      "value": 0.589,
-      "display": "0.59",
+    "ev_be0078f9ba496659": {
+      "value": 171.0,
+      "display": "171",
       "unit": null,
-      "metric": "minutes_share_now",
+      "metric": "height_cm",
       "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c8ed27f0496b904a": {
-      "value": 8.0,
-      "display": "8",
+    "ev_c150aac31d3740df": {
+      "value": 90000000.0,
+      "display": "90000000",
       "unit": null,
-      "metric": "contract_months",
+      "metric": "market_value",
       "entity_type": "player",
-      "entity_id": "rp829303452e44ff",
-      "entity_name": "Tom Sparrow",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c93762691f875c11": {
+    "ev_c2b946b396a81621": {
+      "value": 187.0,
+      "display": "187",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c3e447defd32b761": {
+      "value": "FC Barcelona",
+      "display": "FC Barcelona",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c4c1c4b4b89732a2": {
+      "value": 121200000.0,
+      "display": "121200000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c572acd613da335a": {
+      "value": 450000.0,
+      "display": "450000",
+      "unit": null,
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "fortuna-sittard",
+      "entity_name": "Fortuna Sittard",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c82e352867893724": {
+      "value": 1542.9,
+      "display": "1542.90",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "nec",
+      "entity_name": "NEC",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ca61f8e672010de6": {
+      "value": 23.7,
+      "display": "23.70",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cc95ecb5887fab7a": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cf7f60ab692618cd": {
+      "value": 0.51,
+      "display": "0.51",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d26503c86d6398ae": {
+      "value": 68300000.0,
+      "display": "68300000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d2980377b801e86d": {
+      "value": 0.15,
+      "display": "0.15",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d57ed084c3fc139e": {
+      "value": 0.5757,
+      "display": "0.58",
+      "unit": null,
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:nec:fortuna-sittard",
+      "entity_name": "NEC v Fortuna Sittard",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d8e2848df57d5a79": {
       "value": 8.0,
       "display": "8",
       "unit": null,
@@ -1713,71 +2858,119 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c94c4d66c10c637b": {
-      "value": 1.0,
-      "display": "1",
-      "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "fortuna-sittard",
-      "entity_name": "Fortuna Sittard",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_cf5cfe76fe18e6e4": {
-      "value": "Kristoffer Peterson",
-      "display": "Kristoffer Peterson",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "fortuna-sittard",
-      "entity_name": "Fortuna Sittard",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_cff26fbbf07083fb": {
-      "value": 1000000.0,
-      "display": "1000000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpe8b2ffb9ef25bc",
-      "entity_name": "Philip Brittijn",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_d44b18cb77979a0a": {
-      "value": 19.3,
-      "display": "19.30",
+    "ev_d9b1cecafee322ba": {
+      "value": 22.1,
+      "display": "22.10",
       "unit": null,
       "metric": "age",
       "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_da80e1e1159c9ada": {
+      "value": 0.113,
+      "display": "0.11",
+      "unit": null,
+      "metric": "p_sold",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_dc05ebaea4d90867": {
+      "value": 140000000.0,
+      "display": "140000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_dd95f0f21b9c1cea": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_dda63fbe69c186a9": {
+      "value": 0.428,
+      "display": "0.43",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_de90df69bbd30b0e": {
+      "value": "left",
+      "display": "left",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e094d16647687d05": {
+      "value": 0.08,
+      "display": "0.08",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1798,55 +2991,39 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_e6fb8b9ae761a6be": {
-      "value": 89800000.0,
-      "display": "89800000",
+    "ev_e389659709e8e5ce": {
+      "value": 70700000.0,
+      "display": "70700000",
       "unit": null,
       "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp8e5a5bb72faf75",
+      "entity_name": "Joao Neves",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e3961f677c508462": {
+      "value": 0.53,
+      "display": "0.53",
+      "unit": null,
+      "metric": "goals_p90",
       "entity_type": "player",
       "entity_id": "rp786709126ec0ff",
       "entity_name": "Desire Doue",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_e74685aa0e59e6fe": {
-      "value": 800000.0,
-      "display": "800000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpa9c18ed1c976ac",
-      "entity_name": "Jasper Dahlhaus",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_efd59c7901d2e83d": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "fortuna-sittard",
-      "entity_name": "Fortuna Sittard",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_f03662a7a7ffab1c": {
+    "ev_e46ffbd60e79786b": {
       "value": 0.0,
       "display": "0",
       "unit": null,
@@ -1857,7 +3034,135 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e5dad8252864fbdb": {
+      "value": 0.38,
+      "display": "0.38",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e75424a9b010f2d3": {
+      "value": 3.0,
+      "display": "3",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e7dc19ab2237dac0": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "fortuna-sittard",
+      "entity_name": "Fortuna Sittard",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ec924dc5a064d1bc": {
+      "value": 43900000.0,
+      "display": "43900000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ee66ca9c084d9ac1": {
+      "value": 0.12,
+      "display": "0.12",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpee56c1079dbe50",
+      "entity_name": "Kobbie Mainoo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ee879e8857081d45": {
+      "value": "attacking midfield, right winger",
+      "display": "attacking midfield, right winger",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_eee2e138d9fea209": {
+      "value": 1316.0,
+      "display": "1316",
+      "unit": null,
+      "metric": "minutes_last_year",
+      "entity_type": "player",
+      "entity_id": "rpdc41fe55f9aa5c",
+      "entity_name": "Imari Samuels",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ef2943dfba7f0128": {
+      "value": 0.64,
+      "display": "0.64",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1878,82 +3183,18 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_f6f67f2885fa0de9": {
-      "value": "Dundee FC",
-      "display": "Dundee FC",
+    "ev_f96ac54436354ad2": {
+      "value": 78200000.0,
+      "display": "78200000",
       "unit": null,
-      "metric": "candidate_club",
+      "metric": "proj_value_4y",
       "entity_type": "player",
-      "entity_id": "rpdc41fe55f9aa5c",
-      "entity_name": "Imari Samuels",
+      "entity_id": "rp29ddeed4fefa10",
+      "entity_name": "Aleksandar Pavlović",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_f92f8fe65a075bc0": {
-      "value": 100000.0,
-      "display": "100000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp829303452e44ff",
-      "entity_name": "Tom Sparrow",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_fa5e4d8a9a297da2": {
-      "value": "Paris Saint-Germain",
-      "display": "Paris Saint-Germain",
-      "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_ff490385ba57e4c2": {
-      "value": 1271.0,
-      "display": "1271",
-      "unit": null,
-      "metric": "minutes_last_year",
-      "entity_type": "player",
-      "entity_id": "rp829303452e44ff",
-      "entity_name": "Tom Sparrow",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_ff5f93446c7a1bdd": {
-      "value": 18.7,
-      "display": "18.70",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1992,6 +3233,12 @@
         "subject": "Fortuna Sittard"
       },
       {
+        "stat": "ev_4def3255cb88a09d",
+        "display": "1433",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Fortuna Sittard"
+      },
+      {
         "stat": "ev_a94a751438e9aa5f",
         "display": "1 July 2023",
         "label": "appointed head coach of Fortuna Sittard",
@@ -2000,32 +3247,62 @@
     ],
     "match": [
       {
-        "stat": "ev_66ff4dcb02ce7bf1",
+        "stat": "ev_2fc58698f780a6fb",
         "display": "18 October 2026",
         "label": "kick-off date",
         "subject": "NEC v Fortuna Sittard"
+      },
+      {
+        "stat": "ev_d57ed084c3fc139e",
+        "display": "58%",
+        "label": "probability NEC win",
+        "subject": "NEC"
+      },
+      {
+        "stat": "ev_228d54ac1ed57c12",
+        "display": "24%",
+        "label": "probability of a draw",
+        "subject": "NEC v Fortuna Sittard"
+      },
+      {
+        "stat": "ev_69fddcf2b4869369",
+        "display": "18%",
+        "label": "probability Fortuna Sittard win",
+        "subject": "Fortuna Sittard"
+      },
+      {
+        "stat": "ev_4def3255cb88a09d",
+        "display": "1433",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Fortuna Sittard"
+      },
+      {
+        "stat": "ev_c82e352867893724",
+        "display": "1543",
+        "label": "Elo rating (dugout's own)",
+        "subject": "NEC"
       }
     ],
     "lineup": [],
     "news": [],
     "transfer": [
       {
-        "stat": "ev_48afe6264d7ba0e0",
-        "display": "18%",
-        "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
-        "subject": "Jasper Dahlhaus"
-      },
-      {
-        "stat": "ev_0bbcb9a0ee0e3400",
-        "display": "17%",
+        "stat": "ev_20dd23a1bbae7c92",
+        "display": "26%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Philip Brittijn"
       },
       {
-        "stat": "ev_18ec897be56093da",
-        "display": "10%",
+        "stat": "ev_556b27ab9ac29220",
+        "display": "23%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
-        "subject": "Edouard Michut"
+        "subject": "Jasper Dahlhaus"
+      },
+      {
+        "stat": "ev_5b722778f7deb73b",
+        "display": "22%",
+        "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
+        "subject": "Mohammed Ihattaren"
       },
       {
         "stat": "ev_5c84e71f2c344abf",
@@ -2034,7 +3311,7 @@
         "subject": "Mohammed Ihattaren"
       },
       {
-        "stat": "ev_05b9085697da0a6e",
+        "stat": "ev_7b06b3698192a8c4",
         "display": "€1.6m",
         "label": "estimated fair fee if sold to another Eredivisie club",
         "subject": "Mohammed Ihattaren"
@@ -2046,7 +3323,7 @@
         "subject": "Philip Brittijn"
       },
       {
-        "stat": "ev_cff26fbbf07083fb",
+        "stat": "ev_64b8d7eea188ea91",
         "display": "€1.0m",
         "label": "estimated fair fee if sold to another Eredivisie club",
         "subject": "Philip Brittijn"
@@ -2058,7 +3335,7 @@
         "subject": "Jasper Dahlhaus"
       },
       {
-        "stat": "ev_e74685aa0e59e6fe",
+        "stat": "ev_4430e0831bdd2c2e",
         "display": "€0.8m",
         "label": "estimated fair fee if sold to another Eredivisie club",
         "subject": "Jasper Dahlhaus"
@@ -2066,292 +3343,682 @@
     ],
     "scout": [
       {
-        "stat": "ev_4181184206a992fa",
+        "stat": "ev_424b33bb4a7b49a3",
         "display": "winger",
         "label": "squad need, priority one",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_c94c4d66c10c637b",
+        "stat": "ev_702e04672db97b2e",
         "display": "1",
         "label": "players for the position, veterans aside (need one)",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_1a9fafe43adc6205",
+        "stat": "ev_202f74a25389af48",
         "display": "4",
         "label": "players a squad carries there (need one)",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_cf5cfe76fe18e6e4",
+        "stat": "ev_4eed7265364794b0",
         "display": "Kristoffer Peterson",
         "label": "best option there (need one)",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_58850ad95d93d7cb",
+        "stat": "ev_c572acd613da335a",
         "display": "€0.5m",
         "label": "best option's market value (need one)",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_6e08514e657dc941",
+        "stat": "ev_2e83217a517cf17f",
         "display": "€2.0m",
         "label": "similar squads' best option's market value (need one)",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_b58d8a45218f08fa",
+        "stat": "ev_742033bab7671cfa",
         "display": "100%",
         "label": "share of the options who are veterans (need one)",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_4ad69e7dd6406534",
+        "stat": "ev_ca61f8e672010de6",
         "display": "24",
-        "label": "age (best target)",
+        "label": "age (realistic target)",
         "subject": "Imari Samuels"
       },
       {
-        "stat": "ev_f6f67f2885fa0de9",
+        "stat": "ev_122432e1714a7e9b",
         "display": "Dundee FC",
         "label": "current club",
         "subject": "Imari Samuels"
       },
       {
-        "stat": "ev_abf0c35d17718084",
+        "stat": "ev_2ef8c5abd1060710",
+        "display": "0.00",
+        "label": "league goals per full match",
+        "subject": "Imari Samuels"
+      },
+      {
+        "stat": "ev_4694eb1cc4c589b2",
+        "display": "0.07",
+        "label": "league assists per full match",
+        "subject": "Imari Samuels"
+      },
+      {
+        "stat": "ev_7d311d1a4ed96476",
+        "display": "12%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Imari Samuels"
+      },
+      {
+        "stat": "ev_143511e83d6c09e3",
+        "display": "Scottish Premiership",
+        "label": "league of that comparison",
+        "subject": "Imari Samuels"
+      },
+      {
+        "stat": "ev_de90df69bbd30b0e",
+        "display": "left",
+        "label": "stronger foot",
+        "subject": "Imari Samuels"
+      },
+      {
+        "stat": "ev_c2b946b396a81621",
+        "display": "187",
+        "label": "height in centimetres",
+        "subject": "Imari Samuels"
+      },
+      {
+        "stat": "ev_11f62c9b06f4d1e4",
+        "display": "2",
+        "label": "international caps",
+        "subject": "Imari Samuels"
+      },
+      {
+        "stat": "ev_4b3b1adf9faba29a",
+        "display": "left midfield, left-back",
+        "label": "positions he starts at",
+        "subject": "Imari Samuels"
+      },
+      {
+        "stat": "ev_eee2e138d9fea209",
         "display": "1316",
         "label": "minutes played in the past year's matches on record",
         "subject": "Imari Samuels"
       },
       {
-        "stat": "ev_c93762691f875c11",
-        "display": "8",
-        "label": "months left on his contract",
-        "subject": "Imari Samuels"
-      },
-      {
-        "stat": "ev_00c7122512adf519",
-        "display": "€0.3m",
-        "label": "market value",
-        "subject": "Imari Samuels"
-      },
-      {
-        "stat": "ev_91d8f305c149bc85",
-        "display": "€0.3m",
-        "label": "estimated fair fee",
-        "subject": "Imari Samuels"
-      },
-      {
-        "stat": "ev_40aeb94eff2091f0",
-        "display": "41%",
-        "label": "expected share of minutes at the club",
-        "subject": "Imari Samuels"
-      },
-      {
-        "stat": "ev_0db43b6b067c6955",
-        "display": "24",
-        "label": "age (realistic target)",
-        "subject": "Tom Sparrow"
-      },
-      {
-        "stat": "ev_60884fc0c63a6080",
-        "display": "Motherwell FC",
-        "label": "current club",
-        "subject": "Tom Sparrow"
-      },
-      {
-        "stat": "ev_ff490385ba57e4c2",
-        "display": "1271",
-        "label": "minutes played in the past year's matches on record",
-        "subject": "Tom Sparrow"
-      },
-      {
-        "stat": "ev_9aa59ae8c6df8624",
-        "display": "5%",
+        "stat": "ev_da80e1e1159c9ada",
+        "display": "11%",
         "label": "chance his club sells him in a window",
-        "subject": "Tom Sparrow"
+        "subject": "Imari Samuels"
       },
       {
-        "stat": "ev_c8ed27f0496b904a",
+        "stat": "ev_d8e2848df57d5a79",
         "display": "8",
         "label": "months left on his contract",
-        "subject": "Tom Sparrow"
+        "subject": "Imari Samuels"
       },
       {
-        "stat": "ev_f92f8fe65a075bc0",
-        "display": "€0.1m",
+        "stat": "ev_277806045addd064",
+        "display": "€0.3m",
         "label": "market value",
-        "subject": "Tom Sparrow"
+        "subject": "Imari Samuels"
       },
       {
-        "stat": "ev_84a9c4c3e2bf780d",
-        "display": "€0.2m",
+        "stat": "ev_502e989afd74a7ce",
+        "display": "€0.3m",
         "label": "estimated fair fee",
-        "subject": "Tom Sparrow"
+        "subject": "Imari Samuels"
       },
       {
-        "stat": "ev_8bfe0b0c4e8cce67",
+        "stat": "ev_2606671998e03487",
         "display": "0.0%",
         "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
-        "subject": "Tom Sparrow"
+        "subject": "Imari Samuels"
       },
       {
-        "stat": "ev_d44b18cb77979a0a",
+        "stat": "ev_9d322b1967809a10",
         "display": "19",
         "label": "age (gem target)",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_a4cf34339075c55e",
+        "stat": "ev_c3e447defd32b761",
         "display": "FC Barcelona",
         "label": "current club",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_7da9f36157809c7f",
+        "stat": "ev_3c9ab86470b6ff32",
         "display": "82%",
         "label": "share of his club's minutes over the last year",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_a91375e420713fdc",
+        "stat": "ev_ef2943dfba7f0128",
+        "display": "0.64",
+        "label": "league goals per full match",
+        "subject": "Lamine Yamal"
+      },
+      {
+        "stat": "ev_2cc58d1e6fda2bad",
+        "display": "0.37",
+        "label": "league assists per full match",
+        "subject": "Lamine Yamal"
+      },
+      {
+        "stat": "ev_0003f555781c9d92",
+        "display": "98%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Lamine Yamal"
+      },
+      {
+        "stat": "ev_6028cb7816064d00",
+        "display": "La Liga",
+        "label": "league of that comparison",
+        "subject": "Lamine Yamal"
+      },
+      {
+        "stat": "ev_2a2285c00680fdbf",
+        "display": "left",
+        "label": "stronger foot",
+        "subject": "Lamine Yamal"
+      },
+      {
+        "stat": "ev_142991be6431fc53",
+        "display": "183",
+        "label": "height in centimetres",
+        "subject": "Lamine Yamal"
+      },
+      {
+        "stat": "ev_9f07fedd8068dae7",
+        "display": "31",
+        "label": "international caps",
+        "subject": "Lamine Yamal"
+      },
+      {
+        "stat": "ev_a8d9400267c6cf56",
+        "display": "right winger",
+        "label": "positions he starts at",
+        "subject": "Lamine Yamal"
+      },
+      {
+        "stat": "ev_95fa1d14882ba76c",
         "display": "€200m",
         "label": "market value",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_c1a27048b4f4f897",
-        "display": "€208m",
+        "stat": "ev_bda08fd78a1b077a",
+        "display": "€204m",
         "label": "estimated fair fee",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_997b5d12375ede02",
+        "stat": "ev_6e2cfc6ec6efdced",
         "display": "€315m",
         "label": "projected market value in a few seasons",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_bd65abff0af28ead",
+        "stat": "ev_8f7437f9a1a4796b",
         "display": "21",
         "label": "age (gem target)",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_fa5e4d8a9a297da2",
+        "stat": "ev_9f4842947787e64d",
         "display": "Paris Saint-Germain",
         "label": "current club",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_c4e2e6f0a2cab8af",
+        "stat": "ev_84b66dc9e55e645b",
         "display": "59%",
         "label": "share of his club's minutes over the last year",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_57e2e37db9e15d49",
+        "stat": "ev_e3961f677c508462",
+        "display": "0.53",
+        "label": "league goals per full match",
+        "subject": "Désiré Doué"
+      },
+      {
+        "stat": "ev_e5dad8252864fbdb",
+        "display": "0.38",
+        "label": "league assists per full match",
+        "subject": "Désiré Doué"
+      },
+      {
+        "stat": "ev_874cd3d8477edb90",
+        "display": "100%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Désiré Doué"
+      },
+      {
+        "stat": "ev_3d116fc51b89b6bf",
+        "display": "Ligue 1",
+        "label": "league of that comparison",
+        "subject": "Désiré Doué"
+      },
+      {
+        "stat": "ev_2e2239d06d706a09",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Désiré Doué"
+      },
+      {
+        "stat": "ev_ae37ee976047bf43",
+        "display": "181",
+        "label": "height in centimetres",
+        "subject": "Désiré Doué"
+      },
+      {
+        "stat": "ev_0299a949fddc2545",
+        "display": "13",
+        "label": "international caps",
+        "subject": "Désiré Doué"
+      },
+      {
+        "stat": "ev_4e790ca13723a209",
+        "display": "right winger",
+        "label": "positions he starts at",
+        "subject": "Désiré Doué"
+      },
+      {
+        "stat": "ev_82e5163c91bbb8a1",
         "display": "€120m",
         "label": "market value",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_e6fb8b9ae761a6be",
-        "display": "€89.8m",
+        "stat": "ev_3ed17c6ff3640431",
+        "display": "€87.9m",
         "label": "estimated fair fee",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_be50828786af1098",
+        "stat": "ev_1419ac4c377d6b5c",
         "display": "€124m",
         "label": "projected market value in a few seasons",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_ff5f93446c7a1bdd",
+        "stat": "ev_7eb658692cd18f98",
         "display": "19",
         "label": "age (gem target)",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_5d63d9c072a20205",
+        "stat": "ev_78996ef241a7094d",
         "display": "Bayern Munich",
         "label": "current club",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_6929db46e71dbbfd",
+        "stat": "ev_dda63fbe69c186a9",
         "display": "43%",
         "label": "share of his club's minutes over the last year",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_05d6996f46411eb6",
+        "stat": "ev_927324b34dc1566d",
+        "display": "0.39",
+        "label": "league goals per full match",
+        "subject": "Lennart Karl"
+      },
+      {
+        "stat": "ev_a067d1bfa9d71013",
+        "display": "0.39",
+        "label": "league assists per full match",
+        "subject": "Lennart Karl"
+      },
+      {
+        "stat": "ev_6f9feea1a3fd5f0a",
+        "display": "92%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Lennart Karl"
+      },
+      {
+        "stat": "ev_9088f50081d4e402",
+        "display": "Bundesliga",
+        "label": "league of that comparison",
+        "subject": "Lennart Karl"
+      },
+      {
+        "stat": "ev_8dc02a4fbb793b54",
+        "display": "left",
+        "label": "stronger foot",
+        "subject": "Lennart Karl"
+      },
+      {
+        "stat": "ev_4d9b43e63564acfb",
+        "display": "168",
+        "label": "height in centimetres",
+        "subject": "Lennart Karl"
+      },
+      {
+        "stat": "ev_e75424a9b010f2d3",
+        "display": "3",
+        "label": "international caps",
+        "subject": "Lennart Karl"
+      },
+      {
+        "stat": "ev_ee879e8857081d45",
+        "display": "attacking midfield, right winger",
+        "label": "positions he starts at",
+        "subject": "Lennart Karl"
+      },
+      {
+        "stat": "ev_6e8d259f3f4fcbcb",
         "display": "€60.0m",
         "label": "market value",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_4c940a2b944fe1ec",
-        "display": "€69.8m",
+        "stat": "ev_d26503c86d6398ae",
+        "display": "€68.3m",
         "label": "estimated fair fee",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_0fd36d1f79c3f3e3",
+        "stat": "ev_c4c1c4b4b89732a2",
         "display": "€121m",
         "label": "projected market value in a few seasons",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_902f58172aaa56ad",
+        "stat": "ev_e7dc19ab2237dac0",
         "display": "defensive midfield",
         "label": "squad need, priority two",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_f03662a7a7ffab1c",
+        "stat": "ev_e46ffbd60e79786b",
         "display": "0",
         "label": "players for the position, veterans aside (need two)",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_efd59c7901d2e83d",
+        "stat": "ev_4ea98fdf94fde94e",
         "display": "2",
         "label": "players a squad carries there (need two)",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_a6f47e7e01a31a1f",
+        "stat": "ev_47cc9600bffe02c9",
         "display": "€2.0m",
         "label": "similar squads' best option's market value (need two)",
         "subject": "Fortuna Sittard"
       },
       {
-        "stat": "ev_9e47ee098a85071e",
+        "stat": "ev_d9b1cecafee322ba",
         "display": "22",
         "label": "age (gem target, second need)",
         "subject": "João Neves"
       },
       {
-        "stat": "ev_2e6cdf919158f6d3",
+        "stat": "ev_785ec8b0a53a74a6",
+        "display": "Paris Saint-Germain",
+        "label": "current club",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_03264b5274db53a9",
+        "display": "63%",
+        "label": "share of his club's minutes over the last year",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_aa607f9f4cac6907",
+        "display": "0.16",
+        "label": "league goals per full match",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_e094d16647687d05",
+        "display": "0.08",
+        "label": "league assists per full match",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_1ae8454393ef2a46",
+        "display": "78%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_bd614997ced5adf4",
+        "display": "Ligue 1",
+        "label": "league of that comparison",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_420368cbc0ad704c",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_be0078f9ba496659",
+        "display": "171",
+        "label": "height in centimetres",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_b71a7e3c026face6",
+        "display": "27",
+        "label": "international caps",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_17ced5e6a6b5b084",
+        "display": "central midfield, defensive midfield",
+        "label": "positions he starts at",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_dc05ebaea4d90867",
+        "display": "€140m",
+        "label": "market value",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_e389659709e8e5ce",
+        "display": "€70.7m",
+        "label": "estimated fair fee",
+        "subject": "João Neves"
+      },
+      {
+        "stat": "ev_b6d4ea442b6e998d",
         "display": "€120m",
         "label": "projected market value in a few seasons",
         "subject": "João Neves"
+      },
+      {
+        "stat": "ev_66d8ddfc70d4b4ee",
+        "display": "22",
+        "label": "age (gem target, second need)",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_297d5f985e132a39",
+        "display": "Bayern Munich",
+        "label": "current club",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_4366aff0eb996bab",
+        "display": "68%",
+        "label": "share of his club's minutes over the last year",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_d2980377b801e86d",
+        "display": "0.15",
+        "label": "league goals per full match",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_5ce45accd92af9dd",
+        "display": "0.08",
+        "label": "league assists per full match",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_36d798e32cae14e4",
+        "display": "76%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_29e1b40f2dc31b81",
+        "display": "Bundesliga",
+        "label": "league of that comparison",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_a935c308071e259e",
+        "display": "both",
+        "label": "stronger foot",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_640b6204e9300db2",
+        "display": "188",
+        "label": "height in centimetres",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_51d548c928870854",
+        "display": "15",
+        "label": "international caps",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_cc95ecb5887fab7a",
+        "display": "defensive midfield",
+        "label": "positions he starts at",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_c150aac31d3740df",
+        "display": "€90.0m",
+        "label": "market value",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_4b19ce48e8b8fbe7",
+        "display": "€53.2m",
+        "label": "estimated fair fee",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_f96ac54436354ad2",
+        "display": "€78.2m",
+        "label": "projected market value in a few seasons",
+        "subject": "Aleksandar Pavlovic"
+      },
+      {
+        "stat": "ev_3ebfe9cd2908aacd",
+        "display": "22",
+        "label": "age (gem target, second need)",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_676dc35bbc7e16a7",
+        "display": "Manchester United",
+        "label": "current club",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_2e200351a01907f9",
+        "display": "56%",
+        "label": "share of his club's minutes over the last year",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_b6f4a565f73b92d2",
+        "display": "0.06",
+        "label": "league goals per full match",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_ee66ca9c084d9ac1",
+        "display": "0.12",
+        "label": "league assists per full match",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_cf7f60ab692618cd",
+        "display": "51%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_5bd5c396e50e5742",
+        "display": "Premier League",
+        "label": "league of that comparison",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_dd95f0f21b9c1cea",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_b29397760c0ace30",
+        "display": "184",
+        "label": "height in centimetres",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_05e583f34dd27b7a",
+        "display": "14",
+        "label": "international caps",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_9b0e69c82343b6ba",
+        "display": "central midfield, defensive midfield",
+        "label": "positions he starts at",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_425e96cbef5abaf0",
+        "display": "€75.0m",
+        "label": "market value",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_ec924dc5a064d1bc",
+        "display": "€43.9m",
+        "label": "estimated fair fee",
+        "subject": "Kobbie Mainoo"
+      },
+      {
+        "stat": "ev_6e84ce4c6948bff2",
+        "display": "€78.0m",
+        "label": "projected market value in a few seasons",
+        "subject": "Kobbie Mainoo"
       }
     ]
   },
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 49,
+      "numbers_total": 56,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 48,
-      "unverified": 2
+      "verified": 55,
+      "unverified": 1
     },
     "sections_published": 5,
     "sections_withheld": 0

@@ -10,8 +10,8 @@
     "name": "Eredivisie",
     "country": "Netherlands"
   },
-  "generated_at": "2026-10-17T17:14:22+00:00",
-  "data_as_of": "2026-10-17T17:09:23+00:00",
+  "generated_at": "2026-10-17T19:01:23+00:00",
+  "data_as_of": "2026-10-17T18:53:59+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -62,7 +62,7 @@
             "text": "Sparta Rotterdam's next league match is Sparta Rotterdam v Willem II on "
           },
           {
-            "stat": "ev_90294f0017bdb477",
+            "stat": "ev_7f047a924ebf8973",
             "display": "17 October 2026"
           },
           {
@@ -77,14 +77,14 @@
       {
         "segments": [
           {
-            "text": "Sparta Rotterdam's biggest squad need is "
+            "text": "Our forecast gives Sparta Rotterdam a "
           },
           {
-            "stat": "ev_8257a296fa3d3e65",
-            "display": "goalkeeper"
+            "stat": "ev_173f201c3dbb9e23",
+            "display": "60%"
           },
           {
-            "text": "."
+            "text": " chance of winning against Willem II."
           }
         ],
         "type": "stat",
@@ -196,6 +196,24 @@
         {
           "segments": [
             {
+              "text": "Sparta Rotterdam's Elo rating is "
+            },
+            {
+              "stat": "ev_1efeeb60c6812af1",
+              "display": "1421"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
               "text": "Rogier Meijer has been Sparta Rotterdam's head coach since "
             },
             {
@@ -227,8 +245,98 @@
               "text": "Sparta Rotterdam's next league match is Sparta Rotterdam v Willem II on "
             },
             {
-              "stat": "ev_90294f0017bdb477",
+              "stat": "ev_7f047a924ebf8973",
               "display": "17 October 2026"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Sparta Rotterdam a "
+            },
+            {
+              "stat": "ev_173f201c3dbb9e23",
+              "display": "60%"
+            },
+            {
+              "text": " chance of winning against Willem II."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Sparta Rotterdam v Willem II a "
+            },
+            {
+              "stat": "ev_8dd3c78aa3ec887b",
+              "display": "23%"
+            },
+            {
+              "text": " chance of ending in a draw."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our forecast gives Willem II a "
+            },
+            {
+              "stat": "ev_395cc4fbc97b57bc",
+              "display": "16%"
+            },
+            {
+              "text": " chance of winning against Sparta Rotterdam."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Sparta Rotterdam's Elo rating is "
+            },
+            {
+              "stat": "ev_1efeeb60c6812af1",
+              "display": "1421"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Willem II's Elo rating is "
+            },
+            {
+              "stat": "ev_9a03bd125001297e",
+              "display": "1287"
             },
             {
               "text": "."
@@ -273,8 +381,26 @@
               "text": "We estimate Marvin Young's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_a16dc9b6ddf6c718",
-              "display": "52%"
+              "stat": "ev_c5dcc63f6bc5aab8",
+              "display": "63%"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "We estimate Nick Verschuren's chance of being sold in a transfer window at "
+            },
+            {
+              "stat": "ev_180718205e943913",
+              "display": "35%"
             },
             {
               "text": "."
@@ -291,26 +417,8 @@
               "text": "We estimate Shunsuke Mito's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_3fd558962382a310",
-              "display": "23%"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "We estimate Ayoni Santos's chance of being sold in a transfer window at "
-            },
-            {
-              "stat": "ev_20794dc4c69d160c",
-              "display": "11%"
+              "stat": "ev_4a19546e69f0385d",
+              "display": "27%"
             },
             {
               "text": "."
@@ -345,8 +453,44 @@
               "text": "Our fair-fee estimate for Marvin Young is "
             },
             {
-              "stat": "ev_add1eaf06d8c24ea",
-              "display": "€3.2m"
+              "stat": "ev_059b91dfcc65dce9",
+              "display": "€3.1m"
+            },
+            {
+              "text": ", below his market value."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Transfermarkt valued Teo Quintero at "
+            },
+            {
+              "stat": "ev_dec8383ac4c19144",
+              "display": "€1.3m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Our fair-fee estimate for Teo Quintero is "
+            },
+            {
+              "stat": "ev_a4effdf8959e7efc",
+              "display": "€0.6m"
             },
             {
               "text": ", below his market value."
@@ -381,44 +525,8 @@
               "text": "Our fair-fee estimate for Andrej Kostić is "
             },
             {
-              "stat": "ev_daa3259788eb5c98",
-              "display": "€4.5m"
-            },
-            {
-              "text": ", in line with his market value."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Transfermarkt valued Lushendry Martes at "
-            },
-            {
-              "stat": "ev_2cb044780709a225",
-              "display": "€3.0m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Our fair-fee estimate for Lushendry Martes is "
-            },
-            {
-              "stat": "ev_af9ce3fb509d3084",
-              "display": "€2.8m"
+              "stat": "ev_656472ff800c03c4",
+              "display": "€4.4m"
             },
             {
               "text": ", in line with his market value."
@@ -445,7 +553,7 @@
               "text": "Sparta Rotterdam's biggest squad need is "
             },
             {
-              "stat": "ev_8257a296fa3d3e65",
+              "stat": "ev_bbdfe0e745efa0de",
               "display": "goalkeeper"
             },
             {
@@ -463,7 +571,7 @@
               "text": "Sparta Rotterdam have "
             },
             {
-              "stat": "ev_16005c3800a62210",
+              "stat": "ev_462d12fa84550619",
               "display": "2"
             },
             {
@@ -481,7 +589,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_7485463600372366",
+              "stat": "ev_df16fbefe98fd742",
               "display": "2"
             },
             {
@@ -499,7 +607,7 @@
               "text": "Sparta Rotterdam's best option for goalkeeper is "
             },
             {
-              "stat": "ev_84f802175549b2ba",
+              "stat": "ev_94ac0cf2b46ce2ea",
               "display": "Pascal Kuiper"
             },
             {
@@ -517,7 +625,7 @@
               "text": "The last of Sparta Rotterdam's regular starters at goalkeeper is "
             },
             {
-              "stat": "ev_ca0dce1e5623a157",
+              "stat": "ev_04fc84fc3890b40c",
               "display": "Pascal Kuiper"
             },
             {
@@ -535,7 +643,7 @@
               "text": "The last of Sparta Rotterdam's regular starters at goalkeeper has a market value of "
             },
             {
-              "stat": "ev_e5d2cdaaf7fec164",
+              "stat": "ev_36b1c6bf0590bb5c",
               "display": "€0.1m"
             },
             {
@@ -553,7 +661,7 @@
               "text": "Sparta Rotterdam's best option for goalkeeper has a market value of "
             },
             {
-              "stat": "ev_4d353d24040a048a",
+              "stat": "ev_f6959c576b14f6d4",
               "display": "€0.1m"
             },
             {
@@ -571,14 +679,14 @@
               "text": "At the squads closest to Sparta Rotterdam in strength, the best option for goalkeeper is typically worth "
             },
             {
-              "stat": "ev_3923119dcf93a701",
+              "stat": "ev_1bdf9eb988dd80b0",
               "display": "€2.8m"
             },
             {
               "text": ". "
             },
             {
-              "stat": "ev_1283635b2dfc67e9",
+              "stat": "ev_3155898b28ae1156",
               "display": "50%"
             },
             {
@@ -596,7 +704,7 @@
               "text": "Dream target: Marios Siampanis (Volou Neos Podosferikos Syllogos), who is "
             },
             {
-              "stat": "ev_5b79686e8a90733f",
+              "stat": "ev_ad6eb7ca2461b7bf",
               "display": "27"
             },
             {
@@ -614,8 +722,152 @@
               "text": "Marios Siampanis plays for "
             },
             {
-              "stat": "ev_e38269533add0254",
+              "stat": "ev_2e68cf0fc558e628",
               "display": "Volou Neos Podosferikos Syllogos"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Marios Siampanis averages "
+            },
+            {
+              "stat": "ev_287e1fee170042c0",
+              "display": "0.00"
+            },
+            {
+              "text": " league goals per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Marios Siampanis averages "
+            },
+            {
+              "stat": "ev_aec1498b5eef3255",
+              "display": "0.00"
+            },
+            {
+              "text": " league assists per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Marios Siampanis has more league goals and assists per full match than "
+            },
+            {
+              "stat": "ev_29cd9e6898249599",
+              "display": "0%"
+            },
+            {
+              "text": " of players at his position in his league."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Marios Siampanis's comparison is within "
+            },
+            {
+              "stat": "ev_7380032a3db190b4",
+              "display": "Super League 1"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Marios Siampanis's stronger foot is his "
+            },
+            {
+              "stat": "ev_929ef6297355b7c5",
+              "display": "left"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Marios Siampanis stands "
+            },
+            {
+              "stat": "ev_ce5c4db5074c7ecd",
+              "display": "188"
+            },
+            {
+              "text": " centimetres tall."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Marios Siampanis has won "
+            },
+            {
+              "stat": "ev_106dfb112f013e3a",
+              "display": "8"
+            },
+            {
+              "text": " international caps."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Marios Siampanis starts at "
+            },
+            {
+              "stat": "ev_995a71db0284f174",
+              "display": "goalkeeper"
             },
             {
               "text": "."
@@ -632,7 +884,7 @@
               "text": "In the matches on record for the past year, Marios Siampanis played "
             },
             {
-              "stat": "ev_74a0edc71a641ac6",
+              "stat": "ev_470e47ec0d27bb2c",
               "display": "1800"
             },
             {
@@ -650,7 +902,7 @@
               "text": "Marios Siampanis has a market value of "
             },
             {
-              "stat": "ev_dcc30f458eb683ee",
+              "stat": "ev_9090b2f9da634274",
               "display": "€0.7m"
             },
             {
@@ -668,7 +920,7 @@
               "text": "Our fair-fee estimate for Marios Siampanis is "
             },
             {
-              "stat": "ev_ee524d836f291111",
+              "stat": "ev_343933d9c3725ede",
               "display": "€0.4m"
             },
             {
@@ -686,8 +938,8 @@
               "text": "We project Marios Siampanis to play "
             },
             {
-              "stat": "ev_74dc23c32f97080d",
-              "display": "57%"
+              "stat": "ev_9499299c4ec5a97f",
+              "display": "56%"
             },
             {
               "text": " of Sparta Rotterdam's minutes."
@@ -704,7 +956,7 @@
               "text": "Dream target: Valentyn Gorokh (NK Veres Rivne), who is "
             },
             {
-              "stat": "ev_5f9e5283badd8f35",
+              "stat": "ev_358e6236e3b5c635",
               "display": "26"
             },
             {
@@ -722,7 +974,7 @@
               "text": "Valentyn Gorokh plays for "
             },
             {
-              "stat": "ev_6033853b45e23a6a",
+              "stat": "ev_f57e7086ee4e5f6b",
               "display": "NK Veres Rivne"
             },
             {
@@ -737,14 +989,14 @@
         {
           "segments": [
             {
-              "text": "In the matches on record for the past year, Valentyn Gorokh played "
+              "text": "Valentyn Gorokh averages "
             },
             {
-              "stat": "ev_493ab0d4b5d67c26",
-              "display": "1620"
+              "stat": "ev_1990554e547679a4",
+              "display": "0.00"
             },
             {
-              "text": " minutes."
+              "text": " league goals per full match."
             }
           ],
           "type": "stat",
@@ -755,11 +1007,47 @@
         {
           "segments": [
             {
-              "text": "Valentyn Gorokh has a market value of "
+              "text": "Valentyn Gorokh averages "
             },
             {
-              "stat": "ev_1a17ab0119d2b2d4",
-              "display": "€0.5m"
+              "stat": "ev_296f4b9e5a38bdbc",
+              "display": "0.00"
+            },
+            {
+              "text": " league assists per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Valentyn Gorokh has more league goals and assists per full match than "
+            },
+            {
+              "stat": "ev_8440e180afd249f1",
+              "display": "0%"
+            },
+            {
+              "text": " of players at his position in his league."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Valentyn Gorokh's comparison is within "
+            },
+            {
+              "stat": "ev_cda01cd85efaaf29",
+              "display": "Premier Liga"
             },
             {
               "text": "."
@@ -773,173 +1061,11 @@
         {
           "segments": [
             {
-              "text": "Our fair-fee estimate for Valentyn Gorokh is "
+              "text": "Valentyn Gorokh's stronger foot is his "
             },
             {
-              "stat": "ev_1199b9e6c32ce76c",
-              "display": "€0.4m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "We project Valentyn Gorokh to play "
-            },
-            {
-              "stat": "ev_fde9ae2127d36491",
-              "display": "49%"
-            },
-            {
-              "text": " of Sparta Rotterdam's minutes."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Sparta Rotterdam's second squad need is "
-            },
-            {
-              "stat": "ev_dd19bf3e3acbb36f",
-              "display": "defensive midfield"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Sparta Rotterdam have "
-            },
-            {
-              "stat": "ev_11b502093b4d0f3a",
-              "display": "1"
-            },
-            {
-              "text": " players for defensive midfield, leaving veterans aside."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "A squad carries "
-            },
-            {
-              "stat": "ev_739826f03c6e8021",
-              "display": "2"
-            },
-            {
-              "text": " players for defensive midfield."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Sparta Rotterdam's best option for defensive midfield is "
-            },
-            {
-              "stat": "ev_3039ec629e0ae395",
-              "display": "Cedric Hatenboer"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "The last of Sparta Rotterdam's regular starters at defensive midfield is "
-            },
-            {
-              "stat": "ev_0c8243d75ebf18c4",
-              "display": "Cedric Hatenboer"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "The last of Sparta Rotterdam's regular starters at defensive midfield has a market value of "
-            },
-            {
-              "stat": "ev_737e44063eb17639",
-              "display": "€2.0m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Sparta Rotterdam's best option for defensive midfield has a market value of "
-            },
-            {
-              "stat": "ev_4ec3d9ca0f7fa439",
-              "display": "€2.0m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "At the squads closest to Sparta Rotterdam in strength, the best option for defensive midfield is typically worth "
-            },
-            {
-              "stat": "ev_723657ce4384e5d0",
-              "display": "€2.5m"
+              "stat": "ev_db236aa7238718e8",
+              "display": "both"
             },
             {
               "text": "."
@@ -956,17 +1082,108 @@
           "text": "Marios Siampanis has [number] months left on his contract.",
           "status": "unverified",
           "reason": "transfer clause: no relevant source found"
-        },
-        {
-          "text": "Valentyn Gorokh has [number] months left on his contract.",
-          "status": "unverified",
-          "reason": "transfer clause: no relevant source found"
         }
       ]
     }
   ],
   "stats": {
-    "ev_01b8713f84e3de21": {
+    "ev_01521b51ce3ed12d": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_02b452b70b2b7380": {
+      "value": 2000000.0,
+      "display": "2000000",
+      "unit": null,
+      "metric": "need_bar_value",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_03d31f8229220277": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_04fc84fc3890b40c": {
+      "value": "Pascal Kuiper",
+      "display": "Pascal Kuiper",
+      "unit": null,
+      "metric": "need_bar_player",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_059b91dfcc65dce9": {
+      "value": 3100000.0,
+      "display": "3100000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpeb52fb6bf6a496",
+      "entity_name": "Marvin Young",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0919a6ba682d9d0a": {
+      "value": 200000.0,
+      "display": "200000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_09d2c9184e3ce5e0": {
       "value": 3000000.0,
       "display": "3000000",
       "unit": null,
@@ -977,124 +1194,204 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_097979ec3118f306": {
-      "value": 400000.0,
-      "display": "400000",
+    "ev_0af832c786d7dfa7": {
+      "value": 1800000.0,
+      "display": "1800000",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "market_value",
       "entity_type": "player",
-      "entity_id": "rp85c48e19107649",
-      "entity_name": "Yuriy-Volodymyr Gereta",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_0c8243d75ebf18c4": {
-      "value": "Cedric Hatenboer",
-      "display": "Cedric Hatenboer",
-      "unit": null,
-      "metric": "need_bar_player",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_0d1a737741638d0b": {
-      "value": 2.0,
-      "display": "2",
+    "ev_0ecc7ec147de4e62": {
+      "value": 8.0,
+      "display": "8",
       "unit": null,
       "metric": "contract_months",
       "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0eed9b0ff3a3380d": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0f155ca314993a4e": {
+      "value": 8.0,
+      "display": "8",
+      "unit": null,
+      "metric": "contract_months",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_106dfb112f013e3a": {
+      "value": 8.0,
+      "display": "8",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_147296ce939d2960": {
+      "value": 400000.0,
+      "display": "400000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_16c2dc53de8b4aa4": {
+      "value": 0.0002,
+      "display": "0.00",
+      "unit": null,
+      "metric": "realism",
+      "entity_type": "player",
       "entity_id": "rp85c48e19107649",
       "entity_name": "Yuriy-Volodymyr Gereta",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_1199b9e6c32ce76c": {
-      "value": 400000.0,
-      "display": "400000",
+    "ev_173f201c3dbb9e23": {
+      "value": 0.6026,
+      "display": "0.60",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:sparta-rotterdam:willem-ii",
+      "entity_name": "Sparta Rotterdam v Willem II",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_180718205e943913": {
+      "value": 0.35,
+      "display": "0.35",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp6325dba21f487f",
+      "entity_name": "Nick Verschuren",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1860555331a6394c": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1990554e547679a4": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "goals_p90",
       "entity_type": "player",
       "entity_id": "rp7f2732d9afb9a3",
       "entity_name": "Valentyn Gorokh",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_11b502093b4d0f3a": {
-      "value": 1.0,
-      "display": "1",
+    "ev_1a596b8dcb69bd57": {
+      "value": 0.0,
+      "display": "0",
       "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_1283635b2dfc67e9": {
-      "value": 0.5,
-      "display": "0.50",
-      "unit": null,
-      "metric": "need_ageing_share",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_16005c3800a62210": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_183bff05c42074e2": {
+    "ev_1bb7ac2d5a161a76": {
       "value": "Rukh Lviv",
       "display": "Rukh Lviv",
       "unit": null,
@@ -1105,124 +1402,12 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_1a17ab0119d2b2d4": {
-      "value": 500000.0,
-      "display": "500000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp7f2732d9afb9a3",
-      "entity_name": "Valentyn Gorokh",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_20794dc4c69d160c": {
-      "value": 0.106,
-      "display": "0.11",
-      "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rp6c230444508112",
-      "entity_name": "Ayoni Santos",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2716b5cd8c0a1ce6": {
-      "value": 22.7,
-      "display": "22.70",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp85c48e19107649",
-      "entity_name": "Yuriy-Volodymyr Gereta",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2cb044780709a225": {
-      "value": 3000000.0,
-      "display": "3000000",
-      "unit": "EUR",
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rpbc9d48bc622d99",
-      "entity_name": "Lushendry Martes",
-      "source": "transfermarkt_datasets",
-      "source_url": "https://github.com/dcaribou/transfermarkt-datasets",
-      "source_tier": 3,
-      "fetched_at": "2026-05-28T00:00:00+00:00",
-      "query_kind": "sql",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_2d6d6bc3361f6a83": {
-      "value": 1620.0,
-      "display": "1620",
-      "unit": null,
-      "metric": "minutes_last_year",
-      "entity_type": "player",
-      "entity_id": "rp17bd4d3a568853",
-      "entity_name": "Oleg Bilyk",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_3039ec629e0ae395": {
-      "value": "Cedric Hatenboer",
-      "display": "Cedric Hatenboer",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_31c167f25d08daf8": {
-      "value": 20.0,
-      "display": "20",
-      "unit": null,
-      "metric": "contract_months",
-      "entity_type": "player",
-      "entity_id": "rp7f2732d9afb9a3",
-      "entity_name": "Valentyn Gorokh",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_3923119dcf93a701": {
+    "ev_1bdf9eb988dd80b0": {
       "value": 2750000.0,
       "display": "2750000",
       "unit": null,
@@ -1233,39 +1418,519 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_3f62a7d45321a2e2": {
-      "value": 20.2,
-      "display": "20.20",
+    "ev_1c3087ca01ba4acb": {
+      "value": 0.24,
+      "display": "0.24",
+      "unit": null,
+      "metric": "need_bar_ga_p90",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1c3acc70681beb6f": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1c9e41ef0f8d061c": {
+      "value": 1733.0,
+      "display": "1733",
+      "unit": null,
+      "metric": "minutes_last_year",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1d3df9f13d69a4cd": {
+      "value": 7.0,
+      "display": "7",
+      "unit": null,
+      "metric": "contract_months",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1efeeb60c6812af1": {
+      "value": 1421.0,
+      "display": "1421",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1f012150d34afe0a": {
+      "value": "Premier Liga",
+      "display": "Premier Liga",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_20d27cc324faf46a": {
+      "value": 22.5,
+      "display": "22.50",
       "unit": null,
       "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_25c2951d543dad91": {
+      "value": 0.62,
+      "display": "0.62",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_26cf0f6794b36a71": {
+      "value": 0.437,
+      "display": "0.44",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_287e1fee170042c0": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_296f4b9e5a38bdbc": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_29cd9e6898249599": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2b34434f5eb1eef3": {
+      "value": "central midfield, defensive midfield",
+      "display": "central midfield, defensive midfield",
+      "unit": null,
+      "metric": "positions_played",
       "entity_type": "player",
       "entity_id": "rp0cff6c956a5d58",
       "entity_name": "Justin Janssen",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_3fd558962382a310": {
-      "value": 0.232,
-      "display": "0.23",
+    "ev_2b66c1ca03c4725c": {
+      "value": "Scottish Premiership",
+      "display": "Scottish Premiership",
       "unit": null,
-      "metric": "sale_likelihood",
+      "metric": "ga_league",
       "entity_type": "player",
-      "entity_id": "rp68531e98390dee",
-      "entity_name": "Shunsuke Mito",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2d915d9784dc5a8c": {
+      "value": 900000.0,
+      "display": "900000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2e68cf0fc558e628": {
+      "value": "Volou Neos Podosferikos Syllogos",
+      "display": "Volou Neos Podosferikos Syllogos",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2f1eeb4514117689": {
+      "value": 2500000.0,
+      "display": "2500000",
+      "unit": null,
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2f863c911fefdf8c": {
+      "value": "central midfield, defensive midfield",
+      "display": "central midfield, defensive midfield",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2f8ade3ec45b8872": {
+      "value": 8.0,
+      "display": "8",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_30be4db481b2a8ba": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3155898b28ae1156": {
+      "value": 0.5,
+      "display": "0.50",
+      "unit": null,
+      "metric": "need_ageing_share",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_343933d9c3725ede": {
+      "value": 400000.0,
+      "display": "400000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3527886b1144f85f": {
+      "value": 0.725,
+      "display": "0.72",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_358e6236e3b5c635": {
+      "value": 25.7,
+      "display": "25.70",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_36b1c6bf0590bb5c": {
+      "value": 75000.0,
+      "display": "75000",
+      "unit": null,
+      "metric": "need_bar_value",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_395cc4fbc97b57bc": {
+      "value": 0.1626,
+      "display": "0.16",
+      "unit": null,
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:sparta-rotterdam:willem-ii",
+      "entity_name": "Sparta Rotterdam v Willem II",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_398d330a58c36bf0": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3b75c4286eef0edf": {
+      "value": 181.0,
+      "display": "181",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3ce8871091599dc2": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3d7e38401a24f981": {
+      "value": "Eredivisie",
+      "display": "Eredivisie",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_424f9f0bf21610cd": {
+      "value": "central midfield, defensive midfield",
+      "display": "central midfield, defensive midfield",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_42ed0780c105b22c": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1286,6 +1951,38 @@
       "status": "single_source",
       "cross_checks": []
     },
+    "ev_462d12fa84550619": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_470e47ec0d27bb2c": {
+      "value": 1800.0,
+      "display": "1800",
+      "unit": null,
+      "metric": "minutes_last_year",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
     "ev_47a3b96507ffb97b": {
       "value": 14.0,
       "display": "14",
@@ -1302,50 +1999,162 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_493ab0d4b5d67c26": {
-      "value": 1620.0,
-      "display": "1620",
+    "ev_47bb08ccd354d07e": {
+      "value": 400000.0,
+      "display": "400000",
       "unit": null,
-      "metric": "minutes_last_year",
+      "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rp7f2732d9afb9a3",
-      "entity_name": "Valentyn Gorokh",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_4d353d24040a048a": {
-      "value": 75000.0,
-      "display": "75000",
+    "ev_47dc18a4068ecaea": {
+      "value": "right",
+      "display": "right",
       "unit": null,
-      "metric": "need_best_value",
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_48572ea19335c49d": {
+      "value": 23.6,
+      "display": "23.60",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4a19546e69f0385d": {
+      "value": 0.267,
+      "display": "0.27",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp68531e98390dee",
+      "entity_name": "Shunsuke Mito",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4b0e963e0757b5d1": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "contract_months",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4b270dfa67b499f7": {
+      "value": 28.8,
+      "display": "28.80",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4c3c7563f12276a3": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4d3590c6ef6ac211": {
+      "value": "central midfield, defensive midfield",
+      "display": "central midfield, defensive midfield",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4e29cd0ef75df9a4": {
+      "value": "Cedric Hatenboer",
+      "display": "Cedric Hatenboer",
+      "unit": null,
+      "metric": "need_bar_player",
       "entity_type": "club",
       "entity_id": "sparta-rotterdam",
       "entity_name": "Sparta Rotterdam",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_4ec3d9ca0f7fa439": {
-      "value": 2000000.0,
-      "display": "2000000",
+    "ev_4f20f543220c8b16": {
+      "value": "Fortuna Sittardia Combinatie",
+      "display": "Fortuna Sittardia Combinatie",
       "unit": null,
-      "metric": "need_best_value",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1366,66 +2175,210 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_532f72b20ffc6df5": {
-      "value": 200000.0,
-      "display": "200000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp17bd4d3a568853",
-      "entity_name": "Oleg Bilyk",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5b79686e8a90733f": {
-      "value": 27.1,
-      "display": "27.10",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rpaef87c67031969",
-      "entity_name": "Marios Siampanis",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5f9e5283badd8f35": {
-      "value": 25.7,
-      "display": "25.70",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp7f2732d9afb9a3",
-      "entity_name": "Valentyn Gorokh",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6033853b45e23a6a": {
-      "value": "NK Veres Rivne",
-      "display": "NK Veres Rivne",
+    "ev_508abab69daf9a3b": {
+      "value": "FC Groningen",
+      "display": "FC Groningen",
       "unit": null,
       "metric": "candidate_club",
       "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5178d37a426b4a62": {
+      "value": 181.0,
+      "display": "181",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp0cff6c956a5d58",
+      "entity_name": "Justin Janssen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_53ba7a8d38a6ebb2": {
+      "value": 22.7,
+      "display": "22.70",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5626046856d2b75b": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
       "entity_id": "rp7f2732d9afb9a3",
       "entity_name": "Valentyn Gorokh",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5739a0af72959daf": {
+      "value": 0.442,
+      "display": "0.44",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_584f497f00818046": {
+      "value": 0.54,
+      "display": "0.54",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_598d22f5f1005657": {
+      "value": 13.0,
+      "display": "13",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp0cff6c956a5d58",
+      "entity_name": "Justin Janssen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_599c6a48a25a838c": {
+      "value": 5.0,
+      "display": "5",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5d47a5ef9ab16655": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_63919b4dc758f4dd": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_63b60bac93b65f33": {
+      "value": 600000.0,
+      "display": "600000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_64a43e5576027735": {
+      "value": 26.1,
+      "display": "26.10",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_656472ff800c03c4": {
+      "value": 4400000.0,
+      "display": "4400000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp0f1e3af18d1617",
+      "entity_name": "Andrej Kostić",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1446,167 +2399,135 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_723657ce4384e5d0": {
-      "value": 2500000.0,
-      "display": "2500000",
+    "ev_66c22c0c08461a40": {
+      "value": 0.0,
+      "display": "0",
       "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_737e44063eb17639": {
-      "value": 2000000.0,
-      "display": "2000000",
-      "unit": null,
-      "metric": "need_bar_value",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_739826f03c6e8021": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7485463600372366": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_74a0edc71a641ac6": {
-      "value": 1800.0,
-      "display": "1800",
-      "unit": null,
-      "metric": "minutes_last_year",
-      "entity_type": "player",
-      "entity_id": "rpaef87c67031969",
-      "entity_name": "Marios Siampanis",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_74dc23c32f97080d": {
-      "value": 0.568,
-      "display": "0.57",
-      "unit": null,
-      "metric": "expected_minutes_share",
-      "entity_type": "player",
-      "entity_id": "rpaef87c67031969",
-      "entity_name": "Marios Siampanis",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_805214138769839e": {
-      "value": 1620.0,
-      "display": "1620",
-      "unit": null,
-      "metric": "minutes_last_year",
-      "entity_type": "player",
-      "entity_id": "rp85c48e19107649",
-      "entity_name": "Yuriy-Volodymyr Gereta",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8257a296fa3d3e65": {
-      "value": "goalkeeper",
-      "display": "goalkeeper",
-      "unit": null,
-      "metric": "need",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_84f802175549b2ba": {
-      "value": "Pascal Kuiper",
-      "display": "Pascal Kuiper",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_87478bd417581d73": {
-      "value": 0.62,
-      "display": "0.62",
-      "unit": null,
-      "metric": "expected_minutes_share",
+      "metric": "goals_p90",
       "entity_type": "player",
       "entity_id": "rp17bd4d3a568853",
       "entity_name": "Oleg Bilyk",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_90294f0017bdb477": {
+    "ev_66cec3bd723540f6": {
+      "value": 0.486,
+      "display": "0.49",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_67477da83a1dcabd": {
+      "value": "Epicentr Kamyanets-Podilskyi",
+      "display": "Epicentr Kamyanets-Podilskyi",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_69bc5bda1b5b24e1": {
+      "value": "FC Nordsjaelland",
+      "display": "FC Nordsjaelland",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp0cff6c956a5d58",
+      "entity_name": "Justin Janssen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_70edc01bd9aee925": {
+      "value": 0.202,
+      "display": "0.20",
+      "unit": null,
+      "metric": "p_sold",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7380032a3db190b4": {
+      "value": "Super League 1",
+      "display": "Super League 1",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_77061847b081e3da": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7869265e83c8132a": {
+      "value": 500000.0,
+      "display": "500000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7f047a924ebf8973": {
       "value": "2026-10-17T19:00:00+00:00",
       "display": "2026-10-17T19:00:00+00:00",
       "unit": null,
@@ -1614,12 +2535,156 @@
       "entity_type": "match",
       "entity_id": "eredivisie:2026-27:sparta-rotterdam:willem-ii",
       "entity_name": "Sparta Rotterdam v Willem II",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/DED/matches",
-      "source_tier": 2,
-      "fetched_at": "2026-10-17T17:00:33.087439+00:00",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
-      "status": "single_source",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7f82eb487910bc9c": {
+      "value": 20.2,
+      "display": "20.20",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp0cff6c956a5d58",
+      "entity_name": "Justin Janssen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_834fdf51d46cdadc": {
+      "value": 0.06,
+      "display": "0.06",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_8440e180afd249f1": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_864b2908ae2c2686": {
+      "value": 8.0,
+      "display": "8",
+      "unit": null,
+      "metric": "contract_months",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_892657d7b980c959": {
+      "value": "Dundee United FC",
+      "display": "Dundee United FC",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_8aa3f7f0c04eb4b2": {
+      "value": 0.46,
+      "display": "0.46",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_8dd3c78aa3ec887b": {
+      "value": 0.2348,
+      "display": "0.23",
+      "unit": null,
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:sparta-rotterdam:willem-ii",
+      "entity_name": "Sparta Rotterdam v Willem II",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_8e88d85a6d5fbda1": {
+      "value": "Eredivisie",
+      "display": "Eredivisie",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9090b2f9da634274": {
+      "value": 700000.0,
+      "display": "700000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
       "cross_checks": []
     },
     "ev_928271cc4c4ea826": {
@@ -1638,6 +2703,134 @@
       "status": "single_source",
       "cross_checks": []
     },
+    "ev_929ef6297355b7c5": {
+      "value": "left",
+      "display": "left",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_933c3108ae7946b0": {
+      "value": 0.4,
+      "display": "0.40",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9499299c4ec5a97f": {
+      "value": 0.565,
+      "display": "0.56",
+      "unit": null,
+      "metric": "expected_minutes_share",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_94ac0cf2b46ce2ea": {
+      "value": "Pascal Kuiper",
+      "display": "Pascal Kuiper",
+      "unit": null,
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_973061591fef90ef": {
+      "value": 28.8,
+      "display": "28.80",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_995a71db0284f174": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_995c313360cefbd4": {
+      "value": 1620.0,
+      "display": "1620",
+      "unit": null,
+      "metric": "minutes_last_year",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9a03bd125001297e": {
+      "value": 1286.6,
+      "display": "1286.60",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "willem-ii",
+      "entity_name": "Willem II",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
     "ev_9a58496372892d0a": {
       "value": 5000000.0,
       "display": "5000000",
@@ -1654,98 +2847,274 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_a16dc9b6ddf6c718": {
-      "value": 0.524,
-      "display": "0.52",
-      "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rpeb52fb6bf6a496",
-      "entity_name": "Marvin Young",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a1e4893c112b5d6a": {
-      "value": 0.316,
-      "display": "0.32",
-      "unit": null,
-      "metric": "p_sold",
-      "entity_type": "player",
-      "entity_id": "rp85c48e19107649",
-      "entity_name": "Yuriy-Volodymyr Gereta",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a2f61661e7aa1cc0": {
-      "value": 400000.0,
-      "display": "400000",
+    "ev_9aefa2688439b910": {
+      "value": 1600000.0,
+      "display": "1600000",
       "unit": null,
       "metric": "market_value",
       "entity_type": "player",
-      "entity_id": "rp85c48e19107649",
-      "entity_name": "Yuriy-Volodymyr Gereta",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_aa8f40f76a578573": {
-      "value": 0.0004,
-      "display": "0.00",
+    "ev_9b034db91dc50d17": {
+      "value": "SC Telstar",
+      "display": "SC Telstar",
       "unit": null,
-      "metric": "realism",
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9b37ccd99c906bc3": {
+      "value": "Cedric Hatenboer",
+      "display": "Cedric Hatenboer",
+      "unit": null,
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9bdc6ebf4649f2d9": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9cd2c1f1d25da1c4": {
+      "value": 191.0,
+      "display": "191",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9cf33ed94b23bd2e": {
+      "value": 187.0,
+      "display": "187",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9d29730e23809590": {
+      "value": 1620.0,
+      "display": "1620",
+      "unit": null,
+      "metric": "minutes_last_year",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a03d76ec3d6d91e0": {
+      "value": 189.0,
+      "display": "189",
+      "unit": null,
+      "metric": "height_cm",
       "entity_type": "player",
       "entity_id": "rp85c48e19107649",
       "entity_name": "Yuriy-Volodymyr Gereta",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_accc8526eaba09f7": {
-      "value": 8.0,
-      "display": "8",
+    "ev_a1be6467a8b1fda3": {
+      "value": 2053.0,
+      "display": "2053",
       "unit": null,
-      "metric": "contract_months",
+      "metric": "minutes_last_year",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a4effdf8959e7efc": {
+      "value": 600000.0,
+      "display": "600000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpa50224c2aeaf95",
+      "entity_name": "Teo Quintero",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a5e59f06688f1132": {
+      "value": 0.29,
+      "display": "0.29",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a740594d48157c2b": {
+      "value": 187.0,
+      "display": "187",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_aa4f14818a794b08": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ab9512aa3c82e3f1": {
+      "value": "FCV Dender EH",
+      "display": "FCV Dender EH",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ac08ba50a6a95e78": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ad6eb7ca2461b7bf": {
+      "value": 27.1,
+      "display": "27.10",
+      "unit": null,
+      "metric": "age",
       "entity_type": "player",
       "entity_id": "rpaef87c67031969",
       "entity_name": "Marios Siampanis",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_add1eaf06d8c24ea": {
-      "value": 3200000.0,
-      "display": "3200000",
+    "ev_aec1498b5eef3255": {
+      "value": 0.0,
+      "display": "0",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "assists_p90",
       "entity_type": "player",
-      "entity_id": "rpeb52fb6bf6a496",
-      "entity_name": "Marvin Young",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1766,82 +3135,402 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_af9ce3fb509d3084": {
-      "value": 2800000.0,
-      "display": "2800000",
+    "ev_af7dcf2229cd8106": {
+      "value": 0.13,
+      "display": "0.13",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "goals_p90",
       "entity_type": "player",
-      "entity_id": "rpbc9d48bc622d99",
-      "entity_name": "Lushendry Martes",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_bede77582090a061": {
-      "value": 8.0,
-      "display": "8",
-      "unit": null,
-      "metric": "contract_months",
-      "entity_type": "player",
-      "entity_id": "rp17bd4d3a568853",
-      "entity_name": "Oleg Bilyk",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c04c76085502b52f": {
+    "ev_afbd60f3b4e46ddd": {
+      "value": 183.0,
+      "display": "183",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b0d5d2f923bed18d": {
       "value": 400000.0,
       "display": "400000",
       "unit": null,
-      "metric": "market_value",
+      "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rp17bd4d3a568853",
-      "entity_name": "Oleg Bilyk",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c1bef435919ed4b8": {
-      "value": 28.8,
-      "display": "28.80",
+    "ev_b1ce51868a08489f": {
+      "value": "Eredivisie",
+      "display": "Eredivisie",
       "unit": null,
-      "metric": "age",
+      "metric": "ga_league",
       "entity_type": "player",
-      "entity_id": "rp17bd4d3a568853",
-      "entity_name": "Oleg Bilyk",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_ca0dce1e5623a157": {
-      "value": "Pascal Kuiper",
-      "display": "Pascal Kuiper",
+    "ev_b3258fecdb2c145f": {
+      "value": 600000.0,
+      "display": "600000",
       "unit": null,
-      "metric": "need_bar_player",
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b77b5ae3925d053a": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b7999c060fed200e": {
+      "value": 2100000.0,
+      "display": "2100000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bb98fbd45c36ee6e": {
+      "value": 1620.0,
+      "display": "1620",
+      "unit": null,
+      "metric": "minutes_last_year",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bbdfe0e745efa0de": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
+      "unit": null,
+      "metric": "need",
       "entity_type": "club",
       "entity_id": "sparta-rotterdam",
       "entity_name": "Sparta Rotterdam",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bc6972d66c15f37c": {
+      "value": 700000.0,
+      "display": "700000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_be1618de867c1adf": {
+      "value": 2000000.0,
+      "display": "2000000",
+      "unit": null,
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c0a0162d6704262f": {
+      "value": "central midfield, defensive midfield",
+      "display": "central midfield, defensive midfield",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c110b53939e28615": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c4eef73876c6bf1d": {
+      "value": 300000.0,
+      "display": "300000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c54e334dfc47ef45": {
+      "value": 400000.0,
+      "display": "400000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c5c3d75622e4aea1": {
+      "value": 1311.0,
+      "display": "1311",
+      "unit": null,
+      "metric": "minutes_last_year",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c5dcc63f6bc5aab8": {
+      "value": 0.626,
+      "display": "0.63",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rpeb52fb6bf6a496",
+      "entity_name": "Marvin Young",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c72ff321a99b398d": {
+      "value": 1.0,
+      "display": "1",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cb20500d2df7ca32": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cda01cd85efaaf29": {
+      "value": "Premier Liga",
+      "display": "Premier Liga",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ce095970ceabf937": {
+      "value": 0.06,
+      "display": "0.06",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ce5c4db5074c7ecd": {
+      "value": 188.0,
+      "display": "188",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpaef87c67031969",
+      "entity_name": "Marios Siampanis",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d047f776142d21d7": {
+      "value": 0.27,
+      "display": "0.27",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d1fa06909d2f8c44": {
+      "value": "Premier Liga",
+      "display": "Premier Liga",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d28d60d66dcd41d2": {
+      "value": 182.0,
+      "display": "182",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1862,119 +3551,7 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_daa3259788eb5c98": {
-      "value": 4500000.0,
-      "display": "4500000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp0f1e3af18d1617",
-      "entity_name": "Andrej Kostić",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_dcc30f458eb683ee": {
-      "value": 700000.0,
-      "display": "700000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rpaef87c67031969",
-      "entity_name": "Marios Siampanis",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_dd19bf3e3acbb36f": {
-      "value": "defensive midfield",
-      "display": "defensive midfield",
-      "unit": null,
-      "metric": "need",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e1c099af86fc7432": {
-      "value": 700000.0,
-      "display": "700000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp7eff52dd59216e",
-      "entity_name": "Nils Rossen",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e38269533add0254": {
-      "value": "Volou Neos Podosferikos Syllogos",
-      "display": "Volou Neos Podosferikos Syllogos",
-      "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rpaef87c67031969",
-      "entity_name": "Marios Siampanis",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e5d2cdaaf7fec164": {
-      "value": 75000.0,
-      "display": "75000",
-      "unit": null,
-      "metric": "need_bar_value",
-      "entity_type": "club",
-      "entity_id": "sparta-rotterdam",
-      "entity_name": "Sparta Rotterdam",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_ee524d836f291111": {
-      "value": 400000.0,
-      "display": "400000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpaef87c67031969",
-      "entity_name": "Marios Siampanis",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_f66f5667ea0e3baf": {
+    "ev_d4420058fc22f207": {
       "value": 22.2,
       "display": "22.20",
       "unit": null,
@@ -1985,39 +3562,343 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_fb8f7b555f42ae89": {
-      "value": "Epicentr Kamyanets-Podilskyi",
-      "display": "Epicentr Kamyanets-Podilskyi",
+    "ev_d7abc368b46ef17e": {
+      "value": 0.601,
+      "display": "0.60",
       "unit": null,
-      "metric": "candidate_club",
+      "metric": "minutes_share_now",
       "entity_type": "player",
-      "entity_id": "rp17bd4d3a568853",
-      "entity_name": "Oleg Bilyk",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_fde9ae2127d36491": {
-      "value": 0.486,
-      "display": "0.49",
+    "ev_d8acae2b1e998aa3": {
+      "value": "left",
+      "display": "left",
       "unit": null,
-      "metric": "expected_minutes_share",
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp0cff6c956a5d58",
+      "entity_name": "Justin Janssen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_db236aa7238718e8": {
+      "value": "both",
+      "display": "both",
+      "unit": null,
+      "metric": "foot",
       "entity_type": "player",
       "entity_id": "rp7f2732d9afb9a3",
       "entity_name": "Valentyn Gorokh",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-17T17:04:45.633930+00:00",
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_dbafd09867006bee": {
+      "value": 650000.0,
+      "display": "650000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpe5b5527f3c176e",
+      "entity_name": "Vicko Sevelj",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_dec8383ac4c19144": {
+      "value": 1300000.0,
+      "display": "1300000",
+      "unit": "EUR",
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpa50224c2aeaf95",
+      "entity_name": "Teo Quintero",
+      "source": "transfermarkt_datasets",
+      "source_url": "https://github.com/dcaribou/transfermarkt-datasets",
+      "source_tier": 3,
+      "fetched_at": "2026-05-28T00:00:00+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_df16fbefe98fd742": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e09ffb61c2d19ad2": {
+      "value": 1500000.0,
+      "display": "1500000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp0cff6c956a5d58",
+      "entity_name": "Justin Janssen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e4320e3cc180408f": {
+      "value": 0.11,
+      "display": "0.11",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rp7eff52dd59216e",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e6771c33895a698e": {
+      "value": 400000.0,
+      "display": "400000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp85c48e19107649",
+      "entity_name": "Yuriy-Volodymyr Gereta",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e8e1f4e2b42cbeee": {
+      "value": 1000000.0,
+      "display": "1000000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_eb68bcb03e892d30": {
+      "value": 1800000.0,
+      "display": "1800000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ee7fadf533b9680f": {
+      "value": 20.0,
+      "display": "20",
+      "unit": null,
+      "metric": "contract_months",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f199678e70dc1a05": {
+      "value": 8.0,
+      "display": "8",
+      "unit": null,
+      "metric": "contract_months",
+      "entity_type": "player",
+      "entity_id": "rp9bbc239c7a8518",
+      "entity_name": "Nathan Rôdes",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f50b34cbfedfbfac": {
+      "value": 0.06,
+      "display": "0.06",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f57e7086ee4e5f6b": {
+      "value": "NK Veres Rivne",
+      "display": "NK Veres Rivne",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp7f2732d9afb9a3",
+      "entity_name": "Valentyn Gorokh",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f6959c576b14f6d4": {
+      "value": 75000.0,
+      "display": "75000",
+      "unit": null,
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "sparta-rotterdam",
+      "entity_name": "Sparta Rotterdam",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f7d9bd70a616aa66": {
+      "value": 0.693,
+      "display": "0.69",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp0cff6c956a5d58",
+      "entity_name": "Justin Janssen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fc746c6bef70294a": {
+      "value": 1600000.0,
+      "display": "1600000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp0cff6c956a5d58",
+      "entity_name": "Justin Janssen",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fccdd2f0fe2ed7a5": {
+      "value": 0.1,
+      "display": "0.10",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpe8b2ffb9ef25bc",
+      "entity_name": "Philip Brittijn",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fce0e234f2035ca1": {
+      "value": 183.0,
+      "display": "183",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp567a3202843d0c",
+      "entity_name": "Tika de Jonge",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fd84767c5dec72e8": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp17bd4d3a568853",
+      "entity_name": "Oleg Bilyk",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-17T18:38:50.173083+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2056,6 +3937,12 @@
         "subject": "Sparta Rotterdam"
       },
       {
+        "stat": "ev_1efeeb60c6812af1",
+        "display": "1421",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Sparta Rotterdam"
+      },
+      {
         "stat": "ev_50465cd5945a90b1",
         "display": "1 July 2026",
         "label": "appointed head coach of Sparta Rotterdam",
@@ -2064,32 +3951,62 @@
     ],
     "match": [
       {
-        "stat": "ev_90294f0017bdb477",
+        "stat": "ev_7f047a924ebf8973",
         "display": "17 October 2026",
         "label": "kick-off date",
         "subject": "Sparta Rotterdam v Willem II"
+      },
+      {
+        "stat": "ev_173f201c3dbb9e23",
+        "display": "60%",
+        "label": "probability Sparta Rotterdam win",
+        "subject": "Sparta Rotterdam"
+      },
+      {
+        "stat": "ev_8dd3c78aa3ec887b",
+        "display": "23%",
+        "label": "probability of a draw",
+        "subject": "Sparta Rotterdam v Willem II"
+      },
+      {
+        "stat": "ev_395cc4fbc97b57bc",
+        "display": "16%",
+        "label": "probability Willem II win",
+        "subject": "Willem II"
+      },
+      {
+        "stat": "ev_1efeeb60c6812af1",
+        "display": "1421",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Sparta Rotterdam"
+      },
+      {
+        "stat": "ev_9a03bd125001297e",
+        "display": "1287",
+        "label": "Elo rating (dugout's own)",
+        "subject": "Willem II"
       }
     ],
     "lineup": [],
     "news": [],
     "transfer": [
       {
-        "stat": "ev_a16dc9b6ddf6c718",
-        "display": "52%",
+        "stat": "ev_c5dcc63f6bc5aab8",
+        "display": "63%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Marvin Young"
       },
       {
-        "stat": "ev_3fd558962382a310",
-        "display": "23%",
+        "stat": "ev_180718205e943913",
+        "display": "35%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
-        "subject": "Shunsuke Mito"
+        "subject": "Nick Verschuren"
       },
       {
-        "stat": "ev_20794dc4c69d160c",
-        "display": "11%",
+        "stat": "ev_4a19546e69f0385d",
+        "display": "27%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
-        "subject": "Ayoni Santos"
+        "subject": "Shunsuke Mito"
       },
       {
         "stat": "ev_9a58496372892d0a",
@@ -2098,10 +4015,22 @@
         "subject": "Marvin Young"
       },
       {
-        "stat": "ev_add1eaf06d8c24ea",
-        "display": "€3.2m",
+        "stat": "ev_059b91dfcc65dce9",
+        "display": "€3.1m",
         "label": "estimated fair fee if sold to another Eredivisie club",
         "subject": "Marvin Young"
+      },
+      {
+        "stat": "ev_dec8383ac4c19144",
+        "display": "€1.3m",
+        "label": "market value (Transfermarkt, as of May 2026)",
+        "subject": "Teo Quintero"
+      },
+      {
+        "stat": "ev_a4effdf8959e7efc",
+        "display": "€0.6m",
+        "label": "estimated fair fee if sold to another Eredivisie club",
+        "subject": "Teo Quintero"
       },
       {
         "stat": "ev_d39b71406ab0f0ce",
@@ -2110,336 +4039,954 @@
         "subject": "Andrej Kostić"
       },
       {
-        "stat": "ev_daa3259788eb5c98",
-        "display": "€4.5m",
+        "stat": "ev_656472ff800c03c4",
+        "display": "€4.4m",
         "label": "estimated fair fee if sold to another Eredivisie club",
         "subject": "Andrej Kostić"
-      },
-      {
-        "stat": "ev_2cb044780709a225",
-        "display": "€3.0m",
-        "label": "market value (Transfermarkt, as of May 2026)",
-        "subject": "Lushendry Martes"
-      },
-      {
-        "stat": "ev_af9ce3fb509d3084",
-        "display": "€2.8m",
-        "label": "estimated fair fee if sold to another Eredivisie club",
-        "subject": "Lushendry Martes"
       }
     ],
     "scout": [
       {
-        "stat": "ev_8257a296fa3d3e65",
+        "stat": "ev_bbdfe0e745efa0de",
         "display": "goalkeeper",
         "label": "squad need, priority one",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_16005c3800a62210",
+        "stat": "ev_462d12fa84550619",
         "display": "2",
         "label": "players for the position, veterans aside (need one)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_7485463600372366",
+        "stat": "ev_df16fbefe98fd742",
         "display": "2",
         "label": "players a squad carries there (need one)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_84f802175549b2ba",
+        "stat": "ev_94ac0cf2b46ce2ea",
         "display": "Pascal Kuiper",
         "label": "best option there (need one)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_ca0dce1e5623a157",
+        "stat": "ev_04fc84fc3890b40c",
         "display": "Pascal Kuiper",
         "label": "last regular starter there (need one)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_e5d2cdaaf7fec164",
+        "stat": "ev_36b1c6bf0590bb5c",
         "display": "€0.1m",
         "label": "last regular starter's market value (need one)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_4d353d24040a048a",
+        "stat": "ev_f6959c576b14f6d4",
         "display": "€0.1m",
         "label": "best option's market value (need one)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_3923119dcf93a701",
+        "stat": "ev_1bdf9eb988dd80b0",
         "display": "€2.8m",
         "label": "similar squads' best option's market value (need one)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_1283635b2dfc67e9",
+        "stat": "ev_3155898b28ae1156",
         "display": "50%",
         "label": "share of the options who are veterans (need one)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_5b79686e8a90733f",
+        "stat": "ev_ad6eb7ca2461b7bf",
         "display": "27",
         "label": "age (best target)",
         "subject": "Marios Siampanis"
       },
       {
-        "stat": "ev_e38269533add0254",
+        "stat": "ev_2e68cf0fc558e628",
         "display": "Volou Neos Podosferikos Syllogos",
         "label": "current club",
         "subject": "Marios Siampanis"
       },
       {
-        "stat": "ev_74a0edc71a641ac6",
+        "stat": "ev_287e1fee170042c0",
+        "display": "0.00",
+        "label": "league goals per full match",
+        "subject": "Marios Siampanis"
+      },
+      {
+        "stat": "ev_aec1498b5eef3255",
+        "display": "0.00",
+        "label": "league assists per full match",
+        "subject": "Marios Siampanis"
+      },
+      {
+        "stat": "ev_29cd9e6898249599",
+        "display": "0%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Marios Siampanis"
+      },
+      {
+        "stat": "ev_7380032a3db190b4",
+        "display": "Super League 1",
+        "label": "league of that comparison",
+        "subject": "Marios Siampanis"
+      },
+      {
+        "stat": "ev_929ef6297355b7c5",
+        "display": "left",
+        "label": "stronger foot",
+        "subject": "Marios Siampanis"
+      },
+      {
+        "stat": "ev_ce5c4db5074c7ecd",
+        "display": "188",
+        "label": "height in centimetres",
+        "subject": "Marios Siampanis"
+      },
+      {
+        "stat": "ev_106dfb112f013e3a",
+        "display": "8",
+        "label": "international caps",
+        "subject": "Marios Siampanis"
+      },
+      {
+        "stat": "ev_995a71db0284f174",
+        "display": "goalkeeper",
+        "label": "positions he starts at",
+        "subject": "Marios Siampanis"
+      },
+      {
+        "stat": "ev_470e47ec0d27bb2c",
         "display": "1800",
         "label": "minutes played in the past year's matches on record",
         "subject": "Marios Siampanis"
       },
       {
-        "stat": "ev_accc8526eaba09f7",
+        "stat": "ev_864b2908ae2c2686",
         "display": "8",
         "label": "months left on his contract",
         "subject": "Marios Siampanis"
       },
       {
-        "stat": "ev_dcc30f458eb683ee",
+        "stat": "ev_9090b2f9da634274",
         "display": "€0.7m",
         "label": "market value",
         "subject": "Marios Siampanis"
       },
       {
-        "stat": "ev_ee524d836f291111",
+        "stat": "ev_343933d9c3725ede",
         "display": "€0.4m",
         "label": "estimated fair fee",
         "subject": "Marios Siampanis"
       },
       {
-        "stat": "ev_74dc23c32f97080d",
-        "display": "57%",
+        "stat": "ev_9499299c4ec5a97f",
+        "display": "56%",
         "label": "expected share of minutes at the club",
         "subject": "Marios Siampanis"
       },
       {
-        "stat": "ev_5f9e5283badd8f35",
+        "stat": "ev_358e6236e3b5c635",
         "display": "26",
         "label": "age (best target)",
         "subject": "Valentyn Gorokh"
       },
       {
-        "stat": "ev_6033853b45e23a6a",
+        "stat": "ev_f57e7086ee4e5f6b",
         "display": "NK Veres Rivne",
         "label": "current club",
         "subject": "Valentyn Gorokh"
       },
       {
-        "stat": "ev_493ab0d4b5d67c26",
+        "stat": "ev_1990554e547679a4",
+        "display": "0.00",
+        "label": "league goals per full match",
+        "subject": "Valentyn Gorokh"
+      },
+      {
+        "stat": "ev_296f4b9e5a38bdbc",
+        "display": "0.00",
+        "label": "league assists per full match",
+        "subject": "Valentyn Gorokh"
+      },
+      {
+        "stat": "ev_8440e180afd249f1",
+        "display": "0%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Valentyn Gorokh"
+      },
+      {
+        "stat": "ev_cda01cd85efaaf29",
+        "display": "Premier Liga",
+        "label": "league of that comparison",
+        "subject": "Valentyn Gorokh"
+      },
+      {
+        "stat": "ev_db236aa7238718e8",
+        "display": "both",
+        "label": "stronger foot",
+        "subject": "Valentyn Gorokh"
+      },
+      {
+        "stat": "ev_a740594d48157c2b",
+        "display": "187",
+        "label": "height in centimetres",
+        "subject": "Valentyn Gorokh"
+      },
+      {
+        "stat": "ev_5626046856d2b75b",
+        "display": "0",
+        "label": "international caps",
+        "subject": "Valentyn Gorokh"
+      },
+      {
+        "stat": "ev_30be4db481b2a8ba",
+        "display": "goalkeeper",
+        "label": "positions he starts at",
+        "subject": "Valentyn Gorokh"
+      },
+      {
+        "stat": "ev_9d29730e23809590",
         "display": "1620",
         "label": "minutes played in the past year's matches on record",
         "subject": "Valentyn Gorokh"
       },
       {
-        "stat": "ev_31c167f25d08daf8",
+        "stat": "ev_ee7fadf533b9680f",
         "display": "20",
         "label": "months left on his contract",
         "subject": "Valentyn Gorokh"
       },
       {
-        "stat": "ev_1a17ab0119d2b2d4",
+        "stat": "ev_7869265e83c8132a",
         "display": "€0.5m",
         "label": "market value",
         "subject": "Valentyn Gorokh"
       },
       {
-        "stat": "ev_1199b9e6c32ce76c",
+        "stat": "ev_b0d5d2f923bed18d",
         "display": "€0.4m",
         "label": "estimated fair fee",
         "subject": "Valentyn Gorokh"
       },
       {
-        "stat": "ev_fde9ae2127d36491",
+        "stat": "ev_66cec3bd723540f6",
         "display": "49%",
         "label": "expected share of minutes at the club",
         "subject": "Valentyn Gorokh"
       },
       {
-        "stat": "ev_c1bef435919ed4b8",
+        "stat": "ev_4b270dfa67b499f7",
         "display": "29",
         "label": "age (best target)",
         "subject": "Oleg Bilyk"
       },
       {
-        "stat": "ev_fb8f7b555f42ae89",
+        "stat": "ev_67477da83a1dcabd",
         "display": "Epicentr Kamyanets-Podilskyi",
         "label": "current club",
         "subject": "Oleg Bilyk"
       },
       {
-        "stat": "ev_2d6d6bc3361f6a83",
+        "stat": "ev_66c22c0c08461a40",
+        "display": "0.00",
+        "label": "league goals per full match",
+        "subject": "Oleg Bilyk"
+      },
+      {
+        "stat": "ev_77061847b081e3da",
+        "display": "0.00",
+        "label": "league assists per full match",
+        "subject": "Oleg Bilyk"
+      },
+      {
+        "stat": "ev_aa4f14818a794b08",
+        "display": "0%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Oleg Bilyk"
+      },
+      {
+        "stat": "ev_1f012150d34afe0a",
+        "display": "Premier Liga",
+        "label": "league of that comparison",
+        "subject": "Oleg Bilyk"
+      },
+      {
+        "stat": "ev_42ed0780c105b22c",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Oleg Bilyk"
+      },
+      {
+        "stat": "ev_9cf33ed94b23bd2e",
+        "display": "187",
+        "label": "height in centimetres",
+        "subject": "Oleg Bilyk"
+      },
+      {
+        "stat": "ev_2f8ade3ec45b8872",
+        "display": "8",
+        "label": "international caps",
+        "subject": "Oleg Bilyk"
+      },
+      {
+        "stat": "ev_fd84767c5dec72e8",
+        "display": "goalkeeper",
+        "label": "positions he starts at",
+        "subject": "Oleg Bilyk"
+      },
+      {
+        "stat": "ev_995c313360cefbd4",
         "display": "1620",
         "label": "minutes played in the past year's matches on record",
         "subject": "Oleg Bilyk"
       },
       {
-        "stat": "ev_bede77582090a061",
+        "stat": "ev_0f155ca314993a4e",
         "display": "8",
         "label": "months left on his contract",
         "subject": "Oleg Bilyk"
       },
       {
-        "stat": "ev_c04c76085502b52f",
+        "stat": "ev_147296ce939d2960",
         "display": "€0.4m",
         "label": "market value",
         "subject": "Oleg Bilyk"
       },
       {
-        "stat": "ev_532f72b20ffc6df5",
+        "stat": "ev_0919a6ba682d9d0a",
         "display": "€0.2m",
         "label": "estimated fair fee",
         "subject": "Oleg Bilyk"
       },
       {
-        "stat": "ev_87478bd417581d73",
+        "stat": "ev_25c2951d543dad91",
         "display": "62%",
         "label": "expected share of minutes at the club",
         "subject": "Oleg Bilyk"
       },
       {
-        "stat": "ev_2716b5cd8c0a1ce6",
+        "stat": "ev_53ba7a8d38a6ebb2",
         "display": "23",
         "label": "age (realistic target)",
         "subject": "Yuriy-Volodymyr Gereta"
       },
       {
-        "stat": "ev_183bff05c42074e2",
+        "stat": "ev_1bb7ac2d5a161a76",
         "display": "Rukh Lviv",
         "label": "current club",
         "subject": "Yuriy-Volodymyr Gereta"
       },
       {
-        "stat": "ev_805214138769839e",
+        "stat": "ev_1a596b8dcb69bd57",
+        "display": "0.00",
+        "label": "league goals per full match",
+        "subject": "Yuriy-Volodymyr Gereta"
+      },
+      {
+        "stat": "ev_1c3acc70681beb6f",
+        "display": "0.00",
+        "label": "league assists per full match",
+        "subject": "Yuriy-Volodymyr Gereta"
+      },
+      {
+        "stat": "ev_c110b53939e28615",
+        "display": "0%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Yuriy-Volodymyr Gereta"
+      },
+      {
+        "stat": "ev_d1fa06909d2f8c44",
+        "display": "Premier Liga",
+        "label": "league of that comparison",
+        "subject": "Yuriy-Volodymyr Gereta"
+      },
+      {
+        "stat": "ev_63919b4dc758f4dd",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Yuriy-Volodymyr Gereta"
+      },
+      {
+        "stat": "ev_a03d76ec3d6d91e0",
+        "display": "189",
+        "label": "height in centimetres",
+        "subject": "Yuriy-Volodymyr Gereta"
+      },
+      {
+        "stat": "ev_599c6a48a25a838c",
+        "display": "5",
+        "label": "international caps",
+        "subject": "Yuriy-Volodymyr Gereta"
+      },
+      {
+        "stat": "ev_01521b51ce3ed12d",
+        "display": "goalkeeper",
+        "label": "positions he starts at",
+        "subject": "Yuriy-Volodymyr Gereta"
+      },
+      {
+        "stat": "ev_bb98fbd45c36ee6e",
         "display": "1620",
         "label": "minutes played in the past year's matches on record",
         "subject": "Yuriy-Volodymyr Gereta"
       },
       {
-        "stat": "ev_a1e4893c112b5d6a",
-        "display": "32%",
+        "stat": "ev_70edc01bd9aee925",
+        "display": "20%",
         "label": "chance his club sells him in a window",
         "subject": "Yuriy-Volodymyr Gereta"
       },
       {
-        "stat": "ev_0d1a737741638d0b",
+        "stat": "ev_4b0e963e0757b5d1",
         "display": "2",
         "label": "months left on his contract",
         "subject": "Yuriy-Volodymyr Gereta"
       },
       {
-        "stat": "ev_a2f61661e7aa1cc0",
+        "stat": "ev_e6771c33895a698e",
         "display": "€0.4m",
         "label": "market value",
         "subject": "Yuriy-Volodymyr Gereta"
       },
       {
-        "stat": "ev_097979ec3118f306",
+        "stat": "ev_47bb08ccd354d07e",
         "display": "€0.4m",
         "label": "estimated fair fee",
         "subject": "Yuriy-Volodymyr Gereta"
       },
       {
-        "stat": "ev_aa8f40f76a578573",
+        "stat": "ev_16c2dc53de8b4aa4",
         "display": "0.0%",
         "label": "chance the move happens in a window (sale likelihood x this club's share of buyers)",
         "subject": "Yuriy-Volodymyr Gereta"
       },
       {
-        "stat": "ev_dd19bf3e3acbb36f",
+        "stat": "ev_398d330a58c36bf0",
         "display": "defensive midfield",
         "label": "squad need, priority two",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_11b502093b4d0f3a",
+        "stat": "ev_c72ff321a99b398d",
         "display": "1",
         "label": "players for the position, veterans aside (need two)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_739826f03c6e8021",
+        "stat": "ev_5d47a5ef9ab16655",
         "display": "2",
         "label": "players a squad carries there (need two)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_3039ec629e0ae395",
+        "stat": "ev_9b37ccd99c906bc3",
         "display": "Cedric Hatenboer",
         "label": "best option there (need two)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_0c8243d75ebf18c4",
+        "stat": "ev_4e29cd0ef75df9a4",
         "display": "Cedric Hatenboer",
         "label": "last regular starter there (need two)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_737e44063eb17639",
+        "stat": "ev_1c3087ca01ba4acb",
+        "display": "0.24",
+        "label": "last regular starter's goals and assists per full match (need two)",
+        "subject": "Sparta Rotterdam"
+      },
+      {
+        "stat": "ev_02b452b70b2b7380",
         "display": "€2.0m",
         "label": "last regular starter's market value (need two)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_4ec3d9ca0f7fa439",
+        "stat": "ev_be1618de867c1adf",
         "display": "€2.0m",
         "label": "best option's market value (need two)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_723657ce4384e5d0",
+        "stat": "ev_2f1eeb4514117689",
         "display": "€2.5m",
         "label": "similar squads' best option's market value (need two)",
         "subject": "Sparta Rotterdam"
       },
       {
-        "stat": "ev_f66f5667ea0e3baf",
+        "stat": "ev_d4420058fc22f207",
         "display": "22",
         "label": "age (best target, second need)",
         "subject": "Nils Rossen"
       },
       {
-        "stat": "ev_e1c099af86fc7432",
+        "stat": "ev_9b034db91dc50d17",
+        "display": "SC Telstar",
+        "label": "current club",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_e4320e3cc180408f",
+        "display": "0.11",
+        "label": "league goals per full match",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_ce095970ceabf937",
+        "display": "0.06",
+        "label": "league assists per full match",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_8aa3f7f0c04eb4b2",
+        "display": "46%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_8e88d85a6d5fbda1",
+        "display": "Eredivisie",
+        "label": "league of that comparison",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_4c3c7563f12276a3",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_3b75c4286eef0edf",
+        "display": "181",
+        "label": "height in centimetres",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_4d3590c6ef6ac211",
+        "display": "central midfield, defensive midfield",
+        "label": "positions he starts at",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_a1be6467a8b1fda3",
+        "display": "2053",
+        "label": "minutes played in the past year's matches on record",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_0ecc7ec147de4e62",
+        "display": "8",
+        "label": "months left on his contract",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_bc6972d66c15f37c",
         "display": "€0.7m",
         "label": "market value",
         "subject": "Nils Rossen"
       },
       {
-        "stat": "ev_3f62a7d45321a2e2",
+        "stat": "ev_b3258fecdb2c145f",
+        "display": "€0.6m",
+        "label": "estimated fair fee",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_5739a0af72959daf",
+        "display": "44%",
+        "label": "expected share of minutes at the club",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_64a43e5576027735",
+        "display": "26",
+        "label": "age (best target, second need)",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_892657d7b980c959",
+        "display": "Dundee United FC",
+        "label": "current club",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_03d31f8229220277",
+        "display": "0.00",
+        "label": "league goals per full match",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_834fdf51d46cdadc",
+        "display": "0.06",
+        "label": "league assists per full match",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_d047f776142d21d7",
+        "display": "27%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_2b66c1ca03c4725c",
+        "display": "Scottish Premiership",
+        "label": "league of that comparison",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_47dc18a4068ecaea",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_afbd60f3b4e46ddd",
+        "display": "183",
+        "label": "height in centimetres",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_ac08ba50a6a95e78",
+        "display": "0",
+        "label": "international caps",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_424f9f0bf21610cd",
+        "display": "central midfield, defensive midfield",
+        "label": "positions he starts at",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_1c9e41ef0f8d061c",
+        "display": "1733",
+        "label": "minutes played in the past year's matches on record",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_1d3df9f13d69a4cd",
+        "display": "7",
+        "label": "months left on his contract",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_dbafd09867006bee",
+        "display": "€0.7m",
+        "label": "market value",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_c54e334dfc47ef45",
+        "display": "€0.4m",
+        "label": "estimated fair fee",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_933c3108ae7946b0",
+        "display": "40%",
+        "label": "expected share of minutes at the club",
+        "subject": "Vicko Sevelj"
+      },
+      {
+        "stat": "ev_973061591fef90ef",
+        "display": "29",
+        "label": "age (best target, second need)",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_ab9512aa3c82e3f1",
+        "display": "FCV Dender EH",
+        "label": "current club",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_9bdc6ebf4649f2d9",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_9cd2c1f1d25da1c4",
+        "display": "191",
+        "label": "height in centimetres",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_cb20500d2df7ca32",
+        "display": "defensive midfield",
+        "label": "positions he starts at",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_c5c3d75622e4aea1",
+        "display": "1311",
+        "label": "minutes played in the past year's matches on record",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_f199678e70dc1a05",
+        "display": "8",
+        "label": "months left on his contract",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_63b60bac93b65f33",
+        "display": "€0.6m",
+        "label": "market value",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_c4eef73876c6bf1d",
+        "display": "€0.3m",
+        "label": "estimated fair fee",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_26cf0f6794b36a71",
+        "display": "44%",
+        "label": "expected share of minutes at the club",
+        "subject": "Nathan Rôdes"
+      },
+      {
+        "stat": "ev_7f82eb487910bc9c",
         "display": "20",
         "label": "age (gem target, second need)",
         "subject": "Justin Janssen"
       },
       {
-        "stat": "ev_01b8713f84e3de21",
+        "stat": "ev_69bc5bda1b5b24e1",
+        "display": "FC Nordsjaelland",
+        "label": "current club",
+        "subject": "Justin Janssen"
+      },
+      {
+        "stat": "ev_f7d9bd70a616aa66",
+        "display": "69%",
+        "label": "share of his club's minutes over the last year",
+        "subject": "Justin Janssen"
+      },
+      {
+        "stat": "ev_d8acae2b1e998aa3",
+        "display": "left",
+        "label": "stronger foot",
+        "subject": "Justin Janssen"
+      },
+      {
+        "stat": "ev_5178d37a426b4a62",
+        "display": "181",
+        "label": "height in centimetres",
+        "subject": "Justin Janssen"
+      },
+      {
+        "stat": "ev_598d22f5f1005657",
+        "display": "13",
+        "label": "international caps",
+        "subject": "Justin Janssen"
+      },
+      {
+        "stat": "ev_2b34434f5eb1eef3",
+        "display": "central midfield, defensive midfield",
+        "label": "positions he starts at",
+        "subject": "Justin Janssen"
+      },
+      {
+        "stat": "ev_e09ffb61c2d19ad2",
+        "display": "€1.5m",
+        "label": "market value",
+        "subject": "Justin Janssen"
+      },
+      {
+        "stat": "ev_fc746c6bef70294a",
+        "display": "€1.6m",
+        "label": "estimated fair fee",
+        "subject": "Justin Janssen"
+      },
+      {
+        "stat": "ev_09d2c9184e3ce5e0",
         "display": "€3.0m",
         "label": "projected market value in a few seasons",
         "subject": "Justin Janssen"
+      },
+      {
+        "stat": "ev_20d27cc324faf46a",
+        "display": "22",
+        "label": "age (gem target, second need)",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_4f20f543220c8b16",
+        "display": "Fortuna Sittardia Combinatie",
+        "label": "current club",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_3527886b1144f85f",
+        "display": "72%",
+        "label": "share of his club's minutes over the last year",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_fccdd2f0fe2ed7a5",
+        "display": "0.10",
+        "label": "league goals per full match",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_1860555331a6394c",
+        "display": "0.00",
+        "label": "league assists per full match",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_a5e59f06688f1132",
+        "display": "29%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_b1ce51868a08489f",
+        "display": "Eredivisie",
+        "label": "league of that comparison",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_b77b5ae3925d053a",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_d28d60d66dcd41d2",
+        "display": "182",
+        "label": "height in centimetres",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_3ce8871091599dc2",
+        "display": "2",
+        "label": "international caps",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_c0a0162d6704262f",
+        "display": "central midfield, defensive midfield",
+        "label": "positions he starts at",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_9aefa2688439b910",
+        "display": "€1.6m",
+        "label": "market value",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_2d915d9784dc5a8c",
+        "display": "€0.9m",
+        "label": "estimated fair fee",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_b7999c060fed200e",
+        "display": "€2.1m",
+        "label": "projected market value in a few seasons",
+        "subject": "Philip Brittijn"
+      },
+      {
+        "stat": "ev_48572ea19335c49d",
+        "display": "24",
+        "label": "age (gem target, second need)",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_508abab69daf9a3b",
+        "display": "FC Groningen",
+        "label": "current club",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_d7abc368b46ef17e",
+        "display": "60%",
+        "label": "share of his club's minutes over the last year",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_af7dcf2229cd8106",
+        "display": "0.13",
+        "label": "league goals per full match",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_f50b34cbfedfbfac",
+        "display": "0.06",
+        "label": "league assists per full match",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_584f497f00818046",
+        "display": "54%",
+        "label": "share of players at his position in his league he beats for goals and assists per full match",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_3d7e38401a24f981",
+        "display": "Eredivisie",
+        "label": "league of that comparison",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_0eed9b0ff3a3380d",
+        "display": "right",
+        "label": "stronger foot",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_fce0e234f2035ca1",
+        "display": "183",
+        "label": "height in centimetres",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_2f863c911fefdf8c",
+        "display": "central midfield, defensive midfield",
+        "label": "positions he starts at",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_0af832c786d7dfa7",
+        "display": "€1.8m",
+        "label": "market value",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_e8e1f4e2b42cbeee",
+        "display": "€1.0m",
+        "label": "estimated fair fee",
+        "subject": "Tika de Jonge"
+      },
+      {
+        "stat": "ev_eb68bcb03e892d30",
+        "display": "€1.8m",
+        "label": "projected market value in a few seasons",
+        "subject": "Tika de Jonge"
       }
     ]
   },
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 49,
+      "numbers_total": 56,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 48,
-      "unverified": 2
+      "verified": 55,
+      "unverified": 1
     },
     "sections_published": 5,
     "sections_withheld": 0
