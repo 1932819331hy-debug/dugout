@@ -633,18 +633,22 @@ def squad_market(tb: Toolbox, club: str, player_id: str | None = None, n: int = 
                 if r < 0.85
                 else "in line with his market value"
             )
-        facts += _keep(
-            _fact(
-                tb,
-                pname,
-                f"estimated fair fee if sold to another {tb.league(club)['name']} club",
-                f"Our fair-fee estimate for {pname} is {{p}}" + (f", {gloss}." if gloss else "."),
-                ff,
-                "eur_m",
-                gloss,
-                pid,
-            )
+        rng = _fee_range(tb, "valuation", pid)
+        f = _fact(
+            tb,
+            pname,
+            f"estimated fair fee if sold to another {tb.league(club)['name']} club",
+            f"Our fair-fee estimate for {pname} is {{p}}"
+            + (" (likely between {lo} and {hi})" if rng else "")
+            + (f", {gloss}." if gloss else "."),
+            ff,
+            "eur_m",
+            gloss,
+            pid,
         )
+        if f is not None:
+            f.range = rng
+        facts += _keep(f)
     rows = tb.con.execute(
         """SELECT c.player_id FROM contracts c JOIN players p USING (player_id)
            WHERE p.club_id = ? AND c.expires <= ? AND c.expires >= ? AND (? IS NULL OR c.player_id = ?)
@@ -677,6 +681,13 @@ def squad_market(tb: Toolbox, club: str, player_id: str | None = None, n: int = 
             )
         )
     return facts
+
+
+def _fee_range(tb: Toolbox, model: str, pid: str, context: str = "") -> tuple[str, str] | None:
+    """Ledger ids of a fair fee's likely range (valuation.md: four fees in five land inside), or None."""
+    lo = tb.model(model, "player", pid, "fair_fee_low", context, doc=MODEL_DOCS["valuation"])
+    hi = tb.model(model, "player", pid, "fair_fee_high", context, doc=MODEL_DOCS["valuation"])
+    return (lo[0], hi[0]) if lo is not None and hi is not None else None
 
 
 def _dataset_value(tb: Toolbox, pid: str) -> tuple[tuple[str, Any] | None, date | None]:
@@ -1052,7 +1063,13 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                         if p < 0.02
                         else "relatively plausible for a specific move"
                     )
-                facts += _keep(_fact(tb, cname, label, tmpl, rec, fmt, gloss, pid))
+                rng = _fee_range(tb, "scout", pid, ctx) if metric == "fair_fee" else None
+                if rng:
+                    tmpl = tmpl.removesuffix(".") + " (likely between {lo} and {hi})."
+                f = _fact(tb, cname, label, tmpl, rec, fmt, gloss, pid)
+                if f is not None:
+                    f.range = rng
+                facts += _keep(f)
     return facts
 
 

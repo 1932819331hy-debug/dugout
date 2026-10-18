@@ -142,6 +142,16 @@ export default function MethodsPage() {
             <B file="valuation" j={val} value={val?.model_on_baseline_rows?.median_ape} label="median error, model" fmt="pct" /> vs{" "}
             <B file="valuation" j={val} value={val?.baseline_market_value?.median_ape} label="median error, market value" fmt="pct" /> for
             &ldquo;fee = market value&rdquo;.
+            {val?.ranges && (
+              <>
+                {" "}
+                Every price comes with a likely range, wider for cheap players, whose fees vary most: on test transfers{" "}
+                <B file="valuation" j={val} value={val.ranges.segments?.all?.coverage} label="fees inside the likely range" fmt="pct" />{" "}
+                of fees landed inside it (aim:{" "}
+                <B file="valuation" j={val} value={val.ranges.level} label="share of fees the range aims to hold" fmt="pct" />
+                ).
+              </>
+            )}
           </Row>
           <Row name="Transfer realism" verdict="calibrated parts">
             P(sold in a window) × the club&apos;s share of plausible buyers. Sale model AUC{" "}

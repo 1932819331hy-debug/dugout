@@ -20,6 +20,8 @@ from dugout_verify.auditor import audit
 from dugout_verify.ledger import PLACEHOLDER, format_value
 
 SCHEMA = "dugout.club/1"
+# key-stat labels of a likely range's ends: "<RANGE_LOW> <the value's label>" (apps/web/lib/shortlist.ts)
+RANGE_LOW, RANGE_HIGH = "likely low end of the", "likely high end of the"
 
 
 def segments(template: str, ctx: Context) -> list[dict]:
@@ -98,7 +100,13 @@ def key_stats(ctx: Context, sections: list[Section]) -> tuple[dict, dict, dict]:
     for sec in sections:
         rows = []
         for f in sec.facts:
-            for eid, fmt in [(f.eid, f.fmt), *([f.when] if f.when else [])]:
+            slots = [(f.eid, f.fmt, f.label), *([(*f.when, f.label)] if f.when else [])]
+            if f.range:  # the likely range's ends, labelled apart from the value itself
+                slots += [
+                    (f.range[0], f.fmt, f"{RANGE_LOW} {f.label}"),
+                    (f.range[1], f.fmt, f"{RANGE_HIGH} {f.label}"),
+                ]
+            for eid, fmt, label in slots:
                 if not eid:
                     continue
                 rep = audit(
@@ -116,7 +124,7 @@ def key_stats(ctx: Context, sections: list[Section]) -> tuple[dict, dict, dict]:
                     {
                         "stat": eid,
                         "display": format_value(ctx.ledger.get(eid), fmt),
-                        "label": f.label,
+                        "label": label,
                         "subject": f.subject,
                     }
                 )

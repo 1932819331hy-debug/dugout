@@ -24,7 +24,7 @@ import pandas as pd
 from dugout_pipeline.settings import get_settings
 
 from dugout_models import potential
-from dugout_models.market import GROUPS, PL, SHORTLIST, STARTERS, Market, profile_rows
+from dugout_models.market import GROUPS, PL, SHORTLIST, STARTERS, Market, fee_range_rows, profile_rows
 from dugout_models.opportunity import FEATURES as OPP_FEATURES
 from dugout_models.publish import _row
 
@@ -213,8 +213,9 @@ def gems(mk: Market, pool: pd.DataFrame, proj: dict, ids: list[str], now: dateti
                 [mk.comp_of(x) for x in c.club_now],
                 c.club_now.tolist(),
                 buyer_club=tm_club,
-            ).fair_fee.to_numpy()
-            for k, (r, fee) in enumerate(zip(c.itertuples(), fees, strict=True), 1):
+            )
+            for k, (r, f) in enumerate(zip(c.itertuples(), fees.itertuples(), strict=True), 1):
+                fee = f.fair_fee
                 ctx = f"{slug}:need:{i + 1}:gem:{k}"
                 rows += [
                     _row(
@@ -230,4 +231,5 @@ def gems(mk: Market, pool: pd.DataFrame, proj: dict, ids: list[str], now: dateti
                 ]
                 if fee == fee:
                     rows.append(_row("scout", "player", r.pid, "fair_fee", round(fee, -5), now, ctx))
+                    rows += fee_range_rows("scout", r.pid, f.low, f.high, now, ctx)
     return rows
