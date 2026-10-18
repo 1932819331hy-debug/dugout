@@ -6,13 +6,13 @@ from datetime import UTC, date, datetime
 import httpx
 import pytest
 from conftest import NOW, make_ctx, sample
+from dugout_pipeline.adapters import transfermarkt
 from dugout_pipeline.adapters.api_football import ApiFootballAdapter
 from dugout_pipeline.adapters.base import SourceDisabled
 from dugout_pipeline.adapters.clubelo import ClubEloAdapter
 from dugout_pipeline.adapters.football_data_couk import FootballDataCoUkAdapter, season_code
 from dugout_pipeline.adapters.football_data_org import FootballDataOrgAdapter
 from dugout_pipeline.adapters.news import GuardianAdapter, RSSAdapter, tag_clubs
-from dugout_pipeline.adapters import transfermarkt
 from dugout_pipeline.adapters.transfermarkt import (
     TransfermarktFileAdapter,
     TransfermarktPoolRefresher,

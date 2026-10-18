@@ -237,10 +237,16 @@ class Market:
         if sq.empty:
             return
         sub = sq.position if "position" in sq else pd.Series(np.nan, index=sq.index)
+
+        def stamp(
+            d: pd.Series,
+        ) -> pd.Series:  # the dataset's date format ("2002-08-09 00:00:00"), never mixed
+            return pd.to_datetime(d, errors="coerce").dt.strftime("%Y-%m-%d %H:%M:%S")
+
         new = pd.DataFrame(
             {
                 "name": sq.name,
-                "date_of_birth": sq.birth_date,
+                "date_of_birth": stamp(sq.birth_date),
                 "sub_position": sub,
                 "position": sub.map(BROAD),
                 "last_season": self.now.year,
@@ -254,7 +260,7 @@ class Market:
         ids = sq.index
         self.players.loc[ids, "current_club_id"] = sq.tm_club_id
         self.players.loc[ids, "current_club_domestic_competition_id"] = sq.comp
-        self.players.loc[ids, "contract_expiration_date"] = sq.contract_expires
+        self.players.loc[ids, "contract_expiration_date"] = stamp(sq.contract_expires)
         self.players.loc[ids, "sub_position"] = self.players.loc[ids, "sub_position"].fillna(sub)
         self.players.loc[ids, "last_season"] = (
             self.players.loc[ids, "last_season"].fillna(0).clip(lower=self.now.year)

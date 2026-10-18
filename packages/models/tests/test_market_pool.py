@@ -25,7 +25,7 @@ def _market() -> Market:
         {
             "player_id": ["1", "3"],
             "name": ["Known Winger", "Liverpool Player"],
-            "date_of_birth": ["1996-12-20", "1999-01-01"],
+            "date_of_birth": ["1996-12-20 00:00:00", "1999-01-01 00:00:00"],
             "sub_position": ["Right Winger", "Centre-Back"],
             "position": ["Attack", "Defender"],
             "current_club_id": [379, 31],
@@ -52,6 +52,7 @@ def test_pool_players_join_the_players_table():
     new = mk.players.loc["2"]
     assert (new["name"], new.sub_position, new.position) == ("New Keeper", "Goalkeeper", "Goalkeeper")
     assert new.current_club_id == "1112" and new.current_club_domestic_competition_id == "GB2"
+    assert new.date_of_birth == "2004-01-01 00:00:00"  # the dataset's format: one parse for the whole column
     known = mk.players.loc["1"]  # relegated with West Ham: today's league, not the dataset's
     assert known.current_club_domestic_competition_id == "GB2" and known.last_season == 2026
     assert mk.players.loc["3"].current_club_domestic_competition_id == "GB1"  # league squads untouched
