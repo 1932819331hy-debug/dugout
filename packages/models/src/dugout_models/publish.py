@@ -298,6 +298,11 @@ def lineups(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
     return rows
 
 
+LAST_XI_MIN_KNOWN = (
+    9  # starters of the last XI that must match the squad before the rest is filled by position
+)
+
+
 def last_xi_lineups(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
     """Leagues without FPL minutes (config `backtested: lineup_last_xi`): the club's last league XI from
     API-Football lineups, players API-Football lists as missing replaced by the most recent other starter
@@ -342,13 +347,35 @@ def last_xi_lineups(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]
         mine = squads[squads.club_id == r.club]
         g = lu[(lu.club_id == r.club) & lu.player_id.isin(mine.player_id)].copy()
         if g.empty:
+            log.warning("last-XI lineup %s: none of its recorded starters is in the squad list", r.club)
             continue
         order = {k: i for i, k in enumerate(sorted(g.kickoff_utc.unique(), reverse=True))}
         g["back"] = g.kickoff_utc.map(order)
         g["gk"] = g.player_id.map(dict(zip(mine.player_id, mine.position == "GK", strict=True)))
         xi = predict(g[["back", "player_id", "gk"]], absent)
-        if len(xi) != 11:
+        if len(xi) < LAST_XI_MIN_KNOWN:
+            log.warning("last-XI lineup %s: only %d of 11 starters matched to the squad", r.club, len(xi))
             continue
+        if len(xi) < 11:
+            # a starter or two the id register cannot match (or newly injured): fill the gap with the squad's best
+            # fit for the open slots, preferring players who started most recently for the club
+            starts = g.groupby("player_id").back.min()
+            pool = mine[~mine.player_id.isin(absent) | mine.player_id.isin(xi)].copy()
+            pool["rating"] = np.where(
+                pool.player_id.isin(xi), 10.0, 5.0 - pool.player_id.map(starts).fillna(5.0).clip(upper=5.0)
+            )
+            pool = pool.assign(available=True, fatigue=0.0, fpl_pos=pool.position).reset_index(drop=True)
+            last = g.loc[g.back == 0, "formation"].dropna()
+            try:
+                fill = (
+                    optimise(pool, last.iloc[0])
+                    if len(last) and last.iloc[0] in FORMATIONS
+                    else best_formation(pool)
+                )
+            except ValueError:
+                log.warning("last-XI lineup %s: could not fill %d open slots", r.club, 11 - len(xi))
+                continue
+            xi = [pid for pid, _ in fill.xi]
         sq = mine[mine.player_id.isin(xi)].assign(available=True, rating=0.0, fatigue=0.0)
         sq = sq.assign(fpl_pos=sq.position).reset_index(drop=True)
         last = g.loc[g.back == 0, "formation"].dropna()
