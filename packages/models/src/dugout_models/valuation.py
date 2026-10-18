@@ -626,6 +626,8 @@ def _range_lines(r: dict) -> list[str]:
         "",
         *head,
         *[_cov_row(k, v) for k, v in r["by_value_band"].items()],
+        "",
+        _readout(r),
     ]
     h = r.get("holdout_summer_2026")
     if h:
@@ -642,5 +644,27 @@ def _range_lines(r: dict) -> list[str]:
             *head,
             *[_cov_row(k, h[k]) for k in ("all", "Premier League buyer", "other buyers")],
             *[_cov_row(k, v) for k, v in h["by_value_band"].items()],
+            "",
+            f"With {h['all']['n']} transfers one standard error is about "
+            f"{np.sqrt(LEVEL * (1 - LEVEL) / h['all']['n']):.1%}; the bands under €10m hold only a few dozen moves "
+            "between them. Misses are mostly fees above the range.",
         ]
     return out
+
+
+def _readout(r: dict) -> str:
+    """Where the shipped range misses its target by more than five points on the test window (n >= 40)."""
+    seg = {**r["segments"], **r["by_value_band"]}
+    low = [
+        f"{k} {v['coverage']:.0%}" for k, v in seg.items() if v["n"] >= 40 and v["coverage"] < LEVEL - 0.05
+    ]
+    high = [
+        f"{k} {v['coverage']:.0%}" for k, v in seg.items() if v["n"] >= 40 and v["coverage"] > LEVEL + 0.05
+    ]
+    all_ = r["segments"]["all"]["coverage"]
+    return (
+        f"Reading: overall {all_:.1%} of test fees landed inside, a little over the target: the calibration errors "
+        "come from a model fitted two years earlier on less data, so the range is slightly conservative. "
+        f"Too narrow (under {LEVEL - 0.05:.0%}): {', '.join(low) or 'none'}. "
+        f"Wider than needed (over {LEVEL + 0.05:.0%}): {', '.join(high) or 'none'}."
+    )
