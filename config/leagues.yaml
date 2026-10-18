@@ -132,6 +132,20 @@ eredivisie:
   history_seasons: ["2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21",
                     "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
 
+# Candidate pools: leagues whose players can be shortlisted by the clubs above but which get no pages of their own
+# (no free fixtures/standings feed: football-data.org's free tier has no Championship). Squads, positions, values and
+# contracts come from Transfermarkt squad pages, refreshed locally only (`dugout refresh-values --pool championship`,
+# never from CI) into data/reference/transfermarkt_squads.csv. `transfermarkt` is the competition id; its page lists
+# the season's clubs. `slug_suffix` is added to a slug a league above already uses.
+candidate_pools:
+  championship:
+    name: Championship
+    country: England
+    season: "2026-27"
+    season_start_year: 2026
+    transfermarkt: GB2
+    slug_suffix: efl
+
 # Names providers use that a generic normaliser cannot reconcile. Keys are normalised names.
 club_aliases:
   # football-data.co.uk names for other leagues' clubs (the rest resolve by prefix/suffix within the league)
