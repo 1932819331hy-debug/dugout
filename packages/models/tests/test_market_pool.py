@@ -72,3 +72,31 @@ def test_live_clubs_use_todays_league_and_add_missing_clubs():
 
 def test_pool_clubs_get_no_lists_of_their_own():
     assert _market().buying_clubs() == ["liverpool"]
+
+
+def test_pool_minutes_become_appearances_over_the_season():
+    from dugout_models.market import pool_appearances
+
+    minutes = pd.DataFrame(
+        {
+            "tm_player_id": ["7", "8"],
+            "tm_club_id": ["1112", "1112"],
+            "name": ["Regular", "Squad Player"],
+            "comp": ["GB2", "GB2"],
+            "apps": [46, 10],
+            "goals": [9, 0],
+            "assists": [4, 1],
+            "minutes": [4000, 450],
+        }
+    )
+    st = {"season": "2025-26", "year": 2025, "first": "2025-08-08", "last": "2026-05-02", "matchdays": 46}
+    ap = pool_appearances(minutes, {"GB2": {"stats_season": st}})
+    totals = ap.groupby("player_id")[["minutes_played", "goals", "assists"]].sum().round(6)
+    assert totals.loc["7"].tolist() == [4000, 9, 4] and totals.loc["8"].tolist() == [450, 0, 1]
+    assert ap.groupby("player_id").size().to_dict() == {"7": 46, "8": 10}
+    assert ap.date.min() == "2025-08-08" and ap.date.max() == "2026-05-02"
+    # the squad player's games are spread over the season, not bunched in August: a window sees its share
+    dates = pd.to_datetime(ap[ap.player_id == "8"].date)
+    assert dates.min() == pd.Timestamp("2025-08-08") and dates.max() == pd.Timestamp("2026-05-02")
+    assert ap.player_club_id.eq("1112").all() and ap.competition_id.eq("GB2").all() and (ap.game_id < 0).all()
+    assert pool_appearances(minutes, {"GB2": {}}).empty  # no stats_season: no rows

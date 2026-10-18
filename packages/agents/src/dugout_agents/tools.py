@@ -1053,6 +1053,21 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                         else "relatively plausible for a specific move"
                     )
                 facts += _keep(_fact(tb, cname, label, tmpl, rec, fmt, gloss, pid))
+            # candidate-pool players (the Championship): last season's league minutes, cited to the Transfermarkt
+            # page they were read from (the dataset behind "matches on record" has no games for that league)
+            lm = tb.latest("player", pid, "league_minutes", "transfermarkt")
+            if lm is not None:
+                facts += _keep(
+                    _fact(
+                        tb,
+                        cname,
+                        "league minutes last season (Transfermarkt)",
+                        f"Transfermarkt lists {cname} with {{p}} league minutes last season.",
+                        (lm.id, lm.value),
+                        "int",
+                        entity_id=pid,
+                    )
+                )
     return facts
 
 

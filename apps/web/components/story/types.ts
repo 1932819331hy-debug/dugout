@@ -54,6 +54,8 @@ export interface Target {
   minutesNow?: StatRef;
   /** minutes in the past year's matches on record */
   minutesLastYear?: StatRef;
+  /** last season's league minutes as Transfermarkt lists them (candidate pools such as the Championship) */
+  leagueMinutes?: StatRef;
   /** league goals and assists per full match, and his rank for both at his position in his league */
   goals?: StatRef;
   assists?: StatRef;

@@ -342,7 +342,7 @@ class TransfermarktFileAdapter(SourceAdapter):
     scope = "global"  # one committed file for every league
     tier = TIER_DATA
 
-    def ingest(self, path: Path = SQUADS_CSV) -> dict[str, int]:
+    def ingest(self, path: Path = SQUADS_CSV, minutes: Path = MINUTES_CSV) -> dict[str, int]:
         if not path.exists():
             return {}
         values, contracts, n_ev = [], [], 0
@@ -388,7 +388,7 @@ class TransfermarktFileAdapter(SourceAdapter):
                             "fetched_at": fetched,
                         }
                     )
-        n_ev += self.minutes_evidence()
+        n_ev += self.minutes_evidence(minutes)
         return {
             "market_values": upsert(self.ctx.con, "market_values", values),
             "contracts": upsert(self.ctx.con, "contracts", contracts),

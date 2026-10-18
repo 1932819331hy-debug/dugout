@@ -33,6 +33,7 @@ export function shortlists(d: Dossier): Target[] {
         minutesThere: fact("expected share of minutes at the club"),
         minutesNow: fact("share of his club's minutes"),
         minutesLastYear: fact("minutes played in the past year"),
+        leagueMinutes: fact("league minutes last season"),
         goals: fact("league goals per full match"),
         assists: fact("league assists per full match"),
         gaRank: fact("share of players at his position in his league"),

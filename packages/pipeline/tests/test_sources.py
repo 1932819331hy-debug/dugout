@@ -19,6 +19,7 @@ from dugout_pipeline.adapters.transfermarkt import (
     TransfermarktRefresher,
     parse_competition_clubs,
     parse_money,
+    parse_performance,
     parse_squad,
     read_squads_csv,
     write_squads_csv,
@@ -182,6 +183,15 @@ def test_transfermarkt_competition_clubs():
     assert clubs == [("379", "West Ham United"), ("1112", "Wrexham AFC")]  # first table only
 
 
+def test_transfermarkt_performance_page():
+    rows = parse_performance(sample("transfermarkt_leistungsdaten.html"))
+    assert [(r["tm_player_id"], r["apps"], r["goals"], r["assists"], r["minutes"]) for r in rows] == [
+        ("503769", 39, 0, 0, 3421),  # "3.421'": thousands separator and minute mark
+        ("111", 30, 12, 4, 2105),
+        ("222", 0, 0, 0, 0),  # "Not used during this season" merges the cells
+    ]
+
+
 def test_transfermarkt_refresher_refuses_in_ci(settings, reep):
     ctx = make_ctx(settings.model_copy(update={"ci": True}), reep)
     with pytest.raises(SourceDisabled):
@@ -191,21 +201,25 @@ def test_transfermarkt_refresher_refuses_in_ci(settings, reep):
 
 
 def test_transfermarkt_pool_refresher(settings, reep, tmp_path, monkeypatch):
-    """Clubs from the competition page, one squad page each; league rows kept; a taken slug gets the suffix."""
-    path = tmp_path / "squads.csv"
+    """Clubs from the competition page, then per club its performance page (last season's league minutes) and its
+    squad page; league rows kept; a taken slug gets the suffix; minutes land in their own file and the ledger."""
+    path, minutes = tmp_path / "squads.csv", tmp_path / "minutes.csv"
     write_squads_csv(
         [{"tm_player_id": "9", "name": "Kept", "tm_club_id": "11", "club_id": "arsenal", "comp": "GB1"}], path
     )
     monkeypatch.setattr(transfermarkt, "SQUADS_CSV", path)
+    monkeypatch.setattr(transfermarkt, "MINUTES_CSV", minutes)
     monkeypatch.setattr(transfermarkt, "attach_catalogue", lambda con: False)
     seen = []
 
     def handler(req):
-        seen.append(req.url.path)
+        seen.append(req.url.raw_path.decode())
         if req.url.path == "/robots.txt":
             return httpx.Response(200, text="User-agent: wget\nDisallow: /\n\nUser-agent: *\nAllow: /\n")
         if "/wettbewerb/GB2/" in req.url.path:
             return httpx.Response(200, content=sample("transfermarkt_wettbewerb_GB2.html"))
+        if "/leistungsdaten/" in req.url.path:
+            return httpx.Response(200, content=sample("transfermarkt_leistungsdaten.html"))
         return httpx.Response(200, content=sample("transfermarkt_kader_31.html"))
 
     ctx = make_ctx(settings, reep)
@@ -214,10 +228,12 @@ def test_transfermarkt_pool_refresher(settings, reep, tmp_path, monkeypatch):
         "INSERT INTO clubs (club_id, name, league, season, updated_at) VALUES ('west-ham-united', 'West Ham', 'x', '2026-27', now())"
     )
     out = _run(TransfermarktPoolRefresher, ctx)
-    assert out == {"clubs": 2, "transfermarkt_squads_csv": 6}
+    assert out == {"clubs": 2, "transfermarkt_squads_csv": 6, "transfermarkt_minutes_csv": 4}
     assert [p for p in seen if p != "/robots.txt"] == [
         "/-/startseite/wettbewerb/GB2/saison_id/2026",
+        "/-/leistungsdaten/verein/379/reldata/GB2%262025/plus/1",
         "/-/kader/verein/379/saison_id/2026/plus/1",
+        "/-/leistungsdaten/verein/1112/reldata/GB2%262025/plus/1",
         "/-/kader/verein/1112/saison_id/2026/plus/1",
     ]
     rows = read_squads_csv(path)
@@ -225,6 +241,13 @@ def test_transfermarkt_pool_refresher(settings, reep, tmp_path, monkeypatch):
     pool = [r for r in rows if r["comp"] == "GB2"]
     assert {r["club_name"] for r in pool} == {"West Ham United", "Wrexham AFC"}
     assert all(r["position"] == "Goalkeeper" and r["market_value_eur"] for r in pool)
+    mins = read_squads_csv(minutes)  # used players only, with the page and the day it was read
+    assert {(r["tm_player_id"], r["minutes"], r["season"]) for r in mins} == {
+        ("503769", "3421", "2025-26"),
+        ("111", "2105", "2025-26"),
+    }
+    assert all(r["source_url"].endswith("/plus/1") and r["scraped_on"] for r in mins)
+    assert TransfermarktFileAdapter(ctx).minutes_evidence(minutes) == 4
 
 
 def test_transfermarkt_file_adapter_reads_committed_csv(ctx, tmp_path):
@@ -246,7 +269,7 @@ def test_transfermarkt_file_adapter_reads_committed_csv(ctx, tmp_path):
         ],
         path,
     )
-    out = TransfermarktFileAdapter(ctx).ingest(path=path)
+    out = TransfermarktFileAdapter(ctx).ingest(path=path, minutes=tmp_path / "no_minutes.csv")
     assert out == {"market_values": 1, "contracts": 1, "evidence_ledger": 1}
 
 

@@ -93,7 +93,9 @@ def cmd_refresh_values(args) -> int:
         )  # clubs + TM ids first
         job = run(ctx, [squads, "transfermarkt", "transfermarkt_file"])
     print(format_report(job))
-    print("Commit data/reference/transfermarkt_squads.csv (and transfermarkt_minutes.csv) so CI can use them.")
+    print(
+        "Commit data/reference/transfermarkt_squads.csv (and transfermarkt_minutes.csv) so CI can use them."
+    )
     return 0 if all(r.ok for r in job.results) else 1
 
 
