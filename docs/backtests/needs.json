@@ -1,0 +1,689 @@
+{
+  "generated_at": "2026-10-18T16:48:08+00:00",
+  "as_of": "2026-06-01",
+  "window_end": "2026-09-15",
+  "signings": 163,
+  "signings_without_position": 8,
+  "changed_today": 11,
+  "changed_june": 14,
+  "clubs": 20,
+  "hit_rate": {
+    "played": {
+      "before": 0.9,
+      "after": 0.95,
+      "random": 0.924,
+      "clubs": 20
+    },
+    "listed": {
+      "before": 0.9,
+      "after": 0.9,
+      "random": 0.893,
+      "clubs": 20
+    }
+  },
+  "rows": [
+    {
+      "club": "arsenal",
+      "today_before": [
+        "defensive midfield",
+        "goalkeeper"
+      ],
+      "today_after": [
+        "centre-forward",
+        "goalkeeper"
+      ],
+      "june_before": [
+        "centre-back",
+        "defensive midfield"
+      ],
+      "june_after": [
+        "centre-forward",
+        "defensive midfield"
+      ],
+      "signings": [
+        "Bruno Guimarães (central midfield, defensive midfield)",
+        "Christos Tzolis (winger)",
+        "Ezri Konsa (centre-back)",
+        "Illan Meslier (goalkeeper)",
+        "Piero Hincapié (centre-back, full-back)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": false
+    },
+    {
+      "club": "aston-villa",
+      "today_before": [
+        "centre-back",
+        "central midfield"
+      ],
+      "today_after": [
+        "centre-back",
+        "central midfield"
+      ],
+      "june_before": [
+        "goalkeeper",
+        "winger"
+      ],
+      "june_after": [
+        "goalkeeper",
+        "central midfield"
+      ],
+      "signings": [
+        "Aaron Wan-Bissaka (full-back, winger)",
+        "Alejandro Garnacho (winger)",
+        "Ibrahim Mbaye (winger)",
+        "Johan Manzambi (central midfield)",
+        "João Gomes (central midfield, defensive midfield)",
+        "Leon Goretzka (central midfield)",
+        "Matteo Ruggeri (full-back, winger)",
+        "Modou Kéba Cissé (centre-back)",
+        "Nicolas Jackson (centre-forward)",
+        "Taylor Harwood-Bellis (centre-back)",
+        "Zion Suzuki (goalkeeper)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "bournemouth",
+      "today_before": [
+        "defensive midfield",
+        "goalkeeper"
+      ],
+      "today_after": [
+        "centre-back",
+        "goalkeeper"
+      ],
+      "june_before": [
+        "defensive midfield",
+        "centre-back"
+      ],
+      "june_after": [
+        "centre-back",
+        "defensive midfield"
+      ],
+      "signings": [
+        "António Silva (centre-back)",
+        "Michele Di Gregorio (goalkeeper)",
+        "Álvaro Rodríguez (centre-forward)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "brentford",
+      "today_before": [
+        "defensive midfield",
+        "centre-back"
+      ],
+      "today_after": [
+        "defensive midfield",
+        "centre-back"
+      ],
+      "june_before": [
+        "defensive midfield",
+        "centre-back"
+      ],
+      "june_after": [
+        "defensive midfield",
+        "centre-back"
+      ],
+      "signings": [
+        "Callum Wilson (centre-forward)",
+        "El Hadji Malick Diouf (full-back, winger)",
+        "Jaidon Anthony (winger)",
+        "Jannik Schuster (centre-back)",
+        "Mamadou Sangaré (central midfield)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "brighton-hove-albion",
+      "today_before": [
+        "central midfield",
+        "defensive midfield"
+      ],
+      "today_after": [
+        "central midfield",
+        "centre-forward"
+      ],
+      "june_before": [
+        "centre-forward",
+        "central midfield"
+      ],
+      "june_after": [
+        "centre-forward",
+        "central midfield"
+      ],
+      "signings": [
+        "Chema Andrés (defensive midfield)",
+        "Costinha (full-back, winger)",
+        "Jaouen Hadjam (full-back)",
+        "Luka Vušković (centre-back)",
+        "Matías Orozco (defensive midfield)",
+        "Michael Svoboda (centre-back)",
+        "Pascal Struijk (centre-back)",
+        "Promise David (centre-forward)",
+        "Zadok Yohanna (winger)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "chelsea",
+      "today_before": [
+        "goalkeeper",
+        "central midfield"
+      ],
+      "today_after": [
+        "central midfield",
+        "goalkeeper"
+      ],
+      "june_before": [
+        "goalkeeper",
+        "centre-back"
+      ],
+      "june_after": [
+        "goalkeeper",
+        "centre-back"
+      ],
+      "signings": [
+        "Danny Welbeck (centre-forward)",
+        "Dastan Satpayev (centre-forward, winger)",
+        "Emiliano Martínez (goalkeeper)",
+        "Emmanuel Emegha (centre-forward)",
+        "Geovany Quenda (winger)",
+        "Honest Ahanor (centre-back)",
+        "Jordan Henderson (defensive midfield)",
+        "Marco Palestra (winger)",
+        "Maxence Lacroix (centre-back)",
+        "Morgan Rogers (central midfield, winger)",
+        "Pep Chavarría (full-back)",
+        "Valentín Barco (central midfield)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "coventry-city",
+      "today_before": [
+        "defensive midfield",
+        "goalkeeper"
+      ],
+      "today_after": [
+        "defensive midfield",
+        "goalkeeper"
+      ],
+      "june_before": [
+        "goalkeeper",
+        "defensive midfield"
+      ],
+      "june_after": [
+        "goalkeeper",
+        "winger"
+      ],
+      "signings": [
+        "Aurèle Amenda (centre-back)",
+        "Caleb Yirenkyi (central midfield, defensive midfield)",
+        "Carl Rushworth (goalkeeper)",
+        "Dan Bentley (goalkeeper)",
+        "Ethan Pinnock (centre-back)",
+        "Frank Onyeka (central midfield, defensive midfield)",
+        "Gustavo Hamer (central midfield)",
+        "Loum Tchaouna (centre-forward, winger)",
+        "Sidiki Cherif (centre-forward)",
+        "Stephen Mfuni (centre-back)",
+        "Taiwo Awoniyi (centre-forward)",
+        "Yann Gboho (winger)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "crystal-palace",
+      "today_before": [
+        "central midfield",
+        "full-back"
+      ],
+      "today_after": [
+        "full-back",
+        "central midfield"
+      ],
+      "june_before": [
+        "central midfield",
+        "winger"
+      ],
+      "june_after": [
+        "central midfield",
+        "full-back"
+      ],
+      "signings": [
+        "Anan Khalaili (winger)",
+        "Axel Disasi (centre-back)",
+        "Ben Chilwell (full-back, winger)",
+        "Darío Osorio (winger)",
+        "Dwight McNeil (winger)",
+        "Evann Guessand (centre-forward, winger)",
+        "Honest Ahanor (centre-back)",
+        "Quinten Timber (central midfield)",
+        "Takehiro Tomiyasu (full-back)",
+        "Zavier Gozo (winger)",
+        "Óscar Mingueza (full-back, winger)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "everton",
+      "today_before": [
+        "centre-back",
+        "goalkeeper"
+      ],
+      "today_after": [
+        "centre-back",
+        "goalkeeper"
+      ],
+      "june_before": [
+        "centre-back",
+        "goalkeeper"
+      ],
+      "june_after": [
+        "goalkeeper",
+        "centre-back"
+      ],
+      "signings": [
+        "Ainsley Maitland-Niles (full-back)",
+        "Brennan Johnson (winger)",
+        "Christian Nørgaard (defensive midfield)",
+        "Jack Grealish (winger)",
+        "Merlin Röhl (central midfield, winger)",
+        "Tyrique George (centre-forward, winger)"
+      ],
+      "hit_before_played": false,
+      "hit_after_played": false,
+      "hit_before_listed": false,
+      "hit_after_listed": false
+    },
+    {
+      "club": "fulham",
+      "today_before": [
+        "goalkeeper",
+        "winger"
+      ],
+      "today_after": [
+        "goalkeeper",
+        "defensive midfield"
+      ],
+      "june_before": [
+        "goalkeeper",
+        "centre-forward"
+      ],
+      "june_after": [
+        "goalkeeper",
+        "centre-forward"
+      ],
+      "signings": [
+        "César Palacios (central midfield)",
+        "David Affengruber (centre-back)",
+        "Gonzalo García (centre-forward)",
+        "Hugo Larsson (central midfield, defensive midfield)",
+        "Jonah Kusi-Asare (centre-forward)",
+        "Manuel Ángel (central midfield)",
+        "Shea Charles (defensive midfield)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "hull-city",
+      "today_before": [
+        "full-back",
+        "defensive midfield"
+      ],
+      "today_after": [
+        "full-back",
+        "centre-back"
+      ],
+      "june_before": [
+        "defensive midfield",
+        "full-back"
+      ],
+      "june_after": [
+        "full-back",
+        "centre-back"
+      ],
+      "signings": [
+        "Brooke Norton-Cuffy (full-back, winger)",
+        "Christos Mouzakitis (central midfield)",
+        "Elliot Stroud (winger)",
+        "Hidemasa Morita (central midfield, defensive midfield)",
+        "Ilyas Ansah (central midfield, centre-forward, winger)",
+        "Jack Butland (goalkeeper)",
+        "Jens Hjertø-Dahl (central midfield)",
+        "Joe Gelhardt (centre-forward)",
+        "Konstantinos Tzolakis (goalkeeper)",
+        "Lucas Gourna-Douath (defensive midfield)",
+        "Lucas Herrington (centre-back)",
+        "Matt Targett (full-back)",
+        "Mohamed-Ali Cho (centre-forward, winger)",
+        "Nobel Mendy (centre-back)",
+        "Robinio Vaz (centre-forward)",
+        "Sorba Thomas (winger)",
+        "Tim Iroegbunam (central midfield, defensive midfield)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "ipswich-town",
+      "today_before": [
+        "goalkeeper",
+        "defensive midfield"
+      ],
+      "today_after": [
+        "goalkeeper",
+        "centre-forward"
+      ],
+      "june_before": [
+        "defensive midfield",
+        "centre-back"
+      ],
+      "june_after": [
+        "defensive midfield",
+        "centre-back"
+      ],
+      "signings": [
+        "Abdoul Ouattara (full-back, winger)",
+        "Abdul Fatawu (winger)",
+        "Chuba Akpom (centre-forward, winger)",
+        "Cédric Kipré (centre-back)",
+        "Daizen Maeda (winger)",
+        "Emersonn (centre-forward)",
+        "Exequiel Palacios (central midfield, defensive midfield)",
+        "Florentino Luís (defensive midfield)",
+        "Issa Diop (centre-back)",
+        "Julio Enciso (central midfield)",
+        "Kayne van Oevelen (goalkeeper)",
+        "Kjell Scherpen (goalkeeper)",
+        "Saša Lukić (central midfield, defensive midfield)",
+        "Zian Flemming (centre-forward)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "leeds-united",
+      "today_before": [
+        "central midfield",
+        "centre-forward"
+      ],
+      "today_after": [
+        "central midfield",
+        "full-back"
+      ],
+      "june_before": [
+        "goalkeeper",
+        "winger"
+      ],
+      "june_after": [
+        "goalkeeper",
+        "full-back"
+      ],
+      "signings": [
+        "Harry Wilson (winger)",
+        "James Trafford (goalkeeper)",
+        "Jean-Mattéo Bahoya (winger)",
+        "Melvin Bard (full-back, winger)",
+        "Michael Zetterer (goalkeeper)",
+        "Nico Elvedi (centre-back)",
+        "Tarik Muharemović (centre-back)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "liverpool",
+      "today_before": [
+        "full-back",
+        "defensive midfield"
+      ],
+      "today_after": [
+        "full-back",
+        "defensive midfield"
+      ],
+      "june_before": [
+        "centre-back",
+        "defensive midfield"
+      ],
+      "june_after": [
+        "centre-back",
+        "full-back"
+      ],
+      "signings": [
+        "Bradley Barcola (winger)",
+        "Jérémy Jacquet (centre-back)",
+        "Lucca Brughmans (goalkeeper)",
+        "Ronald Araújo (centre-back)",
+        "Víctor Muñoz (winger)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "manchester-city",
+      "today_before": [
+        "defensive midfield",
+        "goalkeeper"
+      ],
+      "today_after": [
+        "goalkeeper",
+        "defensive midfield"
+      ],
+      "june_before": [
+        "central midfield",
+        "defensive midfield"
+      ],
+      "june_after": [
+        "defensive midfield",
+        "central midfield"
+      ],
+      "signings": [
+        "Allan (winger)",
+        "Ayyoub Bouaddi (central midfield)",
+        "Elliot Anderson (central midfield, defensive midfield)",
+        "Enzo Fernández (central midfield)",
+        "Gerónimo Rulli (goalkeeper)",
+        "Iliman Ndiaye (winger)",
+        "Jeremy Monga (winger)",
+        "Pierce Charles (goalkeeper)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "manchester-united",
+      "today_before": [
+        "full-back",
+        "centre-back"
+      ],
+      "today_after": [
+        "full-back",
+        "centre-back"
+      ],
+      "june_before": [
+        "defensive midfield",
+        "central midfield"
+      ],
+      "june_after": [
+        "full-back",
+        "defensive midfield"
+      ],
+      "signings": [
+        "Andrey Santos (central midfield, defensive midfield)",
+        "Carlos Baleba (defensive midfield)",
+        "Karl Darlow (goalkeeper)",
+        "Tynan Thompson (winger)",
+        "Youri Tielemans (central midfield, defensive midfield)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "newcastle-united",
+      "today_before": [
+        "goalkeeper",
+        "centre-back"
+      ],
+      "today_after": [
+        "goalkeeper",
+        "centre-back"
+      ],
+      "june_before": [
+        "goalkeeper",
+        "centre-back"
+      ],
+      "june_after": [
+        "goalkeeper",
+        "centre-back"
+      ],
+      "signings": [
+        "Aladji Bamba (defensive midfield)",
+        "Amar Dedić (full-back)",
+        "Bazoumana Touré (winger)",
+        "Lukáš Horníček (goalkeeper)",
+        "Matias Fernandez-Pardo (centre-forward, winger)",
+        "Nico González (central midfield, defensive midfield)",
+        "Sean Steur (central midfield)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "nottingham-forest",
+      "today_before": [
+        "goalkeeper",
+        "defensive midfield"
+      ],
+      "today_after": [
+        "goalkeeper",
+        "defensive midfield"
+      ],
+      "june_before": [
+        "goalkeeper",
+        "defensive midfield"
+      ],
+      "june_after": [
+        "goalkeeper",
+        "centre-forward"
+      ],
+      "signings": [
+        "Daniel Muñoz (full-back, winger)",
+        "Liam Delap (centre-forward)",
+        "Ousmane Diomande (centre-back)",
+        "Xaver Schlager (central midfield)"
+      ],
+      "hit_before_played": false,
+      "hit_after_played": true,
+      "hit_before_listed": false,
+      "hit_after_listed": true
+    },
+    {
+      "club": "sunderland",
+      "today_before": [
+        "defensive midfield",
+        "centre-back"
+      ],
+      "today_after": [
+        "full-back",
+        "defensive midfield"
+      ],
+      "june_before": [
+        "defensive midfield",
+        "centre-back"
+      ],
+      "june_after": [
+        "defensive midfield",
+        "full-back"
+      ],
+      "signings": [
+        "Dayann Methalie (winger)",
+        "Jules Ahoka (defensive midfield)",
+        "Kevin Danso (centre-back)",
+        "Malick Fofana (winger)",
+        "Thomas Meunier (full-back)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    },
+    {
+      "club": "tottenham-hotspur",
+      "today_before": [
+        "goalkeeper",
+        "full-back"
+      ],
+      "today_after": [
+        "goalkeeper",
+        "full-back"
+      ],
+      "june_before": [
+        "centre-forward",
+        "full-back"
+      ],
+      "june_after": [
+        "defensive midfield",
+        "full-back"
+      ],
+      "signings": [
+        "Andy Robertson (full-back)",
+        "Jan Paul van Hecke (centre-back)",
+        "Marcos Senesi (centre-back)",
+        "Martin Dúbravka (goalkeeper)",
+        "Mateus Fernandes (central midfield)",
+        "Mykhailo Mudryk (winger)",
+        "Omar Marmoush (centre-forward)",
+        "Sandro Tonali (central midfield, defensive midfield)",
+        "Sávio (winger)",
+        "Tosin Adarabioyo (centre-back)"
+      ],
+      "hit_before_played": true,
+      "hit_after_played": true,
+      "hit_before_listed": true,
+      "hit_after_listed": true
+    }
+  ]
+}
