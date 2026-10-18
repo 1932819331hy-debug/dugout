@@ -7,6 +7,7 @@ Each block uses exactly the model configuration that was backtested (docs/backte
 
 from __future__ import annotations
 
+import json
 import logging
 from collections.abc import Iterable
 from datetime import UTC, datetime
@@ -472,6 +473,72 @@ def injury_risk(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
         tier = next(name for cut, name in TIERS if q < cut)
         out.append(_row("injury", "player", pid, "injury_risk_tier", tier, now))
         out.append(_row("injury", "player", pid, "injury_risk_percentile", round(float(q), 3), now))
+    return out + injury_risk_other(con, now)
+
+
+def injury_risk_other(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
+    """Leagues without FPL: no current minutes, so the history-only model (age, position, injury record) pooled
+    over the six leagues, for the leagues its validation scored (docs/backtests/injury.md). The record is the free
+    plan's 2022-24 lists plus the absences API-Football lists each night. Tier = percentile among the league's
+    current squad players. Published under the id the shortlists use (Reep, else transfermarkt:<id>)."""
+    from dugout_models.injury import (
+        BACKTEST_JSON,
+        PL,
+        _injury_rows,
+        attach_tm_facts,
+        build,
+        episodes,
+        history_features,
+        history_model,
+        injury_episodes,
+        other_leagues,
+    )
+    from dugout_models.market import _tm_to_reep
+
+    try:
+        report = json.loads(BACKTEST_JSON.read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        log.warning("injury backtest report missing: other leagues not scored")
+        return []
+    scored = [lg for lg in other_leagues() if report.get("leagues", {}).get(lg, {}).get("scored")]
+    if not scored:
+        return []
+    names = [PL, *other_leagues()]
+    frames = pd.concat([build(con, lg) for lg in names], ignore_index=True)
+    model, cols = history_model(frames, names)
+    squads = con.execute(
+        """SELECT p.player_id, c.league, e.external_id AS tm_id FROM players p JOIN clubs c USING (club_id)
+           JOIN entity_ids e ON e.entity_type = 'player' AND e.dugout_id = p.player_id
+                AND e.provider = 'transfermarkt' AND e.namespace = 'spieler'
+           WHERE c.league IN (SELECT unnest(?))""",
+        [scored],
+    ).df()
+    tm_of = squads.drop_duplicates("player_id").set_index("player_id").tm_id
+    live = con.execute(
+        """SELECT player_id, CAST(snapshot_date AS DATE) AS date, reason, news AS type FROM injuries
+           WHERE source = 'api_football' AND status = 'unavailable'"""
+    ).df()
+    live = live.assign(type="Missing Fixture", player_id=live.player_id.map(tm_of)).dropna(subset=["player_id"])
+    ep = injury_episodes(scored[0])  # every league's lists, keyed by Transfermarkt id
+    if len(live):
+        live = _injury_rows(live.assign(date=pd.to_datetime(live.date)))
+        ep = pd.concat([ep, episodes(live[["player_id", "date", "reason"]])], ignore_index=True)
+        ep = ep.sort_values(["player_id", "date"]).reset_index(drop=True)
+    today = pd.Timestamp(now.date())
+    p = squads.drop_duplicates("tm_id").rename(columns={"tm_id": "player_id"}).assign(date=today)
+    p = attach_tm_facts(history_features(p.reset_index(drop=True), ep, label=False)).dropna(subset=["age"])
+    p["age2"] = (p.age - 27) ** 2
+    p = p.assign(**{f"lg_{lg}": (p.league == lg).astype(float) for lg in names})
+    p["risk"] = model.predict_proba(p[cols])[:, 1]
+    reep = _tm_to_reep(con)
+    out = []
+    for _, g in p.groupby("league"):
+        pct = g.risk.rank(pct=True, method="max").to_numpy()
+        for tm, q in zip(g.player_id, pct, strict=True):
+            pid = reep.get(tm, f"transfermarkt:{tm}")
+            tier = next(name for cut, name in TIERS if q < cut)
+            out.append(_row("injury", "player", pid, "injury_risk_tier", tier, now, "record"))
+            out.append(_row("injury", "player", pid, "injury_risk_percentile", round(float(q), 3), now, "record"))
     return out
 
 
