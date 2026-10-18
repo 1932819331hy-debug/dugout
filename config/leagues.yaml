@@ -145,6 +145,9 @@ candidate_pools:
     season_start_year: 2026
     transfermarkt: GB2
     slug_suffix: efl
+    # last season's league appearances and minutes (one performance page per club; the dataset has no GB2 games),
+    # spread over that season's dates for the minutes-based models (dugout_models.market)
+    stats_season: {season: "2025-26", year: 2025, first: "2025-08-08", last: "2026-05-02", matchdays: 46}
 
 # Names providers use that a generic normaliser cannot reconcile. Keys are normalised names.
 club_aliases:
