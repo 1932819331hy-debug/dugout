@@ -518,7 +518,9 @@ def injury_risk_other(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dic
         """SELECT player_id, CAST(snapshot_date AS DATE) AS date, reason, news AS type FROM injuries
            WHERE source = 'api_football' AND status = 'unavailable'"""
     ).df()
-    live = live.assign(type="Missing Fixture", player_id=live.player_id.map(tm_of)).dropna(subset=["player_id"])
+    live = live.assign(type="Missing Fixture", player_id=live.player_id.map(tm_of)).dropna(
+        subset=["player_id"]
+    )
     ep = injury_episodes(scored[0])  # every league's lists, keyed by Transfermarkt id
     if len(live):
         live = _injury_rows(live.assign(date=pd.to_datetime(live.date)))
@@ -539,7 +541,9 @@ def injury_risk_other(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dic
             pid = reep.get(tm, f"transfermarkt:{tm}")
             tier = next(name for cut, name in TIERS if q < cut)
             out.append(_row("injury", "player", pid, "injury_risk_tier", tier, now, "record"))
-            out.append(_row("injury", "player", pid, "injury_risk_percentile", round(float(q), 3), now, "record"))
+            out.append(
+                _row("injury", "player", pid, "injury_risk_percentile", round(float(q), 3), now, "record")
+            )
     return out
 
 
