@@ -85,7 +85,7 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     BBC gossip / FBref not used (terms / robots), see docs/sources.md.
   - Site: general homepage + "Choose your club" (/clubs/), /story/<club>/ for every club with a picker; chapter
     three shows the three lists and rumours.
-  - Not done / ideas: needs model still groups the squad by primary position only; injury tier not used to filter
+  - Not done / ideas: (needs on played positions: done 2026-10-19); injury tier not used to filter
     candidates (no injury model for non-PL players); manager formation history (TM games table) unused.
 
 - **Phase 6 (in progress, 2026-10-16), branch `valuation-and-research`:**
@@ -147,7 +147,7 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     transfer history (`COVERED_ONLY`, chosen on validation 2023). Mobility AUC 0.764 / Brier 0.0672 vs 0.750 /
     0.0703 on the same test rows; destination 0.733 vs 0.749, the old figure was hindsight (buyer squads counted by
     today's club). Market frames are re-cached (`clubs="dated"`). Live scoring still uses today's club (correct).
-  - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big
+  - **Next, in order:** (1) needs model on played positions (done 2026-10-19, below); (2) API-Football injury history for other big
     leagues; (3) Championship squads via local refresh; (4) conformal ranges on fair fees; (5) rumour news signal
     for realism (PRIORS["news_weight_per_point"] is a prior; the archive can now fit it).
   - User wants: product voice everywhere (no "model" wording on the site), realistic targets, all major leagues,
@@ -229,6 +229,20 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     side; lineup.md); secrets are stripped of whitespace and a skipped LLM provider is logged with its HTTP status
     (CI used Laguna, not Groq, on 2026-10-17: check the next nightly's log for "LLM ... skipped").
   - Nightly with warm caches: 39 min (club_news backlog filled, Fact-Check cache warm).
+
+- **Needs on played positions (2026-10-19, branch `claude/needs-played-positions-326485`, backlog item 1):**
+  - `market.needs` counts depth where players start (transfermarkt-datasets starting XIs): a player counts in each
+    group with 25%+ of his starts, weighted by share and renormalised to one player (`positions.group_weights`); under
+    10 recorded starts (`GROUP_STARTS`) he counts at his listed position. Best option, last regular starter, veterans'
+    share and the six peer squads use the same grouping; `Market.at(club, group)` = everyone who starts there.
+    `squad().group` is now the group he starts in most. Shortlist incumbents and the gem bar (lookup.py) follow.
+  - `need_depth` is starts-weighted, one decimal ("options add up to 2.6 players"); site copy and agent templates say
+    "counted by where they start".
+  - needs.md (`dugout-models backtest needs`): top two change at 11 of 20 PL clubs. June 2026 needs vs summer
+    signings: per need 72% (played) vs 75% (listed), random 74%: no measurable gain (negative result, reported).
+    The 1 June squads are rebuilt from today's squad file + wiki_transfers.
+  - `data/raw` in the main checkout was found empty on 2026-10-18 ~22:00 and only `transfermarkt/` came back
+    (re-downloaded 22:05); other raw sources need a re-fetch before jobs that use them.
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.

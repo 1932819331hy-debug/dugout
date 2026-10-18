@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T16:48:08+00:00",
+  "generated_at": "2026-10-18T18:37:28+00:00",
   "as_of": "2026-06-01",
   "window_end": "2026-09-15",
   "signings": 163,
@@ -19,6 +19,22 @@
       "after": 0.9,
       "random": 0.893,
       "clubs": 20
+    }
+  },
+  "need_hit_rate": {
+    "played": {
+      "before": 0.75,
+      "after": 0.725,
+      "first_before": 0.75,
+      "first_after": 0.7,
+      "random": 0.743
+    },
+    "listed": {
+      "before": 0.675,
+      "after": 0.675,
+      "first_before": 0.75,
+      "first_after": 0.65,
+      "random": 0.686
     }
   },
   "rows": [

@@ -1,6 +1,6 @@
 # Squad needs: played positions vs listed positions
 
-Generated 2026-10-18T16:48:08+00:00 by `uv run dugout-models backtest needs` (dugout_models/needs_backtest.py).
+Generated 2026-10-18T18:37:28+00:00 by `uv run dugout-models backtest needs` (dugout_models/needs_backtest.py).
 
 **What changed.** A squad's depth at each position group used to count every player once, at his listed Transfermarkt position. It now counts him where he actually starts (transfermarkt-datasets starting XIs since 2023-24): in every group with 25%+ of his starts, weighted by his share there. Players with fewer than 10 recorded starts (new signings from leagues the dataset lacks, youngsters) stay at their listed position. The six comparison squads are grouped the same way.
 
@@ -40,6 +40,13 @@ Needs as of 2026-06-01 (squads rebuilt to that day, see the module docstring), s
 | played positions | 20 | 90% | 95% | 92% |
 | listed positions | 20 | 90% | 90% | 89% |
 
+Club level is a weak test: clubs signed in several groups, so two random groups already hit most of the time. Per need is sharper: of the forty (club, need) pairs, the share where the club signed someone in that group, against the share of the seven groups the club bought in (random).
+
+| Signing's group counted by | Both needs, before | Both needs, after | First need, before | First need, after | Random group |
+|---|---|---|---|---|---|
+| played positions | 75% | 72% | 75% | 70% | 74% |
+| listed positions | 68% | 68% | 75% | 65% | 69% |
+
 | Club | June needs, before | June needs, after | Signed (groups where he starts) | Hit before | Hit after |
 |---|---|---|---|---|---|
 | arsenal | centre-back · defensive midfield | centre-forward · defensive midfield | Bruno Guimarães (central midfield, defensive midfield); Christos Tzolis (winger); Ezri Konsa (centre-back); Illan Meslier (goalkeeper); Piero Hincapié (centre-back, full-back) | yes | yes |
@@ -62,3 +69,23 @@ Needs as of 2026-06-01 (squads rebuilt to that day, see the module docstring), s
 | nottingham-forest | goalkeeper · defensive midfield | goalkeeper · centre-forward | Daniel Muñoz (full-back, winger); Liam Delap (centre-forward); Ousmane Diomande (centre-back); Xaver Schlager (central midfield) | no | yes |
 | sunderland | defensive midfield · centre-back | defensive midfield · full-back | Dayann Methalie (winger); Jules Ahoka (defensive midfield); Kevin Danso (centre-back); Malick Fofana (winger); Thomas Meunier (full-back) | yes | yes |
 | tottenham-hotspur | centre-forward · full-back | defensive midfield · full-back | Andy Robertson (full-back); Jan Paul van Hecke (centre-back); Marcos Senesi (centre-back); Martin Dúbravka (goalkeeper); Mateus Fernandes (central midfield); Mykhailo Mudryk (winger); Omar Marmoush (centre-forward); Sandro Tonali (central midfield, defensive midfield); Sávio (winger); Tosin Adarabioyo (centre-back) | yes | yes |
+
+## Checked by hand
+
+- **Liverpool**: June needs centre-back and defensive midfield (listed) became centre-back and full-back
+  (played). They signed two centre-backs (Jérémy Jacquet; Ronald Araújo on loan) and wingers, no full-back and no
+  holding midfielder: need one met either way, need two missed either way.
+- **Nottingham Forest**: goalkeeper and defensive midfield (listed) vs goalkeeper and centre-forward (played).
+  They signed Liam Delap (centre-forward): a hit only with played positions.
+- **Everton**: centre-back and goalkeeper with both groupings; they signed wingers, a full-back and a holding
+  midfielder instead: a miss either way.
+- **Manchester United**: defensive and central midfield (listed) vs full-back and defensive midfield (played).
+  They signed Carlos Baleba, Andrey Santos and Youri Tielemans: listed positions call both needs, played positions
+  one (no full-back came).
+- **Tottenham**: centre-forward and full-back (listed) vs defensive midfield and full-back (played). Omar Marmoush,
+  Andy Robertson and Sandro Tonali make both groupings two for two.
+
+**Verdict.** Played positions change the top two at about half the clubs and describe squads more truthfully (a
+centre-back who plays right-back now covers full-back), but they do not predict what clubs then bought any better
+than listed positions, and neither beats random picks: clubs sign across most groups in a window, and a need is
+only one reason to buy. Kept for its description of the squad, not for a measured gain.

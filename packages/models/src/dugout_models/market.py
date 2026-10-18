@@ -8,7 +8,8 @@ their latest transfermarkt-datasets valuation.
   fair_fee              valuation model (docs/backtests/valuation.md): price if sold to another club in the same
                         league (the model is fitted on buyers in every league; Premier League buyers are a segment)
   sale_likelihood       mobility model (realism.md): P(sold for a fee in a transfer window), features as of today
-  needs                 positions where the club is thinnest/weakest (heuristic: depth and value at the position)
+  needs                 positions where the club is thinnest/weakest (heuristic: depth and value at the position,
+                        players counted where they start: positions.group_weights; needs.md)
   shortlist             three lists per need, from first-tier players in every league the dataset covers.
                         best: highest market value among players the playing-time model (opportunity.md) expects
                         to get at least 40% of the club's minutes, whatever the cost or the odds.

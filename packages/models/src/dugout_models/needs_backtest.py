@@ -184,6 +184,29 @@ def backtest(
     return report
 
 
+# Read against the June table by hand on 2026-10-19 (Wikipedia's lists; groups by where each signing starts).
+HAND_CHECKS = """## Checked by hand
+
+- **Liverpool**: June needs centre-back and defensive midfield (listed) became centre-back and full-back
+  (played). They signed two centre-backs (Jérémy Jacquet; Ronald Araújo on loan) and wingers, no full-back and no
+  holding midfielder: need one met either way, need two missed either way.
+- **Nottingham Forest**: goalkeeper and defensive midfield (listed) vs goalkeeper and centre-forward (played).
+  They signed Liam Delap (centre-forward): a hit only with played positions.
+- **Everton**: centre-back and goalkeeper with both groupings; they signed wingers, a full-back and a holding
+  midfielder instead: a miss either way.
+- **Manchester United**: defensive and central midfield (listed) vs full-back and defensive midfield (played).
+  They signed Carlos Baleba, Andrey Santos and Youri Tielemans: listed positions call both needs, played positions
+  one (no full-back came).
+- **Tottenham**: centre-forward and full-back (listed) vs defensive midfield and full-back (played). Omar Marmoush,
+  Andy Robertson and Sandro Tonali make both groupings two for two.
+
+**Verdict.** Played positions change the top two at about half the clubs and describe squads more truthfully (a
+centre-back who plays right-back now covers full-back), but they do not predict what clubs then bought any better
+than listed positions, and neither beats random picks: clubs sign across most groups in a window, and a need is
+only one reason to buy. Kept for its description of the squad, not for a measured gain.
+"""
+
+
 def _markdown(r: dict) -> str:
     def needs(x: list[str]) -> str:
         return " · ".join(x)
@@ -260,5 +283,6 @@ def _markdown(r: dict) -> str:
             for x in r["rows"]
         ],
         "",
+        HAND_CHECKS,
     ]
     return "\n".join(lines)
