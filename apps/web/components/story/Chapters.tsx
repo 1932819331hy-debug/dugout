@@ -165,7 +165,12 @@ export function chapterContent(d: StoryData) {
           </div>
           {d.rumours.length > 0 && (
             <div className="mt-4 max-w-2xl">
-              <p className="mono-label">Linked in the press · rumours, not facts</p>
+              <p className="mono-label">
+                Linked in the press · rumours, not facts ·{" "}
+                <Link className="underline" href="/rumours/">
+                  how often they come true
+                </Link>
+              </p>
               <ul className="mt-1 space-y-0.5 text-sm">
                 {d.rumours.slice(0, 2).map((r) => (
                   <li key={r.text}>

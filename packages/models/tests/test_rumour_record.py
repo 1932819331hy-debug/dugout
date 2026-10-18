@@ -206,3 +206,22 @@ def test_model_learns_from_repeats_and_beats_the_base_rate():
     base = np.full(len(test), train.joined_6m.mean())
     assert R.scores(m.predict(test), yt)["brier"] < R.scores(base, yt)["brier"]
     assert m.features == R.FEATURES and "outlet_logit" not in m.features
+
+
+def test_site_summary_adds_up(tmp_path):
+    import json
+
+    rng = np.random.default_rng(1)
+    n = 3000
+    x = pd.DataFrame({f: rng.normal(size=n) for f in R.FEATURES})
+    x["outlet"] = rng.choice(["The Sun", "The Guardian", "Tiny Gazette"], n, p=[0.3, 0.695, 0.005])
+    x["season"] = rng.integers(2015, 2024, n)
+    x["joined_6m"] = rng.random(n) < 0.15
+    m = R.RumourModel.fit(x, "joined_6m")
+    doc = R.site_summary(x, m, "joined_6m", pd.Timestamp("2026-10-18", tz="UTC").to_pydatetime())
+    assert doc["overall"]["links"] == n and doc["overall"]["came_true"] == int(x.joined_6m.sum())
+    assert sum(s["links"] for s in doc["seasons"]) == n
+    assert all(o["links"] >= R.MIN_OUTLET_LINKS for o in doc["outlets"])
+    assert "Tiny Gazette" not in {o["outlet"] for o in doc["outlets"]}  # too few rumours to show a record
+    R.write_site_summary(doc, tmp_path / "rumours.json")
+    assert json.loads((tmp_path / "rumours.json").read_text())["horizon_months"] == R.SHIPPED_HORIZON

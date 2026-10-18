@@ -1,0 +1,356 @@
+{
+ "generated_at": "2026-10-18T16:39:16+00:00",
+ "horizon_months": 6,
+ "first_season": "2004-05",
+ "modern_season": "2020-21",
+ "overall": {
+  "links": 34610,
+  "came_true": 3325,
+  "rate": 0.09607049985553308,
+  "links_modern": 4775,
+  "rate_modern": 0.17151832460732985
+ },
+ "seasons": [
+  {
+   "season": "2004-05",
+   "links": 361,
+   "came_true": 19,
+   "rate": 0.05263157894736842
+  },
+  {
+   "season": "2005-06",
+   "links": 631,
+   "came_true": 28,
+   "rate": 0.044374009508716325
+  },
+  {
+   "season": "2006-07",
+   "links": 1043,
+   "came_true": 55,
+   "rate": 0.052732502396931925
+  },
+  {
+   "season": "2007-08",
+   "links": 807,
+   "came_true": 50,
+   "rate": 0.061957868649318466
+  },
+  {
+   "season": "2008-09",
+   "links": 954,
+   "came_true": 66,
+   "rate": 0.06918238993710692
+  },
+  {
+   "season": "2009-10",
+   "links": 1368,
+   "came_true": 75,
+   "rate": 0.05482456140350877
+  },
+  {
+   "season": "2010-11",
+   "links": 1778,
+   "came_true": 106,
+   "rate": 0.05961754780652419
+  },
+  {
+   "season": "2011-12",
+   "links": 1961,
+   "came_true": 180,
+   "rate": 0.09178990311065782
+  },
+  {
+   "season": "2012-13",
+   "links": 2164,
+   "came_true": 166,
+   "rate": 0.0767097966728281
+  },
+  {
+   "season": "2013-14",
+   "links": 3098,
+   "came_true": 291,
+   "rate": 0.09393156875403486
+  },
+  {
+   "season": "2014-15",
+   "links": 2852,
+   "came_true": 251,
+   "rate": 0.08800841514726508
+  },
+  {
+   "season": "2015-16",
+   "links": 2574,
+   "came_true": 244,
+   "rate": 0.0947940947940948
+  },
+  {
+   "season": "2016-17",
+   "links": 2804,
+   "came_true": 272,
+   "rate": 0.09700427960057062
+  },
+  {
+   "season": "2017-18",
+   "links": 2772,
+   "came_true": 271,
+   "rate": 0.09776334776334776
+  },
+  {
+   "season": "2018-19",
+   "links": 2940,
+   "came_true": 287,
+   "rate": 0.09761904761904762
+  },
+  {
+   "season": "2019-20",
+   "links": 1728,
+   "came_true": 145,
+   "rate": 0.08391203703703703
+  },
+  {
+   "season": "2020-21",
+   "links": 922,
+   "came_true": 124,
+   "rate": 0.13449023861171366
+  },
+  {
+   "season": "2021-22",
+   "links": 648,
+   "came_true": 121,
+   "rate": 0.1867283950617284
+  },
+  {
+   "season": "2022-23",
+   "links": 1003,
+   "came_true": 183,
+   "rate": 0.18245264207377868
+  },
+  {
+   "season": "2023-24",
+   "links": 890,
+   "came_true": 155,
+   "rate": 0.17415730337078653
+  },
+  {
+   "season": "2024-25",
+   "links": 694,
+   "came_true": 122,
+   "rate": 0.17579250720461095
+  },
+  {
+   "season": "2025-26",
+   "links": 618,
+   "came_true": 114,
+   "rate": 0.18446601941747573
+  }
+ ],
+ "outlets": [
+  {
+   "outlet": "The Guardian",
+   "links": 30010,
+   "came_true": 2929,
+   "raw": 0.09760079973342219,
+   "shrunk": 0.09721169758839714
+  },
+  {
+   "outlet": "The Mirror",
+   "links": 890,
+   "came_true": 74,
+   "raw": 0.08314606741573034,
+   "shrunk": 0.08762363815128314
+  },
+  {
+   "outlet": "Daily Mail",
+   "links": 707,
+   "came_true": 50,
+   "raw": 0.07072135785007072,
+   "shrunk": 0.08422055746886473
+  },
+  {
+   "outlet": "The Sun",
+   "links": 561,
+   "came_true": 54,
+   "raw": 0.0962566844919786,
+   "shrunk": 0.09164652247527301
+  },
+  {
+   "outlet": "Daily Star",
+   "links": 302,
+   "came_true": 19,
+   "raw": 0.06291390728476821,
+   "shrunk": 0.0858270378746545
+  },
+  {
+   "outlet": "Daily Express",
+   "links": 175,
+   "came_true": 13,
+   "raw": 0.07428571428571429,
+   "shrunk": 0.08853650017334887
+  },
+  {
+   "outlet": "L'Equipe",
+   "links": 146,
+   "came_true": 13,
+   "raw": 0.08904109589041095,
+   "shrunk": 0.08997936267347278
+  },
+  {
+   "outlet": "The Times",
+   "links": 144,
+   "came_true": 15,
+   "raw": 0.10416666666666667,
+   "shrunk": 0.09120578840743641
+  },
+  {
+   "outlet": "The Telegraph",
+   "links": 135,
+   "came_true": 13,
+   "raw": 0.0962962962962963,
+   "shrunk": 0.09053903410662424
+  },
+  {
+   "outlet": "La Gazzetta dello Sport",
+   "links": 134,
+   "came_true": 13,
+   "raw": 0.09701492537313433,
+   "shrunk": 0.09059025876166461
+  },
+  {
+   "outlet": "Tuttosport",
+   "links": 128,
+   "came_true": 8,
+   "raw": 0.0625,
+   "shrunk": 0.08806032103862267
+  },
+  {
+   "outlet": "Bild",
+   "links": 117,
+   "came_true": 13,
+   "raw": 0.1111111111111111,
+   "shrunk": 0.09147003239005663
+  },
+  {
+   "outlet": "a reporter on X",
+   "links": 105,
+   "came_true": 13,
+   "raw": 0.12380952380952381,
+   "shrunk": 0.09210140834049829
+  },
+  {
+   "outlet": "Sky Sports",
+   "links": 102,
+   "came_true": 10,
+   "raw": 0.09803921568627451,
+   "shrunk": 0.0905319975470365
+  },
+  {
+   "outlet": "Marca",
+   "links": 86,
+   "came_true": 5,
+   "raw": 0.05813953488372093,
+   "shrunk": 0.08846656575821261
+  },
+  {
+   "outlet": "AS",
+   "links": 61,
+   "came_true": 5,
+   "raw": 0.08196721311475409,
+   "shrunk": 0.08977177555278922
+  },
+  {
+   "outlet": "Corriere dello Sport",
+   "links": 58,
+   "came_true": 6,
+   "raw": 0.10344827586206896,
+   "shrunk": 0.09052218837645368
+  },
+  {
+   "outlet": "The Independent",
+   "links": 58,
+   "came_true": 5,
+   "raw": 0.08620689655172414,
+   "shrunk": 0.08993099341653775
+  },
+  {
+   "outlet": "talkSPORT",
+   "links": 58,
+   "came_true": 5,
+   "raw": 0.08620689655172414,
+   "shrunk": 0.08993099341653775
+  },
+  {
+   "outlet": "Evening Standard",
+   "links": 53,
+   "came_true": 2,
+   "raw": 0.03773584905660377,
+   "shrunk": 0.08841877219922063
+  },
+  {
+   "outlet": "Mundo Deportivo",
+   "links": 49,
+   "came_true": 2,
+   "raw": 0.04081632653061224,
+   "shrunk": 0.08862898160181926
+  },
+  {
+   "outlet": "Daily Record",
+   "links": 43,
+   "came_true": 7,
+   "raw": 0.16279069767441862,
+   "shrunk": 0.09192859920419437
+  },
+  {
+   "outlet": "Calciomercato",
+   "links": 37,
+   "came_true": 4,
+   "raw": 0.10810810810810811,
+   "shrunk": 0.09046290392669912
+  },
+  {
+   "outlet": "Sky Italia",
+   "links": 33,
+   "came_true": 4,
+   "raw": 0.12121212121212122,
+   "shrunk": 0.09068003799227223
+  },
+  {
+   "outlet": "Kicker",
+   "links": 29,
+   "came_true": 2,
+   "raw": 0.06896551724137931,
+   "shrunk": 0.08969520172119005
+  },
+  {
+   "outlet": "The Athletic",
+   "links": 24,
+   "came_true": 6,
+   "raw": 0.25,
+   "shrunk": 0.09237906566931876
+  },
+  {
+   "outlet": "A Bola",
+   "links": 23,
+   "came_true": 6,
+   "raw": 0.2608695652173913,
+   "shrunk": 0.09243483364853246
+  },
+  {
+   "outlet": "BBC Sport",
+   "links": 21,
+   "came_true": 4,
+   "raw": 0.19047619047619047,
+   "shrunk": 0.09133773967645464
+  }
+ ],
+ "prior_rate": 0.09006322422253839,
+ "backtest": {
+  "generated_at": "2026-10-16T21:34:24+00:00",
+  "test_season": "2025-26",
+  "test_links": 618,
+  "brier": 0.13539568621556597,
+  "brier_recent_base": 0.15065950021596833,
+  "auc": 0.7201162628794207,
+  "mean_forecast": 0.18365843738511095,
+  "test_rate": 0.18446601941747573
+ }
+}
