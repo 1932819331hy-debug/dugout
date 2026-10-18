@@ -50,7 +50,7 @@ la_liga:
     api_football: 140       # lineups of finished matches + absentee lists (date window)
     football_data_couk: SP1  # results + closing odds (predictor history and benchmark)
     transfermarkt: ES1
-  sources: [football_data_org, football_data_couk, api_football, rss]
+  sources: [football_data_org, football_data_couk, api_football, api_football_history, rss]
   news_feeds:  # robots.txt allows; Guardian pages not used here (its robots.txt bars AI uses)
     - {outlet: BBC Sport, url: "https://feeds.bbci.co.uk/sport/football/european/rss.xml", tier: 2}
   history_seasons: ["2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21",
@@ -70,7 +70,7 @@ serie_a:
     api_football: 135       # lineups of finished matches + absentee lists (date window)
     football_data_couk: I1  # results + closing odds (predictor history and benchmark)
     transfermarkt: IT1
-  sources: [football_data_org, football_data_couk, api_football, rss]
+  sources: [football_data_org, football_data_couk, api_football, api_football_history, rss]
   news_feeds:  # robots.txt allows; Guardian pages not used here (its robots.txt bars AI uses)
     - {outlet: BBC Sport, url: "https://feeds.bbci.co.uk/sport/football/european/rss.xml", tier: 2}
   history_seasons: ["2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21",
@@ -90,7 +90,7 @@ bundesliga:
     api_football: 78       # lineups of finished matches + absentee lists (date window)
     football_data_couk: D1  # results + closing odds (predictor history and benchmark)
     transfermarkt: L1
-  sources: [football_data_org, football_data_couk, api_football, rss]
+  sources: [football_data_org, football_data_couk, api_football, api_football_history, rss]
   news_feeds:  # robots.txt allows; Guardian pages not used here (its robots.txt bars AI uses)
     - {outlet: BBC Sport, url: "https://feeds.bbci.co.uk/sport/football/european/rss.xml", tier: 2}
   history_seasons: ["2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21",
@@ -108,7 +108,7 @@ ligue_1:
     api_football: 61       # lineups of finished matches + absentee lists (date window)
     football_data_couk: F1  # results + closing odds (predictor history and benchmark)
     transfermarkt: FR1
-  sources: [football_data_org, football_data_couk, api_football, rss]
+  sources: [football_data_org, football_data_couk, api_football, api_football_history, rss]
   news_feeds:  # robots.txt allows; Guardian pages not used here (its robots.txt bars AI uses)
     - {outlet: BBC Sport, url: "https://feeds.bbci.co.uk/sport/football/european/rss.xml", tier: 2}
   history_seasons: ["2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21",
@@ -126,7 +126,7 @@ eredivisie:
     api_football: 88       # lineups of finished matches + absentee lists (date window)
     football_data_couk: N1  # results + closing odds (predictor history and benchmark)
     transfermarkt: NL1
-  sources: [football_data_org, football_data_couk, api_football, rss]
+  sources: [football_data_org, football_data_couk, api_football, api_football_history, rss]
   news_feeds:  # robots.txt allows; Guardian pages not used here (its robots.txt bars AI uses)
     - {outlet: BBC Sport, url: "https://feeds.bbci.co.uk/sport/football/european/rss.xml", tier: 2}
   history_seasons: ["2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21",

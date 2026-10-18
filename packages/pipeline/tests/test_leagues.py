@@ -33,7 +33,7 @@ def test_config_leagues():
         cfg = league_config(k)
         assert cfg["provider_ids"]["football_data_org"] and cfg["provider_ids"]["transfermarkt"]
         assert "fpl" not in cfg["provider_ids"] and cfg["sources"][0] == "football_data_org"
-        assert set(cfg["sources"]) <= {"football_data_org", "football_data_couk", "api_football", "rss"}
+        assert set(cfg["sources"]) <= {"football_data_org", "football_data_couk", "api_football", "api_football_history", "rss"}
         assert cfg["slug_suffix"] and cfg["country"]
         # forecasts and XIs only where backtested on the league
         assert {"lineup_last_xi"} <= set(cfg["backtested"]) and {"predictor", "elo_forecast"} & set(
