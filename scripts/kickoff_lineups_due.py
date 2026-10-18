@@ -74,7 +74,9 @@ def main() -> int:
         print(f"Cannot read current fixtures: {exc}", file=sys.stderr)
         clubs = []
     if args.budget_check:
-        allowed = bool(clubs) and budget_allows(BUDGET_FILE, now, len(clubs))
+        # Never spend keyed requests against an uninitialised warehouse cache.
+        warehouse = ROOT / "data/warehouse/dugout.duckdb"
+        allowed = bool(clubs) and warehouse.is_file() and budget_allows(BUDGET_FILE, now, len(clubs))
         print(f"allowed={str(allowed).lower()}")
         print(f"Budget check: {'ok' if allowed else 'skipped'}", file=sys.stderr)
     else:
