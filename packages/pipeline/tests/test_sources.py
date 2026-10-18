@@ -3,6 +3,7 @@
 import json
 from datetime import UTC, date, datetime
 
+import httpx
 import pytest
 from conftest import NOW, make_ctx, sample
 from dugout_pipeline.adapters.api_football import ApiFootballAdapter
@@ -11,11 +12,15 @@ from dugout_pipeline.adapters.clubelo import ClubEloAdapter
 from dugout_pipeline.adapters.football_data_couk import FootballDataCoUkAdapter, season_code
 from dugout_pipeline.adapters.football_data_org import FootballDataOrgAdapter
 from dugout_pipeline.adapters.news import GuardianAdapter, RSSAdapter, tag_clubs
+from dugout_pipeline.adapters import transfermarkt
 from dugout_pipeline.adapters.transfermarkt import (
     TransfermarktFileAdapter,
+    TransfermarktPoolRefresher,
     TransfermarktRefresher,
+    parse_competition_clubs,
     parse_money,
     parse_squad,
+    read_squads_csv,
     write_squads_csv,
 )
 from dugout_pipeline.adapters.weather import UK_POSTCODE, OpenMeteoAdapter
@@ -166,10 +171,60 @@ def test_transfermarkt_parsing():
     )
 
 
+def test_transfermarkt_squad_positions():
+    rows = parse_squad(sample("transfermarkt_kader_31.html"))
+    assert [r["position"] for r in rows] == ["Goalkeeper"] * 3
+    assert rows[2]["name"] == "Vítězslav Jaroš"  # the injury icon inside the link adds no text
+
+
+def test_transfermarkt_competition_clubs():
+    clubs = parse_competition_clubs(sample("transfermarkt_wettbewerb_GB2.html"))
+    assert clubs == [("379", "West Ham United"), ("1112", "Wrexham AFC")]  # first table only
+
+
 def test_transfermarkt_refresher_refuses_in_ci(settings, reep):
     ctx = make_ctx(settings.model_copy(update={"ci": True}), reep)
     with pytest.raises(SourceDisabled):
         TransfermarktRefresher(ctx)
+    with pytest.raises(SourceDisabled):
+        TransfermarktPoolRefresher(ctx)
+
+
+def test_transfermarkt_pool_refresher(settings, reep, tmp_path, monkeypatch):
+    """Clubs from the competition page, one squad page each; league rows kept; a taken slug gets the suffix."""
+    path = tmp_path / "squads.csv"
+    write_squads_csv(
+        [{"tm_player_id": "9", "name": "Kept", "tm_club_id": "11", "club_id": "arsenal", "comp": "GB1"}], path
+    )
+    monkeypatch.setattr(transfermarkt, "SQUADS_CSV", path)
+    monkeypatch.setattr(transfermarkt, "attach_catalogue", lambda con: False)
+    seen = []
+
+    def handler(req):
+        seen.append(req.url.path)
+        if req.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: wget\nDisallow: /\n\nUser-agent: *\nAllow: /\n")
+        if "/wettbewerb/GB2/" in req.url.path:
+            return httpx.Response(200, content=sample("transfermarkt_wettbewerb_GB2.html"))
+        return httpx.Response(200, content=sample("transfermarkt_kader_31.html"))
+
+    ctx = make_ctx(settings, reep)
+    ctx.transport = httpx.MockTransport(handler)
+    ctx.con.execute(
+        "INSERT INTO clubs (club_id, name, league, season, updated_at) VALUES ('west-ham-united', 'West Ham', 'x', '2026-27', now())"
+    )
+    out = _run(TransfermarktPoolRefresher, ctx)
+    assert out == {"clubs": 2, "transfermarkt_squads_csv": 6}
+    assert [p for p in seen if p != "/robots.txt"] == [
+        "/-/startseite/wettbewerb/GB2/saison_id/2026",
+        "/-/kader/verein/379/saison_id/2026/plus/1",
+        "/-/kader/verein/1112/saison_id/2026/plus/1",
+    ]
+    rows = read_squads_csv(path)
+    assert {r["club_id"] for r in rows} == {"arsenal", "west-ham-united-efl", "wrexham"}
+    pool = [r for r in rows if r["comp"] == "GB2"]
+    assert {r["club_name"] for r in pool} == {"West Ham United", "Wrexham AFC"}
+    assert all(r["position"] == "Goalkeeper" and r["market_value_eur"] for r in pool)
 
 
 def test_transfermarkt_file_adapter_reads_committed_csv(ctx, tmp_path):
