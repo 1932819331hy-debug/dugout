@@ -35,12 +35,14 @@ def due_clubs(rows: list[dict[str, str]], now: datetime, lead_minutes: int = 60)
         if old is None or issued > old[0]:
             latest[row["match_id"]] = issued, kickoff, (home, away)
     upper = now + timedelta(minutes=lead_minutes)
-    return sorted({
-        club
-        for _, kickoff, pair in latest.values()
-        if now < kickoff <= upper
-        for club in pair
-    })
+    return sorted(
+        {
+            club
+            for _, kickoff, pair in latest.values()
+            if now < kickoff <= upper
+            for club in pair
+        }
+    )
 
 
 def budget_allows(path: Path, now: datetime, club_count: int = 0) -> bool:
@@ -54,7 +56,7 @@ def budget_allows(path: Path, now: datetime, club_count: int = 0) -> bool:
     if not isinstance(usage, dict):
         return False
     used = usage.get(now.date().isoformat(), 0)
-    if type(used) is not int or used < 0:
+    if not isinstance(used, int) or isinstance(used, bool) or used < 0:
         return False
     reserve = max(15, 5 + (club_count + 1) // 2)
     return 90 - used >= reserve
