@@ -230,6 +230,35 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     (CI used Laguna, not Groq, on 2026-10-17: check the next nightly's log for "LLM ... skipped").
   - Nightly with warm caches: 39 min (club_news backlog filled, Fact-Check cache warm).
 
+- **Championship squads (2026-10-19, branch `claude/championship-squads-4b1942`):** a shortlist candidate pool,
+  not a league with pages.
+  - Why no pages: football-data.org's free tier has no Championship (ELC is paid), FPL is PL-only and the
+    API-Football free plan has no current season, so there are no free fixtures, standings or lineups to build a
+    dossier from. Config `candidate_pools.championship` (GB2) sits outside the league blocks: no ingest, no pages.
+  - `uv run dugout refresh-values --pool championship` (local only, refuses when `CI` is set; `transfermarkt_pool`
+    shares the Transfermarkt cache and 6 s rate limit; robots.txt re-checked 2026-10-18: `*` allowed, only `wget`
+    barred): 1 competition page for the season's clubs, then 1 squad page per club. Run 2026-10-18: 24 clubs, 666
+    players, 652 values (EUR 2.40bn), 606 contract ends, 666 positions, 663 Reep ids. Written to
+    `data/reference/transfermarkt_squads.csv` with new columns `club_name`, `position`, `comp` (PL rows: comp GB1,
+    position blank until the next PL refresh).
+  - Models: `Market` adds pool players the dataset lacks (143) to the players table, gives pool players the squad
+    file's club, league and contract, and builds live club leagues from the squads (relegated West Ham, Wolves and
+    Burnley are GB2 today; training frames keep the dataset's clubs). Shortlists and gems accept pool players;
+    pool clubs get no needs, lists or per-player outputs (`Market.buying_clubs`). Values: the squad file's, dated
+    by the scrape (ledger rows via `transfermarkt_file`).
+  - Side fix: promoted Coventry and Hull were missing from the dataset's clubs table, so the realism model never
+    saw them as buyers (no realistic list; Coventry no dream list either). Coventry now gets both for its top need.
+  - Limit (honest): transfermarkt-datasets has no Championship games, so only players with minutes on record
+    (relegated clubs' 2025-26 PL minutes, summer arrivals from covered leagues: 68 with 1,200+) can pass the
+    minutes rules; 348 of 666 get a sale likelihood. `publish market`
+    (PL clubs, local): 5 of 558 list slots are Championship players, 3 of them in the top three the site shows
+    (Fer Lopez, Wolves: Leeds dream list; Mateus Mane, Wolves: gem for Brighton and Aston Villa). An earlier run
+    showed 11, but a dtype bug of this branch (club ids as "1234.0") had knocked first-tier sellers out; fixed.
+    Site build + check_site_numbers: 241 pages, 0 untraceable (committed dossiers; the nightly rebuilds them).
+  - Next: Championship minutes. One Transfermarkt performance page per club
+    (`/-/leistungsdaten/verein/<id>/reldata/%262025/plus/1`, 24 pages, robots allows) would give 2025-26 minutes
+    for the other ~600 players; not fetched here (the brief allowed squad pages only).
+
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
 - Guardian dev key: 500/day, 60/min. football-data.org: 10/min.
