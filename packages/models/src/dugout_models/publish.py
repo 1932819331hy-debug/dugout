@@ -347,7 +347,21 @@ def last_xi_lineups(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]
         mine = squads[squads.club_id == r.club]
         g = lu[(lu.club_id == r.club) & lu.player_id.isin(mine.player_id)].copy()
         if g.empty:
-            log.warning("last-XI lineup %s: none of its recorded starters is in the squad list", r.club)
+            # say why, so the next run's log tells a club-name mismatch from a player-id one
+            here = lu[lu.club_id == r.club]
+            stem = r.club.split("-")[0][:5]
+            similar = sorted({c for c in lu.club_id.unique() if stem and stem in c and c != r.club})[:3]
+            fam = lambda ids: sorted({str(i).split(":")[0] if ":" in str(i) else "reep" for i in ids})  # noqa: E731
+            log.warning(
+                "last-XI lineup %s: no recorded starter in the squad list (lineup rows %d, squad %d, lineup ids %s, "
+                "squad ids %s, similar lineup clubs %s)",
+                r.club,
+                len(here),
+                len(mine),
+                fam(here.player_id),
+                fam(mine.player_id),
+                similar,
+            )
             continue
         order = {k: i for i, k in enumerate(sorted(g.kickoff_utc.unique(), reverse=True))}
         g["back"] = g.kickoff_utc.map(order)
