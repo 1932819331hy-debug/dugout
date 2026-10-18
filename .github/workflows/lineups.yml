@@ -78,7 +78,9 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Save shared API usage and warehouse
-        if: steps.due.outputs.due == 'true'
+        # Persist usage even after an ingest failure; losing the counter would
+        # let the next 15-minute run overspend the provider's real quota.
+        if: always() && steps.due.outputs.due == 'true'
         uses: actions/cache/save@v6
         with:
           path: |
