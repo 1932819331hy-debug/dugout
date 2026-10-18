@@ -10,8 +10,8 @@
     "name": "La Liga",
     "country": "Spain"
   },
-  "generated_at": "2026-10-18T19:41:19+00:00",
-  "data_as_of": "2026-10-18T19:24:59+00:00",
+  "generated_at": "2026-10-18T20:31:02+00:00",
+  "data_as_of": "2026-10-18T20:24:07+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -26,7 +26,7 @@
             "text": "Racing de Santander are "
           },
           {
-            "stat": "ev_45cd4d24742a1e38",
+            "stat": "ev_82b82e29ef37b1bc",
             "display": "16th"
           },
           {
@@ -44,7 +44,7 @@
             "text": "Racing de Santander have "
           },
           {
-            "stat": "ev_953d5e4d0a792996",
+            "stat": "ev_32eabae2d2434c5d",
             "display": "8"
           },
           {
@@ -62,7 +62,7 @@
             "text": "Racing de Santander's next league match is Racing de Santander v Espanyol on "
           },
           {
-            "stat": "ev_6dba958ab255581d",
+            "stat": "ev_733b42927515fe5e",
             "display": "24 October 2026"
           },
           {
@@ -80,7 +80,7 @@
             "text": "Our forecast gives Racing de Santander a "
           },
           {
-            "stat": "ev_88ad67d770a62a77",
+            "stat": "ev_1777afc8d47f2712",
             "display": "40%"
           },
           {
@@ -109,7 +109,7 @@
               "text": "Racing de Santander are "
             },
             {
-              "stat": "ev_45cd4d24742a1e38",
+              "stat": "ev_82b82e29ef37b1bc",
               "display": "16th"
             },
             {
@@ -127,7 +127,7 @@
               "text": "Racing de Santander have "
             },
             {
-              "stat": "ev_953d5e4d0a792996",
+              "stat": "ev_32eabae2d2434c5d",
               "display": "8"
             },
             {
@@ -145,7 +145,7 @@
               "text": "Racing de Santander have scored "
             },
             {
-              "stat": "ev_12167cbe6fb05c94",
+              "stat": "ev_8165376560a7ef14",
               "display": "13"
             },
             {
@@ -163,7 +163,7 @@
               "text": "Racing de Santander have conceded "
             },
             {
-              "stat": "ev_805c54a02e72c4c7",
+              "stat": "ev_6db1c318b6454a3e",
               "display": "25"
             },
             {
@@ -181,7 +181,7 @@
               "text": "Racing de Santander's most recent league results read "
             },
             {
-              "stat": "ev_d6a3165a35c368cf",
+              "stat": "ev_beaa387816659f56",
               "display": "LDLLW"
             },
             {
@@ -199,7 +199,7 @@
               "text": "Racing de Santander's Elo rating is "
             },
             {
-              "stat": "ev_b00d3e482ef02a4e",
+              "stat": "ev_fbd3f9f05ed2188a",
               "display": "1382"
             },
             {
@@ -245,7 +245,7 @@
               "text": "Racing de Santander's next league match is Racing de Santander v Espanyol on "
             },
             {
-              "stat": "ev_6dba958ab255581d",
+              "stat": "ev_733b42927515fe5e",
               "display": "24 October 2026"
             },
             {
@@ -263,7 +263,7 @@
               "text": "Our forecast gives Racing de Santander a "
             },
             {
-              "stat": "ev_88ad67d770a62a77",
+              "stat": "ev_1777afc8d47f2712",
               "display": "40%"
             },
             {
@@ -281,7 +281,7 @@
               "text": "Our forecast gives Racing de Santander v Espanyol a "
             },
             {
-              "stat": "ev_2756bd83541ca523",
+              "stat": "ev_978b5bd04507f13c",
               "display": "26%"
             },
             {
@@ -299,7 +299,7 @@
               "text": "Our forecast gives Espanyol a "
             },
             {
-              "stat": "ev_6fb10e71883b6550",
+              "stat": "ev_043a1ca0e82e40bd",
               "display": "35%"
             },
             {
@@ -317,7 +317,7 @@
               "text": "We expect Racing de Santander to score "
             },
             {
-              "stat": "ev_b4a524d627a1dc43",
+              "stat": "ev_ca8b2f3b41d5e514",
               "display": "1.6"
             },
             {
@@ -335,7 +335,7 @@
               "text": "We expect Espanyol to score "
             },
             {
-              "stat": "ev_b3e1e42e526a46b0",
+              "stat": "ev_ff46627e4316f075",
               "display": "1.6"
             },
             {
@@ -353,7 +353,7 @@
               "text": "Racing de Santander's Elo rating is "
             },
             {
-              "stat": "ev_b00d3e482ef02a4e",
+              "stat": "ev_fbd3f9f05ed2188a",
               "display": "1382"
             },
             {
@@ -371,7 +371,7 @@
               "text": "Espanyol's Elo rating is "
             },
             {
-              "stat": "ev_4af91145e36b2e9d",
+              "stat": "ev_b47efab63a475afe",
               "display": "1409"
             },
             {
@@ -390,9 +390,226 @@
       "agent": "lineup",
       "title": "Predicted XI",
       "question": "What is Racing de Santander's predicted lineup for the next match?",
-      "status": "empty",
+      "status": "published",
       "writer": "template",
-      "claims": [],
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "We expect Racing de Santander to line up in a "
+            },
+            {
+              "stat": "ev_57c15912e1289e4b",
+              "display": "4-2-3-1"
+            },
+            {
+              "text": " for the next match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Julen Agirrezabala at "
+            },
+            {
+              "stat": "ev_cccb27e27d299f74",
+              "display": "GK"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Facundo González at "
+            },
+            {
+              "stat": "ev_5421c4441d873520",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Pablo Ramon at "
+            },
+            {
+              "stat": "ev_ee47c49fbb8a29b2",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Álvaro Mantilla at "
+            },
+            {
+              "stat": "ev_dbd394c049847a4d",
+              "display": "RB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Jeanuel Belocian at "
+            },
+            {
+              "stat": "ev_a110561147a254a2",
+              "display": "LB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Matteo Prati at "
+            },
+            {
+              "stat": "ev_b186d71eced19dae",
+              "display": "DM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Iván Martín at "
+            },
+            {
+              "stat": "ev_2a0b6349caeb3cf0",
+              "display": "DM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: André Almeida at "
+            },
+            {
+              "stat": "ev_242022414b569df5",
+              "display": "AM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Canales at "
+            },
+            {
+              "stat": "ev_35b32b25f0b7d665",
+              "display": "RW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Iñigo Vicente at "
+            },
+            {
+              "stat": "ev_2dc8fd21cd293b07",
+              "display": "LW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Yassir Zabiri at "
+            },
+            {
+              "stat": "ev_6486c15b65c5caf7",
+              "display": "CF"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
       "withheld": []
     },
     {
@@ -436,7 +653,7 @@
               "text": "We estimate Iván Martín's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_2809db2ef8b4094c",
+              "stat": "ev_65e0e8f9e0b991d9",
               "display": "15%"
             },
             {
@@ -454,7 +671,7 @@
               "text": "We estimate André Almeida's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_bbd98827925d6d75",
+              "stat": "ev_f02fa79d0ab9449f",
               "display": "14%"
             },
             {
@@ -472,7 +689,7 @@
               "text": "We estimate Julen Agirrezabala's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_e5aefad898103a41",
+              "stat": "ev_6be82089286be442",
               "display": "10%"
             },
             {
@@ -508,7 +725,7 @@
               "text": "Our fair-fee estimate for Matteo Prati is "
             },
             {
-              "stat": "ev_665ef01dff7f79aa",
+              "stat": "ev_b6b0a552e00a7058",
               "display": "€3.1m"
             },
             {
@@ -536,7 +753,7 @@
               "text": "Racing de Santander's biggest squad need is "
             },
             {
-              "stat": "ev_b55ff6cf9f361cc3",
+              "stat": "ev_3ba483f8721bb2e2",
               "display": "winger"
             },
             {
@@ -554,7 +771,7 @@
               "text": "Racing de Santander have "
             },
             {
-              "stat": "ev_6c73772fcfdc67d8",
+              "stat": "ev_bcf3c061c0a4393e",
               "display": "2"
             },
             {
@@ -572,7 +789,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_2016d78167030fe3",
+              "stat": "ev_7081393357e4cb5d",
               "display": "4"
             },
             {
@@ -590,7 +807,7 @@
               "text": "Racing de Santander's best option for winger is "
             },
             {
-              "stat": "ev_fd441f19f86ce838",
+              "stat": "ev_d41902f5b7f9c651",
               "display": "Iñigo Vicente"
             },
             {
@@ -608,7 +825,7 @@
               "text": "Racing de Santander's best option for winger has a market value of "
             },
             {
-              "stat": "ev_d9eea7e34f332915",
+              "stat": "ev_f9336fee128b85f1",
               "display": "€1.8m"
             },
             {
@@ -626,7 +843,7 @@
               "text": "At the squads closest to Racing de Santander in strength, the best option for winger is typically worth "
             },
             {
-              "stat": "ev_40533f33885c1d50",
+              "stat": "ev_4f111b5be84fd07f",
               "display": "€6.0m"
             },
             {
@@ -644,7 +861,7 @@
               "text": "Racing de Santander's second squad need is "
             },
             {
-              "stat": "ev_2b6700a9aa248b12",
+              "stat": "ev_541950000bf7d679",
               "display": "central midfield"
             },
             {
@@ -662,7 +879,7 @@
               "text": "Racing de Santander have "
             },
             {
-              "stat": "ev_cbffb6b159ac4603",
+              "stat": "ev_ddba6bfbde543b25",
               "display": "2"
             },
             {
@@ -680,7 +897,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_36eceef46e8a25c7",
+              "stat": "ev_33c6561e285b59fb",
               "display": "4"
             },
             {
@@ -698,7 +915,7 @@
               "text": "Racing de Santander's best option for central midfield is "
             },
             {
-              "stat": "ev_1766c5dc9b6ff1bc",
+              "stat": "ev_7b4146f0bc89455e",
               "display": "André Almeida"
             },
             {
@@ -716,7 +933,7 @@
               "text": "The last of Racing de Santander's regular starters at central midfield is "
             },
             {
-              "stat": "ev_34c5948b5d890b4e",
+              "stat": "ev_9894d611e8f63ecd",
               "display": "Iván Martín"
             },
             {
@@ -734,7 +951,7 @@
               "text": "The last of Racing de Santander's regular starters at central midfield averages "
             },
             {
-              "stat": "ev_a39cc0ebf34cafc8",
+              "stat": "ev_019d135e5247960e",
               "display": "0.00"
             },
             {
@@ -752,7 +969,7 @@
               "text": "The last of Racing de Santander's regular starters at central midfield has a market value of "
             },
             {
-              "stat": "ev_f6b7a571e90bfbf9",
+              "stat": "ev_70d3f4d1a48efce1",
               "display": "€5.0m"
             },
             {
@@ -770,7 +987,7 @@
               "text": "Racing de Santander's best option for central midfield has a market value of "
             },
             {
-              "stat": "ev_98494ce5f67873a7",
+              "stat": "ev_15f2b06d8f17eab5",
               "display": "€6.0m"
             },
             {
@@ -788,14 +1005,14 @@
               "text": "At the squads closest to Racing de Santander in strength, the best option for central midfield is typically worth "
             },
             {
-              "stat": "ev_2aca501dc783084d",
+              "stat": "ev_9aea2468f03090ed",
               "display": "€7.5m"
             },
             {
               "text": ". "
             },
             {
-              "stat": "ev_63872f4e40b10a8f",
+              "stat": "ev_eb025ecfe38d65bd",
               "display": "33%"
             },
             {
@@ -813,7 +1030,7 @@
               "text": "Hidden gem: Simon Ebonog (Le Havre AC), who is "
             },
             {
-              "stat": "ev_667ded3987282f5f",
+              "stat": "ev_cfa2c63c4b4fac04",
               "display": "22"
             },
             {
@@ -831,7 +1048,7 @@
               "text": "Simon Ebonog plays for "
             },
             {
-              "stat": "ev_0babd7ebe7181ce4",
+              "stat": "ev_95f9d43e2270933e",
               "display": "Le Havre AC"
             },
             {
@@ -849,7 +1066,7 @@
               "text": "Simon Ebonog has played "
             },
             {
-              "stat": "ev_a197b1157e849801",
+              "stat": "ev_4c9fa2fab9815bf7",
               "display": "64%"
             },
             {
@@ -867,7 +1084,7 @@
               "text": "Simon Ebonog averages "
             },
             {
-              "stat": "ev_7579da02fc851f18",
+              "stat": "ev_ace04faac7fdffcd",
               "display": "0.06"
             },
             {
@@ -885,7 +1102,7 @@
               "text": "Simon Ebonog averages "
             },
             {
-              "stat": "ev_91b50fa79e95fde6",
+              "stat": "ev_86236407b0a04ae1",
               "display": "0.00"
             },
             {
@@ -903,7 +1120,7 @@
               "text": "Simon Ebonog has more league goals and assists per full match than "
             },
             {
-              "stat": "ev_1947a95a87fbb1ee",
+              "stat": "ev_82be972cd91392ad",
               "display": "11%"
             },
             {
@@ -921,7 +1138,7 @@
               "text": "Simon Ebonog's comparison is within "
             },
             {
-              "stat": "ev_e444c33393b538e6",
+              "stat": "ev_f25fe6260477d8cb",
               "display": "Ligue 1"
             },
             {
@@ -939,7 +1156,7 @@
               "text": "Simon Ebonog's stronger foot is his "
             },
             {
-              "stat": "ev_c4adaa6fd78bb2e8",
+              "stat": "ev_eaaa8652189eef83",
               "display": "right"
             },
             {
@@ -957,7 +1174,7 @@
               "text": "Simon Ebonog stands "
             },
             {
-              "stat": "ev_d0acba33ffb4b8be",
+              "stat": "ev_fac419208d0883a7",
               "display": "186"
             },
             {
@@ -975,7 +1192,7 @@
               "text": "Simon Ebonog has won "
             },
             {
-              "stat": "ev_6f77b94d39958c2b",
+              "stat": "ev_cc4853b490997307",
               "display": "2"
             },
             {
@@ -993,7 +1210,7 @@
               "text": "Simon Ebonog starts at "
             },
             {
-              "stat": "ev_1fc92fee4539e0c6",
+              "stat": "ev_c2213e2959fd0148",
               "display": "central midfield"
             },
             {
@@ -1011,7 +1228,7 @@
               "text": "Simon Ebonog has a market value of "
             },
             {
-              "stat": "ev_f58b2ae14e610c94",
+              "stat": "ev_56e794ed3db1279e",
               "display": "€4.5m"
             },
             {
@@ -1029,7 +1246,7 @@
               "text": "Our fair-fee estimate for Simon Ebonog is "
             },
             {
-              "stat": "ev_839cd206aad521f2",
+              "stat": "ev_57766c93dcb661a9",
               "display": "€2.7m"
             },
             {
@@ -1047,7 +1264,7 @@
               "text": "We project Simon Ebonog's market value to reach "
             },
             {
-              "stat": "ev_8d60d81bf9301e28",
+              "stat": "ev_bfbd785045abc465",
               "display": "€6.1m"
             },
             {
@@ -1065,7 +1282,7 @@
               "text": "Hidden gem: Henrique Carmo (PFK CSKA Moskva), who is "
             },
             {
-              "stat": "ev_3a54a2bddff57ea6",
+              "stat": "ev_b05ad43bfcce2dad",
               "display": "20"
             },
             {
@@ -1082,23 +1299,71 @@
     }
   ],
   "stats": {
-    "ev_04ee3c639a7773ff": {
-      "value": 3500000.0,
-      "display": "3500000",
+    "ev_019d135e5247960e": {
+      "value": 0.0,
+      "display": "0",
       "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp5f2fb80d102b5c",
-      "entity_name": "Henrique Carmo",
+      "metric": "need_bar_ga_p90",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_0677ef4efae5ce05": {
+    "ev_043a1ca0e82e40bd": {
+      "value": 0.3482,
+      "display": "0.35",
+      "unit": null,
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
+      "entity_name": "Racing de Santander v Espanyol",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_15f2b06d8f17eab5": {
+      "value": 6000000.0,
+      "display": "6000000",
+      "unit": null,
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1777afc8d47f2712": {
+      "value": 0.395,
+      "display": "0.40",
+      "unit": null,
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
+      "entity_name": "Racing de Santander v Espanyol",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_21895f60254c11e9": {
       "value": "PFK CSKA Moskva",
       "display": "PFK CSKA Moskva",
       "unit": null,
@@ -1109,108 +1374,108 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_0babd7ebe7181ce4": {
-      "value": "Le Havre AC",
-      "display": "Le Havre AC",
+    "ev_242022414b569df5": {
+      "value": "AM",
+      "display": "AM",
       "unit": null,
-      "metric": "candidate_club",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
+      "entity_id": "rpcd01e38b1a7255",
+      "entity_name": "André Almeida",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2a0b6349caeb3cf0": {
+      "value": "DM",
+      "display": "DM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpd1772f75e58eae",
+      "entity_name": "Iván Martín",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2dc8fd21cd293b07": {
+      "value": "LW",
+      "display": "LW",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp3ff0c5feb59374",
+      "entity_name": "Iñigo Vicente",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2f74ea9cc509c1ae": {
+      "value": 4000000.0,
+      "display": "4000000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_12167cbe6fb05c94": {
-      "value": 13.0,
-      "display": "13",
+    "ev_31427f1d208d137b": {
+      "value": 23.3,
+      "display": "23.30",
       "unit": null,
-      "metric": "league_goalsFor",
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_32eabae2d2434c5d": {
+      "value": 8.0,
+      "display": "8",
+      "unit": null,
+      "metric": "league_points",
       "entity_type": "club",
       "entity_id": "racing-de-santander",
       "entity_name": "Racing de Santander",
       "source": "football_data_org",
       "source_url": "https://api.football-data.org/v4/competitions/PD/standings?season=2026",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:26:32.041980+00:00",
+      "fetched_at": "2026-10-18T20:05:31.682212+00:00",
       "query_kind": "http_json",
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_1766c5dc9b6ff1bc": {
-      "value": "André Almeida",
-      "display": "André Almeida",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_1947a95a87fbb1ee": {
-      "value": 0.11,
-      "display": "0.11",
-      "unit": null,
-      "metric": "ga_pctile",
-      "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_1bb56384610923a9": {
-      "value": 0.326,
-      "display": "0.33",
-      "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rp5f2fb80d102b5c",
-      "entity_name": "Henrique Carmo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_1fc92fee4539e0c6": {
-      "value": "central midfield",
-      "display": "central midfield",
-      "unit": null,
-      "metric": "positions_played",
-      "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2016d78167030fe3": {
+    "ev_33c6561e285b59fb": {
       "value": 4.0,
       "display": "4",
       "unit": null,
@@ -1221,94 +1486,46 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_23340a6dcbdb1c7a": {
-      "value": 173.0,
-      "display": "173",
+    "ev_35b32b25f0b7d665": {
+      "value": "RW",
+      "display": "RW",
       "unit": null,
-      "metric": "height_cm",
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp64a2da8417e66a",
+      "entity_name": "Canales",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3797a2304efef463": {
+      "value": "left",
+      "display": "left",
+      "unit": null,
+      "metric": "foot",
       "entity_type": "player",
       "entity_id": "rp5f2fb80d102b5c",
       "entity_name": "Henrique Carmo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_2379a18b39590986": {
-      "value": "right",
-      "display": "right",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2756bd83541ca523": {
-      "value": 0.2573,
-      "display": "0.26",
-      "unit": null,
-      "metric": "p_draw",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
-      "entity_name": "Racing de Santander v Espanyol",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2809db2ef8b4094c": {
-      "value": 0.147,
-      "display": "0.15",
-      "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rpd1772f75e58eae",
-      "entity_name": "Iván Martín",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2aca501dc783084d": {
-      "value": 7500000.0,
-      "display": "7500000",
-      "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2b6700a9aa248b12": {
-      "value": "central midfield",
-      "display": "central midfield",
+    "ev_3ba483f8721bb2e2": {
+      "value": "winger",
+      "display": "winger",
       "unit": null,
       "metric": "need",
       "entity_type": "club",
@@ -1317,60 +1534,44 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_34c5948b5d890b4e": {
-      "value": "Iván Martín",
-      "display": "Iván Martín",
+    "ev_3c699d6fa616f834": {
+      "value": "attacking midfield, right winger",
+      "display": "attacking midfield, right winger",
       "unit": null,
-      "metric": "need_bar_player",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_36eceef46e8a25c7": {
-      "value": 4.0,
-      "display": "4",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_3a54a2bddff57ea6": {
-      "value": 19.9,
-      "display": "19.90",
-      "unit": null,
-      "metric": "age",
+      "metric": "positions_played",
       "entity_type": "player",
       "entity_id": "rp5f2fb80d102b5c",
       "entity_name": "Henrique Carmo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_40533f33885c1d50": {
+    "ev_4c9fa2fab9815bf7": {
+      "value": 0.635,
+      "display": "0.64",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4f111b5be84fd07f": {
       "value": 6000000.0,
       "display": "6000000",
       "unit": null,
@@ -1381,39 +1582,167 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_45cd4d24742a1e38": {
-      "value": 16.0,
-      "display": "16",
+    "ev_50719ad8d1941276": {
+      "value": "right",
+      "display": "right",
       "unit": null,
-      "metric": "league_position",
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_50a8584a4d21922a": {
+      "value": "KV Mechelen",
+      "display": "KV Mechelen",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_52e4b906a4e54038": {
+      "value": 3500000.0,
+      "display": "3500000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp5f2fb80d102b5c",
+      "entity_name": "Henrique Carmo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_52ea459caacafe33": {
+      "value": 0.1,
+      "display": "0.10",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_541950000bf7d679": {
+      "value": "central midfield",
+      "display": "central midfield",
+      "unit": null,
+      "metric": "need",
       "entity_type": "club",
       "entity_id": "racing-de-santander",
       "entity_name": "Racing de Santander",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/PD/standings?season=2026",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:26:32.041980+00:00",
-      "query_kind": "http_json",
-      "status": "single_source",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
       "cross_checks": []
     },
-    "ev_4af91145e36b2e9d": {
-      "value": 1409.2,
-      "display": "1409.20",
+    "ev_5421c4441d873520": {
+      "value": "CB",
+      "display": "CB",
       "unit": null,
-      "metric": "elo",
-      "entity_type": "club",
-      "entity_id": "espanyol",
-      "entity_name": "Espanyol",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpdb73a2ef7aa92a",
+      "entity_name": "Facundo González",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_56e794ed3db1279e": {
+      "value": 4500000.0,
+      "display": "4500000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_57766c93dcb661a9": {
+      "value": 2700000.0,
+      "display": "2700000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_57c15912e1289e4b": {
+      "value": "4-2-3-1",
+      "display": "4-2-3-1",
+      "unit": null,
+      "metric": "predicted_formation",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5cb1c4a7b652e5cd": {
+      "value": 0.98,
+      "display": "0.98",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1434,151 +1763,55 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_632656c9bcc86f68": {
-      "value": "attacking midfield, left winger",
-      "display": "attacking midfield, left winger",
+    "ev_6486c15b65c5caf7": {
+      "value": "CF",
+      "display": "CF",
       "unit": null,
-      "metric": "positions_played",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rp67417d2d52a4bc",
+      "entity_name": "Yassir Zabiri",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_63872f4e40b10a8f": {
-      "value": 0.333,
-      "display": "0.33",
+    "ev_65e0e8f9e0b991d9": {
+      "value": 0.147,
+      "display": "0.15",
       "unit": null,
-      "metric": "need_ageing_share",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_665ef01dff7f79aa": {
-      "value": 3100000.0,
-      "display": "3100000",
-      "unit": null,
-      "metric": "fair_fee",
+      "metric": "sale_likelihood",
       "entity_type": "player",
-      "entity_id": "rp16062cf0b91361",
-      "entity_name": "Matteo Prati",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "entity_id": "rpd1772f75e58eae",
+      "entity_name": "Iván Martín",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_667ded3987282f5f": {
-      "value": 22.2,
-      "display": "22.20",
+    "ev_6be82089286be442": {
+      "value": 0.102,
+      "display": "0.10",
       "unit": null,
-      "metric": "age",
+      "metric": "sale_likelihood",
       "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rp7ee4ad062ceb7f",
+      "entity_name": "Julen Agirrezabala",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_6c73772fcfdc67d8": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6dba958ab255581d": {
-      "value": "2026-10-24T14:15:00+00:00",
-      "display": "2026-10-24T14:15:00+00:00",
-      "unit": null,
-      "metric": "kickoff_utc",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
-      "entity_name": "Racing de Santander v Espanyol",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6f77b94d39958c2b": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6fb10e71883b6550": {
-      "value": 0.347,
-      "display": "0.35",
-      "unit": null,
-      "metric": "p_away_win",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
-      "entity_name": "Racing de Santander v Espanyol",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7579da02fc851f18": {
-      "value": 0.06,
-      "display": "0.06",
-      "unit": null,
-      "metric": "goals_p90",
-      "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_805c54a02e72c4c7": {
+    "ev_6db1c318b6454a3e": {
       "value": 25.0,
       "display": "25",
       "unit": null,
@@ -1589,316 +1822,60 @@
       "source": "football_data_org",
       "source_url": "https://api.football-data.org/v4/competitions/PD/standings?season=2026",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:26:32.041980+00:00",
+      "fetched_at": "2026-10-18T20:05:31.682212+00:00",
       "query_kind": "http_json",
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_839cd206aad521f2": {
-      "value": 2700000.0,
-      "display": "2700000",
+    "ev_7081393357e4cb5d": {
+      "value": 4.0,
+      "display": "4",
       "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_88ad67d770a62a77": {
-      "value": 0.3958,
-      "display": "0.40",
+    "ev_70d3f4d1a48efce1": {
+      "value": 5000000.0,
+      "display": "5000000",
       "unit": null,
-      "metric": "p_home_win",
+      "metric": "need_bar_value",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_733b42927515fe5e": {
+      "value": "2026-10-24T14:15:00+00:00",
+      "display": "2026-10-24T14:15:00+00:00",
+      "unit": null,
+      "metric": "kickoff_utc",
       "entity_type": "match",
       "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
       "entity_name": "Racing de Santander v Espanyol",
       "source": "dugout_model:predictor",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_8bde7945678f73d1": {
-      "value": 5700000.0,
-      "display": "5700000",
-      "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rp5f2fb80d102b5c",
-      "entity_name": "Henrique Carmo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8d60d81bf9301e28": {
-      "value": 6100000.0,
-      "display": "6100000",
-      "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8ee792b4115f634e": {
-      "value": 18.0,
-      "display": "18",
-      "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_91b50fa79e95fde6": {
-      "value": 0.0,
-      "display": "0",
-      "unit": null,
-      "metric": "assists_p90",
-      "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_94a363250f08e092": {
-      "value": "left",
-      "display": "left",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rp5f2fb80d102b5c",
-      "entity_name": "Henrique Carmo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_953d5e4d0a792996": {
-      "value": 8.0,
-      "display": "8",
-      "unit": null,
-      "metric": "league_points",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/PD/standings?season=2026",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:26:32.041980+00:00",
-      "query_kind": "http_json",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_96dc5364320f1bb0": {
-      "value": 3.0,
-      "display": "3",
-      "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rp5f2fb80d102b5c",
-      "entity_name": "Henrique Carmo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_98494ce5f67873a7": {
-      "value": 6000000.0,
-      "display": "6000000",
-      "unit": null,
-      "metric": "need_best_value",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a197b1157e849801": {
-      "value": 0.635,
-      "display": "0.64",
-      "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a39cc0ebf34cafc8": {
-      "value": 0.0,
-      "display": "0",
-      "unit": null,
-      "metric": "need_bar_ga_p90",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b00d3e482ef02a4e": {
-      "value": 1382.3,
-      "display": "1382.30",
-      "unit": null,
-      "metric": "elo",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b3e1e42e526a46b0": {
-      "value": 1.6459,
-      "display": "1.65",
-      "unit": null,
-      "metric": "exp_away_goals",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
-      "entity_name": "Racing de Santander v Espanyol",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b4a524d627a1dc43": {
-      "value": 1.6283,
-      "display": "1.63",
-      "unit": null,
-      "metric": "exp_home_goals",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
-      "entity_name": "Racing de Santander v Espanyol",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b55ff6cf9f361cc3": {
-      "value": "winger",
-      "display": "winger",
-      "unit": null,
-      "metric": "need",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b7a6e08938685a7e": {
-      "value": "attacking midfield, right winger",
-      "display": "attacking midfield, right winger",
-      "unit": null,
-      "metric": "positions_played",
-      "entity_type": "player",
-      "entity_id": "rp5f2fb80d102b5c",
-      "entity_name": "Henrique Carmo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_bb46807e8e546d3b": {
-      "value": 4500000.0,
-      "display": "4500000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_bbd98827925d6d75": {
-      "value": 0.141,
-      "display": "0.14",
-      "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rpcd01e38b1a7255",
-      "entity_name": "André Almeida",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_c010b6d00e4aa20c": {
+    "ev_740999ca166d9894": {
       "value": 5300000.0,
       "display": "5300000",
       "unit": null,
@@ -1909,44 +1886,188 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c2ca4b57b96ecec7": {
-      "value": "KV Mechelen",
-      "display": "KV Mechelen",
+    "ev_7b4146f0bc89455e": {
+      "value": "André Almeida",
+      "display": "André Almeida",
       "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c4adaa6fd78bb2e8": {
-      "value": "right",
-      "display": "right",
+    "ev_8165376560a7ef14": {
+      "value": 13.0,
+      "display": "13",
       "unit": null,
-      "metric": "foot",
+      "metric": "league_goalsFor",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PD/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:05:31.682212+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_82b82e29ef37b1bc": {
+      "value": 16.0,
+      "display": "16",
+      "unit": null,
+      "metric": "league_position",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/PD/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:05:31.682212+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_82be972cd91392ad": {
+      "value": 0.11,
+      "display": "0.11",
+      "unit": null,
+      "metric": "ga_pctile",
       "entity_type": "player",
       "entity_id": "rpe7d06428a61a1f",
       "entity_name": "Simon Ebonog",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c7ff87b3d7da75e4": {
+    "ev_86236407b0a04ae1": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_95f9d43e2270933e": {
+      "value": "Le Havre AC",
+      "display": "Le Havre AC",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_978b5bd04507f13c": {
+      "value": 0.2568,
+      "display": "0.26",
+      "unit": null,
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
+      "entity_name": "Racing de Santander v Espanyol",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9894d611e8f63ecd": {
+      "value": "Iván Martín",
+      "display": "Iván Martín",
+      "unit": null,
+      "metric": "need_bar_player",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9aea2468f03090ed": {
+      "value": 7500000.0,
+      "display": "7500000",
+      "unit": null,
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9b731a140c5ea7a1": {
+      "value": 0.31,
+      "display": "0.31",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9f5b3759f5b6d97a": {
+      "value": 3.0,
+      "display": "3",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp5f2fb80d102b5c",
+      "entity_name": "Henrique Carmo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9fd71aeaecb2d310": {
       "value": 0.89,
       "display": "0.89",
       "unit": null,
@@ -1957,12 +2078,124 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_cbffb6b159ac4603": {
+    "ev_a110561147a254a2": {
+      "value": "LB",
+      "display": "LB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp278256c8b3cfe4",
+      "entity_name": "Jeanuel Belocian",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a7b64f8f66f75fde": {
+      "value": 18.0,
+      "display": "18",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ace04faac7fdffcd": {
+      "value": 0.06,
+      "display": "0.06",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b05ad43bfcce2dad": {
+      "value": 19.9,
+      "display": "19.90",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp5f2fb80d102b5c",
+      "entity_name": "Henrique Carmo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b186d71eced19dae": {
+      "value": "DM",
+      "display": "DM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp16062cf0b91361",
+      "entity_name": "Matteo Prati",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b47efab63a475afe": {
+      "value": 1409.2,
+      "display": "1409.20",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "espanyol",
+      "entity_name": "Espanyol",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b6b0a552e00a7058": {
+      "value": 3100000.0,
+      "display": "3100000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp16062cf0b91361",
+      "entity_name": "Matteo Prati",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bcf3c061c0a4393e": {
       "value": 2.0,
       "display": "2",
       "unit": null,
@@ -1973,28 +2206,12 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_d0acba33ffb4b8be": {
-      "value": 186.0,
-      "display": "186",
-      "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rpe7d06428a61a1f",
-      "entity_name": "Simon Ebonog",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_d6a3165a35c368cf": {
+    "ev_beaa387816659f56": {
       "value": "LDLLW",
       "display": "LDLLW",
       "unit": null,
@@ -2005,71 +2222,199 @@
       "source": "football_data_org",
       "source_url": "https://api.football-data.org/v4/competitions/PD/standings",
       "source_tier": 2,
-      "fetched_at": "2026-10-18T16:26:32.041980+00:00",
+      "fetched_at": "2026-10-18T20:05:31.682212+00:00",
       "query_kind": "sql",
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_d9eea7e34f332915": {
-      "value": 1800000.0,
-      "display": "1800000",
+    "ev_bfbd785045abc465": {
+      "value": 6100000.0,
+      "display": "6100000",
       "unit": null,
-      "metric": "need_best_value",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_dba82b5421b4790c": {
-      "value": 174.0,
-      "display": "174",
+    "ev_c0c2a3fc35a88a0e": {
+      "value": "Jupiler Pro League",
+      "display": "Jupiler Pro League",
       "unit": null,
-      "metric": "height_cm",
+      "metric": "ga_league",
       "entity_type": "player",
       "entity_id": "rpe7525f12622b99",
       "entity_name": "Myron van Brederode",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_ddce3ea081addf52": {
-      "value": 3900000.0,
-      "display": "3900000",
+    "ev_c2213e2959fd0148": {
+      "value": "central midfield",
+      "display": "central midfield",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c33201d82f210f6a": {
+      "value": 173.0,
+      "display": "173",
+      "unit": null,
+      "metric": "height_cm",
       "entity_type": "player",
       "entity_id": "rp5f2fb80d102b5c",
       "entity_name": "Henrique Carmo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_dfea87030a976b87": {
-      "value": 0.1,
-      "display": "0.10",
+    "ev_ca8b2f3b41d5e514": {
+      "value": 1.6283,
+      "display": "1.63",
       "unit": null,
-      "metric": "assists_p90",
+      "metric": "exp_home_goals",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
+      "entity_name": "Racing de Santander v Espanyol",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cc4853b490997307": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cccb27e27d299f74": {
+      "value": "GK",
+      "display": "GK",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp7ee4ad062ceb7f",
+      "entity_name": "Julen Agirrezabala",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cfa2c63c4b4fac04": {
+      "value": 22.2,
+      "display": "22.20",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d41902f5b7f9c651": {
+      "value": "Iñigo Vicente",
+      "display": "Iñigo Vicente",
+      "unit": null,
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_db81372cea484dd2": {
+      "value": "attacking midfield, left winger",
+      "display": "attacking midfield, left winger",
+      "unit": null,
+      "metric": "positions_played",
       "entity_type": "player",
       "entity_id": "rpe7525f12622b99",
       "entity_name": "Myron van Brederode",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_dbd394c049847a4d": {
+      "value": "RB",
+      "display": "RB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "football_data_org:159518",
+      "entity_name": "Álvaro Mantilla",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ddba6bfbde543b25": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2090,7 +2435,135 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_e444c33393b538e6": {
+    "ev_e5f14761cd6c2be9": {
+      "value": 4500000.0,
+      "display": "4500000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e99237217766ea7d": {
+      "value": 5700000.0,
+      "display": "5700000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rp5f2fb80d102b5c",
+      "entity_name": "Henrique Carmo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ea184ec3828eb7d2": {
+      "value": 0.326,
+      "display": "0.33",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp5f2fb80d102b5c",
+      "entity_name": "Henrique Carmo",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_eaaa8652189eef83": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpe7d06428a61a1f",
+      "entity_name": "Simon Ebonog",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_eb025ecfe38d65bd": {
+      "value": 0.333,
+      "display": "0.33",
+      "unit": null,
+      "metric": "need_ageing_share",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ed0289b0f2e3c9b0": {
+      "value": 174.0,
+      "display": "174",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpe7525f12622b99",
+      "entity_name": "Myron van Brederode",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ee47c49fbb8a29b2": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp59b86eb86f4229",
+      "entity_name": "Pablo Ramon",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f02fa79d0ab9449f": {
+      "value": 0.141,
+      "display": "0.14",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rpcd01e38b1a7255",
+      "entity_name": "André Almeida",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f25fe6260477d8cb": {
       "value": "Ligue 1",
       "display": "Ligue 1",
       "unit": null,
@@ -2101,151 +2574,87 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_e5aefad898103a41": {
-      "value": 0.102,
-      "display": "0.10",
+    "ev_f74c7a7bbafe92d2": {
+      "value": 3900000.0,
+      "display": "3900000",
       "unit": null,
-      "metric": "sale_likelihood",
+      "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rp7ee4ad062ceb7f",
-      "entity_name": "Julen Agirrezabala",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_ea922430b082b511": {
-      "value": 23.3,
-      "display": "23.30",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
+      "entity_id": "rp5f2fb80d102b5c",
+      "entity_name": "Henrique Carmo",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_ef03991f4dcf6503": {
-      "value": 0.31,
-      "display": "0.31",
+    "ev_f9336fee128b85f1": {
+      "value": 1800000.0,
+      "display": "1800000",
       "unit": null,
-      "metric": "goals_p90",
-      "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "racing-de-santander",
+      "entity_name": "Racing de Santander",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_f2cd1d374f118470": {
-      "value": 0.98,
-      "display": "0.98",
+    "ev_fac419208d0883a7": {
+      "value": 186.0,
+      "display": "186",
       "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_f58b2ae14e610c94": {
-      "value": 4500000.0,
-      "display": "4500000",
-      "unit": null,
-      "metric": "market_value",
+      "metric": "height_cm",
       "entity_type": "player",
       "entity_id": "rpe7d06428a61a1f",
       "entity_name": "Simon Ebonog",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_f67cf13574224388": {
-      "value": 4000000.0,
-      "display": "4000000",
+    "ev_fbd3f9f05ed2188a": {
+      "value": 1382.3,
+      "display": "1382.30",
       "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_f6b7a571e90bfbf9": {
-      "value": 5000000.0,
-      "display": "5000000",
-      "unit": null,
-      "metric": "need_bar_value",
+      "metric": "elo",
       "entity_type": "club",
       "entity_id": "racing-de-santander",
       "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_fc0bc0da51d2a062": {
-      "value": "Jupiler Pro League",
-      "display": "Jupiler Pro League",
+    "ev_ff46627e4316f075": {
+      "value": 1.6459,
+      "display": "1.65",
       "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rpe7525f12622b99",
-      "entity_name": "Myron van Brederode",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "metric": "exp_away_goals",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:racing-de-santander:espanyol",
+      "entity_name": "Racing de Santander v Espanyol",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_fd441f19f86ce838": {
-      "value": "Iñigo Vicente",
-      "display": "Iñigo Vicente",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "racing-de-santander",
-      "entity_name": "Racing de Santander",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2254,37 +2663,37 @@
   "key_stats": {
     "club": [
       {
-        "stat": "ev_45cd4d24742a1e38",
+        "stat": "ev_82b82e29ef37b1bc",
         "display": "16th",
         "label": "league position",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_953d5e4d0a792996",
+        "stat": "ev_32eabae2d2434c5d",
         "display": "8",
         "label": "league points",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_12167cbe6fb05c94",
+        "stat": "ev_8165376560a7ef14",
         "display": "13",
         "label": "league goals scored",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_805c54a02e72c4c7",
+        "stat": "ev_6db1c318b6454a3e",
         "display": "25",
         "label": "league goals conceded",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_d6a3165a35c368cf",
+        "stat": "ev_beaa387816659f56",
         "display": "LDLLW",
         "label": "recent league results, oldest first",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_b00d3e482ef02a4e",
+        "stat": "ev_fbd3f9f05ed2188a",
         "display": "1382",
         "label": "Elo rating (dugout's own)",
         "subject": "Racing de Santander"
@@ -2298,71 +2707,144 @@
     ],
     "match": [
       {
-        "stat": "ev_6dba958ab255581d",
+        "stat": "ev_733b42927515fe5e",
         "display": "24 October 2026",
         "label": "kick-off date",
         "subject": "Racing de Santander v Espanyol"
       },
       {
-        "stat": "ev_88ad67d770a62a77",
+        "stat": "ev_1777afc8d47f2712",
         "display": "40%",
         "label": "probability Racing de Santander win",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_2756bd83541ca523",
+        "stat": "ev_978b5bd04507f13c",
         "display": "26%",
         "label": "probability of a draw",
         "subject": "Racing de Santander v Espanyol"
       },
       {
-        "stat": "ev_6fb10e71883b6550",
+        "stat": "ev_043a1ca0e82e40bd",
         "display": "35%",
         "label": "probability Espanyol win",
         "subject": "Espanyol"
       },
       {
-        "stat": "ev_b4a524d627a1dc43",
+        "stat": "ev_ca8b2f3b41d5e514",
         "display": "1.6",
         "label": "expected goals in this match",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_b3e1e42e526a46b0",
+        "stat": "ev_ff46627e4316f075",
         "display": "1.6",
         "label": "expected goals in this match",
         "subject": "Espanyol"
       },
       {
-        "stat": "ev_b00d3e482ef02a4e",
+        "stat": "ev_fbd3f9f05ed2188a",
         "display": "1382",
         "label": "Elo rating (dugout's own)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_4af91145e36b2e9d",
+        "stat": "ev_b47efab63a475afe",
         "display": "1409",
         "label": "Elo rating (dugout's own)",
         "subject": "Espanyol"
       }
     ],
-    "lineup": [],
+    "lineup": [
+      {
+        "stat": "ev_57c15912e1289e4b",
+        "display": "4-2-3-1",
+        "label": "predicted formation for the next match",
+        "subject": "Racing de Santander"
+      },
+      {
+        "stat": "ev_cccb27e27d299f74",
+        "display": "GK",
+        "label": "predicted starting slot (goalkeeper)",
+        "subject": "Julen Agirrezabala"
+      },
+      {
+        "stat": "ev_5421c4441d873520",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Facundo González"
+      },
+      {
+        "stat": "ev_ee47c49fbb8a29b2",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Pablo Ramon"
+      },
+      {
+        "stat": "ev_dbd394c049847a4d",
+        "display": "RB",
+        "label": "predicted starting slot (right-back)",
+        "subject": "Álvaro Mantilla"
+      },
+      {
+        "stat": "ev_a110561147a254a2",
+        "display": "LB",
+        "label": "predicted starting slot (left-back)",
+        "subject": "Jeanuel Belocian"
+      },
+      {
+        "stat": "ev_b186d71eced19dae",
+        "display": "DM",
+        "label": "predicted starting slot (defensive midfield)",
+        "subject": "Matteo Prati"
+      },
+      {
+        "stat": "ev_2a0b6349caeb3cf0",
+        "display": "DM",
+        "label": "predicted starting slot (defensive midfield)",
+        "subject": "Iván Martín"
+      },
+      {
+        "stat": "ev_242022414b569df5",
+        "display": "AM",
+        "label": "predicted starting slot (attacking midfield)",
+        "subject": "André Almeida"
+      },
+      {
+        "stat": "ev_35b32b25f0b7d665",
+        "display": "RW",
+        "label": "predicted starting slot (right wing)",
+        "subject": "Canales"
+      },
+      {
+        "stat": "ev_2dc8fd21cd293b07",
+        "display": "LW",
+        "label": "predicted starting slot (left wing)",
+        "subject": "Iñigo Vicente"
+      },
+      {
+        "stat": "ev_6486c15b65c5caf7",
+        "display": "CF",
+        "label": "predicted starting slot (centre-forward)",
+        "subject": "Yassir Zabiri"
+      }
+    ],
     "news": [],
     "transfer": [
       {
-        "stat": "ev_2809db2ef8b4094c",
+        "stat": "ev_65e0e8f9e0b991d9",
         "display": "15%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Iván Martín"
       },
       {
-        "stat": "ev_bbd98827925d6d75",
+        "stat": "ev_f02fa79d0ab9449f",
         "display": "14%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "André Almeida"
       },
       {
-        "stat": "ev_e5aefad898103a41",
+        "stat": "ev_6be82089286be442",
         "display": "10%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Julen Agirrezabala"
@@ -2374,7 +2856,7 @@
         "subject": "Matteo Prati"
       },
       {
-        "stat": "ev_665ef01dff7f79aa",
+        "stat": "ev_b6b0a552e00a7058",
         "display": "€3.1m",
         "label": "estimated fair fee if sold to another La Liga club",
         "subject": "Matteo Prati"
@@ -2382,325 +2864,325 @@
     ],
     "scout": [
       {
-        "stat": "ev_b55ff6cf9f361cc3",
+        "stat": "ev_3ba483f8721bb2e2",
         "display": "winger",
         "label": "squad need, priority one",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_6c73772fcfdc67d8",
+        "stat": "ev_bcf3c061c0a4393e",
         "display": "2",
         "label": "players for the position, veterans aside (need one)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_2016d78167030fe3",
+        "stat": "ev_7081393357e4cb5d",
         "display": "4",
         "label": "players a squad carries there (need one)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_fd441f19f86ce838",
+        "stat": "ev_d41902f5b7f9c651",
         "display": "Iñigo Vicente",
         "label": "best option there (need one)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_d9eea7e34f332915",
+        "stat": "ev_f9336fee128b85f1",
         "display": "€1.8m",
         "label": "best option's market value (need one)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_40533f33885c1d50",
+        "stat": "ev_4f111b5be84fd07f",
         "display": "€6.0m",
         "label": "similar squads' best option's market value (need one)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_2b6700a9aa248b12",
+        "stat": "ev_541950000bf7d679",
         "display": "central midfield",
         "label": "squad need, priority two",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_cbffb6b159ac4603",
+        "stat": "ev_ddba6bfbde543b25",
         "display": "2",
         "label": "players for the position, veterans aside (need two)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_36eceef46e8a25c7",
+        "stat": "ev_33c6561e285b59fb",
         "display": "4",
         "label": "players a squad carries there (need two)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_1766c5dc9b6ff1bc",
+        "stat": "ev_7b4146f0bc89455e",
         "display": "André Almeida",
         "label": "best option there (need two)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_34c5948b5d890b4e",
+        "stat": "ev_9894d611e8f63ecd",
         "display": "Iván Martín",
         "label": "last regular starter there (need two)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_a39cc0ebf34cafc8",
+        "stat": "ev_019d135e5247960e",
         "display": "0.00",
         "label": "last regular starter's goals and assists per full match (need two)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_f6b7a571e90bfbf9",
+        "stat": "ev_70d3f4d1a48efce1",
         "display": "€5.0m",
         "label": "last regular starter's market value (need two)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_98494ce5f67873a7",
+        "stat": "ev_15f2b06d8f17eab5",
         "display": "€6.0m",
         "label": "best option's market value (need two)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_2aca501dc783084d",
+        "stat": "ev_9aea2468f03090ed",
         "display": "€7.5m",
         "label": "similar squads' best option's market value (need two)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_63872f4e40b10a8f",
+        "stat": "ev_eb025ecfe38d65bd",
         "display": "33%",
         "label": "share of the options who are veterans (need two)",
         "subject": "Racing de Santander"
       },
       {
-        "stat": "ev_667ded3987282f5f",
+        "stat": "ev_cfa2c63c4b4fac04",
         "display": "22",
         "label": "age (gem target, second need)",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_0babd7ebe7181ce4",
+        "stat": "ev_95f9d43e2270933e",
         "display": "Le Havre AC",
         "label": "current club",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_a197b1157e849801",
+        "stat": "ev_4c9fa2fab9815bf7",
         "display": "64%",
         "label": "share of his club's minutes over the last year",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_7579da02fc851f18",
+        "stat": "ev_ace04faac7fdffcd",
         "display": "0.06",
         "label": "league goals per full match",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_91b50fa79e95fde6",
+        "stat": "ev_86236407b0a04ae1",
         "display": "0.00",
         "label": "league assists per full match",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_1947a95a87fbb1ee",
+        "stat": "ev_82be972cd91392ad",
         "display": "11%",
         "label": "share of players at his position in his league he beats for goals and assists per full match",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_e444c33393b538e6",
+        "stat": "ev_f25fe6260477d8cb",
         "display": "Ligue 1",
         "label": "league of that comparison",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_c4adaa6fd78bb2e8",
+        "stat": "ev_eaaa8652189eef83",
         "display": "right",
         "label": "stronger foot",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_d0acba33ffb4b8be",
+        "stat": "ev_fac419208d0883a7",
         "display": "186",
         "label": "height in centimetres",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_6f77b94d39958c2b",
+        "stat": "ev_cc4853b490997307",
         "display": "2",
         "label": "international caps",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_1fc92fee4539e0c6",
+        "stat": "ev_c2213e2959fd0148",
         "display": "central midfield",
         "label": "positions he starts at",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_f58b2ae14e610c94",
+        "stat": "ev_56e794ed3db1279e",
         "display": "€4.5m",
         "label": "market value",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_839cd206aad521f2",
+        "stat": "ev_57766c93dcb661a9",
         "display": "€2.7m",
         "label": "estimated fair fee",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_8d60d81bf9301e28",
+        "stat": "ev_bfbd785045abc465",
         "display": "€6.1m",
         "label": "projected market value in a few seasons",
         "subject": "Simon Ebonog"
       },
       {
-        "stat": "ev_3a54a2bddff57ea6",
+        "stat": "ev_b05ad43bfcce2dad",
         "display": "20",
         "label": "age (gem target, second need)",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_0677ef4efae5ce05",
+        "stat": "ev_21895f60254c11e9",
         "display": "PFK CSKA Moskva",
         "label": "current club",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_1bb56384610923a9",
+        "stat": "ev_ea184ec3828eb7d2",
         "display": "33%",
         "label": "share of his club's minutes over the last year",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_94a363250f08e092",
+        "stat": "ev_3797a2304efef463",
         "display": "left",
         "label": "stronger foot",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_23340a6dcbdb1c7a",
+        "stat": "ev_c33201d82f210f6a",
         "display": "173",
         "label": "height in centimetres",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_96dc5364320f1bb0",
+        "stat": "ev_9f5b3759f5b6d97a",
         "display": "3",
         "label": "international caps",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_b7a6e08938685a7e",
+        "stat": "ev_3c699d6fa616f834",
         "display": "attacking midfield, right winger",
         "label": "positions he starts at",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_04ee3c639a7773ff",
+        "stat": "ev_52e4b906a4e54038",
         "display": "€3.5m",
         "label": "market value",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_ddce3ea081addf52",
+        "stat": "ev_f74c7a7bbafe92d2",
         "display": "€3.9m",
         "label": "estimated fair fee",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_8bde7945678f73d1",
+        "stat": "ev_e99237217766ea7d",
         "display": "€5.7m",
         "label": "projected market value in a few seasons",
         "subject": "Henrique Carmo"
       },
       {
-        "stat": "ev_ea922430b082b511",
+        "stat": "ev_31427f1d208d137b",
         "display": "23",
         "label": "age (gem target, second need)",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_c2ca4b57b96ecec7",
+        "stat": "ev_50a8584a4d21922a",
         "display": "KV Mechelen",
         "label": "current club",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_f2cd1d374f118470",
+        "stat": "ev_5cb1c4a7b652e5cd",
         "display": "98%",
         "label": "share of his club's minutes over the last year",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_ef03991f4dcf6503",
+        "stat": "ev_9b731a140c5ea7a1",
         "display": "0.31",
         "label": "league goals per full match",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_dfea87030a976b87",
+        "stat": "ev_52ea459caacafe33",
         "display": "0.10",
         "label": "league assists per full match",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_c7ff87b3d7da75e4",
+        "stat": "ev_9fd71aeaecb2d310",
         "display": "89%",
         "label": "share of players at his position in his league he beats for goals and assists per full match",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_fc0bc0da51d2a062",
+        "stat": "ev_c0c2a3fc35a88a0e",
         "display": "Jupiler Pro League",
         "label": "league of that comparison",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_2379a18b39590986",
+        "stat": "ev_50719ad8d1941276",
         "display": "right",
         "label": "stronger foot",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_dba82b5421b4790c",
+        "stat": "ev_ed0289b0f2e3c9b0",
         "display": "174",
         "label": "height in centimetres",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_8ee792b4115f634e",
+        "stat": "ev_a7b64f8f66f75fde",
         "display": "18",
         "label": "international caps",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_632656c9bcc86f68",
+        "stat": "ev_db81372cea484dd2",
         "display": "attacking midfield, left winger",
         "label": "positions he starts at",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_bb46807e8e546d3b",
+        "stat": "ev_e5f14761cd6c2be9",
         "display": "€4.5m",
         "label": "market value",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_f67cf13574224388",
+        "stat": "ev_2f74ea9cc509c1ae",
         "display": "€4.0m",
         "label": "estimated fair fee",
         "subject": "Myron van Brederode"
       },
       {
-        "stat": "ev_c010b6d00e4aa20c",
+        "stat": "ev_740999ca166d9894",
         "display": "€5.3m",
         "label": "projected market value in a few seasons",
         "subject": "Myron van Brederode"
@@ -2710,13 +3192,13 @@
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 55,
+      "numbers_total": 67,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 55
+      "verified": 67
     },
-    "sections_published": 6,
+    "sections_published": 7,
     "sections_withheld": 0
   },
   "methods": {

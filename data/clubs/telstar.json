@@ -10,8 +10,8 @@
     "name": "Eredivisie",
     "country": "Netherlands"
   },
-  "generated_at": "2026-10-18T19:37:57+00:00",
-  "data_as_of": "2026-10-18T19:24:59+00:00",
+  "generated_at": "2026-10-18T20:29:41+00:00",
+  "data_as_of": "2026-10-18T20:24:07+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -26,7 +26,7 @@
             "text": "Telstar are "
           },
           {
-            "stat": "ev_e3f26b1320a3d254",
+            "stat": "ev_27afd7e0d97a8908",
             "display": "16th"
           },
           {
@@ -44,7 +44,7 @@
             "text": "Telstar have "
           },
           {
-            "stat": "ev_267de99d4ef42e18",
+            "stat": "ev_2eb64b87c5d0f7a9",
             "display": "6"
           },
           {
@@ -62,7 +62,7 @@
             "text": "Telstar's next league match is Go Ahead Eagles v Telstar on "
           },
           {
-            "stat": "ev_5533545350cb2322",
+            "stat": "ev_4c9585502d7f0e7d",
             "display": "23 October 2026"
           },
           {
@@ -77,14 +77,14 @@
       {
         "segments": [
           {
-            "text": "Telstar's biggest squad need is "
+            "text": "We expect Telstar to line up in a "
           },
           {
-            "stat": "ev_587bcf128d1d2c49",
-            "display": "centre-back"
+            "stat": "ev_2ed7c675f9c8124f",
+            "display": "4-3-3"
           },
           {
-            "text": "."
+            "text": " for the next match."
           }
         ],
         "type": "stat",
@@ -109,7 +109,7 @@
               "text": "Telstar are "
             },
             {
-              "stat": "ev_e3f26b1320a3d254",
+              "stat": "ev_27afd7e0d97a8908",
               "display": "16th"
             },
             {
@@ -127,7 +127,7 @@
               "text": "Telstar have "
             },
             {
-              "stat": "ev_267de99d4ef42e18",
+              "stat": "ev_2eb64b87c5d0f7a9",
               "display": "6"
             },
             {
@@ -145,7 +145,7 @@
               "text": "Telstar have scored "
             },
             {
-              "stat": "ev_c7eb89c367011238",
+              "stat": "ev_d5da01b5505cf195",
               "display": "10"
             },
             {
@@ -163,7 +163,7 @@
               "text": "Telstar have conceded "
             },
             {
-              "stat": "ev_269f6505ffd382b2",
+              "stat": "ev_d1fe17195f3746c9",
               "display": "18"
             },
             {
@@ -181,7 +181,7 @@
               "text": "Telstar's most recent league results read "
             },
             {
-              "stat": "ev_31a25649e21aaec5",
+              "stat": "ev_977f9cfe810bba36",
               "display": "LDLDL"
             },
             {
@@ -199,7 +199,7 @@
               "text": "Telstar's Elo rating is "
             },
             {
-              "stat": "ev_61731468bb91ae4b",
+              "stat": "ev_0fbe137f2f16cec5",
               "display": "1394"
             },
             {
@@ -245,7 +245,7 @@
               "text": "Telstar's next league match is Go Ahead Eagles v Telstar on "
             },
             {
-              "stat": "ev_5533545350cb2322",
+              "stat": "ev_4c9585502d7f0e7d",
               "display": "23 October 2026"
             },
             {
@@ -263,7 +263,7 @@
               "text": "Our forecast gives Go Ahead Eagles a "
             },
             {
-              "stat": "ev_90472394b599d145",
+              "stat": "ev_29c8a58bfe8fad34",
               "display": "52%"
             },
             {
@@ -281,7 +281,7 @@
               "text": "Our forecast gives Go Ahead Eagles v Telstar a "
             },
             {
-              "stat": "ev_ec7a99af98b5917f",
+              "stat": "ev_86b3016ccaf2d426",
               "display": "26%"
             },
             {
@@ -299,7 +299,7 @@
               "text": "Our forecast gives Telstar a "
             },
             {
-              "stat": "ev_48bfea36f4e87c47",
+              "stat": "ev_3546f454ed029e66",
               "display": "22%"
             },
             {
@@ -317,7 +317,7 @@
               "text": "Telstar's Elo rating is "
             },
             {
-              "stat": "ev_61731468bb91ae4b",
+              "stat": "ev_0fbe137f2f16cec5",
               "display": "1394"
             },
             {
@@ -335,7 +335,7 @@
               "text": "Go Ahead Eagles's Elo rating is "
             },
             {
-              "stat": "ev_3d7e146195e9ef70",
+              "stat": "ev_3f7ed5445692b09a",
               "display": "1457"
             },
             {
@@ -354,9 +354,226 @@
       "agent": "lineup",
       "title": "Predicted XI",
       "question": "What is Telstar's predicted lineup for the next match?",
-      "status": "empty",
+      "status": "published",
       "writer": "template",
-      "claims": [],
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "We expect Telstar to line up in a "
+            },
+            {
+              "stat": "ev_2ed7c675f9c8124f",
+              "display": "4-3-3"
+            },
+            {
+              "text": " for the next match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Ronald Koeman Jr. at "
+            },
+            {
+              "stat": "ev_02fd2d1f6d26797e",
+              "display": "GK"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Abdelnour Soualhia at "
+            },
+            {
+              "stat": "ev_a37bdc37254820dc",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Sem Valk at "
+            },
+            {
+              "stat": "ev_3c2237fe25b33004",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Gerald Alders at "
+            },
+            {
+              "stat": "ev_5eb4583d97431419",
+              "display": "RB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Marvin Peersman at "
+            },
+            {
+              "stat": "ev_1236fe0e9c4cd937",
+              "display": "LB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Tyrone Owusu at "
+            },
+            {
+              "stat": "ev_5091d516ea529978",
+              "display": "DM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Nils Rossen at "
+            },
+            {
+              "stat": "ev_86fd1203c0697588",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Isaiah Ahmed at "
+            },
+            {
+              "stat": "ev_162a7118df3c668d",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Rui Mendes at "
+            },
+            {
+              "stat": "ev_807afec8eb0fda87",
+              "display": "RW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Patrick Brouwer at "
+            },
+            {
+              "stat": "ev_d92b8187d1650c9d",
+              "display": "LW"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Nökkvi Þórisson at "
+            },
+            {
+              "stat": "ev_6820bf1afba8f510",
+              "display": "CF"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
       "withheld": []
     },
     {
@@ -381,7 +598,7 @@
               "text": "We estimate Patrick Brouwer's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_c917177bed9ad43d",
+              "stat": "ev_c35e6426e765bb01",
               "display": "15%"
             },
             {
@@ -399,7 +616,7 @@
               "text": "We estimate Tyrone Owusu's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_b9ae359914260d79",
+              "stat": "ev_cb0367dfa427821d",
               "display": "7%"
             },
             {
@@ -417,7 +634,7 @@
               "text": "We estimate Rojendro Oudsten's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_fc183287011e64b5",
+              "stat": "ev_f1d46fde8c95349d",
               "display": "4%"
             },
             {
@@ -453,7 +670,7 @@
               "text": "Our fair-fee estimate for Patrick Brouwer is "
             },
             {
-              "stat": "ev_41e21656a144d41e",
+              "stat": "ev_6c0b19fae2740ba8",
               "display": "€0.6m"
             },
             {
@@ -489,7 +706,7 @@
               "text": "Our fair-fee estimate for Ronald Koeman Jr. is "
             },
             {
-              "stat": "ev_9197ac78cdaa19c3",
+              "stat": "ev_6a6891cb4952fc17",
               "display": "€0.4m"
             },
             {
@@ -525,7 +742,7 @@
               "text": "Our fair-fee estimate for Gerald Alders is "
             },
             {
-              "stat": "ev_7b3c7cbf22b3a24d",
+              "stat": "ev_a9c651f4ae904467",
               "display": "€0.7m"
             },
             {
@@ -553,7 +770,7 @@
               "text": "Telstar's biggest squad need is "
             },
             {
-              "stat": "ev_587bcf128d1d2c49",
+              "stat": "ev_b0ffff11b11f9a1c",
               "display": "centre-back"
             },
             {
@@ -571,7 +788,7 @@
               "text": "Telstar have "
             },
             {
-              "stat": "ev_7aee5a288012f422",
+              "stat": "ev_e99772676c5de2c8",
               "display": "2"
             },
             {
@@ -589,7 +806,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_7d4e98136caeca11",
+              "stat": "ev_1483a42d3df191b5",
               "display": "4"
             },
             {
@@ -607,7 +824,7 @@
               "text": "Telstar's best option for centre-back is "
             },
             {
-              "stat": "ev_a65e810041f449f4",
+              "stat": "ev_6d570bc3a7319d34",
               "display": "Yamano Olfers"
             },
             {
@@ -625,7 +842,7 @@
               "text": "At the squads closest to Telstar in strength, the best option for centre-back is typically worth "
             },
             {
-              "stat": "ev_23e94a2b7e945a5c",
+              "stat": "ev_202bd6c91fc56f72",
               "display": "€0.7m"
             },
             {
@@ -643,7 +860,7 @@
               "text": "Telstar's second squad need is "
             },
             {
-              "stat": "ev_871a1eef6ce9a0ec",
+              "stat": "ev_62e2d0f377909e80",
               "display": "defensive midfield"
             },
             {
@@ -661,7 +878,7 @@
               "text": "Telstar have "
             },
             {
-              "stat": "ev_93e1c59eb048af98",
+              "stat": "ev_d744f205fb7f2e77",
               "display": "1"
             },
             {
@@ -679,7 +896,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_32d0999bf4f3810c",
+              "stat": "ev_b0eb136005200d54",
               "display": "2"
             },
             {
@@ -697,7 +914,7 @@
               "text": "Telstar's best option for defensive midfield is "
             },
             {
-              "stat": "ev_9eb4b0068b8f3ff6",
+              "stat": "ev_edbcc14d21c287a0",
               "display": "Gabi Caschili"
             },
             {
@@ -715,7 +932,7 @@
               "text": "The last of Telstar's regular starters at defensive midfield is "
             },
             {
-              "stat": "ev_f39a8818495d3ee8",
+              "stat": "ev_e072c65c18f2d5e0",
               "display": "Gabi Caschili"
             },
             {
@@ -733,7 +950,7 @@
               "text": "The last of Telstar's regular starters at defensive midfield has a market value of "
             },
             {
-              "stat": "ev_6bc23fdad153aec3",
+              "stat": "ev_53520318f9eed3f2",
               "display": "€0.1m"
             },
             {
@@ -751,7 +968,7 @@
               "text": "Telstar's best option for defensive midfield has a market value of "
             },
             {
-              "stat": "ev_e60bdcca79122fa7",
+              "stat": "ev_f6afedb59cb6bfc9",
               "display": "€0.1m"
             },
             {
@@ -769,7 +986,7 @@
               "text": "At the squads closest to Telstar in strength, the best option for defensive midfield is typically worth "
             },
             {
-              "stat": "ev_ff08bf55f30ee7d5",
+              "stat": "ev_0315974819010910",
               "display": "€2.0m"
             },
             {
@@ -786,6 +1003,102 @@
     }
   ],
   "stats": {
+    "ev_02fd2d1f6d26797e": {
+      "value": "GK",
+      "display": "GK",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpeb0d11e12909ff",
+      "entity_name": "Ronald Koeman Jr.",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0315974819010910": {
+      "value": 2000000.0,
+      "display": "2000000",
+      "unit": null,
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0fbe137f2f16cec5": {
+      "value": 1393.5,
+      "display": "1393.50",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1236fe0e9c4cd937": {
+      "value": "LB",
+      "display": "LB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp18e471f0f1565d",
+      "entity_name": "Marvin Peersman",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_1483a42d3df191b5": {
+      "value": 4.0,
+      "display": "4",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_162a7118df3c668d": {
+      "value": "CM",
+      "display": "CM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpcc2b29cce62d01",
+      "entity_name": "Isaiah Ahmed",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
     "ev_1892b40615c87cfa": {
       "value": 700000.0,
       "display": "700000",
@@ -802,7 +1115,7 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_23e94a2b7e945a5c": {
+    "ev_202bd6c91fc56f72": {
       "value": 675000.0,
       "display": "675000",
       "unit": null,
@@ -813,12 +1126,44 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_267de99d4ef42e18": {
+    "ev_27afd7e0d97a8908": {
+      "value": 16.0,
+      "display": "16",
+      "unit": null,
+      "metric": "league_position",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:07:38.551980+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_29c8a58bfe8fad34": {
+      "value": 0.5232,
+      "display": "0.52",
+      "unit": null,
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:go-ahead-eagles:telstar",
+      "entity_name": "Go Ahead Eagles v Telstar",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2eb64b87c5d0f7a9": {
       "value": 6.0,
       "display": "6",
       "unit": null,
@@ -829,60 +1174,60 @@
       "source": "football_data_org",
       "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:28:32.720262+00:00",
+      "fetched_at": "2026-10-18T20:07:38.551980+00:00",
       "query_kind": "http_json",
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_269f6505ffd382b2": {
-      "value": 18.0,
-      "display": "18",
+    "ev_2ed7c675f9c8124f": {
+      "value": "4-3-3",
+      "display": "4-3-3",
       "unit": null,
-      "metric": "league_goalsAgainst",
+      "metric": "predicted_formation",
       "entity_type": "club",
       "entity_id": "telstar",
       "entity_name": "Telstar",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:28:32.720262+00:00",
-      "query_kind": "http_json",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_31a25649e21aaec5": {
-      "value": "LDLDL",
-      "display": "LDLDL",
-      "unit": null,
-      "metric": "league_form",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/DED/standings",
-      "source_tier": 2,
-      "fetched_at": "2026-10-18T16:28:32.720262+00:00",
-      "query_kind": "sql",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_32d0999bf4f3810c": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_3d7e146195e9ef70": {
+    "ev_3546f454ed029e66": {
+      "value": 0.2216,
+      "display": "0.22",
+      "unit": null,
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:go-ahead-eagles:telstar",
+      "entity_name": "Go Ahead Eagles v Telstar",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3c2237fe25b33004": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp6e91b0b8d3294b",
+      "entity_name": "Sem Valk",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3f7ed5445692b09a": {
       "value": 1456.7,
       "display": "1456.70",
       "unit": null,
@@ -893,39 +1238,39 @@
       "source": "dugout_model:predictor",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_41e21656a144d41e": {
-      "value": 600000.0,
-      "display": "600000",
+    "ev_4c9585502d7f0e7d": {
+      "value": "2026-10-23T18:00:00+00:00",
+      "display": "2026-10-23T18:00:00+00:00",
       "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp27e0c30a5cbdfe",
-      "entity_name": "Patrick Brouwer",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_48bfea36f4e87c47": {
-      "value": 0.2211,
-      "display": "0.22",
-      "unit": null,
-      "metric": "p_away_win",
+      "metric": "kickoff_utc",
       "entity_type": "match",
       "entity_id": "eredivisie:2026-27:go-ahead-eagles:telstar",
       "entity_name": "Go Ahead Eagles v Telstar",
       "source": "dugout_model:predictor",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5091d516ea529978": {
+      "value": "DM",
+      "display": "DM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp00d541170808da",
+      "entity_name": "Tyrone Owusu",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -946,34 +1291,18 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_5533545350cb2322": {
-      "value": "2026-10-23T18:00:00+00:00",
-      "display": "2026-10-23T18:00:00+00:00",
+    "ev_53520318f9eed3f2": {
+      "value": 125000.0,
+      "display": "125000",
       "unit": null,
-      "metric": "kickoff_utc",
-      "entity_type": "match",
-      "entity_id": "eredivisie:2026-27:go-ahead-eagles:telstar",
-      "entity_name": "Go Ahead Eagles v Telstar",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_587bcf128d1d2c49": {
-      "value": "centre-back",
-      "display": "centre-back",
-      "unit": null,
-      "metric": "need",
+      "metric": "need_bar_value",
       "entity_type": "club",
       "entity_id": "telstar",
       "entity_name": "Telstar",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -994,87 +1323,23 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_61731468bb91ae4b": {
-      "value": 1393.5,
-      "display": "1393.50",
+    "ev_5eb4583d97431419": {
+      "value": "RB",
+      "display": "RB",
       "unit": null,
-      "metric": "elo",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6bc23fdad153aec3": {
-      "value": 125000.0,
-      "display": "125000",
-      "unit": null,
-      "metric": "need_bar_value",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7aee5a288012f422": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7b3c7cbf22b3a24d": {
-      "value": 700000.0,
-      "display": "700000",
-      "unit": null,
-      "metric": "fair_fee",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
       "entity_id": "rp1b645d719226f2",
       "entity_name": "Gerald Alders",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_7d4e98136caeca11": {
-      "value": 4.0,
-      "display": "4",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_871a1eef6ce9a0ec": {
+    "ev_62e2d0f377909e80": {
       "value": "defensive midfield",
       "display": "defensive midfield",
       "unit": null,
@@ -1085,28 +1350,28 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_90472394b599d145": {
-      "value": 0.5238,
-      "display": "0.52",
+    "ev_6820bf1afba8f510": {
+      "value": "CF",
+      "display": "CF",
       "unit": null,
-      "metric": "p_home_win",
-      "entity_type": "match",
-      "entity_id": "eredivisie:2026-27:go-ahead-eagles:telstar",
-      "entity_name": "Go Ahead Eagles v Telstar",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpb8d1690f0ab50c",
+      "entity_name": "Nökkvi Þórisson",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_9197ac78cdaa19c3": {
+    "ev_6a6891cb4952fc17": {
       "value": 400000.0,
       "display": "400000",
       "unit": null,
@@ -1117,44 +1382,28 @@
       "source": "dugout_model:valuation",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_93e1c59eb048af98": {
-      "value": 1.0,
-      "display": "1",
+    "ev_6c0b19fae2740ba8": {
+      "value": 600000.0,
+      "display": "600000",
       "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp27e0c30a5cbdfe",
+      "entity_name": "Patrick Brouwer",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_9eb4b0068b8f3ff6": {
-      "value": "Gabi Caschili",
-      "display": "Gabi Caschili",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a65e810041f449f4": {
+    "ev_6d570bc3a7319d34": {
       "value": "Yamano Olfers",
       "display": "Yamano Olfers",
       "unit": null,
@@ -1165,44 +1414,140 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_b9ae359914260d79": {
-      "value": 0.069,
-      "display": "0.07",
+    "ev_807afec8eb0fda87": {
+      "value": "RW",
+      "display": "RW",
       "unit": null,
-      "metric": "sale_likelihood",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rp00d541170808da",
-      "entity_name": "Tyrone Owusu",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "entity_id": "rpb562e433fa1100",
+      "entity_name": "Rui Mendes",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c7eb89c367011238": {
-      "value": 10.0,
-      "display": "10",
+    "ev_86b3016ccaf2d426": {
+      "value": 0.2552,
+      "display": "0.26",
       "unit": null,
-      "metric": "league_goalsFor",
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:go-ahead-eagles:telstar",
+      "entity_name": "Go Ahead Eagles v Telstar",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_86fd1203c0697588": {
+      "value": "CM",
+      "display": "CM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "football_data_org:177052",
+      "entity_name": "Nils Rossen",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_977f9cfe810bba36": {
+      "value": "LDLDL",
+      "display": "LDLDL",
+      "unit": null,
+      "metric": "league_form",
       "entity_type": "club",
       "entity_id": "telstar",
       "entity_name": "Telstar",
       "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:28:32.720262+00:00",
-      "query_kind": "http_json",
+      "source_url": "https://api.football-data.org/v4/competitions/DED/standings",
+      "source_tier": 2,
+      "fetched_at": "2026-10-18T20:07:38.551980+00:00",
+      "query_kind": "sql",
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_c917177bed9ad43d": {
+    "ev_a37bdc37254820dc": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "football_data_org:297046",
+      "entity_name": "Abdelnour Soualhia",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a9c651f4ae904467": {
+      "value": 700000.0,
+      "display": "700000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp1b645d719226f2",
+      "entity_name": "Gerald Alders",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b0eb136005200d54": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b0ffff11b11f9a1c": {
+      "value": "centre-back",
+      "display": "centre-back",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c35e6426e765bb01": {
       "value": 0.147,
       "display": "0.15",
       "unit": null,
@@ -1213,7 +1558,71 @@
       "source": "dugout_model:realism",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cb0367dfa427821d": {
+      "value": 0.069,
+      "display": "0.07",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp00d541170808da",
+      "entity_name": "Tyrone Owusu",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d1fe17195f3746c9": {
+      "value": 18.0,
+      "display": "18",
+      "unit": null,
+      "metric": "league_goalsAgainst",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:07:38.551980+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_d5da01b5505cf195": {
+      "value": 10.0,
+      "display": "10",
+      "unit": null,
+      "metric": "league_goalsFor",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:07:38.551980+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_d744f205fb7f2e77": {
+      "value": 1.0,
+      "display": "1",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1234,55 +1643,23 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_e3f26b1320a3d254": {
-      "value": 16.0,
-      "display": "16",
+    "ev_d92b8187d1650c9d": {
+      "value": "LW",
+      "display": "LW",
       "unit": null,
-      "metric": "league_position",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp27e0c30a5cbdfe",
+      "entity_name": "Patrick Brouwer",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:28:32.720262+00:00",
-      "query_kind": "http_json",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_e60bdcca79122fa7": {
-      "value": 125000.0,
-      "display": "125000",
-      "unit": null,
-      "metric": "need_best_value",
-      "entity_type": "club",
-      "entity_id": "telstar",
-      "entity_name": "Telstar",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_ec7a99af98b5917f": {
-      "value": 0.2551,
-      "display": "0.26",
-      "unit": null,
-      "metric": "p_draw",
-      "entity_type": "match",
-      "entity_id": "eredivisie:2026-27:go-ahead-eagles:telstar",
-      "entity_name": "Go Ahead Eagles v Telstar",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_f39a8818495d3ee8": {
+    "ev_e072c65c18f2d5e0": {
       "value": "Gabi Caschili",
       "display": "Gabi Caschili",
       "unit": null,
@@ -1293,12 +1670,44 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_fc183287011e64b5": {
+    "ev_e99772676c5de2c8": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_edbcc14d21c287a0": {
+      "value": "Gabi Caschili",
+      "display": "Gabi Caschili",
+      "unit": null,
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "telstar",
+      "entity_name": "Telstar",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f1d46fde8c95349d": {
       "value": 0.036,
       "display": "0.04",
       "unit": null,
@@ -1309,23 +1718,23 @@
       "source": "dugout_model:realism",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_ff08bf55f30ee7d5": {
-      "value": 2000000.0,
-      "display": "2000000",
+    "ev_f6afedb59cb6bfc9": {
+      "value": 125000.0,
+      "display": "125000",
       "unit": null,
-      "metric": "need_peer_best_value",
+      "metric": "need_best_value",
       "entity_type": "club",
       "entity_id": "telstar",
       "entity_name": "Telstar",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1334,37 +1743,37 @@
   "key_stats": {
     "club": [
       {
-        "stat": "ev_e3f26b1320a3d254",
+        "stat": "ev_27afd7e0d97a8908",
         "display": "16th",
         "label": "league position",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_267de99d4ef42e18",
+        "stat": "ev_2eb64b87c5d0f7a9",
         "display": "6",
         "label": "league points",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_c7eb89c367011238",
+        "stat": "ev_d5da01b5505cf195",
         "display": "10",
         "label": "league goals scored",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_269f6505ffd382b2",
+        "stat": "ev_d1fe17195f3746c9",
         "display": "18",
         "label": "league goals conceded",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_31a25649e21aaec5",
+        "stat": "ev_977f9cfe810bba36",
         "display": "LDLDL",
         "label": "recent league results, oldest first",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_61731468bb91ae4b",
+        "stat": "ev_0fbe137f2f16cec5",
         "display": "1394",
         "label": "Elo rating (dugout's own)",
         "subject": "Telstar"
@@ -1378,59 +1787,132 @@
     ],
     "match": [
       {
-        "stat": "ev_5533545350cb2322",
+        "stat": "ev_4c9585502d7f0e7d",
         "display": "23 October 2026",
         "label": "kick-off date",
         "subject": "Go Ahead Eagles v Telstar"
       },
       {
-        "stat": "ev_90472394b599d145",
+        "stat": "ev_29c8a58bfe8fad34",
         "display": "52%",
         "label": "probability Go Ahead Eagles win",
         "subject": "Go Ahead Eagles"
       },
       {
-        "stat": "ev_ec7a99af98b5917f",
+        "stat": "ev_86b3016ccaf2d426",
         "display": "26%",
         "label": "probability of a draw",
         "subject": "Go Ahead Eagles v Telstar"
       },
       {
-        "stat": "ev_48bfea36f4e87c47",
+        "stat": "ev_3546f454ed029e66",
         "display": "22%",
         "label": "probability Telstar win",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_61731468bb91ae4b",
+        "stat": "ev_0fbe137f2f16cec5",
         "display": "1394",
         "label": "Elo rating (dugout's own)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_3d7e146195e9ef70",
+        "stat": "ev_3f7ed5445692b09a",
         "display": "1457",
         "label": "Elo rating (dugout's own)",
         "subject": "Go Ahead Eagles"
       }
     ],
-    "lineup": [],
+    "lineup": [
+      {
+        "stat": "ev_2ed7c675f9c8124f",
+        "display": "4-3-3",
+        "label": "predicted formation for the next match",
+        "subject": "Telstar"
+      },
+      {
+        "stat": "ev_02fd2d1f6d26797e",
+        "display": "GK",
+        "label": "predicted starting slot (goalkeeper)",
+        "subject": "Ronald Koeman Jr."
+      },
+      {
+        "stat": "ev_a37bdc37254820dc",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Abdelnour Soualhia"
+      },
+      {
+        "stat": "ev_3c2237fe25b33004",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Sem Valk"
+      },
+      {
+        "stat": "ev_5eb4583d97431419",
+        "display": "RB",
+        "label": "predicted starting slot (right-back)",
+        "subject": "Gerald Alders"
+      },
+      {
+        "stat": "ev_1236fe0e9c4cd937",
+        "display": "LB",
+        "label": "predicted starting slot (left-back)",
+        "subject": "Marvin Peersman"
+      },
+      {
+        "stat": "ev_5091d516ea529978",
+        "display": "DM",
+        "label": "predicted starting slot (defensive midfield)",
+        "subject": "Tyrone Owusu"
+      },
+      {
+        "stat": "ev_86fd1203c0697588",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Nils Rossen"
+      },
+      {
+        "stat": "ev_162a7118df3c668d",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Isaiah Ahmed"
+      },
+      {
+        "stat": "ev_807afec8eb0fda87",
+        "display": "RW",
+        "label": "predicted starting slot (right wing)",
+        "subject": "Rui Mendes"
+      },
+      {
+        "stat": "ev_d92b8187d1650c9d",
+        "display": "LW",
+        "label": "predicted starting slot (left wing)",
+        "subject": "Patrick Brouwer"
+      },
+      {
+        "stat": "ev_6820bf1afba8f510",
+        "display": "CF",
+        "label": "predicted starting slot (centre-forward)",
+        "subject": "Nökkvi Þórisson"
+      }
+    ],
     "news": [],
     "transfer": [
       {
-        "stat": "ev_c917177bed9ad43d",
+        "stat": "ev_c35e6426e765bb01",
         "display": "15%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Patrick Brouwer"
       },
       {
-        "stat": "ev_b9ae359914260d79",
+        "stat": "ev_cb0367dfa427821d",
         "display": "7%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Tyrone Owusu"
       },
       {
-        "stat": "ev_fc183287011e64b5",
+        "stat": "ev_f1d46fde8c95349d",
         "display": "4%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Rojendro Oudsten"
@@ -1442,7 +1924,7 @@
         "subject": "Patrick Brouwer"
       },
       {
-        "stat": "ev_41e21656a144d41e",
+        "stat": "ev_6c0b19fae2740ba8",
         "display": "€0.6m",
         "label": "estimated fair fee if sold to another Eredivisie club",
         "subject": "Patrick Brouwer"
@@ -1454,7 +1936,7 @@
         "subject": "Ronald Koeman Jr."
       },
       {
-        "stat": "ev_9197ac78cdaa19c3",
+        "stat": "ev_6a6891cb4952fc17",
         "display": "€0.4m",
         "label": "estimated fair fee if sold to another Eredivisie club",
         "subject": "Ronald Koeman Jr."
@@ -1466,7 +1948,7 @@
         "subject": "Gerald Alders"
       },
       {
-        "stat": "ev_7b3c7cbf22b3a24d",
+        "stat": "ev_a9c651f4ae904467",
         "display": "€0.7m",
         "label": "estimated fair fee if sold to another Eredivisie club",
         "subject": "Gerald Alders"
@@ -1474,79 +1956,79 @@
     ],
     "scout": [
       {
-        "stat": "ev_587bcf128d1d2c49",
+        "stat": "ev_b0ffff11b11f9a1c",
         "display": "centre-back",
         "label": "squad need, priority one",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_7aee5a288012f422",
+        "stat": "ev_e99772676c5de2c8",
         "display": "2",
         "label": "players for the position, veterans aside (need one)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_7d4e98136caeca11",
+        "stat": "ev_1483a42d3df191b5",
         "display": "4",
         "label": "players a squad carries there (need one)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_a65e810041f449f4",
+        "stat": "ev_6d570bc3a7319d34",
         "display": "Yamano Olfers",
         "label": "best option there (need one)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_23e94a2b7e945a5c",
+        "stat": "ev_202bd6c91fc56f72",
         "display": "€0.7m",
         "label": "similar squads' best option's market value (need one)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_871a1eef6ce9a0ec",
+        "stat": "ev_62e2d0f377909e80",
         "display": "defensive midfield",
         "label": "squad need, priority two",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_93e1c59eb048af98",
+        "stat": "ev_d744f205fb7f2e77",
         "display": "1",
         "label": "players for the position, veterans aside (need two)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_32d0999bf4f3810c",
+        "stat": "ev_b0eb136005200d54",
         "display": "2",
         "label": "players a squad carries there (need two)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_9eb4b0068b8f3ff6",
+        "stat": "ev_edbcc14d21c287a0",
         "display": "Gabi Caschili",
         "label": "best option there (need two)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_f39a8818495d3ee8",
+        "stat": "ev_e072c65c18f2d5e0",
         "display": "Gabi Caschili",
         "label": "last regular starter there (need two)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_6bc23fdad153aec3",
+        "stat": "ev_53520318f9eed3f2",
         "display": "€0.1m",
         "label": "last regular starter's market value (need two)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_e60bdcca79122fa7",
+        "stat": "ev_f6afedb59cb6bfc9",
         "display": "€0.1m",
         "label": "best option's market value (need two)",
         "subject": "Telstar"
       },
       {
-        "stat": "ev_ff08bf55f30ee7d5",
+        "stat": "ev_0315974819010910",
         "display": "€2.0m",
         "label": "similar squads' best option's market value (need two)",
         "subject": "Telstar"
@@ -1556,13 +2038,13 @@
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 39,
+      "numbers_total": 51,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 39
+      "verified": 51
     },
-    "sections_published": 5,
+    "sections_published": 6,
     "sections_withheld": 0
   },
   "methods": {

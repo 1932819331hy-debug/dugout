@@ -10,8 +10,8 @@
     "name": "Bundesliga",
     "country": "Germany"
   },
-  "generated_at": "2026-10-18T19:48:38+00:00",
-  "data_as_of": "2026-10-18T19:24:59+00:00",
+  "generated_at": "2026-10-18T20:34:04+00:00",
+  "data_as_of": "2026-10-18T20:24:07+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -26,7 +26,7 @@
             "text": "Borussia Dortmund are "
           },
           {
-            "stat": "ev_d2186220d41d80c2",
+            "stat": "ev_a18f3fa92d2dd4d6",
             "display": "2nd"
           },
           {
@@ -44,7 +44,7 @@
             "text": "Borussia Dortmund have "
           },
           {
-            "stat": "ev_e078d60508dbeaa4",
+            "stat": "ev_f39da548dcf387dd",
             "display": "14"
           },
           {
@@ -62,7 +62,7 @@
             "text": "Borussia Dortmund's next league match is Borussia Dortmund v Eintracht Frankfurt on "
           },
           {
-            "stat": "ev_cff7955aa6565029",
+            "stat": "ev_d069a2c1fdb12095",
             "display": "24 October 2026"
           },
           {
@@ -80,7 +80,7 @@
             "text": "Our forecast gives Borussia Dortmund a "
           },
           {
-            "stat": "ev_c32a503c51ad53cc",
+            "stat": "ev_909332347e760264",
             "display": "65%"
           },
           {
@@ -109,7 +109,7 @@
               "text": "Borussia Dortmund are "
             },
             {
-              "stat": "ev_d2186220d41d80c2",
+              "stat": "ev_a18f3fa92d2dd4d6",
               "display": "2nd"
             },
             {
@@ -127,7 +127,7 @@
               "text": "Borussia Dortmund have "
             },
             {
-              "stat": "ev_e078d60508dbeaa4",
+              "stat": "ev_f39da548dcf387dd",
               "display": "14"
             },
             {
@@ -145,7 +145,7 @@
               "text": "Borussia Dortmund have scored "
             },
             {
-              "stat": "ev_763d7df8515c8fcf",
+              "stat": "ev_6d3c489a6caec703",
               "display": "11"
             },
             {
@@ -163,7 +163,7 @@
               "text": "Borussia Dortmund have conceded "
             },
             {
-              "stat": "ev_4a890a7f1e09debc",
+              "stat": "ev_64247d84d19f2001",
               "display": "4"
             },
             {
@@ -181,7 +181,7 @@
               "text": "Borussia Dortmund's most recent league results read "
             },
             {
-              "stat": "ev_06d6ad0b50d40f13",
+              "stat": "ev_3ed333bd2dd91344",
               "display": "DDWWW"
             },
             {
@@ -199,7 +199,7 @@
               "text": "Borussia Dortmund's Elo rating is "
             },
             {
-              "stat": "ev_49f7537910e7f2c1",
+              "stat": "ev_bf2018bd44090922",
               "display": "1698"
             },
             {
@@ -245,7 +245,7 @@
               "text": "Borussia Dortmund's next league match is Borussia Dortmund v Eintracht Frankfurt on "
             },
             {
-              "stat": "ev_cff7955aa6565029",
+              "stat": "ev_d069a2c1fdb12095",
               "display": "24 October 2026"
             },
             {
@@ -263,7 +263,7 @@
               "text": "Our forecast gives Borussia Dortmund a "
             },
             {
-              "stat": "ev_c32a503c51ad53cc",
+              "stat": "ev_909332347e760264",
               "display": "65%"
             },
             {
@@ -281,7 +281,7 @@
               "text": "Our forecast gives Borussia Dortmund v Eintracht Frankfurt a "
             },
             {
-              "stat": "ev_4cce1c4ce22e0a26",
+              "stat": "ev_6d77c49d0ea70392",
               "display": "22%"
             },
             {
@@ -299,7 +299,7 @@
               "text": "Our forecast gives Eintracht Frankfurt a "
             },
             {
-              "stat": "ev_713473be72a90891",
+              "stat": "ev_eefb3e83d6cf8d8a",
               "display": "13%"
             },
             {
@@ -317,7 +317,7 @@
               "text": "Borussia Dortmund's Elo rating is "
             },
             {
-              "stat": "ev_49f7537910e7f2c1",
+              "stat": "ev_bf2018bd44090922",
               "display": "1698"
             },
             {
@@ -335,7 +335,7 @@
               "text": "Eintracht Frankfurt's Elo rating is "
             },
             {
-              "stat": "ev_a9a8f6a202c0e41f",
+              "stat": "ev_86dc1ca82c531f96",
               "display": "1494"
             },
             {
@@ -354,9 +354,226 @@
       "agent": "lineup",
       "title": "Predicted XI",
       "question": "What is Borussia Dortmund's predicted lineup for the next match?",
-      "status": "empty",
+      "status": "published",
       "writer": "template",
-      "claims": [],
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "We expect Borussia Dortmund to line up in a "
+            },
+            {
+              "stat": "ev_56bba92082408bba",
+              "display": "3-4-2-1"
+            },
+            {
+              "text": " for the next match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Gregor Kobel at "
+            },
+            {
+              "stat": "ev_f2793a1e18a8181a",
+              "display": "GK"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Nico Schlotterbeck at "
+            },
+            {
+              "stat": "ev_977341cdcaf83a7c",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Waldemar Anton at "
+            },
+            {
+              "stat": "ev_6c5d38d66530e803",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Ramy Bensebaini at "
+            },
+            {
+              "stat": "ev_597423ac9a66f5e4",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Julian Ryerson at "
+            },
+            {
+              "stat": "ev_0486a4e40779bae9",
+              "display": "RWB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Daniel Svensson at "
+            },
+            {
+              "stat": "ev_771e2ec58db9858e",
+              "display": "LWB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Felix Kalu Nmecha at "
+            },
+            {
+              "stat": "ev_8d8e34fc9850fd23",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Jobe Bellingham at "
+            },
+            {
+              "stat": "ev_973e108892f117d0",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Sehrou Guirassy at "
+            },
+            {
+              "stat": "ev_a52ee27c633c8250",
+              "display": "AM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Ethan Nwaneri at "
+            },
+            {
+              "stat": "ev_a9ea4790547236e6",
+              "display": "AM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Maximilian Beier at "
+            },
+            {
+              "stat": "ev_ce8e51c5c42db1cf",
+              "display": "CF"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
       "withheld": []
     },
     {
@@ -381,7 +598,7 @@
               "text": "We estimate Nico Schlotterbeck's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_57e31390ed2bcaa0",
+              "stat": "ev_01532932091cb63f",
               "display": "17%"
             },
             {
@@ -399,7 +616,7 @@
               "text": "We estimate Felix Kalu Nmecha's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_561d5b15ad9ebfc6",
+              "stat": "ev_038b7b71d7daef8d",
               "display": "17%"
             },
             {
@@ -417,7 +634,7 @@
               "text": "We estimate Sehrou Guirassy's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_99e07278902a88b9",
+              "stat": "ev_9b41c32aa96c1441",
               "display": "11%"
             },
             {
@@ -453,7 +670,7 @@
               "text": "Our fair-fee estimate for Nico Schlotterbeck is "
             },
             {
-              "stat": "ev_f6ba920dfce9e813",
+              "stat": "ev_5ef41a756301c71c",
               "display": "€29.3m"
             },
             {
@@ -489,7 +706,7 @@
               "text": "Our fair-fee estimate for Gregor Kobel is "
             },
             {
-              "stat": "ev_faf7d48ce1899c28",
+              "stat": "ev_aad7cbb0ca1fb813",
               "display": "€19.9m"
             },
             {
@@ -525,7 +742,7 @@
               "text": "Our fair-fee estimate for Jobe Bellingham is "
             },
             {
-              "stat": "ev_3048c05b3594e198",
+              "stat": "ev_9b1ff2e965ae07e3",
               "display": "€25.0m"
             },
             {
@@ -571,7 +788,7 @@
               "text": "Borussia Dortmund's biggest squad need is "
             },
             {
-              "stat": "ev_9bf5349ee6a633b6",
+              "stat": "ev_a3f4067448a5a891",
               "display": "winger"
             },
             {
@@ -589,7 +806,7 @@
               "text": "Borussia Dortmund have "
             },
             {
-              "stat": "ev_4fe450c52357003f",
+              "stat": "ev_c36f5336ace142b5",
               "display": "1"
             },
             {
@@ -607,7 +824,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_643c882ab17843e8",
+              "stat": "ev_e7cbd08a661e2957",
               "display": "4"
             },
             {
@@ -625,7 +842,7 @@
               "text": "Borussia Dortmund's best option for winger is "
             },
             {
-              "stat": "ev_5dc378d605675f76",
+              "stat": "ev_acf17a4091a0eb71",
               "display": "Mathis Albert"
             },
             {
@@ -643,7 +860,7 @@
               "text": "At the squads closest to Borussia Dortmund in strength, the best option for winger is typically worth "
             },
             {
-              "stat": "ev_318ae07fa1c5eabb",
+              "stat": "ev_95b07a986a48837b",
               "display": "€28.5m"
             },
             {
@@ -661,7 +878,7 @@
               "text": "Hidden gem: Lamine Yamal (FC Barcelona), who is "
             },
             {
-              "stat": "ev_a091db10f9f68c6e",
+              "stat": "ev_96af351c0ec5b401",
               "display": "19"
             },
             {
@@ -679,7 +896,7 @@
               "text": "Lamine Yamal plays for "
             },
             {
-              "stat": "ev_ae871d4e71754703",
+              "stat": "ev_14be47e4396e54a3",
               "display": "FC Barcelona"
             },
             {
@@ -697,7 +914,7 @@
               "text": "Lamine Yamal has played "
             },
             {
-              "stat": "ev_e8ee80a5cc9f136a",
+              "stat": "ev_63c40461c8e089c0",
               "display": "82%"
             },
             {
@@ -715,7 +932,7 @@
               "text": "Lamine Yamal averages "
             },
             {
-              "stat": "ev_305497cab153b115",
+              "stat": "ev_7de3b6bfc8bbfcbf",
               "display": "0.64"
             },
             {
@@ -733,7 +950,7 @@
               "text": "Lamine Yamal averages "
             },
             {
-              "stat": "ev_0aa1086b636ca8de",
+              "stat": "ev_d0535d598dd97566",
               "display": "0.37"
             },
             {
@@ -751,7 +968,7 @@
               "text": "Lamine Yamal has more league goals and assists per full match than "
             },
             {
-              "stat": "ev_66b74bf882172ec6",
+              "stat": "ev_2ad3c7d2c23180a6",
               "display": "98%"
             },
             {
@@ -769,7 +986,7 @@
               "text": "Lamine Yamal's comparison is within "
             },
             {
-              "stat": "ev_8660792b074c7226",
+              "stat": "ev_fcc58ac97bb95735",
               "display": "La Liga"
             },
             {
@@ -787,7 +1004,7 @@
               "text": "Lamine Yamal's stronger foot is his "
             },
             {
-              "stat": "ev_79d34c98088976ea",
+              "stat": "ev_6857e9c76846d1a4",
               "display": "left"
             },
             {
@@ -805,7 +1022,7 @@
               "text": "Lamine Yamal stands "
             },
             {
-              "stat": "ev_36b15156aef99785",
+              "stat": "ev_a91e4c029eab423a",
               "display": "183"
             },
             {
@@ -823,7 +1040,7 @@
               "text": "Lamine Yamal has won "
             },
             {
-              "stat": "ev_4cf09ce222a1b610",
+              "stat": "ev_27c56005b1dfce88",
               "display": "31"
             },
             {
@@ -841,7 +1058,7 @@
               "text": "Lamine Yamal starts at "
             },
             {
-              "stat": "ev_00323598f4cde983",
+              "stat": "ev_8f7e4b01d66c783d",
               "display": "right winger"
             },
             {
@@ -859,7 +1076,7 @@
               "text": "Lamine Yamal has a market value of "
             },
             {
-              "stat": "ev_c2d0c13ef9905732",
+              "stat": "ev_0868562356ba2ea7",
               "display": "€200m"
             },
             {
@@ -877,7 +1094,7 @@
               "text": "Our fair-fee estimate for Lamine Yamal is "
             },
             {
-              "stat": "ev_6fe84811e652c250",
+              "stat": "ev_fe7f33dfbee3a2c9",
               "display": "€147m"
             },
             {
@@ -895,7 +1112,7 @@
               "text": "We project Lamine Yamal's market value to reach "
             },
             {
-              "stat": "ev_6038a950146bdf1a",
+              "stat": "ev_d178f3d3728d1381",
               "display": "€315m"
             },
             {
@@ -913,7 +1130,7 @@
               "text": "Hidden gem: Désiré Doué (Paris Saint-Germain), who is "
             },
             {
-              "stat": "ev_7d238d865583ae9e",
+              "stat": "ev_86c5a101d722daa8",
               "display": "21"
             },
             {
@@ -931,7 +1148,7 @@
               "text": "Désiré Doué plays for "
             },
             {
-              "stat": "ev_8f7765f8cf0931d1",
+              "stat": "ev_626128f7617a3d39",
               "display": "Paris Saint-Germain"
             },
             {
@@ -949,7 +1166,7 @@
               "text": "Désiré Doué has played "
             },
             {
-              "stat": "ev_7a9da450af7a0416",
+              "stat": "ev_30629c396a1739fe",
               "display": "59%"
             },
             {
@@ -967,7 +1184,7 @@
               "text": "Désiré Doué averages "
             },
             {
-              "stat": "ev_107ce4c8af8edaa2",
+              "stat": "ev_0eaaa8fef44264e9",
               "display": "0.56"
             },
             {
@@ -985,7 +1202,7 @@
               "text": "Désiré Doué averages "
             },
             {
-              "stat": "ev_21a983af47c84834",
+              "stat": "ev_f213a6f9bc960ac1",
               "display": "0.24"
             },
             {
@@ -1003,7 +1220,7 @@
               "text": "Désiré Doué has more league goals and assists per full match than "
             },
             {
-              "stat": "ev_7b76511ada640e95",
+              "stat": "ev_122b3778ebb118a8",
               "display": "92%"
             },
             {
@@ -1021,7 +1238,7 @@
               "text": "Borussia Dortmund's second squad need is "
             },
             {
-              "stat": "ev_318d9823488713de",
+              "stat": "ev_fceec74cab58b556",
               "display": "defensive midfield"
             },
             {
@@ -1039,7 +1256,7 @@
               "text": "Borussia Dortmund have "
             },
             {
-              "stat": "ev_e34ca51733d45066",
+              "stat": "ev_41de8a4ad4d35cbc",
               "display": "1"
             },
             {
@@ -1057,7 +1274,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_d1fbef63edc8b941",
+              "stat": "ev_c9b0f32f09970612",
               "display": "2"
             },
             {
@@ -1075,7 +1292,7 @@
               "text": "Borussia Dortmund's best option for defensive midfield is "
             },
             {
-              "stat": "ev_3cd6f1f59a58ae2c",
+              "stat": "ev_c147b828d5de0037",
               "display": "Mussa Kaba"
             },
             {
@@ -1093,7 +1310,7 @@
               "text": "At the squads closest to Borussia Dortmund in strength, the best option for defensive midfield is typically worth "
             },
             {
-              "stat": "ev_d637b43174971859",
+              "stat": "ev_4a18dc2721f00a3e",
               "display": "€24.0m"
             },
             {
@@ -1110,50 +1327,114 @@
     }
   ],
   "stats": {
-    "ev_00323598f4cde983": {
-      "value": "right winger",
-      "display": "right winger",
+    "ev_013a011fc30a0cc5": {
+      "value": 87700000.0,
+      "display": "87700000",
       "unit": null,
-      "metric": "positions_played",
+      "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_06d6ad0b50d40f13": {
-      "value": "DDWWW",
-      "display": "DDWWW",
+    "ev_01532932091cb63f": {
+      "value": 0.17,
+      "display": "0.17",
       "unit": null,
-      "metric": "league_form",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/BL1/standings",
-      "source_tier": 2,
-      "fetched_at": "2026-10-18T16:27:35.703155+00:00",
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rpd892b2d8d41449",
+      "entity_name": "Nico Schlotterbeck",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
-      "status": "single_source",
+      "status": "model_output",
       "cross_checks": []
     },
-    "ev_0aa1086b636ca8de": {
-      "value": 0.37,
-      "display": "0.37",
+    "ev_038b7b71d7daef8d": {
+      "value": 0.167,
+      "display": "0.17",
       "unit": null,
-      "metric": "assists_p90",
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp4da25d25d6d9ec",
+      "entity_name": "Felix Kalu Nmecha",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0486a4e40779bae9": {
+      "value": "RWB",
+      "display": "RWB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpc92f67d550d591",
+      "entity_name": "Julian Ryerson",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0868562356ba2ea7": {
+      "value": 200000000.0,
+      "display": "200000000",
+      "unit": null,
+      "metric": "market_value",
       "entity_type": "player",
       "entity_id": "rpcc53a150fa2413",
       "entity_name": "Lamine Yamal",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0dbd3d624d74a0ec": {
+      "value": 121200000.0,
+      "display": "121200000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0eaaa8fef44264e9": {
+      "value": 0.56,
+      "display": "0.56",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1174,18 +1455,18 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_107ce4c8af8edaa2": {
-      "value": 0.56,
-      "display": "0.56",
+    "ev_122b3778ebb118a8": {
+      "value": 0.92,
+      "display": "0.92",
       "unit": null,
-      "metric": "goals_p90",
+      "metric": "ga_pctile",
       "entity_type": "player",
       "entity_id": "rp786709126ec0ff",
       "entity_name": "Desire Doue",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1206,247 +1487,39 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_131dda84b5fd0292": {
-      "value": "right winger",
-      "display": "right winger",
+    "ev_14be47e4396e54a3": {
+      "value": "FC Barcelona",
+      "display": "FC Barcelona",
       "unit": null,
-      "metric": "positions_played",
+      "metric": "candidate_club",
       "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_21a983af47c84834": {
-      "value": 0.24,
-      "display": "0.24",
-      "unit": null,
-      "metric": "assists_p90",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2e8aec62ce6c8a62": {
-      "value": 121800000.0,
-      "display": "121800000",
-      "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_3048c05b3594e198": {
-      "value": 25000000.0,
-      "display": "25000000",
+    "ev_27b6cd53401a7b69": {
+      "value": 53000000.0,
+      "display": "53000000",
       "unit": null,
       "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rp4ca2754dc37950",
-      "entity_name": "Jobe Bellingham",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_305497cab153b115": {
-      "value": 0.64,
-      "display": "0.64",
-      "unit": null,
-      "metric": "goals_p90",
-      "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_318ae07fa1c5eabb": {
-      "value": 28500000.0,
-      "display": "28500000",
-      "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_318d9823488713de": {
-      "value": "defensive midfield",
-      "display": "defensive midfield",
-      "unit": null,
-      "metric": "need",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_3609ed6fbbaa4bb1": {
-      "value": 181.0,
-      "display": "181",
-      "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_36b15156aef99785": {
-      "value": 183.0,
-      "display": "183",
-      "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_3c8a40362550a028": {
-      "value": 120000000.0,
-      "display": "120000000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_3cd6f1f59a58ae2c": {
-      "value": "Mussa Kaba",
-      "display": "Mussa Kaba",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_404d89d302331f18": {
-      "value": "Ligue 1",
-      "display": "Ligue 1",
-      "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_49f7537910e7f2c1": {
-      "value": 1698.5,
-      "display": "1698.50",
-      "unit": null,
-      "metric": "elo",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_4a890a7f1e09debc": {
-      "value": 4.0,
-      "display": "4",
-      "unit": null,
-      "metric": "league_goalsAgainst",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/BL1/standings?season=2026",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:27:35.703155+00:00",
-      "query_kind": "http_json",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_4cce1c4ce22e0a26": {
-      "value": 0.224,
-      "display": "0.22",
-      "unit": null,
-      "metric": "p_draw",
-      "entity_type": "match",
-      "entity_id": "bundesliga:2026-27:borussia-dortmund:eintracht-frankfurt",
-      "entity_name": "Borussia Dortmund v Eintracht Frankfurt",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_bundesliga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_4cf09ce222a1b610": {
+    "ev_27c56005b1dfce88": {
       "value": 31.0,
       "display": "31",
       "unit": null,
@@ -1457,12 +1530,76 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_4fe450c52357003f": {
+    "ev_2ad3c7d2c23180a6": {
+      "value": 0.98,
+      "display": "0.98",
+      "unit": null,
+      "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_30629c396a1739fe": {
+      "value": 0.587,
+      "display": "0.59",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3ed333bd2dd91344": {
+      "value": "DDWWW",
+      "display": "DDWWW",
+      "unit": null,
+      "metric": "league_form",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/BL1/standings",
+      "source_tier": 2,
+      "fetched_at": "2026-10-18T20:06:39.130783+00:00",
+      "query_kind": "sql",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_3f754f99694b33d9": {
+      "value": 13.0,
+      "display": "13",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_41de8a4ad4d35cbc": {
       "value": 1.0,
       "display": "1",
       "unit": null,
@@ -1473,23 +1610,39 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_561d5b15ad9ebfc6": {
-      "value": 0.167,
-      "display": "0.17",
+    "ev_4a18dc2721f00a3e": {
+      "value": 24000000.0,
+      "display": "24000000",
       "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rp4da25d25d6d9ec",
-      "entity_name": "Felix Kalu Nmecha",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5073c1e72675c815": {
+      "value": "left",
+      "display": "left",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1510,151 +1663,183 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_57e31390ed2bcaa0": {
-      "value": 0.17,
-      "display": "0.17",
+    "ev_56bba92082408bba": {
+      "value": "3-4-2-1",
+      "display": "3-4-2-1",
       "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rpd892b2d8d41449",
-      "entity_name": "Nico Schlotterbeck",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_582992814dbcab3e": {
-      "value": "left",
-      "display": "left",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5dc378d605675f76": {
-      "value": "Mathis Albert",
-      "display": "Mathis Albert",
-      "unit": null,
-      "metric": "need_best_player",
+      "metric": "predicted_formation",
       "entity_type": "club",
       "entity_id": "borussia-dortmund",
       "entity_name": "Borussia Dortmund",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_6038a950146bdf1a": {
-      "value": 314800000.0,
-      "display": "314800000",
+    "ev_597423ac9a66f5e4": {
+      "value": "CB",
+      "display": "CB",
       "unit": null,
-      "metric": "proj_value_4y",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rp48e4b499a70614",
+      "entity_name": "Ramy Bensebaini",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_62413dd4fd131d75": {
-      "value": "right",
-      "display": "right",
+    "ev_5a8fa606a1f932d0": {
+      "value": 120000000.0,
+      "display": "120000000",
       "unit": null,
-      "metric": "foot",
+      "metric": "market_value",
       "entity_type": "player",
       "entity_id": "rp786709126ec0ff",
       "entity_name": "Desire Doue",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_643c882ab17843e8": {
-      "value": 4.0,
-      "display": "4",
+    "ev_5d5e0117fb3a6af8": {
+      "value": 60000000.0,
+      "display": "60000000",
       "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_66b74bf882172ec6": {
-      "value": 0.98,
-      "display": "0.98",
-      "unit": null,
-      "metric": "ga_pctile",
+      "metric": "market_value",
       "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_6fe84811e652c250": {
-      "value": 146600000.0,
-      "display": "146600000",
+    "ev_5ef41a756301c71c": {
+      "value": 29300000.0,
+      "display": "29300000",
       "unit": null,
       "metric": "fair_fee",
       "entity_type": "player",
+      "entity_id": "rpd892b2d8d41449",
+      "entity_name": "Nico Schlotterbeck",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_623ecd7519bb371a": {
+      "value": 0.39,
+      "display": "0.39",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_626128f7617a3d39": {
+      "value": "Paris Saint-Germain",
+      "display": "Paris Saint-Germain",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_63c40461c8e089c0": {
+      "value": 0.816,
+      "display": "0.82",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
       "entity_id": "rpcc53a150fa2413",
       "entity_name": "Lamine Yamal",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_713473be72a90891": {
-      "value": 0.1254,
-      "display": "0.13",
+    "ev_64247d84d19f2001": {
+      "value": 4.0,
+      "display": "4",
       "unit": null,
-      "metric": "p_away_win",
-      "entity_type": "match",
-      "entity_id": "bundesliga:2026-27:borussia-dortmund:eintracht-frankfurt",
-      "entity_name": "Borussia Dortmund v Eintracht Frankfurt",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_bundesliga.md",
+      "metric": "league_goalsAgainst",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/BL1/standings?season=2026",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:06:39.130783+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_6857e9c76846d1a4": {
+      "value": "left",
+      "display": "left",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_763d7df8515c8fcf": {
+    "ev_6c5d38d66530e803": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpf753834df0128b",
+      "entity_name": "Waldemar Anton",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6d3c489a6caec703": {
       "value": 11.0,
       "display": "11",
       "unit": null,
@@ -1665,71 +1850,103 @@
       "source": "football_data_org",
       "source_url": "https://api.football-data.org/v4/competitions/BL1/standings?season=2026",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:27:35.703155+00:00",
+      "fetched_at": "2026-10-18T20:06:39.130783+00:00",
       "query_kind": "http_json",
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_79d34c98088976ea": {
-      "value": "left",
-      "display": "left",
+    "ev_6d77c49d0ea70392": {
+      "value": 0.224,
+      "display": "0.22",
       "unit": null,
-      "metric": "foot",
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "bundesliga:2026-27:borussia-dortmund:eintracht-frankfurt",
+      "entity_name": "Borussia Dortmund v Eintracht Frankfurt",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_bundesliga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6e17950e19d5794f": {
+      "value": "Bundesliga",
+      "display": "Bundesliga",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_74ef8116e06103d0": {
+      "value": 3.0,
+      "display": "3",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_771e2ec58db9858e": {
+      "value": "LWB",
+      "display": "LWB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp81814f3f107d49",
+      "entity_name": "Daniel Svensson",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7de3b6bfc8bbfcbf": {
+      "value": 0.64,
+      "display": "0.64",
+      "unit": null,
+      "metric": "goals_p90",
       "entity_type": "player",
       "entity_id": "rpcc53a150fa2413",
       "entity_name": "Lamine Yamal",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_7a9da450af7a0416": {
-      "value": 0.587,
-      "display": "0.59",
+    "ev_819bfa52d529ffd1": {
+      "value": 168.0,
+      "display": "168",
       "unit": null,
-      "metric": "minutes_share_now",
+      "metric": "height_cm",
       "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7b76511ada640e95": {
-      "value": 0.92,
-      "display": "0.92",
-      "unit": null,
-      "metric": "ga_pctile",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7d238d865583ae9e": {
-      "value": 21.4,
-      "display": "21.40",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1750,167 +1967,39 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_82eb155c257c88c7": {
-      "value": 0.428,
-      "display": "0.43",
+    "ev_8310af3bc438cf28": {
+      "value": 181.0,
+      "display": "181",
       "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8660792b074c7226": {
-      "value": "La Liga",
-      "display": "La Liga",
-      "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8f162ad3358e690d": {
-      "value": 0.39,
-      "display": "0.39",
-      "unit": null,
-      "metric": "assists_p90",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8f7765f8cf0931d1": {
-      "value": "Paris Saint-Germain",
-      "display": "Paris Saint-Germain",
-      "unit": null,
-      "metric": "candidate_club",
+      "metric": "height_cm",
       "entity_type": "player",
       "entity_id": "rp786709126ec0ff",
       "entity_name": "Desire Doue",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_9026e384c3039a79": {
-      "value": 87700000.0,
-      "display": "87700000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_93cca6b761d9a20c": {
-      "value": 0.39,
-      "display": "0.39",
-      "unit": null,
-      "metric": "goals_p90",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_99e07278902a88b9": {
-      "value": 0.11,
-      "display": "0.11",
-      "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rp139439099ca4ea",
-      "entity_name": "Sehrou Guirassy",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9bf5349ee6a633b6": {
-      "value": "winger",
-      "display": "winger",
-      "unit": null,
-      "metric": "need",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a091db10f9f68c6e": {
-      "value": 19.3,
-      "display": "19.30",
+    "ev_86c5a101d722daa8": {
+      "value": 21.4,
+      "display": "21.40",
       "unit": null,
       "metric": "age",
       "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_a5b6a589ff2eecde": {
-      "value": "attacking midfield, right winger",
-      "display": "attacking midfield, right winger",
-      "unit": null,
-      "metric": "positions_played",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a9a8f6a202c0e41f": {
+    "ev_86dc1ca82c531f96": {
       "value": 1493.7,
       "display": "1493.70",
       "unit": null,
@@ -1921,60 +2010,60 @@
       "source": "dugout_model:predictor",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_bundesliga.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_ae4d793cad71a6bb": {
-      "value": 121200000.0,
-      "display": "121200000",
+    "ev_8d8e34fc9850fd23": {
+      "value": "CM",
+      "display": "CM",
       "unit": null,
-      "metric": "proj_value_4y",
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp4da25d25d6d9ec",
+      "entity_name": "Felix Kalu Nmecha",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_8ef2f6894c7bf12a": {
+      "value": 0.39,
+      "display": "0.39",
+      "unit": null,
+      "metric": "assists_p90",
       "entity_type": "player",
       "entity_id": "rp3ddbd83f931315",
       "entity_name": "Lennart Karl",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_ae871d4e71754703": {
-      "value": "FC Barcelona",
-      "display": "FC Barcelona",
+    "ev_8f7e4b01d66c783d": {
+      "value": "right winger",
+      "display": "right winger",
       "unit": null,
-      "metric": "candidate_club",
+      "metric": "positions_played",
       "entity_type": "player",
       "entity_id": "rpcc53a150fa2413",
       "entity_name": "Lamine Yamal",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_c2d0c13ef9905732": {
-      "value": 200000000.0,
-      "display": "200000000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rpcc53a150fa2413",
-      "entity_name": "Lamine Yamal",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_c32a503c51ad53cc": {
+    "ev_909332347e760264": {
       "value": 0.6506,
       "display": "0.65",
       "unit": null,
@@ -1985,60 +2074,12 @@
       "source": "dugout_model:predictor",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_bundesliga.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_cff7955aa6565029": {
-      "value": "2026-10-24T16:30:00+00:00",
-      "display": "2026-10-24T16:30:00+00:00",
-      "unit": null,
-      "metric": "kickoff_utc",
-      "entity_type": "match",
-      "entity_id": "bundesliga:2026-27:borussia-dortmund:eintracht-frankfurt",
-      "entity_name": "Borussia Dortmund v Eintracht Frankfurt",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_bundesliga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_d1fbef63edc8b941": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_d2186220d41d80c2": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "league_position",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/BL1/standings?season=2026",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:27:35.703155+00:00",
-      "query_kind": "http_json",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_d245c9d816f25126": {
+    "ev_91c84c3fee8d723f": {
       "value": 0.92,
       "display": "0.92",
       "unit": null,
@@ -2049,14 +2090,46 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_d637b43174971859": {
-      "value": 24000000.0,
-      "display": "24000000",
+    "ev_9593444af87cdb33": {
+      "value": "attacking midfield, right winger",
+      "display": "attacking midfield, right winger",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_959bebd1d17ee2ea": {
+      "value": "right winger",
+      "display": "right winger",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_95b07a986a48837b": {
+      "value": 28500000.0,
+      "display": "28500000",
       "unit": null,
       "metric": "need_peer_best_value",
       "entity_type": "club",
@@ -2065,172 +2138,188 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_e078d60508dbeaa4": {
-      "value": 14.0,
-      "display": "14",
+    "ev_96af351c0ec5b401": {
+      "value": 19.3,
+      "display": "19.30",
       "unit": null,
-      "metric": "league_points",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/BL1/standings?season=2026",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:27:35.703155+00:00",
-      "query_kind": "http_json",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_e19b390420676582": {
-      "value": 13.0,
-      "display": "13",
-      "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rp786709126ec0ff",
-      "entity_name": "Desire Doue",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e34ca51733d45066": {
-      "value": 1.0,
-      "display": "1",
-      "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "borussia-dortmund",
-      "entity_name": "Borussia Dortmund",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e5921e2528252e50": {
-      "value": "Bundesliga",
-      "display": "Bundesliga",
-      "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e8ee80a5cc9f136a": {
-      "value": 0.816,
-      "display": "0.82",
-      "unit": null,
-      "metric": "minutes_share_now",
+      "metric": "age",
       "entity_type": "player",
       "entity_id": "rpcc53a150fa2413",
       "entity_name": "Lamine Yamal",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_f04c02c31cc20ac7": {
-      "value": 3.0,
-      "display": "3",
+    "ev_973e108892f117d0": {
+      "value": "CM",
+      "display": "CM",
       "unit": null,
-      "metric": "caps",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rp4ca2754dc37950",
+      "entity_name": "Jobe Bellingham",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_f089678f6b0684ad": {
-      "value": "Bayern Munich",
-      "display": "Bayern Munich",
+    "ev_977341cdcaf83a7c": {
+      "value": "CB",
+      "display": "CB",
       "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_f1173fe4f41d370f": {
-      "value": 168.0,
-      "display": "168",
-      "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_f245af4bfd49d4fa": {
-      "value": 18.7,
-      "display": "18.70",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_f6ba920dfce9e813": {
-      "value": 29300000.0,
-      "display": "29300000",
-      "unit": null,
-      "metric": "fair_fee",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
       "entity_id": "rpd892b2d8d41449",
       "entity_name": "Nico Schlotterbeck",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_faf7d48ce1899c28": {
+    "ev_9b1ff2e965ae07e3": {
+      "value": 25000000.0,
+      "display": "25000000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp4ca2754dc37950",
+      "entity_name": "Jobe Bellingham",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9b41c32aa96c1441": {
+      "value": 0.11,
+      "display": "0.11",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp139439099ca4ea",
+      "entity_name": "Sehrou Guirassy",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a18f3fa92d2dd4d6": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "league_position",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/BL1/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:06:39.130783+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_a3f4067448a5a891": {
+      "value": "winger",
+      "display": "winger",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a52ee27c633c8250": {
+      "value": "AM",
+      "display": "AM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp139439099ca4ea",
+      "entity_name": "Sehrou Guirassy",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a91e4c029eab423a": {
+      "value": 183.0,
+      "display": "183",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a9952bf091bbcf34": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a9ea4790547236e6": {
+      "value": "AM",
+      "display": "AM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp03dd16e3184aae",
+      "entity_name": "Ethan Nwaneri",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_aad7cbb0ca1fb813": {
       "value": 19900000.0,
       "display": "19900000",
       "unit": null,
@@ -2241,39 +2330,359 @@
       "source": "dugout_model:valuation",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_fc696c89918a72b9": {
-      "value": 60000000.0,
-      "display": "60000000",
+    "ev_acf17a4091a0eb71": {
+      "value": "Mathis Albert",
+      "display": "Mathis Albert",
       "unit": null,
-      "metric": "market_value",
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bf2018bd44090922": {
+      "value": 1698.5,
+      "display": "1698.50",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c147b828d5de0037": {
+      "value": "Mussa Kaba",
+      "display": "Mussa Kaba",
+      "unit": null,
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c274def22677866f": {
+      "value": "Ligue 1",
+      "display": "Ligue 1",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c36f5336ace142b5": {
+      "value": 1.0,
+      "display": "1",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_c9b0f32f09970612": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ce8e51c5c42db1cf": {
+      "value": "CF",
+      "display": "CF",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp044b264895e5f4",
+      "entity_name": "Maximilian Beier",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d0535d598dd97566": {
+      "value": 0.37,
+      "display": "0.37",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d069a2c1fdb12095": {
+      "value": "2026-10-24T16:30:00+00:00",
+      "display": "2026-10-24T16:30:00+00:00",
+      "unit": null,
+      "metric": "kickoff_utc",
+      "entity_type": "match",
+      "entity_id": "bundesliga:2026-27:borussia-dortmund:eintracht-frankfurt",
+      "entity_name": "Borussia Dortmund v Eintracht Frankfurt",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_bundesliga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d178f3d3728d1381": {
+      "value": 314800000.0,
+      "display": "314800000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d985ee53ac275ecc": {
+      "value": 18.7,
+      "display": "18.70",
+      "unit": null,
+      "metric": "age",
       "entity_type": "player",
       "entity_id": "rp3ddbd83f931315",
       "entity_name": "Lennart Karl",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_fd5cbb69cd6b4d25": {
-      "value": 53000000.0,
-      "display": "53000000",
+    "ev_e7cbd08a661e2957": {
+      "value": 4.0,
+      "display": "4",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_edbe247e68ee92a7": {
+      "value": 0.428,
+      "display": "0.43",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_eefb3e83d6cf8d8a": {
+      "value": 0.1254,
+      "display": "0.13",
+      "unit": null,
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "bundesliga:2026-27:borussia-dortmund:eintracht-frankfurt",
+      "entity_name": "Borussia Dortmund v Eintracht Frankfurt",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_bundesliga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f213a6f9bc960ac1": {
+      "value": 0.24,
+      "display": "0.24",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f2793a1e18a8181a": {
+      "value": "GK",
+      "display": "GK",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp394d4e00c9e377",
+      "entity_name": "Gregor Kobel",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f2b764e4b6b91978": {
+      "value": 121800000.0,
+      "display": "121800000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rp786709126ec0ff",
+      "entity_name": "Desire Doue",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f39da548dcf387dd": {
+      "value": 14.0,
+      "display": "14",
+      "unit": null,
+      "metric": "league_points",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/BL1/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:06:39.130783+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_fcc58ac97bb95735": {
+      "value": "La Liga",
+      "display": "La Liga",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fceec74cab58b556": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "borussia-dortmund",
+      "entity_name": "Borussia Dortmund",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fda5b2512ae14875": {
+      "value": "Bayern Munich",
+      "display": "Bayern Munich",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp3ddbd83f931315",
+      "entity_name": "Lennart Karl",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fe7f33dfbee3a2c9": {
+      "value": 146600000.0,
+      "display": "146600000",
       "unit": null,
       "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rp3ddbd83f931315",
-      "entity_name": "Lennart Karl",
+      "entity_id": "rpcc53a150fa2413",
+      "entity_name": "Lamine Yamal",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "fetched_at": "2026-10-18T20:09:42.703052+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2282,37 +2691,37 @@
   "key_stats": {
     "club": [
       {
-        "stat": "ev_d2186220d41d80c2",
+        "stat": "ev_a18f3fa92d2dd4d6",
         "display": "2nd",
         "label": "league position",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_e078d60508dbeaa4",
+        "stat": "ev_f39da548dcf387dd",
         "display": "14",
         "label": "league points",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_763d7df8515c8fcf",
+        "stat": "ev_6d3c489a6caec703",
         "display": "11",
         "label": "league goals scored",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_4a890a7f1e09debc",
+        "stat": "ev_64247d84d19f2001",
         "display": "4",
         "label": "league goals conceded",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_06d6ad0b50d40f13",
+        "stat": "ev_3ed333bd2dd91344",
         "display": "DDWWW",
         "label": "recent league results, oldest first",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_49f7537910e7f2c1",
+        "stat": "ev_bf2018bd44090922",
         "display": "1698",
         "label": "Elo rating (dugout's own)",
         "subject": "Borussia Dortmund"
@@ -2326,59 +2735,132 @@
     ],
     "match": [
       {
-        "stat": "ev_cff7955aa6565029",
+        "stat": "ev_d069a2c1fdb12095",
         "display": "24 October 2026",
         "label": "kick-off date",
         "subject": "Borussia Dortmund v Eintracht Frankfurt"
       },
       {
-        "stat": "ev_c32a503c51ad53cc",
+        "stat": "ev_909332347e760264",
         "display": "65%",
         "label": "probability Borussia Dortmund win",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_4cce1c4ce22e0a26",
+        "stat": "ev_6d77c49d0ea70392",
         "display": "22%",
         "label": "probability of a draw",
         "subject": "Borussia Dortmund v Eintracht Frankfurt"
       },
       {
-        "stat": "ev_713473be72a90891",
+        "stat": "ev_eefb3e83d6cf8d8a",
         "display": "13%",
         "label": "probability Eintracht Frankfurt win",
         "subject": "Eintracht Frankfurt"
       },
       {
-        "stat": "ev_49f7537910e7f2c1",
+        "stat": "ev_bf2018bd44090922",
         "display": "1698",
         "label": "Elo rating (dugout's own)",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_a9a8f6a202c0e41f",
+        "stat": "ev_86dc1ca82c531f96",
         "display": "1494",
         "label": "Elo rating (dugout's own)",
         "subject": "Eintracht Frankfurt"
       }
     ],
-    "lineup": [],
+    "lineup": [
+      {
+        "stat": "ev_56bba92082408bba",
+        "display": "3-4-2-1",
+        "label": "predicted formation for the next match",
+        "subject": "Borussia Dortmund"
+      },
+      {
+        "stat": "ev_f2793a1e18a8181a",
+        "display": "GK",
+        "label": "predicted starting slot (goalkeeper)",
+        "subject": "Gregor Kobel"
+      },
+      {
+        "stat": "ev_977341cdcaf83a7c",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Nico Schlotterbeck"
+      },
+      {
+        "stat": "ev_6c5d38d66530e803",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Waldemar Anton"
+      },
+      {
+        "stat": "ev_597423ac9a66f5e4",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Ramy Bensebaini"
+      },
+      {
+        "stat": "ev_0486a4e40779bae9",
+        "display": "RWB",
+        "label": "predicted starting slot (right wing-back)",
+        "subject": "Julian Ryerson"
+      },
+      {
+        "stat": "ev_771e2ec58db9858e",
+        "display": "LWB",
+        "label": "predicted starting slot (left wing-back)",
+        "subject": "Daniel Svensson"
+      },
+      {
+        "stat": "ev_8d8e34fc9850fd23",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Felix Kalu Nmecha"
+      },
+      {
+        "stat": "ev_973e108892f117d0",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Jobe Bellingham"
+      },
+      {
+        "stat": "ev_a52ee27c633c8250",
+        "display": "AM",
+        "label": "predicted starting slot (attacking midfield)",
+        "subject": "Sehrou Guirassy"
+      },
+      {
+        "stat": "ev_a9ea4790547236e6",
+        "display": "AM",
+        "label": "predicted starting slot (attacking midfield)",
+        "subject": "Ethan Nwaneri"
+      },
+      {
+        "stat": "ev_ce8e51c5c42db1cf",
+        "display": "CF",
+        "label": "predicted starting slot (centre-forward)",
+        "subject": "Maximilian Beier"
+      }
+    ],
     "news": [],
     "transfer": [
       {
-        "stat": "ev_57e31390ed2bcaa0",
+        "stat": "ev_01532932091cb63f",
         "display": "17%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Nico Schlotterbeck"
       },
       {
-        "stat": "ev_561d5b15ad9ebfc6",
+        "stat": "ev_038b7b71d7daef8d",
         "display": "17%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Felix Kalu Nmecha"
       },
       {
-        "stat": "ev_99e07278902a88b9",
+        "stat": "ev_9b41c32aa96c1441",
         "display": "11%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Sehrou Guirassy"
@@ -2390,7 +2872,7 @@
         "subject": "Nico Schlotterbeck"
       },
       {
-        "stat": "ev_f6ba920dfce9e813",
+        "stat": "ev_5ef41a756301c71c",
         "display": "€29.3m",
         "label": "estimated fair fee if sold to another Bundesliga club",
         "subject": "Nico Schlotterbeck"
@@ -2402,7 +2884,7 @@
         "subject": "Gregor Kobel"
       },
       {
-        "stat": "ev_faf7d48ce1899c28",
+        "stat": "ev_aad7cbb0ca1fb813",
         "display": "€19.9m",
         "label": "estimated fair fee if sold to another Bundesliga club",
         "subject": "Gregor Kobel"
@@ -2414,7 +2896,7 @@
         "subject": "Jobe Bellingham"
       },
       {
-        "stat": "ev_3048c05b3594e198",
+        "stat": "ev_9b1ff2e965ae07e3",
         "display": "€25.0m",
         "label": "estimated fair fee if sold to another Bundesliga club",
         "subject": "Jobe Bellingham"
@@ -2422,313 +2904,313 @@
     ],
     "scout": [
       {
-        "stat": "ev_9bf5349ee6a633b6",
+        "stat": "ev_a3f4067448a5a891",
         "display": "winger",
         "label": "squad need, priority one",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_4fe450c52357003f",
+        "stat": "ev_c36f5336ace142b5",
         "display": "1",
         "label": "players for the position, veterans aside (need one)",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_643c882ab17843e8",
+        "stat": "ev_e7cbd08a661e2957",
         "display": "4",
         "label": "players a squad carries there (need one)",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_5dc378d605675f76",
+        "stat": "ev_acf17a4091a0eb71",
         "display": "Mathis Albert",
         "label": "best option there (need one)",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_318ae07fa1c5eabb",
+        "stat": "ev_95b07a986a48837b",
         "display": "€28.5m",
         "label": "similar squads' best option's market value (need one)",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_a091db10f9f68c6e",
+        "stat": "ev_96af351c0ec5b401",
         "display": "19",
         "label": "age (gem target)",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_ae871d4e71754703",
+        "stat": "ev_14be47e4396e54a3",
         "display": "FC Barcelona",
         "label": "current club",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_e8ee80a5cc9f136a",
+        "stat": "ev_63c40461c8e089c0",
         "display": "82%",
         "label": "share of his club's minutes over the last year",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_305497cab153b115",
+        "stat": "ev_7de3b6bfc8bbfcbf",
         "display": "0.64",
         "label": "league goals per full match",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_0aa1086b636ca8de",
+        "stat": "ev_d0535d598dd97566",
         "display": "0.37",
         "label": "league assists per full match",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_66b74bf882172ec6",
+        "stat": "ev_2ad3c7d2c23180a6",
         "display": "98%",
         "label": "share of players at his position in his league he beats for goals and assists per full match",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_8660792b074c7226",
+        "stat": "ev_fcc58ac97bb95735",
         "display": "La Liga",
         "label": "league of that comparison",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_79d34c98088976ea",
+        "stat": "ev_6857e9c76846d1a4",
         "display": "left",
         "label": "stronger foot",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_36b15156aef99785",
+        "stat": "ev_a91e4c029eab423a",
         "display": "183",
         "label": "height in centimetres",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_4cf09ce222a1b610",
+        "stat": "ev_27c56005b1dfce88",
         "display": "31",
         "label": "international caps",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_00323598f4cde983",
+        "stat": "ev_8f7e4b01d66c783d",
         "display": "right winger",
         "label": "positions he starts at",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_c2d0c13ef9905732",
+        "stat": "ev_0868562356ba2ea7",
         "display": "€200m",
         "label": "market value",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_6fe84811e652c250",
+        "stat": "ev_fe7f33dfbee3a2c9",
         "display": "€147m",
         "label": "estimated fair fee",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_6038a950146bdf1a",
+        "stat": "ev_d178f3d3728d1381",
         "display": "€315m",
         "label": "projected market value in a few seasons",
         "subject": "Lamine Yamal"
       },
       {
-        "stat": "ev_7d238d865583ae9e",
+        "stat": "ev_86c5a101d722daa8",
         "display": "21",
         "label": "age (gem target)",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_8f7765f8cf0931d1",
+        "stat": "ev_626128f7617a3d39",
         "display": "Paris Saint-Germain",
         "label": "current club",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_7a9da450af7a0416",
+        "stat": "ev_30629c396a1739fe",
         "display": "59%",
         "label": "share of his club's minutes over the last year",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_107ce4c8af8edaa2",
+        "stat": "ev_0eaaa8fef44264e9",
         "display": "0.56",
         "label": "league goals per full match",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_21a983af47c84834",
+        "stat": "ev_f213a6f9bc960ac1",
         "display": "0.24",
         "label": "league assists per full match",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_7b76511ada640e95",
+        "stat": "ev_122b3778ebb118a8",
         "display": "92%",
         "label": "share of players at his position in his league he beats for goals and assists per full match",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_404d89d302331f18",
+        "stat": "ev_c274def22677866f",
         "display": "Ligue 1",
         "label": "league of that comparison",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_62413dd4fd131d75",
+        "stat": "ev_a9952bf091bbcf34",
         "display": "right",
         "label": "stronger foot",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_3609ed6fbbaa4bb1",
+        "stat": "ev_8310af3bc438cf28",
         "display": "181",
         "label": "height in centimetres",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_e19b390420676582",
+        "stat": "ev_3f754f99694b33d9",
         "display": "13",
         "label": "international caps",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_131dda84b5fd0292",
+        "stat": "ev_959bebd1d17ee2ea",
         "display": "right winger",
         "label": "positions he starts at",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_3c8a40362550a028",
+        "stat": "ev_5a8fa606a1f932d0",
         "display": "€120m",
         "label": "market value",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_9026e384c3039a79",
+        "stat": "ev_013a011fc30a0cc5",
         "display": "€87.7m",
         "label": "estimated fair fee",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_2e8aec62ce6c8a62",
+        "stat": "ev_f2b764e4b6b91978",
         "display": "€122m",
         "label": "projected market value in a few seasons",
         "subject": "Désiré Doué"
       },
       {
-        "stat": "ev_f245af4bfd49d4fa",
+        "stat": "ev_d985ee53ac275ecc",
         "display": "19",
         "label": "age (gem target)",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_f089678f6b0684ad",
+        "stat": "ev_fda5b2512ae14875",
         "display": "Bayern Munich",
         "label": "current club",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_82eb155c257c88c7",
+        "stat": "ev_edbe247e68ee92a7",
         "display": "43%",
         "label": "share of his club's minutes over the last year",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_93cca6b761d9a20c",
+        "stat": "ev_623ecd7519bb371a",
         "display": "0.39",
         "label": "league goals per full match",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_8f162ad3358e690d",
+        "stat": "ev_8ef2f6894c7bf12a",
         "display": "0.39",
         "label": "league assists per full match",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_d245c9d816f25126",
+        "stat": "ev_91c84c3fee8d723f",
         "display": "92%",
         "label": "share of players at his position in his league he beats for goals and assists per full match",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_e5921e2528252e50",
+        "stat": "ev_6e17950e19d5794f",
         "display": "Bundesliga",
         "label": "league of that comparison",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_582992814dbcab3e",
+        "stat": "ev_5073c1e72675c815",
         "display": "left",
         "label": "stronger foot",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_f1173fe4f41d370f",
+        "stat": "ev_819bfa52d529ffd1",
         "display": "168",
         "label": "height in centimetres",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_f04c02c31cc20ac7",
+        "stat": "ev_74ef8116e06103d0",
         "display": "3",
         "label": "international caps",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_a5b6a589ff2eecde",
+        "stat": "ev_9593444af87cdb33",
         "display": "attacking midfield, right winger",
         "label": "positions he starts at",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_fc696c89918a72b9",
+        "stat": "ev_5d5e0117fb3a6af8",
         "display": "€60.0m",
         "label": "market value",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_fd5cbb69cd6b4d25",
+        "stat": "ev_27b6cd53401a7b69",
         "display": "€53.0m",
         "label": "estimated fair fee",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_ae4d793cad71a6bb",
+        "stat": "ev_0dbd3d624d74a0ec",
         "display": "€121m",
         "label": "projected market value in a few seasons",
         "subject": "Lennart Karl"
       },
       {
-        "stat": "ev_318d9823488713de",
+        "stat": "ev_fceec74cab58b556",
         "display": "defensive midfield",
         "label": "squad need, priority two",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_e34ca51733d45066",
+        "stat": "ev_41de8a4ad4d35cbc",
         "display": "1",
         "label": "players for the position, veterans aside (need two)",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_d1fbef63edc8b941",
+        "stat": "ev_c9b0f32f09970612",
         "display": "2",
         "label": "players a squad carries there (need two)",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_3cd6f1f59a58ae2c",
+        "stat": "ev_c147b828d5de0037",
         "display": "Mussa Kaba",
         "label": "best option there (need two)",
         "subject": "Borussia Dortmund"
       },
       {
-        "stat": "ev_d637b43174971859",
+        "stat": "ev_4a18dc2721f00a3e",
         "display": "€24.0m",
         "label": "similar squads' best option's market value (need two)",
         "subject": "Borussia Dortmund"
@@ -2738,13 +3220,13 @@
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 56,
+      "numbers_total": 68,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 57
+      "verified": 69
     },
-    "sections_published": 5,
+    "sections_published": 6,
     "sections_withheld": 0
   },
   "methods": {
