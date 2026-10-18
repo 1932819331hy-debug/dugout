@@ -253,9 +253,10 @@ class Market:
             },
             index=sq.index[~sq.index.isin(self.players.index)],
         )
-        self.players = pd.concat([self.players, new])
+        # object columns first: rows without a club would turn integer club ids into floats ("1234.0")
         for col in ("current_club_id", "current_club_domestic_competition_id", "contract_expiration_date"):
             self.players[col] = self.players[col].astype(object)
+        self.players = pd.concat([self.players, new]).rename_axis("player_id")
         self.players["last_season"] = pd.to_numeric(self.players.last_season, errors="coerce").astype(float)
         ids = sq.index
         self.players.loc[ids, "current_club_id"] = sq.tm_club_id

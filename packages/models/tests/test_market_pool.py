@@ -56,6 +56,8 @@ def test_pool_players_join_the_players_table():
     known = mk.players.loc["1"]  # relegated with West Ham: today's league, not the dataset's
     assert known.current_club_domestic_competition_id == "GB2" and known.last_season == 2026
     assert mk.players.loc["3"].current_club_domestic_competition_id == "GB1"  # league squads untouched
+    assert mk.players.current_club_id.astype(str).loc["3"] == "31"  # not "31.0": sellers must match club ids
+    assert "player_id" in mk.players.reset_index()  # shortlist() reads the index back as a column
     assert "2" in set(mk.t["players"].player_id)  # the snapshots (potential, realism) see him too
 
 
