@@ -248,16 +248,25 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     by the scrape (ledger rows via `transfermarkt_file`).
   - Side fix: promoted Coventry and Hull were missing from the dataset's clubs table, so the realism model never
     saw them as buyers (no realistic list; Coventry no dream list either). Coventry now gets both for its top need.
-  - Limit (honest): transfermarkt-datasets has no Championship games, so only players with minutes on record
-    (relegated clubs' 2025-26 PL minutes, summer arrivals from covered leagues: 68 with 1,200+) can pass the
-    minutes rules; 348 of 666 get a sale likelihood. `publish market`
-    (PL clubs, local): 5 of 558 list slots are Championship players, 3 of them in the top three the site shows
-    (Fer Lopez, Wolves: Leeds dream list; Mateus Mane, Wolves: gem for Brighton and Aston Villa). An earlier run
-    showed 11, but a dtype bug of this branch (club ids as "1234.0") had knocked first-tier sellers out; fixed.
-    Site build + check_site_numbers: 241 pages, 0 untraceable (committed dossiers; the nightly rebuilds them).
-  - Next: Championship minutes. One Transfermarkt performance page per club
-    (`/-/leistungsdaten/verein/<id>/reldata/%262025/plus/1`, 24 pages, robots allows) would give 2025-26 minutes
-    for the other ~600 players; not fetched here (the brief allowed squad pages only).
+  - Minutes (approved by the parent session): the same refresh also fetches 1 performance page per club
+    (`/-/leistungsdaten/verein/<id>/reldata/GB2%262025/plus/1`, robots re-checked for that path): 2025-26 league
+    apps, goals, assists and minutes -> `data/reference/transfermarkt_minutes.csv` (592 rows from the 18 clubs that
+    were in the Championship then; source URL and fetch date per row; `transfermarkt_file` writes a
+    `league_minutes` ledger row each). 353 of the 666 pool players have them (227 with 1,200+); the relegated
+    clubs' players already had 2025-26 PL minutes in the dataset; promoted clubs' League One minutes are missing.
+  - `market.pool_appearances` spreads each player's league games evenly over the season's matchdays
+    (`stats_season` in config) as appearance rows, added after the valuation fit so no training frame changes;
+    minutes in the past year, share of the club's games, goals/assists per 90 (ranked within the Championship) and
+    last season's minutes for the playing-time model then work as for other leagues.
+  - Shortlists cite the figure: the scout section adds "league minutes last season (Transfermarkt)" from the
+    ledger, shown on the shortlist card (components/Shortlists.tsx) with the page and date in its provenance card.
+  - `publish market` (PL clubs, local warehouse): 12 of 558 list slots are Championship players (7 players), 5 in
+    the top three the site shows: Fer Lopez (Wolves) Leeds dream list, Mateus Mane (Wolves) gem for Brighton, Isaac
+    Price (West Brom) Leeds realistic list, Viktor Johansson (Stoke) realistic goalkeeper for Everton and Ipswich.
+    Before the minutes: 5 slots (3 players). A dtype bug of this branch (club ids as "1234.0") had briefly inflated
+    an earlier count to 11 by knocking first-tier sellers out; fixed and tested.
+  - Note: the main checkout's `data/raw` and `.cache` were found empty on 2026-10-18 (re-downloaded the
+    transfermarkt-datasets tables; other raw data and caches are still cold).
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
