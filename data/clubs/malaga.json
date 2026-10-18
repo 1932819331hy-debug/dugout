@@ -10,8 +10,8 @@
     "name": "La Liga",
     "country": "Spain"
   },
-  "generated_at": "2026-10-18T16:56:22+00:00",
-  "data_as_of": "2026-10-18T16:43:58+00:00",
+  "generated_at": "2026-10-18T19:40:54+00:00",
+  "data_as_of": "2026-10-18T19:24:59+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -62,7 +62,7 @@
             "text": "Málaga's next league match is Alavés v Málaga on "
           },
           {
-            "stat": "ev_20b9bc8f5e3c34c5",
+            "stat": "ev_33dfde03ccfd5710",
             "display": "23 October 2026"
           },
           {
@@ -80,7 +80,7 @@
             "text": "Málaga's biggest squad need is "
           },
           {
-            "stat": "ev_0e899bb260ee459c",
+            "stat": "ev_79618837b1ff98d3",
             "display": "goalkeeper"
           },
           {
@@ -199,7 +199,7 @@
               "text": "Málaga's Elo rating is "
             },
             {
-              "stat": "ev_a6fa82ccb7bff0e7",
+              "stat": "ev_187e1ea55ed249a6",
               "display": "1375"
             },
             {
@@ -227,7 +227,7 @@
               "text": "Málaga's next league match is Alavés v Málaga on "
             },
             {
-              "stat": "ev_20b9bc8f5e3c34c5",
+              "stat": "ev_33dfde03ccfd5710",
               "display": "23 October 2026"
             },
             {
@@ -245,7 +245,7 @@
               "text": "Our forecast gives Alavés a "
             },
             {
-              "stat": "ev_05d09f4adee52577",
+              "stat": "ev_59bcd7dbf5f881e1",
               "display": "57%"
             },
             {
@@ -263,7 +263,7 @@
               "text": "Our forecast gives Alavés v Málaga a "
             },
             {
-              "stat": "ev_22ab11638fe9d95e",
+              "stat": "ev_ce4a3f9e4ebe364c",
               "display": "27%"
             },
             {
@@ -281,7 +281,7 @@
               "text": "Our forecast gives Málaga a "
             },
             {
-              "stat": "ev_43117bb047112559",
+              "stat": "ev_f4ce40fc688d89d5",
               "display": "16%"
             },
             {
@@ -299,7 +299,7 @@
               "text": "We expect Alavés to score "
             },
             {
-              "stat": "ev_eb64e29e60e93b97",
+              "stat": "ev_04437aa105a33de4",
               "display": "1.5"
             },
             {
@@ -317,7 +317,7 @@
               "text": "We expect Málaga to score "
             },
             {
-              "stat": "ev_2966abf7b0b80928",
+              "stat": "ev_83053ed0fe1eea1b",
               "display": "0.7"
             },
             {
@@ -335,7 +335,7 @@
               "text": "Málaga's Elo rating is "
             },
             {
-              "stat": "ev_a6fa82ccb7bff0e7",
+              "stat": "ev_187e1ea55ed249a6",
               "display": "1375"
             },
             {
@@ -353,7 +353,7 @@
               "text": "Alavés's Elo rating is "
             },
             {
-              "stat": "ev_662f35dfc5adf413",
+              "stat": "ev_0f1b874abd3dc478",
               "display": "1444"
             },
             {
@@ -381,9 +381,82 @@
       "agent": "news",
       "title": "Team News",
       "question": "Who is unavailable for Málaga, and what is the latest news?",
-      "status": "empty",
+      "status": "published",
       "writer": "template",
-      "claims": [],
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "According to API-Football, Diego Murillo is listed as missing for Málaga's next match (knee injury)."
+            }
+          ],
+          "type": "attributed",
+          "status": "verified",
+          "reason": "published by API-Football",
+          "sources": [
+            {
+              "outlet": "API-Football",
+              "tier": 3,
+              "url": "https://www.api-football.com/",
+              "official": false
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "According to API-Football, Aarón Ochoa is listed as missing for Málaga's next match (knee injury)."
+            }
+          ],
+          "type": "attributed",
+          "status": "verified",
+          "reason": "published by API-Football",
+          "sources": [
+            {
+              "outlet": "API-Football",
+              "tier": 3,
+              "url": "https://www.api-football.com/",
+              "official": false
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "According to API-Football, Juan Cruz is listed as missing for Málaga's next match (injury)."
+            }
+          ],
+          "type": "attributed",
+          "status": "verified",
+          "reason": "published by API-Football",
+          "sources": [
+            {
+              "outlet": "API-Football",
+              "tier": 3,
+              "url": "https://www.api-football.com/",
+              "official": false
+            }
+          ]
+        },
+        {
+          "segments": [
+            {
+              "text": "According to API-Football, Julen Lobete is listed as missing for Málaga's next match (knee injury)."
+            }
+          ],
+          "type": "attributed",
+          "status": "verified",
+          "reason": "published by API-Football",
+          "sources": [
+            {
+              "outlet": "API-Football",
+              "tier": 3,
+              "url": "https://www.api-football.com/",
+              "official": false
+            }
+          ]
+        }
+      ],
       "withheld": []
     },
     {
@@ -399,7 +472,7 @@
               "text": "We estimate Pablo Martínez's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_49c51d8e9854e624",
+              "stat": "ev_4caac8dfaf3fe27d",
               "display": "11%"
             },
             {
@@ -417,7 +490,7 @@
               "text": "We estimate Juan Berrocal's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_7cf99839cc9bf397",
+              "stat": "ev_51e8ea8292915538",
               "display": "7%"
             },
             {
@@ -435,7 +508,7 @@
               "text": "We estimate José Salinas's chance of being sold in a transfer window at "
             },
             {
-              "stat": "ev_32f29e319291d646",
+              "stat": "ev_3545aebaa629a099",
               "display": "6%"
             },
             {
@@ -471,7 +544,7 @@
               "text": "Our fair-fee estimate for Pablo Martínez is "
             },
             {
-              "stat": "ev_1f1b653ca029763f",
+              "stat": "ev_d70f833c6fbd0155",
               "display": "€2.2m"
             },
             {
@@ -507,7 +580,7 @@
               "text": "Our fair-fee estimate for Juan Cruz is "
             },
             {
-              "stat": "ev_194eecb96a77e7b9",
+              "stat": "ev_09e5e64f6d395258",
               "display": "€2.8m"
             },
             {
@@ -543,7 +616,7 @@
               "text": "Our fair-fee estimate for Jens Cajuste is "
             },
             {
-              "stat": "ev_2b08d201ad2497eb",
+              "stat": "ev_06b5de9ad10cba90",
               "display": "€6.7m"
             },
             {
@@ -571,7 +644,7 @@
               "text": "Málaga's biggest squad need is "
             },
             {
-              "stat": "ev_0e899bb260ee459c",
+              "stat": "ev_79618837b1ff98d3",
               "display": "goalkeeper"
             },
             {
@@ -589,7 +662,7 @@
               "text": "Málaga have "
             },
             {
-              "stat": "ev_9009019725d53363",
+              "stat": "ev_a0285521835f06c2",
               "display": "0"
             },
             {
@@ -607,7 +680,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_3f07a1fb35601259",
+              "stat": "ev_b483b533cda1e99f",
               "display": "2"
             },
             {
@@ -625,7 +698,7 @@
               "text": "At the squads closest to Málaga in strength, the best option for goalkeeper is typically worth "
             },
             {
-              "stat": "ev_35eb7d2a2dee2012",
+              "stat": "ev_06989747939acb25",
               "display": "€6.0m"
             },
             {
@@ -643,7 +716,7 @@
               "text": "Hidden gem: Robin Risser (RC Lens), who is "
             },
             {
-              "stat": "ev_e49d49202183377b",
+              "stat": "ev_2f76415a3c389fb9",
               "display": "22"
             },
             {
@@ -661,7 +734,7 @@
               "text": "Robin Risser plays for "
             },
             {
-              "stat": "ev_fae222713a3fa6cb",
+              "stat": "ev_99c9b45281da477d",
               "display": "RC Lens"
             },
             {
@@ -679,7 +752,7 @@
               "text": "Robin Risser has played "
             },
             {
-              "stat": "ev_5f9135a157ca543c",
+              "stat": "ev_3125b4bc4193bc28",
               "display": "96%"
             },
             {
@@ -697,7 +770,7 @@
               "text": "Robin Risser averages "
             },
             {
-              "stat": "ev_a7ce8c226122f647",
+              "stat": "ev_88b1cd2a70b48fb9",
               "display": "0.00"
             },
             {
@@ -715,7 +788,7 @@
               "text": "Robin Risser averages "
             },
             {
-              "stat": "ev_71379549ba772383",
+              "stat": "ev_bdcdab475f7c857d",
               "display": "0.04"
             },
             {
@@ -733,7 +806,7 @@
               "text": "Robin Risser has more league goals and assists per full match than "
             },
             {
-              "stat": "ev_c298a7f4a691492d",
+              "stat": "ev_7127866db80bd950",
               "display": "89%"
             },
             {
@@ -751,7 +824,7 @@
               "text": "Robin Risser's comparison is within "
             },
             {
-              "stat": "ev_87c80cba34635ac6",
+              "stat": "ev_d061d2a061d8a81a",
               "display": "Ligue 1"
             },
             {
@@ -769,7 +842,7 @@
               "text": "Robin Risser's stronger foot is his "
             },
             {
-              "stat": "ev_a6507ec92afc6787",
+              "stat": "ev_de566d6012b9eb88",
               "display": "right"
             },
             {
@@ -787,7 +860,7 @@
               "text": "Robin Risser stands "
             },
             {
-              "stat": "ev_077bbcfcb1699370",
+              "stat": "ev_fd5baca75a31133a",
               "display": "193"
             },
             {
@@ -805,7 +878,7 @@
               "text": "Robin Risser has won "
             },
             {
-              "stat": "ev_2210c486269e2331",
+              "stat": "ev_3219fb51e8311a78",
               "display": "0"
             },
             {
@@ -823,7 +896,7 @@
               "text": "Robin Risser starts at "
             },
             {
-              "stat": "ev_6f76ca99bb0ee4a2",
+              "stat": "ev_cc77416d4a2df02b",
               "display": "goalkeeper"
             },
             {
@@ -841,7 +914,7 @@
               "text": "Robin Risser has a market value of "
             },
             {
-              "stat": "ev_d950e8d55aafeaf9",
+              "stat": "ev_4530fb5a2a2bec30",
               "display": "€30.0m"
             },
             {
@@ -859,7 +932,7 @@
               "text": "Our fair-fee estimate for Robin Risser is "
             },
             {
-              "stat": "ev_b4d38d77ec35ca89",
+              "stat": "ev_428dd7f12e134290",
               "display": "€32.5m"
             },
             {
@@ -877,7 +950,7 @@
               "text": "We project Robin Risser's market value to reach "
             },
             {
-              "stat": "ev_41c9461778a228bb",
+              "stat": "ev_62db1cfa646a3bd7",
               "display": "€44.1m"
             },
             {
@@ -895,7 +968,7 @@
               "text": "Hidden gem: Mike Penders (Chelsea FC), who is "
             },
             {
-              "stat": "ev_dfcfd150514a7df1",
+              "stat": "ev_35d929a5f57ce96d",
               "display": "21"
             },
             {
@@ -913,7 +986,7 @@
               "text": "Mike Penders plays for "
             },
             {
-              "stat": "ev_48353a546fa63434",
+              "stat": "ev_6e56263acfcecccc",
               "display": "Chelsea FC"
             },
             {
@@ -931,7 +1004,7 @@
               "text": "Mike Penders has played "
             },
             {
-              "stat": "ev_1bbb5b2ec75e1a4b",
+              "stat": "ev_7616df05262f74e9",
               "display": "100%"
             },
             {
@@ -949,7 +1022,7 @@
               "text": "Mike Penders averages "
             },
             {
-              "stat": "ev_d9f6f561586591e6",
+              "stat": "ev_ed41f282b8513d67",
               "display": "0.00"
             },
             {
@@ -967,7 +1040,7 @@
               "text": "Málaga's second squad need is "
             },
             {
-              "stat": "ev_b3673bd2ff97fecb",
+              "stat": "ev_6566d1e0fa38608c",
               "display": "centre-back"
             },
             {
@@ -985,7 +1058,7 @@
               "text": "Málaga have "
             },
             {
-              "stat": "ev_65411eeb5d86d7f8",
+              "stat": "ev_7ab95af6b91b598e",
               "display": "4"
             },
             {
@@ -1003,7 +1076,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_b12d87bd9965c994",
+              "stat": "ev_f5761f2aa6c0b76e",
               "display": "4"
             },
             {
@@ -1021,7 +1094,7 @@
               "text": "Málaga's best option for centre-back is "
             },
             {
-              "stat": "ev_2ab810568eedaa9a",
+              "stat": "ev_82df28d11731be90",
               "display": "Fernando Calero"
             },
             {
@@ -1039,7 +1112,7 @@
               "text": "The last of Málaga's regular starters at centre-back is "
             },
             {
-              "stat": "ev_b8e45a5229a0930c",
+              "stat": "ev_31e02ce2e4df77b4",
               "display": "Juan Berrocal"
             },
             {
@@ -1057,7 +1130,7 @@
               "text": "The last of Málaga's regular starters at centre-back has a market value of "
             },
             {
-              "stat": "ev_ef0abf3350caf210",
+              "stat": "ev_544e8732ec7abf61",
               "display": "€1.5m"
             },
             {
@@ -1075,7 +1148,7 @@
               "text": "Málaga's best option for centre-back has a market value of "
             },
             {
-              "stat": "ev_252a5d3791d61e6f",
+              "stat": "ev_77156237aacd3016",
               "display": "€2.0m"
             },
             {
@@ -1093,14 +1166,14 @@
               "text": "At the squads closest to Málaga in strength, the best option for centre-back is typically worth "
             },
             {
-              "stat": "ev_8ef6bfb0d4170c50",
+              "stat": "ev_a9ec2fa71d0ab44d",
               "display": "€8.5m"
             },
             {
               "text": ". "
             },
             {
-              "stat": "ev_9fe0740a8f79b97f",
+              "stat": "ev_0572d346987b5ae7",
               "display": "50%"
             },
             {
@@ -1117,6 +1190,22 @@
     }
   ],
   "stats": {
+    "ev_00b284ad2d1f2cf5": {
+      "value": "Sunderland AFC",
+      "display": "Sunderland AFC",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
     "ev_021a5f628fa272dc": {
       "value": 20.0,
       "display": "20",
@@ -1133,135 +1222,103 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_04c3c1e90d5a9db0": {
-      "value": "RCD Mallorca",
-      "display": "RCD Mallorca",
+    "ev_03e59849f6dbf716": {
+      "value": "FC Rubin Kazan",
+      "display": "FC Rubin Kazan",
       "unit": null,
       "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rpda6be7764b1929",
-      "entity_name": "David López",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_05d09f4adee52577": {
-      "value": 0.5685,
-      "display": "0.57",
-      "unit": null,
-      "metric": "p_home_win",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:alaves:malaga",
-      "entity_name": "Alavés v Málaga",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_06e025a3fddd7160": {
-      "value": 1000000.0,
-      "display": "1000000",
-      "unit": null,
-      "metric": "market_value",
       "entity_type": "player",
       "entity_id": "rp01c31897beb215",
       "entity_name": "Nikita Lobov",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_077bbcfcb1699370": {
-      "value": 193.0,
-      "display": "193",
+    "ev_04437aa105a33de4": {
+      "value": 1.4959,
+      "display": "1.50",
       "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "metric": "exp_home_goals",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:alaves:malaga",
+      "entity_name": "Alavés v Málaga",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_081893ab3ee9d62f": {
-      "value": 0.0,
-      "display": "0",
+    "ev_0572d346987b5ae7": {
+      "value": 0.5,
+      "display": "0.50",
       "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rpe25668919b6e49",
-      "entity_name": "Mike Penders",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_0e899bb260ee459c": {
-      "value": "goalkeeper",
-      "display": "goalkeeper",
-      "unit": null,
-      "metric": "need",
+      "metric": "need_ageing_share",
       "entity_type": "club",
       "entity_id": "malaga",
       "entity_name": "Málaga",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_0fbb2acdd2327183": {
-      "value": 182.0,
-      "display": "182",
+    "ev_06989747939acb25": {
+      "value": 6000000.0,
+      "display": "6000000",
+      "unit": null,
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_06b5de9ad10cba90": {
+      "value": 6700000.0,
+      "display": "6700000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpb1e6183e5b5dcd",
+      "entity_name": "Jens Cajuste",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_078fa364a03fee6a": {
+      "value": 186.0,
+      "display": "186",
       "unit": null,
       "metric": "height_cm",
       "entity_type": "player",
-      "entity_id": "rp18ffa77e058a62",
-      "entity_name": "Valy Konaté",
+      "entity_id": "rp01c31897beb215",
+      "entity_name": "Nikita Lobov",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_180d23f868e7790d": {
-      "value": "left",
-      "display": "left",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rp6a00cdd07fddc6",
-      "entity_name": "Robin Roefs",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_194eecb96a77e7b9": {
+    "ev_09e5e64f6d395258": {
       "value": 2800000.0,
       "display": "2800000",
       "unit": null,
@@ -1272,7 +1329,103 @@
       "source": "dugout_model:valuation",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0f105cdc8e9172c0": {
+      "value": 26000000.0,
+      "display": "26000000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_0f1b874abd3dc478": {
+      "value": 1443.8,
+      "display": "1443.80",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "alaves",
+      "entity_name": "Alavés",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_10f38476c9b54846": {
+      "value": 21.2,
+      "display": "21.20",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp01c31897beb215",
+      "entity_name": "Nikita Lobov",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_119e6c6f2d77d191": {
+      "value": 1000000.0,
+      "display": "1000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp01c31897beb215",
+      "entity_name": "Nikita Lobov",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_12fcd21c95405b00": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_187e1ea55ed249a6": {
+      "value": 1375.3,
+      "display": "1375.30",
+      "unit": null,
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1293,215 +1446,39 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_1bbb5b2ec75e1a4b": {
-      "value": 1.0,
-      "display": "1",
+    "ev_1ac721981c777d81": {
+      "value": 0.0,
+      "display": "0",
       "unit": null,
-      "metric": "minutes_share_now",
+      "metric": "caps",
       "entity_type": "player",
       "entity_id": "rpe25668919b6e49",
       "entity_name": "Mike Penders",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_1f1b653ca029763f": {
-      "value": 2200000.0,
-      "display": "2200000",
+    "ev_1eb9849011c4cc78": {
+      "value": "Premier League",
+      "display": "Premier League",
       "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp2b666d96d32269",
-      "entity_name": "Pablo Martínez",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_20b9bc8f5e3c34c5": {
-      "value": "2026-10-23T19:00:00+00:00",
-      "display": "2026-10-23T19:00:00+00:00",
-      "unit": null,
-      "metric": "kickoff_utc",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:alaves:malaga",
-      "entity_name": "Alavés v Málaga",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2210c486269e2331": {
-      "value": 0.0,
-      "display": "0",
-      "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_22ab11638fe9d95e": {
-      "value": 0.2675,
-      "display": "0.27",
-      "unit": null,
-      "metric": "p_draw",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:alaves:malaga",
-      "entity_name": "Alavés v Málaga",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_232141c491d7426f": {
-      "value": 2100000.0,
-      "display": "2100000",
-      "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rpda6be7764b1929",
-      "entity_name": "David López",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_252a5d3791d61e6f": {
-      "value": 2000000.0,
-      "display": "2000000",
-      "unit": null,
-      "metric": "need_best_value",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2958df4b0cd909ca": {
-      "value": 3100000.0,
-      "display": "3100000",
-      "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rp18ffa77e058a62",
-      "entity_name": "Valy Konaté",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2966abf7b0b80928": {
-      "value": 0.6923,
-      "display": "0.69",
-      "unit": null,
-      "metric": "exp_away_goals",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:alaves:malaga",
-      "entity_name": "Alavés v Málaga",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2ab810568eedaa9a": {
-      "value": "Fernando Calero",
-      "display": "Fernando Calero",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2b08d201ad2497eb": {
-      "value": 6700000.0,
-      "display": "6700000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpb1e6183e5b5dcd",
-      "entity_name": "Jens Cajuste",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_2c00071c4b1f523d": {
-      "value": 26000000.0,
-      "display": "26000000",
-      "unit": null,
-      "metric": "proj_value_4y",
+      "metric": "ga_league",
       "entity_type": "player",
       "entity_id": "rp6a00cdd07fddc6",
       "entity_name": "Robin Roefs",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_32f29e319291d646": {
-      "value": 0.056,
-      "display": "0.06",
-      "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rp2d3fcdbe1b73b1",
-      "entity_name": "José Salinas",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_35c9334195a3d080": {
+    "ev_29b39b15056bc5e9": {
       "value": 23.7,
       "display": "23.70",
       "unit": null,
@@ -1512,92 +1489,188 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_35eb7d2a2dee2012": {
-      "value": 6000000.0,
-      "display": "6000000",
+    "ev_2f76415a3c389fb9": {
+      "value": 21.9,
+      "display": "21.90",
       "unit": null,
-      "metric": "need_peer_best_value",
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3125b4bc4193bc28": {
+      "value": 0.963,
+      "display": "0.96",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_31e02ce2e4df77b4": {
+      "value": "Juan Berrocal",
+      "display": "Juan Berrocal",
+      "unit": null,
+      "metric": "need_bar_player",
       "entity_type": "club",
       "entity_id": "malaga",
       "entity_name": "Málaga",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_3d260395eb60a432": {
-      "value": 0.341,
-      "display": "0.34",
+    "ev_3219fb51e8311a78": {
+      "value": 0.0,
+      "display": "0",
       "unit": null,
-      "metric": "minutes_share_now",
+      "metric": "caps",
       "entity_type": "player",
-      "entity_id": "rpda6be7764b1929",
-      "entity_name": "David López",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_3db883a5676a5e6e": {
+    "ev_33dfde03ccfd5710": {
+      "value": "2026-10-23T19:00:00+00:00",
+      "display": "2026-10-23T19:00:00+00:00",
+      "unit": null,
+      "metric": "kickoff_utc",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:alaves:malaga",
+      "entity_name": "Alavés v Málaga",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_34dc9bd651694bad": {
       "value": 0.0,
       "display": "0",
       "unit": null,
       "metric": "ga_pctile",
+      "entity_type": "player",
+      "entity_id": "rpe25668919b6e49",
+      "entity_name": "Mike Penders",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3545aebaa629a099": {
+      "value": 0.056,
+      "display": "0.06",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp2d3fcdbe1b73b1",
+      "entity_name": "José Salinas",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_35d929a5f57ce96d": {
+      "value": 21.2,
+      "display": "21.20",
+      "unit": null,
+      "metric": "age",
+      "entity_type": "player",
+      "entity_id": "rpe25668919b6e49",
+      "entity_name": "Mike Penders",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3619664b16d7989d": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
+      "unit": null,
+      "metric": "positions_played",
       "entity_type": "player",
       "entity_id": "rp6a00cdd07fddc6",
       "entity_name": "Robin Roefs",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_3f07a1fb35601259": {
-      "value": 2.0,
-      "display": "2",
+    "ev_3a37eea4447aa3cf": {
+      "value": 0.35,
+      "display": "0.35",
       "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_4081aff1ba899410": {
-      "value": 1300000.0,
-      "display": "1300000",
-      "unit": null,
-      "metric": "market_value",
+      "metric": "minutes_share_now",
       "entity_type": "player",
       "entity_id": "rp18ffa77e058a62",
       "entity_name": "Valy Konaté",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_41b44ed0fb083846": {
+    "ev_3c2f429c5f8c7bf3": {
+      "value": "left",
+      "display": "left",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp18ffa77e058a62",
+      "entity_name": "Valy Konaté",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3ed49159804397dc": {
       "value": 19.9,
       "display": "19.90",
       "unit": null,
@@ -1608,39 +1681,23 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_41c9461778a228bb": {
-      "value": 44100000.0,
-      "display": "44100000",
+    "ev_428dd7f12e134290": {
+      "value": 32500000.0,
+      "display": "32500000",
       "unit": null,
-      "metric": "proj_value_4y",
+      "metric": "fair_fee",
       "entity_type": "player",
       "entity_id": "rp4d527e427b5fd7",
       "entity_name": "Robin Risser",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_43117bb047112559": {
-      "value": 0.164,
-      "display": "0.16",
-      "unit": null,
-      "metric": "p_away_win",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:alaves:malaga",
-      "entity_name": "Alavés v Málaga",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1661,23 +1718,39 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_48353a546fa63434": {
-      "value": "Chelsea FC",
-      "display": "Chelsea FC",
+    "ev_4530fb5a2a2bec30": {
+      "value": 30000000.0,
+      "display": "30000000",
       "unit": null,
-      "metric": "candidate_club",
+      "metric": "market_value",
       "entity_type": "player",
-      "entity_id": "rpe25668919b6e49",
-      "entity_name": "Mike Penders",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_49c51d8e9854e624": {
+    "ev_463c9788b696a0c3": {
+      "value": 195.0,
+      "display": "195",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rpda6be7764b1929",
+      "entity_name": "David López",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_4caac8dfaf3fe27d": {
       "value": 0.113,
       "display": "0.11",
       "unit": null,
@@ -1688,7 +1761,39 @@
       "source": "dugout_model:realism",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5030f8c51d1a812d": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rpda6be7764b1929",
+      "entity_name": "David López",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_51e8ea8292915538": {
+      "value": 0.07,
+      "display": "0.07",
+      "unit": null,
+      "metric": "sale_likelihood",
+      "entity_type": "player",
+      "entity_id": "rp65dd806a947f4d",
+      "entity_name": "Juan Berrocal",
+      "source": "dugout_model:realism",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1709,23 +1814,183 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_56500262c44848ef": {
-      "value": 800000.0,
-      "display": "800000",
+    "ev_540fc0aa4441bf60": {
+      "value": 39900000.0,
+      "display": "39900000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rpe25668919b6e49",
+      "entity_name": "Mike Penders",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_541e908895db0ad9": {
+      "value": 0.892,
+      "display": "0.89",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_544e8732ec7abf61": {
+      "value": 1500000.0,
+      "display": "1500000",
+      "unit": null,
+      "metric": "need_bar_value",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_59bcd7dbf5f881e1": {
+      "value": 0.5685,
+      "display": "0.57",
+      "unit": null,
+      "metric": "p_home_win",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:alaves:malaga",
+      "entity_name": "Alavés v Málaga",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5ba38747ff6dfe1a": {
+      "value": 1300000.0,
+      "display": "1300000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rp18ffa77e058a62",
+      "entity_name": "Valy Konaté",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5c1e5e8ea5197525": {
+      "value": 1300000.0,
+      "display": "1300000",
       "unit": null,
       "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp18ffa77e058a62",
+      "entity_name": "Valy Konaté",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5e949479e16064da": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rpe25668919b6e49",
+      "entity_name": "Mike Penders",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_60d8b7d590a8f73c": {
+      "value": 1200000.0,
+      "display": "1200000",
+      "unit": null,
+      "metric": "market_value",
       "entity_type": "player",
       "entity_id": "rpda6be7764b1929",
       "entity_name": "David López",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_56687dbfad8bce4f": {
+    "ev_62db1cfa646a3bd7": {
+      "value": 44100000.0,
+      "display": "44100000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6566d1e0fa38608c": {
+      "value": "centre-back",
+      "display": "centre-back",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6646e59e72ceea0e": {
+      "value": 23600000.0,
+      "display": "23600000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_66483b1dfa75ccbd": {
       "value": 0.0,
       "display": "0",
       "unit": null,
@@ -1736,151 +2001,7 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_59124b51b9d2b030": {
-      "value": 195.0,
-      "display": "195",
-      "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rpda6be7764b1929",
-      "entity_name": "David López",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_593b20f35508b200": {
-      "value": 0.0,
-      "display": "0",
-      "unit": null,
-      "metric": "ga_pctile",
-      "entity_type": "player",
-      "entity_id": "rpe25668919b6e49",
-      "entity_name": "Mike Penders",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5be2939034f76635": {
-      "value": 20500000.0,
-      "display": "20500000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpe25668919b6e49",
-      "entity_name": "Mike Penders",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5f9135a157ca543c": {
-      "value": 0.963,
-      "display": "0.96",
-      "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_64c45221a8ce415a": {
-      "value": "Premier League",
-      "display": "Premier League",
-      "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rp6a00cdd07fddc6",
-      "entity_name": "Robin Roefs",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_65411eeb5d86d7f8": {
-      "value": 4.0,
-      "display": "4",
-      "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_65796a4de173b73b": {
-      "value": "left",
-      "display": "left",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rp18ffa77e058a62",
-      "entity_name": "Valy Konaté",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_662f35dfc5adf413": {
-      "value": 1443.8,
-      "display": "1443.80",
-      "unit": null,
-      "metric": "elo",
-      "entity_type": "club",
-      "entity_id": "alaves",
-      "entity_name": "Alavés",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_676436b9da89678f": {
-      "value": "goalkeeper",
-      "display": "goalkeeper",
-      "unit": null,
-      "metric": "positions_played",
-      "entity_type": "player",
-      "entity_id": "rpe25668919b6e49",
-      "entity_name": "Mike Penders",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1901,103 +2022,103 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_6a8a3b5f06e4da3a": {
-      "value": 25000000.0,
-      "display": "25000000",
+    "ev_6e56263acfcecccc": {
+      "value": "Chelsea FC",
+      "display": "Chelsea FC",
       "unit": null,
-      "metric": "market_value",
+      "metric": "candidate_club",
       "entity_type": "player",
       "entity_id": "rpe25668919b6e49",
       "entity_name": "Mike Penders",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_6e02e48e47a02b6d": {
-      "value": "centre-back",
-      "display": "centre-back",
+    "ev_7127866db80bd950": {
+      "value": 0.89,
+      "display": "0.89",
       "unit": null,
-      "metric": "positions_played",
-      "entity_type": "player",
-      "entity_id": "rp18ffa77e058a62",
-      "entity_name": "Valy Konaté",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6f76ca99bb0ee4a2": {
-      "value": "goalkeeper",
-      "display": "goalkeeper",
-      "unit": null,
-      "metric": "positions_played",
+      "metric": "ga_pctile",
       "entity_type": "player",
       "entity_id": "rp4d527e427b5fd7",
       "entity_name": "Robin Risser",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_70d2873c65b77e33": {
+    "ev_7616df05262f74e9": {
       "value": 1.0,
       "display": "1",
       "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rp6a00cdd07fddc6",
-      "entity_name": "Robin Roefs",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_71379549ba772383": {
-      "value": 0.04,
-      "display": "0.04",
-      "unit": null,
-      "metric": "assists_p90",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7201a2c8a1ba0aad": {
-      "value": 0.0,
-      "display": "0",
-      "unit": null,
-      "metric": "assists_p90",
+      "metric": "minutes_share_now",
       "entity_type": "player",
       "entity_id": "rpe25668919b6e49",
       "entity_name": "Mike Penders",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_75a306269eb295cc": {
+    "ev_77156237aacd3016": {
+      "value": 2000000.0,
+      "display": "2000000",
+      "unit": null,
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_79618837b1ff98d3": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7ab95af6b91b598e": {
+      "value": 4.0,
+      "display": "4",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_7ec3c4256faf38d5": {
       "value": 30000000.0,
       "display": "30000000",
       "unit": null,
@@ -2008,28 +2129,12 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_7645cdec3dc0125e": {
-      "value": 39900000.0,
-      "display": "39900000",
-      "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rpe25668919b6e49",
-      "entity_name": "Mike Penders",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_79e0771b1de2263e": {
+    "ev_82dcbea207be150e": {
       "value": "left",
       "display": "left",
       "unit": null,
@@ -2040,39 +2145,55 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_7cf99839cc9bf397": {
-      "value": 0.07,
-      "display": "0.07",
+    "ev_82df28d11731be90": {
+      "value": "Fernando Calero",
+      "display": "Fernando Calero",
       "unit": null,
-      "metric": "sale_likelihood",
-      "entity_type": "player",
-      "entity_id": "rp65dd806a947f4d",
-      "entity_name": "Juan Berrocal",
-      "source": "dugout_model:realism",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_84d397c2f5cb4af9": {
-      "value": 23.8,
-      "display": "23.80",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp6a00cdd07fddc6",
-      "entity_name": "Robin Roefs",
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_83053ed0fe1eea1b": {
+      "value": 0.6923,
+      "display": "0.69",
+      "unit": null,
+      "metric": "exp_away_goals",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:alaves:malaga",
+      "entity_name": "Alavés v Málaga",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_84a54aed446022d9": {
+      "value": "centre-back",
+      "display": "centre-back",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rpda6be7764b1929",
+      "entity_name": "David López",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2093,535 +2214,87 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_87c80cba34635ac6": {
-      "value": "Ligue 1",
-      "display": "Ligue 1",
-      "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8ef6bfb0d4170c50": {
-      "value": 8500000.0,
-      "display": "8500000",
-      "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8ffc4a358e8d1eea": {
-      "value": "right",
-      "display": "right",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rp01c31897beb215",
-      "entity_name": "Nikita Lobov",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9009019725d53363": {
-      "value": 0.0,
-      "display": "0",
-      "unit": null,
-      "metric": "need_depth",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_90710edbd7fb75f7": {
-      "value": 1200000.0,
-      "display": "1200000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rpda6be7764b1929",
-      "entity_name": "David López",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9ae1c2769593189f": {
+    "ev_87b0cfabea880743": {
       "value": "goalkeeper",
       "display": "goalkeeper",
       "unit": null,
       "metric": "positions_played",
       "entity_type": "player",
+      "entity_id": "rpe25668919b6e49",
+      "entity_name": "Mike Penders",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_88b1cd2a70b48fb9": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_8b5c338601b83770": {
+      "value": "left",
+      "display": "left",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
       "entity_id": "rp6a00cdd07fddc6",
       "entity_name": "Robin Roefs",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_9bbd7ea3f1b9a969": {
-      "value": "centre-back",
-      "display": "centre-back",
+    "ev_8c1e6d0332920d0b": {
+      "value": 2100000.0,
+      "display": "2100000",
       "unit": null,
-      "metric": "positions_played",
+      "metric": "proj_value_4y",
       "entity_type": "player",
       "entity_id": "rpda6be7764b1929",
       "entity_name": "David López",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_9cc4bb513f005a32": {
-      "value": 0.0,
-      "display": "0",
-      "unit": null,
-      "metric": "assists_p90",
-      "entity_type": "player",
-      "entity_id": "rp6a00cdd07fddc6",
-      "entity_name": "Robin Roefs",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9edd6db6546b3ac4": {
-      "value": 700000.0,
-      "display": "700000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp01c31897beb215",
-      "entity_name": "Nikita Lobov",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9fe0740a8f79b97f": {
-      "value": 0.5,
-      "display": "0.50",
-      "unit": null,
-      "metric": "need_ageing_share",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a56db51641575453": {
-      "value": 21.2,
-      "display": "21.20",
+    "ev_94506a4a87f73ff8": {
+      "value": 23.8,
+      "display": "23.80",
       "unit": null,
       "metric": "age",
       "entity_type": "player",
-      "entity_id": "rp01c31897beb215",
-      "entity_name": "Nikita Lobov",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a6507ec92afc6787": {
-      "value": "right",
-      "display": "right",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a6675dbf51450393": {
-      "value": "Sunderland AFC",
-      "display": "Sunderland AFC",
-      "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
       "entity_id": "rp6a00cdd07fddc6",
       "entity_name": "Robin Roefs",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_a6fa82ccb7bff0e7": {
-      "value": 1375.3,
-      "display": "1375.30",
-      "unit": null,
-      "metric": "elo",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a7ce8c226122f647": {
-      "value": 0.0,
-      "display": "0",
-      "unit": null,
-      "metric": "goals_p90",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b12d87bd9965c994": {
-      "value": 4.0,
-      "display": "4",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b3673bd2ff97fecb": {
-      "value": "centre-back",
-      "display": "centre-back",
-      "unit": null,
-      "metric": "need",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b4d38d77ec35ca89": {
-      "value": 32500000.0,
-      "display": "32500000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b8e45a5229a0930c": {
-      "value": "Juan Berrocal",
-      "display": "Juan Berrocal",
-      "unit": null,
-      "metric": "need_bar_player",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_ba18a0769b2e1eb3": {
-      "value": "Ligue 1",
-      "display": "Ligue 1",
-      "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rpe25668919b6e49",
-      "entity_name": "Mike Penders",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_c183f4340f72965e": {
-      "value": "FC Rubin Kazan",
-      "display": "FC Rubin Kazan",
-      "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rp01c31897beb215",
-      "entity_name": "Nikita Lobov",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_c298a7f4a691492d": {
-      "value": 0.89,
-      "display": "0.89",
-      "unit": null,
-      "metric": "ga_pctile",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_c59ae12263fb7faa": {
-      "value": "Cercle Brugge",
-      "display": "Cercle Brugge",
-      "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rp18ffa77e058a62",
-      "entity_name": "Valy Konaté",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_c7e11c5e1ee99de5": {
-      "value": 193.0,
-      "display": "193",
-      "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rp6a00cdd07fddc6",
-      "entity_name": "Robin Roefs",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_cdb6da5e498031ab": {
-      "value": 1300000.0,
-      "display": "1300000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp18ffa77e058a62",
-      "entity_name": "Valy Konaté",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_d04dcfbe72a44f74": {
-      "value": 0.892,
-      "display": "0.89",
-      "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rp6a00cdd07fddc6",
-      "entity_name": "Robin Roefs",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_d278955b39efd1a8": {
-      "value": 186.0,
-      "display": "186",
-      "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rp01c31897beb215",
-      "entity_name": "Nikita Lobov",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_d950e8d55aafeaf9": {
-      "value": 30000000.0,
-      "display": "30000000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_d9f6f561586591e6": {
-      "value": 0.0,
-      "display": "0",
-      "unit": null,
-      "metric": "goals_p90",
-      "entity_type": "player",
-      "entity_id": "rpe25668919b6e49",
-      "entity_name": "Mike Penders",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_dcc45f994b4e5134": {
-      "value": 5.0,
-      "display": "5",
-      "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rp18ffa77e058a62",
-      "entity_name": "Valy Konaté",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_dfcfd150514a7df1": {
-      "value": 21.2,
-      "display": "21.20",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rpe25668919b6e49",
-      "entity_name": "Mike Penders",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e45c4a3722b151cf": {
-      "value": "centre-back",
-      "display": "centre-back",
-      "unit": null,
-      "metric": "positions_played",
-      "entity_type": "player",
-      "entity_id": "rp01c31897beb215",
-      "entity_name": "Nikita Lobov",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e49d49202183377b": {
-      "value": 21.9,
-      "display": "21.90",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e78e6e5b491014ed": {
+    "ev_94f40679ad74c150": {
       "value": 0.472,
       "display": "0.47",
       "unit": null,
@@ -2632,44 +2305,76 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_e9b418bf1a495eb9": {
-      "value": 23600000.0,
-      "display": "23600000",
+    "ev_99c9b45281da477d": {
+      "value": "RC Lens",
+      "display": "RC Lens",
       "unit": null,
-      "metric": "fair_fee",
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9a960ccfcd840b6d": {
+      "value": "centre-back",
+      "display": "centre-back",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp18ffa77e058a62",
+      "entity_name": "Valy Konaté",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a0285521835f06c2": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a370ae86f07a81ee": {
+      "value": 0.0,
+      "display": "0",
+      "unit": null,
+      "metric": "ga_pctile",
       "entity_type": "player",
       "entity_id": "rp6a00cdd07fddc6",
       "entity_name": "Robin Roefs",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_eb64e29e60e93b97": {
-      "value": 1.4959,
-      "display": "1.50",
-      "unit": null,
-      "metric": "exp_home_goals",
-      "entity_type": "match",
-      "entity_id": "la_liga:2026-27:alaves:malaga",
-      "entity_name": "Alavés v Málaga",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_ec011c2f71d266b4": {
+    "ev_a6cb4d1a5e8bc939": {
       "value": 200.0,
       "display": "200",
       "unit": null,
@@ -2680,7 +2385,279 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a9ec2fa71d0ab44d": {
+      "value": 8500000.0,
+      "display": "8500000",
+      "unit": null,
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_afab2586b9ec3ac5": {
+      "value": "Cercle Brugge",
+      "display": "Cercle Brugge",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rp18ffa77e058a62",
+      "entity_name": "Valy Konaté",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_b483b533cda1e99f": {
+      "value": 2.0,
+      "display": "2",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bac76a63ad85c856": {
+      "value": 5.0,
+      "display": "5",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp18ffa77e058a62",
+      "entity_name": "Valy Konaté",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bc47cf7ee2650eaf": {
+      "value": 12.0,
+      "display": "12",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp01c31897beb215",
+      "entity_name": "Nikita Lobov",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_bdcdab475f7c857d": {
+      "value": 0.04,
+      "display": "0.04",
+      "unit": null,
+      "metric": "assists_p90",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cb6e06bb324c6b28": {
+      "value": "RCD Mallorca",
+      "display": "RCD Mallorca",
+      "unit": null,
+      "metric": "candidate_club",
+      "entity_type": "player",
+      "entity_id": "rpda6be7764b1929",
+      "entity_name": "David López",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cc77416d4a2df02b": {
+      "value": "goalkeeper",
+      "display": "goalkeeper",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ce2437e46e41d2b7": {
+      "value": "Ligue 1",
+      "display": "Ligue 1",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rpe25668919b6e49",
+      "entity_name": "Mike Penders",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_ce4a3f9e4ebe364c": {
+      "value": 0.2675,
+      "display": "0.27",
+      "unit": null,
+      "metric": "p_draw",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:alaves:malaga",
+      "entity_name": "Alavés v Málaga",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d061d2a061d8a81a": {
+      "value": "Ligue 1",
+      "display": "Ligue 1",
+      "unit": null,
+      "metric": "ga_league",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d4e47d2e44557878": {
+      "value": 25000000.0,
+      "display": "25000000",
+      "unit": null,
+      "metric": "market_value",
+      "entity_type": "player",
+      "entity_id": "rpe25668919b6e49",
+      "entity_name": "Mike Penders",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d52946d461df41e0": {
+      "value": 800000.0,
+      "display": "800000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpda6be7764b1929",
+      "entity_name": "David López",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d5fdbdcdf68a5f1f": {
+      "value": 193.0,
+      "display": "193",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d70f833c6fbd0155": {
+      "value": 2200000.0,
+      "display": "2200000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp2b666d96d32269",
+      "entity_name": "Pablo Martínez",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d85539b44d768153": {
+      "value": 1900000.0,
+      "display": "1900000",
+      "unit": null,
+      "metric": "proj_value_4y",
+      "entity_type": "player",
+      "entity_id": "rp01c31897beb215",
+      "entity_name": "Nikita Lobov",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_de566d6012b9eb88": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2701,34 +2678,66 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_ef0abf3350caf210": {
-      "value": 1500000.0,
-      "display": "1500000",
+    "ev_ed41f282b8513d67": {
+      "value": 0.0,
+      "display": "0",
       "unit": null,
-      "metric": "need_bar_value",
-      "entity_type": "club",
-      "entity_id": "malaga",
-      "entity_name": "Málaga",
+      "metric": "goals_p90",
+      "entity_type": "player",
+      "entity_id": "rpe25668919b6e49",
+      "entity_name": "Mike Penders",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_f23e4bb2ba93211b": {
-      "value": 1900000.0,
-      "display": "1900000",
+    "ev_edc661fb1f482215": {
+      "value": 20500000.0,
+      "display": "20500000",
       "unit": null,
-      "metric": "proj_value_4y",
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rpe25668919b6e49",
+      "entity_name": "Mike Penders",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f0f1fbe676209647": {
+      "value": 700000.0,
+      "display": "700000",
+      "unit": null,
+      "metric": "fair_fee",
       "entity_type": "player",
       "entity_id": "rp01c31897beb215",
       "entity_name": "Nikita Lobov",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f2a3abf04b5e15d7": {
+      "value": 1.0,
+      "display": "1",
+      "unit": null,
+      "metric": "caps",
+      "entity_type": "player",
+      "entity_id": "rp6a00cdd07fddc6",
+      "entity_name": "Robin Roefs",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2749,66 +2758,130 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_f5af812c0279473d": {
-      "value": 12.0,
-      "display": "12",
+    "ev_f4ce40fc688d89d5": {
+      "value": 0.164,
+      "display": "0.16",
       "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rp01c31897beb215",
-      "entity_name": "Nikita Lobov",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "la_liga:2026-27:alaves:malaga",
+      "entity_name": "Alavés v Málaga",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_la_liga.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_fae222713a3fa6cb": {
-      "value": "RC Lens",
-      "display": "RC Lens",
+    "ev_f4e92fc40b36dff7": {
+      "value": 3100000.0,
+      "display": "3100000",
       "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rp4d527e427b5fd7",
-      "entity_name": "Robin Risser",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_fc0ea6b3ddb41a0c": {
-      "value": "right",
-      "display": "right",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rpda6be7764b1929",
-      "entity_name": "David López",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_ff03c0e3631c07ee": {
-      "value": 0.35,
-      "display": "0.35",
-      "unit": null,
-      "metric": "minutes_share_now",
+      "metric": "proj_value_4y",
       "entity_type": "player",
       "entity_id": "rp18ffa77e058a62",
       "entity_name": "Valy Konaté",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T16:31:05.387145+00:00",
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f5761f2aa6c0b76e": {
+      "value": 4.0,
+      "display": "4",
+      "unit": null,
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "malaga",
+      "entity_name": "Málaga",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f8af466bc0b00c33": {
+      "value": 182.0,
+      "display": "182",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp18ffa77e058a62",
+      "entity_name": "Valy Konaté",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fb5651a5926f765b": {
+      "value": 0.341,
+      "display": "0.34",
+      "unit": null,
+      "metric": "minutes_share_now",
+      "entity_type": "player",
+      "entity_id": "rpda6be7764b1929",
+      "entity_name": "David López",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fc1e5669a3eaac36": {
+      "value": "centre-back",
+      "display": "centre-back",
+      "unit": null,
+      "metric": "positions_played",
+      "entity_type": "player",
+      "entity_id": "rp01c31897beb215",
+      "entity_name": "Nikita Lobov",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fd2c9fda5fe5c3a1": {
+      "value": "right",
+      "display": "right",
+      "unit": null,
+      "metric": "foot",
+      "entity_type": "player",
+      "entity_id": "rp01c31897beb215",
+      "entity_name": "Nikita Lobov",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_fd5baca75a31133a": {
+      "value": 193.0,
+      "display": "193",
+      "unit": null,
+      "metric": "height_cm",
+      "entity_type": "player",
+      "entity_id": "rp4d527e427b5fd7",
+      "entity_name": "Robin Risser",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-18T19:10:42.280227+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2847,7 +2920,7 @@
         "subject": "Málaga"
       },
       {
-        "stat": "ev_a6fa82ccb7bff0e7",
+        "stat": "ev_187e1ea55ed249a6",
         "display": "1375",
         "label": "Elo rating (dugout's own)",
         "subject": "Málaga"
@@ -2855,49 +2928,49 @@
     ],
     "match": [
       {
-        "stat": "ev_20b9bc8f5e3c34c5",
+        "stat": "ev_33dfde03ccfd5710",
         "display": "23 October 2026",
         "label": "kick-off date",
         "subject": "Alavés v Málaga"
       },
       {
-        "stat": "ev_05d09f4adee52577",
+        "stat": "ev_59bcd7dbf5f881e1",
         "display": "57%",
         "label": "probability Alavés win",
         "subject": "Alavés"
       },
       {
-        "stat": "ev_22ab11638fe9d95e",
+        "stat": "ev_ce4a3f9e4ebe364c",
         "display": "27%",
         "label": "probability of a draw",
         "subject": "Alavés v Málaga"
       },
       {
-        "stat": "ev_43117bb047112559",
+        "stat": "ev_f4ce40fc688d89d5",
         "display": "16%",
         "label": "probability Málaga win",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_eb64e29e60e93b97",
+        "stat": "ev_04437aa105a33de4",
         "display": "1.5",
         "label": "expected goals in this match",
         "subject": "Alavés"
       },
       {
-        "stat": "ev_2966abf7b0b80928",
+        "stat": "ev_83053ed0fe1eea1b",
         "display": "0.7",
         "label": "expected goals in this match",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_a6fa82ccb7bff0e7",
+        "stat": "ev_187e1ea55ed249a6",
         "display": "1375",
         "label": "Elo rating (dugout's own)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_662f35dfc5adf413",
+        "stat": "ev_0f1b874abd3dc478",
         "display": "1444",
         "label": "Elo rating (dugout's own)",
         "subject": "Alavés"
@@ -2907,19 +2980,19 @@
     "news": [],
     "transfer": [
       {
-        "stat": "ev_49c51d8e9854e624",
+        "stat": "ev_4caac8dfaf3fe27d",
         "display": "11%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Pablo Martínez"
       },
       {
-        "stat": "ev_7cf99839cc9bf397",
+        "stat": "ev_51e8ea8292915538",
         "display": "7%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "Juan Berrocal"
       },
       {
-        "stat": "ev_32f29e319291d646",
+        "stat": "ev_3545aebaa629a099",
         "display": "6%",
         "label": "estimated chance of being sold for a fee in a window (no academy or contract-length signal)",
         "subject": "José Salinas"
@@ -2931,7 +3004,7 @@
         "subject": "Pablo Martínez"
       },
       {
-        "stat": "ev_1f1b653ca029763f",
+        "stat": "ev_d70f833c6fbd0155",
         "display": "€2.2m",
         "label": "estimated fair fee if sold to another La Liga club",
         "subject": "Pablo Martínez"
@@ -2943,7 +3016,7 @@
         "subject": "Juan Cruz"
       },
       {
-        "stat": "ev_194eecb96a77e7b9",
+        "stat": "ev_09e5e64f6d395258",
         "display": "€2.8m",
         "label": "estimated fair fee if sold to another La Liga club",
         "subject": "Juan Cruz"
@@ -2955,7 +3028,7 @@
         "subject": "Jens Cajuste"
       },
       {
-        "stat": "ev_2b08d201ad2497eb",
+        "stat": "ev_06b5de9ad10cba90",
         "display": "€6.7m",
         "label": "estimated fair fee if sold to another La Liga club",
         "subject": "Jens Cajuste"
@@ -2963,505 +3036,505 @@
     ],
     "scout": [
       {
-        "stat": "ev_0e899bb260ee459c",
+        "stat": "ev_79618837b1ff98d3",
         "display": "goalkeeper",
         "label": "squad need, priority one",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_9009019725d53363",
+        "stat": "ev_a0285521835f06c2",
         "display": "0",
         "label": "players for the position, veterans aside (need one)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_3f07a1fb35601259",
+        "stat": "ev_b483b533cda1e99f",
         "display": "2",
         "label": "players a squad carries there (need one)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_35eb7d2a2dee2012",
+        "stat": "ev_06989747939acb25",
         "display": "€6.0m",
         "label": "similar squads' best option's market value (need one)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_e49d49202183377b",
+        "stat": "ev_2f76415a3c389fb9",
         "display": "22",
         "label": "age (gem target)",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_fae222713a3fa6cb",
+        "stat": "ev_99c9b45281da477d",
         "display": "RC Lens",
         "label": "current club",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_5f9135a157ca543c",
+        "stat": "ev_3125b4bc4193bc28",
         "display": "96%",
         "label": "share of his club's minutes over the last year",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_a7ce8c226122f647",
+        "stat": "ev_88b1cd2a70b48fb9",
         "display": "0.00",
         "label": "league goals per full match",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_71379549ba772383",
+        "stat": "ev_bdcdab475f7c857d",
         "display": "0.04",
         "label": "league assists per full match",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_c298a7f4a691492d",
+        "stat": "ev_7127866db80bd950",
         "display": "89%",
         "label": "share of players at his position in his league he beats for goals and assists per full match",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_87c80cba34635ac6",
+        "stat": "ev_d061d2a061d8a81a",
         "display": "Ligue 1",
         "label": "league of that comparison",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_a6507ec92afc6787",
+        "stat": "ev_de566d6012b9eb88",
         "display": "right",
         "label": "stronger foot",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_077bbcfcb1699370",
+        "stat": "ev_fd5baca75a31133a",
         "display": "193",
         "label": "height in centimetres",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_2210c486269e2331",
+        "stat": "ev_3219fb51e8311a78",
         "display": "0",
         "label": "international caps",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_6f76ca99bb0ee4a2",
+        "stat": "ev_cc77416d4a2df02b",
         "display": "goalkeeper",
         "label": "positions he starts at",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_d950e8d55aafeaf9",
+        "stat": "ev_4530fb5a2a2bec30",
         "display": "€30.0m",
         "label": "market value",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_b4d38d77ec35ca89",
+        "stat": "ev_428dd7f12e134290",
         "display": "€32.5m",
         "label": "estimated fair fee",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_41c9461778a228bb",
+        "stat": "ev_62db1cfa646a3bd7",
         "display": "€44.1m",
         "label": "projected market value in a few seasons",
         "subject": "Robin Risser"
       },
       {
-        "stat": "ev_dfcfd150514a7df1",
+        "stat": "ev_35d929a5f57ce96d",
         "display": "21",
         "label": "age (gem target)",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_48353a546fa63434",
+        "stat": "ev_6e56263acfcecccc",
         "display": "Chelsea FC",
         "label": "current club",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_1bbb5b2ec75e1a4b",
+        "stat": "ev_7616df05262f74e9",
         "display": "100%",
         "label": "share of his club's minutes over the last year",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_d9f6f561586591e6",
+        "stat": "ev_ed41f282b8513d67",
         "display": "0.00",
         "label": "league goals per full match",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_7201a2c8a1ba0aad",
+        "stat": "ev_5e949479e16064da",
         "display": "0.00",
         "label": "league assists per full match",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_593b20f35508b200",
+        "stat": "ev_34dc9bd651694bad",
         "display": "0%",
         "label": "share of players at his position in his league he beats for goals and assists per full match",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_ba18a0769b2e1eb3",
+        "stat": "ev_ce2437e46e41d2b7",
         "display": "Ligue 1",
         "label": "league of that comparison",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_79e0771b1de2263e",
+        "stat": "ev_82dcbea207be150e",
         "display": "left",
         "label": "stronger foot",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_ec011c2f71d266b4",
+        "stat": "ev_a6cb4d1a5e8bc939",
         "display": "200",
         "label": "height in centimetres",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_081893ab3ee9d62f",
+        "stat": "ev_1ac721981c777d81",
         "display": "0",
         "label": "international caps",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_676436b9da89678f",
+        "stat": "ev_87b0cfabea880743",
         "display": "goalkeeper",
         "label": "positions he starts at",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_6a8a3b5f06e4da3a",
+        "stat": "ev_d4e47d2e44557878",
         "display": "€25.0m",
         "label": "market value",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_5be2939034f76635",
+        "stat": "ev_edc661fb1f482215",
         "display": "€20.5m",
         "label": "estimated fair fee",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_7645cdec3dc0125e",
+        "stat": "ev_540fc0aa4441bf60",
         "display": "€39.9m",
         "label": "projected market value in a few seasons",
         "subject": "Mike Penders"
       },
       {
-        "stat": "ev_84d397c2f5cb4af9",
+        "stat": "ev_94506a4a87f73ff8",
         "display": "24",
         "label": "age (gem target)",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_a6675dbf51450393",
+        "stat": "ev_00b284ad2d1f2cf5",
         "display": "Sunderland AFC",
         "label": "current club",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_d04dcfbe72a44f74",
+        "stat": "ev_541e908895db0ad9",
         "display": "89%",
         "label": "share of his club's minutes over the last year",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_56687dbfad8bce4f",
+        "stat": "ev_66483b1dfa75ccbd",
         "display": "0.00",
         "label": "league goals per full match",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_9cc4bb513f005a32",
+        "stat": "ev_12fcd21c95405b00",
         "display": "0.00",
         "label": "league assists per full match",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_3db883a5676a5e6e",
+        "stat": "ev_a370ae86f07a81ee",
         "display": "0%",
         "label": "share of players at his position in his league he beats for goals and assists per full match",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_64c45221a8ce415a",
+        "stat": "ev_1eb9849011c4cc78",
         "display": "Premier League",
         "label": "league of that comparison",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_180d23f868e7790d",
+        "stat": "ev_8b5c338601b83770",
         "display": "left",
         "label": "stronger foot",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_c7e11c5e1ee99de5",
+        "stat": "ev_d5fdbdcdf68a5f1f",
         "display": "193",
         "label": "height in centimetres",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_70d2873c65b77e33",
+        "stat": "ev_f2a3abf04b5e15d7",
         "display": "1",
         "label": "international caps",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_9ae1c2769593189f",
+        "stat": "ev_3619664b16d7989d",
         "display": "goalkeeper",
         "label": "positions he starts at",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_75a306269eb295cc",
+        "stat": "ev_7ec3c4256faf38d5",
         "display": "€30.0m",
         "label": "market value",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_e9b418bf1a495eb9",
+        "stat": "ev_6646e59e72ceea0e",
         "display": "€23.6m",
         "label": "estimated fair fee",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_2c00071c4b1f523d",
+        "stat": "ev_0f105cdc8e9172c0",
         "display": "€26.0m",
         "label": "projected market value in a few seasons",
         "subject": "Robin Roefs"
       },
       {
-        "stat": "ev_b3673bd2ff97fecb",
+        "stat": "ev_6566d1e0fa38608c",
         "display": "centre-back",
         "label": "squad need, priority two",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_65411eeb5d86d7f8",
+        "stat": "ev_7ab95af6b91b598e",
         "display": "4",
         "label": "players for the position, veterans aside (need two)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_b12d87bd9965c994",
+        "stat": "ev_f5761f2aa6c0b76e",
         "display": "4",
         "label": "players a squad carries there (need two)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_2ab810568eedaa9a",
+        "stat": "ev_82df28d11731be90",
         "display": "Fernando Calero",
         "label": "best option there (need two)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_b8e45a5229a0930c",
+        "stat": "ev_31e02ce2e4df77b4",
         "display": "Juan Berrocal",
         "label": "last regular starter there (need two)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_ef0abf3350caf210",
+        "stat": "ev_544e8732ec7abf61",
         "display": "€1.5m",
         "label": "last regular starter's market value (need two)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_252a5d3791d61e6f",
+        "stat": "ev_77156237aacd3016",
         "display": "€2.0m",
         "label": "best option's market value (need two)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_8ef6bfb0d4170c50",
+        "stat": "ev_a9ec2fa71d0ab44d",
         "display": "€8.5m",
         "label": "similar squads' best option's market value (need two)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_9fe0740a8f79b97f",
+        "stat": "ev_0572d346987b5ae7",
         "display": "50%",
         "label": "share of the options who are veterans (need two)",
         "subject": "Málaga"
       },
       {
-        "stat": "ev_41b44ed0fb083846",
+        "stat": "ev_3ed49159804397dc",
         "display": "20",
         "label": "age (gem target, second need)",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_c59ae12263fb7faa",
+        "stat": "ev_afab2586b9ec3ac5",
         "display": "Cercle Brugge",
         "label": "current club",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_ff03c0e3631c07ee",
+        "stat": "ev_3a37eea4447aa3cf",
         "display": "35%",
         "label": "share of his club's minutes over the last year",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_65796a4de173b73b",
+        "stat": "ev_3c2f429c5f8c7bf3",
         "display": "left",
         "label": "stronger foot",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_0fbb2acdd2327183",
+        "stat": "ev_f8af466bc0b00c33",
         "display": "182",
         "label": "height in centimetres",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_dcc45f994b4e5134",
+        "stat": "ev_bac76a63ad85c856",
         "display": "5",
         "label": "international caps",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_6e02e48e47a02b6d",
+        "stat": "ev_9a960ccfcd840b6d",
         "display": "centre-back",
         "label": "positions he starts at",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_4081aff1ba899410",
+        "stat": "ev_5ba38747ff6dfe1a",
         "display": "€1.3m",
         "label": "market value",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_cdb6da5e498031ab",
+        "stat": "ev_5c1e5e8ea5197525",
         "display": "€1.3m",
         "label": "estimated fair fee",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_2958df4b0cd909ca",
+        "stat": "ev_f4e92fc40b36dff7",
         "display": "€3.1m",
         "label": "projected market value in a few seasons",
         "subject": "Valy Konaté"
       },
       {
-        "stat": "ev_35c9334195a3d080",
+        "stat": "ev_29b39b15056bc5e9",
         "display": "24",
         "label": "age (gem target, second need)",
         "subject": "David López"
       },
       {
-        "stat": "ev_04c3c1e90d5a9db0",
+        "stat": "ev_cb6e06bb324c6b28",
         "display": "RCD Mallorca",
         "label": "current club",
         "subject": "David López"
       },
       {
-        "stat": "ev_3d260395eb60a432",
+        "stat": "ev_fb5651a5926f765b",
         "display": "34%",
         "label": "share of his club's minutes over the last year",
         "subject": "David López"
       },
       {
-        "stat": "ev_fc0ea6b3ddb41a0c",
+        "stat": "ev_5030f8c51d1a812d",
         "display": "right",
         "label": "stronger foot",
         "subject": "David López"
       },
       {
-        "stat": "ev_59124b51b9d2b030",
+        "stat": "ev_463c9788b696a0c3",
         "display": "195",
         "label": "height in centimetres",
         "subject": "David López"
       },
       {
-        "stat": "ev_9bbd7ea3f1b9a969",
+        "stat": "ev_84a54aed446022d9",
         "display": "centre-back",
         "label": "positions he starts at",
         "subject": "David López"
       },
       {
-        "stat": "ev_90710edbd7fb75f7",
+        "stat": "ev_60d8b7d590a8f73c",
         "display": "€1.2m",
         "label": "market value",
         "subject": "David López"
       },
       {
-        "stat": "ev_56500262c44848ef",
+        "stat": "ev_d52946d461df41e0",
         "display": "€0.8m",
         "label": "estimated fair fee",
         "subject": "David López"
       },
       {
-        "stat": "ev_232141c491d7426f",
+        "stat": "ev_8c1e6d0332920d0b",
         "display": "€2.1m",
         "label": "projected market value in a few seasons",
         "subject": "David López"
       },
       {
-        "stat": "ev_a56db51641575453",
+        "stat": "ev_10f38476c9b54846",
         "display": "21",
         "label": "age (gem target, second need)",
         "subject": "Nikita Lobov"
       },
       {
-        "stat": "ev_c183f4340f72965e",
+        "stat": "ev_03e59849f6dbf716",
         "display": "FC Rubin Kazan",
         "label": "current club",
         "subject": "Nikita Lobov"
       },
       {
-        "stat": "ev_e78e6e5b491014ed",
+        "stat": "ev_94f40679ad74c150",
         "display": "47%",
         "label": "share of his club's minutes over the last year",
         "subject": "Nikita Lobov"
       },
       {
-        "stat": "ev_8ffc4a358e8d1eea",
+        "stat": "ev_fd2c9fda5fe5c3a1",
         "display": "right",
         "label": "stronger foot",
         "subject": "Nikita Lobov"
       },
       {
-        "stat": "ev_d278955b39efd1a8",
+        "stat": "ev_078fa364a03fee6a",
         "display": "186",
         "label": "height in centimetres",
         "subject": "Nikita Lobov"
       },
       {
-        "stat": "ev_f5af812c0279473d",
+        "stat": "ev_bc47cf7ee2650eaf",
         "display": "12",
         "label": "international caps",
         "subject": "Nikita Lobov"
       },
       {
-        "stat": "ev_e45c4a3722b151cf",
+        "stat": "ev_fc1e5669a3eaac36",
         "display": "centre-back",
         "label": "positions he starts at",
         "subject": "Nikita Lobov"
       },
       {
-        "stat": "ev_06e025a3fddd7160",
+        "stat": "ev_119e6c6f2d77d191",
         "display": "€1.0m",
         "label": "market value",
         "subject": "Nikita Lobov"
       },
       {
-        "stat": "ev_9edd6db6546b3ac4",
+        "stat": "ev_f0f1fbe676209647",
         "display": "€0.7m",
         "label": "estimated fair fee",
         "subject": "Nikita Lobov"
       },
       {
-        "stat": "ev_f23e4bb2ba93211b",
+        "stat": "ev_d85539b44d768153",
         "display": "€1.9m",
         "label": "projected market value in a few seasons",
         "subject": "Nikita Lobov"
@@ -3475,9 +3548,9 @@
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 57
+      "verified": 61
     },
-    "sections_published": 5,
+    "sections_published": 6,
     "sections_withheld": 0
   },
   "methods": {
