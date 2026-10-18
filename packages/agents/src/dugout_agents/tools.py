@@ -810,6 +810,7 @@ KIND_METRICS = {
         "expected_minutes_share",
         "minutes_last_year",
         "contract_months",
+        "press_reports",
     },
     "realistic": {
         "age",
@@ -820,6 +821,8 @@ KIND_METRICS = {
         "p_sold",
         "minutes_last_year",
         "contract_months",
+        "press_reports",
+        "press_lift",
     },
     "gem": {"age", "candidate_club", "fair_fee", "market_value", "proj_value_4y", "minutes_share_now"},
 }
@@ -1007,6 +1010,19 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                     "chance his club sells him in a window",
                     f"We estimate a {{p}} chance that {cclub} sell {cname} in a transfer window.",
                     "pct",
+                ),
+                (
+                    "press_reports",
+                    "Rumour Mill reports linking him with the club in the past year",
+                    f"The Guardian's Rumour Mill has linked {cname} with {name} in {{p}} reports over the past "
+                    "year.",
+                    "int",
+                ),
+                (
+                    "press_lift",
+                    "how many times likelier those reports make the move",
+                    f"Those reports make a move to {name} {{p}} times as likely as it would be without them.",
+                    ".1f",
                 ),
                 (
                     "contract_months",

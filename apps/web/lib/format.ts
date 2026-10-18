@@ -81,6 +81,8 @@ const METRIC_NAMES: Record<string, string> = {
   realism: "chance the move happens in a window",
   proj_value_4y: "projected market value in a few seasons",
   contract_months: "months left on his contract",
+  press_reports: "Rumour Mill reports linking him with the club in the past year",
+  press_lift: "how many times likelier those reports make the move",
   goals_p90: "league goals per full match",
   assists_p90: "league assists per full match",
   ga_pctile: "share of players at his position he beats for goals and assists",

@@ -105,6 +105,20 @@ function Why({
     t.contract && months <= 18 ? (
       <> Only {n(t.contract)} months are left on his contract, which brings the price down.</>
     ) : null;
+  // press talk: how often the Rumour Mill linked him with this club, and (realistic list) how far it moved the odds
+  const reports = t.pressReports ? Number(t.pressReports.stat.value) : 0;
+  const press =
+    t.pressReports && reports > 0 ? (
+      <>
+        {" "}
+        The Guardian&apos;s Rumour Mill has linked him with {buyer} in {n(t.pressReports)}{" "}
+        {reports === 1 ? "report" : "reports"} over the past year
+        {t.kind === "realistic" && t.pressLift && (
+          <>, which makes this move {n(t.pressLift)} times as likely as it would be without them</>
+        )}
+        .
+      </>
+    ) : null;
   const lead =
     t.kind === "best" ? (
       <>
@@ -136,6 +150,7 @@ function Why({
         </>
       )}
       {contract}
+      {press}
       {t.kind === "realistic" && t.chance && (
         <>
           {" "}

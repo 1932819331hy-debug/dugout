@@ -13,9 +13,10 @@ their latest transfermarkt-datasets valuation.
                         best: highest market value among players the playing-time model (opportunity.md) expects
                         to get at least 40% of the club's minutes, whatever the cost or the odds.
                         realistic: ranked by realism = P(move to this club in a window) = P(sold) x P(this buyer |
-                        sold) (realism.md), among players whose club is poorer than the buyer, is more likely than
-                        average to sell them and is not a top-ten-in-Europe club starting them, and who would be an
-                        upgrade on the club's last regular starter at the position.
+                        sold) (realism.md; the second factor counts the past year's press reports linking him
+                        with this club, rumour_links), among players whose club is poorer than the buyer, is more
+                        likely than average to sell them and is not a top-ten-in-Europe club starting them, and who
+                        would be an upgrade on the club's last regular starter at the position.
                         gem (lookup.py): ages 17-23, playing regularly, cheaper than that starter today, ranked by
                         the potential model's projected value in four years.
                         The ranking rules are transparent; each component is a backtested model.
@@ -79,6 +80,9 @@ STARTERS = {
 }
 SHORTLIST = 5
 REGULAR_SHARE = 0.4  # expected share of the club's minutes to count as a regular (best-fit list)
+PRESS_LIFT_SHOWN = (
+    1.1  # press reports "moved the odds" when they make the move at least this many times likelier
+)
 
 
 def _season(d: pd.Series) -> pd.Series:
@@ -188,6 +192,7 @@ class Market:
         self.squads = pd.read_csv(SQUADS, dtype={"tm_player_id": str, "tm_club_id": str}).assign(comp=PL)
         self.incoming: dict[str, list[tuple]] = {}  # filled from official announcements by market()
         self.moved: set[str] = set()  # moved since the dataset snapshot (Wikipedia lists), filled by market()
+        self.links = realism.load_links(None)  # rumour links (archive + recent), filled by market()
         self.played = positions_played()  # positions players actually start at (positions.py)
         self.players = self.t["players"].copy()
         self.players["player_id"] = self.players.player_id.astype(str)
@@ -296,8 +301,6 @@ class Market:
             tables="raw",  # frames built from Market's string-id tables (broken, maybe cached) are not reused
         )
         snap = snap.dropna(subset=realism.MOBILITY)
-        self.mob = realism.mobility_model().fit(snap[realism.MOBILITY], snap.moved)
-        self.mob_base = float(snap.moved.mean())
         pairs = self.frame(
             "destination",
             lambda: realism.destination_pairs(tables(), range(2015, 2026), people=timeline()),
@@ -309,12 +312,21 @@ class Market:
         if len(pairs.dropna(subset=realism.DESTINATION)) == 0 or len(snap) == 0:
             raise ValueError("realism training frames are empty: check club id types (market.py tables())")
         pairs = pairs.dropna(subset=realism.DESTINATION)
+        # press reports before each 1 June (rumour_links): added after the cache, so the cached frames do not
+        # depend on the rumour archive; with no archive yet the columns are all zero and carry no weight
+        snap, pairs = realism.with_news(snap, pairs, self.links)
+        self.mob = realism.mobility_model().fit(snap[realism.MOBILITY_SHIPPED], snap.moved)
+        self.mob_base = float(snap.moved.mean())
         self.dest = make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000)).fit(
-            pairs[realism.DESTINATION], pairs.label
+            pairs[realism.DESTINATION_SHIPPED], pairs.label
         )
         self.dest_base = float(pairs.label.mean())
         self.opp = OpportunityModel().fit(self.frame("opportunity", opportunity_frame))
-        self.now_snap = realism.snapshots(self.t, [self.now.year], as_of=self.now).set_index("player_id")
+        now_snap = realism.snapshots(self.t, [self.now.year], as_of=self.now)
+        now_snap = now_snap.join(
+            realism.player_news(self.links, now_snap.player_id, pd.Series(self.now, index=now_snap.index))
+        )
+        self.now_snap = now_snap.set_index("player_id")
         self.league_value = valuation.league_strength(self.t).set_index(["comp", "year"]).league_value
         vals = self.t["player_valuations"]
         recent = (
@@ -394,12 +406,15 @@ class Market:
             out.loc[ok] = self.val.predict(df.loc[ok]).to_numpy()
         return out
 
-    def sale_likelihood(self, ids: list[str]) -> pd.Series:
+    def sale_likelihood(self, ids: list[str], press: bool = True) -> pd.Series:
+        """P(sold for a fee in a window). press=False: as if nothing had been written about him (for the "why")."""
         snap = self.now_snap.reindex(ids)
-        ok = snap.dropna(subset=realism.MOBILITY)
+        ok = snap.dropna(subset=realism.MOBILITY_SHIPPED)
+        if not press:
+            ok = ok.assign(**dict.fromkeys(realism.NEWS_MOBILITY, 0.0))
         p = pd.Series(np.nan, index=ids)
         if len(ok):
-            p.loc[ok.index] = self.mob.predict_proba(ok[realism.MOBILITY])[:, 1]
+            p.loc[ok.index] = self.mob.predict_proba(ok[realism.MOBILITY_SHIPPED])[:, 1]
         return p
 
     def _buyer_table(self) -> pd.DataFrame:
@@ -423,7 +438,10 @@ class Market:
         """P(this move happens in a window) = P(sold) x P(this buyer | sold).
 
         P(this buyer | sold) normalises the pairwise destination model over all plausible buyers (its raw output
-        is a 1-in-6 comparison, not a probability over the market). The contract prior shifts the sale odds."""
+        is a 1-in-6 comparison, not a probability over the market). The contract prior shifts the sale odds.
+        Press reports (rumour_links, the past year) are fitted features of whichever model they helped on validation
+        (realism.NEWS_*: the destination model; realism.md); `press_lift` is how many times likelier they make this
+        move than the same estimate with nothing written about him."""
         p_mob = self.sale_likelihood([pid]).iloc[0]
         bt = self.buyers
         if np.isnan(p_mob) or seller not in bt.index or buyer not in bt.index:
@@ -441,20 +459,42 @@ class Market:
                 "same_country": (cand.country == s.country).astype(float),
                 "step_down": (s.cv - cand.cv).clip(lower=0),
             }
-        )[realism.DESTINATION]
-        p = self.dest.predict_proba(X)[:, 1]
-        odds = pd.Series(p / (1 - p), index=cand.index)
-        share = float(odds[buyer] / odds.sum())
+        )
+        mine = self.links[self.links.tm_player_id == str(pid)]
+        idx = cand.index
+        X = X.join(
+            realism.pair_news(
+                mine,
+                pd.Series(str(pid), index=idx),
+                pd.Series(idx, index=idx),
+                pd.Series(self.now, index=idx),
+            )
+        )
         expiry = pd.to_datetime(self.players.contract_expiration_date.get(pid))
         months = (expiry - self.now).days / 30.44 if pd.notna(expiry) else None
-        sold_odds = p_mob / (1 - p_mob) * np.exp(realism.contract_points(months))
-        p_sold = sold_odds / (1 + sold_odds)
+
+        def move(x: pd.DataFrame, p_mob: float) -> tuple[float, float, float]:
+            p = self.dest.predict_proba(x[realism.DESTINATION_SHIPPED])[:, 1]
+            odds = pd.Series(p / (1 - p), index=cand.index)
+            share = float(odds[buyer] / odds.sum())
+            sold_odds = p_mob / (1 - p_mob) * np.exp(realism.contract_points(months))
+            p_sold = sold_odds / (1 + sold_odds)
+            return p_sold * share, p_sold, share
+
+        p_move, p_sold, share = move(X, p_mob)
+        quiet, _, _ = move(
+            X.assign(**dict.fromkeys(realism.NEWS_DESTINATION, 0.0)),
+            self.sale_likelihood([pid], press=False).iloc[0],
+        )
+        reports = round(float(np.expm1(X.at[buyer, "news_club_365"])))
         return {
-            "p_move": float(p_sold * share),
+            "p_move": float(p_move),
             "p_sold": float(p_sold),
             "p_this_club": share,
             "step_up": float(bt.loc[buyer].cv - s.cv),  # > 0: the buyer is the richer club
             "contract_months": None if months is None else float(months),
+            "press_reports": reports,  # reports linking him with this buyer in the past year
+            "press_lift": float(p_move / quiet) if quiet > 0 else np.nan,
         }
 
     def _last_season(self):
@@ -790,6 +830,7 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
     mk = Market(now, warehouse_squads(con, skip=csv_clubs))
     mk.incoming = agreed_signings(con, now, set(mk.squads.name))
     mk.moved = recent_moves(con)
+    mk.links = realism.load_links(con)
     mk.fit()
     reep = _tm_to_reep(con)
     showcase = clubs or sorted(mk.squads.club_id.unique())
@@ -873,6 +914,14 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
                     rows.append(
                         _row("scout", "player", pid, "contract_months", round(c.contract_months), now, ctx)
                     )
+                if (
+                    c.press_reports > 0
+                ):  # the press has linked him with this club: say how far it moved the odds
+                    rows.append(_row("scout", "player", pid, "press_reports", int(c.press_reports), now, ctx))
+                    if c.press_lift >= PRESS_LIFT_SHOWN:  # NaN fails too
+                        rows.append(
+                            _row("scout", "player", pid, "press_lift", round(c.press_lift, 1), now, ctx)
+                        )
         for j, (group, title, url) in enumerate(mk.incoming.get(slug, []), 1):
             rows.append(_row("scout", "club", slug, "agreed_signing", title, now, f"incoming:{j}"))
             rows.append(_row("scout", "club", slug, "agreed_signing_position", group, now, f"incoming:{j}"))
