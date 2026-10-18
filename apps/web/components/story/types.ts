@@ -1,6 +1,6 @@
 import type { Stat } from "@/lib/data";
 import type { XY } from "@/lib/formations";
-import type { Gap } from "@/lib/shortlist";
+import type { Gap, InjuryCoverage } from "@/lib/shortlist";
 
 export interface StatRef {
   id: string;
@@ -22,6 +22,8 @@ export interface StoryData {
   needGroup?: string;
   /** the two biggest needs with their reasons */
   gaps: Gap[];
+  /** which leagues' players have an injury tier (docs/backtests/injury.json) */
+  injury: InjuryCoverage;
   signings: { title: string; url: string | null }[];
   /** the scout's three lists for the top need: dream, realistic, hidden gem (up to three names each) */
   targets: Target[];
@@ -69,4 +71,6 @@ export interface Target {
   /** chance this move happens in a window */
   chance?: StatRef;
   projected?: StatRef;
+  /** injury-risk tier (low / moderate / elevated / high), where his league is scored */
+  injury?: StatRef;
 }

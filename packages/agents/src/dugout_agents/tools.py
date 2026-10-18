@@ -1053,6 +1053,23 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                         else "relatively plausible for a specific move"
                     )
                 facts += _keep(_fact(tb, cname, label, tmpl, rec, fmt, gloss, pid))
+            # injury tier: Premier League players from load and record, other scored leagues from the record alone
+            # (docs/backtests/injury.md); players in unscored leagues have none
+            for ictx, basis in (("", "load and injury record"), ("record", "injury record")):
+                tier = tb.model("injury", "player", pid, "injury_risk_tier", ictx)
+                if tier is not None:
+                    facts += _keep(
+                        _fact(
+                            tb,
+                            cname,
+                            f"injury-risk tier, from his {basis}",
+                            f"We rate {cname}'s injury risk as {{p}}.",
+                            tier,
+                            gloss="a reason to check his medical" if tier[1] in ("elevated", "high") else "",
+                            entity_id=pid,
+                        )
+                    )
+                    break
     return facts
 
 

@@ -525,7 +525,8 @@ def injury_risk_other(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dic
         ep = pd.concat([ep, episodes(live[["player_id", "date", "reason"]])], ignore_index=True)
         ep = ep.sort_values(["player_id", "date"]).reset_index(drop=True)
     today = pd.Timestamp(now.date())
-    p = squads.drop_duplicates("tm_id").rename(columns={"tm_id": "player_id"}).assign(date=today)
+    p = squads.drop_duplicates("tm_id")[["league", "tm_id"]].rename(columns={"tm_id": "player_id"})
+    p = p.assign(date=today)
     p = attach_tm_facts(history_features(p.reset_index(drop=True), ep, label=False)).dropna(subset=["age"])
     p["age2"] = (p.age - 27) ** 2
     p = p.assign(**{f"lg_{lg}": (p.league == lg).astype(float) for lg in names})
