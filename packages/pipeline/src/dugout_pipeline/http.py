@@ -164,6 +164,10 @@ class DiskCache:
             return None
         return meta, body_p.read_bytes()
 
+    def delete(self, key: str) -> None:
+        for path in self._paths(key):
+            path.unlink(missing_ok=True)
+
     def put(self, key: str, meta: dict[str, Any], content: bytes) -> None:
         meta_p, body_p = self._paths(key)
         meta_p.parent.mkdir(parents=True, exist_ok=True)
@@ -249,6 +253,11 @@ class CachedClient:
 
     def close(self) -> None:
         self._http.close()
+
+    def forget(self, result: FetchResult, method: str = "GET") -> None:
+        """Drop a cached response the caller found to be an error (an API that answers 200 with an error body,
+        e.g. a suspended key), so the next run asks again instead of replaying it for the whole TTL."""
+        self.cache.delete(DiskCache.key(method, result.url))
 
     def get(self, url: str, *, params: dict[str, Any] | None = None, ttl: float | None = None) -> FetchResult:
         return self.request("GET", url, params=params, ttl=ttl)

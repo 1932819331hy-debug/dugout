@@ -62,6 +62,7 @@ class ApiFootballAdapter(SourceAdapter):
         body = res.json()
         errors = body.get("errors")
         if errors and (not isinstance(errors, list) or errors):
+            self.client.forget(res)  # never replay an error (quota, suspended key) from the cache
             raise RuntimeError(f"api_football {path}: {errors}")
         return body, res
 
