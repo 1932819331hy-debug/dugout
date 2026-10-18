@@ -481,6 +481,8 @@ def injury_risk_other(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dic
     over the six leagues, for the leagues its validation scored (docs/backtests/injury.md). The record is the free
     plan's 2022-24 lists plus the absences API-Football lists each night. Tier = percentile among the league's
     current squad players. Published under the id the shortlists use (Reep, else transfermarkt:<id>)."""
+    from dugout_pipeline.adapters.api_football import injury_file
+
     from dugout_models.injury import (
         BACKTEST_JSON,
         PL,
@@ -501,7 +503,8 @@ def injury_risk_other(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dic
         log.warning("injury backtest report missing: other leagues not scored")
         return []
     scored = [lg for lg in other_leagues() if report.get("leagues", {}).get(lg, {}).get("scored")]
-    if not scored:
+    if not scored or not any(injury_file(lg, 2024).is_file() for lg in scored):
+        log.warning("injury lists for the other leagues missing (history job): not scored")
         return []
     names = [PL, *other_leagues()]
     frames = pd.concat([build(con, lg) for lg in names], ignore_index=True)

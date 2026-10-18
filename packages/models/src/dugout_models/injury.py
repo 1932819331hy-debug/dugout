@@ -136,6 +136,8 @@ def injury_episodes(league: str = PL) -> pd.DataFrame:
         files = [injury_file(lg, s) for lg in [PL, *other_leagues()] for s in API_SEASONS]
         key = "tm_player_id"
     frames = [pd.read_parquet(p) for p in files if p.is_file()]
+    if not frames:  # the history job has not fetched the lists yet
+        return pd.DataFrame(columns=["player_id", "date", "end", "reason", "muscle", "days_out"])
     df = _injury_rows(pd.concat(frames, ignore_index=True))
     df = df[df.columns.intersection(["reep_id", "tm_player_id", "date", "reason"])].dropna(subset=[key])
     df = df.assign(player_id=df[key].astype(str), date=pd.to_datetime(df.date))
