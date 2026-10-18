@@ -1021,7 +1021,7 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                 (
                     "press_lift",
                     "how many times likelier those reports make the move",
-                    f"Those reports make a move to {name} {{p}} times as likely as it would be without them.",
+                    f"That press talk makes a move to {name} {{p}} times as likely as it would be without it.",
                     ".1f",
                 ),
                 (

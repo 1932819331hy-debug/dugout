@@ -114,7 +114,7 @@ function Why({
         The Guardian&apos;s Rumour Mill has linked him with {buyer} in {n(t.pressReports)}{" "}
         {reports === 1 ? "report" : "reports"} over the past year
         {t.kind === "realistic" && t.pressLift && (
-          <>, which makes this move {n(t.pressLift)} times as likely as it would be without them</>
+          <>, which makes this move {n(t.pressLift)} times as likely as it would be without {reports === 1 ? "it" : "them"}</>
         )}
         .
       </>
