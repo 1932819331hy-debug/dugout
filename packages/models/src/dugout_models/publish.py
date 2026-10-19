@@ -547,6 +547,9 @@ def injury_risk_other(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dic
     p = squads.drop_duplicates("tm_id")[["league", "tm_id"]].rename(columns={"tm_id": "player_id"})
     p = p.assign(date=today)
     p = attach_tm_facts(history_features(p.reset_index(drop=True), ep, label=False)).dropna(subset=["age"])
+    if p.empty:  # e.g. a warehouse without the other leagues' squads yet: nothing to score, not a failed publish
+        log.warning("injury: no squad players with Transfermarkt ids in %s: other leagues not scored", scored)
+        return []
     p["age2"] = (p.age - 27) ** 2
     p = p.assign(**{f"lg_{lg}": (p.league == lg).astype(float) for lg in names})
     p["risk"] = model.predict_proba(p[cols])[:, 1]
