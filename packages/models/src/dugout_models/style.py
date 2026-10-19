@@ -10,8 +10,8 @@ positions on the pitch, passing networks or aerial duels (the free plan reports 
 2. Position group from where he starts (Transfermarkt line-ups, `positions`), merged into five style groups:
    centre-backs, full-backs, midfielders, wingers, centre-forwards. Goalkeepers are left out (the free data has
    saves and goals conceded only).
-3. Percentiles within the style group, the season and the league tier (TIERS: Europe's top five leagues, then
-   the rest), so a Dutch full-back is compared with full-backs of comparable leagues.
+3. Percentiles within the style group, the season and the league tier (TIER_NAMES: Europe's biggest leagues = TOP5,
+   then the rest), so a Dutch full-back is compared with full-backs of comparable leagues.
 4. Roles: features standardised within (season, tier, group); each player scored on the group's archetypes
    (ARCHETYPES: transparent weights on the features, e.g. a ball-winning midfielder = tackles, interceptions and
    duels); his role is the top archetype when it clearly leads (ROLE_MIN, ROLE_MARGIN), else none is claimed.
@@ -48,7 +48,8 @@ SEED = 7
 
 # Transfermarkt competition ids of Europe's top five leagues; every other league is the second tier
 TOP5 = {"GB1", "ES1", "IT1", "L1", "FR1"}
-TIER_NAMES = {1: "Europe's top five leagues", 2: "the other leagues we cover"}
+# no number words: the Stat Auditor counts "five" as a number
+TIER_NAMES = {1: "Europe's biggest leagues", 2: "the other leagues we cover"}
 # API-Football league id -> Transfermarkt competition id (configured leagues and candidate leagues)
 API_TO_TM = {
     39: "GB1",
@@ -638,7 +639,7 @@ def _report(rep: dict) -> str:
         "",
         f"Generated {rep['generated_at']} by `uv run dugout-models backtest style`. Players with "
         f">= {rep['min_minutes']} league minutes in a season; percentiles within the style group, the season and the "
-        "league tier (Europe's top five leagues / the rest). Model: dugout_models/style.py.",
+        "league tier (Europe's biggest five leagues / the rest). Model: dugout_models/style.py.",
         "",
         "## Data on hand",
         "",

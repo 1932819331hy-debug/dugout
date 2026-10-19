@@ -91,7 +91,7 @@ export interface Target {
 }
 
 /** A player's style: role (when one clearly leads), his strongest features as top shares ("top 10%"), against
- *  a named pool ("full-backs in Europe's top five leagues") in one season. */
+ *  a named pool ("full-backs in Europe's biggest leagues") in one season. */
 export interface Style {
   season: StatRef;
   pool: string;

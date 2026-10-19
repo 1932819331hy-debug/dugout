@@ -367,9 +367,9 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - Model `dugout_models/style.py`: per-90 features, percentiles within style group (centre-back, full-back,
     midfielder, winger, centre-forward; goalkeepers left out), season and tier (top five leagues / the rest),
     900+ minutes, pools of 30+. Roles by transparent archetype scores (claimed only with a clear lead); a Gaussian
-    mixture was tried first and rejected (bootstrap ARI 0.24-0.51 vs 0.61-0.79; silhouettes 0.1-0.2 either way:
+    mixture was tried first and rejected (bootstrap ARI 0.21-0.44 vs 0.64-0.79; silhouettes 0.1-0.2 either way:
     styles are a continuum). Similar players: cosine on standardised features. roles_api.md: sanity table reads right
-    (Alexander-Arnold creative full-back, Salah inside forward, Doku direct dribbler, Haaland penalty-box striker);
+    (Alexander-Arnold creative full-back, Salah inside forward, Doku direct dribbler, Haaland penalty-box striker; Gravenberch comes out a deep-lying playmaker, Caicedo and Rice without a clear role);
     stability across seasons not measurable until 2023-24 is in (re-run `dugout-models backtest style`).
     Centre-forwards: under 30 with 900+ minutes so far, no percentiles yet.
   - Published: `style` model (every profiled player: role, pool, `pct:<feature>`, similar players) and `scout` rows
@@ -377,7 +377,7 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     = the feature he adds most over the last regular starter at the need, `style_similar`) and per need
     (`need_bar_style_*`, `need_bar_top:<f>`, `need_bar_low:<f>` = what the side lacks there).
   - Site (components/Shortlists.tsx): why = style line ("A creative full-back: in the top 5% of full-backs in
-    Europe's top five leagues for chances created ... (2024-25 league season)"), then fit vs the starter ("Next to
+    Europe's biggest leagues for chances created ... (2024-25 league season)"), then fit vs the starter ("Next to
     X, the last of <club>'s regular starters there, he would add chances created: he is ahead of 75% of ... , X ahead
     of 23%"), similar players, the list's reason, press/contract, market value last; the card shows Price after
     Contract. Players without style data yet keep the goals/assists line.

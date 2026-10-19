@@ -897,12 +897,12 @@ def _starter_style(tb: Toolbox, name: str, club: str, rank: int, which_need: str
         (
             "need_bar_style_season",
             "last regular starter's style season",
-            f"{who}'s style figures are from {{p}}.",
+            f"The style figures for {name}'s {who} are from {{p}}.",
         ),
         (
             "need_bar_style_pool",
             "last regular starter's style comparison",
-            f"{who} is measured against {{p}}.",
+            f"{name}'s {who} is measured against {{p}}.",
         ),
         ("need_bar_style_role", "last regular starter's role", f"{who} plays as a {{p}} for {name}."),
     ):
@@ -912,18 +912,18 @@ def _starter_style(tb: Toolbox, name: str, club: str, rank: int, which_need: str
         (
             "need_bar_top:",
             "last regular starter's top share for",
-            "{who} is in the top {{p}} of {pool} for {feat}.",
+            "{club}'s {who} is in the top {{p}} of {pool} for {feat}.",
         ),
         (
             "need_bar_low:",
             "last regular starter's percentile for",
-            "For {feat}, {who} ranks ahead of only {{p}} of {pool}.",
+            "For {feat}, {club}'s {who} ranks ahead of only {{p}} of {pool}.",
         ),
     ):
         for metric in _style_metrics(tb, "club", club, ctx, prefix):
             feat = STYLE_LABELS[metric.split(":", 1)[1]]
             rec = tb.model("scout", "club", club, metric, ctx, doc=STYLE_DOC)
-            text = tmpl.format(who=who, pool=pool_text, feat=feat)
+            text = tmpl.format(club=name, who=who, pool=pool_text, feat=feat)
             facts += _keep(
                 _fact(tb, name, f"{label} {feat} ({which_need})", text, rec, "pct", entity_id=club)
             )
@@ -970,7 +970,7 @@ def _candidate_style(tb: Toolbox, cname: str, pid: str, ctx: str, bar: str | Non
                 tb,
                 cname,
                 f"the starter's percentile for {feat}",
-                f"For {feat}, {other} ranks ahead of {{p}} of {pool_text}.",
+                f"For {feat}, {other}, the starter {cname} would replace, ranks ahead of {{p}} of {pool_text}.",
                 theirs,
                 "pct",
                 entity_id=pid,

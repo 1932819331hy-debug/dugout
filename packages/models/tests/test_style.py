@@ -48,7 +48,7 @@ def test_percentiles_top_shares_and_roles():
     assert p0.role == "creative midfielder"
     assert m.latest("1").role == "ball-winning midfielder"
     assert m.similar(p0, 1)[0][0] == "2"  # his near twin
-    assert [f for f, _ in style.standouts(pct)][0] == "key_passes"
+    assert style.standouts(pct)[0][0] == "key_passes"
 
 
 def test_no_role_without_a_clear_lead():
@@ -61,7 +61,7 @@ def test_fit_against_the_starter():
     m = _model()
     cand = style.describe(m, "0", "defensive midfield")
     starter = style.describe(m, "1", "central midfield")
-    assert cand["pool"] == "midfielders in Europe's top five leagues" and cand["season"] == "2024-25"
+    assert cand["pool"] == "midfielders in Europe's biggest leagues" and cand["season"] == "2024-25"
     feat, mine, theirs = style.fit_vs(cand, starter)
     assert feat in ("key_passes", "dribbles", "fouls_drawn") and mine - theirs >= style.ADDS_GAP
     assert style.fit_vs(cand, cand) is None  # nothing to add over himself

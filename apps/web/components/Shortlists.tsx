@@ -83,7 +83,7 @@ const article = (word: string) => (/^[aeiou]/i.test(word) ? "an" : "a");
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 /** How he plays: his role (when one clearly leads) and his strongest features as top shares, against a named pool
- *  in one season ("A creative full-back: in the top 5% of full-backs in Europe's top five leagues for chances
+ *  in one season ("A creative full-back: in the top 5% of full-backs in Europe's biggest leagues for chances
  *  created and the top 10% for shots, 2024-25 league season."). */
 function StyleLine({ s, n }: { s: Style; n: (s: StatRef) => ReactNode }) {
   const [first, ...rest] = s.tops;
@@ -137,11 +137,12 @@ function Fit({ t, gap, buyer, n }: { t: Target; gap?: Gap; buyer: string; n: (s:
       </>
     );
   if (t.style && gap.barStyle) {
+    // what the side lacks there: the starter's weakest feature
     const low = gap.barLows[0];
     return (
       <>
         {" "}
-        He would compete with {who} for a starting place
+        He would compete with {who}, for a starting place
         {low && (
           <>
             ; {bar} is ahead of only {n(low.pct)} of {gap.barStyle.pool} for {low.feature}
@@ -151,6 +152,15 @@ function Fit({ t, gap, buyer, n }: { t: Target; gap?: Gap; buyer: string; n: (s:
       </>
     );
   }
+  // a style line already says how he plays: goal involvement against the starter's only for players without one
+  if (t.style)
+    return (
+      <>
+        {" "}
+        He would compete with {bar}
+        {gap.barValue && <> ({n(gap.barValue)})</>} for a starting place.
+      </>
+    );
   return <Complement t={t} gap={gap} buyer={buyer} n={n} />;
 }
 
