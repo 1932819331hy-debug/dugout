@@ -14,6 +14,7 @@ from dugout_pipeline.adapters.rumours import GuardianRumourMillAdapter, RumourAr
 from dugout_pipeline.adapters.transfermarkt import (
     TransfermarktDatasetsLoader,
     TransfermarktFileAdapter,
+    TransfermarktPoolRefresher,
     TransfermarktRefresher,
 )
 from dugout_pipeline.adapters.weather import OpenMeteoAdapter
@@ -54,6 +55,7 @@ ADAPTERS: dict[str, type[SourceAdapter]] = {
         ClubNewsAdapter,
         OpenMeteoAdapter,
         TransfermarktRefresher,
+        TransfermarktPoolRefresher,
         TransfermarktDatasetsLoader,
         FPLHistoryAdapter,
         ApiFootballHistoryAdapter,

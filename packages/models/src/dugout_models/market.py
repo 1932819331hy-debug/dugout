@@ -1,8 +1,9 @@
 """Transfer market outputs for `publish`: fair value, sale likelihood and a scouting shortlist per club.
 
 Built from transfermarkt-datasets (CC0; valuations and appearances run to June 2026) plus the committed current
-squad file `data/reference/transfermarkt_squads.csv` (Premier League values and contracts as of the last local
-refresh) and, for leagues without FPL, the football-data.org squads in the warehouse (`warehouse_squads`), valued at
+squad file `data/reference/transfermarkt_squads.csv` (Premier League and Championship values, positions and
+contracts as of the last local refresh; the Championship is a candidate pool: its players can be shortlisted, its
+clubs get no lists of their own) and, for leagues without FPL, the football-data.org squads in the warehouse (`warehouse_squads`), valued at
 their latest transfermarkt-datasets valuation.
 
   fair_fee              valuation model (docs/backtests/valuation.md): price if sold to another club in the same
@@ -10,7 +11,8 @@ their latest transfermarkt-datasets valuation.
   sale_likelihood       mobility model (realism.md): P(sold for a fee in a transfer window), features as of today
   needs                 positions where the club is thinnest/weakest (heuristic: depth and value at the position,
                         players counted where they start: positions.group_weights; needs.md)
-  shortlist             three lists per need, from first-tier players in every league the dataset covers.
+  shortlist             three lists per need, from first-tier players in every league the dataset covers and
+                        the candidate pools' squads (config `candidate_pools`: the Championship).
                         best: highest market value among players the playing-time model (opportunity.md) expects
                         to get at least 40% of the club's minutes, whatever the cost or the odds.
                         realistic: ranked by realism = P(move to this club in a window) = P(sold) x P(this buyer |
@@ -48,7 +50,24 @@ from dugout_models.publish import _row
 log = logging.getLogger(__name__)
 
 SQUADS = REPO_ROOT / "data" / "reference" / "transfermarkt_squads.csv"
+MINUTES = REPO_ROOT / "data" / "reference" / "transfermarkt_minutes.csv"  # candidate pools' league minutes
 PL = "GB1"
+# Transfermarkt sub-position -> the dataset's broad position (valuation features use it)
+BROAD = {
+    "Goalkeeper": "Goalkeeper",
+    "Centre-Back": "Defender",
+    "Left-Back": "Defender",
+    "Right-Back": "Defender",
+    "Defensive Midfield": "Midfield",
+    "Central Midfield": "Midfield",
+    "Attacking Midfield": "Midfield",
+    "Left Midfield": "Midfield",
+    "Right Midfield": "Midfield",
+    "Left Winger": "Attack",
+    "Right Winger": "Attack",
+    "Centre-Forward": "Attack",
+    "Second Striker": "Attack",
+}
 # Position groups a club needs covered, as transfermarkt sub-positions.
 GROUPS = {
     "goalkeeper": ["Goalkeeper"],
@@ -81,6 +100,56 @@ STARTERS = {
 }
 SHORTLIST = 5
 REGULAR_SHARE = 0.4  # expected share of the club's minutes to count as a regular (best-fit list)
+
+
+def pool_config() -> dict[str, dict]:
+    """Candidate pools (config `candidate_pools`) by Transfermarkt competition id."""
+    from dugout_pipeline.clubs import load_config
+
+    return {p["transfermarkt"]: p for p in (load_config().get("candidate_pools") or {}).values()}
+
+
+def pool_comps() -> set[str]:
+    """Competitions of the candidate pools: shortlist candidates, no lists of their own."""
+    return set(pool_config())
+
+
+def pool_appearances(minutes: pd.DataFrame, pools: dict[str, dict]) -> pd.DataFrame:
+    """Appearance rows for a candidate pool's last season, which transfermarkt-datasets lacks: each player's league
+    appearances (Transfermarkt performance pages) spread evenly over the season's matchdays (`stats_season`), with
+    his minutes, goals and assists shared equally between them. Per-game figures are therefore averages; totals,
+    windows over the season and shares of a club's games come out as on the page."""
+    out = []
+    for comp, g in minutes.groupby("comp"):
+        st = (pools.get(comp) or {}).get("stats_season")
+        if not st:
+            continue
+        n = int(st["matchdays"])
+        days = pd.date_range(st["first"], st["last"], periods=n).strftime("%Y-%m-%d")
+        for r in g.itertuples():
+            apps = min(int(r.apps), n)
+            if apps <= 0:
+                continue
+            for i in np.unique(np.linspace(0, n - 1, apps).round().astype(int)):
+                out.append(
+                    {
+                        "appearance_id": f"{comp}-{r.tm_club_id}-{i}-{r.tm_player_id}",
+                        "game_id": -(
+                            int(r.tm_club_id) * 1000 + int(i)
+                        ),  # no real game id: negative, per club
+                        "player_id": str(r.tm_player_id),
+                        "player_club_id": str(r.tm_club_id),
+                        "date": days[i],
+                        "player_name": r.name,
+                        "competition_id": comp,
+                        "yellow_cards": 0,
+                        "red_cards": 0,
+                        "goals": r.goals / apps,
+                        "assists": r.assists / apps,
+                        "minutes_played": r.minutes / apps,
+                    }
+                )
+    return pd.DataFrame(out)
 
 
 def _season(d: pd.Series) -> pd.Series:
@@ -185,9 +254,11 @@ class Market:
         comps = pd.read_parquet(valuation.TM_DIR / "competitions.parquet")
         self.comps = comps
         realism.TOP_TIER.update(comps.loc[comps.sub_type == "first_tier", "competition_id"])
-        # the committed squad file (Premier League, refreshed locally) plus squads of other leagues (warehouse);
-        # `comp` is each club's Transfermarkt competition: buyer-league features use it
-        self.squads = pd.read_csv(SQUADS, dtype={"tm_player_id": str, "tm_club_id": str}).assign(comp=PL)
+        # the committed squad file (Premier League and candidate pools, refreshed locally) plus squads of other
+        # leagues (warehouse); `comp` is each club's Transfermarkt competition: buyer-league features use it
+        self.squads = pd.read_csv(SQUADS, dtype={"tm_player_id": str, "tm_club_id": str})
+        self.squads["comp"] = self.squads.comp.fillna(PL) if "comp" in self.squads else PL
+        self.pools = pool_comps()
         self.incoming: dict[str, list[tuple]] = {}  # filled from official announcements by market()
         self.moved: set[str] = set()  # moved since the dataset snapshot (Wikipedia lists), filled by market()
         lineups = played()
@@ -198,9 +269,95 @@ class Market:
         self.use_positions(lineups)
         if extra_squads is not None and len(extra_squads):
             self.squads = pd.concat([self.squads, self._fill(extra_squads)], ignore_index=True)
+        self._with_pool_players()
         self._with_current_values()
-        self.clubs = self.t["clubs"].copy()
-        self.clubs["club_id"] = self.clubs.club_id.astype(str)
+        self.clubs = self._live_clubs()
+
+    def _with_pool_players(self) -> None:
+        """Candidate-pool players (e.g. the Championship) as players-table rows: those the dataset does not know are
+        added from the squad file (name, birth date, position), and every pool player gets the squad file's club,
+        league and contract, which are newer than the dataset's July snapshot."""
+        sq = (
+            self.squads[self.squads.comp.isin(self.pools)]
+            .drop_duplicates("tm_player_id")
+            .set_index("tm_player_id")
+        )
+        if sq.empty:
+            return
+        sub = sq.position if "position" in sq else pd.Series(np.nan, index=sq.index)
+
+        def stamp(
+            d: pd.Series,
+        ) -> pd.Series:  # the dataset's date format ("2002-08-09 00:00:00"), never mixed
+            return pd.to_datetime(d, errors="coerce").dt.strftime("%Y-%m-%d %H:%M:%S")
+
+        new = pd.DataFrame(
+            {
+                "name": sq.name,
+                "date_of_birth": stamp(sq.birth_date),
+                "sub_position": sub,
+                "position": sub.map(BROAD),
+                "last_season": self.now.year,
+            },
+            index=sq.index[~sq.index.isin(self.players.index)],
+        )
+        # object columns first: rows without a club would turn integer club ids into floats ("1234.0")
+        for col in ("current_club_id", "current_club_domestic_competition_id", "contract_expiration_date"):
+            self.players[col] = self.players[col].astype(object)
+        self.players = pd.concat([self.players, new]).rename_axis("player_id")
+        self.players["last_season"] = pd.to_numeric(self.players.last_season, errors="coerce").astype(float)
+        ids = sq.index
+        self.players.loc[ids, "current_club_id"] = sq.tm_club_id
+        self.players.loc[ids, "current_club_domestic_competition_id"] = sq.comp
+        self.players.loc[ids, "contract_expiration_date"] = stamp(sq.contract_expires)
+        self.players.loc[ids, "sub_position"] = self.players.loc[ids, "sub_position"].fillna(sub)
+        self.players.loc[ids, "last_season"] = (
+            self.players.loc[ids, "last_season"].fillna(0).clip(lower=self.now.year)
+        )
+        # the dataset tables the potential and realism snapshots read (rows of players with no history add nothing
+        # to the training frames: those start from valuations dated before today)
+        t_new = new.reset_index(names="player_id")
+        self.t["players"] = pd.concat(
+            [self.t["players"].assign(player_id=lambda d: d.player_id.astype(str)), t_new], ignore_index=True
+        )
+
+    def _live_clubs(self) -> pd.DataFrame:
+        """The dataset's clubs with today's league for every club in the current squads, and the clubs it lacks
+        (promoted clubs such as Coventry and Hull, most of the Championship). The dataset keeps a relegated club in
+        its old league; live scoring (sale odds, buyers, league gaps) needs the league it plays in now. Training
+        frames keep the dataset's clubs."""
+        clubs = self.t["clubs"].copy()
+        clubs["club_id"] = clubs.club_id.astype(str)
+        now = self.squads.drop_duplicates("tm_club_id").set_index("tm_club_id")
+        names = self.club_names()
+        known = clubs.club_id.isin(now.index)
+        clubs.loc[known, "domestic_competition_id"] = clubs.loc[known, "club_id"].map(now.comp)
+        missing = now.index[~now.index.isin(clubs.club_id)]
+        extra = pd.DataFrame(
+            {
+                "club_id": missing,
+                "name": [names.get(c) for c in missing],
+                "domestic_competition_id": now.comp[missing],
+            }
+        )
+        return pd.concat([clubs, extra], ignore_index=True)
+
+    def _with_pool_minutes(self) -> None:
+        """The candidate pools' last-season league games (`pool_appearances`) join the appearances that live scoring
+        reads: minutes in the past year, share of the club's games, goals and assists per 90, last season's minutes
+        for the playing-time model. The realism, opportunity and potential training frames are built from other
+        tables or from years before these games."""
+        if not MINUTES.exists():
+            return
+        m = pd.read_csv(MINUTES, dtype={"tm_player_id": str, "tm_club_id": str})
+        extra = pool_appearances(m[m.comp.isin(self.pools)], pool_config())
+        if len(extra):
+            extra["player_current_club_id"] = extra.player_id.map(self.players.current_club_id)
+            self.t["appearances"] = pd.concat([self.t["appearances"], extra], ignore_index=True)
+
+    def buying_clubs(self) -> list[str]:
+        """Club slugs that get needs and shortlists: every squad except the candidate pools'."""
+        return sorted(self.squads.loc[~self.squads.comp.isin(self.pools), "club_id"].unique())
 
     def use_positions(self, lineups: pd.DataFrame, min_starts: int = GROUP_STARTS) -> None:
         """Where each player counts in a squad's depth: the groups he starts in (positions.group_weights), his
@@ -234,7 +391,7 @@ class Market:
     def club_names(self) -> pd.Series:
         """Transfermarkt club id -> name: the dataset's, else the warehouse's (a club new to the top flight)."""
         names = self.t["clubs"].assign(club_id=lambda d: d.club_id.astype(str)).set_index("club_id").name
-        if "club_name" in self.squads:
+        if "club_name" in self.squads:  # warehouse squads and candidate pools (the squad file's club names)
             extra = self.squads.dropna(subset=["club_name"]).drop_duplicates("tm_club_id")
             names = pd.concat(
                 [names, extra.set_index("tm_club_id").club_name[lambda s: ~s.index.isin(names.index)]]
@@ -285,6 +442,7 @@ class Market:
     def fit(self) -> None:
         df = self.frame("valuation", lambda: valuation.build(self.t), features=valuation.FEATURES)
         self.val = valuation.ValuationModel().fit(df[df.date <= self.now]).calibrate(df, self.now)
+        self._with_pool_minutes()  # after the valuation frame: training data stays the dataset's
         raw, people = None, None
 
         # The realism training frames are built from freshly loaded tables, exactly as their backtest builds them:
@@ -612,7 +770,7 @@ class Market:
         if not hasattr(self, "_league_ap"):
             ap = self.ap[(self.ap.date < self.now) & (self.ap.date >= self.now - pd.Timedelta(days=365))]
             dom = self.comps.loc[self.comps.sub_type.isin(["first_tier", "second_tier"]), "competition_id"]
-            self._league_ap = ap[ap.competition_id.isin(dom)]
+            self._league_ap = ap[ap.competition_id.isin(set(dom) | self.pools)]
         return self._league_ap
 
     def _peers(self, comp: str, group: str) -> np.ndarray:
@@ -650,7 +808,8 @@ class Market:
             if len(peers) >= 10:
                 out["ga_pctile"] = float((peers < out["goals_p90"] + out["assists_p90"]).mean())
                 slug = str(self.comps.set_index("competition_id").name.get(comp) or "")
-                out["ga_league"] = {"laliga": "La Liga"}.get(slug, slug.replace("-", " ").title()) or None
+                named = {"laliga": "La Liga"}.get(slug, slug.replace("-", " ").title())
+                out["ga_league"] = named or (pool_config().get(comp) or {}).get("name")
         pl = self.players
         if pid in pl.index:
             foot, height, caps = pl.foot.get(pid), pl.height_in_cm.get(pid), pl.international_caps.get(pid)
@@ -671,13 +830,9 @@ class Market:
         cap = self.capacity.get(tm_club, np.nan)
         cap = cap if cap == cap and cap > 0 else self.club_value.get(tm_club, 0) * 0.1
         pool = self.players.reset_index()
+        leagues = set(self.comps.loc[self.comps.sub_type == "first_tier", "competition_id"]) | self.pools
         pool = pool[
             self.plays(pool.player_id, pool.sub_position, group)
-            & (
-                pool.current_club_domestic_competition_id.isin(
-                    self.comps.loc[self.comps.sub_type == "first_tier", "competition_id"]
-                )
-            )
             & (pool.current_club_id.astype(str) != tm_club)
             & (pool.last_season >= self.now.year - 1)
         ].copy()
@@ -694,7 +849,8 @@ class Market:
         )
         joined = pd.to_datetime(pool.player_id.map(now_sq.joined), errors="coerce")
         pool = pool[
-            (pool.current_club_id.astype(str) != tm_club)
+            pool.current_club_domestic_competition_id.isin(leagues)  # a first tier or a candidate pool, today
+            & (pool.current_club_id.astype(str) != tm_club)
             & ~(joined > self.now - pd.Timedelta(days=365))
             & ~pool.player_id.astype(str).isin(self.moved)
         ].copy()
@@ -825,10 +981,11 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
     mk.moved = recent_moves(con)
     mk.fit()
     reep = _tm_to_reep(con)
-    showcase = clubs or sorted(mk.squads.club_id.unique())
+    showcase = clubs or mk.buying_clubs()
     rows: list[dict] = []
     # fair value (if sold to another club in the same league) and sale likelihood for every current squad player
-    sq = mk.squads.copy()
+    # (candidate pools have no pages: their players' figures are published only where they are shortlisted)
+    sq = mk.squads[~mk.squads.comp.isin(mk.pools)].copy()
     fees = pd.concat(
         [
             mk.fair_fee(

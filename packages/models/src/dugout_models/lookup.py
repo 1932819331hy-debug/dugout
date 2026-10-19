@@ -1,7 +1,7 @@
 """Player lookup outputs: "how good can he become?" and "how would he fit <club>?" for any player in the pool.
 
-Pool: players valued in the last 200 days who play in a first-tier league (transfermarkt-datasets + today's squad
-values), so a question can name almost any professional in a top division.
+Pool: players valued in the last 200 days who play in a first-tier league or a candidate pool (the Championship)
+(transfermarkt-datasets + today's squad values), so a question can name almost any professional in a top division.
 
   potential (potential.md):  projected market value in 2 and 4 years (median), 10-90% band in 4 years
   level:                     where a value sits among current Premier League squad values (words, chosen by code)
@@ -116,7 +116,8 @@ def lookup(con: duckdb.DuckDBPyConnection, mk: Market, now: datetime, reep: dict
     t, top = potential.prepare(mk.t)
     pool = potential.snapshot(t, pd.Timestamp(now.date()), top)
     pool = pool.dropna(subset=["age"])
-    pool = pool[((pool.top_tier == 1) | (pool.comp == PL)) & (pool.mv >= MIN_VALUE)].reset_index(drop=True)
+    listed = (pool.top_tier == 1) | (pool.comp == PL) | pool.comp.isin(mk.pools)
+    pool = pool[listed & (pool.mv >= MIN_VALUE)].reset_index(drop=True)
     log.info("lookup pool: %d players", len(pool))
     proj = {}
     for h, years in TRAIN_YEARS.items():
@@ -186,12 +187,13 @@ GEM_AGES = (17, 23)
 
 
 def gems(mk: Market, pool: pd.DataFrame, proj: dict, ids: list[str], now: datetime) -> list[dict]:
-    """Hidden gems per club need: players aged 17-23 who play regularly (30%+ of minutes) in a top league, cost
-    less today than the club's last regular starter at the position, ranked by the potential model's projected
-    value in four years (potential.md). Current clubs come from the squad file where known; players who joined a
+    """Hidden gems per club need: players aged 17-23 who play regularly (30%+ of minutes) in a top league or a
+    candidate pool (the Championship), cost less today than the club's last regular starter at the position, ranked
+    by the potential model's projected value in four years (potential.md). Current clubs come from the squad file where known; players who joined a
     club in the last 12 months are left out, as on the other lists."""
     g = pool.assign(pid=ids, proj4=np.expm1(proj[4].q50.to_numpy()))
-    g = g[g.age.between(GEM_AGES[0], GEM_AGES[1] + 0.999) & (g.minutes_share >= 0.3) & (g.top_tier == 1)]
+    league = (g.top_tier == 1) | g.comp.isin(mk.pools)
+    g = g[g.age.between(GEM_AGES[0], GEM_AGES[1] + 0.999) & (g.minutes_share >= 0.3) & league]
     now_sq = mk.squads.drop_duplicates("tm_player_id").set_index("tm_player_id")
     joined = pd.to_datetime(g.player_id.map(now_sq.joined), errors="coerce")
     g = g[~(joined > mk.now - pd.Timedelta(days=365)) & ~g.player_id.astype(str).isin(mk.moved)].copy()
@@ -199,7 +201,7 @@ def gems(mk: Market, pool: pd.DataFrame, proj: dict, ids: list[str], now: dateti
     g["sub"] = g.player_id.map(mk.players.sub_position)
     club_names = mk.clubs.set_index("club_id").name
     rows: list[dict] = []
-    for slug in sorted(mk.squads.club_id.unique()):
+    for slug in mk.buying_clubs():
         tm_club = str(mk.squads.loc[mk.squads.club_id == slug, "tm_club_id"].iloc[0])
         for i, n in mk.needs(slug).head(2).iterrows():
             bar = n.bar_value if n.bar_value == n.bar_value else np.inf  # the need's last regular starter

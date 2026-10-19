@@ -38,7 +38,7 @@ Rules that apply to all sources (enforced in `packages/pipeline/src/dugout_pipel
 | ECB euro reference rates | no | ECB statistical data: free reuse with attribution ("Source: ECB") | 1 call a night | 24 h | daily GBP/USD/CHF/… per euro, to convert reported fees | 3 |
 | Reep Register (`reep`) | no | **CC0** data, MIT SDK | catalogue ~210 MB, synced daily (SHA-256 verified by the SDK) | 24 h | ID crosswalk: Opta ↔ API-Football ↔ Transfermarkt ↔ FBref ↔ Understat ↔ StatsBomb ↔ Wyscout ↔ SkillCorner ↔ ClubElo … | — |
 | football-data.co.uk | no | Free CSVs; credit football-data.co.uk | none published; ≤ 1 req / 3 s | 12 h (past seasons 365 d) | historical results + closing odds (Pinnacle / market average) — the benchmark the predictor must beat | 3 |
-| Transfermarkt (local refresher) | no | Website; `robots.txt` allows `*` | **local only**, weekly, 1 page / 6 s, 20 pages | 6 d | current market values, contract expiry → cleaned CSV committed to `data/reference/` | 3 |
+| Transfermarkt (local refresher) | no | Website; `robots.txt` allows `*` (only `wget` is barred; re-checked 2026-10-18) | **local only**, weekly, 1 page / 6 s: 20 Premier League squad pages; Championship (`--pool championship`): 1 competition page for the club list + 24 squad pages + 24 performance pages (last season's league minutes) | 6 d | current market values, positions, contract expiry, Championship league minutes → cleaned CSV committed to `data/reference/`; the Championship is a shortlist candidate pool only (no pages: football-data.org's free tier has no ELC) | 3 |
 
 ### ID mapping
 

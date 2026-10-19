@@ -128,6 +128,7 @@ function Why({
     <>
       {lead}
       <Output t={t} need={need} seller={seller} n={n} />
+      {t.leagueMinutes && <> Transfermarkt lists {n(t.leagueMinutes)} league minutes for him last season.</>}
       <Complement t={t} gap={gap} buyer={buyer} n={n} />
       {t.kind === "best" && t.minutesThere && (
         <>
