@@ -47,6 +47,7 @@ from dugout_models.opportunity import OpportunityModel
 from dugout_models.opportunity import build as opportunity_frame
 from dugout_models.positions import GROUP_STARTS, group_weights, played, positions_played
 from dugout_models.publish import _row
+from dugout_models.style import StyleModel, describe, fit_vs, lacks, standouts, top_share
 
 log = logging.getLogger(__name__)
 
@@ -792,6 +793,7 @@ class Market:
                     "best_name": top.name.iloc[0] if len(top) else None,
                     "bar_name": bar["name"] if bar is not None else None,
                     "bar_value": float(bar.market_value_eur) if bar is not None else np.nan,
+                    "bar_tm": str(bar.tm_player_id) if bar is not None else None,
                     "bar_ga_p90": (
                         (lambda pr: pr.get("goals_p90", np.nan) + pr.get("assists_p90", np.nan))(
                             self.profile(bar.tm_player_id, g)
@@ -1019,6 +1021,48 @@ def profile_rows(c: dict, pid: str, now: datetime, ctx: str) -> list[dict]:
     return rows
 
 
+def starter_rows(club: str, st: dict | None, now: datetime, ctx: str) -> list[dict]:
+    """The last regular starter at a need, in style terms (dugout_models.style): his role, the season and pool he
+    is measured in, his strongest features (top share) and his weakest (percentile: what the side lacks there)."""
+    if not st:
+        return []
+    rows = [
+        _row("scout", "club", club, "need_bar_style_season", st["season"], now, ctx),
+        _row("scout", "club", club, "need_bar_style_pool", st["pool"], now, ctx),
+    ]
+    if st["role"]:
+        rows.append(_row("scout", "club", club, "need_bar_style_role", st["role"], now, ctx))
+    for f, v in standouts(st["pct"], 2):
+        rows.append(_row("scout", "club", club, f"need_bar_top:{f}", top_share(v), now, ctx))
+    for f, v in lacks(st):
+        rows.append(_row("scout", "club", club, f"need_bar_low:{f}", round(v, 2), now, ctx))
+    return rows
+
+
+def style_rows(c: dict | None, starter: dict | None, pid: str, now: datetime, ctx: str) -> list[dict]:
+    """A candidate's style for the need (dugout_models.style.describe): role, season, pool, his three strongest
+    features as top shares ("top 10%"), the feature he adds most over the starter he would replace (both
+    percentiles) and up to two similar players."""
+    if not c:
+        return []
+    rows = [
+        _row("scout", "player", pid, "style_season", c["season"], now, ctx),
+        _row("scout", "player", pid, "style_pool", c["pool"], now, ctx),
+    ]
+    if c["role"]:
+        rows.append(_row("scout", "player", pid, "style_role", c["role"], now, ctx))
+    for f, v in standouts(c["pct"], 3):
+        rows.append(_row("scout", "player", pid, f"style_top:{f}", top_share(v), now, ctx))
+    adds = fit_vs(c, starter)
+    if adds:
+        f, mine, theirs = adds
+        rows.append(_row("scout", "player", pid, f"style_adds:{f}", round(mine, 2), now, ctx))
+        rows.append(_row("scout", "player", pid, f"style_adds_bar:{f}", round(theirs, 2), now, ctx))
+    if c["similar"]:
+        rows.append(_row("scout", "player", pid, "style_similar", " and ".join(c["similar"]), now, ctx))
+    return rows
+
+
 def recent_moves(con: duckdb.DuckDBPyConnection) -> set[str]:
     """Transfermarkt ids of players Wikipedia's transfer lists show joining a club (or leaving one) since the
     dataset snapshot. Loan returns are not counted: the player is back where the dataset expects him."""
@@ -1134,6 +1178,7 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
     mk.moved = recent_moves(con)
     mk.links = realism.load_links(con)
     mk.fit()
+    mk.style = StyleModel.from_warehouse(con, mk.main_group)
     reep = _tm_to_reep(con)
     showcase = clubs or mk.buying_clubs()
     rows: list[dict] = []
@@ -1191,6 +1236,9 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
                 rows.append(
                     _row("scout", "club", slug, "need_bar_ga_p90", round(float(n.bar_ga_p90), 2), now, ctx)
                 )
+            # how the last regular starter there plays: what a signing would replace, and what the side lacks
+            starter = describe(mk.style, n.bar_tm, n.group) if isinstance(n.bar_tm, str) else None
+            rows += starter_rows(slug, starter, now, ctx)
             short = mk.shortlist(slug, n.group, str(tm_club))
             for c in short.itertuples():
                 k = int((short.kind[: c.Index] == c.kind).sum())  # position within its list, from 0
@@ -1209,6 +1257,7 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
                     ),
                     _row("scout", "player", pid, "minutes_last_year", int(c.minutes_365), now, ctx),
                     *profile_rows(c._asdict(), pid, now, ctx),
+                    *style_rows(describe(mk.style, c.tm_player_id, n.group), starter, pid, now, ctx),
                     _row("scout", "player", pid, "realism", round(c.p_move, 4), now, ctx),
                     _row("scout", "player", pid, "p_sold", round(c.p_sold, 3), now, ctx),
                     _row("scout", "player", pid, "p_this_club", round(c.p_this_club, 4), now, ctx),

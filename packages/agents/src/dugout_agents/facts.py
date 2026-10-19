@@ -26,6 +26,7 @@ MODEL_DOCS = {
     "lineup": f"{REPO}/docs/backtests/lineup.md",
     "injury": f"{REPO}/docs/backtests/injury.md",
     "roles": f"{REPO}/docs/backtests/roles.md",
+    "style": f"{REPO}/docs/backtests/roles_api.md",
     "fingerprint": f"{REPO}/docs/backtests/fingerprint.md",
     "valuation": f"{REPO}/docs/backtests/valuation.md",
     "realism": f"{REPO}/docs/backtests/realism.md",

@@ -1007,6 +1007,133 @@ for _kind in KIND_METRICS:
     KIND_METRICS[_kind] |= PROFILE_METRICS
 
 
+# playing-style features as the site names them (dugout_models.style.LABELS)
+STYLE_LABELS = {
+    "key_passes": "chances created",
+    "dribbles": "dribbles completed",
+    "shots": "shots",
+    "goals": "goals",
+    "passes": "passes",
+    "tackles": "tackles",
+    "interceptions": "interceptions",
+    "blocks": "blocks",
+    "duels": "duels contested",
+    "duel_win": "share of duels won",
+    "fouls_drawn": "fouls won",
+    "fouls_committed": "fouls committed",
+}
+STYLE_DOC = MODEL_DOCS["style"]
+
+
+def _style_metrics(tb: Toolbox, etype: str, eid: str, ctx: str, prefix: str) -> list[str]:
+    """Published `scout` metrics `<prefix><feature>` for an entity and context, strongest first (top shares and
+    weakest percentiles ascending, other percentiles descending)."""
+    rows = tb.con.execute(
+        """SELECT metric, value_num FROM model_outputs WHERE model = 'scout' AND entity_type = ? AND entity_id = ?
+           AND context = ? AND metric LIKE ? ORDER BY metric""",
+        [etype, eid, ctx, prefix + "%"],
+    ).fetchall()
+    rows = [r for r in rows if r[0].removeprefix(prefix) in STYLE_LABELS and r[1] is not None]
+    ascending = "top" in prefix or "low" in prefix
+    return [m for m, _ in sorted(rows, key=lambda r: r[1] if ascending else -r[1])]
+
+
+def _starter_style(tb: Toolbox, name: str, club: str, rank: int, which_need: str) -> list[Fact]:
+    """How the last regular starter at the need plays (dugout_models.style via market.starter_rows): his role,
+    strongest features (top share) and weakest (what the side lacks there), with the season and pool."""
+    ctx = f"need:{rank}"
+    bar = tb.model("scout", "club", club, "need_bar_player", ctx)
+    pool = tb.model("scout", "club", club, "need_bar_style_pool", ctx, doc=STYLE_DOC)
+    if bar is None or pool is None:
+        return []
+    who, pool_text = str(bar[1]), str(pool[1])
+    facts: list[Fact] = []
+    for metric, label, tmpl in (
+        (
+            "need_bar_style_season",
+            "last regular starter's style season",
+            f"The style figures for {name}'s {who} are from {{p}}.",
+        ),
+        (
+            "need_bar_style_pool",
+            "last regular starter's style comparison",
+            f"{name}'s {who} is measured against {{p}}.",
+        ),
+        ("need_bar_style_role", "last regular starter's role", f"{who} plays as a {{p}} for {name}."),
+    ):
+        rec = tb.model("scout", "club", club, metric, ctx, doc=STYLE_DOC)
+        facts += _keep(_fact(tb, name, f"{label} ({which_need})", tmpl, rec, entity_id=club))
+    for prefix, label, tmpl in (
+        (
+            "need_bar_top:",
+            "last regular starter's top share for",
+            "{club}'s {who} is in the top {{p}} of {pool} for {feat}.",
+        ),
+        (
+            "need_bar_low:",
+            "last regular starter's percentile for",
+            "For {feat}, {club}'s {who} ranks ahead of only {{p}} of {pool}.",
+        ),
+    ):
+        for metric in _style_metrics(tb, "club", club, ctx, prefix):
+            feat = STYLE_LABELS[metric.split(":", 1)[1]]
+            rec = tb.model("scout", "club", club, metric, ctx, doc=STYLE_DOC)
+            text = tmpl.format(club=name, who=who, pool=pool_text, feat=feat)
+            facts += _keep(
+                _fact(tb, name, f"{label} {feat} ({which_need})", text, rec, "pct", entity_id=club)
+            )
+    return facts
+
+
+def _candidate_style(tb: Toolbox, cname: str, pid: str, ctx: str, bar: str | None) -> list[Fact]:
+    """How a shortlisted player plays (dugout_models.style via market.style_rows): role, his strongest features as
+    top shares, the feature he adds most over the starter he would replace (both percentiles), similar players."""
+    pool = tb.model("scout", "player", pid, "style_pool", ctx, doc=STYLE_DOC)
+    if pool is None:
+        return []
+    pool_text = str(pool[1])
+    facts: list[Fact] = []
+    for metric, label, tmpl in (
+        ("style_season", "style season", f"{cname}'s style figures are from {{p}}."),
+        ("style_pool", "style comparison", f"{cname} is measured against {{p}}."),
+        ("style_role", "role", f"{cname} plays as a {{p}}."),
+        ("style_similar", "most similar players", f"In style, {cname} is closest to {{p}}."),
+    ):
+        rec = tb.model("scout", "player", pid, metric, ctx, doc=STYLE_DOC)
+        facts += _keep(_fact(tb, cname, label, tmpl, rec, entity_id=pid))
+    for metric in _style_metrics(tb, "player", pid, ctx, "style_top:"):
+        feat = STYLE_LABELS[metric.split(":", 1)[1]]
+        rec = tb.model("scout", "player", pid, metric, ctx, doc=STYLE_DOC)
+        tmpl = f"{cname} is in the top {{p}} of {pool_text} for {feat}."
+        facts += _keep(_fact(tb, cname, f"top share for {feat}", tmpl, rec, "pct", entity_id=pid))
+    for metric in _style_metrics(tb, "player", pid, ctx, "style_adds:"):
+        f = metric.split(":", 1)[1]
+        feat, other = STYLE_LABELS[f], bar or "the starter he would replace"
+        mine = tb.model("scout", "player", pid, metric, ctx, doc=STYLE_DOC)
+        theirs = tb.model("scout", "player", pid, f"style_adds_bar:{f}", ctx, doc=STYLE_DOC)
+        facts += _keep(
+            _fact(
+                tb,
+                cname,
+                f"his percentile for {feat}, where he adds most",
+                f"For {feat}, {cname} ranks ahead of {{p}} of {pool_text}.",
+                mine,
+                "pct",
+                entity_id=pid,
+            ),
+            _fact(
+                tb,
+                cname,
+                f"the starter's percentile for {feat}",
+                f"For {feat}, {other}, the starter {cname} would replace, ranks ahead of {{p}} of {pool_text}.",
+                theirs,
+                "pct",
+                entity_id=pid,
+            ),
+        )
+    return facts
+
+
 def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
     name = tb.name(club)
     facts: list[Fact] = []
@@ -1107,6 +1234,8 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                 if metric in ("need_best_player", "need_bar_player"):
                     tb.register(f"need_best:{rec[1]}", str(rec[1]))
                 facts += _keep(_fact(tb, name, f"{label} ({which_need})", tmpl, rec, fmt, entity_id=club))
+        facts += _starter_style(tb, name, club, rank, which_need)
+        bar_rec = tb.model("scout", "club", club, "need_bar_player", f"need:{rank}")
         # three lists per need: the best fit whatever the odds, the moves most likely to happen, young players
         # who should grow into the role; several names each for the top need, the leading name for the second
         picked: list[tuple[str, str, str, str]] = []
@@ -1244,6 +1373,7 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                 if f is not None:
                     f.range = rng
                 facts += _keep(f)
+            facts += _candidate_style(tb, cname, pid, ctx, str(bar_rec[1]) if bar_rec else None)
             # candidate-pool players (the Championship): last season's league minutes, cited to the Transfermarkt
             # page they were read from (the dataset behind "matches on record" has no games for that league)
             lm = tb.latest("player", pid, "league_minutes", "transfermarkt")
