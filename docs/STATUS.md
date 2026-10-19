@@ -410,28 +410,41 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     clubs; outlet table shows labels, record on hover). Methods row rewritten. Old dossiers (no brief facts) still
     render: the rumour text with "no record yet" until the nightly rebuilds them.
 
-## Handoff (2026-10-19) — read this first
+## Handoff (2026-10-19, evening) — read this first
 
-- **Live:** six leagues (PL, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie); two gaps with reasons; three lists
-  per gap with stats-based why-him (TM goals/assists per 90, league rank, foot, height, caps, comparison with the
-  starter to beat); fee ranges; injury tiers in all leagues; played-position needs; Championship targets;
-  /rumours/ page; rumour odds. Nightly ~25-40 min with warm caches. No open PRs; GitHub has only `main`.
-- **Rules from the user:** commit as `delta96040 <115036752+delta96040@users.noreply.github.com>` (repo git
-  config), no `Co-Authored-By: Claude` trailer, no "Generated with Claude Code" footer. Main's history was rewritten
-  2026-10-17 to remove dhruv-aaizel and Claude; never force-push main again without asking.
-- **Keys:** GROQ_API_KEY, API_FOOTBALL_KEY (new account; old one suspended), KAGGLE_USERNAME + KAGGLE_API_TOKEN
-  (KGAT_ style, Bearer auth) are in `.env`; GitHub secrets set for Groq and API-Football. Never print keys.
-- **API-Football:** free plan gives the current season only for yesterday..tomorrow, so other leagues' predicted
-  XIs appear after each club's next match (~a week to fill). Error replies are never cached (PR #28).
-  Clubs still skipped: Le Havre (8/11 matched), Hamburg and Paderborn (no formation fits).
-- **Running sessions (started 2026-10-19):** "Player style profiles, team fit and a role model"
-  (API-Football player stats 2024 backfill <=70 calls/day, role model, why-him led by style); "Rumours section:
-  credibility instead of raw odds"; "Fine-tune an open LLM to write the dossiers" (branch writer-finetune; Groq
-  teacher run ~5 h, then QLoRA Qwen2.5-1.5B on Kaggle GPU; metrics to docs/backtests/writer_finetune.md, HF model
-  card, methods page). Each opens a PR; the user merges on request ("merge").
-- **Usage guard:** scheduled task `dugout-usage-guard` (every 20 min) stops all sessions at 93% weekly usage.
-- **User asks pending:** résumé bullets from the fine-tune results once in; why-him should be about how the player
-  plays and fits (style session: PR #41, the style-led why-him); rumours should be useful, not bare percentages (rumours session: PR #40, the rumour brief).
+**Next steps for a new chat, in order:**
+1. PR #41 (style-led why-him; session "Player style profiles, team fit and a role model",
+   local_8e274ab4-67fe-47a1-bc32-371d6e979e45) was CONFLICTING after #40 merged; that session is merging main and
+   will report green CI. Then merge #41 (`gh pr merge 41 --merge --delete-branch`), run the nightly
+   (`gh workflow run nightly.yml --ref main`, ~25-40 min) and check the live site (why-him leads with style; rumour
+   cards show source label, reach, our odds, track record). Style stats cover 16/20 PL clubs; the nightly fills the
+   rest over ~10 nights within the API-Football budget.
+2. Fine-tune session (local_395c27d4-1841-4b23-9219-ecb07fad5294, branch claude/blissful-snyder-9c4294): Kaggle T4
+   kernel works end to end (train -> merge -> GGUF); teacher data limited by Groq's Qwen cap (~500k tokens/day), so
+   gpt-oss-120b is a recorded second teacher; Groq Qwen held-out bench must be rerun after its budget refreshes.
+   User approved a public Kaggle notebook. Publishing: `.env` HF_TOKEN is now WRITE-scoped (the GitHub secret
+   HF_TOKEN is still the old read token, which CI needs only to download models). When it reports: merge its PR on
+   the user's say-so, then write résumé bullets from the real metrics (docs/backtests/writer_finetune.md).
+
+**Live (2026-10-19):** six leagues (PL, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie); two gaps with reasons;
+three lists per gap; why-him with TM per-90 stats, league rank, profile and comparison with the starter to beat;
+fee ranges; injury tiers in all leagues; played-position needs; Championship targets; /rumours/ page; rumour
+credibility cards (#40, data after the next nightly). Nightly ~25-40 min with warm caches.
+
+**Rules from the user:** commit as `delta96040 <115036752+delta96040@users.noreply.github.com>` (repo git config),
+no `Co-Authored-By: Claude` trailer, no "Generated with Claude Code" footer; merge only when the user says so
+("merge" / "merge everything which is done"); after merging, run a nightly and check the live site; keep GitHub to
+`main` only (delete merged branches). Main's history was rewritten 2026-10-17; never force-push main without asking.
+
+**Keys in `.env` (never print):** GROQ_API_KEY, API_FOOTBALL_KEY (new account; old one suspended), GUARDIAN_API_KEY,
+FOOTBALL_DATA_ORG_KEY, OPENROUTER_API_KEY, HF_TOKEN (write), KAGGLE_USERNAME + KAGGLE_API_TOKEN (KGAT_ style, Bearer
+auth; verified). GitHub secrets set for Groq and API-Football.
+
+**API-Football:** free plan = current season only yesterday..tomorrow, so other leagues' predicted XIs appear after
+each club's next match; error replies are never cached (#28). Skipped: Le Havre (8/11 matched), Hamburg and
+Paderborn (no formation fits). Keep total calls well under 100/day (code caps at 90).
+
+**Usage guard:** scheduled task `dugout-usage-guard` (every 20 min) stops all sessions at 93% weekly usage.
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
