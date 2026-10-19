@@ -737,8 +737,9 @@ def _joined(club: str) -> list[tuple[str, date]]:
 
 
 def rumours(tb: Toolbox, club: str, direction: str, limit: int = 3) -> list[Fact]:
-    """Transfer talk from the Guardian's Rumour Mill (pipeline adapter `guardian_rumours`), newest first.
-    direction "in": players at other clubs linked with this club; "out": this club's players linked with a move.
+    """Transfer talk from the Guardian's Rumour Mill (pipeline adapter `guardian_rumours`).
+    direction "in": players at other clubs linked with this club, each with its brief (rumour_brief), the most
+    credible and most widely reported first; "out": this club's players linked with a move, newest first.
     Each sentence is attributed to the Guardian and must be confirmed by Fact-Check against the column's paragraph;
     it reports talk, never a fact about a transfer."""
     name = tb.name(club)
@@ -750,7 +751,7 @@ def rumours(tb: Toolbox, club: str, direction: str, limit: int = 3) -> list[Fact
     }
     # a rumour from before a player joined his current club is about the move that already happened
     joined = {_fold_name(n): d for n, d in _joined(club)}
-    facts: list[Fact] = []
+    found: list[tuple[str, str, datetime]] = []
     seen: set[str] = set()
     for rumour_id, title, published in tb.con.execute(
         """SELECT news_id, title, published_at FROM news_items WHERE source = 'guardian_rumours'
@@ -768,45 +769,199 @@ def rumours(tb: Toolbox, club: str, direction: str, limit: int = 3) -> list[Fact
             if since is not None and published.date() < since:
                 continue
             seen.add(key)
-            tb.register(f"rumour:{key}", player)
-            text = (
-                f"According to The Guardian, {player} has been linked with a move away from {name}."
-                if direction == "out"
-                else f"According to The Guardian, {name} have been linked with {player}."
-            )
-            label = (
-                f"transfer rumour ({'outgoing' if direction == 'out' else 'incoming'}), {published:%d %B %Y}"
-            )
-            facts += _keep(_fact(tb, "The Guardian", label, text))
-            if direction == "in":
-                facts += _keep(rumour_record(tb, club, rumour_id, player))
-            if sum(f.label.startswith("transfer rumour") for f in facts) >= limit:
-                return facts
+            found.append((rumour_id, player, published))
+    if (
+        direction == "in"
+    ):  # credibility x heat (dugout-models rumours); newest first among equals (stable sort)
+        found.sort(key=lambda x: -_priority(tb, club, x[0], x[1]))
+    facts: list[Fact] = []
+    for rumour_id, player, published in found[:limit]:
+        tb.register(f"rumour:{_fold_name(player)}", player)
+        text = (
+            f"According to The Guardian, {player} has been linked with a move away from {name}."
+            if direction == "out"
+            else f"According to The Guardian, {name} have been linked with {player}."
+        )
+        label = f"transfer rumour ({'outgoing' if direction == 'out' else 'incoming'}), {published:%d %B %Y}"
+        facts += _keep(_fact(tb, "The Guardian", label, text))
+        if direction == "in":
+            facts += rumour_brief(tb, club, rumour_id, player)
     return facts
 
 
-# the track-record sentence names the player it follows; graph.gate drops it when that rumour is not published
-RUMOUR_RECORD = re.compile(r"^Past reports like this one about (.+?) came true")
+def _priority(tb: Toolbox, club: str, rumour_id: str, player: str) -> float:
+    row = tb.con.execute(
+        """SELECT value_num FROM model_outputs WHERE model = 'rumours' AND entity_type = 'rumour'
+           AND entity_id = ? AND metric = 'priority' AND context = ?""",
+        [f"{rumour_id}:{_fold_name(player)}", club],
+    ).fetchone()
+    return row[0] if row and row[0] is not None else 0.0
 
 
-def rumour_record(tb: Toolbox, club: str, rumour_id: str, player: str) -> Fact | None:
-    """How often Rumour Mill reports like this one came true (dugout-models rumours, docs/backtests/rumours.md):
-    published as "one time in N" from the chance that the player joins this club within half a year."""
+def _output_text(tb: Toolbox, model: str, etype: str, eid: str, metric: str, context: str = "") -> str | None:
+    """A published text output read as a name (an outlet, a club id), not cited as a figure."""
+    row = tb.con.execute(
+        """SELECT value_text FROM model_outputs WHERE model = ? AND entity_type = ? AND entity_id = ?
+           AND metric = ? AND context = ?""",
+        [model, etype, eid, metric, context],
+    ).fetchone()
+    return row[0] if row else None
+
+
+RECORD_CONTEXT = "6m"  # outlets' records count "came true within half a year" (rumours.SHIPPED_HORIZON)
+EARLIER = 2  # earlier reports per rumour (rumours.TRACK_RECORD)
+BRIEF_LABEL = "rumour "  # every brief fact's label starts with this (the site reads them by label)
+
+
+def rumour_brief(tb: Toolbox, club: str, rumour_id: str, player: str) -> list[Fact]:
+    """What a sporting director needs next to a rumour, as figures for the site's rumour cards (brief facts:
+    key_stats, never prose). Subject = the player, so the site pairs them with the published rumour.
+
+    - source credibility: the outlet's label (reliable / about average / speculative / unproven) from its record
+      set against what similar reports did, and the record behind it (dugout-models rumours, rumours.md);
+    - heat: independent outlets (ownership groups) reporting this link, how many reports, the first one;
+    - reality check: our chance of this move in a window, of his club selling him and of this buyer, his
+      contract, and how many players his club has sold for a fee (market.rumour_reality);
+    - track record: the outlet's latest reports about this club (or his club's players) and what became of them.
+    """
     eid = f"{rumour_id}:{_fold_name(player)}"
-    rec = tb.model("rumours", "rumour", eid, "one_in", club)
-    if rec is None:
-        return None
     tb.register(eid, player)
-    return _fact(
-        tb,
-        player,
-        "rumour track record",
-        f"Past reports like this one about {player} came true within half a year about one time in {{p}}.",
-        rec,
-        "int",
-        "from what became of past Rumour Mill reports with similar signs",
-        eid,
+    cname = tb.name(club)
+    outlet = _output_text(tb, "rumours", "rumour", eid, "outlet", club) or "The Guardian"
+    tb.register(outlet, outlet)
+    src = "the Guardian's Rumour Mill" if outlet == "The Guardian" else outlet
+    facts: list[Fact] = []
+
+    def add(label, template, rec, fmt=None, entity=eid, when=None) -> None:
+        f = _fact(tb, player, BRIEF_LABEL + label, template, rec, fmt, entity_id=entity)
+        if f is not None:
+            f.brief, f.when = True, when
+            facts.append(f)
+
+    def out(model: str, etype: str, ent: str, metric: str, ctx: str = club):
+        return tb.model(model, etype, ent, metric, ctx)
+
+    def outlet_rec(metric: str):
+        return out("rumours", "outlet", outlet, metric, RECORD_CONTEXT)
+
+    add(
+        "source credibility",
+        f"As a source of transfer talk, {src} rates {{p}} on its record.",
+        outlet_rec("credibility"),
+        entity=outlet,
     )
+    add(
+        "source record",
+        f"Of the reports credited to {src} that we traced, {{p}} came true within half a year.",
+        outlet_rec("raw_rate"),
+        "pct",
+        outlet,
+    )
+    add(
+        "source reports traced",
+        f"We traced {{p}} reports credited to {src}.",
+        outlet_rec("links"),
+        "int",
+        outlet,
+    )
+    add(
+        "source reports came true",
+        f"Of the reports credited to {src}, {{p}} came true within half a year.",
+        outlet_rec("came_true"),
+        "int",
+        outlet,
+    )
+    add(
+        "similar reports record",
+        "Reports like those came true {p} of the time, whoever made them.",
+        outlet_rec("expected_rate"),
+        "pct",
+        outlet,
+    )
+    add(
+        "independent outlets",
+        f"{player}'s link with {cname} has been reported by {{p}} independent outlets.",
+        out("rumours", "rumour", eid, "heat_outlets"),
+        "int",
+    )
+    add(
+        "outlets reporting",
+        f"Outlets reporting {player}'s link with {cname}: {{p}}.",
+        out("rumours", "rumour", eid, "heat_outlet_names"),
+    )
+    add(
+        "reports",
+        f"{player} has been linked with {cname} in {{p}} reports.",
+        out("rumours", "rumour", eid, "heat_reports"),
+        "int",
+    )
+    add(
+        "first reported",
+        f"{player} was first linked with {cname} on {{p}}.",
+        out("rumours", "rumour", eid, "heat_since"),
+        "date",
+    )
+    add(
+        "move estimate",
+        f"We put the chance of {player} joining {cname} in a transfer window at {{p}}.",
+        out("scout", "rumour", eid, "realism"),
+        "pct",
+    )
+    add(
+        "sale likelihood",
+        f"We put the chance of {player}'s club selling him in a window at {{p}}.",
+        out("scout", "rumour", eid, "p_sold"),
+        "pct",
+    )
+    add(
+        "this buyer",
+        f"If {player} is sold, we give {cname} a {{p}} chance of being the buyer.",
+        out("scout", "rumour", eid, "p_this_club"),
+        "pct",
+    )
+    add(
+        "contract months",
+        f"{player} has {{p}} months left on his contract.",
+        out("scout", "rumour", eid, "contract_months"),
+        "int",
+    )
+    seller = _output_text(tb, "scout", "rumour", eid, "seller", club)
+    sname = _output_text(tb, "scout", "seller", seller, "name") if seller else None
+    if seller and sname:
+        tb.register(seller, sname)
+        since = out("scout", "seller", seller, "fee_sales_since", "")
+        add("seller", f"{player} plays for {{p}}.", out("scout", "seller", seller, "name", ""), entity=seller)
+        add(
+            "seller fee sales",
+            f"{sname} have sold {{p}} players for a fee since {{d}}.",
+            out("scout", "seller", seller, "fee_sales", ""),
+            "int",
+            seller,
+            (since[0], "date") if since else None,
+        )
+    for k in range(1, EARLIER + 1):
+        past = _output_text(tb, "rumours", "rumour", eid, f"past_{k}_player", club)
+        pclub = _output_text(tb, "rumours", "rumour", eid, f"past_{k}_club", club)
+        date_rec = out("rumours", "rumour", eid, f"past_{k}_date")
+        if not (past and pclub and date_rec):
+            continue
+        add(
+            f"earlier report {k}",
+            f"Earlier, on {{d}}, {src} linked {past} with {pclub}: he {{p}}.",
+            out("rumours", "rumour", eid, f"past_{k}_outcome"),
+            when=(date_rec[0], "date"),
+        )
+        add(
+            f"earlier report {k} player",
+            "That earlier report was about {p}.",
+            out("rumours", "rumour", eid, f"past_{k}_player"),
+        )
+        add(
+            f"earlier report {k} club",
+            "It linked him with {p}.",
+            out("rumours", "rumour", eid, f"past_{k}_club"),
+        )
+    return facts
 
 
 LEADS = {"best": "Dream target", "realistic": "Realistic target", "gem": "Hidden gem"}

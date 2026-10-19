@@ -50,6 +50,8 @@ class Fact:
     when: tuple[str, str | None] | None = None  # optional second slot "{d}" (ledger id, format), e.g. a date
     # optional likely range "{lo}" / "{hi}" around the value (ledger ids, same format), e.g. a fee range
     range: tuple[str, str] | None = None
+    # brief: a structured figure for the site's cards (key_stats, e.g. the rumour brief), never written as prose
+    brief: bool = False
 
     @property
     def placeholder(self) -> str:
