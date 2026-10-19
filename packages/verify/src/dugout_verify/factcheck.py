@@ -65,6 +65,8 @@ METRIC_WORDS = {
     "season_expected_goals": r"\bxg\b|expected goals|chances? worth",
     "market_value": r"valu|worth|price|transfermarkt",
     "fair_fee": r"valu|worth|fee|price|cost",
+    "fair_fee_low": r"valu|worth|fee|price|cost|likely|between|range",
+    "fair_fee_high": r"valu|worth|fee|price|cost|likely|between|range",
     "league_position": r"place|position|table|sit|ranked|top|bottom|\bin\b",
     "league_points": r"point",
     "league_goalsFor": r"goal|scor",

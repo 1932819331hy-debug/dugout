@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { StatRef, Target } from "@/components/story/types";
-import { type Gap, KINDS } from "@/lib/shortlist";
+import { type Gap, type InjuryCoverage, KINDS } from "@/lib/shortlist";
 
 export const LIST_LABEL: Record<Target["kind"], string> = {
   best: "Dream targets · whatever the cost",
@@ -105,6 +105,20 @@ function Why({
     t.contract && months <= 18 ? (
       <> Only {n(t.contract)} months are left on his contract, which brings the price down.</>
     ) : null;
+  // press talk: how often the Rumour Mill linked him with this club, and (realistic list) how far it moved the odds
+  const reports = t.pressReports ? Number(t.pressReports.stat.value) : 0;
+  const press =
+    t.pressReports && reports > 0 ? (
+      <>
+        {" "}
+        The Guardian&apos;s Rumour Mill has linked him with {buyer} in {n(t.pressReports)}{" "}
+        {reports === 1 ? "report" : "reports"} over the past year
+        {t.kind === "realistic" && t.pressLift && (
+          <>, which makes this move {n(t.pressLift)} times as likely as it would be without {reports === 1 ? "it" : "them"}</>
+        )}
+        .
+      </>
+    ) : null;
   const lead =
     t.kind === "best" ? (
       <>
@@ -128,6 +142,7 @@ function Why({
     <>
       {lead}
       <Output t={t} need={need} seller={seller} n={n} />
+      {t.leagueMinutes && <> Transfermarkt lists {n(t.leagueMinutes)} league minutes for him last season.</>}
       <Complement t={t} gap={gap} buyer={buyer} n={n} />
       {t.kind === "best" && t.minutesThere && (
         <>
@@ -136,6 +151,7 @@ function Why({
         </>
       )}
       {contract}
+      {press}
       {t.kind === "realistic" && t.chance && (
         <>
           {" "}
@@ -143,6 +159,20 @@ function Why({
           is a long shot).
         </>
       )}
+    </>
+  );
+}
+
+/** League names (some carry digits: "Ligue 1"), joined as prose. */
+function Names({ list }: { list: string[] }) {
+  return (
+    <>
+      {list.map((x, i) => (
+        <span key={x}>
+          {i > 0 && (i === list.length - 1 ? " and " : ", ")}
+          <span data-name>{x}</span>
+        </span>
+      ))}
     </>
   );
 }
@@ -164,6 +194,7 @@ function Profile({ t, n }: { t: Target; n: (s: StatRef) => ReactNode }) {
         {n(t.caps)} <span data-meta>caps</span>
       </span>,
     );
+  if (t.injury) bits.push(<span key="i">injury risk {n(t.injury)}</span>);
   if (!bits.length) return null;
   return (
     <p className="mt-0.5 font-mono text-xs text-pencil">
@@ -212,7 +243,15 @@ function Pick({
         {t.price && (
           <div className="flex gap-1">
             <dt className="text-pencil">Price</dt>
-            <dd>{n(t.price)}</dd>
+            <dd>
+              {n(t.price)}
+              {t.priceLow && t.priceHigh && (
+                <span className="text-pencil">
+                  {" "}
+                  (likely {n(t.priceLow)}–{n(t.priceHigh)})
+                </span>
+              )}
+            </dd>
           </div>
         )}
         {t.contract && (
@@ -248,6 +287,7 @@ export default function Shortlists({
   targets,
   buyer,
   gaps,
+  injury,
   n,
   compact = false,
 }: {
@@ -255,6 +295,8 @@ export default function Shortlists({
   buyer: string;
   /** the needs in order: their positions and who a signing has to beat */
   gaps: Gap[];
+  /** leagues whose players have an injury tier */
+  injury?: InjuryCoverage;
   n: (s: StatRef) => ReactNode;
   compact?: boolean;
 }) {
@@ -295,8 +337,21 @@ export default function Shortlists({
         );
       })}
       <p className="mono-label text-pencil">
-        Price is our fair fee for {buyer} today. Wages are not shown: no free source publishes them.
+        Price is our fair fee for {buyer} today; the likely range is where most fees for players like him have
+        landed. Wages are not shown: no free source publishes them.
       </p>
+      {injury && injury.scored.length > 0 && (
+        <p className="mono-label text-pencil">
+          Injury risk is rated for players in <Names list={injury.scored} />
+          {injury.unscored.length > 0 && (
+            <>
+              ; <Names list={injury.unscored} /> {injury.unscored.length > 1 ? "have" : "has"} too little injury data to
+              rate
+            </>
+          )}
+          ; other leagues have none.
+        </p>
+      )}
     </div>
   );
 }

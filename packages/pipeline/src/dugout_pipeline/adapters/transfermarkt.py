@@ -1,8 +1,13 @@
 """Transfermarkt: three pieces.
 
 1. `TransfermarktRefresher` (local only, weekly, `dugout refresh-values`): polite squad-page scraper, one request
-   per club every few seconds, robots.txt checked. Writes a cleaned CSV of derived facts (ids, contract expiry,
-   market value) to `data/reference/transfermarkt_squads.csv`, which is committed. Never runs in CI.
+   per club every few seconds, robots.txt checked. Writes a cleaned CSV of derived facts (ids, position, contract
+   expiry, market value) to `data/reference/transfermarkt_squads.csv`, which is committed. Never runs in CI.
+   `TransfermarktPoolRefresher` (`dugout refresh-values --pool championship`) does the same for a candidate pool
+   (config `candidate_pools`): a league with no pages of its own whose players can be shortlisted elsewhere. Its
+   clubs come from the competition's Transfermarkt page (one request), then one squad page per club and, where the
+   pool sets `stats_season`, one performance page per club: last season's league appearances, goals, assists and
+   minutes (transfermarkt-datasets has no games for a pool's league) -> `data/reference/transfermarkt_minutes.csv`.
 2. `TransfermarktFileAdapter`: loads that committed CSV in CI/nightly (no scraping) -> market_values, contracts.
 3. `TransfermarktDatasetsLoader`: dcaribou/transfermarkt-datasets (CC0, frozen 2026-07-06) for history/training.
 """
@@ -22,6 +27,7 @@ from dugout_pipeline.ids import attach_catalogue
 from dugout_pipeline.settings import REPO_ROOT
 
 SQUADS_CSV = REPO_ROOT / "data" / "reference" / "transfermarkt_squads.csv"
+MINUTES_CSV = REPO_ROOT / "data" / "reference" / "transfermarkt_minutes.csv"
 TM_DIR = REPO_ROOT / "data" / "raw" / "transfermarkt"  # CC0 dataset tables for model training (git-ignored)
 LINEUPS_SINCE = (
     "2023-07-01"  # starting positions from the last three seasons (game_lineups is 3M rows in all)
@@ -32,11 +38,31 @@ FIELDS = [
     "name",
     "tm_club_id",
     "club_id",
+    "club_name",  # Transfermarkt's name (candidate pools; the dataset lacks most of their clubs)
     "birth_date",
+    "position",
     "joined",
     "contract_expires",
     "market_value_eur",
     "season",
+    "comp",  # Transfermarkt competition id of the club's league (GB1, GB2, ...)
+    "scraped_on",
+    "source_url",
+]
+
+
+MINUTES_FIELDS = [
+    "tm_player_id",
+    "player_id",
+    "name",
+    "tm_club_id",
+    "club_id",
+    "comp",
+    "season",  # the season the figures cover, e.g. 2025-26
+    "apps",
+    "goals",
+    "assists",
+    "minutes",
     "scraped_on",
     "source_url",
 ]
@@ -83,16 +109,74 @@ def parse_squad(html: bytes) -> list[dict]:
             .strip()
         )
         cells = {h: tds[i].text_content().strip() for h, i in col.items()}
+        # the second row of the player cell is his position ("Centre-Back", "Right Winger", ...)
+        pos = tr.xpath('.//td[contains(@class,"posrela")]//table[@class="inline-table"]/tr[2]/td')
         out.append(
             {
                 "tm_player_id": pid.group(1),
                 "name": name,
+                "position": pos[0].text_content().strip() or None if pos else None,
                 "birth_date": parse_tm_date(cells.get("Date of birth/Age", "")),
                 "joined": parse_tm_date(cells.get("Joined", "")),
                 "contract_expires": parse_tm_date(cells.get("Contract", "")),
                 "market_value_eur": parse_money(cells.get("Market value", "")),
             }
         )
+    return out
+
+
+def _count(text: str) -> int:
+    """'3.421'' -> 3421, '12' -> 12, '-' or 'Not used during this season' -> 0."""
+    digits = re.sub(r"[^\d]", "", text)
+    return int(digits) if digits else 0
+
+
+def parse_performance(html: bytes) -> list[dict]:
+    """A club's performance page (`leistungsdaten`, /plus/1): one row per player in its squad that season, with
+    league appearances, goals, assists and minutes. A player never used has one merged cell and counts 0."""
+    import lxml.html
+
+    doc = lxml.html.fromstring(html)
+    tables = doc.xpath('//table[@class="items"]')
+    if not tables:
+        return []
+    heads = []
+    for th in tables[0].xpath("./thead/tr/th"):
+        titles = th.xpath(".//@title")
+        heads.append((titles[0] if titles else th.text_content()).strip())
+    col = {name: i for i, name in enumerate(heads)}
+    want = {"apps": "Appearances", "goals": "Goals", "assists": "Assists", "minutes": "Minutes played"}
+    if not all(w in col for w in want.values()):
+        raise ValueError(f"performance table columns changed: {heads}")
+    out = []
+    for tr in tables[0].xpath('./tbody/tr[contains(@class,"odd") or contains(@class,"even")]'):
+        link = tr.xpath('.//td[contains(@class,"posrela")]//td[contains(@class,"hauptlink")]//a')
+        pid = re.search(r"/spieler/(\d+)", link[0].get("href", "")) if link else None
+        if not pid:
+            continue
+        tds = tr.xpath("./td")
+        full = len(tds) == len(heads)  # an unused player's row merges the figures into one cell
+        row = {"tm_player_id": pid.group(1), "name": link[0].text_content().strip()}
+        row |= {k: _count(tds[col[h]].text_content()) if full else 0 for k, h in want.items()}
+        out.append(row)
+    return out
+
+
+def parse_competition_clubs(html: bytes) -> list[tuple[str, str]]:
+    """(Transfermarkt club id, name) of the clubs in a competition's season table (its first `items` table)."""
+    import lxml.html
+
+    doc = lxml.html.fromstring(html)
+    tables = doc.xpath('//table[@class="items"]')
+    if not tables:
+        return []
+    out = []
+    for a in tables[0].xpath(
+        './tbody/tr/td[contains(@class,"hauptlink")]/a[contains(@href,"/startseite/verein/")]'
+    ):
+        m = re.search(r"/verein/(\d+)", a.get("href", ""))
+        if m and m.group(1) not in {c for c, _ in out}:
+            out.append((m.group(1), a.text_content().strip()))
     return out
 
 
@@ -129,6 +213,7 @@ class TransfermarktRefresher(SourceAdapter):
                         "tm_club_id": tm_club,
                         "club_id": slug,
                         "season": cfg["season"],
+                        "comp": cfg["provider_ids"].get("transfermarkt"),
                         "scraped_on": res.fetched_at.date(),
                         "source_url": res.url,
                     }
@@ -140,6 +225,100 @@ class TransfermarktRefresher(SourceAdapter):
         return {"transfermarkt_squads_csv": len(rows)}
 
 
+class TransfermarktPoolRefresher(SourceAdapter):
+    """Squads of a candidate pool (config `candidate_pools`, e.g. the Championship): local only, like the refresher.
+
+    No warehouse clubs exist for a pool, so its clubs come from the competition's season page on Transfermarkt; slugs
+    are the club names (with the pool's `slug_suffix` where a configured league already uses the slug). Player ids
+    map to Reep ids where the catalogue knows the Transfermarkt id."""
+
+    name = "transfermarkt_pool"
+    client_name = "transfermarkt"  # same host: one cache, one rate limit
+    scope = "global"
+    tier = TIER_DATA
+    ttl = 6 * DAY
+    rate, per = 1, 6.0  # one page every 6 s
+    local_only = True
+    base_url = "https://www.transfermarkt.com/"
+    pool = "championship"
+
+    def ingest(self) -> dict[str, int]:
+        from dugout_pipeline.clubs import load_config, slugify
+
+        cfg = load_config()["candidate_pools"][self.pool]
+        comp, year = cfg["transfermarkt"], cfg["season_start_year"]
+        res = self.client.get(f"{self.base_url}-/startseite/wettbewerb/{comp}/saison_id/{year}")
+        clubs = parse_competition_clubs(res.content)
+        if not clubs:
+            raise ValueError(f"no clubs found on the {comp} page: has its layout changed?")
+        taken = {c for (c,) in self.ctx.con.execute("SELECT club_id FROM clubs").fetchall()}
+        ours = {r["club_id"] for r in read_squads_csv(SQUADS_CSV) if r.get("comp") != comp}
+        tm_to_player = self._player_ids()
+        stats = cfg.get("stats_season")  # e.g. {season: 2025-26, year: 2025}: last season's league minutes
+        rows, minutes = [], []
+        for tm_club, club_name in clubs:
+            slug = slugify(club_name)
+            if slug in taken or slug in ours:
+                slug = f"{slug}-{cfg['slug_suffix']}"
+            if stats:
+                perf = self.client.get(
+                    f"{self.base_url}-/leistungsdaten/verein/{tm_club}/reldata/{comp}%26{stats['year']}/plus/1"
+                )
+                for r in parse_performance(perf.content):
+                    if r["apps"] > 0:
+                        minutes.append(
+                            {
+                                **r,
+                                "player_id": tm_to_player.get(r["tm_player_id"]),
+                                "tm_club_id": tm_club,
+                                "club_id": slug,
+                                "comp": comp,
+                                "season": stats["season"],
+                                "scraped_on": perf.fetched_at.date(),
+                                "source_url": perf.url,
+                            }
+                        )
+            page = self.client.get(f"{self.base_url}-/kader/verein/{tm_club}/saison_id/{year}/plus/1")
+            for r in parse_squad(page.content):
+                rows.append(
+                    {
+                        **r,
+                        "player_id": tm_to_player.get(r["tm_player_id"]),
+                        "tm_club_id": tm_club,
+                        "club_id": slug,
+                        "club_name": club_name,
+                        "season": cfg["season"],
+                        "comp": comp,
+                        "scraped_on": page.fetched_at.date(),
+                        "source_url": page.url,
+                    }
+                )
+        kept = [r for r in read_squads_csv(SQUADS_CSV) if r.get("comp") != comp]
+        write_squads_csv(kept + rows, SQUADS_CSV)
+        out = {"clubs": len(clubs), "transfermarkt_squads_csv": len(rows)}
+        if stats:
+            kept = [r for r in read_squads_csv(MINUTES_CSV) if r.get("comp") != comp]
+            write_squads_csv(kept + minutes, MINUTES_CSV, MINUTES_FIELDS)
+            out["transfermarkt_minutes_csv"] = len(minutes)
+        return out
+
+    def _player_ids(self) -> dict[str, str]:
+        """Transfermarkt player id -> dugout (Reep) id, from the warehouse and the Reep catalogue."""
+        con = self.ctx.con
+        out = {
+            str(a): b
+            for a, b in con.execute(
+                "SELECT external_id, dugout_id FROM entity_ids WHERE entity_type='player' AND provider='transfermarkt'"
+            ).fetchall()
+        }
+        if attach_catalogue(con):
+            rows = con.execute(
+                "SELECT external_id, reep_id FROM reep.bridges WHERE provider='transfermarkt' AND namespace='spieler'"
+            ).fetchall()
+            out = {**{str(a): b for a, b in rows}, **out}
+        return out
+
+
 def read_squads_csv(path: Path) -> list[dict]:
     if not path.exists():
         return []
@@ -147,13 +326,13 @@ def read_squads_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(fh))
 
 
-def write_squads_csv(rows: list[dict], path: Path) -> None:
+def write_squads_csv(rows: list[dict], path: Path, fields: list[str] = FIELDS) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=FIELDS)
+        w = csv.DictWriter(fh, fieldnames=fields)
         w.writeheader()
         for r in sorted(rows, key=lambda r: (r["club_id"], r["name"])):
-            w.writerow({k: r.get(k) for k in FIELDS})
+            w.writerow({k: r.get(k) for k in fields})
 
 
 class TransfermarktFileAdapter(SourceAdapter):
@@ -163,7 +342,7 @@ class TransfermarktFileAdapter(SourceAdapter):
     scope = "global"  # one committed file for every league
     tier = TIER_DATA
 
-    def ingest(self, path: Path = SQUADS_CSV) -> dict[str, int]:
+    def ingest(self, path: Path = SQUADS_CSV, minutes: Path = MINUTES_CSV) -> dict[str, int]:
         if not path.exists():
             return {}
         values, contracts, n_ev = [], [], 0
@@ -209,11 +388,42 @@ class TransfermarktFileAdapter(SourceAdapter):
                             "fetched_at": fetched,
                         }
                     )
+        n_ev += self.minutes_evidence(minutes)
         return {
             "market_values": upsert(self.ctx.con, "market_values", values),
             "contracts": upsert(self.ctx.con, "contracts", contracts),
             "evidence_ledger": n_ev,
         }
+
+    def minutes_evidence(self, path: Path = MINUTES_CSV) -> int:
+        """Ledger rows for the candidate pools' league minutes (Transfermarkt performance pages), so a shortlist that
+        uses them can cite the page and the date it was read."""
+        n = 0
+        for r in read_squads_csv(path):
+            scraped = date.fromisoformat(r["scraped_on"])
+            self.ctx.ledger.record(
+                entity_type="player",
+                entity_id=r["player_id"] or f"transfermarkt:{r['tm_player_id']}",
+                metric="league_minutes",
+                value=float(r["minutes"]),
+                unit="minutes",
+                source="transfermarkt",
+                source_tier=self.tier,
+                fetched_at=datetime.combine(scraped, datetime.min.time()).replace(tzinfo=self.ctx.now.tzinfo),
+                source_url=r["source_url"],
+                query={
+                    "kind": "file_csv",
+                    "path": "data/reference/transfermarkt_minutes.csv",
+                    "key": {
+                        "tm_player_id": r["tm_player_id"],
+                        "tm_club_id": r["tm_club_id"],
+                        "season": r["season"],
+                    },
+                    "column": "minutes",
+                },
+            )
+            n += 1
+        return n
 
 
 class TransfermarktDatasetsLoader(SourceAdapter):

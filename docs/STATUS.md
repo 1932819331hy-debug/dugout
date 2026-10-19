@@ -85,7 +85,7 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     BBC gossip / FBref not used (terms / robots), see docs/sources.md.
   - Site: general homepage + "Choose your club" (/clubs/), /story/<club>/ for every club with a picker; chapter
     three shows the three lists and rumours.
-  - Not done / ideas: needs model still groups the squad by primary position only; injury tier not used to filter
+  - Not done / ideas: (needs on played positions: done 2026-10-19); injury tier not used to filter
     candidates (no injury model for non-PL players); manager formation history (TM games table) unused.
 
 - **Phase 6 (in progress, 2026-10-16), branch `valuation-and-research`:**
@@ -141,14 +141,27 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
       "Linked in the press" item (story chapter three; dossier scout section), Methods row. No number words in
       templates ("six" is a stray number to the Stat Auditor; "one"/"half" are allowed).
     - Live after merge: needs the history job once (nightly with `history: true`, or Sunday) to fill `rumours`.
+    - **/rumours/ page (2026-10-19, branch `rumour-page`):** `publish rumours` also writes `data/rumours.json`
+      (overall and since-2020-21 record, by season, outlets with 20+ rumours raw and shrunk, the backtest headline);
+      the nightly commits it. The page lists the clubs' Fact-Checked rumours with their "one time in N", likeliest
+      first (read from the dossiers, so nothing unverified), the outlet table and the season trend. Linked from the
+      nav ("Rumours"), story chapter three and Methods. Every number a <Num> citing rumours.md.
   - **2026-10-17, branch `realism-club-on-date` (on top of rumour-track-record):** realism's frames took the club
     from `player_valuations.current_club_id` (today's club): wrong for 45% of players on 1 June 2016, 19% in 2024.
     Now `realism.club_people` (the rumour timeline) gives the club on the day; mobility trains only on players with a
     transfer history (`COVERED_ONLY`, chosen on validation 2023). Mobility AUC 0.764 / Brier 0.0672 vs 0.750 /
     0.0703 on the same test rows; destination 0.733 vs 0.749, the old figure was hindsight (buyer squads counted by
     today's club). Market frames are re-cached (`clubs="dated"`). Live scoring still uses today's club (correct).
-  - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big
+  - **Next, in order:** (1) needs model on played positions (done 2026-10-19, below); (2) API-Football injury history for other big
+
+  - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big (done 2026-10-19, below)
     leagues; (3) Championship squads via local refresh; (4) conformal ranges on fair fees; (5) rumour news signal
+
+  - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big
+    leagues; (3) Championship squads via local refresh; (4) conformal ranges on fair fees (done 2026-10-19, below); (5) rumour news signal
+
+  - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big
+    leagues; (3) Championship squads via local refresh; (4) conformal ranges on fair fees; (5) rumour news signal (done 2026-10-18, below)
     for realism (PRIORS["news_weight_per_point"] is a prior; the archive can now fit it).
   - User wants: product voice everywhere (no "model" wording on the site), realistic targets, all major leagues,
     and STATUS updated before the context fills so a new chat can continue.
@@ -229,6 +242,113 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     side; lineup.md); secrets are stripped of whitespace and a skipped LLM provider is logged with its HTTP status
     (CI used Laguna, not Groq, on 2026-10-17: check the next nightly's log for "LLM ... skipped").
   - Nightly with warm caches: 39 min (club_news backlog filled, Fact-Check cache warm).
+
+- **Needs on played positions (2026-10-19, branch `claude/needs-played-positions-326485`, backlog item 1):**
+  - `market.needs` counts depth where players start (transfermarkt-datasets starting XIs): a player counts in each
+    group with 25%+ of his starts, weighted by share and renormalised to one player (`positions.group_weights`); under
+    10 recorded starts (`GROUP_STARTS`) he counts at his listed position. Best option, last regular starter, veterans'
+    share and the six peer squads use the same grouping; `Market.at(club, group)` = everyone who starts there.
+    `squad().group` is now the group he starts in most. Shortlist incumbents and the gem bar (lookup.py) follow.
+  - `need_depth` is starts-weighted, one decimal ("options add up to 2.6 players"); site copy and agent templates say
+    "counted by where they start".
+  - needs.md (`dugout-models backtest needs`): top two change at 11 of 20 PL clubs. June 2026 needs vs summer
+    signings: per need 72% (played) vs 75% (listed), random 74%: no measurable gain (negative result, reported).
+    The 1 June squads are rebuilt from today's squad file + wiki_transfers.
+  - `data/raw` in the main checkout was found empty on 2026-10-18 ~22:00 and only `transfermarkt/` came back
+    (re-downloaded 22:05); other raw sources need a re-fetch before jobs that use them.
+
+- **Championship squads (2026-10-19, branch `claude/championship-squads-4b1942`):** a shortlist candidate pool,
+  not a league with pages.
+  - Why no pages: football-data.org's free tier has no Championship (ELC is paid), FPL is PL-only and the
+    API-Football free plan has no current season, so there are no free fixtures, standings or lineups to build a
+    dossier from. Config `candidate_pools.championship` (GB2) sits outside the league blocks: no ingest, no pages.
+  - `uv run dugout refresh-values --pool championship` (local only, refuses when `CI` is set; `transfermarkt_pool`
+    shares the Transfermarkt cache and 6 s rate limit; robots.txt re-checked 2026-10-18: `*` allowed, only `wget`
+    barred): 1 competition page for the season's clubs, then 1 squad page per club. Run 2026-10-18: 24 clubs, 666
+    players, 652 values (EUR 2.40bn), 606 contract ends, 666 positions, 663 Reep ids. Written to
+    `data/reference/transfermarkt_squads.csv` with new columns `club_name`, `position`, `comp` (PL rows: comp GB1,
+    position blank until the next PL refresh).
+  - Models: `Market` adds pool players the dataset lacks (143) to the players table, gives pool players the squad
+    file's club, league and contract, and builds live club leagues from the squads (relegated West Ham, Wolves and
+    Burnley are GB2 today; training frames keep the dataset's clubs). Shortlists and gems accept pool players;
+    pool clubs get no needs, lists or per-player outputs (`Market.buying_clubs`). Values: the squad file's, dated
+    by the scrape (ledger rows via `transfermarkt_file`).
+  - Side fix: promoted Coventry and Hull were missing from the dataset's clubs table, so the realism model never
+    saw them as buyers (no realistic list; Coventry no dream list either). Coventry now gets both for its top need.
+  - Minutes (approved by the parent session): the same refresh also fetches 1 performance page per club
+    (`/-/leistungsdaten/verein/<id>/reldata/GB2%262025/plus/1`, robots re-checked for that path): 2025-26 league
+    apps, goals, assists and minutes -> `data/reference/transfermarkt_minutes.csv` (592 rows from the 18 clubs that
+    were in the Championship then; source URL and fetch date per row; `transfermarkt_file` writes a
+    `league_minutes` ledger row each). 353 of the 666 pool players have them (227 with 1,200+); the relegated
+    clubs' players already had 2025-26 PL minutes in the dataset; promoted clubs' League One minutes are missing.
+  - `market.pool_appearances` spreads each player's league games evenly over the season's matchdays
+    (`stats_season` in config) as appearance rows, added after the valuation fit so no training frame changes;
+    minutes in the past year, share of the club's games, goals/assists per 90 (ranked within the Championship) and
+    last season's minutes for the playing-time model then work as for other leagues.
+  - Shortlists cite the figure: the scout section adds "league minutes last season (Transfermarkt)" from the
+    ledger, shown on the shortlist card (components/Shortlists.tsx) with the page and date in its provenance card.
+  - `publish market` (PL clubs, local warehouse): 12 of 558 list slots are Championship players (7 players), 5 in
+    the top three the site shows: Fer Lopez (Wolves) Leeds dream list, Mateus Mane (Wolves) gem for Brighton, Isaac
+    Price (West Brom) Leeds realistic list, Viktor Johansson (Stoke) realistic goalkeeper for Everton and Ipswich.
+    Before the minutes: 5 slots (3 players). A dtype bug of this branch (club ids as "1234.0") had briefly inflated
+    an earlier count to 11 by knocking first-tier sellers out; fixed and tested.
+  - Note: the main checkout's `data/raw` and `.cache` were found empty on 2026-10-18 (re-downloaded the
+    transfermarkt-datasets tables; other raw data and caches are still cold).
+
+- **Injury risk for the other leagues (2026-10-19, branch `claude/injury-other-leagues-df66b0`, backlog item 2):**
+  - `api_football_history` now runs per league (listed under the five leagues' `sources`): one call per
+    league-season (2022-24), cached for a year, files `data/raw/api_football/injuries_<league>_<season>.parquet` (PL
+    keeps `injuries_<season>.parquet`). It reads the account's real count from `status` (not counted by API-Football;
+    `DailyBudget.observe`), stops while 40 of the 100 requests are left (`HISTORY_RESERVE`), resumes from the cache
+    and logs seasons pending + requests left. The whole backfill is 18 calls: done in one run on 2026-10-18.
+  - Players -> Transfermarkt: Reep bridge, else the name within the club's squad that season (TM appearances; the
+    lists carry no date of birth, so no DOB match). Absentees matched: PL 97-99%, La Liga 99%, Serie A 98-99%,
+    Bundesliga 99%, Ligue 1 92-93%, Eredivisie 95-97% (per season); 25 of 25 name matches checked by eye were right.
+  - injury.md: same label/split per league, at-risk rows = TM appearances outside the PL. History-only pooled model
+    (age, position, record; no current minutes exist outside the PL) test AUC / lift: La Liga 0.631 / 2.09x, Serie A
+    0.633 / 1.93x, Bundesliga 0.585 / 1.40x, Ligue 1 0.623 / 1.82x, Eredivisie 0.608 / 1.93x. Scored when the
+    validation AUC (train 22-23, rank 23-24) >= 0.55 with 50+ absences: Eredivisie failed (0.538) and stays unrated
+    though its test came out fine (rule set before the test; revisit with more seasons). PL numbers unchanged.
+  - Live: `injury_risk_other` (publish `injury`) rates current squad players of scored leagues by percentile within
+    their league, context `record`; record = 2022-24 lists + API-Football's nightly absentee lists. Caveat: the
+    free plan has no 2025-26 lists, so it says who has been injury-prone, not who is hurt now.
+  - Shortlists: every pick with a tier shows "injury risk <tier>" (PL: load + record; others: record), with a
+    footnote naming rated / unrated leagues (from injury.json). Flag only, no filter: AUC ~0.6 is too weak to drop
+    players on. Methods page lists the per-league AUCs.
+  - Data loss found 2026-10-18: the main checkout's `data/raw` and `.cache` were empty (a worktree removal deleting
+    through a junction?). Refilled `data/raw/transfermarkt` and `data/raw/api_football`; HTTP caches for other
+    sources are cold. Remove junctions with `cmd /c rmdir` before deleting a worktree.
+
+- **Fee ranges (2026-10-19, branch `claude/conformal-fee-ranges-372499`; backlog item 4):**
+  - Every fair fee has an 80% likely range: split conformal, calibrated on the two years before the training cutoff
+    (the same early model and window as the league offsets), equal tails, separately per market-value band
+    (`valuation.BANDS`: under €2m, €2-5m, €5-15m, €15m+). Method chosen on validation 2023-24 (smallest worst
+    band gap): pooled, by buyer league, three and five bands were worse. The old range (quantiles of training
+    errors) held only 76% of test fees.
+  - valuation.md: test 2024-07..2026-09 82.9% inside (slightly conservative: the calibration model is older), each
+    band 81-90%; PL buyers 86%; too narrow for La Liga to La Liga (73%) and Ligue 1 to Ligue 1 (74%, misses above).
+    Fresh holdout (summer-2026 `wiki_transfers` fees the dataset lacks, 118 rows, mostly English pages): 76% inside,
+    misses mostly above; MAE 0.433 vs market value 0.482.
+  - Published as `fair_fee_low` / `fair_fee_high` (model `valuation` for squads, `scout` with the pick's context for
+    shortlists and gems), rounded outwards to €0.1m, skipped when the low end rounds to zero. Facts carry the range
+    in `{lo}`/`{hi}` slots (LLM codes `[F3lo]`/`[F3hi]`); key stats label them "likely low/high end of the ...".
+    Site: shortlist "Price €47.0m (likely €38.0m–€58.0m)", dossier prose "(likely between ... and ...)", Methods row.
+  - `calibrate` now drops rows with no market value from the calibration window (they gave infinite errors).
+
+- **Realism news signal (2026-10-18, branch `claude/realism-news-signal-654aee`, backlog item 5):**
+  - The hand-set news prior (`PRIORS["news_weight_per_point"]`, never used live) is gone. `realism.player_news` /
+    `pair_news` count Rumour Mill reports (`rumour_links`) strictly before the snapshot date (1 June in training,
+    today live): reports naming the player, clubs named, reports naming this club and their share, 90 days / a year.
+  - Chosen on validation 2023 (realism.md): destination gets `news_club_365` + `news_club_share_365` (test AUC
+    0.733 -> 0.737, top-1 47.2% -> 47.5%, log loss 0.381 -> 0.378; moves whose buyer was named: top-1 67% -> 87%,
+    but only 30 of 2,004 test moves). Mobility: every news set slightly worse on validation -> not used (negative).
+  - Since 2020 the Rumour Mill runs only in windows (nothing March-May), so the 90-day windows are empty: a year.
+  - Live: `market()` loads `rumour_links` (publish now runs `rumours` before `market`); news columns are joined
+    after the cached frames, so the frame cache keys did not change. Shortlist rows `press_reports` (best and
+    realistic) and `press_lift` (realistic, shown when >= 1.1): "The Guardian's Rumour Mill has linked him with X
+    in N reports over the past year, which makes this move N times as likely as it would be without them."
+  - Trap: the main checkout's warehouse had an empty `rumours` table (history job never ran locally) and `.cache`
+    was empty; `dugout ingest --job history --only rumour_archive` (~105 Guardian calls, 2.5 min) fills it.
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.

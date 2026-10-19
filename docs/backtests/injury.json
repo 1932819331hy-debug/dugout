@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T16:42:06+00:00",
+  "generated_at": "2026-10-18T18:50:53+00:00",
   "horizon_days": 14,
   "train_rows": 22725,
   "test_rows": 11559,
@@ -44,5 +44,215 @@
     "episodes_365": 0.055,
     "days_lost_365": -0.076,
     "last_muscle": 0.09
-  }
+  },
+  "leagues": {
+    "premier_league": {
+      "name": "Premier League",
+      "train_rows": 22725,
+      "test_rows": 11559,
+      "positives_train": 760,
+      "positives_test": 319,
+      "positive_rate_test": 0.027597543040055367,
+      "results": {
+        "logistic": {
+          "auc": 0.6099652495007752,
+          "brier": 0.02696644357591632,
+          "top_decile_lift": 2.3195485459535092
+        },
+        "logistic_pooled": {
+          "auc": 0.6218749651379423,
+          "brier": 0.026752397387467656,
+          "top_decile_lift": 2.1628222928485425
+        },
+        "history_pooled": {
+          "auc": 0.6245433070426935,
+          "brier": 0.026750213747517015,
+          "top_decile_lift": 2.1628222928485425
+        },
+        "base_rate": {
+          "auc": 0.5,
+          "brier": 0.026870092050981013,
+          "top_decile_lift": 1.0
+        }
+      },
+      "validation_auc_history": 0.6055195046784183,
+      "positives_validation": 423,
+      "scored": true
+    },
+    "la_liga": {
+      "name": "La Liga",
+      "train_rows": 23721,
+      "test_rows": 11899,
+      "positives_train": 1144,
+      "positives_test": 526,
+      "positive_rate_test": 0.044205395411379106,
+      "results": {
+        "logistic": {
+          "auc": 0.6362569410106452,
+          "brier": 0.04216525738737374,
+          "top_decile_lift": 1.9960299709237308
+        },
+        "logistic_pooled": {
+          "auc": 0.6382852924627369,
+          "brier": 0.04192014533668814,
+          "top_decile_lift": 2.0720692079113014
+        },
+        "history_pooled": {
+          "auc": 0.6305645516915355,
+          "brier": 0.04194926117666153,
+          "top_decile_lift": 2.091079017158194
+        },
+        "base_rate": {
+          "auc": 0.5,
+          "brier": 0.04226745421790592,
+          "top_decile_lift": 1.0
+        }
+      },
+      "validation_auc_history": 0.6348928753019996,
+      "positives_validation": 586,
+      "scored": true
+    },
+    "serie_a": {
+      "name": "Serie A",
+      "train_rows": 23795,
+      "test_rows": 11888,
+      "positives_train": 669,
+      "positives_test": 399,
+      "positive_rate_test": 0.03356325706594886,
+      "results": {
+        "logistic": {
+          "auc": 0.6325971382455616,
+          "brier": 0.032172466379041746,
+          "top_decile_lift": 2.0547921527957826
+        },
+        "logistic_pooled": {
+          "auc": 0.6396986242261586,
+          "brier": 0.032164252044646034,
+          "top_decile_lift": 1.9796168301325223
+        },
+        "history_pooled": {
+          "auc": 0.632690831439291,
+          "brier": 0.0322028981695193,
+          "top_decile_lift": 1.9294999483570154
+        },
+        "base_rate": {
+          "auc": 0.5,
+          "brier": 0.03246644670904288,
+          "top_decile_lift": 1.0
+        }
+      },
+      "validation_auc_history": 0.5937522657714169,
+      "positives_validation": 314,
+      "scored": true
+    },
+    "bundesliga": {
+      "name": "Bundesliga",
+      "train_rows": 18913,
+      "test_rows": 9527,
+      "positives_train": 733,
+      "positives_test": 315,
+      "positive_rate_test": 0.03306392358559882,
+      "results": {
+        "logistic": {
+          "auc": 0.5910131023027245,
+          "brier": 0.032026286121852265,
+          "top_decile_lift": 1.7454821032995222
+        },
+        "logistic_pooled": {
+          "auc": 0.5993362694621922,
+          "brier": 0.031957232951682034,
+          "top_decile_lift": 1.5233298356068556
+        },
+        "history_pooled": {
+          "auc": 0.5850815706221699,
+          "brier": 0.032006480744193704,
+          "top_decile_lift": 1.3963856826396177
+        },
+        "base_rate": {
+          "auc": 0.5,
+          "brier": 0.03200310495493939,
+          "top_decile_lift": 1.0
+        }
+      },
+      "validation_auc_history": 0.6071618497282715,
+      "positives_validation": 366,
+      "scored": true
+    },
+    "ligue_1": {
+      "name": "Ligue 1",
+      "train_rows": 20923,
+      "test_rows": 9413,
+      "positives_train": 838,
+      "positives_test": 280,
+      "positive_rate_test": 0.029746095824922977,
+      "results": {
+        "logistic": {
+          "auc": 0.5503382553065024,
+          "brier": 0.029004050850513188,
+          "top_decile_lift": 1.356134364573855
+        },
+        "logistic_pooled": {
+          "auc": 0.6286848320845911,
+          "brier": 0.028912881752559898,
+          "top_decile_lift": 1.74869957537155
+        },
+        "history_pooled": {
+          "auc": 0.6232009901299839,
+          "brier": 0.028897986793078444,
+          "top_decile_lift": 1.8200750682438582
+        },
+        "base_rate": {
+          "auc": 0.5,
+          "brier": 0.02896746939203538,
+          "top_decile_lift": 1.0
+        }
+      },
+      "validation_auc_history": 0.6173444676546757,
+      "positives_validation": 266,
+      "scored": true
+    },
+    "eredivisie": {
+      "name": "Eredivisie",
+      "train_rows": 18668,
+      "test_rows": 9433,
+      "positives_train": 376,
+      "positives_test": 145,
+      "positive_rate_test": 0.015371567899925793,
+      "results": {
+        "logistic": {
+          "auc": 0.5473217202768126,
+          "brier": 0.015148066474979622,
+          "top_decile_lift": 1.516116306253653
+        },
+        "logistic_pooled": {
+          "auc": 0.6178643559357272,
+          "brier": 0.015126213531335354,
+          "top_decile_lift": 1.9985169491525425
+        },
+        "history_pooled": {
+          "auc": 0.6082197273456296,
+          "brier": 0.015137237947456295,
+          "top_decile_lift": 1.9296025715955583
+        },
+        "base_rate": {
+          "auc": 0.5,
+          "brier": 0.015158034274685645,
+          "top_decile_lift": 1.0
+        }
+      },
+      "validation_auc_history": 0.5377185115724521,
+      "positives_validation": 167,
+      "scored": false
+    }
+  },
+  "scored_leagues": [
+    "Premier League",
+    "La Liga",
+    "Serie A",
+    "Bundesliga",
+    "Ligue 1"
+  ],
+  "unscored_leagues": [
+    "Eredivisie"
+  ]
 }

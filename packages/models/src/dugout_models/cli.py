@@ -46,13 +46,13 @@ def _run_one(model: str, args, con) -> bool:
     if model == "valuation":
         from dugout_models.valuation import backtest
 
-        r = backtest(BACKTESTS)
+        r = backtest(BACKTESTS, con=con)
         print("valuation:", r["model_on_baseline_rows"], "baseline:", r["baseline_market_value"])
         return r["model_on_baseline_rows"]["mae_log"] < r["baseline_market_value"]["mae_log"]
     if model == "realism":
         from dugout_models.realism import backtest
 
-        r = backtest(BACKTESTS)
+        r = backtest(BACKTESTS, con)
         print("realism:", {k: r[k]["auc"] for k in ("mobility", "destination")})
         return r["destination"]["top1"] > r["destination"]["random_top1"]
     if model == "injury":
@@ -96,6 +96,12 @@ def _run_one(model: str, args, con) -> bool:
         h = r["horizons"][str(SHIPPED_HORIZON)]
         print("rumours:", {k: h[k]["brier"] for k in ("recent_rate", "outlet_only", "model")})
         return h["model"]["brier"] < h["recent_rate"]["brier"]
+    if model == "needs":
+        from dugout_models.needs_backtest import backtest
+
+        r = backtest(con, BACKTESTS)
+        print("needs:", r["hit_rate"], "changed today:", r["changed_today"])
+        return True  # no ground truth: the report shows the effect, it has no pass mark
     raise SystemExit(f"unknown model {model}")
 
 
@@ -112,6 +118,7 @@ MODELS = [
     "lineup",
     "potential",
     "rumours",
+    "needs",
 ]
 
 

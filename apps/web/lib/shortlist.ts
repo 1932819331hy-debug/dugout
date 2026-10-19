@@ -1,7 +1,7 @@
 // The scout's three lists for the top squad need, built from the dossier's audited key stats (agents/tools.py
 // shortlist: labels name what each number measures).
 import type { StatRef, Target } from "@/components/story/types";
-import { displays, type Dossier } from "@/lib/data";
+import { displays, readBacktest, type Dossier } from "@/lib/data";
 
 export const KINDS: Target["kind"][] = ["best", "realistic", "gem"];
 
@@ -28,11 +28,15 @@ export function shortlists(d: Dossier): Target[] {
         club: club ? String(club.stat.value) : undefined,
         age: ref(age.stat),
         price: fact("estimated fair fee"),
+        // agents/dossier.py RANGE_LOW / RANGE_HIGH
+        priceLow: fact("likely low end of the estimated fair fee"),
+        priceHigh: fact("likely high end of the estimated fair fee"),
         contract: fact("months left on his contract"),
         marketValue: fact("market value"),
         minutesThere: fact("expected share of minutes at the club"),
         minutesNow: fact("share of his club's minutes"),
         minutesLastYear: fact("minutes played in the past year"),
+        leagueMinutes: fact("league minutes last season"),
         goals: fact("league goals per full match"),
         assists: fact("league assists per full match"),
         gaRank: fact("share of players at his position in his league"),
@@ -43,12 +47,26 @@ export function shortlists(d: Dossier): Target[] {
         positions: text(fact("positions he starts at")),
         pSold: fact("chance his club sells him"),
         chance: fact("chance the move happens"),
+        pressReports: fact("Rumour Mill reports linking him"),
+        pressLift: fact("how many times likelier those reports"),
         projected: fact("projected market value"),
+        injury: fact("injury-risk tier"),
       });
     }
    }
   }
   return out;
+}
+
+/** Leagues whose players get an injury tier, and leagues with too little injury data (docs/backtests/injury.md). */
+export interface InjuryCoverage {
+  scored: string[];
+  unscored: string[];
+}
+
+export function injuryCoverage(): InjuryCoverage {
+  const j = readBacktest<{ scored_leagues?: string[]; unscored_leagues?: string[] }>("injury");
+  return { scored: j?.scored_leagues ?? [], unscored: j?.unscored_leagues ?? [] };
 }
 
 /** The club's two biggest squad needs, each with the numbers behind it (agents/tools.py shortlist, "(need one)"). */

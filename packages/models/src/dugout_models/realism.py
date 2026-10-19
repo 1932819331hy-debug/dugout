@@ -4,12 +4,12 @@ Fitted on historical moves (transfermarkt-datasets, CC0):
   mobility     P(player is sold for a fee in a summer window)             gradient boosting (logistic for coefficients)
   destination  P(the move goes to this club | he moves)                  pairwise logistic: real buyer vs sampled
                clubs that bought someone that window
-Not fittable historically, so prior weights (documented, editable in PRIORS):
+               + press reports linking him with that club in the year before (the Guardian's Rumour Mill
+               archive, rumour_links), fitted like the other features; they did not help mobility (realism.md)
+Not fittable historically, so a prior weight (documented, editable in PRIORS):
   contract     months remaining (no historical contract data)
-  news         tier-weighted mentions linking player and club in the last 30 days (no historical news archive)
 
-realism = 100 * sigmoid( logit(mobility) + logit(destination) + w_contract * c + w_news * n ), centred so an
-average plausible move scores ~50.
+P(this move in a window) = P(sold, contract-adjusted) x P(this club | sold) (market.Market.realism_score).
 """
 
 from __future__ import annotations
@@ -19,11 +19,12 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import TYPE_CHECKING
 
+import duckdb
 import lightgbm as lgb
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import brier_score_loss, roc_auc_score
+from sklearn.metrics import brier_score_loss, log_loss, roc_auc_score
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
@@ -55,9 +56,33 @@ DESTINATION_V1 = ["capacity_ratio", "league_gap", "club_value_gap", "same_league
 DESTINATION = [*DESTINATION_V1, "step_down"]
 PRIORS = {
     "contract": {"<=12 months": 0.8, "13-24 months": 0.3, ">24 months": -0.4},
-    "news_weight_per_point": 0.35,
-    "news_cap": 4.0,
 }
+# News signal, fitted from the Guardian Rumour Mill archive (rumour_links, dugout_models.rumours): point-in-time
+# counts of reports published before the snapshot date (1 June in training, today live). Each candidate set is
+# trained on 2015-22 and scored on validation summer 2023 (mobility by Brier, destination by log loss); the winner
+# ships if it beats no news there (realism.md, 2026-10-18). Since 2020 the column runs only in transfer windows,
+# so the 90 days before 1 June hold no reports: the year before is the window that carries signal.
+NEWS_DAYS = (90, 365)
+NEWS_MOBILITY_ALL = [f"news_{k}_{w}" for w in NEWS_DAYS for k in ("reports", "clubs")]
+NEWS_DESTINATION_ALL = [f"news_{k}_{w}" for w in NEWS_DAYS for k in ("club", "club_share")]
+NEWS_MOBILITY_CANDIDATES = {
+    "none": [],
+    "reports_90": ["news_reports_90"],
+    "reports_365": ["news_reports_365"],
+    "reports_clubs_365": ["news_reports_365", "news_clubs_365"],
+    "all": NEWS_MOBILITY_ALL,
+}
+NEWS_DESTINATION_CANDIDATES = {
+    "none": [],
+    "club_90": ["news_club_90"],
+    "club_365": ["news_club_365"],
+    "club_share_365": ["news_club_365", "news_club_share_365"],
+    "all": NEWS_DESTINATION_ALL,
+}
+NEWS_MOBILITY: list[str] = NEWS_MOBILITY_CANDIDATES["none"]  # every news set was worse on validation
+NEWS_DESTINATION: list[str] = NEWS_DESTINATION_CANDIDATES["club_share_365"]
+MOBILITY_SHIPPED = [*MOBILITY, *NEWS_MOBILITY]
+DESTINATION_SHIPPED = [*DESTINATION, *NEWS_DESTINATION]
 
 
 # Train mobility only on players whose transfer history the dataset carries (chosen on validation, realism.md).
@@ -277,6 +302,231 @@ def step_features(seller, buyer, club_value: pd.Series) -> dict:
     return {"step_down": max(-gap, 0.0)}
 
 
+def load_links(con: duckdb.DuckDBPyConnection | None) -> pd.DataFrame:
+    """Rumour links (dugout-models publish rumours): one row per (report, player, club it links him with).
+    Empty without a warehouse, or before the archive has been loaded (history job)."""
+    cols = ["rumour_id", "published_at", "tm_player_id", "tm_club_id"]
+    empty = pd.DataFrame({c: pd.Series(dtype="datetime64[ns]" if c == "published_at" else str) for c in cols})
+    if con is None:
+        return empty
+    try:
+        df = con.execute(f"SELECT {', '.join(cols)} FROM rumour_links").df()
+    except duckdb.CatalogException:  # warehouse from before the table existed
+        return empty
+    df["published_at"] = pd.to_datetime(df.published_at, utc=True).dt.tz_convert(None)
+    return df.astype({"tm_player_id": str, "tm_club_id": str})
+
+
+def _window(links: pd.DataFrame, players: pd.Series, dates: pd.Series, days: int) -> pd.DataFrame:
+    """Links about each (row's player) published in the `days` before (row's date), with the row index as `row`.
+    Strictly before the date: a report on the snapshot day is not known at its start."""
+    keys = pd.DataFrame(
+        {
+            "row": players.index,
+            "tm_player_id": players.astype(str).to_numpy(),
+            "d": pd.to_datetime(dates.to_numpy()),
+        }
+    )
+    m = keys.merge(links, on="tm_player_id")
+    return m[(m.published_at < m.d) & (m.published_at >= m.d - np.timedelta64(days, "D"))]
+
+
+def player_news(links: pd.DataFrame, players: pd.Series, dates: pd.Series) -> pd.DataFrame:
+    """Per row: log1p(reports naming the player with a club) and the number of clubs named, in each window."""
+    out = pd.DataFrame(index=players.index)
+    for w in NEWS_DAYS:
+        m = _window(links, players, dates, w)
+        g = m.groupby("row")
+        out[f"news_reports_{w}"] = np.log1p(g.rumour_id.nunique().reindex(out.index).fillna(0))
+        out[f"news_clubs_{w}"] = g.tm_club_id.nunique().reindex(out.index).fillna(0).astype(float)
+    return out
+
+
+def pair_news(links: pd.DataFrame, players: pd.Series, clubs: pd.Series, dates: pd.Series) -> pd.DataFrame:
+    """Per (player, candidate club) row: log1p(reports linking him with this club) and their share of all reports
+    linking him with a club, in each window (0 when nobody wrote about him)."""
+    out = pd.DataFrame(index=players.index)
+    club = clubs.astype(str)
+    for w in NEWS_DAYS:
+        m = _window(links, players, dates, w)
+        total = m.groupby("row").rumour_id.nunique().reindex(out.index).fillna(0)
+        m = m[m.tm_club_id.to_numpy() == club.reindex(m.row).to_numpy()]
+        this = m.groupby("row").rumour_id.nunique().reindex(out.index).fillna(0)
+        out[f"news_club_{w}"] = np.log1p(this)
+        out[f"news_club_share_{w}"] = (this / total.where(total > 0)).fillna(0)
+    return out
+
+
+def with_news(
+    snap: pd.DataFrame, pairs: pd.DataFrame, links: pd.DataFrame
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """The training frames with the news features (reports before 1 June of each summer)."""
+    d_snap = pd.to_datetime(snap.year.astype(str) + "-06-01")
+    d_pairs = pd.to_datetime(pairs.year.astype(str) + "-06-01")
+    snap = snap.join(player_news(links, snap.player_id, d_snap))
+    pairs = pairs.join(pair_news(links, pairs.player_id, pairs.club, d_pairs))
+    return snap, pairs
+
+
+def _top1(frame: pd.DataFrame, p: np.ndarray) -> float:
+    """Share of moves whose real buyer is ranked first among its candidates."""
+    return float(frame.assign(p=p).loc[lambda d: d.groupby(["year", "player_id"]).p.idxmax()].label.mean())
+
+
+def _dest_fit(train: pd.DataFrame, cols: list[str]):
+    return make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000)).fit(train[cols], train.label)
+
+
+def news_backtest(snap: pd.DataFrame, pairs: pd.DataFrame) -> dict:
+    """With and without the press features (frames from with_news): candidates on validation 2023 (train 2015-22),
+    then the chosen sets against no news on test 2024-25 (train 2015-23), plus how much of each frame the press
+    covers at all."""
+    out: dict = {
+        "validation": {"mobility": {}, "destination": {}},
+        "test": {"mobility": {}, "destination": {}},
+    }
+    for stage, tr, te in (
+        ("validation", lambda f: f[f.year <= 2022], lambda f: f[f.year == 2023]),
+        ("test", lambda f: f[f.year <= 2023], lambda f: f[f.year >= 2024]),
+    ):
+        s_tr, s_te, p_tr, p_te = tr(snap), te(snap), tr(pairs), te(pairs)
+        for k, cols in NEWS_MOBILITY_CANDIDATES.items():
+            p = (
+                mobility_model()
+                .fit(s_tr[MOBILITY + cols], s_tr.moved)
+                .predict_proba(s_te[MOBILITY + cols])[:, 1]
+            )
+            out[stage]["mobility"][k] = {
+                "auc": float(roc_auc_score(s_te.moved, p)),
+                "brier": float(brier_score_loss(s_te.moved, p)),
+                "mean_p": float(p.mean()),
+            }
+        for k, cols in NEWS_DESTINATION_CANDIDATES.items():
+            m = _dest_fit(p_tr, DESTINATION + cols)
+            p = m.predict_proba(p_te[DESTINATION + cols])[:, 1]
+            out[stage]["destination"][k] = {
+                "auc": float(roc_auc_score(p_te.label, p)),
+                "top1": _top1(p_te, p),
+                "log_loss": float(log_loss(p_te.label, p)),
+                "coefficients": dict(
+                    zip(cols, m[-1].coef_[0][len(DESTINATION) :].round(3).tolist(), strict=True)
+                ),
+            }
+            if k == "club_share_365" and stage == "test":
+                named = (p_te.label & (p_te.news_club_365 > 0)).to_numpy()
+                p0 = _dest_fit(p_tr, DESTINATION).predict_proba(p_te[DESTINATION])[:, 1]
+                moves = p_te.assign(named=named).groupby(["year", "player_id"]).named.transform("max")
+                sub = moves.to_numpy()
+                out["test"]["named_moves"] = {
+                    "moves": int(p_te[sub].groupby(["year", "player_id"]).ngroups),
+                    "top1_with": _top1(p_te[sub], p[sub]),
+                    "top1_without": _top1(p_te[sub], p0[sub]),
+                }
+    val = out["validation"]
+    out["chosen"] = {
+        "mobility": min(val["mobility"], key=lambda k: val["mobility"][k]["brier"]),
+        "destination": min(val["destination"], key=lambda k: val["destination"][k]["log_loss"]),
+    }
+    cov = []
+    for era, f_s, f_p in (
+        ("2015-2019", snap[snap.year <= 2019], pairs[pairs.year <= 2019]),
+        ("2020-2023", snap[snap.year.between(2020, 2023)], pairs[pairs.year.between(2020, 2023)]),
+        ("2024-2025 (test)", snap[snap.year >= 2024], pairs[pairs.year >= 2024]),
+    ):
+        written = f_s.news_reports_365 > 0
+        named = f_p.news_club_365 > 0
+        cov.append(
+            {
+                "years": era,
+                "players": len(f_s),
+                "written_about": float(written.mean()),
+                "sold_if_written": float(f_s[written].moved.mean()) if written.any() else None,
+                "sold_otherwise": float(f_s[~written].moved.mean()),
+                "buyer_named": float(f_p[f_p.label].news_club_365.gt(0).mean()),
+                "other_named": float(f_p[~f_p.label].news_club_365.gt(0).mean()),
+                "named_is_buyer": float(f_p[named].label.mean()) if named.any() else None,
+                "named_90": float(f_p[f_p.label].news_club_90.gt(0).mean()),
+            }
+        )
+    out["coverage"] = cov
+    return out
+
+
+def news_md(n: dict) -> list[str]:
+    """The press-reports section of realism.md."""
+    v, te, ch = n["validation"], n["test"], n["chosen"]
+    lines = [
+        "**Press reports (2026-10-18).** The Guardian's Rumour Mill archive (every column since 2001, "
+        f"`rumour_links`: {n['links']} links of a player with a club) gives point-in-time press features: reports "
+        "published before 1 June naming the player with any club (mobility) or with this club (destination), in "
+        "the 90 days and the year before. Each set is trained on 2015-2022 and scored on validation summer 2023 "
+        "(mobility by Brier, destination by log loss); the test summers 2024-2025 are scored once, with the "
+        "previous year added to training.",
+        "",
+        "| Validation 2023 | AUC | Brier / log loss | Top-1 |",
+        "|---|---|---|---|",
+    ]
+    for k, r in v["mobility"].items():
+        lines.append(f"| Mobility, {k} | {r['auc']:.4f} | {r['brier']:.5f} | — |")
+    for k, r in v["destination"].items():
+        lines.append(f"| Destination, {k} | {r['auc']:.4f} | {r['log_loss']:.4f} | {r['top1']:.1%} |")
+    lines += [
+        "",
+        f"Chosen on validation: mobility `{ch['mobility']}`, destination `{ch['destination']}`. Shipped: mobility "
+        f"`{n['shipped']['mobility'] or 'none'}`, destination `{n['shipped']['destination']}`.",
+        "",
+        "| Test 2024-2025 | AUC | Brier / log loss | Top-1 |",
+        "|---|---|---|---|",
+    ]
+    for k in dict.fromkeys(["none", ch["mobility"], "all"]):
+        r = te["mobility"][k]
+        lines.append(f"| Mobility, {k} | {r['auc']:.4f} | {r['brier']:.5f} | — |")
+    for k in dict.fromkeys(["none", ch["destination"], "all"]):
+        r = te["destination"][k]
+        lines.append(f"| Destination, {k} | {r['auc']:.4f} | {r['log_loss']:.4f} | {r['top1']:.1%} |")
+    nm = te["named_moves"]
+    lines += [
+        "",
+        f"Test moves whose buyer the press had named in the year before: {nm['moves']}; the real buyer ranked first "
+        f"{nm['top1_with']:.1%} of the time with press reports, {nm['top1_without']:.1%} without. Coefficients "
+        "(standardised): "
+        + ", ".join(f"{k} {c}" for k, c in te["destination"][ch["destination"]]["coefficients"].items())
+        + ".",
+        "",
+        "| Years | Player-summers | Written about (year before) | Sold if written about | Sold otherwise | "
+        "Real buyer named | Other candidate named | Named club was the buyer | Real buyer named, 90 days |",
+        "|---|---|---|---|---|---|---|---|---|",
+    ]
+
+    def pct(x):
+        return "—" if x is None else f"{x:.1%}"
+
+    for c in n["coverage"]:
+        lines.append(
+            f"| {c['years']} | {c['players']} | {pct(c['written_about'])} | {pct(c['sold_if_written'])} | "
+            f"{pct(c['sold_otherwise'])} | {pct(c['buyer_named'])} | {pct(c['other_named'])} | "
+            f"{pct(c['named_is_buyer'])} | {pct(c['named_90'])} |"
+        )
+    lines += [
+        "",
+        "Reading this honestly:",
+        "",
+        "- **Destination: a small, real gain.** When the column had linked a player with a club in the year before, "
+        "that club was usually the buyer, but few moves are covered: the column is about English football and, "
+        "since 2020, runs only during transfer windows (nothing in March-May, little or nothing in the summers of 2021 and 2024), so the "
+        "90 days before 1 June are empty in the modern era and the year before is the window that carries the "
+        "signal. Some reports before 1 June are deals already agreed, which the press knows and so does a club.",
+        "- **Mobility: no gain (a negative result).** Players the press writes about are sold more often, but they "
+        "are also the valuable, rising players the model already rates; every news set was slightly worse on "
+        "validation, so the sale likelihood does not use them.",
+        "- **Live:** the past year's reports up to today (archive plus the nightly Rumour Mill items), so in "
+        "October they cover the last January and summer windows, like the year before 1 June in training. The "
+        "shortlist says when reports linking a player with the club make the move at least 1.1 times as likely "
+        "as the same estimate with nothing written about him.",
+    ]
+    return lines
+
+
 def mobility_model() -> lgb.LGBMClassifier:
     """The shipped sale-likelihood model: gradient boosting beats the logistic on test Brier (realism.md) and is
     calibrated for young regulars at Europe's richest clubs, where the logistic overstated sales several-fold."""
@@ -302,12 +552,16 @@ def contract_points(months_left: float | None) -> float:
     )
 
 
-def backtest(out_dir: Path | None = None) -> dict:
+def backtest(out_dir: Path | None = None, con: duckdb.DuckDBPyConnection | None = None) -> dict:
+    """con: the warehouse, for the rumour links (press reports); without it the news features are all zero."""
     t = load()
     comps = pd.read_parquet(TM_DIR / "competitions.parquet")
     TOP_TIER.update(comps.loc[comps.sub_type == "first_tier", "competition_id"])
     people = club_people(t)
+    links = load_links(con)
     snap = snapshots(t, range(2015, 2026), people=people).dropna(subset=MOBILITY)
+    pairs = destination_pairs(t, range(2015, 2026), people=people).dropna(subset=DESTINATION)
+    snap, pairs = with_news(snap, pairs, links)
     train, test = snap[snap.year <= 2023], snap[snap.year >= 2024]
     # the previous frame (valuations' club id = today's club, every player) on the same test rows, for comparison
     old = snapshots(t, range(2015, 2026), dated=False, covered_only=False).dropna(subset=MOBILITY)
@@ -322,17 +576,15 @@ def backtest(out_dir: Path | None = None) -> dict:
     elite = (
         (test.log_europe_rank <= np.log(ELITE_RANK)) & (test.age <= 26) & (test.minutes_share >= 0.5)
     ).to_numpy()
-    gbm = mobility_model().fit(train[MOBILITY], train.moved)
-    p_gbm = gbm.predict_proba(test[MOBILITY])[:, 1]
-    pairs = destination_pairs(t, range(2015, 2026), people=people).dropna(subset=DESTINATION)
+    gbm = mobility_model().fit(train[MOBILITY_SHIPPED], train.moved)
+    p_gbm = gbm.predict_proba(test[MOBILITY_SHIPPED])[:, 1]
     ptr, pte = pairs[pairs.year <= 2023], pairs[pairs.year >= 2024]
     pairs_old = destination_pairs(t, range(2015, 2026), dated=False).dropna(subset=DESTINATION)
 
     def fit_dest(cols):
-        m = make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000)).fit(ptr[cols], ptr.label)
+        m = _dest_fit(ptr, cols)
         p = m.predict_proba(pte[cols])[:, 1]
-        # top-1 accuracy: is the real buyer ranked first among its candidates?
-        return m, p, pte.assign(p=p).loc[lambda d: d.groupby(["year", "player_id"]).p.idxmax()].label.mean()
+        return m, p, _top1(pte, p)  # top-1: is the real buyer ranked first among its candidates?
 
     _, p_v1, top1_v1 = fit_dest(DESTINATION_V1)
     m_old = make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000))
@@ -342,7 +594,9 @@ def backtest(out_dir: Path | None = None) -> dict:
     top1_old = (
         pte_old.assign(p=p_dest_old).loc[lambda d: d.groupby(["year", "player_id"]).p.idxmax()].label.mean()
     )
-    dest, p_dest, top1 = fit_dest(DESTINATION)
+    dest, p_dest, top1 = fit_dest(DESTINATION_SHIPPED)
+    _, p_quiet, top1_quiet = fit_dest(DESTINATION)
+    news = news_backtest(snap, pairs)
     n_cands = pte.groupby(["year", "player_id"]).size().mean()
     report = {
         "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
@@ -375,13 +629,20 @@ def backtest(out_dir: Path | None = None) -> dict:
             "auc": float(roc_auc_score(pte.label, p_dest)),
             "top1": float(top1),
             "random_top1": float(1 / n_cands),
-            "coefficients": dict(zip(DESTINATION, dest[-1].coef_[0].round(3).tolist(), strict=True)),
+            "coefficients": dict(zip(DESTINATION_SHIPPED, dest[-1].coef_[0].round(3).tolist(), strict=True)),
+            "no_press_auc": float(roc_auc_score(pte.label, p_quiet)),
+            "no_press_top1": float(top1_quiet),
             "v1_auc": float(roc_auc_score(pte.label, p_v1)),
             "v1_top1": float(top1_v1),
             "undated_auc": float(roc_auc_score(pte_old.label, p_dest_old)),
             "undated_top1": float(top1_old),
         },
         "priors": PRIORS,
+        "news": {
+            **news,
+            "links": len(links),
+            "shipped": {"mobility": NEWS_MOBILITY, "destination": NEWS_DESTINATION},
+        },
     }
     if out_dir:
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -404,14 +665,18 @@ def backtest(out_dir: Path | None = None) -> dict:
             f"{m['undated_brier_gbm']:.4f}; mean forecast {m['undated_mean_p_gbm']:.1%} (same test player-summers) |",
             f"| Mobility, without Europe wealth rank | logistic | {m['auc_logistic_v1']:.3f} | Brier "
             f"{m['brier_logistic_v1']:.4f} |",
-            f"| Destination (this club, given a move) | pairwise logistic + step-down | {d['auc']:.3f} | real buyer "
-            f"ranked first {d['top1']:.1%} vs random {d['random_top1']:.1%}, {d['test_moves']} moves |",
+            f"| **Destination (this club, given a move; shipped)** | pairwise logistic + step-down + press reports | "
+            f"{d['auc']:.3f} | real buyer ranked first {d['top1']:.1%} vs random {d['random_top1']:.1%}, "
+            f"{d['test_moves']} moves |",
+            f"| Destination, without press reports | pairwise logistic + step-down | {d['no_press_auc']:.3f} | real "
+            f"buyer ranked first {d['no_press_top1']:.1%} |",
             f"| Destination, without step-down | pairwise logistic | {d['v1_auc']:.3f} | real buyer ranked first "
             f"{d['v1_top1']:.1%} |",
             f"| Destination, previous frame (today's club) | pairwise logistic + step-down | {d['undated_auc']:.3f} | "
             f"real buyer ranked first {d['undated_top1']:.1%}; inflated, see below |",
             "| Contract | prior weights | — | no historical contract data |",
-            "| News signal | prior weights | — | no historical news archive |",
+            "",
+            *news_md(report["news"]),
             "",
             "**Club on the day (2026-10-17).** transfermarkt-datasets' `player_valuations.current_club_id` is the "
             "player's club today, not on the valuation date, and `transfers` has no rows for anyone whose last season "

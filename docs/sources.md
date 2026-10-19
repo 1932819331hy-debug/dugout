@@ -38,7 +38,7 @@ Rules that apply to all sources (enforced in `packages/pipeline/src/dugout_pipel
 | ECB euro reference rates | no | ECB statistical data: free reuse with attribution ("Source: ECB") | 1 call a night | 24 h | daily GBP/USD/CHF/… per euro, to convert reported fees | 3 |
 | Reep Register (`reep`) | no | **CC0** data, MIT SDK | catalogue ~210 MB, synced daily (SHA-256 verified by the SDK) | 24 h | ID crosswalk: Opta ↔ API-Football ↔ Transfermarkt ↔ FBref ↔ Understat ↔ StatsBomb ↔ Wyscout ↔ SkillCorner ↔ ClubElo … | — |
 | football-data.co.uk | no | Free CSVs; credit football-data.co.uk | none published; ≤ 1 req / 3 s | 12 h (past seasons 365 d) | historical results + closing odds (Pinnacle / market average) — the benchmark the predictor must beat | 3 |
-| Transfermarkt (local refresher) | no | Website; `robots.txt` allows `*` | **local only**, weekly, 1 page / 6 s, 20 pages | 6 d | current market values, contract expiry → cleaned CSV committed to `data/reference/` | 3 |
+| Transfermarkt (local refresher) | no | Website; `robots.txt` allows `*` (only `wget` is barred; re-checked 2026-10-18) | **local only**, weekly, 1 page / 6 s: 20 Premier League squad pages; Championship (`--pool championship`): 1 competition page for the club list + 24 squad pages + 24 performance pages (last season's league minutes) | 6 d | current market values, positions, contract expiry, Championship league minutes → cleaned CSV committed to `data/reference/`; the Championship is a shortlist candidate pool only (no pages: football-data.org's free tier has no ELC) | 3 |
 
 ### ID mapping
 
@@ -96,7 +96,7 @@ Players without a Reep id keep a provider-scoped id (`opta:<id>`) and are re-res
 
 | Source | Nightly | Injuries job (each, ×6/day) | Daily total | Limit |
 |---|---|---|---|---|
-| API-Football | 3 fixture-date calls + ≤ 10 fixture stats + 2 injuries + lineups on match days ≈ 5–25; other leagues: 1 lineup call per finished match (≈ 20–25 after a Saturday), date and injury lists shared | ≈ 5 (cached) | ≤ 75 | 90 (100 minus 10 reserve; other leagues stop at 30 left) |
+| API-Football | 3 fixture-date calls + ≤ 10 fixture stats + 2 injuries + lineups on match days ≈ 5–25; other leagues: 1 lineup call per finished match (≈ 20–25 after a Saturday), date and injury lists shared; history job: 18 season injury lists once (6 leagues × 2022-24, cached a year; stops with 40 of the account's 100 left, `status` syncs the count) | ≈ 5 (cached) | ≤ 75 | 90 (100 minus 10 reserve; other leagues stop at 30 left) |
 | football-data.org | 18 (3 per league, 6 leagues; ~3.5 min at 8/min) | 0 | 18 | 10/min |
 | Guardian | 20 | 0 | 20 | 500/day |
 | FPL | 3 + finished gameweeks (cached 30 d) | 3 | ≈ 25 | none published |

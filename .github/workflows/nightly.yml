@@ -112,6 +112,8 @@ jobs:
       - name: Commit site data
         run: |
           git add data/clubs data/leagues.json data/scoreboard.json
+          # written by `publish rumours` once the history job has filled the Rumour Mill archive
+          if [ -f data/rumours.json ]; then git add data/rumours.json; fi
           if git diff --cached --quiet; then echo "site data unchanged"; exit 0; fi
           git commit -m "Nightly data $(date -u +%F)"
           git pull --rebase origin main

@@ -82,12 +82,20 @@ def cmd_refresh_values(args) -> int:
     from dugout_pipeline.runner import format_report, run
 
     ctx = _ctx(args)
-    squads = (
-        "fpl" if ctx.league_cfg["provider_ids"].get("fpl") else "football_data_org"
-    )  # clubs + TM ids first
-    job = run(ctx, [squads, "transfermarkt", "transfermarkt_file"])
+    if args.pool:  # a candidate pool (config `candidate_pools`): its clubs come from Transfermarkt itself
+        from dugout_pipeline.adapters.transfermarkt import TransfermarktPoolRefresher
+
+        TransfermarktPoolRefresher.pool = args.pool
+        job = run(ctx, ["transfermarkt_pool", "transfermarkt_file"])
+    else:
+        squads = (
+            "fpl" if ctx.league_cfg["provider_ids"].get("fpl") else "football_data_org"
+        )  # clubs + TM ids first
+        job = run(ctx, [squads, "transfermarkt", "transfermarkt_file"])
     print(format_report(job))
-    print("Commit data/reference/transfermarkt_squads.csv so CI can use it.")
+    print(
+        "Commit data/reference/transfermarkt_squads.csv (and transfermarkt_minutes.csv) so CI can use them."
+    )
     return 0 if all(r.ok for r in job.results) else 1
 
 
@@ -200,6 +208,9 @@ def main(argv: list[str] | None = None) -> int:
     s.set_defaults(fn=cmd_load_open)
 
     s = sub.add_parser("refresh-values", help="LOCAL ONLY: polite Transfermarkt squad refresh")
+    s.add_argument(
+        "--pool", help="a candidate pool from config/leagues.yaml (e.g. championship) instead of a league"
+    )
     s.set_defaults(fn=cmd_refresh_values)
 
     s = sub.add_parser("backfill-api-football", help="slowly backfill a free-plan season (2022-2024)")

@@ -633,18 +633,22 @@ def squad_market(tb: Toolbox, club: str, player_id: str | None = None, n: int = 
                 if r < 0.85
                 else "in line with his market value"
             )
-        facts += _keep(
-            _fact(
-                tb,
-                pname,
-                f"estimated fair fee if sold to another {tb.league(club)['name']} club",
-                f"Our fair-fee estimate for {pname} is {{p}}" + (f", {gloss}." if gloss else "."),
-                ff,
-                "eur_m",
-                gloss,
-                pid,
-            )
+        rng = _fee_range(tb, "valuation", pid)
+        f = _fact(
+            tb,
+            pname,
+            f"estimated fair fee if sold to another {tb.league(club)['name']} club",
+            f"Our fair-fee estimate for {pname} is {{p}}"
+            + (" (likely between {lo} and {hi})" if rng else "")
+            + (f", {gloss}." if gloss else "."),
+            ff,
+            "eur_m",
+            gloss,
+            pid,
         )
+        if f is not None:
+            f.range = rng
+        facts += _keep(f)
     rows = tb.con.execute(
         """SELECT c.player_id FROM contracts c JOIN players p USING (player_id)
            WHERE p.club_id = ? AND c.expires <= ? AND c.expires >= ? AND (? IS NULL OR c.player_id = ?)
@@ -677,6 +681,13 @@ def squad_market(tb: Toolbox, club: str, player_id: str | None = None, n: int = 
             )
         )
     return facts
+
+
+def _fee_range(tb: Toolbox, model: str, pid: str, context: str = "") -> tuple[str, str] | None:
+    """Ledger ids of a fair fee's likely range (valuation.md: four fees in five land inside), or None."""
+    lo = tb.model(model, "player", pid, "fair_fee_low", context, doc=MODEL_DOCS["valuation"])
+    hi = tb.model(model, "player", pid, "fair_fee_high", context, doc=MODEL_DOCS["valuation"])
+    return (lo[0], hi[0]) if lo is not None and hi is not None else None
 
 
 def _dataset_value(tb: Toolbox, pid: str) -> tuple[tuple[str, Any] | None, date | None]:
@@ -810,6 +821,7 @@ KIND_METRICS = {
         "expected_minutes_share",
         "minutes_last_year",
         "contract_months",
+        "press_reports",
     },
     "realistic": {
         "age",
@@ -820,6 +832,8 @@ KIND_METRICS = {
         "p_sold",
         "minutes_last_year",
         "contract_months",
+        "press_reports",
+        "press_lift",
     },
     "gem": {"age", "candidate_club", "fair_fee", "market_value", "proj_value_4y", "minutes_share_now"},
 }
@@ -882,8 +896,9 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
             (
                 "need_depth",
                 "players for the position, veterans aside",
-                f"{name} have {{p}} players for {group}, leaving veterans aside.",
-                "int",
+                f"Counted by where they start, {name}'s options for {group} add up to {{p}} players, leaving "
+                "veterans aside.",
+                "depth",
             ),
             (
                 "need_wanted",
@@ -926,12 +941,14 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
             (
                 "need_ageing_share",
                 "share of the options who are veterans",
-                f"{{p}} of {name}'s options for {group} are veterans.",
+                f"{{p}} of {name}'s options for {group}, counted by where they start, are veterans.",
                 "pct",
             ),
         ):
             rec = tb.model("scout", "club", club, metric, f"need:{rank}")
             if rec is not None and not (metric == "need_ageing_share" and float(rec[1]) == 0):
+                if fmt == "depth":  # starts-weighted, one decimal: "2.6 players", but "3 players"
+                    fmt = "int" if float(rec[1]).is_integer() else ".1f"
                 if metric in ("need_best_player", "need_bar_player"):
                     tb.register(f"need_best:{rec[1]}", str(rec[1]))
                 facts += _keep(_fact(tb, name, f"{label} ({which_need})", tmpl, rec, fmt, entity_id=club))
@@ -1009,6 +1026,19 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                     "pct",
                 ),
                 (
+                    "press_reports",
+                    "Rumour Mill reports linking him with the club in the past year",
+                    f"The Guardian's Rumour Mill has linked {cname} with {name} in {{p}} reports over the past "
+                    "year.",
+                    "int",
+                ),
+                (
+                    "press_lift",
+                    "how many times likelier those reports make the move",
+                    f"That press talk makes a move to {name} {{p}} times as likely as it would be without it.",
+                    ".1f",
+                ),
+                (
                     "contract_months",
                     "months left on his contract",
                     f"{cname} has {{p}} months left on his contract.",
@@ -1052,7 +1082,46 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
                         if p < 0.02
                         else "relatively plausible for a specific move"
                     )
-                facts += _keep(_fact(tb, cname, label, tmpl, rec, fmt, gloss, pid))
+                rng = _fee_range(tb, "scout", pid, ctx) if metric == "fair_fee" else None
+                if rng:
+                    tmpl = tmpl.removesuffix(".") + " (likely between {lo} and {hi})."
+                f = _fact(tb, cname, label, tmpl, rec, fmt, gloss, pid)
+                if f is not None:
+                    f.range = rng
+                facts += _keep(f)
+            # candidate-pool players (the Championship): last season's league minutes, cited to the Transfermarkt
+            # page they were read from (the dataset behind "matches on record" has no games for that league)
+            lm = tb.latest("player", pid, "league_minutes", "transfermarkt")
+            if lm is not None:
+                facts += _keep(
+                    _fact(
+                        tb,
+                        cname,
+                        "league minutes last season (Transfermarkt)",
+                        f"Transfermarkt lists {cname} with {{p}} league minutes last season.",
+                        (lm.id, lm.value),
+                        "int",
+                        entity_id=pid,
+                    )
+                )
+
+            # injury tier: Premier League players from load and record, other scored leagues from the record alone
+            # (docs/backtests/injury.md); players in unscored leagues have none
+            for ictx, basis in (("", "load and injury record"), ("record", "injury record")):
+                tier = tb.model("injury", "player", pid, "injury_risk_tier", ictx)
+                if tier is not None:
+                    facts += _keep(
+                        _fact(
+                            tb,
+                            cname,
+                            f"injury-risk tier, from his {basis}",
+                            f"We rate {cname}'s injury risk as {{p}}.",
+                            tier,
+                            gloss="a reason to check his medical" if tier[1] in ("elevated", "high") else "",
+                            entity_id=pid,
+                        )
+                    )
+                    break
     return facts
 
 

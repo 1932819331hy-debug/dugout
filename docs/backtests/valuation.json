@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T08:41:19+00:00",
+  "generated_at": "2026-10-18T20:17:20+00:00",
   "train": {
     "n": 11770,
     "from": "2005-01-01",
@@ -442,6 +442,502 @@
     "IT1": 0.05319940663086661,
     "L1": -0.20942701348824283,
     "NL1": -0.06952108718972176
+  },
+  "ranges": {
+    "level": 0.8,
+    "calibration": {
+      "from": "2022-07-01",
+      "to": "2024-07-01"
+    },
+    "bands": {
+      "under \u20ac2m": [
+        0.2746704507025886,
+        2.693181918610686
+      ],
+      "\u20ac2m to \u20ac5m": [
+        0.2959144728654449,
+        2.069900394306166
+      ],
+      "\u20ac5m to \u20ac15m": [
+        0.41806251750173146,
+        1.7887563162829732
+      ],
+      "\u20ac15m or more": [
+        0.5106125152201155,
+        1.838226922536056
+      ]
+    },
+    "segments": {
+      "all": {
+        "n": 4702,
+        "coverage": 0.8287962569119524,
+        "below": 0.07486176095278604,
+        "above": 0.09634198213526159,
+        "median_width_eur": 2887569.7411039937,
+        "median_low_over_estimate": 0.2746704507025886,
+        "median_high_over_estimate": 2.6931819186106853
+      },
+      "Premier League buyer": {
+        "n": 371,
+        "coverage": 0.862533692722372,
+        "below": 0.05929919137466307,
+        "above": 0.07816711590296496,
+        "median_width_eur": 19741394.628732372,
+        "median_low_over_estimate": 0.4180625175017317,
+        "median_high_over_estimate": 1.8382269225360588
+      },
+      "Premier League to Premier League": {
+        "n": 111,
+        "coverage": 0.8828828828828829,
+        "below": 0.05405405405405406,
+        "above": 0.06306306306306306,
+        "median_width_eur": 26156676.97339092,
+        "median_low_over_estimate": 0.5106125152201155,
+        "median_high_over_estimate": 1.8382269225360588
+      },
+      "Premier League buyer, age 24 or under": {
+        "n": 215,
+        "coverage": 0.8418604651162791,
+        "below": 0.04186046511627907,
+        "above": 0.11627906976744186,
+        "median_width_eur": 20275162.56405945,
+        "median_low_over_estimate": 0.4180625175017317,
+        "median_high_over_estimate": 1.8382269225360588
+      },
+      "La Liga buyer": {
+        "n": 175,
+        "coverage": 0.7828571428571428,
+        "below": 0.08,
+        "above": 0.13714285714285715,
+        "median_width_eur": 5284167.894721665,
+        "median_low_over_estimate": 0.2959144728654452,
+        "median_high_over_estimate": 2.069900394306165
+      },
+      "La Liga to La Liga": {
+        "n": 63,
+        "coverage": 0.7301587301587301,
+        "below": 0.12698412698412698,
+        "above": 0.14285714285714285,
+        "median_width_eur": 4377522.852129328,
+        "median_low_over_estimate": 0.2959144728654452,
+        "median_high_over_estimate": 2.069900394306165
+      },
+      "Serie A buyer": {
+        "n": 345,
+        "coverage": 0.8318840579710145,
+        "below": 0.08695652173913043,
+        "above": 0.08115942028985507,
+        "median_width_eur": 7367849.066864768,
+        "median_low_over_estimate": 0.2959144728654452,
+        "median_high_over_estimate": 2.069900394306165
+      },
+      "Serie A to Serie A": {
+        "n": 128,
+        "coverage": 0.796875,
+        "below": 0.109375,
+        "above": 0.09375,
+        "median_width_eur": 8072502.812471703,
+        "median_low_over_estimate": 0.4180625175017316,
+        "median_high_over_estimate": 1.8382269225360588
+      },
+      "Bundesliga buyer": {
+        "n": 269,
+        "coverage": 0.7806691449814126,
+        "below": 0.09665427509293681,
+        "above": 0.12267657992565056,
+        "median_width_eur": 6018706.270783689,
+        "median_low_over_estimate": 0.4180625175017316,
+        "median_high_over_estimate": 1.838226922536059
+      },
+      "Bundesliga to Bundesliga": {
+        "n": 82,
+        "coverage": 0.8048780487804879,
+        "below": 0.10975609756097561,
+        "above": 0.08536585365853659,
+        "median_width_eur": 5933242.79922477,
+        "median_low_over_estimate": 0.4180625175017316,
+        "median_high_over_estimate": 1.8382269225360588
+      },
+      "Ligue 1 buyer": {
+        "n": 213,
+        "coverage": 0.8169014084507042,
+        "below": 0.046948356807511735,
+        "above": 0.13615023474178403,
+        "median_width_eur": 7165134.292859159,
+        "median_low_over_estimate": 0.4180625175017316,
+        "median_high_over_estimate": 1.838226922536059
+      },
+      "Ligue 1 to Ligue 1": {
+        "n": 53,
+        "coverage": 0.7358490566037735,
+        "below": 0.03773584905660377,
+        "above": 0.22641509433962265,
+        "median_width_eur": 7970047.9040851705,
+        "median_low_over_estimate": 0.4180625175017316,
+        "median_high_over_estimate": 1.8382269225360588
+      },
+      "Eredivisie buyer": {
+        "n": 141,
+        "coverage": 0.900709219858156,
+        "below": 0.07092198581560284,
+        "above": 0.028368794326241134,
+        "median_width_eur": 3014229.5879199943,
+        "median_low_over_estimate": 0.2746704507025886,
+        "median_high_over_estimate": 2.6931819186106853
+      },
+      "Eredivisie to Eredivisie": {
+        "n": 46,
+        "coverage": 0.9347826086956522,
+        "below": 0.021739130434782608,
+        "above": 0.043478260869565216,
+        "median_width_eur": 1910519.395599449,
+        "median_low_over_estimate": 0.2746704507025886,
+        "median_high_over_estimate": 2.693181918610686
+      }
+    },
+    "by_value_band": {
+      "under \u20ac1m": {
+        "n": 1656,
+        "coverage": 0.8067632850241546,
+        "below": 0.09420289855072464,
+        "above": 0.09903381642512077,
+        "median_width_eur": 969923.535334723,
+        "median_low_over_estimate": 0.2746704507025886,
+        "median_high_over_estimate": 2.693181918610686
+      },
+      "\u20ac1m to \u20ac3m": {
+        "n": 1260,
+        "coverage": 0.8658730158730159,
+        "below": 0.06190476190476191,
+        "above": 0.07222222222222222,
+        "median_width_eur": 2618193.36923733,
+        "median_low_over_estimate": 0.2746704507025886,
+        "median_high_over_estimate": 2.693181918610686
+      },
+      "\u20ac3m to \u20ac10m": {
+        "n": 1160,
+        "coverage": 0.8068965517241379,
+        "below": 0.06810344827586207,
+        "above": 0.125,
+        "median_width_eur": 6114076.994043973,
+        "median_low_over_estimate": 0.2959144728654452,
+        "median_high_over_estimate": 2.069900394306165
+      },
+      "\u20ac10m to \u20ac30m": {
+        "n": 490,
+        "coverage": 0.8408163265306122,
+        "below": 0.06326530612244897,
+        "above": 0.09591836734693877,
+        "median_width_eur": 19279686.751625136,
+        "median_low_over_estimate": 0.5106125152201155,
+        "median_high_over_estimate": 1.8382269225360586
+      },
+      "\u20ac30m or more": {
+        "n": 136,
+        "coverage": 0.8970588235294118,
+        "below": 0.058823529411764705,
+        "above": 0.04411764705882353,
+        "median_width_eur": 53256878.0548529,
+        "median_low_over_estimate": 0.5106125152201155,
+        "median_high_over_estimate": 1.8382269225360588
+      }
+    },
+    "validation": {
+      "training errors (previous range)": {
+        "n": 2026,
+        "coverage": 0.726061204343534,
+        "below": 0.14215202369200394,
+        "above": 0.131786771964462,
+        "median_width_eur": 2216694.9860728225,
+        "median_low_over_estimate": 0.44038904552765984,
+        "median_high_over_estimate": 2.1496292946194075,
+        "by_value_band": [
+          0.6323943661971831,
+          0.7073170731707317,
+          0.811088295687885,
+          0.8571428571428571,
+          0.8983050847457628
+        ],
+        "worst_band_gap": 0.1676056338028169
+      },
+      "pooled": {
+        "n": 2026,
+        "coverage": 0.8109575518262586,
+        "below": 0.07946692991115499,
+        "above": 0.10957551826258638,
+        "median_width_eur": 2728732.546508729,
+        "median_low_over_estimate": 0.29651413001240845,
+        "median_high_over_estimate": 2.4005742405837576,
+        "by_value_band": [
+          0.7380281690140845,
+          0.8013937282229965,
+          0.8788501026694046,
+          0.9081632653061225,
+          0.8983050847457628
+        ],
+        "worst_band_gap": 0.10816326530612241
+      },
+      "by buyer league": {
+        "n": 2026,
+        "coverage": 0.790720631786772,
+        "below": 0.08341559723593288,
+        "above": 0.12586377097729518,
+        "median_width_eur": 2589195.668715203,
+        "median_low_over_estimate": 0.29651413001240845,
+        "median_high_over_estimate": 2.4005742405837576,
+        "by_value_band": [
+          0.7267605633802817,
+          0.7961672473867596,
+          0.837782340862423,
+          0.8571428571428571,
+          0.8983050847457628
+        ],
+        "worst_band_gap": 0.09830508474576272
+      },
+      "value bands (3)": {
+        "n": 2026,
+        "coverage": 0.8065153010858835,
+        "below": 0.07107601184600197,
+        "above": 0.12240868706811452,
+        "median_width_eur": 2876218.5370597607,
+        "median_low_over_estimate": 0.2489428128089104,
+        "median_high_over_estimate": 3.001727246749153,
+        "by_value_band": [
+          0.8112676056338028,
+          0.818815331010453,
+          0.8028747433264887,
+          0.7602040816326531,
+          0.8135593220338984
+        ],
+        "worst_band_gap": 0.03979591836734697
+      },
+      "value bands (4)": {
+        "n": 2026,
+        "coverage": 0.8045409674234946,
+        "below": 0.07058242843040474,
+        "above": 0.12487660414610069,
+        "median_width_eur": 2896425.9672986344,
+        "median_low_over_estimate": 0.2489428128089104,
+        "median_high_over_estimate": 3.001727246749153,
+        "by_value_band": [
+          0.8112676056338028,
+          0.8240418118466899,
+          0.784394250513347,
+          0.7704081632653061,
+          0.8135593220338984
+        ],
+        "worst_band_gap": 0.0295918367346939
+      },
+      "value bands (5)": {
+        "n": 2026,
+        "coverage": 0.8025666337611056,
+        "below": 0.06959526159921027,
+        "above": 0.12783810463968412,
+        "median_width_eur": 2655216.5125020174,
+        "median_low_over_estimate": 0.2946884764730744,
+        "median_high_over_estimate": 2.1771806924557677,
+        "by_value_band": [
+          0.8394366197183099,
+          0.7857142857142857,
+          0.7967145790554415,
+          0.7040816326530612,
+          0.8983050847457628
+        ],
+        "worst_band_gap": 0.09830508474576272
+      }
+    },
+    "test_methods": {
+      "training errors (previous range)": {
+        "n": 4702,
+        "coverage": 0.7596767333049766,
+        "below": 0.13079540621012334,
+        "above": 0.10952786048490004,
+        "median_width_eur": 2358233.069719687,
+        "median_low_over_estimate": 0.4310446697737288,
+        "median_high_over_estimate": 2.1570439897126126,
+        "by_value_band": [
+          0.6642512077294686,
+          0.7563492063492063,
+          0.8155172413793104,
+          0.9102040816326531,
+          0.9338235294117647
+        ],
+        "worst_band_gap": 0.1357487922705315
+      },
+      "pooled": {
+        "n": 4702,
+        "coverage": 0.8321990642279881,
+        "below": 0.07507443641003828,
+        "above": 0.09272649936197362,
+        "median_width_eur": 2699112.9041513237,
+        "median_low_over_estimate": 0.3105054745211985,
+        "median_high_over_estimate": 2.2859959791799285,
+        "by_value_band": [
+          0.748792270531401,
+          0.8333333333333334,
+          0.8853448275862069,
+          0.9489795918367347,
+          0.9632352941176471
+        ],
+        "worst_band_gap": 0.16323529411764703
+      },
+      "by buyer league": {
+        "n": 4702,
+        "coverage": 0.8060399829859635,
+        "below": 0.07868991918332624,
+        "above": 0.11527009783071034,
+        "median_width_eur": 2555737.0368878506,
+        "median_low_over_estimate": 0.3105054745211985,
+        "median_high_over_estimate": 2.285995979179928,
+        "by_value_band": [
+          0.7385265700483091,
+          0.8182539682539682,
+          0.8370689655172414,
+          0.9020408163265307,
+          0.9044117647058824
+        ],
+        "worst_band_gap": 0.10441176470588232
+      },
+      "value bands (3)": {
+        "n": 4702,
+        "coverage": 0.8260314759676733,
+        "below": 0.07486176095278604,
+        "above": 0.09910676307954062,
+        "median_width_eur": 2810524.171717895,
+        "median_low_over_estimate": 0.2746704507025886,
+        "median_high_over_estimate": 2.6931819186106853,
+        "by_value_band": [
+          0.8067632850241546,
+          0.8547619047619047,
+          0.8163793103448276,
+          0.8204081632653061,
+          0.8970588235294118
+        ],
+        "worst_band_gap": 0.09705882352941175
+      },
+      "value bands (4)": {
+        "n": 4702,
+        "coverage": 0.8287962569119524,
+        "below": 0.07486176095278604,
+        "above": 0.09634198213526159,
+        "median_width_eur": 2887569.7411039937,
+        "median_low_over_estimate": 0.2746704507025886,
+        "median_high_over_estimate": 2.6931819186106853,
+        "by_value_band": [
+          0.8067632850241546,
+          0.8658730158730159,
+          0.8068965517241379,
+          0.8408163265306122,
+          0.8970588235294118
+        ],
+        "worst_band_gap": 0.09705882352941175
+      },
+      "value bands (5)": {
+        "n": 4702,
+        "coverage": 0.82475542322416,
+        "below": 0.07401105912377712,
+        "above": 0.10123351765206295,
+        "median_width_eur": 2728457.509147222,
+        "median_low_over_estimate": 0.2918737007034008,
+        "median_high_over_estimate": 2.255767839127227,
+        "by_value_band": [
+          0.8200483091787439,
+          0.8404761904761905,
+          0.8025862068965517,
+          0.8346938775510204,
+          0.8897058823529411
+        ],
+        "worst_band_gap": 0.08970588235294108
+      }
+    },
+    "holdout_summer_2026": {
+      "all": {
+        "n": 118,
+        "coverage": 0.7627118644067796,
+        "below": 0.0847457627118644,
+        "above": 0.15254237288135594,
+        "median_width_eur": 27156503.893451996,
+        "median_low_over_estimate": 0.6389476344992187,
+        "median_high_over_estimate": 1.7075561479486931
+      },
+      "Premier League buyer": {
+        "n": 76,
+        "coverage": 0.75,
+        "below": 0.10526315789473684,
+        "above": 0.14473684210526316,
+        "median_width_eur": 32376263.073798075,
+        "median_low_over_estimate": 0.6389476344992187,
+        "median_high_over_estimate": 1.7075561479486931
+      },
+      "other buyers": {
+        "n": 42,
+        "coverage": 0.7857142857142857,
+        "below": 0.047619047619047616,
+        "above": 0.16666666666666666,
+        "median_width_eur": 16220315.10564379,
+        "median_low_over_estimate": 0.4468307880209459,
+        "median_high_over_estimate": 1.9246766982273702
+      },
+      "by_value_band": {
+        "under \u20ac1m": {
+          "n": 3,
+          "coverage": 0.3333333333333333,
+          "below": 0.0,
+          "above": 0.6666666666666666,
+          "median_width_eur": 1383969.144441825,
+          "median_low_over_estimate": 0.30339602933402293,
+          "median_high_over_estimate": 2.5471689489509153
+        },
+        "\u20ac1m to \u20ac3m": {
+          "n": 10,
+          "coverage": 0.5,
+          "below": 0.0,
+          "above": 0.5,
+          "median_width_eur": 2896983.881176464,
+          "median_low_over_estimate": 0.37378390069865186,
+          "median_high_over_estimate": 2.3339738118097673
+        },
+        "\u20ac3m to \u20ac10m": {
+          "n": 22,
+          "coverage": 0.6363636363636364,
+          "below": 0.045454545454545456,
+          "above": 0.3181818181818182,
+          "median_width_eur": 8340509.265686836,
+          "median_low_over_estimate": 0.44683078802094583,
+          "median_high_over_estimate": 1.9246766982273735
+        },
+        "\u20ac10m to \u20ac30m": {
+          "n": 46,
+          "coverage": 0.8260869565217391,
+          "below": 0.10869565217391304,
+          "above": 0.06521739130434782,
+          "median_width_eur": 27046731.111832745,
+          "median_low_over_estimate": 0.6389476344992188,
+          "median_high_over_estimate": 1.7075561479486931
+        },
+        "\u20ac30m or more": {
+          "n": 37,
+          "coverage": 0.8648648648648649,
+          "below": 0.10810810810810811,
+          "above": 0.02702702702702703,
+          "median_width_eur": 66147355.000507005,
+          "median_low_over_estimate": 0.6389476344992209,
+          "median_high_over_estimate": 1.7075561479486931
+        }
+      },
+      "model": {
+        "mae_log": 0.4333065475300244,
+        "median_ape": 0.30313100511757296,
+        "within_25pct": 0.3898305084745763,
+        "n": 118
+      },
+      "market_value": {
+        "mae_log": 0.48235965912852974,
+        "median_ape": 0.33815112897017074,
+        "within_25pct": 0.3898305084745763,
+        "n": 118
+      }
+    }
   },
   "importance": {
     "log_to_cv": 3091,

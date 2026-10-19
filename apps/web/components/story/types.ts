@@ -1,6 +1,6 @@
 import type { Stat } from "@/lib/data";
 import type { XY } from "@/lib/formations";
-import type { Gap } from "@/lib/shortlist";
+import type { Gap, InjuryCoverage } from "@/lib/shortlist";
 
 export interface StatRef {
   id: string;
@@ -22,6 +22,8 @@ export interface StoryData {
   needGroup?: string;
   /** the two biggest needs with their reasons */
   gaps: Gap[];
+  /** which leagues' players have an injury tier (docs/backtests/injury.json) */
+  injury: InjuryCoverage;
   signings: { title: string; url: string | null }[];
   /** the scout's three lists for the top need: dream, realistic, hidden gem (up to three names each) */
   targets: Target[];
@@ -46,6 +48,9 @@ export interface Target {
   age?: StatRef;
   /** fair fee if this club bought him today */
   price?: StatRef;
+  /** the price's likely range (four in five past fees landed inside: docs/backtests/valuation.md) */
+  priceLow?: StatRef;
+  priceHigh?: StatRef;
   contract?: StatRef;
   marketValue?: StatRef;
   /** expected share of the buying club's minutes */
@@ -54,6 +59,8 @@ export interface Target {
   minutesNow?: StatRef;
   /** minutes in the past year's matches on record */
   minutesLastYear?: StatRef;
+  /** last season's league minutes as Transfermarkt lists them (candidate pools such as the Championship) */
+  leagueMinutes?: StatRef;
   /** league goals and assists per full match, and his rank for both at his position in his league */
   goals?: StatRef;
   assists?: StatRef;
@@ -66,7 +73,13 @@ export interface Target {
   positions?: string;
   /** chance his club sells him in a window */
   pSold?: StatRef;
+  /** Rumour Mill reports linking him with this club in the past year, and how many times likelier they make
+   *  the move (shown only when they moved the odds) */
+  pressReports?: StatRef;
+  pressLift?: StatRef;
   /** chance this move happens in a window */
   chance?: StatRef;
   projected?: StatRef;
+  /** injury-risk tier (low / moderate / elevated / high), where his league is scored */
+  injury?: StatRef;
 }
