@@ -350,6 +350,29 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - Trap: the main checkout's warehouse had an empty `rumours` table (history job never ran locally) and `.cache`
     was empty; `dugout ingest --job history --only rumour_archive` (~105 Guardian calls, 2.5 min) fills it.
 
+## Handoff (2026-10-19) — read this first
+
+- **Live:** six leagues (PL, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie); two gaps with reasons; three lists
+  per gap with stats-based why-him (TM goals/assists per 90, league rank, foot, height, caps, comparison with the
+  starter to beat); fee ranges; injury tiers in all leagues; played-position needs; Championship targets;
+  /rumours/ page; rumour odds. Nightly ~25-40 min with warm caches. No open PRs; GitHub has only `main`.
+- **Rules from the user:** commit as `delta96040 <115036752+delta96040@users.noreply.github.com>` (repo git
+  config), no `Co-Authored-By: Claude` trailer, no "Generated with Claude Code" footer. Main's history was rewritten
+  2026-10-17 to remove dhruv-aaizel and Claude; never force-push main again without asking.
+- **Keys:** GROQ_API_KEY, API_FOOTBALL_KEY (new account; old one suspended), KAGGLE_USERNAME + KAGGLE_API_TOKEN
+  (KGAT_ style, Bearer auth) are in `.env`; GitHub secrets set for Groq and API-Football. Never print keys.
+- **API-Football:** free plan gives the current season only for yesterday..tomorrow, so other leagues' predicted
+  XIs appear after each club's next match (~a week to fill). Error replies are never cached (PR #28).
+  Clubs still skipped: Le Havre (8/11 matched), Hamburg and Paderborn (no formation fits).
+- **Running sessions (started 2026-10-19):** "Player style profiles, team fit and a role model"
+  (API-Football player stats 2024 backfill <=70 calls/day, role model, why-him led by style); "Rumours section:
+  credibility instead of raw odds"; "Fine-tune an open LLM to write the dossiers" (branch writer-finetune; Groq
+  teacher run ~5 h, then QLoRA Qwen2.5-1.5B on Kaggle GPU; metrics to docs/backtests/writer_finetune.md, HF model
+  card, methods page). Each opens a PR; the user merges on request ("merge").
+- **Usage guard:** scheduled task `dugout-usage-guard` (every 20 min) stops all sessions at 93% weekly usage.
+- **User asks pending:** résumé bullets from the fine-tune results once in; why-him should be about how the player
+  plays and fits (style session); rumours should be useful, not bare percentages (rumours session).
+
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
 - Guardian dev key: 500/day, 60/min. football-data.org: 10/min.
