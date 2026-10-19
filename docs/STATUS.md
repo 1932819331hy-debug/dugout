@@ -350,6 +350,32 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - Trap: the main checkout's warehouse had an empty `rumours` table (history job never ran locally) and `.cache`
     was empty; `dugout ingest --job history --only rumour_archive` (~105 Guardian calls, 2.5 min) fills it.
 
+- **Rumour brief (2026-10-19, branch `claude/intelligent-archimedes-a65c5e`; user: the rumour block was "just
+  useless percentages"):** the bare "one time in N" line is gone (site, agents, graph gate). Each incoming rumour
+  now carries a brief, as `brief` facts (key_stats only, never prose: `Fact.brief`, writer and summary skip them):
+  - **Source credibility** (`rumours.outlet_credibility`): an outlet's reports vs what the same reports would have done
+    from anyone (shipped rumour model, out of fold by season, never sees the outlet). Exact Poisson 80% interval of
+    came true / expected: wholly above 1 = reliable, below = speculative, else about average; < 20 traced = unproven.
+    Result (rumours.md): Bild, Daily Record, A Bola reliable; Daily Star speculative; everyone else (and the column's
+    own round-ups) about average. Label check (labels from seasons before 2023-24, scored after): only 7 later reports
+    from labelled outlets, so the labels cannot be confirmed yet (said on the site). Raw rate only on hover
+    (`Num detail`). Live caveat: ~95% of 2025-26 items credit no outlet, so most rumours show the column's label.
+  - **Heat** (`rumours.heat`): Rumour Mill columns carrying the same player-club link in the past year + other press
+    in the news corpus (RSS, club sites' reproduced press; not the clubs' own articles) with a transfer sentence
+    naming both; independent outlets = ownership groups (`dugout_verify.factcheck.ownership_group`, GROUPS gained
+    Mirror/Star/Record/talkSPORT/Standard/MailOnline), first report date, outlet names.
+  - **Reality check** (`market.rumour_reality`, model 'scout', entity 'rumour'): realism_score for this player and
+    buyer (move in a window, his club selling, this buyer), contract months, and `seller` rows: players his club
+    sold for a fee since 1 July three summers back (TM transfers + Wikipedia summer-2026 fees).
+  - **Track record** (`rumours.track_record`): the same outlet's latest labelled reports about this buying club
+    (then about his club's players), with "joined / did not join within half a year".
+  - Order: `rumours.priority` = credibility weight (1.5 / 1 / 0.8 / 0.5) x independent outlets (+ reports as a
+    tie-break); agents pick the top 3 by it, the site sorts the same way (`lib/rumourBrief.briefScore`).
+  - Site: `components/RumourBriefs.tsx` (Source / Heat / Reality / Track record rows) in the dossier's scout section
+    (the rumour sentences leave the prose there), story chapter three (two, compact) and /rumours/ (top 12 across
+    clubs; outlet table shows labels, record on hover). Methods row rewritten. Old dossiers (no brief facts) still
+    render: the rumour text with "no record yet" until the nightly rebuilds them.
+
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
 - Guardian dev key: 500/day, 60/min. football-data.org: 10/min.

@@ -943,11 +943,42 @@ def backtest(
                 for s, r in by_season.iterrows()
             },
         }
+    y = f"joined_{SHIPPED_HORIZON}m"
+    lab = links[links[y].notna()].copy()
+    lab[y] = lab[y].astype(bool)
+    report["credibility"] = {
+        "outlets": {
+            o: c
+            for o, c in sorted(
+                outlet_credibility(lab, y, expected_out_of_fold(lab, y)).items(), key=lambda kv: -kv[1]["n"]
+            )
+            if c["n"] >= MIN_OUTLET_LINKS
+        },
+        "check": label_check(lab, y),
+    }
     if out_dir:
         out_dir.mkdir(parents=True, exist_ok=True)
         (out_dir / "rumours.json").write_text(json.dumps(report, indent=2, default=float), encoding="utf-8")
         (out_dir / "rumours.md").write_text(report_md(report), encoding="utf-8")
     return report
+
+
+def _label_check_md(chk: dict) -> list[str]:
+    if not chk:
+        return []
+    lines = [
+        f"Do the labels hold? Labels from the seasons before {chk['from']} (out of fold within them), then each label's",
+        f"later reports ({chk['from']} onwards) against a model fitted on the earlier seasons:",
+        "",
+        "| Label (earlier seasons) | Outlets | Later links | Came true | Expected | Ratio (80% interval) |",
+        "|---|---|---|---|---|---|",
+    ]
+    for lbl, c in chk["labels"].items():
+        lines.append(
+            f"| {lbl} | {c['outlets']} | {c['n']} | {c['hits']} | {c['expected']:.1f} |"
+            f" {c['ratio']:.2f} ({c['low']:.2f}-{c['high']:.2f}) |"
+        )
+    return [*lines, ""]
 
 
 def report_md(r: dict) -> str:
@@ -1033,6 +1064,24 @@ def report_md(r: dict) -> str:
         "|---|---|---|",
         *[f"| {s} | {v['n']} | {v['rate']:.1%} |" for s, v in h["by_season"].items()],
         "",
+        "## Source credibility labels (the rumour brief)",
+        "",
+        "Each outlet's record is set against what the same reports would have done from anyone: the shipped rumour",
+        "model (which never sees the outlet), fitted on the other seasons, gives each report's chance; their sum is",
+        "what the outlet *should* have got right. The label comes from the exact Poisson 80% interval of came true /",
+        "expected: wholly above 1 = **reliable**, wholly below 1 = **speculative**, otherwise **about average**;",
+        f"fewer than {MIN_OUTLET_LINKS} traced reports = **unproven**. Raw rates mislead: outlets credited mostly in",
+        "recent seasons look good because the column's later items come true twice as often.",
+        "",
+        "| Outlet | Links | Came true | Raw rate | Similar reports | Ratio (80% interval) | Label |",
+        "|---|---|---|---|---|---|---|",
+        *[
+            f"| {o} | {c['n']} | {c['hits']} | {c['raw']:.1%} | {c['expected_rate']:.1%} |"
+            f" {c['ratio']:.2f} ({c['low']:.2f}-{c['high']:.2f}) | {c['label']} |"
+            for o, c in r.get("credibility", {}).get("outlets", {}).items()
+        ],
+        "",
+        *_label_check_md(r.get("credibility", {}).get("check", {})),
         "## Reading this honestly",
         "",
         "- **Outlets barely differ (a negative result).** The fitted prior is strong, so even outlets with hundreds",
