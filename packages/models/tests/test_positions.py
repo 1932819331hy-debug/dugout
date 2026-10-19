@@ -58,6 +58,7 @@ def _market(players: list[tuple], lineups: pd.DataFrame) -> Market:
     )
     mk.squads = mk.squads.drop(columns="sub_position")
     mk.incoming, mk.played = {}, pd.Series(dtype=object)
+    mk.pools = set()  # no candidate pools (the Championship's squads) in these tests
     mk.comps = pd.DataFrame({"competition_id": ["GB1"], "sub_type": ["first_tier"]})
     mk.ap = pd.DataFrame(
         columns=["player_id", "date", "competition_id", "minutes_played", "goals", "assists"]
