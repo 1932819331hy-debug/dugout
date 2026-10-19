@@ -882,8 +882,9 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
             (
                 "need_depth",
                 "players for the position, veterans aside",
-                f"{name} have {{p}} players for {group}, leaving veterans aside.",
-                "int",
+                f"Counted by where they start, {name}'s options for {group} add up to {{p}} players, leaving "
+                "veterans aside.",
+                "depth",
             ),
             (
                 "need_wanted",
@@ -926,12 +927,14 @@ def shortlist(tb: Toolbox, club: str, per_need: int = 3) -> list[Fact]:
             (
                 "need_ageing_share",
                 "share of the options who are veterans",
-                f"{{p}} of {name}'s options for {group} are veterans.",
+                f"{{p}} of {name}'s options for {group}, counted by where they start, are veterans.",
                 "pct",
             ),
         ):
             rec = tb.model("scout", "club", club, metric, f"need:{rank}")
             if rec is not None and not (metric == "need_ageing_share" and float(rec[1]) == 0):
+                if fmt == "depth":  # starts-weighted, one decimal: "2.6 players", but "3 players"
+                    fmt = "int" if float(rec[1]).is_integer() else ".1f"
                 if metric in ("need_best_player", "need_bar_player"):
                     tb.register(f"need_best:{rec[1]}", str(rec[1]))
                 facts += _keep(_fact(tb, name, f"{label} ({which_need})", tmpl, rec, fmt, entity_id=club))

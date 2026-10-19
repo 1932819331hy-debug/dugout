@@ -24,7 +24,7 @@ import pandas as pd
 from dugout_pipeline.settings import get_settings
 
 from dugout_models import potential
-from dugout_models.market import GROUPS, PL, SHORTLIST, STARTERS, Market, profile_rows
+from dugout_models.market import GROUPS, PL, SHORTLIST, Market, profile_rows
 from dugout_models.opportunity import FEATURES as OPP_FEATURES
 from dugout_models.publish import _row
 
@@ -201,10 +201,8 @@ def gems(mk: Market, pool: pd.DataFrame, proj: dict, ids: list[str], now: dateti
     rows: list[dict] = []
     for slug in sorted(mk.squads.club_id.unique()):
         tm_club = str(mk.squads.loc[mk.squads.club_id == slug, "tm_club_id"].iloc[0])
-        sq = mk.squad(slug)
         for i, n in mk.needs(slug).head(2).iterrows():
-            inc = sq.loc[sq.group == n.group, "market_value_eur"].astype(float).sort_values(ascending=False)
-            bar = inc.iloc[STARTERS[n.group] - 1] if len(inc) >= STARTERS[n.group] else np.inf
+            bar = n.bar_value if n.bar_value == n.bar_value else np.inf  # the need's last regular starter
             c = g[mk.plays(g.player_id, g["sub"], n.group) & (g.club_now != tm_club) & (g.mv < bar)]
             c = c.nlargest(SHORTLIST, "proj4")
             # the price today if this club bought him (same valuation model as the other lists)

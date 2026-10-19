@@ -8,7 +8,8 @@ their latest transfermarkt-datasets valuation.
   fair_fee              valuation model (docs/backtests/valuation.md): price if sold to another club in the same
                         league (the model is fitted on buyers in every league; Premier League buyers are a segment)
   sale_likelihood       mobility model (realism.md): P(sold for a fee in a transfer window), features as of today
-  needs                 positions where the club is thinnest/weakest (heuristic: depth and value at the position)
+  needs                 positions where the club is thinnest/weakest (heuristic: depth and value at the position,
+                        players counted where they start: positions.group_weights; needs.md)
   shortlist             three lists per need, from first-tier players in every league the dataset covers.
                         best: highest market value among players the playing-time model (opportunity.md) expects
                         to get at least 40% of the club's minutes, whatever the cost or the odds.
@@ -41,7 +42,7 @@ from dugout_models import realism, valuation
 from dugout_models.opportunity import FEATURES as OPP_FEATURES
 from dugout_models.opportunity import OpportunityModel
 from dugout_models.opportunity import build as opportunity_frame
-from dugout_models.positions import positions_played
+from dugout_models.positions import GROUP_STARTS, group_weights, played, positions_played
 from dugout_models.publish import _row
 
 log = logging.getLogger(__name__)
@@ -58,6 +59,7 @@ GROUPS = {
     "winger": ["Right Winger", "Left Winger", "Right Midfield", "Left Midfield"],
     "centre-forward": ["Centre-Forward", "Second Striker"],
 }
+GROUP_OF = {s: g for g, subs in GROUPS.items() for s in subs}
 NEEDED = {
     "goalkeeper": 2,
     "centre-back": 4,
@@ -188,15 +190,27 @@ class Market:
         self.squads = pd.read_csv(SQUADS, dtype={"tm_player_id": str, "tm_club_id": str}).assign(comp=PL)
         self.incoming: dict[str, list[tuple]] = {}  # filled from official announcements by market()
         self.moved: set[str] = set()  # moved since the dataset snapshot (Wikipedia lists), filled by market()
-        self.played = positions_played()  # positions players actually start at (positions.py)
+        lineups = played()
+        self.played = positions_played(p=lineups)  # positions players actually start at (positions.py)
         self.players = self.t["players"].copy()
         self.players["player_id"] = self.players.player_id.astype(str)
         self.players = self.players.set_index("player_id")
+        self.use_positions(lineups)
         if extra_squads is not None and len(extra_squads):
             self.squads = pd.concat([self.squads, self._fill(extra_squads)], ignore_index=True)
         self._with_current_values()
         self.clubs = self.t["clubs"].copy()
         self.clubs["club_id"] = self.clubs.club_id.astype(str)
+
+    def use_positions(self, lineups: pd.DataFrame, min_starts: int = GROUP_STARTS) -> None:
+        """Where each player counts in a squad's depth: the groups he starts in (positions.group_weights), his
+        listed position below `min_starts` recorded starts. (A huge `min_starts` gives the listed positions only:
+        the grouping before 2026-10-18, kept for the needs backtest.)"""
+        self.weights = group_weights(
+            lineups, self.players.sub_position, GROUP_OF, min_starts=min_starts
+        ).rename(columns={"player_id": "tm_player_id"})
+        main = self.weights.sort_values(["weight", "group"]).drop_duplicates("tm_player_id", keep="last")
+        self.main_group = main.set_index("tm_player_id").group
 
     def _fill(self, sq: pd.DataFrame) -> pd.DataFrame:
         """Values (latest valuation, June at the latest), contract expiry and join date from transfermarkt-datasets
@@ -502,22 +516,37 @@ class Market:
     def squad(self, club_slug: str) -> pd.DataFrame:
         sq = self.squads[self.squads.club_id == club_slug].copy()
         sq["sub_position"] = sq.tm_player_id.map(self.players.sub_position)
-        sq["group"] = sq.sub_position.map({s: g for g, subs in GROUPS.items() for s in subs})
+        sq["group"] = sq.tm_player_id.map(
+            self.main_group
+        )  # the group he starts in most (positions.group_weights)
         sq["age"] = (self.now - pd.to_datetime(sq.birth_date)).dt.days / 365.25
         return sq
 
+    def depth(self, club_slug: str) -> pd.DataFrame:
+        """The squad by where players start: one row per (player, position group) he starts in for 25%+ of his
+        starts, `weight` his share there (each player adds up to one). Players with too few recorded starts (new
+        signings, youngsters) count at their listed position (positions.group_weights)."""
+        sq = self.squad(club_slug).drop(columns="group")
+        return sq.merge(self.weights[["tm_player_id", "group", "weight", "source"]], on="tm_player_id")
+
+    def at(self, club_slug: str, group: str) -> pd.DataFrame:
+        """The club's options for `group`: everyone who starts there for 25%+ of his starts."""
+        d = self.depth(club_slug)
+        return d[d.group == group]
+
     def _best(self, club_slug: str) -> dict[str, float]:
         """Per position group: market value of the club's best option under 33."""
-        sq = self.squad(club_slug)
-        return {g: sq.loc[(sq.group == g) & (sq.age < 33), "market_value_eur"].max() for g in NEEDED}
+        d = self.depth(club_slug)
+        return {g: d.loc[(d.group == g) & (d.age < 33), "market_value_eur"].max() for g in NEEDED}
 
     def needs(self, club_slug: str, peers: int = 6) -> pd.DataFrame:
         """Score each position group: missing depth (vs a two-deep squad), the best option's value against the
         median best option at the same position among the `peers` clubs with the most similar squad strength
         (like with like: goalkeepers vs goalkeepers, a title contender vs title contenders), and ageing.
-        Signings the club has announced but who have not joined yet (loaned back, joining next summer) come from
-        its official news (`agreed_signings`). Peers come from the club's own league. Higher = bigger need. A
-        transparent heuristic, not a fitted model."""
+        Depth counts players where they start (`depth`): a centre-back with 40% of his starts at right-back is
+        0.4 of a full-back; peers are grouped the same way. Signings the club has announced but who have not
+        joined yet (loaned back, joining next summer) come from its official news (`agreed_signings`). Peers come
+        from the club's own league. Higher = bigger need. A transparent heuristic, not a fitted model."""
         comp = self.squads.loc[self.squads.club_id == club_slug, "comp"].iloc[0]
         strength = {
             c: self.squad(c).market_value_eur.nlargest(11).median()
@@ -529,14 +558,18 @@ class Market:
         ]
         ref = pd.DataFrame([self._best(c) for c in near]).median()
         best = self._best(club_slug)
-        sq = self.squad(club_slug)
+        dp = self.depth(club_slug)
         rows = []
         for g, want in NEEDED.items():
-            at = sq[(sq.group == g) & (sq.age < 33)]
-            depth_gap = max(0, want - len(at)) / want
+            options = dp[dp.group == g]
+            at = options[options.age < 33]
+            depth = float(at.weight.sum())
+            depth_gap = max(0.0, want - depth) / want
             b = best[g] if best[g] == best[g] else 0.0
             quality_gap = max(0.0, 1 - b / ref[g]) if ref[g] == ref[g] and ref[g] > 0 else 0.0
-            ageing = float((sq[(sq.group == g)].age >= 31).mean()) if (sq.group == g).any() else 0.0
+            # share of the group's starts-weighted depth held by veterans
+            total = options.weight.sum()
+            ageing = float(options.weight[options.age >= 31].sum() / total) if total > 0 else 0.0
             incoming = sum(1 for grp, _, _ in self.incoming.get(club_slug, []) if grp == g)
             ranked = at.sort_values("market_value_eur", ascending=False)
             top = ranked.head(1)
@@ -548,7 +581,8 @@ class Market:
                     # a signing the club has already announced for this position halves its need
                     "score": (depth_gap + quality_gap + 0.5 * ageing) * 0.5**incoming,
                     "incoming": incoming,
-                    "depth": len(at),
+                    "depth": depth,
+                    "players": len(at),  # how many players that depth is spread over
                     "depth_gap": depth_gap,
                     "quality_gap": quality_gap,
                     "ageing_share": ageing,
@@ -634,7 +668,6 @@ class Market:
         return primary.isin(wanted) | often.astype(bool)
 
     def shortlist(self, club_slug: str, group: str, tm_club: str) -> pd.DataFrame:
-        sq = self.squad(club_slug)
         cap = self.capacity.get(tm_club, np.nan)
         cap = cap if cap == cap and cap > 0 else self.club_value.get(tm_club, 0) * 0.1
         pool = self.players.reset_index()
@@ -689,7 +722,7 @@ class Market:
             buyer_club=tm_club,
         )
         pool["fair_fee"] = fees.fair_fee.to_numpy()
-        incumbents = sq[sq.group == group]
+        incumbents = self.at(club_slug, group)  # everyone who starts there, as in needs()
         out = []
         for r in pool.itertuples():
             fee = r.fair_fee if r.fair_fee == r.fair_fee else r.value
@@ -826,7 +859,10 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
         for i, n in needs.head(2).iterrows():
             rank = i + 1
             rows.append(_row("scout", "club", slug, "need", n.group, now, f"need:{rank}"))
-            rows.append(_row("scout", "club", slug, "need_depth", int(n.depth), now, f"need:{rank}"))
+            # starts-weighted depth: one decimal (a centre-back who starts a third of games at full-back is 0.3 there)
+            rows.append(
+                _row("scout", "club", slug, "need_depth", round(float(n.depth), 1), now, f"need:{rank}")
+            )
             ctx = f"need:{rank}"
             rows.append(_row("scout", "club", slug, "need_wanted", int(n.wanted), now, ctx))
             rows.append(

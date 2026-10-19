@@ -30,7 +30,8 @@ function GapReason({ g, club, first }: { g: Gap; club: string; first: boolean })
       <br />
       {thin && g.depth && g.wanted && (
         <>
-          Only <N s={g.depth} /> players for it, veterans aside, where a squad carries <N s={g.wanted} />.{" "}
+          Counted by where they start, its options add up to only <N s={g.depth} /> players, veterans aside,
+          where a squad carries <N s={g.wanted} />.{" "}
         </>
       )}
       {weak && g.bestValue && g.peerValue && (
@@ -126,6 +127,7 @@ export function chapterContent(d: StoryData) {
           </ol>
           <p className="mt-4 max-w-md text-sm">
             Every position is compared with the six squads in its league closest in strength: depth, the best option&apos;s value, ageing.
+            Players count where they actually start, not where they are listed.
             {d.signings.length > 0 && " Signings the club has already announced count before anything is recommended:"}
           </p>
           {d.signings.length > 0 && (

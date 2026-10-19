@@ -96,6 +96,12 @@ def _run_one(model: str, args, con) -> bool:
         h = r["horizons"][str(SHIPPED_HORIZON)]
         print("rumours:", {k: h[k]["brier"] for k in ("recent_rate", "outlet_only", "model")})
         return h["model"]["brier"] < h["recent_rate"]["brier"]
+    if model == "needs":
+        from dugout_models.needs_backtest import backtest
+
+        r = backtest(con, BACKTESTS)
+        print("needs:", r["hit_rate"], "changed today:", r["changed_today"])
+        return True  # no ground truth: the report shows the effect, it has no pass mark
     raise SystemExit(f"unknown model {model}")
 
 
@@ -112,6 +118,7 @@ MODELS = [
     "lineup",
     "potential",
     "rumours",
+    "needs",
 ]
 
 
