@@ -159,6 +159,9 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
 
   - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big
     leagues; (3) Championship squads via local refresh; (4) conformal ranges on fair fees (done 2026-10-19, below); (5) rumour news signal
+
+  - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big
+    leagues; (3) Championship squads via local refresh; (4) conformal ranges on fair fees; (5) rumour news signal (done 2026-10-18, below)
     for realism (PRIORS["news_weight_per_point"] is a prior; the archive can now fit it).
   - User wants: product voice everywhere (no "model" wording on the site), realistic targets, all major leagues,
     and STATUS updated before the context fills so a new chat can continue.
@@ -331,6 +334,21 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     in `{lo}`/`{hi}` slots (LLM codes `[F3lo]`/`[F3hi]`); key stats label them "likely low/high end of the ...".
     Site: shortlist "Price €47.0m (likely €38.0m–€58.0m)", dossier prose "(likely between ... and ...)", Methods row.
   - `calibrate` now drops rows with no market value from the calibration window (they gave infinite errors).
+
+- **Realism news signal (2026-10-18, branch `claude/realism-news-signal-654aee`, backlog item 5):**
+  - The hand-set news prior (`PRIORS["news_weight_per_point"]`, never used live) is gone. `realism.player_news` /
+    `pair_news` count Rumour Mill reports (`rumour_links`) strictly before the snapshot date (1 June in training,
+    today live): reports naming the player, clubs named, reports naming this club and their share, 90 days / a year.
+  - Chosen on validation 2023 (realism.md): destination gets `news_club_365` + `news_club_share_365` (test AUC
+    0.733 -> 0.737, top-1 47.2% -> 47.5%, log loss 0.381 -> 0.378; moves whose buyer was named: top-1 67% -> 87%,
+    but only 30 of 2,004 test moves). Mobility: every news set slightly worse on validation -> not used (negative).
+  - Since 2020 the Rumour Mill runs only in windows (nothing March-May), so the 90-day windows are empty: a year.
+  - Live: `market()` loads `rumour_links` (publish now runs `rumours` before `market`); news columns are joined
+    after the cached frames, so the frame cache keys did not change. Shortlist rows `press_reports` (best and
+    realistic) and `press_lift` (realistic, shown when >= 1.1): "The Guardian's Rumour Mill has linked him with X
+    in N reports over the past year, which makes this move N times as likely as it would be without them."
+  - Trap: the main checkout's warehouse had an empty `rumours` table (history job never ran locally) and `.cache`
+    was empty; `dugout ingest --job history --only rumour_archive` (~105 Guardian calls, 2.5 min) fills it.
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.

@@ -73,6 +73,10 @@ export interface Target {
   positions?: string;
   /** chance his club sells him in a window */
   pSold?: StatRef;
+  /** Rumour Mill reports linking him with this club in the past year, and how many times likelier they make
+   *  the move (shown only when they moved the odds) */
+  pressReports?: StatRef;
+  pressLift?: StatRef;
   /** chance this move happens in a window */
   chance?: StatRef;
   projected?: StatRef;

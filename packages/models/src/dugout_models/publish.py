@@ -625,7 +625,8 @@ def publish(
     from dugout_models.market import market
     from dugout_models.rumours import publish as rumours
 
-    registry = {**MODELS, "market": market, "rumours": rumours}
+    # rumours first: it rewrites rumour_links, which the market's realism reads (press reports)
+    registry = {**MODELS, "rumours": rumours, "market": market}
     counts = {}
     for name in models or list(registry):
         rows = registry[name](con, now)

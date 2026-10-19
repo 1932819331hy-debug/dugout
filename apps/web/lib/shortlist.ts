@@ -47,6 +47,8 @@ export function shortlists(d: Dossier): Target[] {
         positions: text(fact("positions he starts at")),
         pSold: fact("chance his club sells him"),
         chance: fact("chance the move happens"),
+        pressReports: fact("Rumour Mill reports linking him"),
+        pressLift: fact("how many times likelier those reports"),
         projected: fact("projected market value"),
         injury: fact("injury-risk tier"),
       });

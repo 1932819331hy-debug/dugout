@@ -52,7 +52,7 @@ def _run_one(model: str, args, con) -> bool:
     if model == "realism":
         from dugout_models.realism import backtest
 
-        r = backtest(BACKTESTS)
+        r = backtest(BACKTESTS, con)
         print("realism:", {k: r[k]["auc"] for k in ("mobility", "destination")})
         return r["destination"]["top1"] > r["destination"]["random_top1"]
     if model == "injury":
