@@ -174,6 +174,34 @@ export default function MethodsPage() {
           <Row name="Injury risk" verdict="tiers, not percentages">
             Load and history model. AUC <B file="injury" j={inj} value={inj?.results?.logistic?.auc} label="injury AUC" />, top-decile lift{" "}
             <B file="injury" j={inj} value={inj?.results?.logistic?.top_decile_lift} label="top-decile lift" fmt="x" />; shown as risk tiers because calibration is limited.
+            {inj?.leagues && (
+              <>
+                {" "}
+                Other leagues have no current minutes, so their tiers come from the injury record and age alone:{" "}
+                {Object.entries(inj.leagues as J)
+                  .filter(([k, r]) => k !== "premier_league" && r.scored)
+                  .map(([k, r], i) => (
+                    <span key={k}>
+                      {i > 0 && ", "}
+                      <span data-name>{r.name}</span> AUC{" "}
+                      <B file="injury" j={inj} value={r.results?.history_pooled?.auc} label={`injury AUC, ${r.name}`} />
+                    </span>
+                  ))}
+                {(inj.unscored_leagues as string[]).length > 0 && (
+                  <>
+                    ; not rated in{" "}
+                    {(inj.unscored_leagues as string[]).map((n, i) => (
+                      <span key={n}>
+                        {i > 0 && ", "}
+                        <span data-name>{n}</span>
+                      </span>
+                    ))}{" "}
+                    (too little injury data)
+                  </>
+                )}
+                .
+              </>
+            )}
           </Row>
           <Row name="Lineup optimiser" verdict="slightly beats heuristic">
             CP-SAT integer programme. Predicted XI overlap with the real XI{" "}

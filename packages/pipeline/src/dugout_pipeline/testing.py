@@ -195,5 +195,13 @@ TRIMMERS: dict[str, Callable[[str, bytes], bytes]] = {
         }
     ),
     "api_football": _json(_trim_list("response", 6)),
+    # `status` also names the account: keep only today's request count
+    "api_football_history": _json(
+        lambda u, d: (
+            {"response": {"requests": d["response"]["requests"]}}
+            if u.endswith("/status")
+            else _trim_list("response", 6)(u, d)
+        )
+    ),
     "rumour_archive": _json(_trim_rumour_mill),
 }

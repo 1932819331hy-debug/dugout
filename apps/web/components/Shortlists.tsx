@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { StatRef, Target } from "@/components/story/types";
-import { type Gap, KINDS } from "@/lib/shortlist";
+import { type Gap, type InjuryCoverage, KINDS } from "@/lib/shortlist";
 
 export const LIST_LABEL: Record<Target["kind"], string> = {
   best: "Dream targets · whatever the cost",
@@ -148,6 +148,20 @@ function Why({
   );
 }
 
+/** League names (some carry digits: "Ligue 1"), joined as prose. */
+function Names({ list }: { list: string[] }) {
+  return (
+    <>
+      {list.map((x, i) => (
+        <span key={x}>
+          {i > 0 && (i === list.length - 1 ? " and " : ", ")}
+          <span data-name>{x}</span>
+        </span>
+      ))}
+    </>
+  );
+}
+
 /** One line on how he plays: where he starts, his stronger foot, height, caps. */
 function Profile({ t, n }: { t: Target; n: (s: StatRef) => ReactNode }) {
   const bits: ReactNode[] = [];
@@ -165,6 +179,7 @@ function Profile({ t, n }: { t: Target; n: (s: StatRef) => ReactNode }) {
         {n(t.caps)} <span data-meta>caps</span>
       </span>,
     );
+  if (t.injury) bits.push(<span key="i">injury risk {n(t.injury)}</span>);
   if (!bits.length) return null;
   return (
     <p className="mt-0.5 font-mono text-xs text-pencil">
@@ -249,6 +264,7 @@ export default function Shortlists({
   targets,
   buyer,
   gaps,
+  injury,
   n,
   compact = false,
 }: {
@@ -256,6 +272,8 @@ export default function Shortlists({
   buyer: string;
   /** the needs in order: their positions and who a signing has to beat */
   gaps: Gap[];
+  /** leagues whose players have an injury tier */
+  injury?: InjuryCoverage;
   n: (s: StatRef) => ReactNode;
   compact?: boolean;
 }) {
@@ -298,6 +316,18 @@ export default function Shortlists({
       <p className="mono-label text-pencil">
         Price is our fair fee for {buyer} today. Wages are not shown: no free source publishes them.
       </p>
+      {injury && injury.scored.length > 0 && (
+        <p className="mono-label text-pencil">
+          Injury risk is rated for players in <Names list={injury.scored} />
+          {injury.unscored.length > 0 && (
+            <>
+              ; <Names list={injury.unscored} /> {injury.unscored.length > 1 ? "have" : "has"} too little injury data to
+              rate
+            </>
+          )}
+          ; other leagues have none.
+        </p>
+      )}
     </div>
   );
 }

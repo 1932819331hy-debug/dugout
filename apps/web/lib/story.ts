@@ -1,7 +1,7 @@
 // The scroll story's data for one club (/story/<club>/), built from its verified dossier.
 import type { StatRef, StoryData } from "@/components/story/types";
 import { claimText, displays, section, type Dossier } from "@/lib/data";
-import { gaps, shortlists } from "@/lib/shortlist";
+import { gaps, injuryCoverage, shortlists } from "@/lib/shortlist";
 import { FORMATION_SLOTS, GAP_ZONES, opposition, scatter, slotPositions } from "@/lib/formations";
 
 
@@ -63,6 +63,7 @@ export function storyData(d: Dossier): StoryData {
     need,
     needGroup,
     gaps: gaps(d),
+    injury: injuryCoverage(),
     // announced signings come from the club's own site (official); press talk is a rumour, listed separately
     signings: attributed
       .filter((c) => c.sources.some((s) => s.official))

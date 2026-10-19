@@ -7,19 +7,23 @@ season only a rolling date window of yesterday..tomorrow. So nightly we use date
 
 from __future__ import annotations
 
+import logging
 from datetime import date, datetime, timedelta
+from pathlib import Path
 from typing import Any
 
 import pandas as pd
 
 from dugout_pipeline.adapters.base import DAY, HOUR, TIER_DATA, SourceAdapter
 from dugout_pipeline.adapters.fpl import match_id
+from dugout_pipeline.adapters.transfermarkt import TM_DIR
 from dugout_pipeline.clubs import ClubResolver, normalise
 from dugout_pipeline.db import upsert
-from dugout_pipeline.http import BudgetExceeded
-from dugout_pipeline.ids import attach_catalogue
-from dugout_pipeline.matching import best_club
+from dugout_pipeline.http import BudgetExceeded, FetchError
+from dugout_pipeline.matching import best_club, squad_player
 from dugout_pipeline.settings import REPO_ROOT
+
+log = logging.getLogger(__name__)
 
 INJURY_DIR = REPO_ROOT / "data" / "raw" / "api_football"
 
@@ -339,8 +343,9 @@ class ApiFootballAdapter(SourceAdapter):
         return {"match_observations": upsert(self.ctx.con, "match_observations", rows), "api_calls": calls}
 
     def injury_history(self, season: int) -> pd.DataFrame:
-        """Free plan: full-season injury/absence lists for 2022-2024 (one call each, cached for a year).
-        Saved as Parquet for the injury-risk model; player ids are mapped to Reep where the register knows them."""
+        """Free plan: a league's full-season injury/absence list for 2022-2024 (one call, cached for a year).
+        Saved as Parquet for the injury-risk model, with Reep and Transfermarkt player ids where they are known
+        (see `map_transfermarkt`)."""
         league_id = self.ctx.league_cfg["provider_ids"]["api_football"]
         body, _ = self.call("injuries", {"league": league_id, "season": season}, ttl=365 * DAY)
         rows = [
@@ -357,36 +362,171 @@ class ApiFootballAdapter(SourceAdapter):
             }
             for i in body["response"]
         ]
-        df = pd.DataFrame(rows)
-        if attach_catalogue(self.ctx.con):
-            ids = df.api_player_id.astype(str).unique().tolist()
-            m = self.ctx.con.execute(
-                "SELECT external_id, reep_id FROM reep.bridges WHERE provider='api_football' AND namespace='player' "
-                "AND external_id IN (SELECT unnest(?))",
-                [ids],
-            ).df()
-            df = df.merge(
-                m.rename(columns={"external_id": "api_player_id_s"}),
-                left_on=df.api_player_id.astype(str),
-                right_on="api_player_id_s",
-                how="left",
-            ).drop(columns=["key_0", "api_player_id_s"], errors="ignore")
+        df = pd.DataFrame(rows, columns=INJURY_COLUMNS)
+        df["league"] = self.ctx.league
+        df = self.map_transfermarkt(df, season)
         INJURY_DIR.mkdir(parents=True, exist_ok=True)
-        df.to_parquet(INJURY_DIR / f"injuries_{season}.parquet", index=False)
+        df.to_parquet(injury_file(self.ctx.league, season), index=False)
         return df
+
+    def map_transfermarkt(self, df: pd.DataFrame, season: int) -> pd.DataFrame:
+        """Reep id and Transfermarkt id per absentee. Reep's bridge first; else the name within his club's
+        squad that season (players with a Transfermarkt appearance for the club; the seasons either side when he
+        missed all of it), the club found by Reep or by name among the league's clubs that season. The free
+        plan's injury list carries no date of birth, so a name two squad players share stays unmatched."""
+        reep: dict[int, str] = {}
+        tm: dict[int, str] = {}
+        how: dict[int, str] = {}
+        for api_id in df.api_player_id.dropna().unique():
+            hit = self.ctx.reep.lookup("api_football", "player", int(api_id))
+            if hit:
+                reep[api_id] = hit.reep_id
+                if hit.ids.get("transfermarkt/spieler"):
+                    tm[api_id], how[api_id] = hit.ids["transfermarkt/spieler"], "reep"
+        squads = self.tm_squads(season)
+        if squads is not None:
+            league_clubs, by_club = squads
+            keys = ["api_player_id", "player_name", "api_team_id", "team"]
+            for api_id, name, team_id, team in df[keys].drop_duplicates().itertuples(index=False):
+                if api_id in tm:
+                    continue
+                club = self._tm_club(int(team_id), team, league_clubs)
+                for squad in by_club.get(club, ()):
+                    hit = squad_player(name, squad)
+                    if hit:
+                        tm[api_id], how[api_id] = hit, "name_in_club"
+                        break
+        df["reep_id"] = df.api_player_id.map(reep)
+        df["tm_player_id"] = df.api_player_id.map(tm)
+        df["match"] = df.api_player_id.map(how)
+        return df
+
+    def _tm_club(self, team_id: int, team: str, league_clubs: list[tuple[str, str, str]]) -> str | None:
+        cache = self.__dict__.setdefault("_tm_clubs", {})
+        if team_id not in cache:
+            hit = self.ctx.reep.lookup("api_football", "team", team_id)
+            tm = hit.ids.get("transfermarkt/verein") if hit else None
+            if not tm:
+                best = best_club([team], league_clubs)
+                tm = best[2] if best else None
+            cache[team_id] = tm
+        return cache[team_id]
+
+    def tm_squads(self, season: int) -> tuple[list[tuple[str, str, str]], dict[str, list]] | None:
+        """(the league's clubs that season as (id, name, id), {club: [season squad, three-season squad]}) from
+        transfermarkt-datasets (CC0), or None when its tables are not downloaded (the history job loads them first)."""
+        comp = self.ctx.league_cfg["provider_ids"].get("transfermarkt")
+        if not comp or not (TM_DIR / "appearances.parquet").is_file():
+            log.warning("transfermarkt-datasets tables missing: absentees matched by Reep only")
+            return None
+        apps = pd.read_parquet(
+            TM_DIR / "appearances.parquet", columns=["player_id", "player_club_id", "date", "competition_id"]
+        )
+        players = pd.read_parquet(TM_DIR / "players.parquet", columns=["player_id", "name"])
+        clubs = pd.read_parquet(TM_DIR / "clubs.parquet", columns=["club_id", "name"])
+        return season_squads(apps, players, clubs, comp, season)
+
+
+def season_squads(
+    apps: pd.DataFrame, players: pd.DataFrame, clubs: pd.DataFrame, comp: str, season: int
+) -> tuple[list[tuple[str, str, str]], dict[str, list]]:
+    """Clubs that played in `comp` in the season starting July `season`, and per club its squad that season and
+    over the three seasons around it, as (Transfermarkt player id, name) lists."""
+    apps = apps.assign(date=pd.to_datetime(apps.date), club=apps.player_club_id.astype(str))
+    start, end = pd.Timestamp(f"{season}-07-01"), pd.Timestamp(f"{season + 1}-07-01")
+    wide = apps[(apps.date >= start - pd.DateOffset(years=1)) & (apps.date < end + pd.DateOffset(years=1))]
+    names = dict(zip(players.player_id.astype(str), players.name, strict=True))
+    club_names = dict(zip(clubs.club_id.astype(str), clubs.name, strict=True))
+    in_season = wide[(wide.date >= start) & (wide.date < end)]
+    ids = sorted(in_season.loc[in_season.competition_id == comp, "club"].unique())
+
+    def squad(rows: pd.DataFrame) -> dict[str, list[tuple[str, str]]]:
+        return {
+            c: [(str(p), names.get(str(p), "")) for p in g.player_id.unique()]
+            for c, g in rows[rows.club.isin(ids)].groupby("club")
+        }
+
+    now, around = squad(in_season), squad(wide)
+    return [(c, club_names.get(c, ""), c) for c in ids], {c: [now.get(c, []), around.get(c, [])] for c in ids}
+
+
+# The history backfill stops while this many of the adapter's daily requests are left (its limit already holds
+# BUDGET_RESERVE back): 30 + 10 leaves 40 of the account's 100 for the nightly's lineups and absentee lists.
+HISTORY_RESERVE = 30
+INJURY_COLUMNS = [
+    "api_player_id",
+    "player_name",
+    "type",
+    "reason",
+    "api_team_id",
+    "team",
+    "fixture_id",
+    "date",
+    "season",
+]
+
+
+def injury_file(league: str, season: int) -> Path:
+    """The Premier League's files keep their first names (the lineup backtest reads them)."""
+    if league == "premier_league":
+        return INJURY_DIR / f"injuries_{season}.parquet"
+    return INJURY_DIR / f"injuries_{league}_{season}.parquet"
 
 
 class ApiFootballHistoryAdapter(ApiFootballAdapter):
-    """History job: the free plan's full-season injury lists (2022-2024) that the injury-risk model trains on.
-    One call per season, cached for a year; shares API-Football's cache and daily budget."""
+    """History job: the free plan's full-season injury lists (2022-2024) that the injury-risk model trains on,
+    for every league with an API-Football id (the other leagues list it under `sources`). One call per
+    league-season, cached for a year; shares API-Football's cache and daily budget. Stops with HISTORY_RESERVE
+    requests left; a later run takes the remaining seasons (fetched ones come from the cache)."""
 
     name = "api_football_history"
     requires = "api_football"
     client_name = "api_football"
     seasons = (2022, 2023, 2024)  # the free plan's seasons
 
+    def sync_budget(self) -> None:
+        """Align today's count with the account's: CI and local runs share one quota, and a lost cache forgets
+        the count. API-Football does not count calls to `status`."""
+        try:
+            body, _ = self.call("status", {}, ttl=0)
+            used = int(body["response"]["requests"]["current"])
+        except (BudgetExceeded, FetchError, RuntimeError, KeyError, TypeError, ValueError) as exc:
+            log.warning("api_football status unavailable (%s); using the local count", type(exc).__name__)
+            return
+        self.client.budget.observe(used)
+
     def ingest(self) -> dict[str, int]:
-        rows = 0
+        self.sync_budget()
+        league_id = self.ctx.league_cfg["provider_ids"]["api_football"]
+        rows, calls, matched, pending = 0, 0, 0, []
         for season in self.seasons:
-            rows += len(self.injury_history(season))
-        return {"injury_history_rows": rows}
+            params = {"league": league_id, "season": season}
+            cached = self.client.is_cached(self.base_url + "injuries", params=params, ttl=365 * DAY)
+            left = self.client.budget.remaining()
+            if not cached and left is not None and left <= HISTORY_RESERVE:
+                pending.append(season)
+                continue
+            try:
+                df = self.injury_history(season)
+            except BudgetExceeded:
+                pending.append(season)
+                continue
+            rows, calls = rows + len(df), calls + (0 if cached else 1)
+            matched += int(df.tm_player_id.notna().sum())
+        left = self.client.budget.remaining()
+        log.info(
+            "api_football_history %s: %d rows (%d with a Transfermarkt id), %d calls; seasons pending: %s; "
+            "%s requests left today",
+            self.ctx.league,
+            rows,
+            matched,
+            calls,
+            pending or "none",
+            "unknown" if left is None else left,
+        )
+        return {
+            "injury_history_rows": rows,
+            "injury_rows_matched": matched,
+            "api_calls": calls,
+            "seasons_pending": len(pending),
+        }

@@ -161,6 +161,7 @@ export function chapterContent(d: StoryData) {
               targets={d.targets}
               buyer={d.club}
               gaps={d.gaps}
+              injury={d.injury}
               n={(s) => <Scramble s={s} chapter={2} />}
               compact
             />

@@ -153,6 +153,8 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     0.0703 on the same test rows; destination 0.733 vs 0.749, the old figure was hindsight (buyer squads counted by
     today's club). Market frames are re-cached (`clubs="dated"`). Live scoring still uses today's club (correct).
   - **Next, in order:** (1) needs model on played positions (done 2026-10-19, below); (2) API-Football injury history for other big
+
+  - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big (done 2026-10-19, below)
     leagues; (3) Championship squads via local refresh; (4) conformal ranges on fair fees; (5) rumour news signal
     for realism (PRIORS["news_weight_per_point"] is a prior; the archive can now fit it).
   - User wants: product voice everywhere (no "model" wording on the site), realistic targets, all major leagues,
@@ -286,6 +288,30 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
     an earlier count to 11 by knocking first-tier sellers out; fixed and tested.
   - Note: the main checkout's `data/raw` and `.cache` were found empty on 2026-10-18 (re-downloaded the
     transfermarkt-datasets tables; other raw data and caches are still cold).
+
+- **Injury risk for the other leagues (2026-10-19, branch `claude/injury-other-leagues-df66b0`, backlog item 2):**
+  - `api_football_history` now runs per league (listed under the five leagues' `sources`): one call per
+    league-season (2022-24), cached for a year, files `data/raw/api_football/injuries_<league>_<season>.parquet` (PL
+    keeps `injuries_<season>.parquet`). It reads the account's real count from `status` (not counted by API-Football;
+    `DailyBudget.observe`), stops while 40 of the 100 requests are left (`HISTORY_RESERVE`), resumes from the cache
+    and logs seasons pending + requests left. The whole backfill is 18 calls: done in one run on 2026-10-18.
+  - Players -> Transfermarkt: Reep bridge, else the name within the club's squad that season (TM appearances; the
+    lists carry no date of birth, so no DOB match). Absentees matched: PL 97-99%, La Liga 99%, Serie A 98-99%,
+    Bundesliga 99%, Ligue 1 92-93%, Eredivisie 95-97% (per season); 25 of 25 name matches checked by eye were right.
+  - injury.md: same label/split per league, at-risk rows = TM appearances outside the PL. History-only pooled model
+    (age, position, record; no current minutes exist outside the PL) test AUC / lift: La Liga 0.631 / 2.09x, Serie A
+    0.633 / 1.93x, Bundesliga 0.585 / 1.40x, Ligue 1 0.623 / 1.82x, Eredivisie 0.608 / 1.93x. Scored when the
+    validation AUC (train 22-23, rank 23-24) >= 0.55 with 50+ absences: Eredivisie failed (0.538) and stays unrated
+    though its test came out fine (rule set before the test; revisit with more seasons). PL numbers unchanged.
+  - Live: `injury_risk_other` (publish `injury`) rates current squad players of scored leagues by percentile within
+    their league, context `record`; record = 2022-24 lists + API-Football's nightly absentee lists. Caveat: the
+    free plan has no 2025-26 lists, so it says who has been injury-prone, not who is hurt now.
+  - Shortlists: every pick with a tier shows "injury risk <tier>" (PL: load + record; others: record), with a
+    footnote naming rated / unrated leagues (from injury.json). Flag only, no filter: AUC ~0.6 is too weak to drop
+    players on. Methods page lists the per-league AUCs.
+  - Data loss found 2026-10-18: the main checkout's `data/raw` and `.cache` were empty (a worktree removal deleting
+    through a junction?). Refilled `data/raw/transfermarkt` and `data/raw/api_football`; HTTP caches for other
+    sources are cold. Remove junctions with `cmd /c rmdir` before deleting a worktree.
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
