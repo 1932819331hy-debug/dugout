@@ -148,15 +148,14 @@ export default function RumourBriefs({
                     {b.earlier.slice(0, compact ? 1 : 2).map((e) => {
                       const came = String(e.outcome.stat.value).startsWith("joined");
                       return (
-                        <li key={e.outcome.id}>
+                        <li key={e.outcome.id} className={came ? "" : "text-ink/75"}>
+                          <span aria-hidden="true" className={`mr-1 font-mono ${came ? "text-red" : "text-pencil"}`}>
+                            {came ? "✓" : "✗"}
+                          </span>
                           {e.date && <>{n(e.date)}: </>}
                           the same source linked{" "}
                           {e.player ? <span data-name>{String(e.player.stat.value)}</span> : "a player"} with{" "}
-                          {e.club ? <span data-name>{String(e.club.stat.value)}</span> : "the club"}; he{" "}
-                          {n(e.outcome)}{" "}
-                          <span className={`font-mono text-xs uppercase ${came ? "text-red" : "text-pencil"}`}>
-                            {came ? "came true" : "did not"}
-                          </span>
+                          {e.club ? <span data-name>{String(e.club.stat.value)}</span> : "the club"}; he {n(e.outcome)}.
                         </li>
                       );
                     })}

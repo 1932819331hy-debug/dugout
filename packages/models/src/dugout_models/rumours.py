@@ -1091,6 +1091,11 @@ def report_md(r: dict) -> str:
         "  Most items (the column's own summaries) credit no outlet; outlets are known only when the column links",
         "  to or names them. What separates rumours is the rumour itself: how often the same link was reported",
         "  before, how many clubs the item names, the transfer window, and how valuable the player is.",
+        "- **Source labels are descriptive, not yet confirmed.** Set against similar reports, a handful of outlets stand",
+        "  apart (the table above); the rest, and the column's own round-ups, are about average. Too few later reports",
+        "  from the labelled outlets exist to show the labels hold out of sample (the check above), so the site says so.",
+        "  Since 2020-21 the column credits an outlet for only a few percent of its items, so most live rumours carry",
+        "  the column's own label.",
         f"- **The column changed.** From {MODERN_SEASON}-{MODERN_SEASON + 1 - 2000:02d} it runs fewer, shorter items"
         " and about twice as many come true; a base rate from all years badly underestimates today's rumours. The era flag handles",
         "  it; the base rate since then is the fair baseline to beat.",
