@@ -350,6 +350,40 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - Trap: the main checkout's warehouse had an empty `rumours` table (history job never ran locally) and `.cache`
     was empty; `dugout ingest --job history --only rumour_archive` (~105 Guardian calls, 2.5 min) fills it.
 
+- **Why him = how he plays (2026-10-19, branch `claude/style-why-him`):** user feedback: the shortlists' "why him"
+  read as price and playing time.
+  - Data: `api_football_stats` (nightly, global, last in the job): API-Football player season totals per club,
+    `players?team=&league=&season=` (key passes, dribbles, shots, passes, tackles, interceptions, blocks, duels, fouls,
+    cards; no aerial split; `pass_accuracy` is not a percentage in season totals, unused). The free plan caps `page`
+    at 3 ("Free plans are limited to a maximum value of 3 for the Page parameter"), so a whole league stops after 60
+    players: club by club (~3 requests a club). Queue: one `teams` call per league, the six leagues' 2024-25 clubs,
+    then candidates' 2024-25 clubs in other leagues (TM appearances -> Reep team id, league ids in `LEAGUES`), then
+    2023-24. Cached a year. At most 70 requests a UTC day (`DAILY_CAP`, own counter) and stops while 15 of the
+    adapter's 90 are left (= 25 of the account's 100); re-reads the account's count every 10 calls. Table
+    `player_season_stats`; Transfermarkt ids by Reep, else date of birth + name, else name in the club's season squad
+    (437 of 438 matched). Man City and Brighton list more than 60 league players: a few are out of reach.
+  - Local run 2026-10-19: 16 of 20 PL clubs (47 requests; account 75/100 after). The rest (~330 requests) arrives
+    over ~5 nights in CI (CI's cache starts from zero: the local pages are not shared), then 2023-24 (~5 more).
+  - Model `dugout_models/style.py`: per-90 features, percentiles within style group (centre-back, full-back,
+    midfielder, winger, centre-forward; goalkeepers left out), season and tier (top five leagues / the rest),
+    900+ minutes, pools of 30+. Roles by transparent archetype scores (claimed only with a clear lead); a Gaussian
+    mixture was tried first and rejected (bootstrap ARI 0.24-0.51 vs 0.61-0.79; silhouettes 0.1-0.2 either way:
+    styles are a continuum). Similar players: cosine on standardised features. roles_api.md: sanity table reads right
+    (Alexander-Arnold creative full-back, Salah inside forward, Doku direct dribbler, Haaland penalty-box striker);
+    stability across seasons not measurable until 2023-24 is in (re-run `dugout-models backtest style`).
+    Centre-forwards: under 30 with 900+ minutes so far, no percentiles yet.
+  - Published: `style` model (every profiled player: role, pool, `pct:<feature>`, similar players) and `scout` rows
+    per candidate (`style_role`, `style_top:<f>` top share rounded up to 5%, `style_adds:<f>` / `style_adds_bar:<f>`
+    = the feature he adds most over the last regular starter at the need, `style_similar`) and per need
+    (`need_bar_style_*`, `need_bar_top:<f>`, `need_bar_low:<f>` = what the side lacks there).
+  - Site (components/Shortlists.tsx): why = style line ("A creative full-back: in the top 5% of full-backs in
+    Europe's top five leagues for chances created ... (2024-25 league season)"), then fit vs the starter ("Next to
+    X, the last of <club>'s regular starters there, he would add chances created: he is ahead of 75% of ... , X ahead
+    of 23%"), similar players, the list's reason, press/contract, market value last; the card shows Price after
+    Contract. Players without style data yet keep the goals/assists line.
+  - Not done: the manager fingerprint is not used (FPL-based, PL only, defensive actions from 2025-26 only; a
+    follow-up could order the standouts by what the manager's side does most).
+
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
 - Guardian dev key: 500/day, 60/min. football-data.org: 10/min.

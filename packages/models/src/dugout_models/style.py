@@ -380,8 +380,9 @@ def standouts(pct: dict[str, float], n: int = 3, floor: float = 0.75) -> list[tu
 
 
 def top_share(pct: float) -> float:
-    """'Top 10%' style: the share of the pool at or above him, rounded up to a 5% step (a claim that stays true)."""
-    return float(np.ceil(round((1 - pct) * 100, 6) / 5) * 5 / 100) if pct == pct else np.nan
+    """'Top 10%' style: the share of the pool at or above him, rounded up to a 5% step (a claim that stays true; the
+    best in the pool is in the top 5%, not the top 0%)."""
+    return max(0.05, float(np.ceil(round((1 - pct) * 100, 6) / 5) * 5 / 100)) if pct == pct else np.nan
 
 
 def archetype_scores(z: pd.DataFrame, group: str) -> pd.DataFrame:
