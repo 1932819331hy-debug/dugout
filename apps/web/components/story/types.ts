@@ -82,4 +82,19 @@ export interface Target {
   projected?: StatRef;
   /** injury-risk tier (low / moderate / elevated / high), where his league is scored */
   injury?: StatRef;
+  /** how he plays (docs/backtests/roles_api.md): the season and the players he is measured against */
+  style?: Style;
+  /** the feature he adds most over the starter he would replace: his percentile and the starter's */
+  adds?: { feature: string; mine: StatRef; theirs?: StatRef };
+  /** players closest to him in style */
+  similar?: string;
+}
+
+/** A player's style: role (when one clearly leads), his strongest features as top shares ("top 10%"), against
+ *  a named pool ("full-backs in Europe's top five leagues") in one season. */
+export interface Style {
+  season: StatRef;
+  pool: string;
+  role?: string;
+  tops: { feature: string; top: StatRef }[];
 }
