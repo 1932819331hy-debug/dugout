@@ -1075,6 +1075,102 @@ def recent_moves(con: duckdb.DuckDBPyConnection) -> set[str]:
     return {str(r[0]) for r in rows}
 
 
+RUMOUR_DAYS = 120  # rumours scored with their brief (rumours.publish recent_days)
+
+
+def _tm_id(x) -> str | None:
+    """A Transfermarkt id as a plain string ("1234", never "1234.0"); None when missing."""
+    if x is None or (isinstance(x, float) and np.isnan(x)) or x == "" or x == "nan":
+        return None
+    try:
+        return str(int(float(x)))
+    except (TypeError, ValueError):
+        return None
+
+
+def fee_sales(mk: Market, con: duckdb.DuckDBPyConnection, seller: str, since: pd.Timestamp) -> int:
+    """Players the club sold for a fee since `since`: transfermarkt-datasets to its snapshot, then Wikipedia's
+    summer-2026 lists (a list without a date: its summer window)."""
+    tr = mk.t["transfers"]
+    fee = pd.to_numeric(tr.transfer_fee, errors="coerce")
+    when = pd.to_datetime(tr.transfer_date)
+    sold = set(
+        tr.player_id[
+            (fee > 0) & (when >= since) & (when <= mk.now) & (tr.from_club_id.map(_tm_id) == seller)
+        ].map(_tm_id)
+    )
+    try:
+        wiki = con.execute(
+            """SELECT tm_player_id FROM wiki_transfers WHERE tm_from_club = ? AND fee_eur > 0
+               AND coalesce(date, DATE '2026-07-01') >= CAST(? AS DATE) AND tm_player_id IS NOT NULL""",
+            [seller, since.date().isoformat()],
+        ).fetchall()
+    except duckdb.CatalogException:
+        wiki = []
+    return len(sold | {_tm_id(w[0]) for w in wiki})
+
+
+def rumour_reality(con: duckdb.DuckDBPyConnection, mk: Market, now: datetime) -> list[dict]:
+    """The reality check behind each recent rumour (rumour_links, written by rumours.publish just before): this
+    move's chance in a window (sale likelihood x this buyer, as for the realistic list), his contract and how
+    often his club sells. Rows: model 'scout', entity 'rumour' (the rumour brief's id, context = the buyer's
+    slug) and entity 'seller' (Transfermarkt club id: fee sales since the summer three years back)."""
+    try:
+        links = con.execute(
+            """SELECT DISTINCT rumour_id, player_name, tm_player_id, tm_club_id, from_tm_club FROM rumour_links
+               WHERE published_at >= ?""",
+            [pd.Timestamp(now) - pd.Timedelta(days=RUMOUR_DAYS)],
+        ).df()
+    except duckdb.CatalogException:
+        return []
+    from dugout_models.rumours import fold
+
+    buyers = mk.squads[mk.squads.club_id.isin(mk.buying_clubs())].drop_duplicates("club_id")
+    slug_of = dict(zip(buyers.tm_club_id.astype(str), buyers.club_id, strict=True))
+    now_sq = mk.squads.drop_duplicates("tm_player_id").set_index("tm_player_id")
+    names = mk.club_names()
+    year = mk.now.year - 3 if mk.now.month >= 7 else mk.now.year - 4
+    since = pd.Timestamp(year, 7, 1)
+    rows: list[dict] = []
+    sellers: set[str] = set()
+    for r in links.itertuples():
+        buyer = _tm_id(r.tm_club_id)
+        if buyer not in slug_of:
+            continue
+        pid = _tm_id(r.tm_player_id)
+        # his club today: the squads know who moved since the rumour (and since the dataset's snapshot)
+        seller = _tm_id(now_sq.tm_club_id.get(pid)) or _tm_id(r.from_tm_club)
+        if pid is None or seller is None or seller == buyer:
+            continue
+        comp = mk.comp_of(seller) or mk.buyer_comp(seller)
+        fee = mk.fair_fee([pid], [comp], [seller], buyer_club=buyer).fair_fee.iloc[0]
+        fee = fee if fee == fee else mk.latest_value.get(pid, np.nan)
+        if pd.isna(fee):
+            continue
+        rs = mk.realism_score(pid, seller, buyer, float(fee))
+        if rs is None:
+            continue
+        eid, ctx = f"{r.rumour_id}:{fold(r.player_name)}", slug_of[buyer]
+        rows += [
+            _row("scout", "rumour", eid, "realism", round(rs["p_move"], 4), now, ctx),
+            _row("scout", "rumour", eid, "p_sold", round(rs["p_sold"], 3), now, ctx),
+            _row("scout", "rumour", eid, "p_this_club", round(rs["p_this_club"], 4), now, ctx),
+            _row("scout", "rumour", eid, "seller", seller, now, ctx),
+        ]
+        if rs["contract_months"] is not None and rs["contract_months"] > 0:
+            rows.append(
+                _row("scout", "rumour", eid, "contract_months", round(rs["contract_months"]), now, ctx)
+            )
+        if seller not in sellers:
+            sellers.add(seller)
+            rows += [
+                _row("scout", "seller", seller, "name", names.get(seller), now),
+                _row("scout", "seller", seller, "fee_sales", fee_sales(mk, con, seller, since), now),
+                _row("scout", "seller", seller, "fee_sales_since", since.date().isoformat(), now),
+            ]
+    return [r for r in rows if r["value_num"] is not None or r["value_text"] is not None]
+
+
 def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | None = None) -> list[dict]:
     csv_clubs = set(pd.read_csv(SQUADS, usecols=["club_id"]).club_id)
     mk = Market(now, warehouse_squads(con, skip=csv_clubs))
@@ -1184,6 +1280,7 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
             rows.append(_row("scout", "club", slug, "agreed_signing_position", group, now, f"incoming:{j}"))
             rows.append(_row("scout", "club", slug, "agreed_signing_url", url, now, f"incoming:{j}"))
         log.info("market: %s done", slug)
+    rows += rumour_reality(con, mk, now)
     from dugout_models.lookup import lookup
 
     return rows + lookup(con, mk, now, reep)

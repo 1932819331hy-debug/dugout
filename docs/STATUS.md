@@ -384,6 +384,55 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - Not done: the manager fingerprint is not used (FPL-based, PL only, defensive actions from 2025-26 only; a
     follow-up could order the standouts by what the manager's side does most).
 
+- **Rumour brief (2026-10-19, branch `claude/intelligent-archimedes-a65c5e`, PR #40; user: the rumour block was "just
+  useless percentages"):** the bare "one time in N" line is gone (site, agents, graph gate). Each incoming rumour
+  now carries a brief, as `brief` facts (key_stats only, never prose: `Fact.brief`, writer and summary skip them):
+  - **Source credibility** (`rumours.outlet_credibility`): an outlet's reports vs what the same reports would have done
+    from anyone (shipped rumour model, out of fold by season, never sees the outlet). Exact Poisson 80% interval of
+    came true / expected: wholly above 1 = reliable, below = speculative, else about average; < 20 traced = unproven.
+    Result (rumours.md): Bild, Daily Record, A Bola reliable; Daily Star speculative; everyone else (and the column's
+    own round-ups) about average. Label check (labels from seasons before 2023-24, scored after): only 7 later reports
+    from labelled outlets, so the labels cannot be confirmed yet (said on the site). Raw rate only on hover
+    (`Num detail`). Live caveat: ~95% of 2025-26 items credit no outlet, so most rumours show the column's label.
+  - **Heat** (`rumours.heat`): Rumour Mill columns carrying the same player-club link in the past year + other press
+    in the news corpus (RSS, club sites' reproduced press; not the clubs' own articles) with a transfer sentence
+    naming both; independent outlets = ownership groups (`dugout_verify.factcheck.ownership_group`, GROUPS gained
+    Mirror/Star/Record/talkSPORT/Standard/MailOnline), first report date, outlet names.
+  - **Reality check** (`market.rumour_reality`, model 'scout', entity 'rumour'): realism_score for this player and
+    buyer (move in a window, his club selling, this buyer), contract months, and `seller` rows: players his club
+    sold for a fee since 1 July three summers back (TM transfers + Wikipedia summer-2026 fees).
+  - **Track record** (`rumours.track_record`): the same outlet's latest labelled reports about this buying club
+    (then about his club's players), with "joined / did not join within half a year".
+  - Order: `rumours.priority` = credibility weight (1.5 / 1 / 0.8 / 0.5) x independent outlets (+ reports as a
+    tie-break); agents pick the top 3 by it, the site sorts the same way (`lib/rumourBrief.briefScore`).
+  - Site: `components/RumourBriefs.tsx` (Source / Heat / Reality / Track record rows) in the dossier's scout section
+    (the rumour sentences leave the prose there), story chapter three (two, compact) and /rumours/ (top 12 across
+    clubs; outlet table shows labels, record on hover). Methods row rewritten. Old dossiers (no brief facts) still
+    render: the rumour text with "no record yet" until the nightly rebuilds them.
+
+## Handoff (2026-10-19) — read this first
+
+- **Live:** six leagues (PL, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie); two gaps with reasons; three lists
+  per gap with stats-based why-him (TM goals/assists per 90, league rank, foot, height, caps, comparison with the
+  starter to beat); fee ranges; injury tiers in all leagues; played-position needs; Championship targets;
+  /rumours/ page; rumour odds. Nightly ~25-40 min with warm caches. No open PRs; GitHub has only `main`.
+- **Rules from the user:** commit as `delta96040 <115036752+delta96040@users.noreply.github.com>` (repo git
+  config), no `Co-Authored-By: Claude` trailer, no "Generated with Claude Code" footer. Main's history was rewritten
+  2026-10-17 to remove dhruv-aaizel and Claude; never force-push main again without asking.
+- **Keys:** GROQ_API_KEY, API_FOOTBALL_KEY (new account; old one suspended), KAGGLE_USERNAME + KAGGLE_API_TOKEN
+  (KGAT_ style, Bearer auth) are in `.env`; GitHub secrets set for Groq and API-Football. Never print keys.
+- **API-Football:** free plan gives the current season only for yesterday..tomorrow, so other leagues' predicted
+  XIs appear after each club's next match (~a week to fill). Error replies are never cached (PR #28).
+  Clubs still skipped: Le Havre (8/11 matched), Hamburg and Paderborn (no formation fits).
+- **Running sessions (started 2026-10-19):** "Player style profiles, team fit and a role model"
+  (API-Football player stats 2024 backfill <=70 calls/day, role model, why-him led by style); "Rumours section:
+  credibility instead of raw odds"; "Fine-tune an open LLM to write the dossiers" (branch writer-finetune; Groq
+  teacher run ~5 h, then QLoRA Qwen2.5-1.5B on Kaggle GPU; metrics to docs/backtests/writer_finetune.md, HF model
+  card, methods page). Each opens a PR; the user merges on request ("merge").
+- **Usage guard:** scheduled task `dugout-usage-guard` (every 20 min) stops all sessions at 93% weekly usage.
+- **User asks pending:** résumé bullets from the fine-tune results once in; why-him should be about how the player
+  plays and fits (style session: PR #41, the style-led why-him); rumours should be useful, not bare percentages (rumours session: PR #40, the rumour brief).
+
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.
 - Guardian dev key: 500/day, 60/min. football-data.org: 10/min.

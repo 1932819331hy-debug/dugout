@@ -1,5 +1,6 @@
 import type { Stat } from "@/lib/data";
 import type { XY } from "@/lib/formations";
+import type { RumourBrief } from "@/lib/rumourBrief";
 import type { Gap, InjuryCoverage } from "@/lib/shortlist";
 
 export interface StatRef {
@@ -27,9 +28,9 @@ export interface StoryData {
   signings: { title: string; url: string | null }[];
   /** the scout's three lists for the top need: dream, realistic, hidden gem (up to three names each) */
   targets: Target[];
-  /** transfer talk the Fact-Check confirmed in the Guardian's Rumour Mill (attributed, unverified as fact) */
-  /** with how often reports like it came true (one time in N), when the item links a player with this club */
-  rumours: { text: string; url: string | null; record?: StatRef }[];
+  /** transfer talk the Fact-Check confirmed in the Guardian's Rumour Mill (attributed, unverified as fact), each
+   *  with its brief (source credibility, heat, our estimate, track record), most credible and most reported first */
+  rumours: RumourBrief[];
   verifiedSamples: StatRef[];
   numbersTotal: number;
   untraceable: number;
