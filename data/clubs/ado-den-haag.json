@@ -10,8 +10,8 @@
     "name": "Eredivisie",
     "country": "Netherlands"
   },
-  "generated_at": "2026-10-18T07:54:39+00:00",
-  "data_as_of": "2026-10-18T07:46:25+00:00",
+  "generated_at": "2026-10-19T18:07:21+00:00",
+  "data_as_of": "2026-10-19T17:51:43+00:00",
   "llm": null,
   "summary": {
     "agent": "director",
@@ -26,8 +26,8 @@
             "text": "ADO Den Haag are "
           },
           {
-            "stat": "ev_aa6ab82b15584e09",
-            "display": "16th"
+            "stat": "ev_950390eb43991da5",
+            "display": "17th"
           },
           {
             "text": " in the Eredivisie table."
@@ -44,7 +44,7 @@
             "text": "ADO Den Haag have "
           },
           {
-            "stat": "ev_7f126c561db9feca",
+            "stat": "ev_86661d0fb8bdd27d",
             "display": "6"
           },
           {
@@ -62,7 +62,7 @@
             "text": "ADO Den Haag's next league match is ADO Den Haag v Heerenveen on "
           },
           {
-            "stat": "ev_cffb3c204933b001",
+            "stat": "ev_30f996bc3e74bea1",
             "display": "24 October 2026"
           },
           {
@@ -80,7 +80,7 @@
             "text": "Our forecast gives ADO Den Haag a "
           },
           {
-            "stat": "ev_32886344a1fb8ed2",
+            "stat": "ev_bf2adbe75662aedf",
             "display": "23%"
           },
           {
@@ -109,8 +109,8 @@
               "text": "ADO Den Haag are "
             },
             {
-              "stat": "ev_aa6ab82b15584e09",
-              "display": "16th"
+              "stat": "ev_950390eb43991da5",
+              "display": "17th"
             },
             {
               "text": " in the Eredivisie table."
@@ -127,7 +127,7 @@
               "text": "ADO Den Haag have "
             },
             {
-              "stat": "ev_7f126c561db9feca",
+              "stat": "ev_86661d0fb8bdd27d",
               "display": "6"
             },
             {
@@ -145,7 +145,7 @@
               "text": "ADO Den Haag have scored "
             },
             {
-              "stat": "ev_3dd8cadbaa3b639b",
+              "stat": "ev_3476f1d779a3a085",
               "display": "11"
             },
             {
@@ -163,7 +163,7 @@
               "text": "ADO Den Haag have conceded "
             },
             {
-              "stat": "ev_5a574785790cacaf",
+              "stat": "ev_77d59f97148af34f",
               "display": "20"
             },
             {
@@ -181,7 +181,7 @@
               "text": "ADO Den Haag's most recent league results read "
             },
             {
-              "stat": "ev_ac5cfad99e1105f0",
+              "stat": "ev_9f2df8fd904f9812",
               "display": "WDDLL"
             },
             {
@@ -199,7 +199,7 @@
               "text": "ADO Den Haag's Elo rating is "
             },
             {
-              "stat": "ev_71c6dca5f92570d3",
+              "stat": "ev_63e7997248bca82c",
               "display": "1319"
             },
             {
@@ -245,7 +245,7 @@
               "text": "ADO Den Haag's next league match is ADO Den Haag v Heerenveen on "
             },
             {
-              "stat": "ev_cffb3c204933b001",
+              "stat": "ev_30f996bc3e74bea1",
               "display": "24 October 2026"
             },
             {
@@ -263,7 +263,7 @@
               "text": "Our forecast gives ADO Den Haag a "
             },
             {
-              "stat": "ev_32886344a1fb8ed2",
+              "stat": "ev_bf2adbe75662aedf",
               "display": "23%"
             },
             {
@@ -281,7 +281,7 @@
               "text": "Our forecast gives ADO Den Haag v Heerenveen a "
             },
             {
-              "stat": "ev_bc8d09412e025f7e",
+              "stat": "ev_e30cb6d3bbe78d26",
               "display": "26%"
             },
             {
@@ -299,7 +299,7 @@
               "text": "Our forecast gives Heerenveen a "
             },
             {
-              "stat": "ev_7ac1f18dbc20752f",
+              "stat": "ev_f28d2cc3c8485fb4",
               "display": "51%"
             },
             {
@@ -317,7 +317,7 @@
               "text": "ADO Den Haag's Elo rating is "
             },
             {
-              "stat": "ev_71c6dca5f92570d3",
+              "stat": "ev_63e7997248bca82c",
               "display": "1319"
             },
             {
@@ -335,7 +335,7 @@
               "text": "Heerenveen's Elo rating is "
             },
             {
-              "stat": "ev_9f344fe006897ca7",
+              "stat": "ev_0d2038a16396f734",
               "display": "1514"
             },
             {
@@ -354,9 +354,226 @@
       "agent": "lineup",
       "title": "Predicted XI",
       "question": "What is ADO Den Haag's predicted lineup for the next match?",
-      "status": "empty",
+      "status": "published",
       "writer": "template",
-      "claims": [],
+      "claims": [
+        {
+          "segments": [
+            {
+              "text": "We expect ADO Den Haag to line up in a "
+            },
+            {
+              "stat": "ev_5631534adc029a34",
+              "display": "3-4-2-1"
+            },
+            {
+              "text": " for the next match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Kilian Nikiema at "
+            },
+            {
+              "stat": "ev_eeba49d3221db45c",
+              "display": "GK"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Pascal Mulder at "
+            },
+            {
+              "stat": "ev_13e82196188555b8",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Matteo Waem at "
+            },
+            {
+              "stat": "ev_6f0d5716a452b79e",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Lasse Wilhelm at "
+            },
+            {
+              "stat": "ev_1b4ac7fa7730d74f",
+              "display": "CB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Jonas Jensen-Abbew at "
+            },
+            {
+              "stat": "ev_fe16407c79a055d5",
+              "display": "RWB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Sekou Sylla at "
+            },
+            {
+              "stat": "ev_a2315d61f45cf6e1",
+              "display": "LWB"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Jan Žambůrek at "
+            },
+            {
+              "stat": "ev_628f7768c8bde5ae",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Juho Kilo at "
+            },
+            {
+              "stat": "ev_0b9a5ccaf64ec7c6",
+              "display": "CM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Yannick Eduardo at "
+            },
+            {
+              "stat": "ev_f5ff256192075c61",
+              "display": "AM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Jesse Bal at "
+            },
+            {
+              "stat": "ev_a9c5e231be4700cc",
+              "display": "AM"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "Predicted to start: Evan Rottier at "
+            },
+            {
+              "stat": "ev_f860eb7ea0abdf2a",
+              "display": "CF"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        }
+      ],
       "withheld": []
     },
     {
@@ -399,11 +616,25 @@
               "text": "Our fair-fee estimate for Yannick Eduardo is "
             },
             {
-              "stat": "ev_16d64f9146e37f99",
+              "stat": "ev_d65bf2f302c2088e",
               "display": "€2.4m"
             },
             {
-              "text": ", in line with his market value."
+              "text": " (likely between "
+            },
+            {
+              "stat": "ev_c8d56249b8e680fe",
+              "display": "€1.0m"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "stat": "ev_27e7314b6b449f70",
+              "display": "€5.0m"
+            },
+            {
+              "text": "), in line with his market value."
             }
           ],
           "type": "stat",
@@ -435,11 +666,25 @@
               "text": "Our fair-fee estimate for Othniel Raterink is "
             },
             {
-              "stat": "ev_30bb2b2699f0a0c0",
+              "stat": "ev_6fd6f57f0adca826",
               "display": "€1.1m"
             },
             {
-              "text": ", in line with his market value."
+              "text": " (likely between "
+            },
+            {
+              "stat": "ev_55d9e790a17a8790",
+              "display": "€0.3m"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "stat": "ev_e23f5da6fb0710de",
+              "display": "€2.9m"
+            },
+            {
+              "text": "), in line with his market value."
             }
           ],
           "type": "stat",
@@ -471,11 +716,25 @@
               "text": "Our fair-fee estimate for Matěj Šín is "
             },
             {
-              "stat": "ev_6c1b5d0a961a3da8",
-              "display": "€2.2m"
+              "stat": "ev_b2d957d1594e5584",
+              "display": "€2.1m"
             },
             {
-              "text": ", below his market value."
+              "text": " (likely between "
+            },
+            {
+              "stat": "ev_cc6b8e79f5a6a89a",
+              "display": "€0.9m"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "stat": "ev_2d355c7d91bee05f",
+              "display": "€4.5m"
+            },
+            {
+              "text": "), below his market value."
             }
           ],
           "type": "stat",
@@ -499,7 +758,7 @@
               "text": "ADO Den Haag's biggest squad need is "
             },
             {
-              "stat": "ev_b45324c6c7cbed4d",
+              "stat": "ev_5231d2bab619c999",
               "display": "defensive midfield"
             },
             {
@@ -514,14 +773,14 @@
         {
           "segments": [
             {
-              "text": "ADO Den Haag have "
+              "text": "Counted by where they start, ADO Den Haag's options for defensive midfield add up to "
             },
             {
-              "stat": "ev_c4ea6bf74ad6d062",
-              "display": "0"
+              "stat": "ev_896511a0b6de41ad",
+              "display": "0.9"
             },
             {
-              "text": " players for defensive midfield, leaving veterans aside."
+              "text": " players, leaving veterans aside."
             }
           ],
           "type": "stat",
@@ -535,7 +794,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_6fb4ea359562275e",
+              "stat": "ev_14c26237b5b812b8",
               "display": "2"
             },
             {
@@ -550,356 +809,104 @@
         {
           "segments": [
             {
+              "text": "ADO Den Haag's best option for defensive midfield is "
+            },
+            {
+              "stat": "ev_0506116790dcc57c",
+              "display": "Jan Žambůrek"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The last of ADO Den Haag's regular starters at defensive midfield is "
+            },
+            {
+              "stat": "ev_a0cfa3344ce514fa",
+              "display": "Jan Žambůrek"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The last of ADO Den Haag's regular starters at defensive midfield averages "
+            },
+            {
+              "stat": "ev_772b6a34213a59d5",
+              "display": "0.00"
+            },
+            {
+              "text": " league goals and assists per full match."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "The last of ADO Den Haag's regular starters at defensive midfield has a market value of "
+            },
+            {
+              "stat": "ev_75906e1b5304286e",
+              "display": "€0.4m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
+              "text": "ADO Den Haag's best option for defensive midfield has a market value of "
+            },
+            {
+              "stat": "ev_0dede5d4986c9892",
+              "display": "€0.4m"
+            },
+            {
+              "text": "."
+            }
+          ],
+          "type": "stat",
+          "status": "verified",
+          "reason": "bound to ledger rows",
+          "sources": []
+        },
+        {
+          "segments": [
+            {
               "text": "At the squads closest to ADO Den Haag in strength, the best option for defensive midfield is typically worth "
             },
             {
-              "stat": "ev_13d529bd37a79641",
-              "display": "€1.3m"
+              "stat": "ev_6c8210866d55cb7b",
+              "display": "€1.6m"
             },
             {
               "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Hidden gem: João Neves (Paris Saint-Germain), who is "
-            },
-            {
-              "stat": "ev_e025a227094b2b10",
-              "display": "22"
-            },
-            {
-              "text": " years old."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves plays for "
-            },
-            {
-              "stat": "ev_776c8a81bdaed6ce",
-              "display": "Paris Saint-Germain"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves has played "
-            },
-            {
-              "stat": "ev_e10fd76a85371563",
-              "display": "64%"
-            },
-            {
-              "text": " of Paris Saint-Germain's minutes over the last year."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves averages "
-            },
-            {
-              "stat": "ev_4d920b46b531177c",
-              "display": "0.16"
-            },
-            {
-              "text": " league goals per full match."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves averages "
-            },
-            {
-              "stat": "ev_672f0bfa144ba088",
-              "display": "0.08"
-            },
-            {
-              "text": " league assists per full match."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves has more league goals and assists per full match than "
-            },
-            {
-              "stat": "ev_09f2111e63db0610",
-              "display": "78%"
-            },
-            {
-              "text": " of players at his position in his league."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves's comparison is within "
-            },
-            {
-              "stat": "ev_4f147d2053482dda",
-              "display": "Ligue 1"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves's stronger foot is his "
-            },
-            {
-              "stat": "ev_4ab2b5066436bc68",
-              "display": "right"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves stands "
-            },
-            {
-              "stat": "ev_39dde9a5ea56d452",
-              "display": "171"
-            },
-            {
-              "text": " centimetres tall."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves has won "
-            },
-            {
-              "stat": "ev_d282725bc59ef91d",
-              "display": "27"
-            },
-            {
-              "text": " international caps."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves starts at "
-            },
-            {
-              "stat": "ev_12e6ab656c4f4c60",
-              "display": "central midfield, defensive midfield"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "João Neves has a market value of "
-            },
-            {
-              "stat": "ev_3b9258c5ff138966",
-              "display": "€140m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Our fair-fee estimate for João Neves is "
-            },
-            {
-              "stat": "ev_bd4b4a02a3078f79",
-              "display": "€100m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "We project João Neves's market value to reach "
-            },
-            {
-              "stat": "ev_b84ca1969105f3ae",
-              "display": "€121m"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Hidden gem: Aleksandar Pavlovic (Bayern Munich), who is "
-            },
-            {
-              "stat": "ev_a48624fdaf1d3208",
-              "display": "22"
-            },
-            {
-              "text": " years old."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Aleksandar Pavlovic plays for "
-            },
-            {
-              "stat": "ev_6cf8c626d1ccf7ca",
-              "display": "Bayern Munich"
-            },
-            {
-              "text": "."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Aleksandar Pavlovic has played "
-            },
-            {
-              "stat": "ev_9b4cc52582b47423",
-              "display": "68%"
-            },
-            {
-              "text": " of Bayern Munich's minutes over the last year."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Aleksandar Pavlovic averages "
-            },
-            {
-              "stat": "ev_44af043bf4d2fe11",
-              "display": "0.15"
-            },
-            {
-              "text": " league goals per full match."
-            }
-          ],
-          "type": "stat",
-          "status": "verified",
-          "reason": "bound to ledger rows",
-          "sources": []
-        },
-        {
-          "segments": [
-            {
-              "text": "Aleksandar Pavlovic averages "
-            },
-            {
-              "stat": "ev_29678f0d1050153f",
-              "display": "0.08"
-            },
-            {
-              "text": " league assists per full match."
             }
           ],
           "type": "stat",
@@ -913,7 +920,7 @@
               "text": "ADO Den Haag's second squad need is "
             },
             {
-              "stat": "ev_b830a8f0737a6b5d",
+              "stat": "ev_a6e4e377da71b836",
               "display": "goalkeeper"
             },
             {
@@ -928,14 +935,14 @@
         {
           "segments": [
             {
-              "text": "ADO Den Haag have "
+              "text": "Counted by where they start, ADO Den Haag's options for goalkeeper add up to "
             },
             {
-              "stat": "ev_d89df50bef793839",
+              "stat": "ev_0585b108c1c5d6a0",
               "display": "1"
             },
             {
-              "text": " players for goalkeeper, leaving veterans aside."
+              "text": " players, leaving veterans aside."
             }
           ],
           "type": "stat",
@@ -949,7 +956,7 @@
               "text": "A squad carries "
             },
             {
-              "stat": "ev_96aeba6a1ad2ae6a",
+              "stat": "ev_ff4d199bfe30632e",
               "display": "2"
             },
             {
@@ -967,7 +974,7 @@
               "text": "ADO Den Haag's best option for goalkeeper is "
             },
             {
-              "stat": "ev_687c8213f88a397d",
+              "stat": "ev_98863b1a0834486c",
               "display": "Niclas Thiede"
             },
             {
@@ -985,7 +992,7 @@
               "text": "The last of ADO Den Haag's regular starters at goalkeeper is "
             },
             {
-              "stat": "ev_83971e1dd321531a",
+              "stat": "ev_47c60ae7b1b869a1",
               "display": "Niclas Thiede"
             },
             {
@@ -1003,7 +1010,7 @@
               "text": "The last of ADO Den Haag's regular starters at goalkeeper has a market value of "
             },
             {
-              "stat": "ev_352bd3dd11eff54f",
+              "stat": "ev_f968d4ee85de8a16",
               "display": "€0.3m"
             },
             {
@@ -1021,7 +1028,7 @@
               "text": "ADO Den Haag's best option for goalkeeper has a market value of "
             },
             {
-              "stat": "ev_5f51c32b44696b6c",
+              "stat": "ev_7b5fde693605816c",
               "display": "€0.3m"
             },
             {
@@ -1039,7 +1046,7 @@
               "text": "At the squads closest to ADO Den Haag in strength, the best option for goalkeeper is typically worth "
             },
             {
-              "stat": "ev_4abce760cd9ad69a",
+              "stat": "ev_c6e0cf57d5c38f86",
               "display": "€0.9m"
             },
             {
@@ -1056,98 +1063,82 @@
     }
   ],
   "stats": {
-    "ev_02bfb298974211b3": {
-      "value": 15.0,
-      "display": "15",
+    "ev_0506116790dcc57c": {
+      "value": "Jan Žambůrek",
+      "display": "Jan Žambůrek",
       "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_06ca86b096c3c9fe": {
-      "value": "defensive midfield",
-      "display": "defensive midfield",
+    "ev_0585b108c1c5d6a0": {
+      "value": 1.0,
+      "display": "1",
       "unit": null,
-      "metric": "positions_played",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
+      "metric": "need_depth",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_09f2111e63db0610": {
-      "value": 0.78,
-      "display": "0.78",
+    "ev_0b9a5ccaf64ec7c6": {
+      "value": "CM",
+      "display": "CM",
       "unit": null,
-      "metric": "ga_pctile",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "football_data_org:172942",
+      "entity_name": "Juho Kilo",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_11bddfcfc4bae93a": {
-      "value": "right",
-      "display": "right",
+    "ev_0d2038a16396f734": {
+      "value": 1513.5,
+      "display": "1513.50",
       "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "metric": "elo",
+      "entity_type": "club",
+      "entity_id": "heerenveen",
+      "entity_name": "Heerenveen",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_128ffa7ef710df92": {
-      "value": "central midfield, defensive midfield",
-      "display": "central midfield, defensive midfield",
+    "ev_0dede5d4986c9892": {
+      "value": 400000.0,
+      "display": "400000",
       "unit": null,
-      "metric": "positions_played",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_12e6ab656c4f4c60": {
-      "value": "central midfield, defensive midfield",
-      "display": "central midfield, defensive midfield",
-      "unit": null,
-      "metric": "positions_played",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1168,423 +1159,23 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_13d529bd37a79641": {
-      "value": 1325000.0,
-      "display": "1325000",
+    "ev_13e82196188555b8": {
+      "value": "CB",
+      "display": "CB",
       "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "ado-den-haag",
-      "entity_name": "ADO Den Haag",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_16d64f9146e37f99": {
-      "value": 2400000.0,
-      "display": "2400000",
-      "unit": null,
-      "metric": "fair_fee",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rpff30d8e1c9daf4",
-      "entity_name": "Yannick Eduardo",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "entity_id": "football_data_org:228408",
+      "entity_name": "Pascal Mulder",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_239bcf0eae88cd86": {
-      "value": 56100000.0,
-      "display": "56100000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_29678f0d1050153f": {
-      "value": 0.08,
-      "display": "0.08",
-      "unit": null,
-      "metric": "assists_p90",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_30bb2b2699f0a0c0": {
-      "value": 1100000.0,
-      "display": "1100000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp91b2af4a6c0a0e",
-      "entity_name": "Othniel Raterink",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_32886344a1fb8ed2": {
-      "value": 0.2348,
-      "display": "0.23",
-      "unit": null,
-      "metric": "p_home_win",
-      "entity_type": "match",
-      "entity_id": "eredivisie:2026-27:ado-den-haag:heerenveen",
-      "entity_name": "ADO Den Haag v Heerenveen",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_352bd3dd11eff54f": {
-      "value": 350000.0,
-      "display": "350000",
-      "unit": null,
-      "metric": "need_bar_value",
-      "entity_type": "club",
-      "entity_id": "ado-den-haag",
-      "entity_name": "ADO Den Haag",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_39dde9a5ea56d452": {
-      "value": 171.0,
-      "display": "171",
-      "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_3b9258c5ff138966": {
-      "value": 140000000.0,
-      "display": "140000000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_3dd8cadbaa3b639b": {
-      "value": 11.0,
-      "display": "11",
-      "unit": null,
-      "metric": "league_goalsFor",
-      "entity_type": "club",
-      "entity_id": "ado-den-haag",
-      "entity_name": "ADO Den Haag",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:25:30.520939+00:00",
-      "query_kind": "http_json",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_44af043bf4d2fe11": {
-      "value": 0.15,
-      "display": "0.15",
-      "unit": null,
-      "metric": "goals_p90",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_4ab2b5066436bc68": {
-      "value": "right",
-      "display": "right",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_4abce760cd9ad69a": {
-      "value": 900000.0,
-      "display": "900000",
-      "unit": null,
-      "metric": "need_peer_best_value",
-      "entity_type": "club",
-      "entity_id": "ado-den-haag",
-      "entity_name": "ADO Den Haag",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_4d920b46b531177c": {
-      "value": 0.16,
-      "display": "0.16",
-      "unit": null,
-      "metric": "goals_p90",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_4f147d2053482dda": {
-      "value": "Ligue 1",
-      "display": "Ligue 1",
-      "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_56d0134766b66b97": {
-      "value": 14.0,
-      "display": "14",
-      "unit": null,
-      "metric": "caps",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5a2dbe1e5ba5f122": {
-      "value": 75000000.0,
-      "display": "75000000",
-      "unit": null,
-      "metric": "market_value",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5a574785790cacaf": {
-      "value": 20.0,
-      "display": "20",
-      "unit": null,
-      "metric": "league_goalsAgainst",
-      "entity_type": "club",
-      "entity_id": "ado-den-haag",
-      "entity_name": "ADO Den Haag",
-      "source": "football_data_org",
-      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:25:30.520939+00:00",
-      "query_kind": "http_json",
-      "status": "single_source",
-      "cross_checks": []
-    },
-    "ev_5c02b0f421e98ae1": {
-      "value": 78200000.0,
-      "display": "78200000",
-      "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5d9bead4a7e2aba8": {
-      "value": "Premier League",
-      "display": "Premier League",
-      "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_5f51c32b44696b6c": {
-      "value": 350000.0,
-      "display": "350000",
-      "unit": null,
-      "metric": "need_best_value",
-      "entity_type": "club",
-      "entity_id": "ado-den-haag",
-      "entity_name": "ADO Den Haag",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_672f0bfa144ba088": {
-      "value": 0.08,
-      "display": "0.08",
-      "unit": null,
-      "metric": "assists_p90",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_687c8213f88a397d": {
-      "value": "Niclas Thiede",
-      "display": "Niclas Thiede",
-      "unit": null,
-      "metric": "need_best_player",
-      "entity_type": "club",
-      "entity_id": "ado-den-haag",
-      "entity_name": "ADO Den Haag",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6c1b5d0a961a3da8": {
-      "value": 2200000.0,
-      "display": "2200000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rpa39ecd5a19563c",
-      "entity_name": "Matěj Šín",
-      "source": "dugout_model:valuation",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6cf8c626d1ccf7ca": {
-      "value": "Bayern Munich",
-      "display": "Bayern Munich",
-      "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6d324a1fa2939be0": {
-      "value": 0.06,
-      "display": "0.06",
-      "unit": null,
-      "metric": "goals_p90",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_6fb4ea359562275e": {
+    "ev_14c26237b5b812b8": {
       "value": 2.0,
       "display": "2",
       "unit": null,
@@ -1595,12 +1186,172 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_71c6dca5f92570d3": {
+    "ev_1b4ac7fa7730d74f": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp967d37be747cdf",
+      "entity_name": "Lasse Wilhelm",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_27e7314b6b449f70": {
+      "value": 5000000.0,
+      "display": "5000000",
+      "unit": null,
+      "metric": "fair_fee_high",
+      "entity_type": "player",
+      "entity_id": "rpff30d8e1c9daf4",
+      "entity_name": "Yannick Eduardo",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_2d355c7d91bee05f": {
+      "value": 4500000.0,
+      "display": "4500000",
+      "unit": null,
+      "metric": "fair_fee_high",
+      "entity_type": "player",
+      "entity_id": "rpa39ecd5a19563c",
+      "entity_name": "Matěj Šín",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_30f996bc3e74bea1": {
+      "value": "2026-10-24T19:00:00+00:00",
+      "display": "2026-10-24T19:00:00+00:00",
+      "unit": null,
+      "metric": "kickoff_utc",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:ado-den-haag:heerenveen",
+      "entity_name": "ADO Den Haag v Heerenveen",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_3476f1d779a3a085": {
+      "value": 11.0,
+      "display": "11",
+      "unit": null,
+      "metric": "league_goalsFor",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:26:17.144226+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_47c60ae7b1b869a1": {
+      "value": "Niclas Thiede",
+      "display": "Niclas Thiede",
+      "unit": null,
+      "metric": "need_bar_player",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5231d2bab619c999": {
+      "value": "defensive midfield",
+      "display": "defensive midfield",
+      "unit": null,
+      "metric": "need",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_55d9e790a17a8790": {
+      "value": 300000.0,
+      "display": "300000",
+      "unit": null,
+      "metric": "fair_fee_low",
+      "entity_type": "player",
+      "entity_id": "rp91b2af4a6c0a0e",
+      "entity_name": "Othniel Raterink",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_5631534adc029a34": {
+      "value": "3-4-2-1",
+      "display": "3-4-2-1",
+      "unit": null,
+      "metric": "predicted_formation",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_628f7768c8bde5ae": {
+      "value": "CM",
+      "display": "CM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp82ec84dfb3a2e9",
+      "entity_name": "Jan Žambůrek",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_63e7997248bca82c": {
       "value": 1318.9,
       "display": "1318.90",
       "unit": null,
@@ -1611,7 +1362,55 @@
       "source": "dugout_model:predictor",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6c8210866d55cb7b": {
+      "value": 1600000.0,
+      "display": "1600000",
+      "unit": null,
+      "metric": "need_peer_best_value",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6f0d5716a452b79e": {
+      "value": "CB",
+      "display": "CB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "football_data_org:149958",
+      "entity_name": "Matteo Waem",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_6fd6f57f0adca826": {
+      "value": 1100000.0,
+      "display": "1100000",
+      "unit": null,
+      "metric": "fair_fee",
+      "entity_type": "player",
+      "entity_id": "rp91b2af4a6c0a0e",
+      "entity_name": "Othniel Raterink",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1632,71 +1431,71 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_72b86f1f960acd0e": {
-      "value": 0.51,
-      "display": "0.51",
+    "ev_75906e1b5304286e": {
+      "value": 400000.0,
+      "display": "400000",
       "unit": null,
-      "metric": "ga_pctile",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
+      "metric": "need_bar_value",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_776c8a81bdaed6ce": {
-      "value": "Paris Saint-Germain",
-      "display": "Paris Saint-Germain",
+    "ev_772b6a34213a59d5": {
+      "value": 0.0,
+      "display": "0",
       "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
+      "metric": "need_bar_ga_p90",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_792e5f583a20fc36": {
-      "value": 188.0,
-      "display": "188",
+    "ev_77d59f97148af34f": {
+      "value": 20.0,
+      "display": "20",
       "unit": null,
-      "metric": "height_cm",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
+      "metric": "league_goalsAgainst",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
+      "source": "football_data_org",
+      "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:26:17.144226+00:00",
+      "query_kind": "http_json",
+      "status": "single_source",
+      "cross_checks": []
+    },
+    "ev_7b5fde693605816c": {
+      "value": 350000.0,
+      "display": "350000",
+      "unit": null,
+      "metric": "need_best_value",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_7ac1f18dbc20752f": {
-      "value": 0.5076,
-      "display": "0.51",
-      "unit": null,
-      "metric": "p_away_win",
-      "entity_type": "match",
-      "entity_id": "eredivisie:2026-27:ado-den-haag:heerenveen",
-      "entity_name": "ADO Den Haag v Heerenveen",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_7f126c561db9feca": {
+    "ev_86661d0fb8bdd27d": {
       "value": 6.0,
       "display": "6",
       "unit": null,
@@ -1707,55 +1506,23 @@
       "source": "football_data_org",
       "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:25:30.520939+00:00",
+      "fetched_at": "2026-10-19T17:26:17.144226+00:00",
       "query_kind": "http_json",
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_83971e1dd321531a": {
-      "value": "Niclas Thiede",
-      "display": "Niclas Thiede",
+    "ev_896511a0b6de41ad": {
+      "value": 0.9,
+      "display": "0.90",
       "unit": null,
-      "metric": "need_bar_player",
+      "metric": "need_depth",
       "entity_type": "club",
       "entity_id": "ado-den-haag",
       "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8426f65d15b377df": {
-      "value": "Bundesliga",
-      "display": "Bundesliga",
-      "unit": null,
-      "metric": "ga_league",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_893f29785bc39bea": {
-      "value": 76800000.0,
-      "display": "76800000",
-      "unit": null,
-      "metric": "proj_value_4y",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -1776,137 +1543,9 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_8ee4ccf43511fab7": {
-      "value": 0.12,
-      "display": "0.12",
-      "unit": null,
-      "metric": "assists_p90",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_8f0f0cdcc904486e": {
-      "value": "both",
-      "display": "both",
-      "unit": null,
-      "metric": "foot",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9506f06b2d0f97ed": {
-      "value": "Manchester United",
-      "display": "Manchester United",
-      "unit": null,
-      "metric": "candidate_club",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_96aeba6a1ad2ae6a": {
-      "value": 2.0,
-      "display": "2",
-      "unit": null,
-      "metric": "need_wanted",
-      "entity_type": "club",
-      "entity_id": "ado-den-haag",
-      "entity_name": "ADO Den Haag",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9a10843a5e0dfa7d": {
-      "value": 0.557,
-      "display": "0.56",
-      "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9b4cc52582b47423": {
-      "value": 0.683,
-      "display": "0.68",
-      "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_9f344fe006897ca7": {
-      "value": 1513.5,
-      "display": "1513.50",
-      "unit": null,
-      "metric": "elo",
-      "entity_type": "club",
-      "entity_id": "heerenveen",
-      "entity_name": "Heerenveen",
-      "source": "dugout_model:predictor",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_a48624fdaf1d3208": {
-      "value": 22.5,
-      "display": "22.50",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_aa6ab82b15584e09": {
-      "value": 16.0,
-      "display": "16",
+    "ev_950390eb43991da5": {
+      "value": 17.0,
+      "display": "17",
       "unit": null,
       "metric": "league_position",
       "entity_type": "club",
@@ -1915,12 +1554,28 @@
       "source": "football_data_org",
       "source_url": "https://api.football-data.org/v4/competitions/DED/standings?season=2026",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:25:30.520939+00:00",
+      "fetched_at": "2026-10-19T17:26:17.144226+00:00",
       "query_kind": "http_json",
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_ac5cfad99e1105f0": {
+    "ev_98863b1a0834486c": {
+      "value": "Niclas Thiede",
+      "display": "Niclas Thiede",
+      "unit": null,
+      "metric": "need_best_player",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
+      "source": "dugout_model:scout",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_9f2df8fd904f9812": {
       "value": "WDDLL",
       "display": "WDDLL",
       "unit": null,
@@ -1931,44 +1586,44 @@
       "source": "football_data_org",
       "source_url": "https://api.football-data.org/v4/competitions/DED/standings",
       "source_tier": 2,
-      "fetched_at": "2026-10-18T07:25:30.520939+00:00",
+      "fetched_at": "2026-10-19T17:26:17.144226+00:00",
       "query_kind": "sql",
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_b125b11f92eb69d7": {
-      "value": 0.76,
-      "display": "0.76",
+    "ev_a0cfa3344ce514fa": {
+      "value": "Jan Žambůrek",
+      "display": "Jan Žambůrek",
       "unit": null,
-      "metric": "ga_pctile",
-      "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_b45324c6c7cbed4d": {
-      "value": "defensive midfield",
-      "display": "defensive midfield",
-      "unit": null,
-      "metric": "need",
+      "metric": "need_bar_player",
       "entity_type": "club",
       "entity_id": "ado-den-haag",
       "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_b830a8f0737a6b5d": {
+    "ev_a2315d61f45cf6e1": {
+      "value": "LWB",
+      "display": "LWB",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp887d0a1e48b9bd",
+      "entity_name": "Sekou Sylla",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_a6e4e377da71b836": {
       "value": "goalkeeper",
       "display": "goalkeeper",
       "unit": null,
@@ -1979,71 +1634,55 @@
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_b84ca1969105f3ae": {
-      "value": 120900000.0,
-      "display": "120900000",
+    "ev_a9c5e231be4700cc": {
+      "value": "AM",
+      "display": "AM",
       "unit": null,
-      "metric": "proj_value_4y",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rp62eb6c7c42564b",
+      "entity_name": "Jesse Bal",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_bad57d0126b7c6d9": {
-      "value": 90000000.0,
-      "display": "90000000",
+    "ev_b2d957d1594e5584": {
+      "value": 2100000.0,
+      "display": "2100000",
       "unit": null,
-      "metric": "market_value",
+      "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rpa39ecd5a19563c",
+      "entity_name": "Matěj Šín",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_bc8d09412e025f7e": {
-      "value": 0.2576,
-      "display": "0.26",
+    "ev_bf2adbe75662aedf": {
+      "value": 0.2347,
+      "display": "0.23",
       "unit": null,
-      "metric": "p_draw",
+      "metric": "p_home_win",
       "entity_type": "match",
       "entity_id": "eredivisie:2026-27:ado-den-haag:heerenveen",
       "entity_name": "ADO Den Haag v Heerenveen",
       "source": "dugout_model:predictor",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_bd4b4a02a3078f79": {
-      "value": 100500000.0,
-      "display": "100500000",
-      "unit": null,
-      "metric": "fair_fee",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2064,146 +1703,210 @@
       "status": "single_source",
       "cross_checks": []
     },
-    "ev_c4ea6bf74ad6d062": {
-      "value": 0.0,
-      "display": "0",
+    "ev_c6e0cf57d5c38f86": {
+      "value": 900000.0,
+      "display": "900000",
       "unit": null,
-      "metric": "need_depth",
+      "metric": "need_peer_best_value",
       "entity_type": "club",
       "entity_id": "ado-den-haag",
       "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_cde6309d740949d5": {
-      "value": 73600000.0,
-      "display": "73600000",
+    "ev_c8d56249b8e680fe": {
+      "value": 1000000.0,
+      "display": "1000000",
+      "unit": null,
+      "metric": "fair_fee_low",
+      "entity_type": "player",
+      "entity_id": "rpff30d8e1c9daf4",
+      "entity_name": "Yannick Eduardo",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_cc6b8e79f5a6a89a": {
+      "value": 900000.0,
+      "display": "900000",
+      "unit": null,
+      "metric": "fair_fee_low",
+      "entity_type": "player",
+      "entity_id": "rpa39ecd5a19563c",
+      "entity_name": "Matěj Šín",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_d65bf2f302c2088e": {
+      "value": 2400000.0,
+      "display": "2400000",
       "unit": null,
       "metric": "fair_fee",
       "entity_type": "player",
-      "entity_id": "rp29ddeed4fefa10",
-      "entity_name": "Aleksandar Pavlović",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rpff30d8e1c9daf4",
+      "entity_name": "Yannick Eduardo",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_cffb3c204933b001": {
-      "value": "2026-10-24T19:00:00+00:00",
-      "display": "2026-10-24T19:00:00+00:00",
+    "ev_e23f5da6fb0710de": {
+      "value": 2900000.0,
+      "display": "2900000",
       "unit": null,
-      "metric": "kickoff_utc",
+      "metric": "fair_fee_high",
+      "entity_type": "player",
+      "entity_id": "rp91b2af4a6c0a0e",
+      "entity_name": "Othniel Raterink",
+      "source": "dugout_model:valuation",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_e30cb6d3bbe78d26": {
+      "value": 0.258,
+      "display": "0.26",
+      "unit": null,
+      "metric": "p_draw",
       "entity_type": "match",
       "entity_id": "eredivisie:2026-27:ado-den-haag:heerenveen",
       "entity_name": "ADO Den Haag v Heerenveen",
       "source": "dugout_model:predictor",
       "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_d282725bc59ef91d": {
-      "value": 27.0,
-      "display": "27",
+    "ev_eeba49d3221db45c": {
+      "value": "GK",
+      "display": "GK",
       "unit": null,
-      "metric": "caps",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "football_data_org:119069",
+      "entity_name": "Kilian Nikiema",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_d89df50bef793839": {
-      "value": 1.0,
-      "display": "1",
+    "ev_f28d2cc3c8485fb4": {
+      "value": 0.5073,
+      "display": "0.51",
       "unit": null,
-      "metric": "need_depth",
+      "metric": "p_away_win",
+      "entity_type": "match",
+      "entity_id": "eredivisie:2026-27:ado-den-haag:heerenveen",
+      "entity_name": "ADO Den Haag v Heerenveen",
+      "source": "dugout_model:predictor",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/predictor_eredivisie.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f5ff256192075c61": {
+      "value": "AM",
+      "display": "AM",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rpff30d8e1c9daf4",
+      "entity_name": "Yannick Eduardo",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f860eb7ea0abdf2a": {
+      "value": "CF",
+      "display": "CF",
+      "unit": null,
+      "metric": "predicted_xi_slot",
+      "entity_type": "player",
+      "entity_id": "rp19207f1bd06f56",
+      "entity_name": "Evan Rottier",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
+      "source_tier": 3,
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
+      "query_kind": "sql",
+      "status": "model_output",
+      "cross_checks": []
+    },
+    "ev_f968d4ee85de8a16": {
+      "value": 350000.0,
+      "display": "350000",
+      "unit": null,
+      "metric": "need_bar_value",
       "entity_type": "club",
       "entity_id": "ado-den-haag",
       "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_db91b4e2321723df": {
-      "value": 184.0,
-      "display": "184",
+    "ev_fe16407c79a055d5": {
+      "value": "RWB",
+      "display": "RWB",
       "unit": null,
-      "metric": "height_cm",
+      "metric": "predicted_xi_slot",
       "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
+      "entity_id": "rpaad3fb5dbc9c08",
+      "entity_name": "Jonas Jensen-Abbew",
+      "source": "dugout_model:lineup",
+      "source_url": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup_recent.md",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
     },
-    "ev_dcb7b141c2203d1e": {
-      "value": 21.5,
-      "display": "21.50",
+    "ev_ff4d199bfe30632e": {
+      "value": 2.0,
+      "display": "2",
       "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rpee56c1079dbe50",
-      "entity_name": "Kobbie Mainoo",
+      "metric": "need_wanted",
+      "entity_type": "club",
+      "entity_id": "ado-den-haag",
+      "entity_name": "ADO Den Haag",
       "source": "dugout_model:scout",
       "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
       "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e025a227094b2b10": {
-      "value": 22.1,
-      "display": "22.10",
-      "unit": null,
-      "metric": "age",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
-      "query_kind": "sql",
-      "status": "model_output",
-      "cross_checks": []
-    },
-    "ev_e10fd76a85371563": {
-      "value": 0.644,
-      "display": "0.64",
-      "unit": null,
-      "metric": "minutes_share_now",
-      "entity_type": "player",
-      "entity_id": "rp8e5a5bb72faf75",
-      "entity_name": "Joao Neves",
-      "source": "dugout_model:scout",
-      "source_url": "https://github.com/delta96040/dugout/blob/main/packages/models/src/dugout_models/market.py",
-      "source_tier": 3,
-      "fetched_at": "2026-10-18T07:31:41.073567+00:00",
+      "fetched_at": "2026-10-19T17:30:13.503908+00:00",
       "query_kind": "sql",
       "status": "model_output",
       "cross_checks": []
@@ -2212,37 +1915,37 @@
   "key_stats": {
     "club": [
       {
-        "stat": "ev_aa6ab82b15584e09",
-        "display": "16th",
+        "stat": "ev_950390eb43991da5",
+        "display": "17th",
         "label": "league position",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_7f126c561db9feca",
+        "stat": "ev_86661d0fb8bdd27d",
         "display": "6",
         "label": "league points",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_3dd8cadbaa3b639b",
+        "stat": "ev_3476f1d779a3a085",
         "display": "11",
         "label": "league goals scored",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_5a574785790cacaf",
+        "stat": "ev_77d59f97148af34f",
         "display": "20",
         "label": "league goals conceded",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_ac5cfad99e1105f0",
+        "stat": "ev_9f2df8fd904f9812",
         "display": "WDDLL",
         "label": "recent league results, oldest first",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_71c6dca5f92570d3",
+        "stat": "ev_63e7997248bca82c",
         "display": "1319",
         "label": "Elo rating (dugout's own)",
         "subject": "ADO Den Haag"
@@ -2256,43 +1959,116 @@
     ],
     "match": [
       {
-        "stat": "ev_cffb3c204933b001",
+        "stat": "ev_30f996bc3e74bea1",
         "display": "24 October 2026",
         "label": "kick-off date",
         "subject": "ADO Den Haag v Heerenveen"
       },
       {
-        "stat": "ev_32886344a1fb8ed2",
+        "stat": "ev_bf2adbe75662aedf",
         "display": "23%",
         "label": "probability ADO Den Haag win",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_bc8d09412e025f7e",
+        "stat": "ev_e30cb6d3bbe78d26",
         "display": "26%",
         "label": "probability of a draw",
         "subject": "ADO Den Haag v Heerenveen"
       },
       {
-        "stat": "ev_7ac1f18dbc20752f",
+        "stat": "ev_f28d2cc3c8485fb4",
         "display": "51%",
         "label": "probability Heerenveen win",
         "subject": "Heerenveen"
       },
       {
-        "stat": "ev_71c6dca5f92570d3",
+        "stat": "ev_63e7997248bca82c",
         "display": "1319",
         "label": "Elo rating (dugout's own)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_9f344fe006897ca7",
+        "stat": "ev_0d2038a16396f734",
         "display": "1514",
         "label": "Elo rating (dugout's own)",
         "subject": "Heerenveen"
       }
     ],
-    "lineup": [],
+    "lineup": [
+      {
+        "stat": "ev_5631534adc029a34",
+        "display": "3-4-2-1",
+        "label": "predicted formation for the next match",
+        "subject": "ADO Den Haag"
+      },
+      {
+        "stat": "ev_eeba49d3221db45c",
+        "display": "GK",
+        "label": "predicted starting slot (goalkeeper)",
+        "subject": "Kilian Nikiema"
+      },
+      {
+        "stat": "ev_13e82196188555b8",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Pascal Mulder"
+      },
+      {
+        "stat": "ev_6f0d5716a452b79e",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Matteo Waem"
+      },
+      {
+        "stat": "ev_1b4ac7fa7730d74f",
+        "display": "CB",
+        "label": "predicted starting slot (centre-back)",
+        "subject": "Lasse Wilhelm"
+      },
+      {
+        "stat": "ev_fe16407c79a055d5",
+        "display": "RWB",
+        "label": "predicted starting slot (right wing-back)",
+        "subject": "Jonas Jensen-Abbew"
+      },
+      {
+        "stat": "ev_a2315d61f45cf6e1",
+        "display": "LWB",
+        "label": "predicted starting slot (left wing-back)",
+        "subject": "Sekou Sylla"
+      },
+      {
+        "stat": "ev_628f7768c8bde5ae",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Jan Žambůrek"
+      },
+      {
+        "stat": "ev_0b9a5ccaf64ec7c6",
+        "display": "CM",
+        "label": "predicted starting slot (central midfield)",
+        "subject": "Juho Kilo"
+      },
+      {
+        "stat": "ev_f5ff256192075c61",
+        "display": "AM",
+        "label": "predicted starting slot (attacking midfield)",
+        "subject": "Yannick Eduardo"
+      },
+      {
+        "stat": "ev_a9c5e231be4700cc",
+        "display": "AM",
+        "label": "predicted starting slot (attacking midfield)",
+        "subject": "Jesse Bal"
+      },
+      {
+        "stat": "ev_f860eb7ea0abdf2a",
+        "display": "CF",
+        "label": "predicted starting slot (centre-forward)",
+        "subject": "Evan Rottier"
+      }
+    ],
     "news": [],
     "transfer": [
       {
@@ -2302,9 +2078,21 @@
         "subject": "Yannick Eduardo"
       },
       {
-        "stat": "ev_16d64f9146e37f99",
+        "stat": "ev_d65bf2f302c2088e",
         "display": "€2.4m",
         "label": "estimated fair fee if sold to another Eredivisie club",
+        "subject": "Yannick Eduardo"
+      },
+      {
+        "stat": "ev_c8d56249b8e680fe",
+        "display": "€1.0m",
+        "label": "likely low end of the estimated fair fee if sold to another Eredivisie club",
+        "subject": "Yannick Eduardo"
+      },
+      {
+        "stat": "ev_27e7314b6b449f70",
+        "display": "€5.0m",
+        "label": "likely high end of the estimated fair fee if sold to another Eredivisie club",
         "subject": "Yannick Eduardo"
       },
       {
@@ -2314,9 +2102,21 @@
         "subject": "Othniel Raterink"
       },
       {
-        "stat": "ev_30bb2b2699f0a0c0",
+        "stat": "ev_6fd6f57f0adca826",
         "display": "€1.1m",
         "label": "estimated fair fee if sold to another Eredivisie club",
+        "subject": "Othniel Raterink"
+      },
+      {
+        "stat": "ev_55d9e790a17a8790",
+        "display": "€0.3m",
+        "label": "likely low end of the estimated fair fee if sold to another Eredivisie club",
+        "subject": "Othniel Raterink"
+      },
+      {
+        "stat": "ev_e23f5da6fb0710de",
+        "display": "€2.9m",
+        "label": "likely high end of the estimated fair fee if sold to another Eredivisie club",
         "subject": "Othniel Raterink"
       },
       {
@@ -2326,333 +2126,123 @@
         "subject": "Matěj Šín"
       },
       {
-        "stat": "ev_6c1b5d0a961a3da8",
-        "display": "€2.2m",
+        "stat": "ev_b2d957d1594e5584",
+        "display": "€2.1m",
         "label": "estimated fair fee if sold to another Eredivisie club",
+        "subject": "Matěj Šín"
+      },
+      {
+        "stat": "ev_cc6b8e79f5a6a89a",
+        "display": "€0.9m",
+        "label": "likely low end of the estimated fair fee if sold to another Eredivisie club",
+        "subject": "Matěj Šín"
+      },
+      {
+        "stat": "ev_2d355c7d91bee05f",
+        "display": "€4.5m",
+        "label": "likely high end of the estimated fair fee if sold to another Eredivisie club",
         "subject": "Matěj Šín"
       }
     ],
     "scout": [
       {
-        "stat": "ev_b45324c6c7cbed4d",
+        "stat": "ev_5231d2bab619c999",
         "display": "defensive midfield",
         "label": "squad need, priority one",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_c4ea6bf74ad6d062",
-        "display": "0",
+        "stat": "ev_896511a0b6de41ad",
+        "display": "0.9",
         "label": "players for the position, veterans aside (need one)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_6fb4ea359562275e",
+        "stat": "ev_14c26237b5b812b8",
         "display": "2",
         "label": "players a squad carries there (need one)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_13d529bd37a79641",
-        "display": "€1.3m",
+        "stat": "ev_0506116790dcc57c",
+        "display": "Jan Žambůrek",
+        "label": "best option there (need one)",
+        "subject": "ADO Den Haag"
+      },
+      {
+        "stat": "ev_a0cfa3344ce514fa",
+        "display": "Jan Žambůrek",
+        "label": "last regular starter there (need one)",
+        "subject": "ADO Den Haag"
+      },
+      {
+        "stat": "ev_772b6a34213a59d5",
+        "display": "0.00",
+        "label": "last regular starter's goals and assists per full match (need one)",
+        "subject": "ADO Den Haag"
+      },
+      {
+        "stat": "ev_75906e1b5304286e",
+        "display": "€0.4m",
+        "label": "last regular starter's market value (need one)",
+        "subject": "ADO Den Haag"
+      },
+      {
+        "stat": "ev_0dede5d4986c9892",
+        "display": "€0.4m",
+        "label": "best option's market value (need one)",
+        "subject": "ADO Den Haag"
+      },
+      {
+        "stat": "ev_6c8210866d55cb7b",
+        "display": "€1.6m",
         "label": "similar squads' best option's market value (need one)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_e025a227094b2b10",
-        "display": "22",
-        "label": "age (gem target)",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_776c8a81bdaed6ce",
-        "display": "Paris Saint-Germain",
-        "label": "current club",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_e10fd76a85371563",
-        "display": "64%",
-        "label": "share of his club's minutes over the last year",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_4d920b46b531177c",
-        "display": "0.16",
-        "label": "league goals per full match",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_672f0bfa144ba088",
-        "display": "0.08",
-        "label": "league assists per full match",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_09f2111e63db0610",
-        "display": "78%",
-        "label": "share of players at his position in his league he beats for goals and assists per full match",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_4f147d2053482dda",
-        "display": "Ligue 1",
-        "label": "league of that comparison",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_4ab2b5066436bc68",
-        "display": "right",
-        "label": "stronger foot",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_39dde9a5ea56d452",
-        "display": "171",
-        "label": "height in centimetres",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_d282725bc59ef91d",
-        "display": "27",
-        "label": "international caps",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_12e6ab656c4f4c60",
-        "display": "central midfield, defensive midfield",
-        "label": "positions he starts at",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_3b9258c5ff138966",
-        "display": "€140m",
-        "label": "market value",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_bd4b4a02a3078f79",
-        "display": "€100m",
-        "label": "estimated fair fee",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_b84ca1969105f3ae",
-        "display": "€121m",
-        "label": "projected market value in a few seasons",
-        "subject": "João Neves"
-      },
-      {
-        "stat": "ev_a48624fdaf1d3208",
-        "display": "22",
-        "label": "age (gem target)",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_6cf8c626d1ccf7ca",
-        "display": "Bayern Munich",
-        "label": "current club",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_9b4cc52582b47423",
-        "display": "68%",
-        "label": "share of his club's minutes over the last year",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_44af043bf4d2fe11",
-        "display": "0.15",
-        "label": "league goals per full match",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_29678f0d1050153f",
-        "display": "0.08",
-        "label": "league assists per full match",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_b125b11f92eb69d7",
-        "display": "76%",
-        "label": "share of players at his position in his league he beats for goals and assists per full match",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_8426f65d15b377df",
-        "display": "Bundesliga",
-        "label": "league of that comparison",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_8f0f0cdcc904486e",
-        "display": "both",
-        "label": "stronger foot",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_792e5f583a20fc36",
-        "display": "188",
-        "label": "height in centimetres",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_02bfb298974211b3",
-        "display": "15",
-        "label": "international caps",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_06ca86b096c3c9fe",
-        "display": "defensive midfield",
-        "label": "positions he starts at",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_bad57d0126b7c6d9",
-        "display": "€90.0m",
-        "label": "market value",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_cde6309d740949d5",
-        "display": "€73.6m",
-        "label": "estimated fair fee",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_5c02b0f421e98ae1",
-        "display": "€78.2m",
-        "label": "projected market value in a few seasons",
-        "subject": "Aleksandar Pavlovic"
-      },
-      {
-        "stat": "ev_dcb7b141c2203d1e",
-        "display": "22",
-        "label": "age (gem target)",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_9506f06b2d0f97ed",
-        "display": "Manchester United",
-        "label": "current club",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_9a10843a5e0dfa7d",
-        "display": "56%",
-        "label": "share of his club's minutes over the last year",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_6d324a1fa2939be0",
-        "display": "0.06",
-        "label": "league goals per full match",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_8ee4ccf43511fab7",
-        "display": "0.12",
-        "label": "league assists per full match",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_72b86f1f960acd0e",
-        "display": "51%",
-        "label": "share of players at his position in his league he beats for goals and assists per full match",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_5d9bead4a7e2aba8",
-        "display": "Premier League",
-        "label": "league of that comparison",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_11bddfcfc4bae93a",
-        "display": "right",
-        "label": "stronger foot",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_db91b4e2321723df",
-        "display": "184",
-        "label": "height in centimetres",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_56d0134766b66b97",
-        "display": "14",
-        "label": "international caps",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_128ffa7ef710df92",
-        "display": "central midfield, defensive midfield",
-        "label": "positions he starts at",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_5a2dbe1e5ba5f122",
-        "display": "€75.0m",
-        "label": "market value",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_239bcf0eae88cd86",
-        "display": "€56.1m",
-        "label": "estimated fair fee",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_893f29785bc39bea",
-        "display": "€76.8m",
-        "label": "projected market value in a few seasons",
-        "subject": "Kobbie Mainoo"
-      },
-      {
-        "stat": "ev_b830a8f0737a6b5d",
+        "stat": "ev_a6e4e377da71b836",
         "display": "goalkeeper",
         "label": "squad need, priority two",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_d89df50bef793839",
+        "stat": "ev_0585b108c1c5d6a0",
         "display": "1",
         "label": "players for the position, veterans aside (need two)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_96aeba6a1ad2ae6a",
+        "stat": "ev_ff4d199bfe30632e",
         "display": "2",
         "label": "players a squad carries there (need two)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_687c8213f88a397d",
+        "stat": "ev_98863b1a0834486c",
         "display": "Niclas Thiede",
         "label": "best option there (need two)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_83971e1dd321531a",
+        "stat": "ev_47c60ae7b1b869a1",
         "display": "Niclas Thiede",
         "label": "last regular starter there (need two)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_352bd3dd11eff54f",
+        "stat": "ev_f968d4ee85de8a16",
         "display": "€0.3m",
         "label": "last regular starter's market value (need two)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_5f51c32b44696b6c",
+        "stat": "ev_7b5fde693605816c",
         "display": "€0.3m",
         "label": "best option's market value (need two)",
         "subject": "ADO Den Haag"
       },
       {
-        "stat": "ev_4abce760cd9ad69a",
+        "stat": "ev_c6e0cf57d5c38f86",
         "display": "€0.9m",
         "label": "similar squads' best option's market value (need two)",
         "subject": "ADO Den Haag"
@@ -2662,13 +2252,13 @@
   "verification": {
     "stat_auditor": {
       "ok": true,
-      "numbers_total": 54,
+      "numbers_total": 58,
       "numbers_untraceable": 0
     },
     "fact_check_claims": {
-      "verified": 54
+      "verified": 52
     },
-    "sections_published": 5,
+    "sections_published": 6,
     "sections_withheld": 0
   },
   "methods": {
@@ -2676,6 +2266,7 @@
     "lineup": "https://github.com/delta96040/dugout/blob/main/docs/backtests/lineup.md",
     "injury": "https://github.com/delta96040/dugout/blob/main/docs/backtests/injury.md",
     "roles": "https://github.com/delta96040/dugout/blob/main/docs/backtests/roles.md",
+    "style": "https://github.com/delta96040/dugout/blob/main/docs/backtests/roles_api.md",
     "fingerprint": "https://github.com/delta96040/dugout/blob/main/docs/backtests/fingerprint.md",
     "valuation": "https://github.com/delta96040/dugout/blob/main/docs/backtests/valuation.md",
     "realism": "https://github.com/delta96040/dugout/blob/main/docs/backtests/realism.md",

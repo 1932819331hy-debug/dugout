@@ -142,19 +142,33 @@ export default function MethodsPage() {
             <B file="valuation" j={val} value={val?.model_on_baseline_rows?.median_ape} label="median error, model" fmt="pct" /> vs{" "}
             <B file="valuation" j={val} value={val?.baseline_market_value?.median_ape} label="median error, market value" fmt="pct" /> for
             &ldquo;fee = market value&rdquo;.
+            {val?.ranges && (
+              <>
+                {" "}
+                Every price comes with a likely range, wider for cheap players, whose fees vary most: on test transfers{" "}
+                <B file="valuation" j={val} value={val.ranges.segments?.all?.coverage} label="fees inside the likely range" fmt="pct" />{" "}
+                of fees landed inside it (aim:{" "}
+                <B file="valuation" j={val} value={val.ranges.level} label="share of fees the range aims to hold" fmt="pct" />
+                ).
+              </>
+            )}
           </Row>
           <Row name="Transfer realism" verdict="calibrated parts">
             P(sold in a window) × the club&apos;s share of plausible buyers. Sale model AUC{" "}
             <B file="realism" j={real} value={real?.mobility?.auc} label="mobility AUC" />; destination AUC{" "}
             <B file="realism" j={real} value={real?.destination?.auc} label="destination AUC" />.
           </Row>
-          <Row name="Rumour track record" verdict="beats the base rate · outlets barely differ">
-            What became of every rumour in the Guardian&apos;s Rumour Mill archive: each one checked against the move
-            that did or did not happen within half a year. On the latest season Brier{" "}
+          <Row name="Rumour brief" verdict="beats the base rate · few sources stand out">
+            Every rumour on a club page comes with its source&apos;s label, how many independent outlets (one per media
+            group) carry the link and since when, our estimate of the move (the transfer realism above), his contract, how
+            often his club sells, and what became of the source&apos;s earlier reports on the same club. A source is rated
+            against what similar reports did: on the latest season that estimate scored a Brier of{" "}
             <B file="rumours" j={rum} value={rum6?.model?.brier} label="Brier, rumour track record" /> vs{" "}
             <B file="rumours" j={rum} value={rum6?.recent_rate?.brier} label="Brier, recent base rate" /> for the recent base rate; AUC{" "}
-            <B file="rumours" j={rum} value={rum6?.model?.auc} label="AUC, rumour track record" />. Outlets&apos; records barely differ once
-            shrunk to the average, so a rumour is judged on its own signs: repeat reports, how many clubs it names, the window.
+            <B file="rumours" j={rum} value={rum6?.model?.auc} label="AUC, rumour track record" />. Reliable or speculative needs a
+            record clearly apart from that, beyond luck; almost every outlet, and the column&apos;s own round-ups, come out about
+            average.{" "}
+            <a className="underline" href="/rumours/">The labels by outlet</a>.
           </Row>
           <Row name="Player potential" verdict="beats age curve · wide bands">
             Projected market value. Median error two years ahead{" "}
@@ -173,6 +187,34 @@ export default function MethodsPage() {
           <Row name="Injury risk" verdict="tiers, not percentages">
             Load and history model. AUC <B file="injury" j={inj} value={inj?.results?.logistic?.auc} label="injury AUC" />, top-decile lift{" "}
             <B file="injury" j={inj} value={inj?.results?.logistic?.top_decile_lift} label="top-decile lift" fmt="x" />; shown as risk tiers because calibration is limited.
+            {inj?.leagues && (
+              <>
+                {" "}
+                Other leagues have no current minutes, so their tiers come from the injury record and age alone:{" "}
+                {Object.entries(inj.leagues as J)
+                  .filter(([k, r]) => k !== "premier_league" && r.scored)
+                  .map(([k, r], i) => (
+                    <span key={k}>
+                      {i > 0 && ", "}
+                      <span data-name>{r.name}</span> AUC{" "}
+                      <B file="injury" j={inj} value={r.results?.history_pooled?.auc} label={`injury AUC, ${r.name}`} />
+                    </span>
+                  ))}
+                {(inj.unscored_leagues as string[]).length > 0 && (
+                  <>
+                    ; not rated in{" "}
+                    {(inj.unscored_leagues as string[]).map((n, i) => (
+                      <span key={n}>
+                        {i > 0 && ", "}
+                        <span data-name>{n}</span>
+                      </span>
+                    ))}{" "}
+                    (too little injury data)
+                  </>
+                )}
+                .
+              </>
+            )}
           </Row>
           <Row name="Lineup optimiser" verdict="slightly beats heuristic">
             CP-SAT integer programme. Predicted XI overlap with the real XI{" "}

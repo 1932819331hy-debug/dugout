@@ -7,6 +7,7 @@ Each block uses exactly the model configuration that was backtested (docs/backte
 
 from __future__ import annotations
 
+import json
 import logging
 from collections.abc import Iterable
 from datetime import UTC, datetime
@@ -298,6 +299,11 @@ def lineups(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
     return rows
 
 
+LAST_XI_MIN_KNOWN = (
+    9  # starters of the last XI that must match the squad before the rest is filled by position
+)
+
+
 def last_xi_lineups(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
     """Leagues without FPL minutes (config `backtested: lineup_last_xi`): the club's last league XI from
     API-Football lineups, players API-Football lists as missing replaced by the most recent other starter
@@ -342,13 +348,49 @@ def last_xi_lineups(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]
         mine = squads[squads.club_id == r.club]
         g = lu[(lu.club_id == r.club) & lu.player_id.isin(mine.player_id)].copy()
         if g.empty:
+            # say why, so the next run's log tells a club-name mismatch from a player-id one
+            here = lu[lu.club_id == r.club]
+            stem = r.club.split("-")[0][:5]
+            similar = sorted({c for c in lu.club_id.unique() if stem and stem in c and c != r.club})[:3]
+            fam = lambda ids: sorted({str(i).split(":")[0] if ":" in str(i) else "reep" for i in ids})  # noqa: E731
+            log.warning(
+                "last-XI lineup %s: no recorded starter in the squad list (lineup rows %d, squad %d, lineup ids %s, "
+                "squad ids %s, similar lineup clubs %s)",
+                r.club,
+                len(here),
+                len(mine),
+                fam(here.player_id),
+                fam(mine.player_id),
+                similar,
+            )
             continue
         order = {k: i for i, k in enumerate(sorted(g.kickoff_utc.unique(), reverse=True))}
         g["back"] = g.kickoff_utc.map(order)
         g["gk"] = g.player_id.map(dict(zip(mine.player_id, mine.position == "GK", strict=True)))
         xi = predict(g[["back", "player_id", "gk"]], absent)
-        if len(xi) != 11:
+        if len(xi) < LAST_XI_MIN_KNOWN:
+            log.warning("last-XI lineup %s: only %d of 11 starters matched to the squad", r.club, len(xi))
             continue
+        if len(xi) < 11:
+            # a starter or two the id register cannot match (or newly injured): fill the gap with the squad's best
+            # fit for the open slots, preferring players who started most recently for the club
+            starts = g.groupby("player_id").back.min()
+            pool = mine[~mine.player_id.isin(absent) | mine.player_id.isin(xi)].copy()
+            pool["rating"] = np.where(
+                pool.player_id.isin(xi), 10.0, 5.0 - pool.player_id.map(starts).fillna(5.0).clip(upper=5.0)
+            )
+            pool = pool.assign(available=True, fatigue=0.0, fpl_pos=pool.position).reset_index(drop=True)
+            last = g.loc[g.back == 0, "formation"].dropna()
+            try:
+                fill = (
+                    optimise(pool, last.iloc[0])
+                    if len(last) and last.iloc[0] in FORMATIONS
+                    else best_formation(pool)
+                )
+            except ValueError:
+                log.warning("last-XI lineup %s: could not fill %d open slots", r.club, 11 - len(xi))
+                continue
+            xi = [pid for pid, _ in fill.xi]
         sq = mine[mine.player_id.isin(xi)].assign(available=True, rating=0.0, fatigue=0.0)
         sq = sq.assign(fpl_pos=sq.position).reset_index(drop=True)
         last = g.loc[g.back == 0, "formation"].dropna()
@@ -445,6 +487,84 @@ def injury_risk(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
         tier = next(name for cut, name in TIERS if q < cut)
         out.append(_row("injury", "player", pid, "injury_risk_tier", tier, now))
         out.append(_row("injury", "player", pid, "injury_risk_percentile", round(float(q), 3), now))
+    return out + injury_risk_other(con, now)
+
+
+def injury_risk_other(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
+    """Leagues without FPL: no current minutes, so the history-only model (age, position, injury record) pooled
+    over the six leagues, for the leagues its validation scored (docs/backtests/injury.md). The record is the free
+    plan's 2022-24 lists plus the absences API-Football lists each night. Tier = percentile among the league's
+    current squad players. Published under the id the shortlists use (Reep, else transfermarkt:<id>)."""
+    from dugout_pipeline.adapters.api_football import injury_file
+
+    from dugout_models.injury import (
+        BACKTEST_JSON,
+        PL,
+        _injury_rows,
+        attach_tm_facts,
+        build,
+        episodes,
+        history_features,
+        history_model,
+        injury_episodes,
+        other_leagues,
+    )
+    from dugout_models.market import _tm_to_reep
+
+    try:
+        report = json.loads(BACKTEST_JSON.read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        log.warning("injury backtest report missing: other leagues not scored")
+        return []
+    scored = [lg for lg in other_leagues() if report.get("leagues", {}).get(lg, {}).get("scored")]
+    if not scored or not any(injury_file(lg, 2024).is_file() for lg in scored):
+        log.warning("injury lists for the other leagues missing (history job): not scored")
+        return []
+    names = [PL, *other_leagues()]
+    frames = pd.concat([build(con, lg) for lg in names], ignore_index=True)
+    model, cols = history_model(frames, names)
+    squads = con.execute(
+        """SELECT p.player_id, c.league, e.external_id AS tm_id FROM players p JOIN clubs c USING (club_id)
+           JOIN entity_ids e ON e.entity_type = 'player' AND e.dugout_id = p.player_id
+                AND e.provider = 'transfermarkt' AND e.namespace = 'spieler'
+           WHERE c.league IN (SELECT unnest(?))""",
+        [scored],
+    ).df()
+    tm_of = squads.drop_duplicates("player_id").set_index("player_id").tm_id
+    live = con.execute(
+        """SELECT player_id, CAST(snapshot_date AS DATE) AS date, reason, news AS type FROM injuries
+           WHERE source = 'api_football' AND status = 'unavailable'"""
+    ).df()
+    live = live.assign(type="Missing Fixture", player_id=live.player_id.map(tm_of)).dropna(
+        subset=["player_id"]
+    )
+    ep = injury_episodes(scored[0])  # every league's lists, keyed by Transfermarkt id
+    if len(live):
+        live = _injury_rows(live.assign(date=pd.to_datetime(live.date)))
+        ep = pd.concat([ep, episodes(live[["player_id", "date", "reason"]])], ignore_index=True)
+        ep = ep.sort_values(["player_id", "date"]).reset_index(drop=True)
+    today = pd.Timestamp(now.date())
+    p = squads.drop_duplicates("tm_id")[["league", "tm_id"]].rename(columns={"tm_id": "player_id"})
+    p = p.assign(date=today)
+    p = attach_tm_facts(history_features(p.reset_index(drop=True), ep, label=False)).dropna(subset=["age"])
+    # e.g. a warehouse without the other leagues' squads yet: nothing to score, not a failed publish
+    if p.empty:
+        log.warning("injury: no squad players with Transfermarkt ids in %s: other leagues not scored", scored)
+        return []
+    p["age2"] = (p.age - 27) ** 2
+    p = p.assign(**{f"lg_{lg}": (p.league == lg).astype(float) for lg in names})
+    p["risk"] = model.predict_proba(p[cols])[:, 1]
+    reep = _tm_to_reep(con)
+    out = []
+    for _, g in p.groupby("league"):
+        pct = g.risk.rank(pct=True, method="max").to_numpy()
+        for tm, q in zip(g.player_id, pct, strict=True):
+            pid = reep.get(tm, f"transfermarkt:{tm}")
+            tier = next(name for cut, name in TIERS if q < cut)
+            out.append(_row("injury", "player", pid, "injury_risk_tier", tier, now, "record"))
+            out.append(
+                _row("injury", "player", pid, "injury_risk_percentile", round(float(q), 3), now, "record")
+            )
     return out
 
 
@@ -493,11 +613,52 @@ def fingerprints(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
     return rows
 
 
+# ---- playing style (API-Football season totals) -----------------------------------------------------------
+def style(con: duckdb.DuckDBPyConnection, now: datetime) -> list[dict]:
+    """Every player with a style profile (dugout_models.style), his newest season: role (when one clearly leads),
+    the season and pool he is measured in, his percentile for each of his group's features and up to two similar
+    players. Context = the season ("2024-25")."""
+    from dugout_models.market import _tm_to_reep
+    from dugout_models.style import GROUP_PLURAL, TIER_NAMES, StyleModel, season_label, tm_groups
+
+    m = StyleModel.from_warehouse(con, tm_groups())
+    if m.profiles.empty:
+        return []
+    reep = _tm_to_reep(con)
+    rows: list[dict] = []
+    newest = m.profiles.sort_values(["season", "minutes"]).drop_duplicates("tm_player_id", keep="last")
+    for r in newest.itertuples(index=False):
+        row = pd.Series(r._asdict())
+        pid, ctx = reep.get(r.tm_player_id, f"transfermarkt:{r.tm_player_id}"), season_label(int(r.season))
+        rows.append(_row("style", "player", pid, "style_group", r.group, now, ctx))
+        rows.append(
+            _row(
+                "style",
+                "player",
+                pid,
+                "style_pool",
+                f"{GROUP_PLURAL[r.group]} in {TIER_NAMES[r.tier]}",
+                now,
+                ctx,
+            )
+        )
+        rows.append(_row("style", "player", pid, "league_minutes", int(r.minutes), now, ctx))
+        if isinstance(r.role, str):
+            rows.append(_row("style", "player", pid, "style_role", r.role, now, ctx))
+        for f, v in m.percentiles(row, r.group).items():
+            rows.append(_row("style", "player", pid, f"pct:{f}", round(v, 2), now, ctx))
+        for i, (_, name, cos) in enumerate(m.similar(row, 2), 1):
+            if cos >= 0.8:
+                rows.append(_row("style", "player", pid, f"similar_{i}", name, now, ctx))
+    return rows
+
+
 MODELS = {
     "predictor": predictions,
     "lineup": lambda con, now: lineups(con, now) + last_xi_lineups(con, now),
     "injury": injury_risk,
     "roles": roles,
+    "style": style,
     "fingerprint": fingerprints,
 }
 
@@ -509,7 +670,8 @@ def publish(
     from dugout_models.market import market
     from dugout_models.rumours import publish as rumours
 
-    registry = {**MODELS, "market": market, "rumours": rumours}
+    # rumours first: it rewrites rumour_links, which the market's realism reads (press reports)
+    registry = {**MODELS, "rumours": rumours, "market": market}
     counts = {}
     for name in models or list(registry):
         rows = registry[name](con, now)

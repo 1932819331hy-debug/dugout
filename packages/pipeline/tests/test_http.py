@@ -153,3 +153,21 @@ def test_budget_is_checked_before_network(tmp_path):
     with pytest.raises(BudgetExceeded):
         c.get("https://api.test/2")
     assert len(hits) == 1
+
+
+def test_forget_drops_a_cached_error_reply(tmp_path):
+    calls = []
+
+    def handler(req):
+        if req.url.path == "/robots.txt":
+            return httpx.Response(404)
+        calls.append(1)
+        body = {"errors": {"access": "suspended"}} if len(calls) == 1 else {"errors": [], "response": [1]}
+        return httpx.Response(200, json=body)
+
+    c = _client(tmp_path, handler)
+    bad = c.get("https://api.test/fixtures", params={"date": "2026-10-17"})
+    assert bad.json()["errors"]
+    c.forget(bad)
+    good = c.get("https://api.test/fixtures", params={"date": "2026-10-17"})
+    assert not good.from_cache and good.json()["response"] == [1] and len(calls) == 2

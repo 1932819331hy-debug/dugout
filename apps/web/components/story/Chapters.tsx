@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Num from "@/components/Num";
+import RumourBriefs from "@/components/RumourBriefs";
 import Shortlists from "@/components/Shortlists";
 import { metricName } from "@/lib/format";
 import { REPO } from "./constants";
@@ -30,7 +31,8 @@ function GapReason({ g, club, first }: { g: Gap; club: string; first: boolean })
       <br />
       {thin && g.depth && g.wanted && (
         <>
-          Only <N s={g.depth} /> players for it, veterans aside, where a squad carries <N s={g.wanted} />.{" "}
+          Counted by where they start, its options add up to only <N s={g.depth} /> players, veterans aside,
+          where a squad carries <N s={g.wanted} />.{" "}
         </>
       )}
       {weak && g.bestValue && g.peerValue && (
@@ -126,6 +128,7 @@ export function chapterContent(d: StoryData) {
           </ol>
           <p className="mt-4 max-w-md text-sm">
             Every position is compared with the six squads in its league closest in strength: depth, the best option&apos;s value, ageing.
+            Players count where they actually start, not where they are listed.
             {d.signings.length > 0 && " Signings the club has already announced count before anything is recommended:"}
           </p>
           {d.signings.length > 0 && (
@@ -159,30 +162,20 @@ export function chapterContent(d: StoryData) {
               targets={d.targets}
               buyer={d.club}
               gaps={d.gaps}
+              injury={d.injury}
               n={(s) => <Scramble s={s} chapter={2} />}
               compact
             />
           </div>
           {d.rumours.length > 0 && (
             <div className="mt-4 max-w-2xl">
-              <p className="mono-label">Linked in the press · rumours, not facts</p>
-              <ul className="mt-1 space-y-0.5 text-sm">
-                {d.rumours.slice(0, 2).map((r) => (
-                  <li key={r.text}>
-                    {r.text}{" "}
-                    {r.record && (
-                      <span className="text-pencil">
-                        Reports like this came true within half a year about one time in <Scramble s={r.record} chapter={2} />.{" "}
-                      </span>
-                    )}
-                    {r.url && (
-                      <a className="font-mono text-xs underline" href={r.url} target="_blank" rel="noopener noreferrer">
-                        The Guardian
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <p className="mono-label">
+                Linked in the press · most credible first · rumours, not facts ·{" "}
+                <Link className="underline" href="/rumours/">
+                  how sources compare
+                </Link>
+              </p>
+              <RumourBriefs briefs={d.rumours.slice(0, 2)} n={(s) => <Scramble s={s} chapter={2} />} compact />
             </div>
           )}
         </>

@@ -50,8 +50,22 @@ GROUPS = {
     "daily mail": "dmg_media",
     "metro": "dmg_media",
     "the telegraph": "telegraph",
+    # names the Rumour Mill and the club sites use for the same mastheads (dugout_models.rumours heat)
+    "the mirror": "reach",
+    "daily star": "reach",
+    "daily record": "reach",
+    "talksport": "news_uk",
+    "the standard": "independent_standard",
+    "mailonline": "dmg_media",
 }
 AGGREGATORS = {"yahoo sports", "msn", "newsnow", "google news", "onefootball", "flipboard"}
+
+
+def ownership_group(outlet: str) -> str | None:
+    """The ownership group an outlet counts under (one vote per group), None for an aggregator."""
+    name = outlet.lower().strip()
+    return None if name in AGGREGATORS else GROUPS.get(name, name)
+
 
 # Clause boundaries for the "metric word near its number" rule.
 _CLAUSE = re.compile(r",|;|:| and | but | while | whereas | with ", re.I)
@@ -65,6 +79,8 @@ METRIC_WORDS = {
     "season_expected_goals": r"\bxg\b|expected goals|chances? worth",
     "market_value": r"valu|worth|price|transfermarkt",
     "fair_fee": r"valu|worth|fee|price|cost",
+    "fair_fee_low": r"valu|worth|fee|price|cost|likely|between|range",
+    "fair_fee_high": r"valu|worth|fee|price|cost|likely|between|range",
     "league_position": r"place|position|table|sit|ranked|top|bottom|\bin\b",
     "league_points": r"point",
     "league_goalsFor": r"goal|scor",
@@ -100,10 +116,7 @@ class Passage:
 
     @property
     def group(self) -> str | None:
-        name = self.outlet.lower().strip()
-        if name in AGGREGATORS:
-            return None
-        return GROUPS.get(name, name)
+        return ownership_group(self.outlet)
 
 
 @dataclass

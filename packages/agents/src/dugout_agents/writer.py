@@ -20,7 +20,7 @@ from dugout_verify.factcheck import FactChecker
 from dugout_verify.ledger import PLACEHOLDER, EvidenceLedger, render
 
 log = logging.getLogger(__name__)
-CODE = re.compile(r"\[\s*(F\d+d?)\s*\]")  # [F3], and [F3d] for a second slot
+CODE = re.compile(r"\[\s*(F\d+)(d|lo|hi)?\s*\]")  # [F3]; [F3d] a second slot; [F3lo]/[F3hi] a range
 
 SYSTEM = """You are the {role} in the sporting department of {club}. You write short briefing notes for the \
 sporting director.
@@ -51,7 +51,10 @@ class Draft:
 
 
 def card(f: Fact) -> str:
-    example = f.template.replace("{p}", f"[{f.key}]").replace("{d}", f"[{f.key}d]") if f.eid else f.template
+    example = f.template
+    if f.eid:
+        for slot, code in (("{p}", ""), ("{d}", "d"), ("{lo}", "lo"), ("{hi}", "hi")):
+            example = example.replace(slot, f"[{f.key}{code}]")
     kind = f"code [{f.key}]" if f.eid else "statement"
     gloss = f"; reading: {f.gloss}" if f.gloss else ""
     return f"- [{f.key}] {f.subject} — {f.label} ({kind}{gloss}). Example: {example}"
@@ -62,15 +65,15 @@ def substitute(text: str, facts: list[Fact]) -> tuple[str, list[str]]:
     errors: list[str] = []
 
     def sub(m: re.Match[str]) -> str:
-        code = m.group(1)
-        f = by_key.get(code.rstrip("d"))
-        if f is None or (code.endswith("d") and not f.when):
-            errors.append(f"unknown fact code [{code}]")
+        key, suffix = m.group(1), m.group(2) or ""
+        f = by_key.get(key)
+        if f is None or (suffix == "d" and not f.when) or (suffix in ("lo", "hi") and not f.range):
+            errors.append(f"unknown fact code [{key}{suffix}]")
             return m.group(0)
         if not f.eid:
             errors.append(f"[{f.key}] is a statement, not a value")
             return m.group(0)
-        return f.when_placeholder if code.endswith("d") else f.placeholder
+        return f.slot(suffix)
 
     out = CODE.sub(sub, text.strip())
     out = re.sub(r"\s+", " ", out).strip()

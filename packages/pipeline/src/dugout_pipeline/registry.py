@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dugout_pipeline.adapters.api_football import ApiFootballAdapter, ApiFootballHistoryAdapter
+from dugout_pipeline.adapters.api_football_stats import ApiFootballStatsAdapter
 from dugout_pipeline.adapters.base import HOUR, IngestContext, SourceAdapter
 from dugout_pipeline.adapters.clubelo import ClubEloAdapter
 from dugout_pipeline.adapters.football_data_couk import FootballDataCoUkAdapter
@@ -14,6 +15,7 @@ from dugout_pipeline.adapters.rumours import GuardianRumourMillAdapter, RumourAr
 from dugout_pipeline.adapters.transfermarkt import (
     TransfermarktDatasetsLoader,
     TransfermarktFileAdapter,
+    TransfermarktPoolRefresher,
     TransfermarktRefresher,
 )
 from dugout_pipeline.adapters.weather import OpenMeteoAdapter
@@ -54,9 +56,11 @@ ADAPTERS: dict[str, type[SourceAdapter]] = {
         ClubNewsAdapter,
         OpenMeteoAdapter,
         TransfermarktRefresher,
+        TransfermarktPoolRefresher,
         TransfermarktDatasetsLoader,
         FPLHistoryAdapter,
         ApiFootballHistoryAdapter,
+        ApiFootballStatsAdapter,
     ]
 }
 
@@ -77,6 +81,8 @@ JOBS: dict[str, list[str]] = {
         "rss",
         "club_news",
         "open_meteo",
+        # last: a few pages of player season stats a night, within what the day's other API-Football calls leave
+        "api_football_stats",
     ],
     "injuries": ["fpl", "api_football"],
     "history": [

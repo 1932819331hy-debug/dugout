@@ -26,6 +26,7 @@ MODEL_DOCS = {
     "lineup": f"{REPO}/docs/backtests/lineup.md",
     "injury": f"{REPO}/docs/backtests/injury.md",
     "roles": f"{REPO}/docs/backtests/roles.md",
+    "style": f"{REPO}/docs/backtests/roles_api.md",
     "fingerprint": f"{REPO}/docs/backtests/fingerprint.md",
     "valuation": f"{REPO}/docs/backtests/valuation.md",
     "realism": f"{REPO}/docs/backtests/realism.md",
@@ -48,6 +49,10 @@ class Fact:
     gloss: str = ""  # qualitative reading by code; never contains digits
     entity_id: str | None = None
     when: tuple[str, str | None] | None = None  # optional second slot "{d}" (ledger id, format), e.g. a date
+    # optional likely range "{lo}" / "{hi}" around the value (ledger ids, same format), e.g. a fee range
+    range: tuple[str, str] | None = None
+    # brief: a structured figure for the site's cards (key_stats, e.g. the rumour brief), never written as prose
+    brief: bool = False
 
     @property
     def placeholder(self) -> str:
@@ -57,11 +62,21 @@ class Fact:
     def when_placeholder(self) -> str:
         return _ph(*self.when) if self.when else ""
 
+    def slot(self, suffix: str) -> str:
+        """Placeholder for a code suffix: "" the value, "d" the date, "lo"/"hi" the range ends ("" if absent)."""
+        if suffix == "d":
+            return self.when_placeholder
+        if suffix in ("lo", "hi"):
+            return _ph(self.range[suffix == "hi"], self.fmt) if self.range else ""
+        return self.placeholder
+
     def ids(self) -> list[str]:
-        return [i for i in (self.eid, self.when[0] if self.when else None) if i]
+        extra = [self.when[0] if self.when else None, *(self.range or ())]
+        return [i for i in (self.eid, *extra) if i]
 
     def sentence(self) -> str:
-        return self.template.replace("{p}", self.placeholder).replace("{d}", self.when_placeholder)
+        out = self.template.replace("{p}", self.placeholder).replace("{d}", self.when_placeholder)
+        return out.replace("{lo}", self.slot("lo")).replace("{hi}", self.slot("hi"))
 
     def card(self) -> str:
         """How the fact is shown to the LLM."""

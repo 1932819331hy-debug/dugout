@@ -61,6 +61,24 @@ def _surname_hit(a: str, b: str) -> bool:
     return bool({t for t in ta & tb if len(t) > 2})
 
 
+def squad_player(name: str, squad: list[tuple[str, str]]) -> str | None:
+    """A provider's short name ("J. Bellingham", "Vinicius Junior") within one club's (Transfermarkt id, name)
+    squad, when no date of birth is given: every word of the name (initials aside) in exactly one squad name, else
+    the single closest name. Refuses to guess between two players."""
+    words = {w for w in normalise(name).split() if len(w) > 1}
+    if not words:
+        return None
+    hits = {tm for tm, n in squad if words <= set(normalise(n).split())}
+    if len(hits) == 1:
+        return hits.pop()
+    if hits:
+        return None
+    scored = sorted(((name_score(name, n), tm) for tm, n in squad), reverse=True)
+    if scored and scored[0][0] >= CLUB_THRESHOLD and (len(scored) == 1 or scored[1][0] < scored[0][0] - 0.1):
+        return scored[0][1]
+    return None
+
+
 def best_player(name: str, candidates: list[tuple[str, str]]) -> str | None:
     """Among (Transfermarkt id, name) sharing the player's date of birth, the closest name (a shared word of three
     or more letters, or a close spelling: "Vinícius Júnior" vs "Vinicius Junior")."""
