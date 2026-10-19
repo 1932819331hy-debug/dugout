@@ -413,23 +413,25 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
 ## Handoff (2026-10-19, evening) — read this first
 
 **Next steps for a new chat, in order:**
-1. PR #41 (style-led why-him; session "Player style profiles, team fit and a role model",
-   local_8e274ab4-67fe-47a1-bc32-371d6e979e45) was CONFLICTING after #40 merged; that session is merging main and
-   will report green CI. Then merge #41 (`gh pr merge 41 --merge --delete-branch`), run the nightly
-   (`gh workflow run nightly.yml --ref main`, ~25-40 min) and check the live site (why-him leads with style; rumour
-   cards show source label, reach, our odds, track record). Style stats cover 16/20 PL clubs; the nightly fills the
-   rest over ~10 nights within the API-Football budget.
-2. Fine-tune session (local_395c27d4-1841-4b23-9219-ecb07fad5294, branch claude/blissful-snyder-9c4294): Kaggle T4
-   kernel works end to end (train -> merge -> GGUF); teacher data limited by Groq's Qwen cap (~500k tokens/day), so
-   gpt-oss-120b is a recorded second teacher; Groq Qwen held-out bench must be rerun after its budget refreshes.
-   User approved a public Kaggle notebook. Publishing: `.env` HF_TOKEN is now WRITE-scoped (the GitHub secret
-   HF_TOKEN is still the old read token, which CI needs only to download models). When it reports: merge its PR on
-   the user's say-so, then write résumé bullets from the real metrics (docs/backtests/writer_finetune.md).
+1. PR #40 (rumour credibility cards) and #41 (why-him led by playing style and fit vs the starter) are MERGED.
+   Nightly run 39293427611 was running to publish them (started 2026-10-19 17:21 UTC): check it passed
+   (`gh run view 39293427611`), then check the live site: rumour cards show source label, reach, our odds and
+   track record; why-him leads with style (16/20 PL clubs first; style stats fill in over ~10 nights within the
+   API-Football budget; picks without stats keep the goals-and-assists line). If it failed, read
+   `gh run view <id> --log-failed`, fix on a branch, PR, merge, re-run.
+2. Fine-tune session (local_395c27d4-1841-4b23-9219-ecb07fad5294, branch claude/blissful-snyder-9c4294, no PR yet):
+   Kaggle pipeline works end to end (QLoRA Qwen2.5-1.5B -> merge -> q4_K_M GGUF, 935 MiB). Teacher = Qwen3.8-27B run
+   on Kaggle's two T4s (~220 samples/h; Groq's Qwen cap was the bottleneck); 1,505 prompts uploaded, full teacher
+   run queued; gpt-oss-120b recorded as a second teacher. Baseline: untuned 1.5B passes the publish gate on 32% of
+   held-out notes; Groq Qwen and local qwen2.5:3b benches still running. Kaggle notebooks push PUBLIC by default
+   (user approved). HF publish script ready; `.env` HF_TOKEN is write-scoped. When it reports: merge its PR on the
+   user's say-so, run the nightly, and write résumé bullets from the real metrics
+   (docs/backtests/writer_finetune.md).
 
 **Live (2026-10-19):** six leagues (PL, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie); two gaps with reasons;
 three lists per gap; why-him with TM per-90 stats, league rank, profile and comparison with the starter to beat;
 fee ranges; injury tiers in all leagues; played-position needs; Championship targets; /rumours/ page; rumour
-credibility cards (#40, data after the next nightly). Nightly ~25-40 min with warm caches.
+credibility cards (#40) and style-led why-him (#41), live once nightly 39293427611 lands. Nightly ~25-40 min with warm caches.
 
 **Rules from the user:** commit as `delta96040 <115036752+delta96040@users.noreply.github.com>` (repo git config),
 no `Co-Authored-By: Claude` trailer, no "Generated with Claude Code" footer; merge only when the user says so
