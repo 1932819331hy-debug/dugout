@@ -228,7 +228,15 @@ function Pick({
         {t.price && (
           <div className="flex gap-1">
             <dt className="text-pencil">Price</dt>
-            <dd>{n(t.price)}</dd>
+            <dd>
+              {n(t.price)}
+              {t.priceLow && t.priceHigh && (
+                <span className="text-pencil">
+                  {" "}
+                  (likely {n(t.priceLow)}–{n(t.priceHigh)})
+                </span>
+              )}
+            </dd>
           </div>
         )}
         {t.contract && (
@@ -314,7 +322,8 @@ export default function Shortlists({
         );
       })}
       <p className="mono-label text-pencil">
-        Price is our fair fee for {buyer} today. Wages are not shown: no free source publishes them.
+        Price is our fair fee for {buyer} today; the likely range is where most fees for players like him have
+        landed. Wages are not shown: no free source publishes them.
       </p>
       {injury && injury.scored.length > 0 && (
         <p className="mono-label text-pencil">

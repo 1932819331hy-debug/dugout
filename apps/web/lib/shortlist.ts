@@ -28,6 +28,9 @@ export function shortlists(d: Dossier): Target[] {
         club: club ? String(club.stat.value) : undefined,
         age: ref(age.stat),
         price: fact("estimated fair fee"),
+        // agents/dossier.py RANGE_LOW / RANGE_HIGH
+        priceLow: fact("likely low end of the estimated fair fee"),
+        priceHigh: fact("likely high end of the estimated fair fee"),
         contract: fact("months left on his contract"),
         marketValue: fact("market value"),
         minutesThere: fact("expected share of minutes at the club"),

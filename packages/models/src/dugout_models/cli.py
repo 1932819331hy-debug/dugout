@@ -46,7 +46,7 @@ def _run_one(model: str, args, con) -> bool:
     if model == "valuation":
         from dugout_models.valuation import backtest
 
-        r = backtest(BACKTESTS)
+        r = backtest(BACKTESTS, con=con)
         print("valuation:", r["model_on_baseline_rows"], "baseline:", r["baseline_market_value"])
         return r["model_on_baseline_rows"]["mae_log"] < r["baseline_market_value"]["mae_log"]
     if model == "realism":

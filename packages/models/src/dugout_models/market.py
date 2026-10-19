@@ -878,6 +878,7 @@ class Market:
             buyer_club=tm_club,
         )
         pool["fair_fee"] = fees.fair_fee.to_numpy()
+        pool["fee_low"], pool["fee_high"] = fees.low.to_numpy(), fees.high.to_numpy()
         incumbents = self.at(club_slug, group)  # everyone who starts there, as in needs()
         out = []
         for r in pool.itertuples():
@@ -894,6 +895,8 @@ class Market:
                     "age": r.age,
                     "value": r.value,
                     "fair_fee": fee,
+                    "fee_low": r.fee_low if r.fair_fee == r.fair_fee else np.nan,
+                    "fee_high": r.fee_high if r.fair_fee == r.fair_fee else np.nan,
                     "minutes_share": share,
                     "minutes_365": float(r.minutes_365),
                     **self.profile(r.player_id, group),
@@ -949,6 +952,20 @@ PROFILE_METRICS = {  # profile key -> (published metric, rounding); text values 
 }
 
 
+def fee_range_rows(model: str, pid: str, low: float, high: float, now: datetime, ctx: str = "") -> list[dict]:
+    """The fair fee's likely range (valuation.md: LEVEL of fees land inside) in €0.1m steps, rounded outwards; no
+    rows when it is unknown or the low end would round to nothing."""
+    if not (low == low and high == high):
+        return []
+    lo, hi = np.floor(low / 1e5) * 1e5, np.ceil(high / 1e5) * 1e5
+    if lo <= 0:
+        return []
+    return [
+        _row(model, "player", pid, "fair_fee_low", float(lo), now, ctx),
+        _row(model, "player", pid, "fair_fee_high", float(hi), now, ctx),
+    ]
+
+
 def profile_rows(c: dict, pid: str, now: datetime, ctx: str) -> list[dict]:
     """model_outputs rows for a candidate's profile (Market.profile), skipping what is unknown."""
     rows = []
@@ -1002,11 +1019,8 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
             else reep.get(r.tm_player_id, f"transfermarkt:{r.tm_player_id}")
         )
         if f.fair_fee == f.fair_fee:
-            rows += [
-                _row("valuation", "player", pid, "fair_fee", round(f.fair_fee, -5), now),
-                _row("valuation", "player", pid, "fair_fee_low", round(f.low, -5), now),
-                _row("valuation", "player", pid, "fair_fee_high", round(f.high, -5), now),
-            ]
+            rows.append(_row("valuation", "player", pid, "fair_fee", round(f.fair_fee, -5), now))
+            rows += fee_range_rows("valuation", pid, f.low, f.high, now)
         recent = pd.notna(r.joined) and pd.Timestamp(r.joined) > mk.now - pd.Timedelta(days=365)
         if s == s and not recent:  # no data yet on a new signing at his new club: not scored
             rows.append(_row("realism", "player", pid, "sale_likelihood", round(float(s), 3), now))
@@ -1052,6 +1066,7 @@ def market(con: duckdb.DuckDBPyConnection, now: datetime, clubs: list[str] | Non
                     _row("scout", "player", pid, "age", round(c.age, 1), now, ctx),
                     _row("scout", "player", pid, "market_value", c.value, now, ctx),
                     _row("scout", "player", pid, "fair_fee", round(c.fair_fee, -5), now, ctx),
+                    *fee_range_rows("scout", pid, c.fee_low, c.fee_high, now, ctx),
                     _row(
                         "scout", "player", pid, "expected_minutes_share", round(c.minutes_share, 3), now, ctx
                     ),

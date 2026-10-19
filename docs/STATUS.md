@@ -156,6 +156,9 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
 
   - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big (done 2026-10-19, below)
     leagues; (3) Championship squads via local refresh; (4) conformal ranges on fair fees; (5) rumour news signal
+
+  - **Next, in order:** (1) needs model on played positions; (2) API-Football injury history for other big
+    leagues; (3) Championship squads via local refresh; (4) conformal ranges on fair fees (done 2026-10-19, below); (5) rumour news signal
     for realism (PRIORS["news_weight_per_point"] is a prior; the archive can now fit it).
   - User wants: product voice everywhere (no "model" wording on the site), realistic targets, all major leagues,
     and STATUS updated before the context fills so a new chat can continue.
@@ -312,6 +315,22 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
   - Data loss found 2026-10-18: the main checkout's `data/raw` and `.cache` were empty (a worktree removal deleting
     through a junction?). Refilled `data/raw/transfermarkt` and `data/raw/api_football`; HTTP caches for other
     sources are cold. Remove junctions with `cmd /c rmdir` before deleting a worktree.
+
+- **Fee ranges (2026-10-19, branch `claude/conformal-fee-ranges-372499`; backlog item 4):**
+  - Every fair fee has an 80% likely range: split conformal, calibrated on the two years before the training cutoff
+    (the same early model and window as the league offsets), equal tails, separately per market-value band
+    (`valuation.BANDS`: under €2m, €2-5m, €5-15m, €15m+). Method chosen on validation 2023-24 (smallest worst
+    band gap): pooled, by buyer league, three and five bands were worse. The old range (quantiles of training
+    errors) held only 76% of test fees.
+  - valuation.md: test 2024-07..2026-09 82.9% inside (slightly conservative: the calibration model is older), each
+    band 81-90%; PL buyers 86%; too narrow for La Liga to La Liga (73%) and Ligue 1 to Ligue 1 (74%, misses above).
+    Fresh holdout (summer-2026 `wiki_transfers` fees the dataset lacks, 118 rows, mostly English pages): 76% inside,
+    misses mostly above; MAE 0.433 vs market value 0.482.
+  - Published as `fair_fee_low` / `fair_fee_high` (model `valuation` for squads, `scout` with the pick's context for
+    shortlists and gems), rounded outwards to €0.1m, skipped when the low end rounds to zero. Facts carry the range
+    in `{lo}`/`{hi}` slots (LLM codes `[F3lo]`/`[F3hi]`); key stats label them "likely low/high end of the ...".
+    Site: shortlist "Price €47.0m (likely €38.0m–€58.0m)", dossier prose "(likely between ... and ...)", Methods row.
+  - `calibrate` now drops rows with no market value from the calibration window (they gave infinite errors).
 
 ## Key facts discovered (do not re-research)
 - API-Football free plan: seasons 2022–2024 only + rolling yesterday→tomorrow date window; 100 req/day.

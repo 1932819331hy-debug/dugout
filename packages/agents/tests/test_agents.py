@@ -368,3 +368,34 @@ def test_rumour_track_record_follows_its_rumour(con, ledger):
     )
     assert "Carl Jones" not in sec.text
     assert any(w["reason"] == "the rumour it is about was not confirmed" for w in sec.withheld)
+
+
+def test_fair_fee_range_is_cited_and_bound(con, ledger):
+    """A fair fee with its likely range: one fact, three placeholders, codes [Fnlo]/[Fnhi] for the LLM, and the
+    range's ends as their own key stats."""
+    for metric, v in (("fair_fee", 47e6), ("fair_fee_low", 38e6), ("fair_fee_high", 58e6)):
+        con.execute(
+            "INSERT INTO model_outputs VALUES ('valuation', 'v', 'player', 'rp1', ?, '', ?, NULL, ?)",
+            [metric, v, NOW],
+        )
+    ctx = make_ctx(con, ledger)
+    from dugout_agents import tools
+
+    facts = tools.squad_market(ctx.toolbox, "liverpool", player_id="rp1")
+    fee = next(f for f in facts if f.label.startswith("estimated fair fee"))
+    assert fee.range and len(fee.ids()) == 3 and "likely between" in fee.sentence()
+    assert not stray_numbers(fee.sentence())
+    report = ctx.checker.check(fee.sentence(), ledger)
+    assert all(c.status == "verified" for c in report.claims), report.claims
+    text, errors = writer.substitute(
+        f"Our fair-fee estimate for Isak is [{fee.key}], likely between [{fee.key}lo] and [{fee.key}hi].",
+        facts,
+    )
+    assert not errors and all(ctx.ledger.get(i) for i in fee.ids()) and fee.slot("hi") in text
+    _, errors = writer.substitute(f"Isak is worth [{facts[0].key}hi].", [f for f in facts if not f.range])
+    assert errors  # no range on that fact
+    sec = type("S", (), {"agent": "transfer", "facts": [fee]})()
+    rows = dossier.key_stats(ctx, [sec])[0]["transfer"]
+    labels = [r["label"] for r in rows]
+    assert labels[1].startswith(dossier.RANGE_LOW) and labels[2].startswith(dossier.RANGE_HIGH)
+    assert [r["display"] for r in rows] == ["€47.0m", "€38.0m", "€58.0m"]

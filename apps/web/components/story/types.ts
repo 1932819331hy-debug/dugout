@@ -48,6 +48,9 @@ export interface Target {
   age?: StatRef;
   /** fair fee if this club bought him today */
   price?: StatRef;
+  /** the price's likely range (four in five past fees landed inside: docs/backtests/valuation.md) */
+  priceLow?: StatRef;
+  priceHigh?: StatRef;
   contract?: StatRef;
   marketValue?: StatRef;
   /** expected share of the buying club's minutes */
