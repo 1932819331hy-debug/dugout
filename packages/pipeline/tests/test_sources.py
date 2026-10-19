@@ -222,7 +222,8 @@ def test_transfermarkt_pool_refresher(settings, reep, tmp_path, monkeypatch):
             return httpx.Response(200, content=sample("transfermarkt_leistungsdaten.html"))
         return httpx.Response(200, content=sample("transfermarkt_kader_31.html"))
 
-    ctx = make_ctx(settings, reep)
+    # replayed pages, no network: run the local-only refresher here even on CI (its guard has its own test)
+    ctx = make_ctx(settings.model_copy(update={"ci": False}), reep)
     ctx.transport = httpx.MockTransport(handler)
     ctx.con.execute(
         "INSERT INTO clubs (club_id, name, league, season, updated_at) VALUES ('west-ham-united', 'West Ham', 'x', '2026-27', now())"
