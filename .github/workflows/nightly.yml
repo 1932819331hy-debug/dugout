@@ -83,7 +83,7 @@ jobs:
           git add data/prediction_log.csv
           if git diff --cached --quiet; then echo "no new predictions"; exit 0; fi
           git commit -m "Prediction log $(date -u +%F)"
-          git pull --rebase origin main
+          git pull --rebase --autostash origin main  # later steps commit other files publish wrote
           git push origin HEAD:main
 
       # Every section passes the Stat Auditor and Fact-Check or is withheld; a club with nothing verified keeps
@@ -116,7 +116,7 @@ jobs:
           if [ -f data/rumours.json ]; then git add data/rumours.json; fi
           if git diff --cached --quiet; then echo "site data unchanged"; exit 0; fi
           git commit -m "Nightly data $(date -u +%F)"
-          git pull --rebase origin main
+          git pull --rebase --autostash origin main  # later steps commit other files publish wrote
           git push origin HEAD:main
 
       - name: Save caches
