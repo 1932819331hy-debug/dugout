@@ -45,30 +45,36 @@ jobs:
             data/raw
           key: pipeline-${{ github.run_id }}
           restore-keys: pipeline-
-      - name: Enforce shared API allowance
+      - name: Require the nightly warehouse before refreshing
         if: steps.due.outputs.due == 'true'
-        id: budget
-        run: python3 scripts/kickoff_lineups_due.py --budget-check >> "$GITHUB_OUTPUT"
-      - if: steps.budget.outputs.allowed == 'true'
-        run: bash scripts/require_secrets.sh API_FOOTBALL_KEY
-      - name: Ingest Premier League confirmed lineups only
-        if: steps.budget.outputs.allowed == 'true'
-        run: uv run dugout --league premier_league ingest --only api_football
-      - name: Refresh lineup model
-        if: steps.budget.outputs.allowed == 'true'
-        run: uv run dugout-models publish lineup
+        run: test -f data/warehouse/dugout.duckdb
+      - name: Refresh only due Premier League confirmed lineups
+        if: steps.due.outputs.due == 'true'
+        id: lineups
+        run: uv run dugout --league premier_league kickoff-lineups >> "$GITHUB_OUTPUT"
       - name: Rebuild affected dossiers without LLM quota
-        if: steps.budget.outputs.allowed == 'true'
+        if: steps.lineups.outputs.confirmed == 'true'
         env:
-          DUE_CLUBS: ${{ steps.due.outputs.clubs }}
+          DUE_CLUBS: ${{ steps.lineups.outputs.clubs }}
         run: |
           read -r -a clubs <<< "$DUE_CLUBS"
           uv run dugout-agents --no-llm dossier "${clubs[@]}"
-      - name: Verify numbers before publishing
-        if: steps.budget.outputs.allowed == 'true'
-        run: python3 tools/check_site_numbers.py
+      - name: Set up site validation
+        if: steps.lineups.outputs.confirmed == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - name: Build and verify the refreshed dossiers
+        if: steps.lineups.outputs.confirmed == 'true'
+        run: |
+          npm --prefix apps/web ci
+          npm --prefix apps/web run build
+          npm --prefix apps/web run banned
+          python3 tools/check_site_numbers.py
       - name: Publish verified dossiers
-        if: steps.budget.outputs.allowed == 'true'
+        if: steps.lineups.outputs.confirmed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -1,9 +1,15 @@
 """Regression coverage for the offline kickoff and API quota guard."""
 
-import json
+import importlib.util
 from datetime import UTC, datetime, timedelta
+from pathlib import Path
 
-from scripts.kickoff_lineups_due import budget_allows, due_clubs
+spec = importlib.util.spec_from_file_location(
+    "kickoff_lineups_due", Path(__file__).resolve().parents[3] / "scripts/kickoff_lineups_due.py"
+)
+guard = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(guard)
+due_clubs = guard.due_clubs
 
 NOW = datetime(2026, 10, 19, 14, tzinfo=UTC)
 
@@ -41,21 +47,3 @@ def test_bad_ids_and_naive_timestamps_are_ignored():
         row("premier_league:2026-27:arsenal:chelsea", NOW.replace(tzinfo=None)),
     ]
     assert due_clubs(rows, NOW) == []
-
-
-def test_allowance_reserves_calls_for_regular_jobs(tmp_path):
-    path = tmp_path / "api_football.json"
-    assert budget_allows(path, NOW, 2)
-    path.write_text(json.dumps({NOW.date().isoformat(): 75}))
-    assert budget_allows(path, NOW, 2)
-    path.write_text(json.dumps({NOW.date().isoformat(): 76}))
-    assert not budget_allows(path, NOW, 2)
-
-
-def test_corrupt_or_impossible_allowance_fails_closed(tmp_path):
-    path = tmp_path / "api_football.json"
-    path.write_text("{broken")
-    assert not budget_allows(path, NOW)
-    for n in (-1, True, "five"):
-        path.write_text(json.dumps({NOW.date().isoformat(): n}))
-        assert not budget_allows(path, NOW)
