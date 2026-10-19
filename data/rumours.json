@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-19T06:36:24+00:00",
+ "generated_at": "2026-10-19T08:03:49+00:00",
  "horizon_months": 6,
  "first_season": "2004-05",
  "modern_season": "2020-21",
@@ -178,14 +178,14 @@
    "links": 302,
    "came_true": 19,
    "raw": 0.06291390728476821,
-   "shrunk": 0.0858270378746545
+   "shrunk": 0.08582703787465451
   },
   {
    "outlet": "Daily Express",
    "links": 175,
    "came_true": 13,
    "raw": 0.07428571428571429,
-   "shrunk": 0.08853650017334887
+   "shrunk": 0.08853650017334888
   },
   {
    "outlet": "L'Equipe",
@@ -199,105 +199,105 @@
    "links": 144,
    "came_true": 15,
    "raw": 0.10416666666666667,
-   "shrunk": 0.09120578840743641
+   "shrunk": 0.09120578840743643
   },
   {
    "outlet": "The Telegraph",
    "links": 135,
    "came_true": 13,
    "raw": 0.0962962962962963,
-   "shrunk": 0.09053903410662424
+   "shrunk": 0.09053903410662426
   },
   {
    "outlet": "La Gazzetta dello Sport",
    "links": 134,
    "came_true": 13,
    "raw": 0.09701492537313433,
-   "shrunk": 0.09059025876166461
+   "shrunk": 0.09059025876166463
   },
   {
    "outlet": "Tuttosport",
    "links": 128,
    "came_true": 8,
    "raw": 0.0625,
-   "shrunk": 0.08806032103862267
+   "shrunk": 0.08806032103862269
   },
   {
    "outlet": "Bild",
    "links": 117,
    "came_true": 13,
    "raw": 0.1111111111111111,
-   "shrunk": 0.09147003239005663
+   "shrunk": 0.09147003239005665
   },
   {
    "outlet": "a reporter on X",
    "links": 105,
    "came_true": 13,
    "raw": 0.12380952380952381,
-   "shrunk": 0.09210140834049829
+   "shrunk": 0.0921014083404983
   },
   {
    "outlet": "Sky Sports",
    "links": 102,
    "came_true": 10,
    "raw": 0.09803921568627451,
-   "shrunk": 0.0905319975470365
+   "shrunk": 0.09053199754703652
   },
   {
    "outlet": "Marca",
    "links": 86,
    "came_true": 5,
    "raw": 0.05813953488372093,
-   "shrunk": 0.08846656575821261
+   "shrunk": 0.08846656575821263
   },
   {
    "outlet": "AS",
    "links": 61,
    "came_true": 5,
    "raw": 0.08196721311475409,
-   "shrunk": 0.08977177555278922
+   "shrunk": 0.08977177555278923
   },
   {
    "outlet": "Corriere dello Sport",
    "links": 58,
    "came_true": 6,
    "raw": 0.10344827586206896,
-   "shrunk": 0.09052218837645368
+   "shrunk": 0.09052218837645369
   },
   {
    "outlet": "The Independent",
    "links": 58,
    "came_true": 5,
    "raw": 0.08620689655172414,
-   "shrunk": 0.08993099341653775
+   "shrunk": 0.08993099341653776
   },
   {
    "outlet": "talkSPORT",
    "links": 58,
    "came_true": 5,
    "raw": 0.08620689655172414,
-   "shrunk": 0.08993099341653775
+   "shrunk": 0.08993099341653776
   },
   {
    "outlet": "Evening Standard",
    "links": 53,
    "came_true": 2,
    "raw": 0.03773584905660377,
-   "shrunk": 0.08841877219922063
+   "shrunk": 0.08841877219922065
   },
   {
    "outlet": "Mundo Deportivo",
    "links": 49,
    "came_true": 2,
    "raw": 0.04081632653061224,
-   "shrunk": 0.08862898160181926
+   "shrunk": 0.08862898160181927
   },
   {
    "outlet": "Daily Record",
    "links": 43,
    "came_true": 7,
    "raw": 0.16279069767441862,
-   "shrunk": 0.09192859920419437
+   "shrunk": 0.09192859920419438
   },
   {
    "outlet": "Calciomercato",
@@ -311,38 +311,38 @@
    "links": 33,
    "came_true": 4,
    "raw": 0.12121212121212122,
-   "shrunk": 0.09068003799227223
+   "shrunk": 0.09068003799227224
   },
   {
    "outlet": "Kicker",
    "links": 29,
    "came_true": 2,
    "raw": 0.06896551724137931,
-   "shrunk": 0.08969520172119005
+   "shrunk": 0.08969520172119007
   },
   {
    "outlet": "The Athletic",
    "links": 24,
    "came_true": 6,
    "raw": 0.25,
-   "shrunk": 0.09237906566931876
+   "shrunk": 0.09237906566931878
   },
   {
    "outlet": "A Bola",
    "links": 23,
    "came_true": 6,
    "raw": 0.2608695652173913,
-   "shrunk": 0.09243483364853246
+   "shrunk": 0.09243483364853247
   },
   {
    "outlet": "BBC Sport",
    "links": 21,
    "came_true": 4,
    "raw": 0.19047619047619047,
-   "shrunk": 0.09133773967645464
+   "shrunk": 0.09133773967645466
   }
  ],
- "prior_rate": 0.09006322422253839,
+ "prior_rate": 0.0900632242225384,
  "backtest": {
   "generated_at": "2026-10-16T21:34:24+00:00",
   "test_season": "2025-26",
