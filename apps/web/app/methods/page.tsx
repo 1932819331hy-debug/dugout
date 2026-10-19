@@ -154,7 +154,8 @@ export default function MethodsPage() {
             <B file="rumours" j={rum} value={rum6?.model?.brier} label="Brier, rumour track record" /> vs{" "}
             <B file="rumours" j={rum} value={rum6?.recent_rate?.brier} label="Brier, recent base rate" /> for the recent base rate; AUC{" "}
             <B file="rumours" j={rum} value={rum6?.model?.auc} label="AUC, rumour track record" />. Outlets&apos; records barely differ once
-            shrunk to the average, so a rumour is judged on its own signs: repeat reports, how many clubs it names, the window.
+            shrunk to the average, so a rumour is judged on its own signs: repeat reports, how many clubs it names, the window.{" "}
+            <a className="underline" href="/rumours/">The record by outlet and season</a>.
           </Row>
           <Row name="Player potential" verdict="beats age curve · wide bands">
             Projected market value. Median error two years ahead{" "}

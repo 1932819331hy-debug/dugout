@@ -34,6 +34,7 @@ import numpy as np
 import pandas as pd
 from dugout_pipeline.clubs import normalise
 from dugout_pipeline.db import upsert
+from dugout_pipeline.settings import REPO_ROOT
 from scipy.optimize import minimize
 from scipy.special import betaln, expit, logit
 from sklearn.linear_model import LogisticRegression
@@ -987,6 +988,71 @@ def write_links(con: duckdb.DuckDBPyConnection, links: pd.DataFrame, now: dateti
     return upsert(con, "rumour_links", df.to_dict("records"))
 
 
+SITE_SUMMARY = REPO_ROOT / "data" / "rumours.json"
+MIN_OUTLET_LINKS = (
+    20  # outlets with fewer labelled links are not listed on the site (their record is mostly prior)
+)
+
+
+def site_summary(lab: pd.DataFrame, model: RumourModel, y: str, now: datetime) -> dict[str, Any]:
+    """The rumour track record page's numbers (data/rumours.json): every one an aggregate of rumour_links or a
+    backtest score, so the site can show its source (docs/backtests/rumours.md) and when it was computed."""
+    modern = lab[lab.season >= MODERN_SEASON]
+    seasons = lab.groupby("season")[y].agg(["sum", "count"])
+    bt_path = REPO_ROOT / "docs" / "backtests" / "rumours.json"
+    bt = json.loads(bt_path.read_text(encoding="utf-8")) if bt_path.exists() else {}
+    h = bt.get("horizons", {}).get(str(SHIPPED_HORIZON), {})
+    return {
+        "generated_at": now.isoformat(timespec="seconds"),
+        "horizon_months": SHIPPED_HORIZON,
+        "first_season": f"{FIRST_SEASON}-{FIRST_SEASON + 1 - 2000:02d}",
+        "modern_season": f"{MODERN_SEASON}-{MODERN_SEASON + 1 - 2000:02d}",
+        "overall": {
+            "links": len(lab),
+            "came_true": int(lab[y].sum()),
+            "rate": float(lab[y].mean()),
+            "links_modern": len(modern),
+            "rate_modern": float(modern[y].mean()) if len(modern) else None,
+        },
+        "seasons": [
+            {
+                "season": f"{s}-{s + 1 - 2000:02d}",
+                "links": int(r["count"]),
+                "came_true": int(r["sum"]),
+                "rate": float(r["sum"] / r["count"]),
+            }
+            for s, r in seasons.iterrows()
+        ],
+        "outlets": [
+            {
+                "outlet": o,
+                "links": r["n"],
+                "came_true": r["hits"],
+                "raw": float(r["raw"]),
+                "shrunk": float(r["shrunk"]),
+            }
+            for o, r in sorted(model.rates.items(), key=lambda kv: -kv[1]["n"])
+            if r["n"] >= MIN_OUTLET_LINKS
+        ],
+        "prior_rate": model.prior[0] / sum(model.prior),
+        "backtest": {
+            "generated_at": bt.get("generated_at"),
+            "test_season": h.get("test_season"),
+            "test_links": h.get("n_test"),
+            "brier": h.get("model", {}).get("brier"),
+            "brier_recent_base": h.get("recent_rate", {}).get("brier"),
+            "auc": h.get("model", {}).get("auc"),
+            "mean_forecast": h.get("model", {}).get("mean_p"),
+            "test_rate": h.get("test_rate"),
+        },
+    }
+
+
+def write_site_summary(doc: dict[str, Any], path: Path = SITE_SUMMARY) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(doc, indent=1, default=float) + "\n", encoding="utf-8")
+
+
 def publish(con: duckdb.DuckDBPyConnection, now: datetime, recent_days: int = 120) -> list[dict]:
     """Outlet track records (all labelled links) and the chance each recent rumour comes true, for the site.
 
@@ -1008,6 +1074,7 @@ def publish(con: duckdb.DuckDBPyConnection, now: datetime, recent_days: int = 12
         return []
     lab[y] = lab[y].astype(bool)
     model = RumourModel.fit(lab, y)
+    write_site_summary(site_summary(lab, model, y, now))
     rows = [_row("rumours", "overall", "all", "hit_rate", float(lab[y].mean()), now, f"{SHIPPED_HORIZON}m"),
             _row("rumours", "overall", "all", "links", len(lab), now, f"{SHIPPED_HORIZON}m")]  # fmt: skip
     for outlet, r in model.rates.items():

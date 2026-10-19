@@ -141,6 +141,11 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
       "Linked in the press" item (story chapter three; dossier scout section), Methods row. No number words in
       templates ("six" is a stray number to the Stat Auditor; "one"/"half" are allowed).
     - Live after merge: needs the history job once (nightly with `history: true`, or Sunday) to fill `rumours`.
+    - **/rumours/ page (2026-10-19, branch `rumour-page`):** `publish rumours` also writes `data/rumours.json`
+      (overall and since-2020-21 record, by season, outlets with 20+ rumours raw and shrunk, the backtest headline);
+      the nightly commits it. The page lists the clubs' Fact-Checked rumours with their "one time in N", likeliest
+      first (read from the dossiers, so nothing unverified), the outlet table and the season trend. Linked from the
+      nav ("Rumours"), story chapter three and Methods. Every number a <Num> citing rumours.md.
   - **2026-10-17, branch `realism-club-on-date` (on top of rumour-track-record):** realism's frames took the club
     from `player_valuations.current_club_id` (today's club): wrong for 45% of players on 1 June 2016, 19% in 2024.
     Now `realism.club_people` (the rumour timeline) gives the club on the day; mobility trains only on players with a
