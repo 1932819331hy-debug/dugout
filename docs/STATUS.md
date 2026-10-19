@@ -413,17 +413,21 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
 ## Handoff (2026-10-19, evening) — read this first
 
 **Next steps for a new chat, in order:**
-1. PR #40 (rumour credibility cards) and #41 (why-him led by playing style and fit vs the starter) are MERGED.
-   Nightly run 39293427611 was running to publish them (started 2026-10-19 17:21 UTC): check it passed
-   (`gh run view 39293427611`), then check the live site: rumour cards show source label, reach, our odds and
-   track record; why-him leads with style (16/20 PL clubs first; style stats fill in over ~10 nights within the
-   API-Football budget; picks without stats keep the goals-and-assists line). If it failed, read
-   `gh run view <id> --log-failed`, fix on a branch, PR, merge, re-run.
+1. #40 and #41 are live (nightly 39293427611 passed; deploy 7cf466e checked 2026-10-19 18:30 UTC): /rumours/ and
+   club pages show credibility cards. No why-him leads with style yet: that night `api_football_stats` got only 4
+   calls (1 club, 13 phases pending) because local work had already used the shared account quota (75/90). The
+   "16/20 PL clubs" was the style session's local DB, not CI. A quiet night leaves ~45-60 calls (~15-20 clubs), so
+   the ~350-call backfill takes about a week; check `phases_pending` in the nightly log falls and style lines appear
+   (grep "plays as a" data/clubs/*.json). Avoid local API-Football runs meanwhile. Seen once: "team 33 has more
+   than 3 pages; the rest is out of reach" (the free plan's page cap; fringe players may be missing).
 2. Fine-tune session (local_395c27d4-1841-4b23-9219-ecb07fad5294, branch claude/blissful-snyder-9c4294, no PR yet):
    Kaggle pipeline works end to end (QLoRA Qwen2.5-1.5B -> merge -> q4_K_M GGUF, 935 MiB). Teacher = Qwen3.8-27B run
    on Kaggle's two T4s (~220 samples/h; Groq's Qwen cap was the bottleneck); 1,505 prompts uploaded, full teacher
-   run queued; gpt-oss-120b recorded as a second teacher. Baseline: untuned 1.5B passes the publish gate on 32% of
-   held-out notes; Groq Qwen and local qwen2.5:3b benches still running. Kaggle notebooks push PUBLIC by default
+   run queued (`uv run python tools/finetune/push.py status --job teach` in that worktree: still QUEUED at
+   2026-10-19 18:35 UTC; 10.5 h budget, every prompt's sample 0 before any sample 1). gpt-oss-120b recorded as a
+   second teacher. Benches (publish gate pass rate): untuned 1.5B 32%, local qwen2.5:3b 44% (uncommitted files in
+   the worktree); Groq Qwen bench still running. The session is idle: when the kernel finishes, someone has to tell
+   it to fetch `output --job teach`, import replies and train. Kaggle notebooks push PUBLIC by default
    (user approved). HF publish script ready; `.env` HF_TOKEN is write-scoped. When it reports: merge its PR on the
    user's say-so, run the nightly, and write résumé bullets from the real metrics
    (docs/backtests/writer_finetune.md).
@@ -431,7 +435,7 @@ Read this first in a new session, then `PLAN.md`, `CLAUDE.md`, `docs/sources.md`
 **Live (2026-10-19):** six leagues (PL, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie); two gaps with reasons;
 three lists per gap; why-him with TM per-90 stats, league rank, profile and comparison with the starter to beat;
 fee ranges; injury tiers in all leagues; played-position needs; Championship targets; /rumours/ page; rumour
-credibility cards (#40) and style-led why-him (#41), live once nightly 39293427611 lands. Nightly ~25-40 min with warm caches.
+credibility cards (#40); style-led why-him (#41) as the style backfill fills in. Nightly ~25-40 min with warm caches.
 
 **Rules from the user:** commit as `delta96040 <115036752+delta96040@users.noreply.github.com>` (repo git config),
 no `Co-Authored-By: Claude` trailer, no "Generated with Claude Code" footer; merge only when the user says so
